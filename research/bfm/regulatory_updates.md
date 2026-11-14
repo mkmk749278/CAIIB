@@ -38,7 +38,7 @@ the primary RBI/FEMA text, not this file.
 | NRE (3 years and above) and FCNR(B) (3–5 years) **interest rate ceilings withdrawn temporarily** for fresh deposits and renewals (Interest Rate on Deposits Amendment Directions, 17 June 2026; RBI/2026-27/138 for commercial banks), originally to 30 Sep 2026, later cut to 31 Aug 2026 (25 Aug 2026, after the cut-off); USD-INR swap window for fresh FCNR(B) (RBI/2026-27/99, 8 June 2026); fresh NRE/FCNR(B) term deposits exempted from CRR/SLR for a period. Normal ceiling before this: FCNR(B) ARR + 400 bps (1 to under 3 years), ARR + 500 bps (3–5 years), set Dec 2024 | Jun 2026 | A-NRI | **RBI verified** (dates) | yes, as at 30 June: relaxation in force to 30 Sep 2026; say it is temporary |
 | Cross-border rupee settlement: overseas branches of AD banks may open INR accounts for non-residents; exporters may open foreign currency accounts abroad for export proceeds (FEMA amendments, Jan 2025) | Jan 2025 | A-CORR | IV (Feb 2025) | yes |
 | **LRS limit** unchanged at USD 250,000 per financial year (LRS MD last updated 6 Sep 2024) | — | A-LRS | RBI MD index | yes |
-| **TCS on LRS** (Income-tax, Finance Act 2025): threshold Rs 7 lakh → **Rs 10 lakh** from 1 Apr 2025; nil on education financed by a loan from a financial institution. Reported Finance Act 2026 cut of education/medical rate 5% → 2% from 1 Apr 2026 | 2025, 2026 | A-LRS | News | 2025 yes; **2026 rate: verify against Finance Act 2026** |
+| **TCS on LRS**: threshold Rs 7 lakh → **Rs 10 lakh** from 1 Apr 2025 (Finance Act 2025; nil on education financed by a loan from a financial institution). From **1 Apr 2026** (Income-tax Act, 2025, s. 394(1), Table Sl. 7–8; Finance Bill 2026, clause 73): LRS above Rs 10 lakh: **2% for education or medical** (was 5%), **20% for other purposes**; **overseas tour packages 2% on any amount** (was 5% up to Rs 10 lakh, 20% above) | 1 Apr 2025; 1 Apr 2026 | A-LRS | **Official**: Budget 2026 Memorandum Explaining the Provisions (indiabudget.gov.in/doc/memo.pdf, p. 48); confirm the enacted Finance Act 2026 kept the rates | yes |
 | IFSC and IBU: multiple regulatory notes (single registration, AML/KYC, transactions via IFSC banking unit or SNRR account) | 2025–26 | A-IFSC | IV (Mar, Apr, Jul 2026) | yes (light) |
 
 ## B. Risk Management and D. Balance Sheet Management
@@ -92,5 +92,5 @@ the primary RBI/FEMA text, not this file.
 2. Confirm: AD Cat-II figures; dividend top bands, 75% cap and "z"; final commercial-bank IFR text; quarterly-profit
    and general-provision Tier 2 amendments (numbers and dates); ECLGS 5.0 risk weight date; CDS/TRS final date; NOP
    and forex capital charge revamp date.
-3. TCS rates for FY 2026-27 (Finance Act 2026), blocked from the cloud (incometaxindia.gov.in returns 403).
+3. TCS 2026: confirm the enacted Finance Act 2026 text matches the Budget memorandum (found 2026-11-14).
 4. Keep reading each new IIBF Vision issue; check IIBF Bank Quest for BFM articles.
