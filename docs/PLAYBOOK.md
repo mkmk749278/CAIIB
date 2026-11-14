@@ -96,8 +96,9 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   "issued, coming"; the old rule remains the answer until then.
 
 ## 5. Lesson design (draft, to be proven in the pilot)
-- Open on a real branch situation with a question ("A customer returns a USD 1,500 draft for cancellation. 82.40 or
-  82.80?"). The rule arrives as the answer.
+- Open on a real branch situation with a question (A1: a father sending a university fee and a shrimp exporter with a
+  sight bill at the same counter, four rates on the board). The rule arrives as the answer. Never reuse a
+  competitor's example.
 - One stable picture per idea, reused across lessons: e.g. **the bank's counter** for forex (currency coming in =
   bank buys = lower rate, green; going out = bank sells = higher rate, red); **the rate ladder** for margins and
   premium/discount (always moves in the bank's favour); a **balance scale** for base vs quote currency (multiply or
@@ -110,6 +111,32 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
 - End: the finished map, 3 practice questions ("pause now"), and the matching PDF page.
 - Learning science behind it: dual coding (words + pictures), chunking, retrieval practice, spaced revision,
   worked examples, interleaving of similar-looking problems.
+
+## 5a. Video design: what the research says and how we use it (2026-11-14)
+Creativity comes first; the research below is the floor we build on, not the ceiling (owner, 2026-11-14: "first
+preference is your creativity").
+
+| Finding | Evidence | How our lessons use it |
+|---|---|---|
+| **Misconception first** beats plain explanation: state the wrong idea learners hold, then break it | Muller et al. 2008 (Newton's laws videos): refutation d ≈ 0.79, dialogue d ≈ 0.83 vs plain exposition; plain videos even raised confidence in wrong ideas | every lesson opens on the wrong answer most candidates give (from our recall data and doubt threads) and makes the viewer commit to an answer first |
+| **Dialogue** of a learner and an explainer | same study (largest effect) | two voices: a narrator, and a young officer who says the tempting wrong answers aloud; the viewer argues along |
+| **Coherence**: cut everything that is not needed | Mayer 2021: median d ≈ 0.86, 18 of 19 tests | no decorative stock footage, music under speech kept low, no logo animations mid-lesson |
+| **Signalling**: highlight what matters | d ≈ 0.46 | one colour code across the module (green = bank buys, red = bank sells, amber = reversing) |
+| **Segmenting**: short, learner-paced parts | d ≈ 0.67–0.77 | each lesson in 3–4 chapters of 2–5 minutes with chapter cards; the app can serve chapters separately |
+| **Short beats long** | Guo, Kim, Rubin 2014 (6.9 million edX sessions): engagement drops after about 6 minutes; Khan-style drawing beats slides | chapters under 6 minutes; things are *drawn and built* on screen, never slides of text |
+| **Prediction prompts**: ask before telling | anticipatory prompts promising but less studied (Renkl et al.) | "Pause: which rate?" with a visible countdown before every reveal |
+| **Worked example → faded example → own try** | worked-example effect; fading with prompts (Atkinson, Renkl & Merrill 2003); video examples alternated with practice beat practice alone | sum 1 fully worked; sum 2 with steps blanked for the viewer; sum 3 the viewer's alone |
+| **Concrete → picture → abstract** | concreteness fading (Fyfe & Nathan); analogies help finance learners with less background (IZA 2025) | real counter scene → icon (arrows, ladder) → formula; the picture stays on screen while the formula appears |
+| **Retrieval and spacing** do the remembering, not length | spaced retrieval research; embedded questions g ≈ 0.52 (Ploetzner 2024, secondary) | every lesson ends with 3 questions; the next lesson opens with a 30-second recall of the last one |
+
+**Our signature devices (Module A)**
+- **The counter, from above**: the whole module happens across one counter; the camera can *flip* to the customer's
+  side to show why intuition fails (the flip is the visual for "amber: reversing a deal").
+- **The rate ladder**: a vertical scale with the interbank quote in the middle and four rungs; every rate in Module A
+  is a position on it.
+- **The calculator**: an on-screen 8-function, 12-digit calculator (the IIBF-allowed kind) presses the real keys.
+- **The officer**: a young forex officer at the counter voices the common wrong answers; the narrator never mocks,
+  just shows the counter again.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
