@@ -50,41 +50,50 @@ pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); f
   max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
 pre .t { color: var(--tag); font-weight: 600; }
 .foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
 </style>
 
 <div class="wrap">
   <header>
-    <h1>A1 voice blocks · live class</h1>
-    <p class="sub">Tap <b>Copy</b>, paste into ElevenLabs, generate, save with the file name shown. Record in this order.</p>
+    <h1>A1 dialogue · live class</h1>
+    <p class="sub">For ElevenLabs <b>multi-speaker</b> text to speech. Each part is one generation, with turns in speaking order.</p>
   </header>
 
-  <details class="tips">
-    <summary>Voice settings for a live-class feel</summary>
+  <details class="tips" open>
+    <summary>How to use it</summary>
     <ul>
-      <li><b>Teacher</b>: a warm, friendly Indian-English male voice from the Voice Library, filtered for
-        Conversational or Educational, not Narration. It should sound like someone talking to a room, not reading a trailer.</li>
-      <li><b>Meera</b>: young, curious female voice. <b>Ravi</b>: relaxed male voice, a little tired, a little funny.</li>
-      <li>Model <b>Eleven v3</b> with stability <b>Natural</b> (or Creative if it sounds flat). Older models: stability 35–45%, style 20–30%.</li>
-      <li>Use the same voice and settings for every teacher block.</li>
-      <li>Keep the blank lines. The pause after each one is where the video cuts the lines apart.</li>
-      <li>Generate block 1, listen to the first minute, then do the rest. Each generation uses credits.</li>
-      <li>Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times, as in an Indian classroom.</li>
-      <li>Class sounds (murmurs, a laugh, chairs) get added in the edit, not in the voice.</li>
+      <li>Pick three voices once: <b>Teacher</b> (e.g. Prithvi), <b>Meera</b> (e.g. Adhya), <b>Ravi</b> (a second, different male voice).</li>
+      <li>For each turn below: tap <b>Copy</b>, add a speaker card with that voice in the app, paste. Same order, top to bottom.</li>
+      <li>When a part's turns are all in, tap <b>Generate</b>, then download it as the file name shown (part_1.mp3 …).</li>
+      <li>Start a fresh page in the app for the next part. Keep the same three voices and settings.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times.</li>
     </ul>
   </details>
 
   <label class="opt" for="tags">
     <input type="checkbox" id="tags" checked>
     <span><b>Keep expression tags</b> like [chuckles] and [laughs]
-      <small>Works on Eleven v3. If the voice reads the words out loud, turn this off and copy again.</small></span>
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
   </label>
 
   <main id="list" style="display:grid;gap:14px"></main>
-  <p class="foot">From {{SRC}}. Line ids match the script, so the video stays in sync.</p>
+  <p class="foot">From {{SRC}}. Line ids are kept, so the video can be cut automatically from each part.</p>
 </div>
 
 <script>
-const BLOCKS = /*DATA*/[];
+const PARTS = /*DATA*/[];
 const list = document.getElementById('list');
 const tags = document.getElementById('tags');
 const TAG = /\[[a-z ]+\]\s*/gi;
@@ -96,37 +105,45 @@ const clean = s => tags.checked ? s : s.replace(TAG, '');
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 function render() {
   list.innerHTML = '';
-  BLOCKS.forEach((b, i) => {
-    const text = clean(b.text);
-    const done = store.get('done-' + b.file) === '1';
-    const card = document.createElement('section');
-    card.className = 'card' + (done ? ' is-done' : '');
-    const shown = esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t">' + m + '</span>');
-    card.innerHTML =
-      '<div class="head"><span class="file">' + (i + 1) + '. ' + b.file + '</span>' +
-      '<span class="who ' + b.speaker + '">' + b.speaker + '</span>' +
-      '<span class="meta">' + b.section + ' · lines ' + b.first + '–' + b.last + ' · ' + text.length + ' characters</span></div>' +
-      '<div class="row"><button class="copy" id="copy-' + i + '" type="button">Copy block</button>' +
-      '<label class="mark"><input type="checkbox" id="done-' + i + '"' + (done ? ' checked' : '') + '> Generated</label></div>' +
-      '<details class="text"><summary>Show text</summary><pre id="pre-' + i + '">' + shown + '</pre></details>';
-    list.appendChild(card);
-    const btn = card.querySelector('button');
-    btn.addEventListener('click', () => {
-      const t = clean(b.text);
-      const ok = () => { btn.textContent = 'Copied ✓'; setTimeout(() => btn.textContent = 'Copy block', 1800); };
-      const fallback = () => {
-        card.querySelector('details').open = true;
-        const r = document.createRange(); r.selectNodeContents(card.querySelector('pre'));
-        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
-        btn.textContent = 'Selected: long-press, Copy';
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, fallback);
-      else fallback();
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + p.turns.length + ' turns · ' + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
     });
-    card.querySelector('input').addEventListener('change', e => {
-      store.set('done-' + b.file, e.target.checked ? '1' : '0');
-      card.classList.toggle('is-done', e.target.checked);
-    });
+    list.appendChild(sec);
   });
 }
 const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
