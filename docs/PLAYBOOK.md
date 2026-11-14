@@ -124,7 +124,7 @@ preference is your creativity").
 | Finding | Evidence | How our lessons use it |
 |---|---|---|
 | **Misconception first** beats plain explanation: state the wrong idea learners hold, then break it | Muller et al. 2008 (Newton's laws videos): refutation d ≈ 0.79, dialogue d ≈ 0.83 vs plain exposition; plain videos even raised confidence in wrong ideas | every lesson opens on the wrong answer most candidates give (from our recall data and doubt threads) and makes the viewer commit to an answer first |
-| **Dialogue** of a learner and an explainer | same study (largest effect) | two voices: a narrator, and a young officer who says the tempting wrong answers aloud; the viewer argues along |
+| **Dialogue** of a learner and an explainer | same study (largest effect) | two voices: a teacher (conversational, §5b), and a young officer who says the tempting wrong answers aloud; the viewer argues along |
 | **Coherence**: cut everything that is not needed | Mayer 2021: median d ≈ 0.86, 18 of 19 tests | no decorative stock footage, music under speech kept low, no logo animations mid-lesson |
 | **Signalling**: highlight what matters | d ≈ 0.46 | one colour code across the module (green = bank buys, red = bank sells, amber = reversing) |
 | **Segmenting**: short, learner-paced parts | d ≈ 0.67–0.77 | each lesson in 3–4 chapters of 2–5 minutes with chapter cards; the app can serve chapters separately |
@@ -142,6 +142,25 @@ preference is your creativity").
 - **The calculator**: an on-screen 8-function, 12-digit calculator (the IIBF-allowed kind) presses the real keys.
 - **The officer**: a young forex officer at the counter voices the common wrong answers; the narrator never mocks,
   just shows the counter again.
+
+## 5b. Voice: a class, not a documentary (owner feedback on A1 r1, 2026-11-14)
+The owner watched the A1 r1 cut and said the narration "feels like a documentary or story narration, it's not like a
+class. A class needs to be more conversational, in the most general speaking way. It should not feel boring at all."
+The cause was the writing: v2 used voice-over style (short dramatic fragments, "Same counter. Same dollar. Same
+morning.", a narrator describing scenes) and a calm narration voice read as one long block. Officers studying in the
+evening want to feel someone is *talking to them*. From A1 v3 on, every script follows these rules:
+- **Talk to one person across a table.** "Okay, let's start…", "Let me ask you…", "See, here's the thing…". Use
+  "you" and "I"; the teacher is an AI voice with no name or back-story and never claims to be a person.
+- **Spoken English, not written English.** Contractions (it's, that's, don't), full natural sentences, Indian
+  classroom phrasing ("into" for times, "simple", "right?"). No three-word dramatic fragments, no trailer lines.
+- **Ask, wait, react.** Every question gets a reaction after the answer ("Got it? Good.", "Did you? Great."). The
+  teacher answers Meera warmly ("Good try, Meera"), never mocks.
+- **Say the rule twice in two different ways** (once exact, once as a hook: "In means buy, out means sell").
+- **Signpost like a teacher**: "Now be careful here, this is where people slip", "Don't worry about this now".
+- **Close like a class**: "That's it for today… see you there."
+- **Voice choice**: a conversational/educational voice, not a narration one; stability around 35–45% so the pitch
+  moves; generate per chapter, not the whole lesson in one block, and listen to the first minute before the rest.
+- Facts, numbers, rule versions and line ids do not change when only the voice style changes.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
