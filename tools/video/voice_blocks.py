@@ -17,6 +17,20 @@ import sys
 
 TURN_MAX, PART_MAX, PART_MIN = 1200, 3000, 1800
 SPEAKERS = {"N": "Teacher", "M": "Meera", "R": "Ravi"}
+COMMON = """      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times.</li>"""
+SINGLE = {"H1": "A1 voice · one teacher",
+          "SUB": "One voice, in order. Each part is one generation in ElevenLabs text to speech.",
+          "TIPS": """      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+""" + COMMON}
+MULTI = {"H1": "A1 dialogue · live class",
+         "SUB": "For ElevenLabs <b>multi-speaker</b> text to speech. Each part is one generation, with turns in speaking order.",
+         "TIPS": """      <li>Pick the voices once and keep them for every part.</li>
+      <li>For each turn: tap <b>Copy</b>, add a speaker card with that voice, paste. Same order, top to bottom.</li>
+      <li>When a part's turns are all in, tap <b>Generate</b> and download it as the file name shown.</li>
+""" + COMMON}
 
 
 def parse(path):
@@ -33,11 +47,11 @@ def parse(path):
     return out
 
 
-def turns(lines):
+def turns(lines, turn_max=TURN_MAX):
     res = []
     for ln in lines:
         t = res[-1] if res else None
-        if t and t["sp"] == ln["id"][0] and t["section"] == ln["section"] and len(t["text"]) + len(ln["text"]) < TURN_MAX:
+        if t and t["sp"] == ln["id"][0] and t["section"] == ln["section"] and len(t["text"]) + len(ln["text"]) < turn_max:
             t["ids"].append(ln["id"])
             t["text"] += " " + ln["text"]
         else:
@@ -67,10 +81,18 @@ def parts(ts):
 
 def main(src, md_out, html_out):
     lines = parse(src)
-    ps = parts(turns(lines))
-    md = [f"# Dialogue turns from `{src}`", "",
-          "For the ElevenLabs app's multi-speaker text to speech: one speaker card per turn, in this order; generate",
-          "each part in one go. Voices: Teacher, Meera, Ravi (the same three voices in every part).", ""]
+    single = len({l["id"][0] for l in lines}) == 1
+    ps = parts(turns(lines, PART_MAX if single else TURN_MAX))
+    if single:  # one voice: one block per part, across section breaks too
+        for p in ps:
+            ts = p["turns"]
+            p["turns"] = [{"speaker": ts[0]["speaker"], "first": ts[0]["first"], "last": ts[-1]["last"],
+                           "text": " ".join(t["text"] for t in ts)}]
+    intro = (["One teacher voice. Paste each part into ElevenLabs text to speech and generate it in one go;",
+              "same voice and settings for every part."] if single else
+             ["For the ElevenLabs app's multi-speaker text to speech: one speaker card per turn, in this order;",
+              "generate each part in one go, with the same voices in every part."])
+    md = [f"# Voice parts from `{src}`", ""] + intro + [""]
     for p in ps:
         md += [f"## {p['file']} · {p['section']} ({len(p['turns'])} turns, "
                f"{sum(len(t['text']) for t in p['turns'])} chars)", ""]
@@ -82,6 +104,8 @@ def main(src, md_out, html_out):
     tpl = open(__file__.replace("voice_blocks.py", "voice_blocks_page.html"), encoding="utf-8").read()
     page = tpl.replace("/*DATA*/[]", json.dumps(ps, ensure_ascii=False).replace("</", "<\\/"))
     page = page.replace("{{SRC}}", html.escape(src))
+    for k, v in (SINGLE if single else MULTI).items():
+        page = page.replace("{{" + k + "}}", v)
     open(html_out, "w", encoding="utf-8").write(page)
     for p in ps:
         print(p["file"], p["section"], len(p["turns"]), sum(len(t["text"]) for t in p["turns"]))
