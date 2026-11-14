@@ -23,9 +23,15 @@ any new stage. New lessons go into the playbook section they belong to, with the
   or blocked, open a new cloud session (may get a different IP) for that narrow job; the owner's laptop (Cowork,
   Gemini, Antigravity) only for what no cloud session can do. Details and the open laptop tasks:
   `docs/desktop_tasks.md`. Laptop results arrive as PRs into `research/bfm/inbox/` (Gemini's as pasted chat text).
-- **Next:** build the course in the order of `course_plan.md` "Build order": first the lesson spec and the Module A
-  mind map, then lessons A1, A2… with every rule from primary sources; finish open verification items as lessons
-  need them.
+- **A1 video (2026-11-14)**: script `course/bfm/A/A1/script_v2.md` (rev 1 after independent review `review_r1.md`,
+  `review_ack_r1.md`); owner generated the voices in the ElevenLabs app (no API until final); audio cut into lines by
+  `tools/video/transcribe_words.py` + `align_lines.py` (files kept out of git: re-upload or ask the owner); Remotion
+  project `video/` (render: `npx remotion render src/index.ts A1 out/x.mp4 --scale=0.6666666666666666`, then
+  loudnorm to -16 LUFS); 720p review cut r1 sent to the owner in chat.
+- **Next:** (1) owner's reaction to A1 r1; (2) independent viewer review of the cut (new session); (3) visual upgrade:
+  illustrated characters and counter, music bed and sound cues (music library on Drive; rclone not installed here),
+  smoother transitions; check line N34 audio ("nine nine nine five"); (4) lock the template, then A2 onwards in
+  `course_plan.md` order. Cowork's first inbox batch is assessed in `research/bfm/inbox/README.md` (mostly unusable).
 
 ## The goal in one line
 Cover everything the exam needs, put the most effort where IIBF's marks actually are, and teach it with the best
