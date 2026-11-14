@@ -32,7 +32,12 @@ any new stage. New lessons go into the playbook section they belong to, with the
   `script_v3.md` (classroom voice, same facts and line ids) and `voice_blocks_v3.md` (3 teacher blocks + Meera, with
   voice settings). Rules in PLAYBOOK §5b; every future script follows them. Waiting for the owner's v3 audio, then
   re-cut (some cues use fixed frame offsets inside a line, e.g. "Exactly backwards." at N05; re-check them).
-- **Next:** (1) owner's v3 voices, re-cut as r2; (2) independent viewer review of the cut (new session); (3) visual upgrade:
+- **Then (same day) "make it a live class"**: `script_v4.md` adds a warm-up, chapter-break check-ins, a second
+  student Ravi and a warm close (PLAYBOOK §5b). Copy page for the phone:
+  https://claude.ai/artifact/5L1n5TgBfjStnD4rdrTy2o (built by `tools/video/voice_blocks.py`; also
+  `voice_blocks_v4.md`). Owner is generating 8 files: teacher_1–6, meera, ravi. v3 is superseded.
+- **Next:** (1) owner's v4 voices, re-cut as r2 (new warm-up scene, Ravi, class sounds, disclosure card text);
+  (2) independent viewer review of the cut (new session); (3) visual upgrade:
   illustrated characters and counter, music bed and sound cues (music library on Drive; rclone not installed here),
   smoother transitions; check line N34 audio ("nine nine nine five"); (4) lock the template, then A2 onwards in
   `course_plan.md` order. Cowork's first inbox batch is assessed in `research/bfm/inbox/README.md` (mostly unusable).
