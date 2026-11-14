@@ -19,7 +19,8 @@ any new stage. New lessons go into the playbook section they belong to, with the
 - **Waiting on the owner's desktop (Antigravity)**: `docs/antigravity_tasks.md` (Telegram recalls, YouTube analysis
   topics, gated older papers, RBI wording checks, TCS 2026 rates). Results arrive as PRs into `research/bfm/inbox/`;
   fold them into the map and the update list.
-- **Next:** (1) verify every "yes" row of `regulatory_updates.md` against RBI text; (2) owner decisions before the
+- **Next:** (1) finish verifying `regulatory_updates.md` (main rows RBI-verified 2026-11-14; open items listed in its
+  "Still to do"); (2) owner decisions before the
   pilot: channel, language, start date, and approval of the course plan; (3) pilot lesson A1+A2 end to end.
 
 ## The goal in one line
