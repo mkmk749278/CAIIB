@@ -65,20 +65,14 @@ button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
 
 <div class="wrap">
   <header>
-    <h1>A1 dialogue · live class</h1>
-    <p class="sub">For ElevenLabs <b>multi-speaker</b> text to speech. Each part is one generation, with turns in speaking order.</p>
+    <h1>{{H1}}</h1>
+    <p class="sub">{{SUB}}</p>
   </header>
 
   <details class="tips" open>
     <summary>How to use it</summary>
     <ul>
-      <li>Pick three voices once: <b>Teacher</b> (e.g. Prithvi), <b>Meera</b> (e.g. Adhya), <b>Ravi</b> (a second, different male voice).</li>
-      <li>For each turn below: tap <b>Copy</b>, add a speaker card with that voice in the app, paste. Same order, top to bottom.</li>
-      <li>When a part's turns are all in, tap <b>Generate</b>, then download it as the file name shown (part_1.mp3 …).</li>
-      <li>Start a fresh page in the app for the next part. Keep the same three voices and settings.</li>
-      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
-      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
-      <li>Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times.</li>
+{{TIPS}}
     </ul>
   </details>
 
@@ -109,7 +103,7 @@ function render() {
     const sec = document.createElement('section');
     sec.className = 'part';
     const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
-    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + p.turns.length + ' turns · ' + chars + ' characters</p>';
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
     p.turns.forEach((t, ti) => {
       const key = 'd-' + p.file + '-' + ti;
       const text = clean(t.text);

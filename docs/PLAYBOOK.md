@@ -172,16 +172,18 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   in class but not a physical class"). Greet and connect, but no physical-room cues: no "come in, take your seats",
   "hands up", "I can see your faces", "phones on silent". Use "welcome to the class", "notifications on silent",
   "just think about it", "I know it's late".
-- **Two students**: Meera (new on the desk, asks the real questions, gets the tempting wrong answers) and Ravi (a
-  tired branch officer with light humour; makes the common slip in the quiz). Both fictional, named in the
-  disclosure card ("A dramatised class… all voices are AI-generated"). Students never call the teacher "Sir"; the
-  teacher stays an unnamed AI voice with no back-story.
-- New lines added for class moments get a letter suffix (N00a, N15a, R01) so the old line ids and video code stay.
-- Voices are generated with the ElevenLabs app's **multi-speaker** text to speech (owner, 2026-11-14): all voices
-  in one generation, in speaking order, so the audio needs no reassembly. `tools/video/voice_blocks.py` turns a
-  script into ordered speaker turns grouped in parts of about 2,000–2,600 characters, as Markdown and as a phone page
-  with one Copy button per turn (the owner records from the phone). ElevenLabs v3 expression tags (`[chuckles]`) are allowed sparingly;
-  the page can strip them for other models. Class sounds (murmur, laugh, chairs) are added in the edit.
+- **One voice: the teacher voices what the students think** (owner, same day, on v4: "only teacher narration is
+  better, a single voice; but what students think, we tell: some think this is correct and some that"). v4 tried two
+  student characters (Meera, Ravi) in a multi-speaker dialogue; the owner preferred a single voice. So the teacher
+  says the split out loud: "I know what many of you are thinking: X. And a few of you are thinking Y." Then the
+  reveal. This keeps misconception-first and prediction (§5a) without extra voices. On screen: two thought bubbles,
+  "Some of you" and "Others", never made-up percentages. Disclosure card: "The voice in this lesson is AI-generated."
+  The teacher stays an unnamed AI voice with no back-story, never "Sir".
+- New lines added for class moments get a letter suffix (N00a, N15a, N04a) so the old line ids and video code stay.
+- Voice text is built by `tools/video/voice_blocks.py`: parts of about 1,400–3,000 characters, one generation each,
+  as Markdown and as a phone page with one Copy button per part (the owner records from the phone). With one voice
+  each part is a single block; the tool still supports multi-speaker turns if a lesson ever needs them. ElevenLabs
+  v3 expression tags (`[chuckles]`) are allowed sparingly; the page can strip them for other models.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
