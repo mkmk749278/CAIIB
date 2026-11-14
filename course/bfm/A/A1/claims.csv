@@ -1,0 +1,11 @@
+claim,source,section,url,version,status
+Merchant quotes are in direct terms: rupees and paise for 1 or 100 units of foreign currency,FEDAI Rules 10th ed.,Rule 5.7,https://fedai.org.in/UploadPopupPageFiles/FEDAI_Rules_10th_Edition_20Aug2026.pdf,in force 30 Jun 2026 (not amended after),verified
+Banks are free to determine their own charges (margins not fixed by FEDAI),FEDAI Rules 10th ed.,General guideline 1,same,in force 30 Jun 2026,verified
+Export bills purchased/discounted/negotiated at bill buying rate or contracted rate; transit/usance interest recovered upfront,FEDAI Rules 10th ed.,Rule 2.1(a),same,in force 30 Jun 2026,verified
+Unpaid export bill crystallised into rupee liability at TT selling rate,FEDAI Rules 10th ed.,Rule 2.1(b)(iii),same,in force 30 Jun 2026,verified
+Export bill on collection converted at TT buying or contract rate only after credit to Nostro,FEDAI Rules 10th ed.,Rule 2.5(a),same,in force 30 Jun 2026 (2.5(b) amended 7 Sep 2026; 2.5(a) unchanged),verified
+Import bill retired at hedge contract rate or prevailing bill selling rate,FEDAI Rules 10th ed.,Rule 3.1(a),same,in force 30 Jun 2026,verified
+Outward remittance at TT selling or contract rate,FEDAI Rules 10th ed.,Rule 4.1,same,in force 30 Jun 2026,verified
+Inward remittance converted at TT buying or contracted rate,FEDAI Rules 10th ed.,Rule 4.4,same,in force 30 Jun 2026,verified
+Purchase contracts cancelled at TT selling; sale contracts at TT buying,FEDAI Rules 10th ed.,Rule 6.4(ii),same,in force 30 Jun 2026,verified
+All sums in numericals.md and practice.md,tools/check/fx_merchant_rates.py,,repo,2026-11-14,"computed two ways; Q4 and Q5 by hand: 6000x85.5054=513032.40; 15000x85.2719=1279078.50"
