@@ -18,6 +18,7 @@ order:
 ### Cowork: Telegram recalls (needs the owner's Telegram account)
 ```
 You are helping build our own CAIIB Bank Financial Management (BFM) study material (GitHub repo mkmk749278/CAIIB).
+Before starting: open Telegram Desktop and make sure I am logged in; if you cannot reach my chats, STOP and say so; do not use any other source.
 Rules: only my own logins; never copy anyone's explanations, notes or full question text (write topics and question
 types in your own words); no other people's names or phone numbers.
 In Telegram (my account) search my chats and groups for CAIIB / BFM. For the BFM exams of 7 Jun 2026, 7 Dec 2025 and
@@ -38,7 +39,7 @@ new file) and open a pull request to main. Show me the link.
 ```
 
 ### Gemini: post-exam analysis videos (YouTube)
-Paste Gemini's answer back into the Claude chat.
+Paste Gemini's answer back into the Claude chat. Every video must have a real, working YouTube link.
 ```
 Using YouTube, find post-exam analysis videos for the CAIIB Bank Financial Management (BFM) exams held on 7 June 2026,
 7 December 2025 and 14 June 2025. Use up to 3 videos per exam from different channels. For each video give: channel,
