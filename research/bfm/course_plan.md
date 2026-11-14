@@ -16,6 +16,12 @@ Built from `importance_map.md` (what IIBF asks), `regulatory_updates.md` (what c
 - **Formats**: L = lesson video; N = numerical drill video (3–5 solved sums, 8–12 minutes); C = case study walk-
   through (one 5-question case, like the exam); R = module revision (map + traps, 6–8 minutes).
 
+## Build order (Claude, 2026-11-14)
+The course is built in teaching order, A1 → A17 → AR → B1 … → DR, then the updates video, PDFs and mocks, because
+each module leans on the one before (Module B's statistics feed Module C's VaR; C's duration feeds D's gap analysis).
+Each module starts with its mind map (`course/bfm/<module>/mindmap_<module>.md`); each lesson follows
+`course/spec/lesson_spec.md`. Nothing is published until the full course is built (owner, 2026-11-14).
+
 ## Module A: International Banking (about 39% of recalled items)
 Mind map A: *"The money crosses the counter"*: centre = the bank's forex counter; branches = rates (A1), people who
 send money (LRS, A2), people abroad (NRI, A3), trade documents (LC, A4), exporters and importers (A5), borrowing from
