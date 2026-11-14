@@ -1,0 +1,454 @@
+cycle,shift,source,item,cluster
+2023-06,1,BA23J,Variance is Defined As,B-STATS
+2023-06,1,BA23J,MRR % in Securitization,B-CREDITRISK
+2023-06,1,BA23J,"For D- SIB the leverage ratio is 4%, For other banks it’s 3.5%",B-BASEL
+2023-06,1,BA23J,Cash Management Bills (CMBs),C-TPROD
+2023-06,1,BA23J,Negative Publicity Imposes Which Risk,B-RISKTYPES
+2023-06,1,BA23J,Numerical on Modified Duration,C-MKTRISK
+2023-06,1,BA23J,SMA2 is called when due for — days and upto 90 days,D-NPA
+2023-06,1,BA23J,"If the 64-day volatility is 56%, what would be the approximate 1 day volatility",B-STATS
+2023-06,1,BA23J,What is the minimum retention requirement(MRR) for the originator of residential mortgage backed securities,B-CREDITRISK
+2023-06,1,BA23J,PCL Limits Calculation-5 Marks,A-EXIMP
+2023-06,1,BA23J,Operational RWA and Capital Charge-5 marks,B-CAPCALC
+2023-06,1,BA23J,NRO NRE Account Case Study,A-NRI
+2023-06,1,BA23J,Duration Calculation-5 Marks,C-MKTRISK
+2023-06,1,BA23J,Market Risk – Treasury Ops- 3 Marks,C-TPROD
+2023-06,1,BA23J,ALCO & ALM Related- 3 questions,D-ALM
+2023-06,1,BA23J,Altaman Z Score Min Required-2 Questions,B-CREDITRISK
+2023-06,1,BA23J,PCL drawdown by exporter Case Study,A-EXIMP
+2023-06,1,BA23J,Difference between NRO and NRE account,A-NRI
+2023-06,1,BA23J,Method of fixing the rate of exchange of between one currency and another through the help of third currency is called?,A-FXNUM
+2023-06,1,BA23J,Going Concern,B-RISKTYPES
+2023-06,1,BA23J,Model Risk,B-RISKTYPES
+2023-06,1,BA23J,Country Risk Classification,A-ECGC
+2023-06,1,BA23J,Forex Settlement Date Calculation,A-FXNUM
+2023-06,1,BA23J,RAROC,D-RAROC
+2023-06,1,BA23J,Volatility,B-STATS
+2023-06,1,BA23J,"CRR, SLR Case Study",C-RESERVES
+2023-06,1,BA23J,Capital Charge-1 Question,B-CAPCALC
+2023-06,1,BA23J,IFSC-1-3 Questions,A-IFSC
+2023-06,1,BA23J,Bond Face Value,C-MKTRISK
+2023-06,1,BA23J,Packing Credit Limit,A-EXIMP
+2023-06,1,BA23J,Basel 3,B-BASEL
+2023-06,1,BA23J,Fetters,B-RISKTYPES
+2023-06,1,BA23J,BPS,C-MKTRISK
+2023-06,1,BA23J,EDBP Case Study,A-FXNUM
+2023-06,1,BA23J,IFSCA,A-IFSC
+2023-06,1,BA23J,Expected Loss,B-CREDITRISK
+2023-06,1,BA23J,Chain Rule,A-FXNUM
+2023-06,1,BA23J,Types Of Risk,B-RISKTYPES
+2023-06,1,BA23J,Bank Book & Trading Book,B-RISKTYPES
+2023-06,1,BA23J,Credit Risk Characteristics,B-CREDITRISK
+2023-06,1,BA23J,Factors Affecting Foreign Exchange Rates,A-FXNUM
+2023-06,1,BA23J,Operational RWA & Capital Charge,B-CAPCALC
+2023-06,1,BA23J,LRS Education Purpose,A-LRS
+2023-06,1,BA23J,Case Study From Foreign Exchange,A-FXNUM
+2023-06,1,BA23J,DSIB Leverage Ratio,B-BASEL
+2023-06,1,BA23J,EBID Ratio,A-FXNUM
+2023-06,1,BA23J,CMB Amount,C-TPROD
+2023-06,1,BA23J,"Mid Office, Back Office, Front Office",C-TPROD
+2023-06,1,BA23J,VaR,C-MKTRISK
+2023-06,1,BA23J,CCB Numericals,B-BASEL
+2023-06,1,BA23J,Call Option,C-DERIV
+2023-06,2-3,BA23J,Spot Rate Numerical Question,A-FXNUM
+2023-06,2-3,BA23J,Basis Risk,B-RISKTYPES
+2023-06,2-3,BA23J,NPA Case Study,D-NPA
+2023-06,2-3,BA23J,NDTL Case Study,C-RESERVES
+2023-06,2-3,BA23J,NRE NRO Case Study,A-NRI
+2023-06,2-3,BA23J,EBID,A-FXNUM
+2023-06,2-3,BA23J,Funding Risk,B-RISKTYPES
+2023-06,2-3,BA23J,Market Risk Other Name,B-RISKTYPES
+2023-06,2-3,BA23J,SMA Case Study,D-NPA
+2023-06,2-3,BA23J,RWA Case Study,B-CAPCALC
+2023-06,2-3,BA23J,Forex-2 Case Study,A-FXNUM
+2023-06,2-3,BA23J,Tier 1 & Tier 2 Capital,B-CAPCALC
+2023-06,2-3,BA23J,CCB Comes Under Which Tier,B-CAPCALC
+2023-06,2-3,BA23J,GIFT City,A-IFSC
+2023-06,2-3,BA23J,NPA -Asset Classification,D-NPA
+2023-06,2-3,BA23J,Red Clause LC,A-LC
+2023-06,2-3,BA23J,External Commercial Borrowings-2-3 Questions,A-ECB
+2023-06,2-3,BA23J,Forex-12 Questions,A-FXNUM
+2023-12,1,BA23D,Case Study On Provision and Provision Coverage Ratio,D-NPA
+2023-12,1,BA23D,RBI Appointed Credit Rating Agencies For Capital Adequacy Purpose,B-BASEL
+2023-12,1,BA23D,Enterprise Risk Management,B-RISKTYPES
+2023-12,1,BA23D,Case Study On Bonds,C-MKTRISK
+2023-12,1,BA23D,Which of the following are not correct regarding IFSC Banking Unit,A-IFSC
+2023-12,1,BA23D,Which of the following are true for liquidation of packing credit?,A-EXIMP
+2023-12,1,BA23D,Basel III Norms For Capital Adequacy Ratio,B-BASEL
+2023-12,1,BA23D,Who Is Regulatory Authority Of IBU?,A-IFSC
+2023-12,1,BA23D,What Is Wrong About IBU?,A-IFSC
+2023-12,1,BA23D,Leverage Coverage Ratio Of Other Than DSIB Bank,B-BASEL
+2023-12,1,BA23D,Which Bank’s Are Currently In DSIB?,B-BASEL
+2023-12,1,BA23D,In India Bank Use?,
+2023-12,1,BA23D,For Calculation of Capital Adequacy For Market Risk Which Approach Is Adopted As Per RBI?,C-MKTRISK
+2023-12,1,BA23D,Pillar 2 Need Capital Maintenance For The Purpose Of?,B-BASEL
+2023-12,1,BA23D,Under Which LC The Advance Is Provided?,A-LC
+2023-12,1,BA23D,MRR% In Securitization?,B-CREDITRISK
+2023-12,1,BA23D,Which Is Incorrect About Realization Of Export Bill?,A-EXIMP
+2023-12,1,BA23D,CMB Features,C-TPROD
+2023-12,1,BA23D,Who Can Act As Market Maker In Credit Derivative?,B-CREDITRISK
+2023-12,1,BA23D,Which Is Not Chief Function Of Integral Treasury?,C-TPROD
+2023-12,1,BA23D,Supplier Credit,A-EXIMP
+2023-12,1,BA23D,Gift Under LRS,A-LRS
+2023-12,1,BA23D,"Under FEMA Remittance, Which Are Prohibited?",A-LRS
+2023-12,1,BA23D,Sources & Applications Of Funds,D-ALM
+2023-12,1,BA23D,"Match The Following: Funding Risk, Call Risk, Time Risk",B-RISKTYPES
+2023-12,1,BA23D,Pillar III Of Basel Represent?,B-BASEL
+2023-12,1,BA23D,Factoring Committee,A-EXIMP
+2023-12,1,BA23D,Risk Management Policy Is Approved By?,
+2023-12,1,BA23D,Bank To Bank Reinforcement Is Handled Under URR,A-LC
+2023-12,1,BA23D,Total Period Of PCL,A-EXIMP
+2023-12,1,BA23D,Risk Pricing Consider Following?,B-CREDITRISK
+2023-12,1,BA23D,Which Basel has recommended and demanded greater degree of Cooperation between host and host supervisor?,B-BASEL
+2023-12,1,BA23D,Which Is Incorrect About Realization Of Export Bill?,A-EXIMP
+2023-12,1,BA23D,Deviation + Variance,B-STATS
+2023-12,1,BA23D,Haircut,B-BASEL
+2023-12,1,BA23D,What is Alpha Factor?,B-OPRISK
+2023-12,1,BA23D,Case Study On FOREX,A-FXNUM
+2023-12,1,BA23D,Loan Given To NRI Can Be?,A-NRI
+2023-12,1,BA23D,Standard Deviation,B-STATS
+2023-12,2-3,BA23D,ECB,A-ECB
+2023-12,2-3,BA23D,NPA Provisioning-2 Case Study,D-NPA
+2023-12,2-3,BA23D,Pillar 3 Requirements under Basel III Framework Refers To,B-BASEL
+2023-12,2-3,BA23D,Case Study On CRAR,B-CAPCALC
+2023-12,2-3,BA23D,Chain Rule,A-FXNUM
+2023-12,2-3,BA23D,How many DDA Account Can Be Opened?,A-EXIMP
+2023-12,2-3,BA23D,CDS and TRS Comparison,B-CREDITRISK
+2023-12,2-3,BA23D,7 Category Of Operational Risk,B-OPRISK
+2023-12,2-3,BA23D,Commercial Beta Factor,B-OPRISK
+2023-12,2-3,BA23D,Credit Derivatives,B-CREDITRISK
+2023-12,2-3,BA23D,Monetary Policy,C-RESERVES
+2023-12,2-3,BA23D,Incoterms Case Study,A-LC
+2023-12,2-3,BA23D,Current Account Transaction,A-LRS
+2023-12,2-3,BA23D,IFSC Establishment Year,A-IFSC
+2023-12,2-3,BA23D,CET1 Case Study,B-CAPCALC
+2023-12,2-3,BA23D,What Is ECB2 From?,A-ECB
+2023-12,2-3,BA23D,DSIB-2 Questions,B-BASEL
+2023-12,2-3,BA23D,Haircut % When Currency Differ,B-BASEL
+2023-12,2-3,BA23D,Case Study On Export Bill,A-EXIMP
+2023-12,2-3,BA23D,Additional Tier 1 Capital,B-CAPCALC
+2023-12,2-3,BA23D,MPC,C-RESERVES
+2023-12,2-3,BA23D,Credit Portfolios,B-CREDITRISK
+2023-12,2-3,BA23D,NRE & NRO,A-NRI
+2023-12,2-3,BA23D,ECGC Standard Policy,A-ECGC
+2023-12,2-3,BA23D,Function Of Integrated Treasury,C-TPROD
+2023-12,2-3,BA23D,Stock & Flow Approach,B-LIQ
+2023-12,2-3,BA23D,Irrevocable LC,A-LC
+2023-12,2-3,BA23D,ADRs,A-ECB
+2023-12,2-3,BA23D,Statement Of Structural Liquidity,B-LIQ
+2023-12,2-3,BA23D,FBG Mac Remittance,A-LRS
+2023-12,2-3,BA23D,Farmer was granted loan for sugarcane yield. If one sugarcane season is 18 months. When Loan will become NPA if he doesn’t pay the loan?,D-NPA
+2023-12,2-3,BA23D,Three Risk Category Of ICAAP,B-BASEL
+2023-12,2-3,BA23D,CRR,C-RESERVES
+2023-12,2-3,BA23D,Climate Risk,B-RISKTYPES
+2023-12,2-3,BA23D,ATM ITM OTM Questions,C-DERIV
+2023-12,2-3,BA23D,Diamond Dollar Account,A-EXIMP
+2023-12,2-3,BA23D,IFSC Under Sez Act,A-IFSC
+2024-07,1,BA24J,Red Clause,A-LC
+2024-07,1,BA24J,Total Assets,D-ALM
+2024-07,1,BA24J,Unit 1 Case Study,
+2024-07,1,BA24J,Accelerated Provisioning,D-NPA
+2024-07,1,BA24J,LRS,A-LRS
+2024-07,1,BA24J,Risk,B-RISKTYPES
+2024-07,1,BA24J,Total Number of Incoterms,A-LC
+2024-07,1,BA24J,When do Credit Card dues become NPA?,D-NPA
+2024-07,1,BA24J,Case Study On Crystallization of Bill,A-FXNUM
+2024-07,1,BA24J,External Commercial Borrowing,A-ECB
+2024-07,1,BA24J,"If Repo and MCLR are reduced by 25 bps, then what is the gain or loss?",D-IRR
+2024-07,1,BA24J,EBID,A-FXNUM
+2024-07,1,BA24J,ALCO,D-ALM
+2024-07,1,BA24J,CAR and RWA,B-CAPCALC
+2024-07,1,BA24J,"The customer requested to not honour the Letter of Credit due to the poor quality of the goods, then what will be the action of bank?",A-LC
+2024-07,1,BA24J,NOSTRO and VOSTRO Account,A-CORR
+2024-07,1,BA24J,Basel II-3 Pillars,B-BASEL
+2024-07,1,BA24J,Directorate General Foreign Trade,A-EXIMP
+2024-07,1,BA24J,ICAAP,B-BASEL
+2024-07,1,BA24J,RTGS-IDBRT,A-CORR
+2024-07,1,BA24J,Agriculture Loan-Provisioning For Paddy Crops,D-NPA
+2024-07,1,BA24J,PCR-Gross NPA,D-NPA
+2024-07,1,BA24J,Types of LC,A-LC
+2024-07,1,BA24J,IEC Code,A-EXIMP
+2024-07,1,BA24J,"For 91 Days, T-Bill with a discounted price of 99, the yield% would be?",C-TPROD
+2024-07,1,BA24J,EWRM,B-RISKTYPES
+2024-07,1,BA24J,Headquarter of BIS,A-EXIM
+2024-07,1,BA24J,TCS Threshold,A-LRS
+2024-07,1,BA24J,LC-Based Case Study,A-LC
+2024-07,1,BA24J,RTGS Developed By?,A-CORR
+2024-07,1,BA24J,BPV,C-MKTRISK
+2024-07,1,BA24J,Case Study On NDTL,C-RESERVES
+2024-07,1,BA24J,Basis Risk,B-RISKTYPES
+2024-07,1,BA24J,"Forex Market Timing, Working Days",A-FXNUM
+2024-07,1,BA24J,Type Risk,B-RISKTYPES
+2024-07,1,BA24J,Minimum and Maximum Limit of CRR,C-RESERVES
+2024-07,1,BA24J,Wilful Defaulter,D-NPA
+2024-07,1,BA24J,RTGS Settlement Date in the Indian Market,A-FXNUM
+2024-07,1,BA24J,Yield Curve,C-MKTRISK
+2024-07,2-3,BA24J,Red Clause LC,A-LC
+2024-07,2-3,BA24J,EBID,A-FXNUM
+2024-07,2-3,BA24J,"Basal II, III",B-BASEL
+2024-07,2-3,BA24J,Irrevocable LC,A-LC
+2024-07,2-3,BA24J,LRS Limit till which tax cannot be deducted,A-LRS
+2024-07,2-3,BA24J,Banking Committee Headquarter,A-EXIM
+2024-07,2-3,BA24J,Blockchain Technology,A-TECH
+2024-07,2-3,BA24J,Forex Used Calculation,A-FXNUM
+2024-07,2-3,BA24J,COSO Committee,B-RISKTYPES
+2024-07,2-3,BA24J,LRS Case Study,A-LRS
+2024-07,2-3,BA24J,"CRR, SLR Case Study",C-RESERVES
+2024-07,2-3,BA24J,IDRBT,A-CORR
+2024-07,2-3,BA24J,Total Number of INCOTERMS,A-LC
+2024-07,2-3,BA24J,EWRM,B-RISKTYPES
+2024-07,2-3,BA24J,Not a DSIB Bank,B-BASEL
+2024-07,2-3,BA24J,Basis Risk,B-RISKTYPES
+2024-07,2-3,BA24J,Tier 1 and Tier 2 Case Study,B-CAPCALC
+2024-07,2-3,BA24J,Risk Definition,B-RISKTYPES
+2024-07,2-3,BA24J,Liquidity Risk,B-LIQ
+2024-07,2-3,BA24J,IFSC-IBU,A-IFSC
+2024-07,2-3,BA24J,RAROC Definition,D-RAROC
+2024-07,2-3,BA24J,CAR Case Study,B-CAPCALC
+2024-07,2-3,BA24J,Yield of T-Bill,C-TPROD
+2024-07,2-3,BA24J,Trading and Banking Book,B-RISKTYPES
+2024-07,2-3,BA24J,ECGC,A-ECGC
+2024-07,2-3,BA24J,MAMP,
+2024-07,2-3,BA24J,CRAR,B-CAPCALC
+2024-07,2-3,BA24J,Yield Curve Risk,C-MKTRISK
+2024-07,2-3,BA24J,ALM Includes?,D-ALM
+2024-07,2-3,BA24J,TCS Threshold Limit,A-LRS
+2024-07,2-3,BA24J,Who facilitates IFSC?,A-IFSC
+2024-07,2-3,BA24J,ICAAB,B-BASEL
+2024-07,2-3,BA24J,ECB,A-ECB
+2024-07,2-3,BA24J,Credit Rating,B-CREDITRISK
+2024-07,2-3,BA24J,Paddy Crop NPA Provisions,D-NPA
+2024-07,2-3,BA24J,CET 1+CCB=?,B-CAPCALC
+2024-07,2-3,BA24J,Stress Testing,B-RISKTYPES
+2024-07,2-3,BA24J,Wilful Defaulter NPA Provisioning,D-NPA
+2024-07,2-3,BA24J,Provision in Agriculture,D-NPA
+2024-07,2-3,BA24J,IBU License and Minimum Capital Required,A-IFSC
+2024-07,2-3,BA24J,Volatility Sensitivity Potential Part Of,B-RISKTYPES
+2024-07,2-3,BA24J,T-Bills Case Study,C-TPROD
+2024-07,2-3,BA24J,Climate Risk,B-RISKTYPES
+2024-07,2-3,BA24J,Maximum Capital For Oil,
+2024-07,2-3,BA24J,Role of ALCO,D-ALM
+2024-12,1,PW24D,Case Study Altman Z Score,B-CREDITRISK
+2024-12,1,PW24D,"If LCR is 100%, Net Cash Flow for the next 30 days is 550 Crore, then calculate the HQLA of Bank",B-LIQ
+2024-12,1,PW24D,Requirements to become AD Category,A-EXIM
+2024-12,1,PW24D,RNOR Conditions,A-NRI
+2024-12,1,PW24D,Foreign Currency Limit for Iraq and other countries?,A-LRS
+2024-12,1,PW24D,Capital Conservation Buffer,B-BASEL
+2024-12,1,PW24D,FCNRCB Account Maximum Time,A-NRI
+2024-12,1,PW24D,Cash Management Bills,C-TPROD
+2024-12,1,PW24D,Basis Risk,B-RISKTYPES
+2024-12,1,PW24D,If USD INR is 82.5445/82.6025 and GBP USD is 1.2212/1.2413 then what will be the bid rate of GBPINR?,A-FXNUM
+2024-12,1,PW24D,Types of Risk,B-RISKTYPES
+2024-12,1,PW24D,NSFR,B-LIQ
+2024-12,1,PW24D,Forex,A-FXNUM
+2024-12,1,PW24D,LRS Limit For Education,A-LRS
+2024-12,1,PW24D,TCS Chart,A-LRS
+2024-12,1,PW24D,Maximum Retention Requirement For Housing Mortgage,B-CREDITRISK
+2024-12,1,PW24D,NRI Case Study,A-NRI
+2024-12,1,PW24D,Tier II Capital Can Be?,B-CAPCALC
+2024-12,1,PW24D,Chain Rule,A-FXNUM
+2024-12,1,PW24D,Haj Committee,A-LRS
+2024-12,1,PW24D,SNRR,A-NRI
+2024-12,1,PW24D,Status Holder Exporter Can Self Write of Export Bill,A-EXIMP
+2024-12,1,PW24D,DSIB,B-BASEL
+2025-06,1,BA25J,Deemed Resident Person,A-NRI
+2025-06,1,BA25J,Modified Duration,C-MKTRISK
+2025-06,1,BA25J,Capital Conservation Buffer,B-BASEL
+2025-06,1,BA25J,NRI,A-NRI
+2025-06,1,BA25J,Exporter,A-EXIMP
+2025-06,1,BA25J,Put Option,C-DERIV
+2025-06,1,BA25J,Call Option,C-DERIV
+2025-06,1,BA25J,SMA 1,D-NPA
+2025-06,1,BA25J,Article 14 of UCP 600,A-LC
+2025-06,1,BA25J,NII/NIM Case Study,D-IRR
+2025-06,1,BA25J,Export Discounting,A-FXNUM
+2025-06,1,BA25J,UCPDC,A-LC
+2025-06,1,BA25J,LRS,A-LRS
+2025-06,1,BA25J,Risk Weighatge,B-CAPCALC
+2025-06,1,BA25J,Basis Point Value,C-MKTRISK
+2025-06,1,BA25J,CRAR,B-CAPCALC
+2025-06,1,BA25J,ESCROW Account,A-EXIMP
+2025-06,1,BA25J,Cash Limit,A-DEALROOM
+2025-06,1,BA25J,MRR,B-CREDITRISK
+2025-06,1,BA25J,DDA,A-EXIMP
+2025-06,1,BA25J,TT Buying Rate,A-FXNUM
+2025-06,1,BA25J,RAROC,D-RAROC
+2025-06,1,BA25J,CRAR Calculation,B-CAPCALC
+2025-06,1,BA25J,Wilful Defaulter,D-NPA
+2025-06,2,BA25J,Willful Defaulter,D-NPA
+2025-06,2,BA25J,NSFR,B-LIQ
+2025-06,2,BA25J,TSA Approach,B-OPRISK
+2025-06,2,BA25J,FOREX,A-FXNUM
+2025-06,2,BA25J,Basis Point Value,C-MKTRISK
+2025-06,2,BA25J,Capital Charge,B-CAPCALC
+2025-06,2,BA25J,Project Finance – Which Business Line Up?,B-OPRISK
+2025-06,2,BA25J,Bond,C-MKTRISK
+2025-06,2,BA25J,"NII, NIM",D-IRR
+2025-06,2,BA25J,Letter Of Credit,A-LC
+2025-06,2,BA25J,RWA,B-CAPCALC
+2025-06,2,BA25J,Volatility,B-STATS
+2025-06,2,BA25J,Bond & Yield,C-MKTRISK
+2025-06,2,BA25J,IFSC,A-IFSC
+2025-06,2,BA25J,LRS,A-LRS
+2025-12,1,PW25D,LC Case Study,A-LC
+2025-12,1,PW25D,Basel,B-BASEL
+2025-12,1,PW25D,NPA Provisioning,D-NPA
+2025-12,1,PW25D,Alpha Factor - BIA,B-OPRISK
+2025-12,1,PW25D,Dealing Room Operations (Case Study),A-DEALROOM
+2025-12,1,PW25D,CRAR,B-CAPCALC
+2025-12,1,PW25D,Volatality,B-STATS
+2025-12,1,PW25D,INCOTERM,A-LC
+2025-12,1,PW25D,CET 1 Capital,B-CAPCALC
+2025-12,1,PW25D,Personal Loan and Consumer Loan Provisioning,D-NPA
+2025-12,1,PW25D,BPV,C-MKTRISK
+2025-12,1,PW25D,Stop Loss Limit,C-MKTRISK
+2025-12,1,PW25D,VaR - Numerical,C-MKTRISK
+2025-12,1,PW25D,LRS Limit,A-LRS
+2025-12,1,PW25D,Foreign Currency,
+2025-12,1,PW25D,Nostro/vostro,A-CORR
+2025-12,1,PW25D,Asian Clearing Currency,A-CORR
+2025-12,1,PW25D,Basel Norms- Merger and Acquisition,B-BASEL
+2025-12,1,PW25D,LRS Scheme,A-LRS
+2025-12,1,PW25D,Horizontal Vertical Disallowance,C-MKTRISK
+2025-12,1,PW25D,NPA Norms for OD account,D-NPA
+2025-12,1,PW25D,Crsytallization,A-FXNUM
+2025-12,1,PW25D,Parties in LC,A-LC
+2025-12,1,PW25D,Govt Bards Risk-Related Questions,
+2025-12,1,PW25D,Non-Resident Special Rupee Account,A-NRI
+2025-12,1,PW25D,Sensitivity Analysis,B-RISKTYPES
+2025-12,1,PW25D,Credit Card Provisioning,D-NPA
+2025-12,1,PW25D,Mirror Foreign Domestic,A-FXNUM
+2025-12,1,PW25D,RWA - 10 Questions,B-CAPCALC
+2025-12,1,PW25D,Treasury Office,C-TPROD
+2025-12,1,PW25D,Annula Cap - TCS,A-LRS
+2025-12,1,PW25D,Supplier Credit,A-EXIMP
+2025-12,1,PW25D,Numerical - Forex - Forward Rate,A-FXNUM
+2025-12,1,PW25D,Importer,A-EXIMP
+2025-12,3,OB25D,Provisions,D-NPA
+2025-12,3,OB25D,LCR,B-LIQ
+2025-12,3,OB25D,Stop Loss,C-MKTRISK
+2025-12,3,OB25D,Derivative Case Study,C-DERIV
+2025-12,3,OB25D,Treasury Case Study,C-TPROD
+2025-12,3,OB25D,FOREX Calculation – 3 to 4 questions,A-FXNUM
+2025-12,3,OB25D,Call and put,C-DERIV
+2025-12,3,OB25D,Application on ECB and Letter of Credit,A-LC
+2025-12,3,OB25D,Balance Sheet LCR calculation,B-LIQ
+2025-12,3,OB25D,Cash Management Bill,C-TPROD
+2025-12,3,OB25D,NII/NIM,D-IRR
+2025-12,3,OB25D,Trade Credit,A-EXIMP
+2025-12,3,OB25D,NPA Provision,D-NPA
+2025-12,3,OB25D,Various types of Risk,B-RISKTYPES
+2025-12,3,OB25D,NRI/NRO,A-NRI
+2025-12,3,OB25D,LC related questions,A-LC
+2025-12,3,OB25D,Stop Loss Case Study,C-MKTRISK
+2025-12,3,OB25D,FCNR time period,A-NRI
+2025-12,3,OB25D,Day light limit and day light loss,A-DEALROOM
+2026-06,1,BA26J,Case Study On LC,A-LC
+2026-06,1,BA26J,Duration and Modified Duration,C-MKTRISK
+2026-06,1,BA26J,Leverage Ratio,B-BASEL
+2026-06,1,BA26J,Risk,B-RISKTYPES
+2026-06,1,BA26J,CET 1 Calculation,B-CAPCALC
+2026-06,1,BA26J,Modified Duration Case Study,C-MKTRISK
+2026-06,1,BA26J,"CRR, SLR Case Study",C-RESERVES
+2026-06,1,BA26J,Forex Numerical,A-FXNUM
+2026-06,1,BA26J,"RSA, D GAP",D-IRR
+2026-06,1,BA26J,Variance Case Study,B-STATS
+2026-06,1,BA26J,Volatility,B-STATS
+2026-06,1,BA26J,LRS/NRI,A-LRS
+2026-06,1,BA26J,NRE Account Case Study,A-NRI
+2026-06,1,BA26J,RWA,B-CAPCALC
+2026-06,1,BA26J,IFSC,A-IFSC
+2026-06,1,BA26J,Housing Loan RW Percentage,B-CAPCALC
+2026-06,1,BA26J,IBA Limit In IFSC,A-IFSC
+2026-06,1,BA26J,GDR,A-ECB
+2026-06,1,BA26J,Credit Metrics,B-CREDITRISK
+2026-06,1,BA26J,ECB,A-ECB
+2026-06,1,BA26J,Net Worth Limit,
+2026-06,1,BA26J,Name of the Model given by JP Morgan on Credit Risk,B-CREDITRISK
+2026-06,1,BA26J,LC Theory,A-LC
+2026-06,1,BA26J,Strategy Risk,B-RISKTYPES
+2026-06,1,BA26J,Retirement of Import Bill,A-FXNUM
+2026-06,1,BA26J,NPA Question - Accelerated Rate without option,D-NPA
+2026-06,1,BA26J,Mean Variance,B-STATS
+2026-06,1,BA26J,Forex Cross Rates Numericals,A-FXNUM
+2026-06,1,BA26J,Duration Case Study,C-MKTRISK
+2026-06,1,BA26J,Case Study On Commercial Paper,C-TPROD
+2026-06,1,BA26J,World Bank,A-EXIM
+2026-06,1,BA26J,Which Entity initiate Blockchain Technology in India?,A-TECH
+2026-06,1,BA26J,Certificate of Deposit A3 Rating Company can issue,C-TPROD
+2026-06,1,BA26J,Medical Purpose Remittance to an individual sick in foreign and amount was more than 2.5 million under LRS?,A-LRS
+2026-06,1,BA26J,FALLCR,B-LIQ
+2026-06,1,BA26J,CCF Limit,B-CAPCALC
+2026-06,2,BA26J,Credit Risk Model,B-CREDITRISK
+2026-06,2,BA26J,Strategic Risk,B-RISKTYPES
+2026-06,2,BA26J,MT 700/MT 702,A-CORR
+2026-06,2,BA26J,Exim Bank EMF,A-EXIM
+2026-06,2,BA26J,RWA Case Study,B-CAPCALC
+2026-06,2,BA26J,Modified Duration Case Study,C-MKTRISK
+2026-06,2,BA26J,Different Type Of Risk,B-RISKTYPES
+2026-06,2,BA26J,Government Securities,C-TPROD
+2026-06,2,BA26J,QCCPRW%,B-CAPCALC
+2026-06,2,BA26J,FCNR(B) Case Study,A-NRI
+2026-06,2,BA26J,Basis Risk,B-RISKTYPES
+2026-06,2,BA26J,Types of Treasury Products,C-TPROD
+2026-06,2,BA26J,NDTL,C-RESERVES
+2026-06,2,BA26J,Shipment Risk,A-ECGC
+2026-06,2,BA26J,Gap Mismatch Risk,D-IRR
+2026-06,2,BA26J,HQLA,B-LIQ
+2026-06,2,BA26J,IBU Minimum Capital,A-IFSC
+2026-06,2,BA26J,FCNR Case Study,A-NRI
+2026-06,2,BA26J,TSA,B-OPRISK
+2026-06,2,BA26J,Red Clause LC,A-LC
+2026-06,2,BA26J,RWA-Grows 25%,B-CAPCALC
+2026-06,2,BA26J,NPA-Crop Season,D-NPA
+2026-06,2,BA26J,CET 1 + CCB,B-CAPCALC
+2026-06,2,BA26J,Systemic Risk,B-RISKTYPES
+2026-06,2,BA26J,SOFR,C-TPROD
+2026-06,2,BA26J,Treasury Bill Tenure,C-TPROD
+2026-06,2,BA26J,LC Related Case Study,A-LC
+2026-06,2,BA26J,T-Bills,C-TPROD
+2026-06,2,BA26J,Cash Management Bill Tenure,C-TPROD
+2026-06,2,BA26J,Difference Between 2 Beta factor,B-OPRISK
+2026-06,2,BA26J,Forex Hold,A-DEALROOM
+2026-06,2,BA26J,NRE Account Case Study,A-NRI
+2026-06,2,BA26J,EXIM Bank,A-EXIM
+2026-06,2,BA26J,VaR,C-MKTRISK
+2026-06,3,BA26J,Loan became NPA on 31st March 2025. Outstanding bal 1.2 crore on 31st December,D-NPA
+2026-06,3,BA26J,"fully secured,but one of the directors is in list of wilful defaulter. now provisioning",D-NPA
+2026-06,3,BA26J,Case Study On SLR,C-RESERVES
+2026-06,3,BA26J,URR,A-LC
+2026-06,3,BA26J,CCB,B-BASEL
+2026-06,3,BA26J,NRE Case Study,A-NRI
+2026-06,3,BA26J,"Case study on CeT 1, direct question on capping of tier 1 and 2 capital",B-CAPCALC
+2026-06,3,BA26J,Case Study On Exim Bank,A-EXIM
+2026-06,3,BA26J,Price Sensitivity,C-MKTRISK
+2026-06,3,BA26J,NRI can open which type of account?,A-NRI
+2026-06,3,BA26J,Treasury Bill-Yield,C-TPROD
+2026-06,3,BA26J,Loan to NRE Non Related,A-NRI
+2026-06,3,BA26J,Operational Risk. Which Approach is not?,B-OPRISK
+2026-06,3,BA26J,CRAR,B-CAPCALC
+2026-06,3,BA26J,ECB,A-ECB
+2026-06,3,BA26J,"Credit RWA, Capital RWA, Market RWA given, Calculate Tier1 including CCB",B-CAPCALC
+2026-06,3,BA26J,Exim Bank: Which Facility it can't give to exporter?,A-EXIMP
+2026-06,3,BA26J,BIA and Standardised Approach Mix Case Study,B-OPRISK
+2026-06,3,BA26J,"Capital Related and NRI, SLR and RSA and RSL",D-IRR
+2026-06,3,BA26J,Scenario Analysis,B-RISKTYPES
+2026-06,3,BA26J,Non Deployment of SLR where Core Deposits 8% SLR Yield 6% and SLR 18% given,C-RESERVES
+2026-06,3,BA26J,Mean Variance,B-STATS
+2026-06,3,BA26J,"Case Study : MCLR and Base Rate. Multiple Scenario , Simple Calculations",D-IRR
+2026-06,3,BA26J,Letter of Credit,A-LC
+2026-06,3,BA26J,Leverage Ratio,B-BASEL
+2026-06,3,BA26J,Variance Calculation,B-STATS
+2026-06,3,BA26J,MCLR,D-IRR
+2026-06,3,BA26J,Balance Sheet CCF,B-CAPCALC
+2026-06,3,BA26J,ADR/GDR,A-ECB
+2026-06,1,PW26J1,Credit Metrics,B-CREDITRISK
+2026-06,1,PW26J1,Commercial Paper (CP),C-TPROD
+2026-06,1,PW26J1,External Commercial Borrowings (ECB),A-ECB
+2026-06,1,PW26J1,Global Depository Receipts (GDR),A-ECB
+2026-06,1,PW26J1,Blockchain Technology,A-TECH
+2026-06,1,PW26J1,Willful Defaulters and Accelerated Provisioning,D-NPA
+2026-06,1,PW26J1,Liquidity Coverage Ratio (LCR),B-LIQ
+2026-06,1,PW26J1,Fallback/FALLCR facility,B-LIQ
+2026-06,1,PW26J1,Haircuts on securities,B-BASEL
+2026-06,1,PW26J1,Risk weights and collateral management,B-CAPCALC
