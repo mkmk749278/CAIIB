@@ -168,6 +168,10 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   theory, stay with me"); a **check-in at each chapter break** (a student's one-line reaction, a joke, "stretch for
   a second", "I need full attention for this part"); small check-ins inside chapters ("Everyone with me so far?",
   "Everyone, listen to this one carefully"); a **warm close** with a small homework and "see you in the next class".
+- **An online class, not a classroom** (owner, same day: "wishes are fine, no fake 'come in, come in'; they are
+  in class but not a physical class"). Greet and connect, but no physical-room cues: no "come in, take your seats",
+  "hands up", "I can see your faces", "phones on silent". Use "welcome to the class", "notifications on silent",
+  "just think about it", "I know it's late".
 - **Two students**: Meera (new on the desk, asks the real questions, gets the tempting wrong answers) and Ravi (a
   tired branch officer with light humour; makes the common slip in the quiz). Both fictional, named in the
   disclosure card ("A dramatised class… all voices are AI-generated"). Students never call the teacher "Sir"; the
