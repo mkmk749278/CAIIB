@@ -35,7 +35,10 @@ any new stage. New lessons go into the playbook section they belong to, with the
 - **Then (same day) "make it a live class"**: `script_v4.md` adds a warm-up, chapter-break check-ins, a second
   student Ravi and a warm close (PLAYBOOK §5b). Copy page for the phone:
   https://claude.ai/artifact/5L1n5TgBfjStnD4rdrTy2o (built by `tools/video/voice_blocks.py`; also
-  `voice_blocks_v4.md`). Owner is generating 8 files: teacher_1–6, meera, ravi. v3 is superseded.
+  `dialogue_v4.md`). The owner uses the app's **multi-speaker** text to speech, so the page lists speaker turns
+  in order (32 turns in 6 parts); owner generates `part_1.mp3`…`part_6.mp3`, all voices already in order. To cut
+  lines, run `align_lines.py` per part with the ids of that part in order (adapt it: it still reads `script_v2.md`
+  and expects one file per speaker). v3 is superseded.
 - **Next:** (1) owner's v4 voices, re-cut as r2 (new warm-up scene, Ravi, class sounds, disclosure card text);
   (2) independent viewer review of the cut (new session); (3) visual upgrade:
   illustrated characters and counter, music bed and sound cues (music library on Drive; rclone not installed here),

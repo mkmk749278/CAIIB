@@ -1,18 +1,21 @@
-"""Build ElevenLabs voice blocks from a lesson script.
+"""Build ElevenLabs dialogue turns from a lesson script, in speaking order.
 
 Usage: python3 tools/video/voice_blocks.py course/bfm/A/A1/script_v4.md OUT.md OUT.html
 
 Script lines look like "N01 · text" (N = teacher, M = Meera, R = Ravi), separated by blank lines, under "## "
-section headings. Teacher lines are cut into blocks of at most MAX characters, starting a new block at each section unless the current one is short, so each
-generation stays short and fresh. Writes a Markdown copy for the repo and a phone page with copy buttons.
+section headings. The owner pastes them into the ElevenLabs app's multi-speaker text to speech (one speaker card
+per turn) and generates each part in one go, so the audio comes out already in order with all voices.
+- Consecutive lines of one speaker join into one turn; a turn is cut at TURN_MAX characters (a new card, same voice).
+- Turns are grouped into parts of at most PART_MAX characters; a new part starts at a section break once the
+  current part is past PART_MIN. Each part = one generation = one file (part_1.mp3 ...).
+Writes a Markdown copy for the repo and a phone page with one Copy button per turn.
 """
 import html
 import json
 import re
 import sys
 
-MAX = 2800
-MIN = 1800  # a section shorter than this shares a block with the next one
+TURN_MAX, PART_MAX, PART_MIN = 1200, 3000, 1800
 SPEAKERS = {"N": "Teacher", "M": "Meera", "R": "Ravi"}
 
 
@@ -30,54 +33,58 @@ def parse(path):
     return out
 
 
-def blocks(lines):
-    res, cur = [], None
-    for ln in (l for l in lines if l["id"][0] == "N"):
-        size = len(ln["text"]) + 2
-        new_section = cur is not None and cur["section"].split(" + ")[-1] != ln["section"]
-        if cur is None or (new_section and cur["chars"] > MIN) or cur["chars"] + size > MAX:
-            cur = {"speaker": "Teacher", "section": ln["section"], "lines": [], "chars": 0}
-            res.append(cur)
-        elif new_section:
-            cur["section"] += " + " + ln["section"]
-        cur["lines"].append(ln)
-        cur["chars"] += size
-    for k in ("M", "R"):
-        ls = [l for l in lines if l["id"][0] == k]
-        if ls:
-            res.append({"speaker": SPEAKERS[k], "section": "all lines", "lines": ls,
-                        "chars": sum(len(l["text"]) + 2 for l in ls)})
-    n = 0
-    for b in res:
-        if b["speaker"] == "Teacher":
-            n += 1
-            b["file"] = f"teacher_{n}.mp3"
+def turns(lines):
+    res = []
+    for ln in lines:
+        t = res[-1] if res else None
+        if t and t["sp"] == ln["id"][0] and t["section"] == ln["section"] and len(t["text"]) + len(ln["text"]) < TURN_MAX:
+            t["ids"].append(ln["id"])
+            t["text"] += " " + ln["text"]
         else:
-            b["file"] = b["speaker"].lower() + ".mp3"
-        b["text"] = "\n\n".join(l["text"] for l in b["lines"])
-        b["first"], b["last"] = b["lines"][0]["id"], b["lines"][-1]["id"]
+            res.append({"sp": ln["id"][0], "section": ln["section"], "ids": [ln["id"]], "text": ln["text"]})
     return res
+
+
+def parts(ts):
+    res = []
+    for t in ts:
+        p = res[-1] if res else None
+        new_sec = p is not None and p["sections"][-1] != t["section"]
+        if p is None or (new_sec and p["chars"] > PART_MIN) or p["chars"] + len(t["text"]) > PART_MAX:
+            p = {"sections": [t["section"]], "turns": [], "chars": 0}
+            res.append(p)
+        elif new_sec:
+            p["sections"].append(t["section"])
+        p["turns"].append(t)
+        p["chars"] += len(t["text"])
+    out = []
+    for i, p in enumerate(res, 1):
+        out.append({"file": f"part_{i}.mp3", "section": " + ".join(dict.fromkeys(p["sections"])),
+                    "turns": [{"speaker": SPEAKERS[t["sp"]], "first": t["ids"][0], "last": t["ids"][-1],
+                               "text": t["text"]} for t in p["turns"]]})
+    return out
 
 
 def main(src, md_out, html_out):
     lines = parse(src)
-    bl = blocks(lines)
-    md = [f"# Voice blocks from `{src}`", "",
-          "Copy each block into the ElevenLabs app exactly, blank lines included. Phone page with copy buttons: see",
-          "the PR. Files: " + ", ".join(f"`{b['file']}`" for b in bl), ""]
-    for b in bl:
-        md += [f"## {b['file']} · {b['speaker']} · {b['section']} ({b['first']}–{b['last']}, {len(b['text'])} chars)",
-               "```", b["text"], "```", ""]
+    ps = parts(turns(lines))
+    md = [f"# Dialogue turns from `{src}`", "",
+          "For the ElevenLabs app's multi-speaker text to speech: one speaker card per turn, in this order; generate",
+          "each part in one go. Voices: Teacher, Meera, Ravi (the same three voices in every part).", ""]
+    for p in ps:
+        md += [f"## {p['file']} · {p['section']} ({len(p['turns'])} turns, "
+               f"{sum(len(t['text']) for t in p['turns'])} chars)", ""]
+        for k, t in enumerate(p["turns"], 1):
+            md += [f"**{k}. {t['speaker']}** ({t['first']}–{t['last']})", "```", t["text"], "```", ""]
     md += ["## Line order (for the edit)"] + [f"- {l['id']}: {l['text'][:70]}" for l in lines]
     open(md_out, "w", encoding="utf-8").write("\n".join(md) + "\n")
 
     tpl = open(__file__.replace("voice_blocks.py", "voice_blocks_page.html"), encoding="utf-8").read()
-    data = [{k: b[k] for k in ("file", "speaker", "section", "first", "last", "text")} for b in bl]
-    page = tpl.replace("/*DATA*/[]", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
+    page = tpl.replace("/*DATA*/[]", json.dumps(ps, ensure_ascii=False).replace("</", "<\\/"))
     page = page.replace("{{SRC}}", html.escape(src))
     open(html_out, "w", encoding="utf-8").write(page)
-    for b in bl:
-        print(b["file"], b["section"], len(b["text"]))
+    for p in ps:
+        print(p["file"], p["section"], len(p["turns"]), sum(len(t["text"]) for t in p["turns"]))
 
 
 if __name__ == "__main__":

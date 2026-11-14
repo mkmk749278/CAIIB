@@ -173,8 +173,10 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   disclosure card ("A dramatised class… all voices are AI-generated"). Students never call the teacher "Sir"; the
   teacher stays an unnamed AI voice with no back-story.
 - New lines added for class moments get a letter suffix (N00a, N15a, R01) so the old line ids and video code stay.
-- Voice blocks are built by `tools/video/voice_blocks.py` into a Markdown copy and a phone page with one Copy button
-  per block (the owner records from the phone). ElevenLabs v3 expression tags (`[chuckles]`) are allowed sparingly;
+- Voices are generated with the ElevenLabs app's **multi-speaker** text to speech (owner, 2026-11-14): all voices
+  in one generation, in speaking order, so the audio needs no reassembly. `tools/video/voice_blocks.py` turns a
+  script into ordered speaker turns grouped in parts of about 2,000–2,600 characters, as Markdown and as a phone page
+  with one Copy button per turn (the owner records from the phone). ElevenLabs v3 expression tags (`[chuckles]`) are allowed sparingly;
   the page can strip them for other models. Class sounds (murmur, laugh, chairs) are added in the edit.
 
 ## 6. Next-gen PDF (draft)
