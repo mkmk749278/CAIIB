@@ -56,5 +56,12 @@ if __name__ == "__main__":
         print(f"{label:<44} way1 Rs {r1}   way2 Rs {r2}   {'OK' if r1 == r2 else 'MISMATCH'}")
         if r1 != r2:
             sys.exit(1)
+    # multiplier method (taught in the video) must give the same rates
+    for label, val, want in [("x0.9995", 85.40*0.9995, ttb), ("x0.9985", 85.40*0.9985, bb), ("x1.001", 85.42*1.001, tts)]:
+        check(f"A1 multiplier {label}", D(str(calc12(val))), want)
+    check("A1 multiplier x1.0015 on TT selling", D(str(calc12(calc12(85.42*1.001)*1.0015))), bs)
+    wrong = q4(D("85.42") * D("1.0025"))
+    print(f"Trap: both margins on the ask -> {wrong} (must differ from {bs})"); assert wrong != bs
+    print(f"Stakes: father {(D(18000)*(tts-ttb)).quantize(D('0.01'))}, exporter {(D(40000)*(ttb-bb)).quantize(D('0.01'))}")
     # spread the customer pays on a round trip (buy then sell back) per USD
     print(f"\nTT round trip spread per USD: {tts - ttb}  (interbank spread {D(str(ask)) - D(str(bid))})")
