@@ -6,6 +6,8 @@ the class first. In between also." v4 = v3 plus a warm-up before the first fact,
 few inside chapters, a second student (Ravi), and a warm close. Facts and numbers are unchanged. v3 line ids are kept;
 new lines get a letter suffix (N00a, N15a, R01) so the video code can find them. Rules: PLAYBOOK §5b.
 
+- **Setting**: an online class. Students join from home after work; no physical-room cues (no "come in",
+  "hands up", "I can see you"). Owner, 2026-11-14.
 - **Voices**: TEACHER (AI voice, no name, no back-story, never called "Sir"), MEERA (new on the forex desk) and RAVI
   (a branch officer who comes to class tired after work; light humour). On screen at the start: "A dramatised class.
   Meera and Ravi are fictional characters. All voices are AI-generated."
@@ -16,15 +18,15 @@ new lines get a letter suffix (N00a, N15a, R01) so the video code can find them.
 
 ## Warm-up (class settles in)
 
-N00a · [warmly] Hello everyone, good evening! Come in, come in, take your seats. I know most of you have come straight
-from the branch, so first, just take a breath. Long day?
+N00a · [warmly] Hello everyone, good evening! Welcome to the class. I know most of you are joining straight after the
+branch, so first, just take a breath. Long day?
 
 R01 · Very long. Month-end, and my manager wanted all the returns before five.
 
 N00b · [chuckles] Month-end. I know, I know. Okay, so here's the deal. For the next fifteen minutes, forget the
-branch. Phones on silent, except the calculator. You'll need that one.
+branch. Put your notifications on silent, and keep a calculator next to you. You'll need it.
 
-N00c · Quick question for everyone. How many of you have actually sat at a forex counter? Hands up. Okay, a few.
+N00c · Quick question for everyone. How many of you have actually worked at a forex counter? Just think about it.
 Meera, you just joined the forex desk, right?
 
 M00 · Yes, two weeks back. And honestly, the rate board still scares me a little.
@@ -56,7 +58,7 @@ tell me yet. Meera, you're on the forex desk, you go first.
 M01 · That's easy! The father is buying dollars, so he gets the buying rate. The exporter is selling dollars, so he
 gets the selling rate.
 
-N05 · Hmm. Good try, Meera, and honestly, that's what most people say. Ravi, you were nodding too, I saw that! It
+N05 · Hmm. Good try, Meera, and honestly, that's what most people say. And Ravi, I'm sure you'd have said the same! It
 sounds perfectly logical. But it's exactly backwards.
 
 N06 · See, here's the thing. The rate on that board isn't the customer's price. It's the bank's price. The bank is
@@ -180,7 +182,7 @@ but in the exam, that's the wrong option.
 N40 · And look at that, these are the same four prices we saw on the board at the start. One small tip: if the
 question tells you how to round, just follow what it says.
 
-N40a · Okay, I can see a few tired faces. That's fine, the hardest part is over. You've done two sums with your own
+N40a · Okay, I know it's late and some of you are tired. That's fine, the hardest part is over. You've done two sums with your own
 hands, that's real progress. Now the fun part: a quick quiz. I'll give you a deal, you tell me the rate. Ready?
 
 R03 · Ready. But go slow!

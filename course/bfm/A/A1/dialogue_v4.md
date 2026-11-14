@@ -3,11 +3,11 @@
 For the ElevenLabs app's multi-speaker text to speech: one speaker card per turn, in this order; generate
 each part in one go. Voices: Teacher, Meera, Ravi (the same three voices in every part).
 
-## part_1.mp3 · Warm-up (class settles in) + Opening (6 turns, 1959 chars)
+## part_1.mp3 · Warm-up (class settles in) + Opening (6 turns, 1972 chars)
 
 **1. Teacher** (N00a–N00a)
 ```
-[warmly] Hello everyone, good evening! Come in, come in, take your seats. I know most of you have come straight from the branch, so first, just take a breath. Long day?
+[warmly] Hello everyone, good evening! Welcome to the class. I know most of you are joining straight after the branch, so first, just take a breath. Long day?
 ```
 
 **2. Ravi** (R01–R01)
@@ -17,7 +17,7 @@ Very long. Month-end, and my manager wanted all the returns before five.
 
 **3. Teacher** (N00b–N00c)
 ```
-[chuckles] Month-end. I know, I know. Okay, so here's the deal. For the next fifteen minutes, forget the branch. Phones on silent, except the calculator. You'll need that one. Quick question for everyone. How many of you have actually sat at a forex counter? Hands up. Okay, a few. Meera, you just joined the forex desk, right?
+[chuckles] Month-end. I know, I know. Okay, so here's the deal. For the next fifteen minutes, forget the branch. Put your notifications on silent, and keep a calculator next to you. You'll need it. Quick question for everyone. How many of you have actually worked at a forex counter? Just think about it. Meera, you just joined the forex desk, right?
 ```
 
 **4. Meera** (M00–M00)
@@ -35,7 +35,7 @@ Good, I like that you said it. And by the end of today, it won't scare you. Beca
 Alright. Picture a forex counter, Monday morning, a busy branch in Visakhapatnam. Look at the board up there. One currency, the US dollar, and four different prices. Four! Why four? That's what we're going to sort out today. Now, two customers walk in. First, a father. He has to send eighteen thousand dollars for his daughter's university fee. Second, a shrimp exporter. He's got a forty thousand dollar export bill, and he wants his rupees today. And here's why this matters. If you, sitting at that counter, pick the wrong price for the father, the branch loses more than two thousand rupees. On just one fee. So it's not a small thing. So let me ask you. The father, does he get the higher price or the lower one? Think about it for a second. Don't tell me yet. Meera, you're on the forex desk, you go first.
 ```
 
-## part_2.mp3 · Chapter 1 · Which side of the counter? (7 turns, 2276 chars)
+## part_2.mp3 · Chapter 1 · Which side of the counter? (7 turns, 2281 chars)
 
 **1. Meera** (M01–M01)
 ```
@@ -44,7 +44,7 @@ That's easy! The father is buying dollars, so he gets the buying rate. The expor
 
 **2. Teacher** (N05–N10)
 ```
-Hmm. Good try, Meera, and honestly, that's what most people say. Ravi, you were nodding too, I saw that! It sounds perfectly logical. But it's exactly backwards. See, here's the thing. The rate on that board isn't the customer's price. It's the bank's price. The bank is the one buying and selling. So whenever you read a forex rate, come around and stand on the bank's side of the counter. Always. From there it's simple. If dollars are coming into the bank, the bank is buying them. And it pays you rupees. If dollars are going out of the bank, the bank is selling them. And it takes your rupees. That's it. In means buy, out means sell. Think of the money-changer at the airport. He buys cheap and sells dear, right? Same with the bank. The only difference is, at the bank the gap is a few paise, not a few rupees. But those paise add up. [laughs] They pay our salaries! So, in a direct quote, remember this: the bank's buying rate is always the lower rupee number, and its selling rate is always the higher one. Buy low, sell high. Just like any shopkeeper.
+Hmm. Good try, Meera, and honestly, that's what most people say. And Ravi, I'm sure you'd have said the same! It sounds perfectly logical. But it's exactly backwards. See, here's the thing. The rate on that board isn't the customer's price. It's the bank's price. The bank is the one buying and selling. So whenever you read a forex rate, come around and stand on the bank's side of the counter. Always. From there it's simple. If dollars are coming into the bank, the bank is buying them. And it pays you rupees. If dollars are going out of the bank, the bank is selling them. And it takes your rupees. That's it. In means buy, out means sell. Think of the money-changer at the airport. He buys cheap and sells dear, right? Same with the bank. The only difference is, at the bank the gap is a few paise, not a few rupees. But those paise add up. [laughs] They pay our salaries! So, in a direct quote, remember this: the bank's buying rate is always the lower rupee number, and its selling rate is always the higher one. Buy low, sell high. Just like any shopkeeper.
 ```
 
 **3. Teacher** (N11–N12)
@@ -89,7 +89,7 @@ Very good question, Meera. That's exactly where we're going. For that, I want to
 And how big is that margin? Each bank decides its own. Don't try to memorise any number. In the exam, if a sum needs a margin, the question will give it to you. Everyone with me so far? Good. Now, which rung do we use for which deal? For this, I want you to watch two clocks. On the left, the rupees moving at our counter. On the right, the dollars moving in the bank's account abroad. That account is called the Nostro account. When both clocks move together, at the same time, we use the rungs closest to the middle. These are the TT rates. TT buying, when the dollars have already arrived. TT selling, when the dollars go out right away. But sometimes the bank pays the rupees first, then waits for the dollars, and also has to handle documents. In that case we move to the outer rungs. These are the bill rates. Take bill buying. The bank pays the exporter today, handles his documents, but the money in its account abroad comes only after some weeks. The bank is waiting, it's taking a risk. So it buys at a lower rate. And the interest for that waiting period? That's charged separately. We'll see that in lesson A-five.
 ```
 
-## part_4.mp3 · Chapter 2 · The rate ladder (5 turns, 2604 chars)
+## part_4.mp3 · Chapter 2 · The rate ladder (5 turns, 2619 chars)
 
 **1. Teacher** (N28–N33)
 ```
@@ -103,7 +103,7 @@ Buying rates come down from the bid. So TT buying is eighty-five point four zero
 
 **3. Teacher** (N40a–N40a)
 ```
-Okay, I can see a few tired faces. That's fine, the hardest part is over. You've done two sums with your own hands, that's real progress. Now the fun part: a quick quiz. I'll give you a deal, you tell me the rate. Ready?
+Okay, I know it's late and some of you are tired. That's fine, the hardest part is over. You've done two sums with your own hands, that's real progress. Now the fun part: a quick quiz. I'll give you a deal, you tell me the rate. Ready?
 ```
 
 **4. Ravi** (R03–R03)
@@ -176,10 +176,10 @@ Got it. Next time, I'm on the right side of the counter!
 ```
 
 ## Line order (for the edit)
-- N00a: [warmly] Hello everyone, good evening! Come in, come in, take your sea
+- N00a: [warmly] Hello everyone, good evening! Welcome to the class. I know mo
 - R01: Very long. Month-end, and my manager wanted all the returns before fiv
 - N00b: [chuckles] Month-end. I know, I know. Okay, so here's the deal. For th
-- N00c: Quick question for everyone. How many of you have actually sat at a fo
+- N00c: Quick question for everyone. How many of you have actually worked at a
 - M00: Yes, two weeks back. And honestly, the rate board still scares me a li
 - N00d: Good, I like that you said it. And by the end of today, it won't scare
 - N00e: And don't worry, no heavy theory. We'll do it like a story at the coun
@@ -188,7 +188,7 @@ Got it. Next time, I'm on the right side of the counter!
 - N03: And here's why this matters. If you, sitting at that counter, pick the
 - N04: So let me ask you. The father, does he get the higher price or the low
 - M01: That's easy! The father is buying dollars, so he gets the buying rate.
-- N05: Hmm. Good try, Meera, and honestly, that's what most people say. Ravi,
+- N05: Hmm. Good try, Meera, and honestly, that's what most people say. And R
 - N06: See, here's the thing. The rate on that board isn't the customer's pri
 - N07: From there it's simple. If dollars are coming into the bank, the bank 
 - N08: If dollars are going out of the bank, the bank is selling them. And it
@@ -229,7 +229,7 @@ Got it. Next time, I'm on the right side of the counter!
 - N38: Okay. Eighty-five point five zero five four two, into one point zero z
 - N39: Now be careful here, this is where people slip. That margin goes on th
 - N40: And look at that, these are the same four prices we saw on the board a
-- N40a: Okay, I can see a few tired faces. That's fine, the hardest part is ov
+- N40a: Okay, I know it's late and some of you are tired. That's fine, the har
 - R03: Ready. But go slow!
 - N40b: [chuckles] Not too slow, Ravi. In the exam you won't have much time pe
 - N41: So, let's put each deal on its rung. FEDAI's rules tell us which one. 
