@@ -88,8 +88,7 @@ the primary RBI/FEMA text, not this file.
   forwards, FCNR(B) ARR-based ceilings, repo path.
 
 ## Still to do
-1. Quote the exact paragraph for each "yes" row in `claims.csv` style before any lesson uses it (the Antigravity
-   task 4 does this in bulk).
+1. Quote the exact paragraph for each "yes" row in `claims.csv` style before any lesson uses it (desktop task A1 does this in bulk).
 2. Confirm: AD Cat-II figures; dividend top bands, 75% cap and "z"; final commercial-bank IFR text; quarterly-profit
    and general-provision Tier 2 amendments (numbers and dates); ECLGS 5.0 risk weight date; CDS/TRS final date; NOP
    and forex capital charge revamp date.

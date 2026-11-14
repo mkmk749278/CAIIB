@@ -16,12 +16,16 @@ any new stage. New lessons go into the playbook section they belong to, with the
   (`fullpaper_tagged.csv`); **regulatory changes up to the 30 June 2026 cut-off** from 13 IIBF Vision issues and
   RBI's Master Direction index (`regulatory_updates.md`); **BFM course plan v1** (`course_plan.md`: about 40 lessons,
   one mind map per module, pilot proposal A1+A2 forex).
-- **Waiting on the owner's desktop (Antigravity)**: `docs/antigravity_tasks.md` (Telegram recalls, YouTube analysis
-  topics, gated older papers, RBI wording checks, TCS 2026 rates). Results arrive as PRs into `research/bfm/inbox/`;
-  fold them into the map and the update list.
-- **Next:** (1) finish verifying `regulatory_updates.md` (main rows RBI-verified 2026-11-14; open items listed in its
-  "Still to do"); (2) owner decisions before the
-  pilot: channel, language, start date, and approval of the course plan; (3) pilot lesson A1+A2 end to end.
+- **Owner decisions (2026-11-14):** build the **full course first**; no YouTube channel until it is complete, then a
+  **new channel** only for publicity/free samples. **English only.** **Paid course with free sample lessons** (hosting
+  decided later). Claude decides the build order. Work starts now in this repo (separate from the Creator films).
+- **Fallback order (owner, 2026-11-14):** Claude does everything it can itself; if this session's IP is rate-limited
+  or blocked, open a new cloud session (may get a different IP) for that narrow job; the owner's laptop (Cowork,
+  Gemini, Antigravity) only for what no cloud session can do. Details and the open laptop tasks:
+  `docs/desktop_tasks.md`. Laptop results arrive as PRs into `research/bfm/inbox/` (Gemini's as pasted chat text).
+- **Next:** build the course in the order of `course_plan.md` "Build order": first the lesson spec and the Module A
+  mind map, then lessons A1, A2… with every rule from primary sources; finish open verification items as lessons
+  need them.
 
 ## The goal in one line
 Cover everything the exam needs, put the most effort where IIBF's marks actually are, and teach it with the best
@@ -67,7 +71,9 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
 - **Updates**: a short video and page for every RBI change before the IIBF cut-off.
 - **Audience**: bank officers studying in the evening on a phone; many in South India want English, not Hindi.
   Plain, warm Indian English; Telugu later if the owner decides.
-- Open decisions for the owner: new channel or not, English only or English + Telugu, free first or paid, start date.
+- Decided 2026-11-14: English only; paid course with free samples; new YouTube channel only after the full course
+  is built. Still open: where the paid course is hosted, pricing, whether video voice uses the ElevenLabs plan of the
+  Creator channel (paid credits: ask first).
 
 ## Owner and setup
 - Kishore works **only from an Android phone** (GitHub app, Claude app, Termux). Everything runs in cloud sessions or
@@ -84,7 +90,8 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
   topic cluster), `importance.csv`, `importance_map.md`, `sources.csv` (source key to URL).
 - `research/bfm/regulatory_updates.md`, `course_plan.md`, `iibf_vision_index.csv`, `fullpaper_tagged.csv`;
   `research/bfm/inbox/` for results from the owner's desktop.
-- `docs/antigravity_tasks.md`: click-to-copy prompts for anything the cloud cannot reach.
+- `docs/desktop_tasks.md`: the fallback order and the few laptop tasks the cloud cannot do (Telegram, gated forms,
+  YouTube).
 - `research/market/`: what other providers do (summaries only, with reliability notes).
 - `tools/research/`: the pipeline (`h2t.py` page to text, `build_items.py` extract recalled items, `tag.py` topic
   rules, `score.py` tiers). Downloads stay out of git (scratch or Drive).
