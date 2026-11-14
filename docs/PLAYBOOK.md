@@ -161,6 +161,21 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
 - **Voice choice**: a conversational/educational voice, not a narration one; stability around 35–45% so the pitch
   moves; generate per chapter, not the whole lesson in one block, and listen to the first minute before the rest.
 - Facts, numbers, rule versions and line ids do not change when only the voice style changes.
+- **A live class, not a talk to camera** (owner on v3, same day: "he is teaching in a live class with students
+  inside the class; not directly into content; connect them to the class first, and in between also"). So every
+  lesson has: a **warm-up** before the first fact (greet, "long day?", phones on silent and calculator out, ask the
+  room a question, say why today's topic matters with a true number from the Importance Map, promise "no heavy
+  theory, stay with me"); a **check-in at each chapter break** (a student's one-line reaction, a joke, "stretch for
+  a second", "I need full attention for this part"); small check-ins inside chapters ("Everyone with me so far?",
+  "Everyone, listen to this one carefully"); a **warm close** with a small homework and "see you in the next class".
+- **Two students**: Meera (new on the desk, asks the real questions, gets the tempting wrong answers) and Ravi (a
+  tired branch officer with light humour; makes the common slip in the quiz). Both fictional, named in the
+  disclosure card ("A dramatised class… all voices are AI-generated"). Students never call the teacher "Sir"; the
+  teacher stays an unnamed AI voice with no back-story.
+- New lines added for class moments get a letter suffix (N00a, N15a, R01) so the old line ids and video code stay.
+- Voice blocks are built by `tools/video/voice_blocks.py` into a Markdown copy and a phone page with one Copy button
+  per block (the owner records from the phone). ElevenLabs v3 expression tags (`[chuckles]`) are allowed sparingly;
+  the page can strip them for other models. Class sounds (murmur, laugh, chairs) are added in the edit.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp

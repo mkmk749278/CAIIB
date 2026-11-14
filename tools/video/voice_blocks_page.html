@@ -1,0 +1,135 @@
+<title>A1 Voice Blocks</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A1 voice blocks · live class</h1>
+    <p class="sub">Tap <b>Copy</b>, paste into ElevenLabs, generate, save with the file name shown. Record in this order.</p>
+  </header>
+
+  <details class="tips">
+    <summary>Voice settings for a live-class feel</summary>
+    <ul>
+      <li><b>Teacher</b>: a warm, friendly Indian-English male voice from the Voice Library, filtered for
+        Conversational or Educational, not Narration. It should sound like someone talking to a room, not reading a trailer.</li>
+      <li><b>Meera</b>: young, curious female voice. <b>Ravi</b>: relaxed male voice, a little tired, a little funny.</li>
+      <li>Model <b>Eleven v3</b> with stability <b>Natural</b> (or Creative if it sounds flat). Older models: stability 35–45%, style 20–30%.</li>
+      <li>Use the same voice and settings for every teacher block.</li>
+      <li>Keep the blank lines. The pause after each one is where the video cuts the lines apart.</li>
+      <li>Generate block 1, listen to the first minute, then do the rest. Each generation uses credits.</li>
+      <li>Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times, as in an Indian classroom.</li>
+      <li>Class sounds (murmurs, a laugh, chairs) get added in the edit, not in the voice.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If the voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From {{SRC}}. Line ids match the script, so the video stays in sync.</p>
+</div>
+
+<script>
+const BLOCKS = /*DATA*/[];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  BLOCKS.forEach((b, i) => {
+    const text = clean(b.text);
+    const done = store.get('done-' + b.file) === '1';
+    const card = document.createElement('section');
+    card.className = 'card' + (done ? ' is-done' : '');
+    const shown = esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t">' + m + '</span>');
+    card.innerHTML =
+      '<div class="head"><span class="file">' + (i + 1) + '. ' + b.file + '</span>' +
+      '<span class="who ' + b.speaker + '">' + b.speaker + '</span>' +
+      '<span class="meta">' + b.section + ' · lines ' + b.first + '–' + b.last + ' · ' + text.length + ' characters</span></div>' +
+      '<div class="row"><button class="copy" id="copy-' + i + '" type="button">Copy block</button>' +
+      '<label class="mark"><input type="checkbox" id="done-' + i + '"' + (done ? ' checked' : '') + '> Generated</label></div>' +
+      '<details class="text"><summary>Show text</summary><pre id="pre-' + i + '">' + shown + '</pre></details>';
+    list.appendChild(card);
+    const btn = card.querySelector('button');
+    btn.addEventListener('click', () => {
+      const t = clean(b.text);
+      const ok = () => { btn.textContent = 'Copied ✓'; setTimeout(() => btn.textContent = 'Copy block', 1800); };
+      const fallback = () => {
+        card.querySelector('details').open = true;
+        const r = document.createRange(); r.selectNodeContents(card.querySelector('pre'));
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Selected: long-press, Copy';
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, fallback);
+      else fallback();
+    });
+    card.querySelector('input').addEventListener('change', e => {
+      store.set('done-' + b.file, e.target.checked ? '1' : '0');
+      card.classList.toggle('is-done', e.target.checked);
+    });
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
