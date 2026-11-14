@@ -5,7 +5,7 @@ built from them later; the text files are the master.
 
 | File | What it holds | Gate |
 |---|---|---|
-| `script.md` | the narration with a picture column; 1,600–2,100 words (12–15 min at about 140 words a minute) | read aloud test: no line over 25 words; no reading of rules verbatim except short quotes |
+| `script.md` | the narration with picture directions; about 1,200–2,000 words (at about 140 words a minute, plus calculator and practice pauses, 12–15 minutes) | read aloud test: no line over 25 words; no reading of rules verbatim except short quotes |
 | `numericals.md` | every sum in the lesson: data, steps, **calculator key presses**, answer | `tools/check/*.py` computes each answer two independent ways and they match to 4 decimals |
 | `practice.md` | 5–8 of our own questions (MCQ and keyed-in numericals) with answers and one-line reasons | every answer traced to `claims.csv` or `numericals.md` |
 | `claims.csv` | every rule or number taught: claim, primary source (title, section, URL), version date, status | no claim without a primary source; version on or before the cut-off the lesson states |

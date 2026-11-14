@@ -3,7 +3,7 @@
 - **Module / unit**: BFM Module A, Unit A1 (Exchange Rates and Forex Business: forex arithmetic)
 - **Importance**: Tier A (forex arithmetic recalled in 7 of 7 exams, Jun 2023 – Jun 2026)
 - **Rule version**: FEDAI Rules, 10th edition, as in force on 30 June 2026 (Nov/Dec 2026 exam cut-off)
-- **Length**: about 13 minutes · **Numbers**: `numericals.md` (checked by `tools/check/fx_merchant_rates.py`)
+- **Length**: about 12 minutes (1,250 words of narration plus calculator and practice pauses) · **Numbers**: `numericals.md` (checked by `tools/check/fx_merchant_rates.py`)
 - Names, places and rates in this lesson are **illustrative**; the on-screen label says so.
 
 ---
@@ -139,8 +139,8 @@ Money going out:
 And one twist, in amber. Reversing a deal puts you on the other side of the counter.
 
 If the bank bought an export bill and the dollars never come, it turns the dollar loan into a rupee loan. That is
-crystallisation, and it uses **TT selling**, because the bank must now buy back those dollars from the market for
-you. Rule 2.1(b).
+crystallisation. It uses **TT selling**: the customer now owes the bank dollars, so it is as if the bank sells him
+those dollars. Rule 2.1(b).
 
 The same logic cancels forward contracts: a purchase contract is cancelled at **TT selling**, a sale contract at
 **TT buying**. Rule 6.4. We will work those sums in lesson A4.
