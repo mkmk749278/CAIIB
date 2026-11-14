@@ -88,6 +88,8 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
 - **RBI rate-limits automated requests** (HTTP 418 after repeated form posts on the notifications page,
   2026-11-14). Never loop on RBI pages; fetch single pages slowly, and send bulk checks to Antigravity on the owner's
   desktop.
+  Single pages fetched 8–10 seconds apart worked without a block (2026-11-14, about 10 pages); RBI's FEMA
+  notification pages (`BS_FemaNotifications.aspx?Id=`) carry the exact regulation text and footnoted amendment history.
 - **Cut-off traps** are themselves exam material and lesson content: e.g. the export realisation period went
   9 → 15 months (Dec 2025) → 9 months (5 June 2026, before the 30 June cut-off) → new regulations from 1 Oct 2026.
   Rules issued before the cut-off but effective later (ECL, new credit-risk SA, both from 1 Apr 2027) are taught as
