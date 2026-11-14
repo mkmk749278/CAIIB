@@ -77,7 +77,7 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   shift-wise topic lists.
 - **Community sources (2026-11-14)**: public Telegram previews (`t.me/s/<channel>`) work from the cloud, but the
   channels found (Adda247 BFM, CAIIB WITH ASHOK) are promotions and class links. Real recall-sharing is in groups
-  only the owner can see: an Antigravity task.
+  only the owner can see: a Cowork task (`docs/desktop_tasks.md`).
 
 ## 4a. Regulatory changes (how to find them)
 - **IIBF Vision** (monthly, https://www.iibf.org.in/iibf-vision) is IIBF's own digest of developments and an exam
@@ -86,8 +86,8 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
 - **RBI Master Direction index** (https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx) gives the current rulebook
   in one request. Since 28 Nov 2025 commercial-bank rules live in about 32 function-wise MDs; cite those names.
 - **RBI rate-limits automated requests** (HTTP 418 after repeated form posts on the notifications page,
-  2026-11-14). Never loop on RBI pages; fetch single pages slowly, and send bulk checks to Antigravity on the owner's
-  desktop.
+  2026-11-14). Never loop on RBI pages; fetch single pages slowly, and hand a rate-limited job to a new cloud session
+  (possibly a new IP) before any laptop tool.
   Single pages fetched 8–10 seconds apart worked without a block (2026-11-14, about 10 pages); RBI's FEMA
   notification pages (`BS_FemaNotifications.aspx?Id=`) carry the exact regulation text and footnoted amendment history.
 - **Cut-off traps** are themselves exam material and lesson content: e.g. the export realisation period went
@@ -116,5 +116,9 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-14 (later): build the full course before any publishing; a new YouTube channel only afterwards, for
+  publicity and free samples; English only; paid course with free sample lessons; Claude decides the build order;
+  start now. Claude does everything it can first; a new cloud session (possibly a new IP) when this one is
+  rate-limited; the owner's laptop tools (Cowork, Gemini, Antigravity) only for what no cloud session can do.
 - 2026-11-14: start with CAIIB BFM. Evidence-based Importance Map instead of copying a course. Synthetic voice is
   acceptable, honestly handled. Repo `mkmk749278/CAIIB` created with `main`; work lands by PR merged the same day.
