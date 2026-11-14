@@ -16,6 +16,10 @@ study counts once but carries 3–5 questions, and plain theory is under-reporte
 - Reported mix: about 60–70% theory and 30–40% numericals, with some shifts up to half numerical/case study
   (June 2026 shift 3); several "no options" numericals each cycle.
 
+**Cross-check (full paper, Dec 2025, 100 questions; `fullpaper_tagged.csv`)**: top clusters forex sums 10, NPA 10,
+capital adequacy 10, duration/VaR/bonds 8, derivatives 8; module mix A 28 / B 30 / C 27 / D 15. Tier A confirmed;
+Module C and derivatives carry more theory marks than the recalled-topic counts show.
+
 ## Tier A: must master (12 topic clusters; full lessons, mind maps, numericals, practice)
 | Cluster | What it covers | IIBF unit | Cycles | Mentions | Case/num |
 |---|---|---|---|---|---|

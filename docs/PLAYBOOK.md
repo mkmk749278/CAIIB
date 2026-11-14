@@ -69,6 +69,29 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
 - **Gaps to fill next**: full-question memory papers for more cycles (older Bankersadda PDFs sit behind lead forms;
   do not hand over personal details to unlock them without the owner's say), community sources (Telegram channels
   are where candidates share most; public channel previews only), and the RBI changes up to each cut-off.
+- **Cross-check with full papers (2026-11-14)**: the Oliveboard Dec 2025 memory-based paper (100 questions) puts the
+  same four clusters on top (forex sums, NPA, capital adequacy, duration/VaR), confirming Tier A. But its module mix
+  is A 28 / B 30 / C 27 / D 15, while topic lists give C only 16%: **plain treasury theory is under-recalled**, so
+  Module C gets more weight than the mention count suggests. The undated Oliveboard set contains off-syllabus items
+  (escrow, mutual-fund expense ratio, cash deposits): "memory-based" PDFs are partly padded; weigh them below
+  shift-wise topic lists.
+- **Community sources (2026-11-14)**: public Telegram previews (`t.me/s/<channel>`) work from the cloud, but the
+  channels found (Adda247 BFM, CAIIB WITH ASHOK) are promotions and class links. Real recall-sharing is in groups
+  only the owner can see: an Antigravity task.
+
+## 4a. Regulatory changes (how to find them)
+- **IIBF Vision** (monthly, https://www.iibf.org.in/iibf-vision) is IIBF's own digest of developments and an exam
+  source named in the rules. Read every issue up to the cut-off; `tools/research/vision.py` pulls BFM-relevant items.
+  File names are irregular; take them from the listing page, do not guess.
+- **RBI Master Direction index** (https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx) gives the current rulebook
+  in one request. Since 28 Nov 2025 commercial-bank rules live in about 32 function-wise MDs; cite those names.
+- **RBI rate-limits automated requests** (HTTP 418 after repeated form posts on the notifications page,
+  2026-11-14). Never loop on RBI pages; fetch single pages slowly, and send bulk checks to Antigravity on the owner's
+  desktop.
+- **Cut-off traps** are themselves exam material and lesson content: e.g. the export realisation period went
+  9 → 15 months (Dec 2025) → 9 months (5 June 2026, before the 30 June cut-off) → new regulations from 1 Oct 2026.
+  Rules issued before the cut-off but effective later (ECL, new credit-risk SA, both from 1 Apr 2027) are taught as
+  "issued, coming"; the old rule remains the answer until then.
 
 ## 5. Lesson design (draft, to be proven in the pilot)
 - Open on a real branch situation with a question ("A customer returns a USD 1,500 draft for cancellation. 82.40 or
