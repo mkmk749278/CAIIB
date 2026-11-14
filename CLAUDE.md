@@ -28,7 +28,11 @@ any new stage. New lessons go into the playbook section they belong to, with the
   `tools/video/transcribe_words.py` + `align_lines.py` (files kept out of git: re-upload or ask the owner); Remotion
   project `video/` (render: `npx remotion render src/index.ts A1 out/x.mp4 --scale=0.6666666666666666`, then
   loudnorm to -16 LUFS); 720p review cut r1 sent to the owner in chat.
-- **Next:** (1) owner's reaction to A1 r1; (2) independent viewer review of the cut (new session); (3) visual upgrade:
+- **A1 r1 owner reaction (2026-11-14)**: narration felt like a documentary, not a class. Fixed in the words:
+  `script_v3.md` (classroom voice, same facts and line ids) and `voice_blocks_v3.md` (3 teacher blocks + Meera, with
+  voice settings). Rules in PLAYBOOK §5b; every future script follows them. Waiting for the owner's v3 audio, then
+  re-cut (some cues use fixed frame offsets inside a line, e.g. "Exactly backwards." at N05; re-check them).
+- **Next:** (1) owner's v3 voices, re-cut as r2; (2) independent viewer review of the cut (new session); (3) visual upgrade:
   illustrated characters and counter, music bed and sound cues (music library on Drive; rclone not installed here),
   smoother transitions; check line N34 audio ("nine nine nine five"); (4) lock the template, then A2 onwards in
   `course_plan.md` order. Cowork's first inbox batch is assessed in `research/bfm/inbox/README.md` (mostly unusable).
