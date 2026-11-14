@@ -1,699 +1,699 @@
 {
  "fps": 30,
- "durationInFrames": 20593,
+ "durationInFrames": 19943,
  "lines": [
   {
    "id": "N01",
    "speaker": "narrator",
    "text": "Same counter. Same dollar. Same morning. Four different prices on the board.",
    "start": 30,
-   "dur": 157,
+   "dur": 170,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N01.mp3"
   },
   {
    "id": "N02",
    "speaker": "narrator",
    "text": "This father must send eighteen thousand dollars for his daughter's university fee. This exporter wants rupees today for his forty thousand dollar bill.",
-   "start": 198,
-   "dur": 312,
+   "start": 211,
+   "dur": 261,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N02.mp3"
   },
   {
    "id": "N03",
    "speaker": "narrator",
    "text": "Pick the wrong price, and the branch loses over two thousand rupees on one fee alone.",
-   "start": 521,
-   "dur": 176,
+   "start": 482,
+   "dur": 161,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N03.mp3"
   },
   {
    "id": "N04",
    "speaker": "narrator",
    "text": "So, the father. Does he get the higher price, or the lower one? Hold your answer. Meera, a new forex officer at this branch, will answer first.",
-   "start": 707,
-   "dur": 296,
+   "start": 654,
+   "dur": 263,
    "hold": 150,
-   "audio": null
+   "audio": "audio/lines/N04.mp3"
   },
   {
    "id": "M01",
    "speaker": "meera",
    "text": "Easy. The father is buying dollars, so he gets the buying rate. The exporter is selling dollars, so he gets the selling rate.",
-   "start": 1238,
-   "dur": 259,
+   "start": 1153,
+   "dur": 250,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/M01.mp3"
   },
   {
    "id": "N05",
    "speaker": "narrator",
    "text": "That is the answer most people give. It sounds right. And it is exactly backwards.",
-   "start": 1508,
-   "dur": 170,
+   "start": 1413,
+   "dur": 197,
    "hold": 12,
-   "audio": null
+   "audio": "audio/lines/N05.mp3"
   },
   {
    "id": "N06",
    "speaker": "narrator",
    "text": "Here is why. The rate on that board is not the customer's price. It is the bank's price. So we stand on the bank's side of the counter.",
-   "start": 1700,
-   "dur": 279,
+   "start": 1632,
+   "dur": 263,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N06.mp3"
   },
   {
    "id": "N07",
    "speaker": "narrator",
    "text": "When dollars come into the bank, the bank is buying them. It pays you rupees.",
-   "start": 1989,
-   "dur": 159,
+   "start": 1906,
+   "dur": 154,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N07.mp3"
   },
   {
    "id": "N08",
    "speaker": "narrator",
    "text": "When dollars go out of the bank, the bank is selling them. It takes your rupees.",
-   "start": 2159,
-   "dur": 166,
+   "start": 2070,
+   "dur": 150,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N08.mp3"
   },
   {
    "id": "N09",
    "speaker": "narrator",
    "text": "Like a money-changer, the bank buys cheap and sells dear. Here the gap is a few paise, not a few rupees. But it pays the salaries.",
-   "start": 2335,
-   "dur": 269,
+   "start": 2231,
+   "dur": 281,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N09.mp3"
   },
   {
    "id": "N10",
    "speaker": "narrator",
    "text": "So in a direct quote, the bank's buying rate is always the lower rupee number. Its selling rate is always the higher one.",
-   "start": 2615,
-   "dur": 250,
+   "start": 2523,
+   "dur": 232,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N10.mp3"
   },
   {
    "id": "N11",
    "speaker": "narrator",
    "text": "Now the father. Dollars leave the bank for his daughter's university. The bank sells. He pays the higher, selling side.",
-   "start": 2876,
-   "dur": 246,
+   "start": 2766,
+   "dur": 229,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N11.mp3"
   },
   {
    "id": "N12",
    "speaker": "narrator",
    "text": "The exporter brings dollars in through his bill. The bank buys. He gets the lower, buying side.",
-   "start": 3132,
-   "dur": 197,
+   "start": 3005,
+   "dur": 190,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N12.mp3"
   },
   {
    "id": "M02",
    "speaker": "meera",
    "text": "Oh. I was standing on the wrong side of my own counter.",
-   "start": 3339,
-   "dur": 114,
+   "start": 3206,
+   "dur": 112,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/M02.mp3"
   },
   {
    "id": "N13",
    "speaker": "narrator",
    "text": "Everyone does at first. One rule fixes it for good: name every deal from the bank's side.",
-   "start": 3464,
-   "dur": 184,
+   "start": 3328,
+   "dur": 197,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N13.mp3"
   },
   {
    "id": "N14",
    "speaker": "narrator",
    "text": "Quick check. A son abroad sends two thousand five hundred dollars home to his mother. Does the bank buy or sell?",
-   "start": 3658,
-   "dur": 232,
+   "start": 3536,
+   "dur": 205,
    "hold": 150,
-   "audio": null
+   "audio": "audio/lines/N14.mp3"
   },
   {
    "id": "N15",
    "speaker": "narrator",
    "text": "Dollars come in. The bank buys.",
-   "start": 4051,
-   "dur": 64,
+   "start": 3901,
+   "dur": 71,
    "hold": 30,
-   "audio": null
+   "audio": "audio/lines/N15.mp3"
   },
   {
    "id": "M03",
    "speaker": "meera",
    "text": "But there are four prices on the board, not two. Which buying rate? Which selling rate?",
-   "start": 4230,
-   "dur": 180,
+   "start": 4087,
+   "dur": 172,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/M03.mp3"
   },
   {
    "id": "N16",
    "speaker": "narrator",
    "text": "For that we need a second picture. The rate ladder.",
-   "start": 4421,
-   "dur": 106,
+   "start": 4270,
+   "dur": 112,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N16.mp3"
   },
   {
    "id": "N17",
    "speaker": "narrator",
    "text": "First, where the prices come from. Banks trade dollars with each other all day. Right now the market says eighty-five point four zero, and eighty-five point four two.",
-   "start": 4537,
-   "dur": 343,
+   "start": 4392,
+   "dur": 292,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N17.mp3"
   },
   {
    "id": "N18",
    "speaker": "narrator",
    "text": "The lower number is the bid: what a buyer will pay. The higher one is the ask, or offer: what a seller wants.",
-   "start": 4891,
-   "dur": 226,
+   "start": 4694,
+   "dur": 223,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N18.mp3"
   },
   {
    "id": "N19",
    "speaker": "narrator",
    "text": "Notice how the price is written: so many rupees for one dollar, or for a hundred units of a currency like the yen. That is a direct quote. It is how FEDAI's rules say a bank must quote its customers.",
-   "start": 5127,
-   "dur": 412,
+   "start": 4927,
+   "dur": 382,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N19.mp3"
   },
   {
    "id": "N20",
    "speaker": "narrator",
    "text": "That market price sits in the middle of our ladder. The counter is retail, so the bank adds its own margin.",
-   "start": 5549,
-   "dur": 221,
+   "start": 5319,
+   "dur": 206,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N20.mp3"
   },
   {
    "id": "N21",
    "speaker": "narrator",
    "text": "Selling rates climb up from the ask. Buying rates step down from the bid.",
-   "start": 5781,
-   "dur": 151,
+   "start": 5536,
+   "dur": 136,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N21.mp3"
   },
   {
    "id": "N22",
    "speaker": "narrator",
    "text": "How big a margin? Each bank sets its own. When an exam sum needs one, the question gives it.",
-   "start": 5942,
-   "dur": 190,
+   "start": 5682,
+   "dur": 187,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N22.mp3"
   },
   {
    "id": "N23",
    "speaker": "narrator",
    "text": "Now, which rung? Watch two clocks. On the left, rupees moving at our counter. On the right, dollars moving in the bank's account abroad, its Nostro account.",
-   "start": 6143,
-   "dur": 323,
+   "start": 5879,
+   "dur": 307,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N23.mp3"
   },
   {
    "id": "N24",
    "speaker": "narrator",
    "text": "When both move at the same moment, we use the rungs nearest the middle: the TT rates. TT buying for dollars that have already arrived. TT selling for dollars sent out at once.",
-   "start": 6476,
-   "dur": 362,
+   "start": 6197,
+   "dur": 351,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N24.mp3"
   },
   {
    "id": "N25",
    "speaker": "narrator",
    "text": "When the bank pays rupees first, waits for the dollars, and handles documents, we go to the outer rungs: the bill rates.",
-   "start": 6849,
-   "dur": 248,
+   "start": 6558,
+   "dur": 219,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N25.mp3"
   },
   {
    "id": "N26",
    "speaker": "narrator",
    "text": "With bill buying, the bank pays the exporter today and handles his documents. But its account abroad is credited only weeks later. So it buys lower.",
-   "start": 7108,
-   "dur": 306,
+   "start": 6788,
+   "dur": 281,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N26.mp3"
   },
   {
    "id": "N27",
    "speaker": "narrator",
    "text": "Interest for that wait is charged separately. We meet it in lesson A-five.",
-   "start": 7424,
-   "dur": 153,
+   "start": 7079,
+   "dur": 145,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N27.mp3"
   },
   {
    "id": "N28",
    "speaker": "narrator",
    "text": "With bill selling, the bank pays a foreign supplier against import documents, often before the importer pays the bank. So it sells higher.",
-   "start": 7588,
-   "dur": 286,
+   "start": 7234,
+   "dur": 263,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N28.mp3"
   },
   {
    "id": "N29",
    "speaker": "narrator",
    "text": "Read the ladder from the top. Bill selling, TT selling, the market, TT buying, bill buying. Bills outside. TTs inside.",
-   "start": 7884,
-   "dur": 244,
+   "start": 7507,
+   "dur": 288,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N29.mp3"
   },
   {
    "id": "N30",
    "speaker": "narrator",
    "text": "Beyond the bills sit currency notes, with the widest gap of all. And in exam sums, bill rates often carry a forward premium too. Both come later.",
-   "start": 8139,
-   "dur": 300,
+   "start": 7805,
+   "dur": 292,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N30.mp3"
   },
   {
    "id": "N31",
    "speaker": "narrator",
    "text": "Let us build the board ourselves. Here are the bank's margins. One habit first: use multipliers, not the percent key.",
-   "start": 8449,
-   "dur": 242,
+   "start": 8108,
+   "dur": 244,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N31.mp3"
   },
   {
    "id": "N32",
    "speaker": "narrator",
    "text": "Selling rates go up from the ask. TT selling: eighty-five point four two, times one point zero zero one, equals.",
-   "start": 8702,
-   "dur": 232,
+   "start": 8362,
+   "dur": 229,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N32.mp3"
   },
   {
    "id": "N33",
    "speaker": "narrator",
    "text": "Eighty-five point five zero five four two. Rounded to four places, eighty-five point five zero five four.",
-   "start": 8944,
-   "dur": 217,
+   "start": 8602,
+   "dur": 210,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N33.mp3"
   },
   {
    "id": "N34",
    "speaker": "narrator",
    "text": "Buying rates go down from the bid. TT buying: eighty-five point four zero, times point nine nine nine five, equals. Eighty-five point three five seven three.",
-   "start": 9172,
-   "dur": 325,
+   "start": 8822,
+   "dur": 311,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N34.mp3"
   },
   {
    "id": "N35",
    "speaker": "narrator",
    "text": "Now you do one. Bill buying is the bid, less point one five percent. Pause the video now and press the keys.",
-   "start": 9507,
-   "dur": 223,
+   "start": 9144,
+   "dur": 207,
    "hold": 600,
-   "audio": null
+   "audio": "audio/lines/N35.mp3"
   },
   {
    "id": "N36",
    "speaker": "narrator",
    "text": "Eighty-five point four zero, times point nine nine eight five. Eighty-five point two seven one nine.",
-   "start": 10341,
-   "dur": 207,
+   "start": 9961,
+   "dur": 188,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N36.mp3"
   },
   {
    "id": "N37",
    "speaker": "narrator",
    "text": "Last one, all yours. Bill selling is a further point one five percent, on top of the TT selling rate. Pause and try.",
-   "start": 10558,
-   "dur": 240,
+   "start": 10160,
+   "dur": 230,
    "hold": 750,
-   "audio": null
+   "audio": "audio/lines/N37.mp3"
   },
   {
    "id": "N38",
    "speaker": "narrator",
    "text": "Eighty-five point five zero five four two, times one point zero zero one five. Eighty-five point six three three seven.",
-   "start": 11559,
-   "dur": 246,
+   "start": 11150,
+   "dur": 227,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N38.mp3"
   },
   {
    "id": "N39",
    "speaker": "narrator",
    "text": "Careful. That margin goes on the TT selling rate, not on the market ask. Add both margins to the ask, and you get eighty-five point six three three six. One digit off, and the wrong option in the exam.",
-   "start": 11816,
-   "dur": 416,
+   "start": 11388,
+   "dur": 382,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N39.mp3"
   },
   {
    "id": "N40",
    "speaker": "narrator",
    "text": "And look: these are the four prices from the opening board. If a question tells you how to round, follow it.",
-   "start": 12242,
-   "dur": 223,
+   "start": 11781,
+   "dur": 190,
    "hold": 30,
-   "audio": null
+   "audio": "audio/lines/N40.mp3"
   },
   {
    "id": "N41",
    "speaker": "narrator",
    "text": "Now we put each deal on its rung. FEDAI's rules say which one. You guess first, every time.",
-   "start": 12581,
-   "dur": 188,
+   "start": 12086,
+   "dur": 202,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N41.mp3"
   },
   {
    "id": "N42",
    "speaker": "narrator",
    "text": "A remittance arrives from abroad and is paid out in rupees.",
-   "start": 12780,
-   "dur": 122,
+   "start": 12299,
+   "dur": 106,
    "hold": 120,
-   "audio": null
+   "audio": "audio/lines/N42.mp3"
   },
   {
    "id": "N43",
    "speaker": "narrator",
    "text": "TT buying. The dollars are already in the Nostro.",
-   "start": 13032,
-   "dur": 101,
+   "start": 12535,
+   "dur": 109,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N43.mp3"
   },
   {
    "id": "N44",
    "speaker": "narrator",
    "text": "The father's fee goes out by wire.",
-   "start": 13144,
-   "dur": 70,
+   "start": 12655,
+   "dur": 79,
    "hold": 120,
-   "audio": null
+   "audio": "audio/lines/N44.mp3"
   },
   {
    "id": "N45",
    "speaker": "narrator",
    "text": "TT selling.",
-   "start": 13345,
-   "dur": 23,
+   "start": 12865,
+   "dur": 31,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N45.mp3"
   },
   {
    "id": "N46",
    "speaker": "narrator",
    "text": "An exporter's bill is bought by the bank on the day he brings it.",
-   "start": 13378,
-   "dur": 134,
+   "start": 12906,
+   "dur": 128,
    "hold": 120,
-   "audio": null
+   "audio": "audio/lines/N46.mp3"
   },
   {
    "id": "N47",
    "speaker": "narrator",
    "text": "Bill buying. The bank pays now and waits for the dollars.",
-   "start": 13643,
-   "dur": 118,
+   "start": 13164,
+   "dur": 107,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N47.mp3"
   },
   {
    "id": "N48",
    "speaker": "narrator",
    "text": "An export bill is sent on collection. The bank pays only after the dollars reach its Nostro.",
-   "start": 13772,
-   "dur": 190,
+   "start": 13281,
+   "dur": 186,
    "hold": 120,
-   "audio": null
+   "audio": "audio/lines/N48.mp3"
   },
   {
    "id": "N49",
    "speaker": "narrator",
    "text": "TT buying. Nothing to wait for any more.",
-   "start": 14093,
-   "dur": 83,
+   "start": 13597,
+   "dur": 82,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N49.mp3"
   },
   {
    "id": "N50",
    "speaker": "narrator",
    "text": "An importer retires his import bill, with no forward contract.",
-   "start": 14186,
-   "dur": 128,
+   "start": 13689,
+   "dur": 127,
    "hold": 120,
-   "audio": null
+   "audio": "audio/lines/N50.mp3"
   },
   {
    "id": "N51",
    "speaker": "narrator",
    "text": "Bill selling.",
-   "start": 14445,
-   "dur": 27,
+   "start": 13947,
+   "dur": 20,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N51.mp3"
   },
   {
    "id": "N52",
    "speaker": "narrator",
    "text": "One override for all of these. If the customer has a forward contract, the contract rate applies, not the board rate.",
-   "start": 14482,
-   "dur": 242,
+   "start": 13978,
+   "dur": 235,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N52.mp3"
   },
   {
    "id": "M04",
    "speaker": "meera",
    "text": "This export bill came back unpaid. We bought it at bill buying, so now I reverse it at bill selling, right?",
-   "start": 14735,
-   "dur": 221,
+   "start": 14223,
+   "dur": 216,
    "hold": 150,
-   "audio": null
+   "audio": "audio/lines/M04.mp3"
   },
   {
    "id": "N53",
    "speaker": "narrator",
    "text": "Close, but no. And this is the trap the exam loves.",
-   "start": 15116,
-   "dur": 106,
+   "start": 14600,
+   "dur": 129,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N53.mp3"
   },
   {
    "id": "N54",
    "speaker": "narrator",
    "text": "The bank has already paid this exporter rupees. Now he owes the bank dollars that will never arrive. So the bank turns that dollar debt into a rupee debt.",
-   "start": 15232,
-   "dur": 319,
+   "start": 14740,
+   "dur": 316,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N54.mp3"
   },
   {
    "id": "N55",
    "speaker": "narrator",
    "text": "It is as if the bank sells him those dollars. No documents go anywhere. It is a plain conversion. So it is TT selling, not bill selling.",
-   "start": 15562,
-   "dur": 281,
+   "start": 15066,
+   "dur": 284,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N55.mp3"
   },
   {
    "id": "N56",
    "speaker": "narrator",
    "text": "When a bill is unpaid on its due date and the bank converts it like this, it is called crystallisation. The date is set by the bank's own policy. Older books say the thirtieth day. Today's rule leaves it to the bank.",
-   "start": 15853,
-   "dur": 447,
+   "start": 15361,
+   "dur": 386,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N56.mp3"
   },
   {
    "id": "N57",
    "speaker": "narrator",
    "text": "And if the dollars do arrive later, the bank converts them at TT buying.",
-   "start": 16311,
-   "dur": 149,
+   "start": 15758,
+   "dur": 139,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N57.mp3"
   },
   {
    "id": "N58",
    "speaker": "narrator",
    "text": "The same undo-flip happens when a forward contract is cancelled. A purchase contract is cancelled at TT selling, a sale contract at TT buying. We work those sums in lesson A-four.",
-   "start": 16470,
-   "dur": 370,
+   "start": 15908,
+   "dur": 354,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N58.mp3"
   },
   {
    "id": "M05",
    "speaker": "meera",
    "text": "So undoing a deal flips me to the other side of the counter. Always?",
-   "start": 16851,
-   "dur": 141,
+   "start": 16273,
+   "dur": 147,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/M05.mp3"
   },
   {
    "id": "N59",
    "speaker": "narrator",
    "text": "Test it. An unpaid import bill is crystallised. Does the side flip?",
-   "start": 17002,
-   "dur": 139,
+   "start": 16430,
+   "dur": 147,
    "hold": 180,
-   "audio": null
+   "audio": "audio/lines/N59.mp3"
   },
   {
    "id": "M06",
    "speaker": "meera",
    "text": "No. Nothing is undone there. The importer still buys dollars from the bank. Bill selling, same as retirement.",
-   "start": 17331,
-   "dur": 226,
+   "start": 16767,
+   "dur": 230,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/M06.mp3"
   },
   {
    "id": "N60",
    "speaker": "narrator",
    "text": "Exactly right. FEDAI's rule three point one says the same rate as retirement. Only undoing a deal the bank has already made flips the side.",
-   "start": 17567,
-   "dur": 288,
+   "start": 17008,
+   "dur": 302,
    "hold": 30,
-   "audio": null
+   "audio": "audio/lines/N60.mp3"
   },
   {
    "id": "N61",
    "speaker": "narrator",
    "text": "So, the opening question. The father's eighteen thousand dollars go out at TT selling. Fifteen lakh thirty-nine thousand and ninety-seven rupees, twenty paise.",
-   "start": 17896,
-   "dur": 329,
+   "start": 17351,
+   "dur": 301,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N61.mp3"
   },
   {
    "id": "N62",
    "speaker": "narrator",
    "text": "The exporter's forty thousand dollar bill is bought at bill buying. Thirty-four lakh ten thousand eight hundred and seventy-six rupees, before interest for the transit period.",
-   "start": 18235,
-   "dur": 362,
+   "start": 17663,
+   "dur": 301,
    "hold": 45,
-   "audio": null
+   "audio": "audio/lines/N62.mp3"
   },
   {
    "id": "N63",
    "speaker": "narrator",
    "text": "Two to lock it in. One: an importer sends an advance payment for his goods by wire. Which rate?",
-   "start": 18653,
-   "dur": 197,
+   "start": 18019,
+   "dur": 194,
    "hold": 180,
-   "audio": null
+   "audio": "audio/lines/N63.mp3"
   },
   {
    "id": "N64",
    "speaker": "narrator",
    "text": "TT selling. It is a remittance going out, not an import bill.",
-   "start": 19040,
-   "dur": 126,
+   "start": 18403,
+   "dur": 121,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N64.mp3"
   },
   {
    "id": "N65",
    "speaker": "narrator",
    "text": "Two: put these in order, highest first. TT buying, bill selling, bill buying, TT selling.",
-   "start": 19176,
-   "dur": 184,
+   "start": 18535,
+   "dur": 202,
    "hold": 180,
-   "audio": null
+   "audio": "audio/lines/N65.mp3"
   },
   {
    "id": "N66",
    "speaker": "narrator",
    "text": "Bill selling, TT selling, TT buying, bill buying.",
-   "start": 19551,
-   "dur": 101,
+   "start": 18928,
+   "dur": 112,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N66.mp3"
   },
   {
    "id": "N67",
    "speaker": "narrator",
    "text": "Here is the whole lesson on one card. First: is the money coming in or going out?",
-   "start": 19663,
-   "dur": 168,
+   "start": 19050,
+   "dur": 179,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N67.mp3"
   },
   {
    "id": "N68",
    "speaker": "narrator",
    "text": "Second: do the rupees and the Nostro move together, or does the bank pay first and handle documents? That gives you the rung.",
-   "start": 19841,
-   "dur": 259,
+   "start": 19240,
+   "dur": 237,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N68.mp3"
   },
   {
    "id": "N69",
    "speaker": "narrator",
    "text": "And undoing a deal the bank has made flips the side.",
-   "start": 20110,
-   "dur": 108,
+   "start": 19488,
+   "dur": 100,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/N69.mp3"
   },
   {
    "id": "M07",
    "speaker": "meera",
    "text": "Next time, I'm on the right side of the counter.",
-   "start": 20228,
-   "dur": 99,
+   "start": 19598,
+   "dur": 79,
    "hold": 0,
-   "audio": null
+   "audio": "audio/lines/M07.mp3"
   },
   {
    "id": "N70",
    "speaker": "narrator",
    "text": "Next lesson, we take this ladder into real exam sums.",
-   "start": 20338,
+   "start": 19688,
    "dur": 110,
    "hold": 90,
-   "audio": null
+   "audio": "audio/lines/N70.mp3"
   }
  ]
 }

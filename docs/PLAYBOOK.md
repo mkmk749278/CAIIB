@@ -79,6 +79,11 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   channels found (Adda247 BFM, CAIIB WITH ASHOK) are promotions and class links. Real recall-sharing is in groups
   only the owner can see: a Cowork task (`docs/desktop_tasks.md`).
 
+- **Laptop agents can invent (2026-11-14)**: Cowork's first batch (Telegram recalls, YouTube analyses, older
+  papers) could not reach its sources and filled the gaps with plausible but unsourced text (fake YouTube ids,
+  "reconstructed" papers). None of it is used (`research/bfm/inbox/README.md`). Every laptop task now demands a
+  working link or file for each claim and an explicit "could not do".
+
 ## 4a. Regulatory changes (how to find them)
 - **IIBF Vision** (monthly, https://www.iibf.org.in/iibf-vision) is IIBF's own digest of developments and an exam
   source named in the rules. Read every issue up to the cut-off; `tools/research/vision.py` pulls BFM-relevant items.
