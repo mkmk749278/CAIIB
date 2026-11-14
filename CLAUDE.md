@@ -11,12 +11,16 @@ any new stage. New lessons go into the playbook section they belong to, with the
 
 ## Current work (read first when the owner says "continue")
 - **Paper 1 = CAIIB Bank Financial Management (BFM).** Owner decision, 2026-11-14.
-- **Done:** official IIBF syllabus collected; 453 recalled exam topics from 7 cycles (Jun 2023 to Jun 2026) tagged
-  to syllabus units; first **BFM Importance Map** in `research/bfm/importance_map.md`.
-- **Next:** (1) widen the evidence (more memory-based papers with full questions, community sources, RBI changes up
-  to the 30 June 2026 cut-off for the Nov/Dec 2026 exam); (2) turn the map into a BFM course plan (lesson list,
-  order, mind map per module); (3) one pilot lesson end to end. Ask the owner before (3) about channel, language and
-  when to start.
+- **Done:** official IIBF syllabus; 453 recalled exam topics from 7 cycles (Jun 2023 to Jun 2026) tagged to units;
+  **BFM Importance Map** (`research/bfm/importance_map.md`), cross-checked against two full memory-based papers
+  (`fullpaper_tagged.csv`); **regulatory changes up to the 30 June 2026 cut-off** from 13 IIBF Vision issues and
+  RBI's Master Direction index (`regulatory_updates.md`); **BFM course plan v1** (`course_plan.md`: about 40 lessons,
+  one mind map per module, pilot proposal A1+A2 forex).
+- **Waiting on the owner's desktop (Antigravity)**: `docs/antigravity_tasks.md` (Telegram recalls, YouTube analysis
+  topics, gated older papers, RBI wording checks, TCS 2026 rates). Results arrive as PRs into `research/bfm/inbox/`;
+  fold them into the map and the update list.
+- **Next:** (1) verify every "yes" row of `regulatory_updates.md` against RBI text; (2) owner decisions before the
+  pilot: channel, language, start date, and approval of the course plan; (3) pilot lesson A1+A2 end to end.
 
 ## The goal in one line
 Cover everything the exam needs, put the most effort where IIBF's marks actually are, and teach it with the best
@@ -77,6 +81,9 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
 - `docs/PLAYBOOK.md`: origin, market research, method, lesson and PDF design, reasons for every rule.
 - `research/<paper>/`: syllabus notes, exam facts, `items_tagged.csv` (every recalled item, its cycle, source key and
   topic cluster), `importance.csv`, `importance_map.md`, `sources.csv` (source key to URL).
+- `research/bfm/regulatory_updates.md`, `course_plan.md`, `iibf_vision_index.csv`, `fullpaper_tagged.csv`;
+  `research/bfm/inbox/` for results from the owner's desktop.
+- `docs/antigravity_tasks.md`: click-to-copy prompts for anything the cloud cannot reach.
 - `research/market/`: what other providers do (summaries only, with reliability notes).
 - `tools/research/`: the pipeline (`h2t.py` page to text, `build_items.py` extract recalled items, `tag.py` topic
   rules, `score.py` tiers). Downloads stay out of git (scratch or Drive).
