@@ -22,7 +22,7 @@ export const PauseCard: React.FC<{f: number; from: number; to: number; q: string
 	const p = interpolate(f, [timerFrom, timerFrom + timerFrames], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 	const R = 46, L = 2 * Math.PI * R;
 	return (
-		<div style={{position: 'absolute', left: 260, right: 260, bottom: 70, height: 180, opacity: o, transform: `translateY(${(1 - tw(f, from, from + 12)) * 40}px)`, background: '#0A1018EE', border: `3px solid ${C.text}`, borderRadius: 30, display: 'flex', alignItems: 'center', padding: '0 40px', gap: 34}}>
+		<div style={{position: 'absolute', left: 260, right: 260, bottom: 150, height: 180, opacity: o, transform: `translateY(${(1 - tw(f, from, from + 12)) * 40}px)`, background: '#0A1018EE', border: `3px solid ${C.text}`, borderRadius: 30, display: 'flex', alignItems: 'center', padding: '0 40px', gap: 34}}>
 			<svg width={120} height={120} viewBox="0 0 120 120">
 				<circle cx={60} cy={60} r={R} fill="none" stroke={C.line} strokeWidth={10} />
 				<circle cx={60} cy={60} r={R} fill="none" stroke={C.text} strokeWidth={10} strokeDasharray={L} strokeDashoffset={L * p} transform="rotate(-90 60 60)" strokeLinecap="round" />

@@ -21,6 +21,33 @@ const Scene: React.FC<{a: number; b: number; children: (f: number) => React.Reac
 
 const BOARD4 = ['85.2719', '85.3573', '85.5054', '85.6337'];
 
+// slow, continuous camera move so no frame is ever dead (two incommensurate sines)
+const Drift: React.FC<{f: number; children: React.ReactNode}> = ({f, children}) => {
+	const z = 1.035 + 0.02 * Math.sin(f / 170);
+	const x = 14 * Math.sin(f / 230), y = 9 * Math.sin(f / 190 + 1.3);
+	return <AbsoluteFill style={{transform: `translate(${x}px, ${y}px) scale(${z})`}}>{children}</AbsoluteFill>;
+};
+
+// sentence-by-sentence captions of the spoken line (speaker named, active sentence bright)
+const Captions: React.FC<{f: number}> = ({f}) => {
+	const l = LS.find((x) => f >= x.start && f < x.start + x.dur + 6);
+	if (!l) return null;
+	const sents = l.text.match(/[^.?!]+[.?!]*/g)?.map((t) => t.trim()).filter(Boolean) ?? [l.text];
+	const total = sents.reduce((a, t) => a + t.length, 0);
+	const p = (f - l.start) / Math.max(1, l.dur);
+	let acc = 0, idx = 0;
+	for (let i = 0; i < sents.length; i++) { acc += sents[i].length / total; if (p < acc) { idx = i; break; } idx = i; }
+	const meera = l.speaker === 'meera';
+	return (
+		<div style={{position: 'absolute', left: 120, right: 120, bottom: 26, display: 'flex', justifyContent: 'center'}}>
+			<div style={{background: 'rgba(5,9,14,0.82)', borderRadius: 18, padding: '12px 26px', maxWidth: 1600, fontFamily: F.sans, fontWeight: 600, fontSize: 44, lineHeight: 1.25, color: C.text, textAlign: 'center'}}>
+				{meera ? <span style={{color: C.meera, fontWeight: 700}}>MEERA · </span> : null}
+				{sents[idx]}
+			</div>
+		</div>
+	);
+};
+
 export const A1: React.FC = () => {
 	const f = useCurrentFrame();
 	const ch1 = S('M01') - 75, ch2 = S('M03') - 75, ch3 = S('N41') - 75;
@@ -28,6 +55,7 @@ export const A1: React.FC = () => {
 	const flipUndo = tw(f, S('N54'), S('N54') + 20);
 	return (
 		<AbsoluteFill style={{background: `radial-gradient(1400px 900px at 50% 40%, ${C.bg2}, ${C.bg})`, fontFamily: F.sans}}>
+			<Drift f={f}>
 			{/* ---------------- Cold open ---------------- */}
 			<Scene a={0} b={ch1}>
 				{(f) => (
@@ -45,7 +73,7 @@ export const A1: React.FC = () => {
 							</Card>
 						</CounterTop>
 						<Tag text="ILLUSTRATIVE · VISAKHAPATNAM BRANCH" />
-						<Label x={60} y={1010} size={28} color={C.dim} o={env(f, 0, S('N02'), 12)}>Meera is a fictional character. Both voices are AI-generated.</Label>
+						<Label x={60} y={110} size={28} color={C.dim} o={env(f, 0, S('N02'), 12)}>Meera is a fictional character. Both voices are AI-generated.</Label>
 						<PauseCard f={f} from={S('N04') + 30} to={H('N04')} q="Father: the HIGHER price or the LOWER?" timerFrom={E('N04')} timerFrames={by.N04.hold} />
 					</>
 				)}
@@ -116,7 +144,7 @@ export const A1: React.FC = () => {
 				{(f) => (
 					<>
 						<Ladder x={580} y={175} show={{mkt: 1, ttS: tw(f, S('N21'), S('N21') + 15), billS: tw(f, S('N21') + 20, S('N21') + 35), ttB: tw(f, S('N21') + 40, S('N21') + 55), billB: tw(f, S('N21') + 60, S('N21') + 75)}} />
-						<Card x={300} y={930} w={1320} h={110} o={tw(f, S('N22'), S('N22') + 12)} border={C.undo}>
+						<Card x={300} y={800} w={1320} h={110} o={tw(f, S('N22'), S('N22') + 12)} border={C.undo}>
 							<Label x={660} y={26} w={1260} align="center" size={44} weight={700}>Margin: each bank's own · the exam sum gives it</Label>
 						</Card>
 					</>
@@ -137,7 +165,7 @@ export const A1: React.FC = () => {
 						<>
 							<Ladder x={580} y={150} step={130} show={{billS: 1, ttS: 1, mkt: 1, ttB: 1, billB: 1, notesS: notes, notesB: notes}} hi={hi} />
 							{f >= S('N27') && f < S('N28') ? <Card x={1380} y={760} w={480} h={150} border={C.undo}><Label x={240} y={20} w={440} align="center" size={36} weight={700}>Interest for the wait: charged separately (A5)</Label></Card> : null}
-							{f >= S('N30') ? <Label x={60} y={980} size={36} color={C.dim} o={notes}>Later: currency notes · forward premium on bill rates (A5)</Label> : null}
+							{f >= S('N30') ? <Label x={60} y={880} size={36} color={C.dim} o={notes}>Later: currency notes · forward premium on bill rates (A5)</Label> : null}
 						</>
 					);
 				}}
@@ -167,7 +195,7 @@ export const A1: React.FC = () => {
 							{f >= S('N31') && f < S('N32') ? <Card x={1330} y={880} w={520} h={120} border={C.undo}><Label x={260} y={30} w={500} align="center" size={38} weight={700}>× 1.001 · × 0.9995</Label></Card> : null}
 							<PauseCard f={f} from={E('N35')} to={H('N35')} q="Bill buying = 85.40 less 0.15%" timerFrom={E('N35')} timerFrames={by.N35.hold} />
 							<PauseCard f={f} from={E('N37')} to={H('N37')} q="Bill selling = TT selling + 0.15%" timerFrom={E('N37')} timerFrames={by.N37.hold} />
-							{f >= S('N39') && f < S('N40') ? <Card x={60} y={940} w={1180} h={110} border={C.sell} bg="#2A1416"><Label x={30} y={26} size={44} weight={700} color={C.sell}>✗ 85.42 × 1.0025 = 85.6336 · one digit off</Label></Card> : null}
+							{f >= S('N39') && f < S('N40') ? <Card x={1300} y={790} w={580} h={170} border={C.sell} bg="#2A1416"><Label x={290} y={22} w={540} align="center" size={36} weight={700} color={C.sell}>✗ 85.42 × 1.0025</Label><Label x={290} y={80} w={540} align="center" size={36} weight={700} color={C.sell}>= 85.6336 · one digit off</Label></Card> : null}
 						</>
 					);
 				}}
@@ -225,6 +253,7 @@ export const A1: React.FC = () => {
 				{(f) => (
 					<>
 						<Bubble f={f} from={S('M05')} to={E('M05') + 20} text="So undoing a deal flips me to the other side. Always?" x={140} y={140} />
+						{f >= S('N59') && f < S('M06') ? <Card x={260} y={300} w={1400} h={260} border={C.undo}><Label x={700} y={50} w={1300} align="center" size={60} weight={700}>Unpaid IMPORT bill crystallised</Label><Label x={700} y={140} w={1300} align="center" size={56} weight={700} color={C.undo}>Flip, or no flip?</Label></Card> : null}
 						<PauseCard f={f} from={E('N59')} to={H('N59')} q="Unpaid IMPORT bill crystallised: does the side flip?" timerFrom={E('N59')} timerFrames={by.N59.hold} />
 						<Bubble f={f} from={S('M06')} to={E('M06') + 60} text="No. Nothing is undone. The importer still buys dollars. Bill selling." x={140} y={140} who="MEERA ✓" />
 						{f >= S('N60') ? <Card x={260} y={460} w={1400} h={260} border={C.sell}><Label x={700} y={40} w={1300} align="center" size={64} weight={700} color={C.sell}>▲ BILL SELLING · no flip</Label><Label x={700} y={140} w={1300} align="center" size={40} color={C.dim}>Rule 3.1(b): same rate as retirement</Label></Card> : null}
@@ -267,12 +296,14 @@ export const A1: React.FC = () => {
 				{(f) => (
 					<>
 						<MindMap f={f} from={S('M07')} nodes={['Bank\'s side: in = BUY, out = SELL', 'Direct quote · bid / ask', 'Ladder: bill S · TT S · market · TT B · bill B', 'Nostro clock: together = TT', 'Undo flips · import crystallisation does not', 'Forward contract overrides']} />
-						<Bubble f={f} from={S('M07')} to={E('M07') + 20} text="Next time, I'm on the right side of the counter." x={60} y={860} w={1000} />
+						<Bubble f={f} from={S('M07')} to={E('M07') + 20} text="Next time, I'm on the right side of the counter." x={60} y={700} w={1000} />
 						<Label x={60} y={40} size={34} color={C.dim}>Next · A2: the ladder in real exam sums</Label>
 					</>
 				)}
 			</Scene>
 
+			</Drift>
+			<Captions f={f} />
 			{/* ---------------- audio ---------------- */}
 			{LS.filter((l) => l.audio).map((l) => (
 				<Sequence key={l.id} from={l.start} durationInFrames={l.dur + 2}>
