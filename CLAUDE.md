@@ -45,8 +45,13 @@ any new stage. New lessons go into the playbook section they belong to, with the
   cost line), `numericals.md`, `practice.md`, `claims.csv` (ICC pages checked 2026-11-15; Incoterms 2020 current,
   ICC 2026 workplan only begins work toward Incoterms 2030; rules marked "re-check against a copy" come from the
   paid ICC text), `map_nodes.md`, `voice.md`. Phone copy page: https://claude.ai/artifact/W8oruErZHXydDFpKDHWf82.
-  **Next for it:** owner generates `part_1.mp3`…`part_6.mp3` in one voice; then cut lines, build the Remotion
-  composition (road, baton, cost line, thought bubbles, calculator), render, independent review.
+  Owner's audio (2026-11-15) came as two files: `incoterms_1.mp3` = parts 1–4 (N00a–N36a), `incoterms_2.mp3` =
+  parts 5–6 (N37–N62a); kept out of git (scratch). Cut with `tools/video/cut_lines.py` (generic: script, out dir,
+  `audio:words.json:first:last`; also writes per-line word times), timeline `tools/video/timeline.py` (holds and
+  chapter cards per lesson) → `video/src/incoterms_lines.json`; composition `Incoterms` (`video/src/Incoterms.tsx`,
+  `road.tsx`; cues use spoken word times via `at(id, word, fallback)`). Render: `npx remotion render src/index.ts
+  Incoterms out/x.mp4 --scale=0.6666666666666666`, loudnorm -16 LUFS. **r1 review cut sent 2026-11-15.**
+  **Next for it:** owner's reaction; independent viewer review (new session); then the visual upgrade shared with A1.
 - **A1, when resumed:** (1) owner's v5 parts, re-cut as r2 (warm-up scene, "some of you / others" thought bubbles replace Meera's
   bubble, new disclosure card);
   (2) independent viewer review of the cut (new session); (3) visual upgrade:

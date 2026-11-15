@@ -160,14 +160,16 @@ export const RateFinder: React.FC<{f: number; from: number; o?: number}> = ({f, 
 
 // ---------- Module A mind map with the Rates branch lit ----------
 const BR = ['Rates', 'People who send money', 'People abroad', 'Trade documents', 'Exporters', 'Importers', '', 'Borrowing from abroad', 'Insurance and risk', 'Referees', 'Special zone', 'Pipes and plumbing'];
-export const MindMap: React.FC<{f: number; from: number; nodes: string[]; o?: number}> = ({f, from, nodes, o = 1}) => {
+export const MindMap: React.FC<{f: number; from: number; nodes: string[]; o?: number; lit?: number; nodeW?: number}> = ({f, from, nodes, o = 1, lit: litIdx = 0, nodeW = 680}) => {
 	const cx = 620, cy = 560;
+	const la = (litIdx / 12) * 2 * Math.PI;
+	const lx = cx + 430 * Math.sin(la), ly = cy - 360 * Math.cos(la);
 	return (
 		<svg style={{position: 'absolute', inset: 0, opacity: o}} width={1920} height={1080}>
 			{BR.map((b, i) => {
 				if (!b) return null;
 				const a = (i / 12) * 2 * Math.PI;
-				const lit = i === 0;
+				const lit = i === litIdx;
 				const x = cx + 430 * Math.sin(a), y = cy - 360 * Math.cos(a);
 				return (
 					<g key={i} opacity={lit ? 1 : 0.35}>
@@ -184,8 +186,8 @@ export const MindMap: React.FC<{f: number; from: number; nodes: string[]; o?: nu
 				const x = 1200, y = 200 + i * 96;
 				return (
 					<g key={n} opacity={p}>
-						<line x1={cx} y1={cy - 360} x2={x} y2={y + 10} stroke={C.market} strokeWidth={3} opacity={0.6} />
-						<rect x={x} y={y - 24} width={680} height={66} rx={14} fill={C.card} stroke={C.market} strokeWidth={3} />
+						<line x1={lx} y1={ly} x2={x} y2={y + 10} stroke={C.market} strokeWidth={3} opacity={0.6} />
+						<rect x={x} y={y - 24} width={nodeW} height={66} rx={14} fill={C.card} stroke={C.market} strokeWidth={3} />
 						<text x={x + 20} y={y + 20} fontFamily={F.sans} fontWeight={500} fontSize={32} fill={C.text}>{n}</text>
 					</g>
 				);
