@@ -190,6 +190,11 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-15: owner: "Incoterms as next sample video; we don't continue the first sample, later." A1 parked (v5 audio
+  and r2 cut wait). Incoterms chosen as sample 2: a short, self-contained topic (11 rules, one picture), asked in 3 of
+  7 cycles inside the A-LC cluster (6 of 7), and a different kind of lesson from A1 (rules and a picture, little
+  arithmetic), so it tests the format on a second type. Its picture, "the road" with a risk baton and a cost line,
+  is reused wherever Incoterms appear (LC lessons, export finance).
 - 2026-11-14 (later): build the full course before any publishing; a new YouTube channel only afterwards, for
   publicity and free samples; English only; paid course with free sample lessons; Claude decides the build order;
   start now. Claude does everything it can first; a new cloud session (possibly a new IP) when this one is

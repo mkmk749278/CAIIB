@@ -1,0 +1,150 @@
+<title>Incoterms Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Incoterms voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>Say: Incoterms "INN-co-terms"; C-I-F, F-O-B etc. letter by letter. "Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A9_incoterms/script.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening", "turns": [{"speaker": "Teacher", "first": "N00a", "last": "N06", "text": "[warmly] Hello everyone, good evening, and welcome to the class. I know many of you have come straight from the branch. So first, just relax for a minute. How was the day? Busy? It's always busy, right? Okay. Notifications on silent, please. Keep a pen and a calculator nearby. Today we need the calculator only for one small thing, I promise. Let me start with a question. How many of you have handled an export or import file at your branch? Just think about it. Some of you do it every day. Many of you have never touched one. Both are fine. Because today's topic is Incoterms. And here's why it's worth your time. In the papers we checked, letters of credit came up in six out of the last seven exams. And Incoterms questions came up in three of them. One was a full case study. And honestly, these are easy marks. It's only eleven rules, and one picture holds all of them. No heavy theory, I promise. Stay with me for fifteen minutes, and this topic is yours. Shall we start? So, picture this. A knitwear exporter from Tiruppur. She has a buyer in Rotterdam, in the Netherlands. The deal is for forty-eight thousand US dollars, and it's backed by a letter of credit opened by the buyer's bank. In the contract and in the LC, the price is written like this: C-I-F Rotterdam, Incoterms twenty twenty. Keep that line in mind. We'll come back to it again and again. Now, she packs the goods, sends them to Chennai port, and the container is loaded on the ship. She gets the bill of lading. Everything looks perfect. Two days later, there's a storm at sea. And her container goes overboard. Lost. All forty-eight thousand dollars of knitwear, at the bottom of the sea. Next morning she's at your branch, very worried. She says, the goods are gone. Will I still get my money? Whose loss is this, mine or the buyer's? So, let me ask you. Under C-I-F, whose loss is it? The seller's, or the buyer's? Think for a second. Lock your answer in."}]}, {"file": "part_2.mp3", "section": "Chapter 1 · What a three-letter word decides", "turns": [{"speaker": "Teacher", "first": "N06a", "last": "N15b", "text": "Okay. I know what many of you are thinking. C-I-F means cost, insurance and freight. The seller paid the freight, the seller bought the insurance. So the sea journey is the seller's job. So it's the seller's loss. And a few of you are thinking, hmm, wait. Maybe once the goods are on the ship, they're the buyer's problem. Well, that second group is right. Under C-I-F, the risk moves to the buyer the moment the goods are on board the ship at the port of shipment. Here, Chennai. After that, the sea is the buyer's risk. So why does the seller pay for freight and insurance at all? See, here's the thing. She's paying for a journey that's already at the buyer's risk. She arranges the ship and buys the insurance, but the insurance protects the buyer. So what happens now? She hands her documents to the bank. The bill of lading, the invoice, the insurance policy. If they match the LC, the bank pays. Remember, banks deal with documents, not goods. That's UCP six hundred, article five. And the buyer? He gets the insurance policy along with the documents. So he claims from the insurer. Nobody is left holding the loss. That's the whole point. If you said \"seller\", don't feel bad. Almost everybody does the first time. The word \"insurance\" in the name makes it sound like the seller is carrying the risk. She isn't. So, what is an Incoterm? It's a set of rules published by the International Chamber of Commerce, the ICC. Three letters, a place, and the version. Like \"C-I-F Rotterdam, Incoterms twenty twenty\". And those three letters answer three questions for the buyer and seller. One. Where does the seller deliver, and so, where does the risk pass? Two. Who pays which costs? Three. Who does the customs work, export and import? Now be careful here, because the exam loves this. Incoterms do not decide the price. They don't decide how or when payment is made. And they don't decide when ownership of the goods passes. That's for the sales contract. Also, Incoterms are not law. They apply only when the parties write them into the contract. That's why we always add the version, Incoterms twenty twenty. An old contract could still say twenty ten. And the version we follow today is Incoterms twenty twenty. It came into force on the first of January, twenty twenty. ICC has only just begun work on the next version, so for your exam, twenty twenty is the answer. Okay, that's part one. Still with me? Good. You already know the most important thing: risk and cost are two different things. Hold on to that. Now stretch for a second if you like. Part two is the picture that holds all eleven rules. I need full attention for this one."}]}, {"file": "part_3.mp3", "section": "Chapter 2 · The road", "turns": [{"speaker": "Teacher", "first": "N16", "last": "N30", "text": "So, here's our picture. A road. On the left, the seller's door. On the right, the buyer's door. And seven stops in between. Let me walk you through them. Stop one, the seller's own premises. Stop two, the goods are handed over to the carrier. Stop three, alongside the ship at the port. Stop four, on board the ship. Then comes the sea, or the air, or the long road. Stop five, the goods arrive at the destination, ready to be unloaded. Stop six, unloaded. And stop seven, cleared through import customs, with the duty paid. And two markers move on this road. The red baton is the risk. Wherever the baton is handed over, from there, any loss is the buyer's. The blue line is the cost. It shows how far the seller pays. Now let's put the eleven rules on the road, from the seller's door to the buyer's door. Just watch, don't write. The card at the end has all of it. First, E-X-W. Ex Works. The seller just keeps the goods ready at her own premises. The buyer comes, loads the truck, and does everything after that. Even the export clearance. This is the least the seller can do. Next, F-C-A. Free Carrier. The seller hands the goods to the carrier the buyer has chosen. If that happens at the seller's own premises, the seller also loads them. And she clears them for export. F-A-S, Free Alongside Ship. The goods are placed next to the ship at the port of shipment. And F-O-B, Free on Board. The goods are loaded on board the ship. In all these F rules, the buyer pays the main freight. Now the C rules. These are the clever ones. C-F-R, cost and freight. And C-I-F, cost, insurance and freight. The risk passes on board the ship, same place as F-O-B. But the seller pays the freight all the way to the destination port. Then C-P-T, Carriage Paid To. And C-I-P, Carriage and Insurance Paid To. Here the risk passes when the goods are handed to the first carrier. But again, the seller pays the carriage up to the destination. So see what happens with the C rules. The baton is handed over at the start, but the blue line keeps running to the end. Two different points. That's exactly where our Tiruppur exporter's case sits. And finally, the D rules. Delivered. D-A-P, Delivered at Place. The goods arrive at the destination, ready to be unloaded, and the buyer unloads them. D-P-U, Delivered at Place Unloaded. Same, but the seller also unloads them. It's the only rule where the seller unloads at the destination. And D-D-P, Delivered Duty Paid. The seller even clears import customs and pays the duty. This is the most the seller can do. So, E-X-W at one end, seller does the least. D-D-P at the other end, seller does the most. Everything else sits in between. That's a favourite question. And customs is simple. Export clearance is the seller's job in every rule, except E-X-W. Import clearance is the buyer's job in every rule, except D-D-P."}]}, {"file": "part_4.mp3", "section": "Chapter 2 · The road", "turns": [{"speaker": "Teacher", "first": "N31", "last": "N36a", "text": "Easy way to remember the four groups: E for exit, the goods leave from the seller's door. F for free, the seller is free of the main freight. C for carriage paid, but the risk has already gone. And D for delivered, right there at the destination. Okay, quick check. Everyone with me? Let's test it. Under C-P-T, where does the risk pass? Some of you are saying at the destination, because carriage is paid till there. Others are saying when the goods go to the carrier. What do you say? When it's handed to the first carrier. Did you get it? Good. Because it's a C rule. The seller pays the carriage, but the baton has already gone. Same story as C-I-F. Now, look at the road once more. Four of these rules use the ship's rail as the point. F-A-S, F-O-B, C-F-R and C-I-F. These four are only for sea and inland waterway transport. The other seven work for any mode, even air, rail or road, or more than one together. And here's a trap the exam likes. Containers. A container is usually handed over at the container terminal, before it goes on board. So for container cargo, ICC says F-C-A and C-I-P fit better than F-O-B and C-I-F. And how many rules in all? Eleven. Seven for any mode, four for sea. That exact question, \"how many Incoterms\", came up twice in one exam cycle. Don't let anyone tell you thirteen. Thirteen was the old two thousand set. One more thing that changed in twenty twenty. There used to be a rule called D-A-T, Delivered at Terminal. In twenty twenty it became D-P-U, because now the goods can be unloaded at any place, not only a terminal. Okay, deep breath. That was the heaviest part, and you're through it. Eleven rules, one road. Now let's come to the part that touches your desk at the branch: insurance and the LC."}]}, {"file": "part_5.mp3", "section": "Chapter 3 · Insurance and the bank's desk", "turns": [{"speaker": "Teacher", "first": "N37", "last": "N49a", "text": "So, in which rules does the seller have to buy insurance? Only two. C-I-F and C-I-P. The \"I\" in the name is the clue. In every other rule, if anybody insures the goods, it's the buyer, for his own protection. And here's the twenty twenty change everybody asks about. Under C-I-P, the seller must buy wide cover, the Institute Cargo Clauses A. That's the all-risks kind. Under C-I-F, the minimum is still Clauses C, the basic kind. Unless the parties agree something else. Why the difference? ICC's thinking is this. C-I-F is used a lot for bulk commodities at sea, where basic cover is the custom. C-I-P is used more for manufactured goods. So C-I-P got the bigger umbrella. And how much cover? At least one hundred and ten percent of the contract price. Not one hundred. One hundred and ten. And the cover must be in the currency of the contract. The LC side says the same thing. Under UCP six hundred, article twenty-eight, if the LC is silent on the amount, the cover must be at least one hundred and ten percent of the C-I-F or C-I-P value. Okay, calculators out. Our exporter's price. Her goods on board at Chennai cost forty-five thousand dollars. That's her F-O-B value. Sea freight to Rotterdam, two thousand four hundred. Insurance premium, six hundred. Add them up. Forty-five thousand, plus two thousand four hundred, plus six hundred. Forty-eight thousand dollars. That's her C-I-F price. Cost, plus insurance, plus freight. The name is the formula. Now the minimum insurance cover. Forty-eight thousand, into one point one, equals. Fifty-two thousand eight hundred dollars. Simple. The same multiplier habit as before, no percent key needed. Your turn. A C-I-P price of thirty thousand euros. What's the minimum cover? Pause the video and press the keys. Done? Thirty thousand, into one point one. Thirty-three thousand euros. Did you get it? Great. Now be careful here, this is where people slip. Some of you will take one hundred and ten percent of the F-O-B value. That's wrong. The base is the C-I-F or C-I-P value. On our numbers, F-O-B would give you forty-nine thousand five hundred. Wrong option. Now think about what this means at the LC desk. If the LC says C-I-F or C-I-P, the seller's documents must include an insurance document. If it says F-O-B or F-C-A, the buyer insures, so the seller won't send one. And the insurance document must not be dated after the shipment date, unless it shows the cover started by then. Cover that starts after the goods have sailed is no cover at all. That's also article twenty-eight. And the bill of lading usually tells you who paid the freight. Under C and D rules you'd usually see \"freight prepaid\". Under F rules, \"freight collect\". It's a quick way to see whether the documents fit the term."}]}, {"file": "part_6.mp3", "section": "Recap and practice", "turns": [{"speaker": "Teacher", "first": "N50", "last": "N62a", "text": "So let's go back to Tiruppur. Under C-I-F, the risk passed on board at Chennai. Her documents comply, so the LC pays her. The buyer claims on the insurance. Her lost container is the buyer's problem, and the buyer is covered. Okay, three quick questions before we finish. Answer each one before I do. One. Under which rule does the seller carry the most obligations? D-D-P. Delivered Duty Paid. Even import duty. Two. Which rule replaced D-A-T in twenty twenty? D-P-U. Delivered at Place Unloaded. Three. A C-I-F price of one lakh twenty-five thousand four hundred dollars. The LC says nothing about the insurance amount. What's the minimum cover? One lakh twenty-five thousand four hundred, into one point one. One lakh thirty-seven thousand nine hundred and forty dollars. Did you get all three? Very good. So here's the whole lesson on one card. Step one: three letters decide three things. Where risk passes, who pays, who clears customs. Step two: put the rule on the road. E at the seller's door, F at the carrier or the ship, D at the buyer's end. Step three: for C rules, the baton and the blue line split. The risk goes early, the cost goes all the way. And for insurance: only C-I-F and C-I-P, at least one hundred and ten percent. C-I-P with the bigger cover. So next time an LC lands on your desk with three letters on it, you'll know exactly what they mean. [warmly] That's it for today. Next class, we open the LC itself, and the UCP articles the exam keeps asking. One small homework. Draw the road once tonight, from memory, and put all eleven rules on it. Five minutes. Then do the practice questions. Okay, good night everyone, go and rest. See you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
