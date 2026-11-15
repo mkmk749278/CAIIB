@@ -38,7 +38,8 @@ abroad (ECB, A6), insurance (ECGC, A7), referees (EXIM/RBI/FEMA/FEDAI, A8), the 
 | A6 | Packing credit to realisation: the export journey (9 months at the cut-off, 450-day credit window history), EDPMS | L | A-EXIMP / A |
 | A7 | Importers, supplier's and buyer's credit, trade credit, IDPMS | L | A-EXIMP / A |
 | A8 | Letters of credit in one picture: parties, types, red clause, transfer | L | A-LC / A |
-| A9 | UCP 600 articles that get asked (5 banking days, expiry on a holiday, force majeure), URR 725, ISBP 745, Incoterms | L | A-LC / A |
+| A9 | UCP 600 articles that get asked (5 banking days, expiry on a holiday, force majeure), URR 725, ISBP 745 | L | A-LC / A |
+| A9i | Incoterms 2020 on one road (sample lesson 2, owner 2026-11-15; `course/bfm/A/A9_incoterms/`) | L | A-LC / A |
 | A10 | LC case study, exam style | C | A-LC / A |
 | A11 | NRE, NRO, FCNR(B), SNRR: one table you will never forget (repatriation, tax, currency risk, tenure) | L | A-NRI / A |
 | A12 | Residency (RNOR, deemed resident), NRI loans and housing loans; June 2026 rate-ceiling relaxation | C | A-NRI / A |

@@ -39,7 +39,15 @@ any new stage. New lessons go into the playbook section they belong to, with the
   `tools/video/voice_blocks.py`; text also in `voice_v5.md`). Owner generates `part_1.mp3`…`part_6.mp3` in one voice.
   To cut lines, adapt `align_lines.py` (it still reads `script_v2.md` and one file per speaker) to run per part with
   that part's ids in order; video code ids M01/M03 become N04a/N15c. v3 and v4 are superseded.
-- **Next:** (1) owner's v5 parts, re-cut as r2 (warm-up scene, "some of you / others" thought bubbles replace Meera's
+- **2026-11-15 (owner): Incoterms is the next sample video; A1 is parked until later.** Lesson folder
+  `course/bfm/A/A9_incoterms/` (the Incoterms part of course-plan A9): `script.md` (v5 rules from the start: one
+  teacher voice, online class, "some of you / others"; signature picture "the road" with a red risk baton and a blue
+  cost line), `numericals.md`, `practice.md`, `claims.csv` (ICC pages checked 2026-11-15; Incoterms 2020 current,
+  ICC 2026 workplan only begins work toward Incoterms 2030; rules marked "re-check against a copy" come from the
+  paid ICC text), `map_nodes.md`, `voice.md`. Phone copy page: https://claude.ai/artifact/W8oruErZHXydDFpKDHWf82.
+  **Next for it:** owner generates `part_1.mp3`…`part_6.mp3` in one voice; then cut lines, build the Remotion
+  composition (road, baton, cost line, thought bubbles, calculator), render, independent review.
+- **A1, when resumed:** (1) owner's v5 parts, re-cut as r2 (warm-up scene, "some of you / others" thought bubbles replace Meera's
   bubble, new disclosure card);
   (2) independent viewer review of the cut (new session); (3) visual upgrade:
   illustrated characters and counter, music bed and sound cues (music library on Drive; rclone not installed here),
