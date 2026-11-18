@@ -184,6 +184,11 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   as Markdown and as a phone page with one Copy button per part (the owner records from the phone). With one voice
   each part is a single block; the tool still supports multi-speaker turns if a lesson ever needs them. ElevenLabs
   v3 expression tags (`[chuckles]`) are allowed sparingly; the page can strip them for other models.
+- Voice engine (2026-11-18): the full course is about 47 videos and about 535,000 characters, so about 550,000
+  ElevenLabs credits for one take and 700,000–800,000 with retakes. Free ElevenLabs accounts are out: free-plan audio
+  could not be used commercially when last checked, and pooling accounts breaks their terms. Kokoro (open source,
+  free) was tested on Incoterms part 1 in three voices; owner verdict: robotic, not fit for an Indian accent.
+  Rejected. The voice must sound like an Indian English teacher.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
