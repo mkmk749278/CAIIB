@@ -221,6 +221,50 @@ space, a road made of dots, and no mind map on screen.
   draw-on tied to its spoken word; one camera panning one page; three sound cues (flag thud, arrow whoosh, correct
   chime) and music only in warm-up, chapter cards and close; a "trap" sticky-note card.
 
+## 5d. Smoothness: the picture follows the voice (owner on Incoterms r2, 2026-11-19)
+Owner: "missing smoothness; scenes coming in between without sound in the audio gaps; the audio also feels not so
+smooth; is it the 6 runners and the join? Visuals should follow the narration: while you are saying something, slowly
+draw a line or curve from here to there till the sentence finishes, to lock the students. Get more tricks. Nowhere
+should feel sudden changes, glitches, blanks."
+- **Measured on r2** (not guessed): the 6-runner join is **not** the cause. All 31,369 frames are exactly 1/30 s apart
+  and the sound is rendered in one piece by its own runner. The roughness is ours:
+  - **Sound:** we cut the owner's two continuous recordings into 77 lines and re-spaced them with a fixed 0.35 s gap.
+    That throws away the natural rhythm and breaths of the voice. There are also 58 silences over 0.6 s and 16 over
+    1.5 s (pause holds, chapter cards). They are dead digital silence, which sounds like a fault.
+  - **Picture:** whole scenes switch at line starts with a 0.3 s fade, often inside those silences. Elements pop in
+    on one word instead of growing with the sentence, and nothing moves during the holds.
+- **Research behind the fix:**
+  - Temporal contiguity: words and the picture they describe at the same moment (Mayer).
+  - Cueing and visual guidance: a moving cue such as a pen, a pointer or a growing line tells the eye where to look
+    (de Koning et al.).
+  - Dynamic drawing: watching an instructor draw beats seeing a finished picture (Fiorella & Mayer).
+  - Continuity: avoid cuts, since every cut costs a reorientation.
+- **The rules from r3 on ("flow engine")**
+  1. **The voice is never cut up.** Use the owner's continuous recordings as recorded. Open space only where the
+     lesson needs it (pause countdowns, chapter cards). Fill it with room tone and a quiet music bed, faded in and out,
+     never dead silence. Line ids map to the time inside the recording, not to separate files.
+  2. **Every visual is bound to a phrase, not a frame.** It starts on the first word of its phrase and *keeps
+     drawing until the phrase ends*: an arrow grows across the sentence, an underline follows the words, a number
+     counts up as it is spoken. Nothing appears in a single frame.
+  3. **One page, one camera.** No scene cuts. The camera glides (1–1.5 s, ease in-out), starting just *before* the
+     sentence that needs the new area. Earlier drawings stay on the page, dimmed, so the learner keeps their place.
+  4. **No change in silence.** Transitions happen while the voice is speaking about the new thing, never in a gap.
+  5. **Holds stay alive.** The countdown ring drains, the map draws on, a soft pulse. The screen is never frozen or
+     blank.
+  6. **More tricks:**
+     - the caption highlights each word as it is spoken;
+     - a pen tip leads every line that draws;
+     - a dashed "ghost" when a question is asked, inked in when it is answered;
+     - a soft zoom on the key word;
+     - an object morphs into its icon (concreteness fading);
+     - the map branch pulses when the lesson calls back to it;
+     - the baton is *handed* hand to hand, not placed.
+  7. **A smoothness audit before every render:**
+     - no silence over 0.8 s outside planned holds;
+     - no element whose opacity jumps more than 0.2 in one frame;
+     - no camera move or scene change during silence;
+     - no frame without something moving for more than 2 s.
+
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
