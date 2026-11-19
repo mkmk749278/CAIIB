@@ -188,6 +188,10 @@ W('N31', 'free', 1, 'F = free (of the main freight)', 960, 760, c); W('N31', 'go
 W('N31', 'destination', 1, 'D = delivered at destination', 960, 760, c);
 W('N38', 'institute', 1, 'Institute Cargo Clauses A', 1000, 760);
 W('N42', 'premium', 1, 'insurance premium: 600', 80, 560);
+W('N17', 'stop', 1, '1 · the seller’s premises', 960, 130, c); W('N17', 'stop', 2, '2 · handed to the carrier', 960, 130, c);
+W('N17', 'stop', 3, '3 · alongside the ship', 960, 130, c); W('N17', 'stop', 4, '4 · on board', 960, 130, c);
+W('N18', 'then', 1, 'then: sea · air · long road', 960, 130, c); W('N18', 'stop', 1, '5 · arrived, ready to unload', 960, 130, c);
+W('N18', 'stop', 2, '6 · unloaded', 960, 130, c); W('N18', 'stop', 3, '7 · import cleared, duty paid', 960, 130, c);
 W('N48', 'won', 1, '→ no insurance document', 960, 700, c);
 B('N55', 1, 'Delivered at Place Unloaded', 160, 560);
 W('N15a', 'risk', 1, 'risk ≠ cost', 960, 640, c);
