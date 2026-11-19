@@ -23,6 +23,15 @@ any new stage. New lessons go into the playbook section they belong to, with the
   **r2 owner reaction (2026-11-19): not smooth** (audio and picture). Measured: not the 6-runner join; it is our line
   cutting (fixed 0.35 s gaps, dead silences) and scene switching. Fix = **flow engine, PLAYBOOK §5d** (continuous
   voice, phrase-bound drawing, one page + camera, no change in silence, live holds, smoothness audit). Building r3.
+  **r3 (2026-11-19, Drive `A07/renders/r3_720p.mp4`):** continuous voice + ducked music bed (`flow_voice.py`, `mix.flac`
+  in Drive `A07/flow/`), crossfades, word-following captions, phrase-drawn cost line; audit: 0 dead silences, 2 cuts.
+  **Owner on r3:** at 2:18 a chapter card shows with no narration, between the question (N06 + 5 s pause) and its
+  answer, and "the same problem in some places": the picture does not match what is being said. Sync sheets
+  (`tools/video/sync_sheet.py`: a frame every 4 s with the words being spoken) confirm it: the warm-up holds the title
+  card for 25 s while the voice talks about other things, scenes linger after the voice moves on, chapter cards sit in
+  silence. **Next (r4): a cue sheet per lesson**: every sentence gets its own visual beat, anchored to its words, so
+  the picture always shows what is being said; chapter titles slide in while the teacher speaks (no silent chapter
+  cards); pause holds only for prediction prompts, kept alive. Cue sheets become part of every script from now on.
 - **2026-11-19 (owner): new process.** Fix the exact video order → write a one-page plan for every video → write
   every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
   **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4
