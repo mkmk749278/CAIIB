@@ -1,6 +1,6 @@
 # Inbox: results from the owner's laptop
 
-## Cowork, 2026-11-14 (Drive folder https://drive.google.com/drive/folders/1AHldl1aFLVmy5RaVdD6P4_SNTGWEj0DY)
+## Cowork, 2026-11-14 (Drive `CAIIB/BFM/research/cowork_2026-11-14/`, moved there 2026-11-19 with this verdict as `VERDICT.md`; https://drive.google.com/drive/folders/1AHldl1aFLVmy5RaVdD6P4_SNTGWEj0DY)
 Read in full by the cloud session on 2026-11-14. **Not copied into the repo and not used as evidence**, for the
 reasons below. Kept in Drive only.
 
