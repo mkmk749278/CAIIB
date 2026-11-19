@@ -54,7 +54,7 @@ any new stage. New lessons go into the playbook section they belong to, with the
   ICC 2026 workplan only begins work toward Incoterms 2030; rules marked "re-check against a copy" come from the
   paid ICC text), `map_nodes.md`, `voice.md`. Phone copy page: https://claude.ai/artifact/W8oruErZHXydDFpKDHWf82.
   Owner's audio (2026-11-15) came as two files: `incoterms_1.mp3` = parts 1–4 (N00a–N36a), `incoterms_2.mp3` =
-  parts 5–6 (N37–N62a); media in Drive `CAIIB/BFM/A07/voice/` (owner re-uploads them there; this container's copies are gone). Cut with `tools/video/cut_lines.py` (generic: script, out dir,
+  parts 5–6 (N37–N62a); media in Drive `CAIIB/BFM/A07/voice/` (re-uploaded 2026-11-19, with word timings); cut lines in `CAIIB/BFM/A07/lines/`. Cut with `tools/video/cut_lines.py` (generic: script, out dir,
   `audio:words.json:first:last`; also writes per-line word times), timeline `tools/video/timeline.py` (holds and
   chapter cards per lesson) → `video/src/incoterms_lines.json`; composition `Incoterms` (`video/src/Incoterms.tsx`,
   `road.tsx`; cues use spoken word times via `at(id, word, fallback)`). Render: `npx remotion render src/index.ts
@@ -118,7 +118,8 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
 ## Owner and setup
 - Kishore works **only from an Android phone** (GitHub app, Claude app, Termux). Everything runs in cloud sessions or
   GitHub Actions; every result must open on a phone.
-- **Git**: work on a branch, open a PR, merge to `main` the same day (owner, 2026-11-14). Tell the owner which branches
+- **Git**: work on a branch, open a PR, merge to `main` the same day (owner, 2026-11-14). **Always merge our own PRs
+  and continue without asking** (owner, 2026-11-19: "always merge and continue"); `main` is the default branch. Tell the owner which branches
   can be deleted.
 - Ask the owner (AskUserQuestion, 2–4 options, recommended first) only when the decision is truly theirs.
 - Ask before anything paid, anything outward-facing beyond our repos and Drive, and anything destructive.
