@@ -89,27 +89,27 @@ B('N00c', 0, 'a question first…', 960, 460, c); B('N00c', 2, 'just think about
 B('N00c', 3, 'some of you: every day', 960, 790, c); B('N00c', 4, 'many of you: never', 960, 790, c);
 B('N00c', 5, 'both are fine', 960, 790, c);
 B('N00d', 0, "today's topic: Incoterms", 960, 460, c); B('N00d', 1, "why it's worth your time", 960, 460, c);
-B('N00d', 4, 'one was a full case study', 960, 840, c);
+B('N00d', 4, 'one was a full case study', 960, 800, c);
 B('N00e', 0, 'easy marks', 960, 470, c); B('N00e', 2, 'no heavy theory', 960, 780, c);
 B('N00e', 3, '15 minutes → this topic is yours', 960, 780, c); B('N00e', 4, "shall we start?", 960, 780, c);
 // opening
-B('N02', 1, 'keep this line in mind', 960, 860, c);
+B('N02', 1, 'keep this line in mind', 960, 800, c);
 B('N03', 2, 'everything looks perfect', 1060, 560);
 B('N04', 3, 'USD 48,000 · gone', 960, 300, c);
 B('N06', 1, 'Under CIF: whose loss?', 620, 610); B('N06', 2, "seller's? or buyer's?", 620, 610);
 // chapter 1: the misconception, built step by step
-B('N06a', 2, 'CIF = cost, insurance, freight', 140, 110, {stack: 'm', size: 50});
-B('N06a', 3, 'seller paid freight + insurance…', 140, 170, {stack: 'm', size: 50});
-B('N06a', 4, "so the sea is her job?", 900, 170, {stack: 'm', size: 50});
-B('N06a', 5, "so it's her loss?", 900, 230, {stack: 'm', size: 50, until: ['N06b', 0]});
+B('N06a', 2, 'CIF = cost, insurance, freight', 140, 110, {stack: 'm', size: 58});
+B('N06a', 3, 'seller paid freight + insurance…', 140, 170, {stack: 'm', size: 58});
+B('N06a', 4, "so the sea is her job?", 900, 170, {stack: 'm', size: 58});
+B('N06a', 5, "so it's her loss?", 900, 230, {stack: 'm', size: 58, until: ['N06b', 0]});
 B('N06b', 1, 'on the ship → buyer’s problem?', 1060, 130);
 B('N09', 4, 'banks deal in documents, not goods', 140, 540); B('N09', 5, 'UCP 600 · Article 5', 140, 540);
 B('N10a', 0, 'said "seller"? don’t feel bad', 360, 640); B('N10a', 1, 'almost everybody does', 360, 640);
 B('N13', 4, '→ that is for the sales contract', 960, 760, c);
 B('N14', 3, 'an old contract may say 2010', 960, 620, c);
 B('N15', 2, 'for your exam: 2020', 960, 650, c);
-B('N15a', 1, 'still with me? good', 960, 860, c); B('N15a', 4, 'hold on to that!', 960, 860, c);
-B('N15b', 0, 'stretch for a second', 960, 860, c); B('N15b', 2, 'full attention now', 960, 860, c);
+B('N15a', 1, 'still with me? good', 960, 800, c); B('N15a', 4, 'hold on to that!', 960, 800, c);
+B('N15b', 0, 'stretch for a second', 960, 800, c); B('N15b', 2, 'full attention now', 960, 800, c);
 // chapter 2: the road
 B('N16', 1, 'a road', 960, 130, c); B('N16', 2, "← the seller's door", 300, 400); B('N16', 3, "the buyer's door →", 1290, 400);
 B('N16', 4, '7 stops in between', 960, 130, c); B('N16', 5, "let's walk through them", 960, 130, c);
@@ -122,7 +122,7 @@ B('N30', 0, 'customs is simple', 960, 720, c);
 B('N31a', 0, 'quick check', 960, 130, c); B('N31a', 1, 'everyone with me?', 960, 130, c); B('N31a', 2, "let's test it", 960, 130, c);
 
 // chapter 2 end and chapter 3
-B('N33', 0, 'look at the road once more', 960, 860, c);
+B('N33', 0, 'look at the road once more', 960, 800, c);
 B('N34', 0, 'a trap the exam likes', 960, 130, c);
 B('N35', 0, 'how many in all?', 960, 160, c); B('N35', 3, 'asked twice in one cycle!', 960, 760, c);
 B('N36a', 1, 'the heaviest part: done ✓', 140, 100); B('N36a', 2, 'eleven rules, one road', 140, 100);
@@ -143,7 +143,7 @@ B('N57', 2, 'all three? very good ✓', 960, 800, c); B('N57', 1, '= USD 1,37,94
 
 // r4 pass 2: every remaining sentence
 B('N00c', 1, 'how many of you?', 960, 470, c);
-B('N02', 0, 'in the contract and the LC:', 960, 860, c); B('N02', 2, "we'll come back to it", 960, 860, c);
+B('N02', 0, 'in the contract and the LC:', 960, 800, c); B('N02', 2, "we'll come back to it", 960, 800, c);
 B('N06', 0, 'let me ask you…', 620, 610);
 B('N07', 1, 'on board → risk is the buyer’s', 960, 120, c); B('N07', 2, 'here: Chennai', 960, 120, c); B('N07', 3, 'after that: the buyer’s sea', 960, 120, c);
 B('N08', 3, 'the insurance protects the buyer', 960, 120, c);
@@ -158,7 +158,7 @@ B('N26', 2, 'two different points', 960, 820, c); B('N26', 3, '= our Tiruppur ca
 B('N28', 5, 'the most the seller can do', 1150, 130);
 B('N31a', 3, 'CPT: where does risk pass?', 960, 130, {...c, until: ['N31a', 4]});
 B('N32', 5, 'same story as CIF', 1150, 230);
-B('N33', 2, 'FAS: alongside · FOB, CFR, CIF: on board', 960, 860, c); B('N33', 4, 'sea and inland waterway only', 960, 860, c);
+B('N33', 2, 'FAS: alongside · FOB, CFR, CIF: on board', 960, 800, c); B('N33', 4, 'sea and inland waterway only', 960, 800, c);
 B('N34', 1, 'containers!', 960, 130, c);
 B('N35', 2, '7 any mode + 4 sea', 960, 760, c);
 B('N36', 1, 'there used to be DAT…', 960, 640, c);
@@ -196,6 +196,11 @@ W('N35', '13', 1, 'not 13!', 960, 760, c);
 W('N42', '2400', 1, 'freight: 2,400', 80, 560);
 W('N61', 'least', 1, 'at least 110%', 140, 160);
 W('N31', 'leave', 1, "E = exit, from the seller's door", 960, 760, c);
+W('N11', 'three', 1, '3 letters + a place + the version', 960, 600, c);
+W('N41', 'silent', 1, 'LC silent → at least 110% of CIF/CIP', 960, 720, c);
+W('N44', 'habit', 1, 'the same multiplier habit', 80, 560);
+W('N43', 'plus', 1, '45,000 + 2,400 + 600', 80, 620);
+W('N02', 'contract', 1, 'contract + LC say:', 960, 800, c);
 W('N48', 'won', 1, '→ no insurance document', 960, 700, c);
 B('N55', 1, 'Delivered at Place Unloaded', 160, 560);
 W('N15a', 'risk', 1, 'risk ≠ cost', 960, 640, c);
