@@ -14,8 +14,9 @@ any new stage. New lessons go into the playbook section they belong to, with the
   every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
   **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4
   revisions, U01, X01), the "builds on" links, pictures, plan template and rule version. Order locked (PR #17 merged).
-  Plans module by module in `course/bfm/<module>/plans_<module>.md`: **Module A plans draft 1 done (00, A01–A21, AR),
-  waiting for owner review**; then Module B. Target exam: May/June 2027
+  Plans module by module in `course/bfm/<module>/plans_<module>.md`: **all four modules' plans draft 1 done
+  (A, B, C, D: 58 videos; 2026-11-19)**; owner reviews them; next: full scripts in course order (00, A01…), each
+  plan moved into its video folder with `numericals.md`, `practice.md`, `claims.csv`, `map_nodes.md`. Target exam: May/June 2027
   (cut-off 31 Dec 2026) unless the owner says otherwise. Sample folders keep their names: `A/A1` = A01,
   `A/A9_incoterms` = A07. The A1/Incoterms notes below are history until the build stage.
 - **Paper 1 = CAIIB Bank Financial Management (BFM).** Owner decision, 2026-11-14.
