@@ -51,7 +51,7 @@ export const INCO_MAP: {centre: [string, string]; branches: Branch[]} = {
 	branches: [
 		{title: 'What they are', leaves: ['ICC, 11 rules', 'version 2020', '"CIF Rotterdam 2020"']},
 		{title: 'Decide 3 things', leaves: ['risk point', 'costs', 'customs clearance']},
-		{title: 'The road', leaves: ['7 stations', 'red flag = risk', 'blue line = cost']},
+		{title: 'The road', leaves: ['7 stations', 'red baton = risk', 'blue line = cost']},
 		{title: 'E · F · C · D', leaves: ['E, F, D: same point', 'C: risk early,', 'cost far']},
 		{title: 'Mode', leaves: ['sea only: 4', 'any mode: 7', 'containers: FCA/CIP']},
 		{title: 'Insurance', leaves: ['only CIF, CIP', 'CIF: C · CIP: A', 'at least 110%']},
