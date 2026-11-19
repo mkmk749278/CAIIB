@@ -1,3 +1,5 @@
+> **Verdict (cloud session, 2026-11-14; see `README.md`): LEADS ONLY: no RBI links; every item must be read on rbi.org.in before a lesson uses it.**
+
 # RBI Regulatory Verification Log: BFM Syllabus Updates
 
 This document resolves the open verification items identified in `research/bfm/regulatory_updates.md` under the *"Still to do"* list. Every item has been cross-checked directly against Reserve Bank of India (RBI) notifications, Master Directions, and Official Gazette publications.
