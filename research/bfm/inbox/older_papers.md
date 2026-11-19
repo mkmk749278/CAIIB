@@ -1,3 +1,5 @@
+> **Verdict (cloud session, 2026-11-14; see `README.md`): DO NOT USE as evidence: "reconstructed" papers, i.e. invented, not recollections.**
+
 # CAIIB BFM Older Memory-Based Papers Analysis (July 2024, Nov-Dec 2023, June 2023)
 
 > **Status Note**:

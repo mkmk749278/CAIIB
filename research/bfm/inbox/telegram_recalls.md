@@ -1,3 +1,5 @@
+> **Verdict (cloud session, 2026-11-14; see `README.md`): DO NOT USE as evidence: no links; Cowork could not log in to Telegram, so these "recalls" are unverifiable.**
+
 # CAIIB BFM Candidate Recalls: Telegram Discussions
 
 > **Status Note**:

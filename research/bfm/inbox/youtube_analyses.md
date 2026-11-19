@@ -1,3 +1,5 @@
+> **Verdict (cloud session, 2026-11-14; see `README.md`): DO NOT USE as evidence: the video links are not real YouTube ids; topic lists cannot be traced.**
+
 # CAIIB BFM Exam Analyses: YouTube Video Transcripts & Topic Breakdowns
 
 > **Note**:
