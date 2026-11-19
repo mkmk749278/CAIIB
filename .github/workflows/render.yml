@@ -1,7 +1,9 @@
-# Render one lesson video on a GitHub runner and put it in Drive (owner, 2026-11-19).
-# Pulls the lesson's cut voice lines from Drive into video/public/<audio_dir>/, renders the Remotion composition,
-# normalises loudness to -16 LUFS, and uploads the MP4 to Drive CAIIB/BFM/<video>/renders/<name>.
-# Needs the repo secret GDRIVE_RCLONE_TOKEN (the owner's rclone Drive token; set from Termux, PLAYBOOK §8).
+# Render one lesson video on GitHub runners and put it in Drive (owner, 2026-11-19: "use 6 runners like Creator").
+# N runners (default 6) each render one slice of the composition as silent video; one more runner renders the whole
+# lesson's sound at the same time; a last job glues the slices (no re-encode), lays the sound under them, normalises
+# loudness to -16 LUFS and uploads the MP4 to Drive CAIIB/BFM/<video>/renders/<name>, printing the link in the summary.
+# Each runner pulls the lesson's cut voice lines from Drive. Needs the repo secret GDRIVE_RCLONE_TOKEN (PLAYBOOK §8).
+# The account shares about 20 runners with the owner's other repos, so keep runners at 6 or fewer.
 # Start it from the GitHub app: Actions → render → Run workflow.
 name: render
 on:
@@ -20,8 +22,11 @@ on:
         description: "where the composition expects them, under video/public (e.g. audio/inc)"
         required: true
       scale:
-        description: "0.6666666666666666 = 720p review cut (always first), 1 = 1080p master"
-        default: "0.6666666666666666"
+        description: "2/3 = 720p review cut (always first), 1 = 1080p master"
+        default: "2/3"
+      runners:
+        description: "parallel video runners (max 6)"
+        default: "6"
       name:
         description: "output file name (e.g. r2_720p.mp4)"
         required: true
@@ -29,15 +34,31 @@ on:
 permissions:
   contents: read
 
+env:
+  GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+
 jobs:
-  render:
+  plan:
     runs-on: ubuntu-24.04
-    timeout-minutes: 300
-    env:
-      GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+    outputs:
+      jobs: ${{ steps.p.outputs.jobs }}
     steps:
       - name: Secret present
         run: '[ -n "$GDRIVE_RCLONE_TOKEN" ] || { echo "::error::repo secret GDRIVE_RCLONE_TOKEN is missing (PLAYBOOK §8)"; exit 1; }'
+      - id: p
+        run: |
+          n=$(( ${{ inputs.runners }} )); (( n >= 1 && n <= 6 )) || n=6
+          echo "jobs=$(python3 -c "import json; print(json.dumps(['sound'] + [f'{i}/$n' for i in range($n)]))")" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: true
+      matrix:
+        job: ${{ fromJson(needs.plan.outputs.jobs) }}
+    steps:
       - uses: actions/checkout@v4.2.2
       - uses: actions/setup-node@v4.1.0
         with:
@@ -46,19 +67,56 @@ jobs:
           cache-dependency-path: video/package-lock.json
       - name: Install
         timeout-minutes: 10
-        run: |
-          # no apt: apt-get hung for 13+ minutes on the first run (2026-11-19); Remotion ships its own ffmpeg
-          cd video && npm ci
-      - name: Pull voice lines from Drive
-        run: tools/drive/drive.sh pull "${{ inputs.lines }}" "video/public/${{ inputs.audio_dir }}" | tail -3
+        # no apt: apt-get hung for 13+ minutes on the first run (2026-11-19); Remotion ships its own ffmpeg
+        run: cd video && npm ci --no-audit --no-fund
+      - name: Voice lines from Drive
+        run: tools/drive/drive.sh pull "${{ inputs.lines }}" "video/public/${{ inputs.audio_dir }}" | tail -2
       - name: Render
-        run: |
-          cd video
-          npx remotion render src/index.ts "${{ inputs.comp }}" out/raw.mp4 --scale=${{ inputs.scale }} --concurrency=4
-      - name: Loudness to -16 LUFS
+        working-directory: video
         run: |
           mkdir -p out
-          cd video && npx remotion ffmpeg -y -v error -i out/raw.mp4 -c:v copy -af loudnorm=I=-16:TP=-1.5:LRA=11 -c:a aac -b:a 192k \
-            "../out/${{ inputs.name }}"
+          job="${{ matrix.job }}"
+          if [ "$job" = sound ]; then
+            node ../tools/video/render_part.mjs "${{ inputs.comp }}" sound out/sound.wav
+          else
+            node ../tools/video/render_part.mjs "${{ inputs.comp }}" part "${job%/*}" "${job#*/}" "${{ inputs.scale }}" \
+              "out/part_$(printf %02d "${job%/*}").mp4"
+          fi
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: piece_${{ strategy.job-index }}
+          path: video/out/*
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
+
+  join:
+    needs: render
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: video/package-lock.json
+      - name: Install
+        timeout-minutes: 10
+        run: cd video && npm ci --no-audit --no-fund
+      - uses: actions/download-artifact@v4.1.8
+        with:
+          pattern: piece_*
+          path: video/out
+          merge-multiple: true
+      - name: Join, lay the sound, loudness to -16 LUFS, check
+        working-directory: video/out
+        run: |
+          ls part_*.mp4 | sed "s/.*/file '&'/" > parts.txt && cat parts.txt
+          npx --prefix .. remotion ffmpeg -y -v error -f concat -safe 0 -i parts.txt -i sound.wav -map 0:v -map 1:a \
+            -c:v copy -af loudnorm=I=-16:TP=-1.5:LRA=11 -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart \
+            "${{ inputs.name }}"
+          npx --prefix .. remotion ffprobe -v error -show_entries format=duration:stream=codec_name,width,height \
+            -of compact "${{ inputs.name }}"
       - name: Upload to Drive
-        run: tools/drive/drive.sh push "BFM/${{ inputs.video }}/renders" "out/${{ inputs.name }}" | tee -a "$GITHUB_STEP_SUMMARY"
+        run: tools/drive/drive.sh push "BFM/${{ inputs.video }}/renders" "video/out/${{ inputs.name }}" | tee -a "$GITHUB_STEP_SUMMARY"
