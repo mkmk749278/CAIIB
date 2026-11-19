@@ -26,11 +26,23 @@ const at = (id: string, word: string, frac: number, nth = 1) => {
 	return hits.length >= nth ? l.start + hits[nth - 1][1] : l.start + Math.round(frac * l.dur);
 };
 const during = (f: number, a: string, b?: string) => f >= S(a) && (b === undefined || f < S(b));
+// ---- flow engine (PLAYBOOK §5d) ----
+// first spoken word of a line (the piece starts in the pause before it)
+const W0 = (id: string) => by[id].start + (by[id].words[0]?.[1] ?? 0);
+const XF = 18; // crossfade frames: the old thing fades out while the new one fades in, never a dip to blank
+// visible from the first word of a to just after b starts (overlapping the next thing)
+const vis = (f: number, a: string, b?: string) => f >= W0(a) - 8 && (b === undefined || f < W0(b) + XF);
+const fo = (f: number, a: string, b?: string) => Math.min(tw(f, W0(a) - 8, W0(a) + XF), b === undefined ? 1 : 1 - tw(f, W0(b) - 2, W0(b) + XF));
+const Fd: React.FC<{o: number; children: React.ReactNode}> = ({o, children}) => (
+	<AbsoluteFill style={{opacity: o, transform: `translateY(${(1 - o) * 14}px)`}}>{children}</AbsoluteFill>
+);
+
 
 const Scene: React.FC<{a: number; b: number; children: (f: number) => React.ReactNode}> = ({a, b, children}) => {
 	const f = useCurrentFrame();
-	if (f < a - 1 || f > b + 1) return null;
-	return <AbsoluteFill style={{opacity: env(f, a, b, 9)}}>{children(f)}</AbsoluteFill>;
+	if (f < a - 1 || f > b + XF + 1) return null;
+	const o = Math.min(tw(f, a, a + XF), 1 - tw(f, b, b + XF));
+	return <AbsoluteFill style={{opacity: o}}>{children(f)}</AbsoluteFill>;
 };
 
 const Drift: React.FC<{f: number; children: React.ReactNode}> = ({f, children}) => {
@@ -39,19 +51,29 @@ const Drift: React.FC<{f: number; children: React.ReactNode}> = ({f, children}) 
 	return <AbsoluteFill style={{transform: `translate(${x}px, ${y}px) scale(${z})`}}>{children}</AbsoluteFill>;
 };
 
-// captions: the spoken sentence; spelt rules shown as codes (C-I-F → CIF)
+// captions (flow engine): the spoken sentence; words already spoken in ink, the rest soft, so the eye follows the
+// voice; fades in and out instead of switching off in a pause. Spelt rules shown as codes (C-I-F → CIF).
+const capText = (t: string) => t.replace(/\b([A-Z])-(?=[A-Z]\b)/g, '$1').replace(/Incoterms twenty twenty/g, 'Incoterms 2020').replace(/twenty twenty/g, '2020').replace(/twenty ten/g, '2010');
 const Captions: React.FC<{f: number}> = ({f}) => {
-	const l = LS.find((x) => f >= x.start && f < x.start + x.dur + 6);
-	if (!l) return null;
-	const txt = l.text.replace(/\b([A-Z])-(?=[A-Z]\b)/g, '$1').replace(/Incoterms twenty twenty/g, 'Incoterms 2020').replace(/twenty twenty/g, '2020').replace(/twenty ten/g, '2010');
+	const l = LS.find((x) => f >= x.start && f < x.start + x.dur + 10);
+	if (!l || !l.words.length) return null;
+	const end = l.start + l.words[l.words.length - 1][1] + 12;
+	const o = Math.min(tw(f, l.start + l.words[0][1] - 6, l.start + l.words[0][1] + 6), 1 - tw(f, Math.max(end, l.start + l.dur - 4), Math.max(end, l.start + l.dur - 4) + 10));
+	const txt = capText(l.text);
 	const sents = txt.match(/[^.?!]+[.?!]*/g)?.map((t) => t.trim()).filter(Boolean) ?? [txt];
+	// spoken fraction of the line from the word timings, mapped onto the characters of the script text
+	const k = l.words.filter(([, t]) => l.start + t <= f).length;
+	const frac = Math.min(1, (k + Math.min(1, (f - (l.start + (l.words[k - 1]?.[1] ?? 0))) / 8) - 1 + 1e-6) / l.words.length);
 	const total = sents.reduce((a, t) => a + t.length, 0);
-	const p = (f - l.start) / Math.max(1, l.dur);
-	let acc = 0, idx = 0;
-	for (let i = 0; i < sents.length; i++) { acc += sents[i].length / total; if (p < acc) { idx = i; break; } idx = i; }
+	let pos = frac * total, idx = sents.length - 1, done = 0;
+	for (let i = 0; i < sents.length; i++) { if (pos <= done + sents[i].length) { idx = i; break; } done += sents[i].length; }
+	const cut = Math.max(0, Math.round(pos - done));
+	const sent = sents[idx];
 	return (
-		<div style={{position: 'absolute', left: 120, right: 120, bottom: 26, display: 'flex', justifyContent: 'center'}}>
-			<div style={{background: 'rgba(255,255,255,0.94)', border: '2px solid #DCCFB2', borderRadius: 16, padding: '12px 28px', maxWidth: 1600, fontFamily: F.sans, fontWeight: 600, fontSize: 42, lineHeight: 1.25, color: C.text, textAlign: 'center', boxShadow: '0 6px 18px rgba(80,60,20,0.10)'}}>{sents[idx]}</div>
+		<div style={{position: 'absolute', left: 120, right: 120, bottom: 26, display: 'flex', justifyContent: 'center', opacity: o}}>
+			<div style={{background: 'rgba(255,255,255,0.94)', border: '2px solid #DCCFB2', borderRadius: 16, padding: '12px 28px', maxWidth: 1600, fontFamily: F.sans, fontWeight: 600, fontSize: 42, lineHeight: 1.25, textAlign: 'center', boxShadow: '0 6px 18px rgba(80,60,20,0.10)'}}>
+				<span style={{color: C.text}}>{sent.slice(0, cut)}</span><span style={{color: '#8C93A0'}}>{sent.slice(cut)}</span>
+			</div>
 		</div>
 	);
 };
@@ -93,8 +115,8 @@ export const Incoterms: React.FC = () => {
 								<Label x={500} y={80} w={940} align="center" size={34} color={C.dim}>as at the IIBF cut-off of 31 Dec 2026</Label>
 							</Card>
 							<Label x={960} y={760} w={1400} align="center" size={30} color={C.dim} o={env(f, 20, S('N00c'), 12)}>The voice in this lesson is AI-generated · names, ship and amounts are illustrative</Label>
-							{during(f, 'N00c', 'N00d') ? <Card x={360} y={600} w={1200} h={140} border={C.market}><Label x={600} y={40} w={1100} align="center" size={50} weight={700}>Ever handled an export or import file?</Label></Card> : null}
-							{during(f, 'N00d', 'N00e') ? (
+							{vis(f, 'N00c', 'N00d') ? <Fd o={fo(f, 'N00c', 'N00d')}>{<Card x={360} y={600} w={1200} h={140} border={C.market}><Label x={600} y={40} w={1100} align="center" size={50} weight={700}>Ever handled an export or import file?</Label></Card>}</Fd> : null}
+							{vis(f, 'N00d', 'N00e') ? <Fd o={fo(f, 'N00d', 'N00e')}>{(
 								<>
 									{[{t: 'Letters of credit', n: 6}, {t: 'Incoterms', n: 3}].map((r, i) => {
 										const p = tw(f, S('N00d') + 60 + i * 90, S('N00d') + 90 + i * 90);
@@ -107,7 +129,7 @@ export const Incoterms: React.FC = () => {
 										);
 									})}
 								</>
-							) : null}
+							)}</Fd> : null}
 							{f >= S('N00e') ? <Big y={640} size={70} color={C.market} o={tw(f, S('N00e') + 20, S('N00e') + 35)}>11 rules · 1 picture</Big> : null}
 						</>
 					)}
@@ -138,7 +160,7 @@ export const Incoterms: React.FC = () => {
 											<Ship x={f < S('N04') ? 760 : 960} y={680} container={10} tilt={storm * 6 * Math.sin(f / 9)} lost={lost} />
 											<Rain f={f} o={storm} />
 										</svg>
-										{during(f, 'N03', 'N04') ? <Doc x={1480} y={160} title="Bill of lading" sub="shipped on board · Chennai" o={tw(f, S('N03') + 80, S('N03') + 95)} /> : null}
+										{vis(f, 'N03', 'N04') ? <Fd o={fo(f, 'N03', 'N04')}>{<Doc x={1480} y={160} title="Bill of lading" sub="shipped on board · Chennai" o={tw(f, S('N03') + 80, S('N03') + 95)} />}</Fd> : null}
 										{lost > 0.9 ? <Big y={180} size={120} color={RISK} o={tw(f, S('N04') + 150, S('N04') + 165)}>LOST AT SEA</Big> : null}
 										{f >= S('N05') ? (
 											<div style={{position: 'absolute', inset: 0, background: `${C.bg}EE`, opacity: tw(f, S('N05'), S('N05') + 15)}}>
@@ -161,7 +183,7 @@ export const Incoterms: React.FC = () => {
 					{(f) => (
 						<>
 							<Thoughts f={f} from={S('N06a')} to={S('N08')} a="CIF: seller paid freight and insurance, so the sea is the seller's risk." b="Once it's on the ship, it's the buyer's problem." bFrom={S('N06b')} reveal={S('N07')} right="b" />
-							{f >= S('N07') && f < S('N09') ? <Road f={f} y={640} rule="CIF" baton={3} costTo={f >= S('N08') ? 4 : null} hi={[3]} o={tw(f, S('N07'), S('N07') + 15)} note={f >= S('N08') ? 'CIF: risk passes early · freight paid to Rotterdam port' : 'CIF: risk passes on board at Chennai'} /> : null}
+							{f >= S('N07') && f < S('N09') ? <Road f={f} y={640} rule="CIF" baton={3} rp={tw(f, W0('N07'), W0('N07') + 30)} costTo={f >= S('N08') ? 4 : null} cp={tw(f, W0('N08'), E('N08'))} hi={[3]} o={tw(f, S('N07'), S('N07') + 15)} note={f >= S('N08') ? 'CIF: risk passes early · freight paid to Rotterdam port' : 'CIF: risk passes on board at Chennai'} /> : null}
 							{f >= S('N09') && f < S('N10a') ? (
 								<>
 									<Doc x={140} y={200} title="Bill of lading" o={tw(f, S('N09') + 20, S('N09') + 32)} />
@@ -181,7 +203,7 @@ export const Incoterms: React.FC = () => {
 				<Scene a={S('N11')} b={ch2}>
 					{(f) => (
 						<>
-							{during(f, 'N11', 'N12') ? (
+							{vis(f, 'N11', 'N12') ? <Fd o={fo(f, 'N11', 'N12')}>{(
 								<>
 									<div style={{position: 'absolute', left: 0, right: 0, top: 300, textAlign: 'center', fontFamily: F.mono, fontWeight: 700, fontSize: 110, color: C.text}}>
 										<span style={{color: RISK}}>CIF</span> <span style={{color: C.market}}>Rotterdam</span> <span style={{color: C.dim}}>Incoterms® 2020</span>
@@ -191,35 +213,35 @@ export const Incoterms: React.FC = () => {
 									<Label x={1450} y={470} w={400} align="center" size={34} color={C.dim} o={tw(f, at('N11', 'version', 0.7), at('N11', 'version', 0.7) + 12)}>the version</Label>
 									<Label x={960} y={160} w={1600} align="center" size={40} color={C.dim}>Rules published by the International Chamber of Commerce (ICC)</Label>
 								</>
-							) : null}
-							{during(f, 'N12', 'N13') ? (
+							)}</Fd> : null}
+							{vis(f, 'N12', 'N13') ? <Fd o={fo(f, 'N12', 'N13')}>{(
 								<Card x={260} y={200} w={1400} h={520} border={C.market}>
 									<Label x={60} y={50} size={46} color={C.dim}>Three letters answer three questions</Label>
 									{['1 · Where does the seller deliver? → where RISK passes', '2 · Who pays which COSTS?', '3 · Who does CUSTOMS: export and import?'].map((t, i) => (
 										<Label key={t} x={60} y={160 + i * 110} size={50} weight={700} o={tw(f, at('N12', ['one', 'two', 'three'][i], 0.25 + i * 0.25, i === 2 ? 3 : 1), at('N12', ['one', 'two', 'three'][i], 0.25 + i * 0.25, i === 2 ? 3 : 1) + 12)}>{t}</Label>
 									))}
 								</Card>
-							) : null}
-							{during(f, 'N13', 'N14') ? (
+							)}</Fd> : null}
+							{vis(f, 'N13', 'N14') ? <Fd o={fo(f, 'N13', 'N14')}>{(
 								<Card x={260} y={200} w={1400} h={520} border={RISK} bg="#FBE9E7">
 									<Label x={60} y={50} size={46} color={RISK} weight={700}>Incoterms do NOT decide</Label>
 									{['✗ the price', '✗ how or when payment is made', '✗ when ownership (title) passes'].map((t, i) => <Label key={t} x={60} y={160 + i * 100} size={52} weight={700} o={tw(f, S('N13') + 70 + i * 50, S('N13') + 82 + i * 50)}>{t}</Label>)}
 									<Label x={60} y={450} size={38} color={C.dim}>→ that is for the sales contract</Label>
 								</Card>
-							) : null}
-							{during(f, 'N14', 'N15') ? (
+							)}</Fd> : null}
+							{vis(f, 'N14', 'N15') ? <Fd o={fo(f, 'N14', 'N15')}>{(
 								<Card x={260} y={260} w={1400} h={300} border={C.undo}>
 									<Label x={700} y={60} w={1300} align="center" size={56} weight={700}>Not law: they apply only when written into the contract</Label>
 									<Label x={700} y={200} w={1300} align="center" size={38} color={C.dim}>so always name the version: “Incoterms® 2020”</Label>
 								</Card>
-							) : null}
-							{during(f, 'N15', 'N15a') ? (
+							)}</Fd> : null}
+							{vis(f, 'N15', 'N15a') ? <Fd o={fo(f, 'N15', 'N15a')}>{(
 								<Card x={260} y={240} w={1400} h={360} border={C.market}>
 									<Label x={700} y={50} w={1300} align="center" size={72} weight={700} color={C.market}>Incoterms® 2020</Label>
 									<Label x={700} y={160} w={1300} align="center" size={42}>in force since 1 January 2020</Label>
 									<Label x={700} y={240} w={1300} align="center" size={34} color={C.dim}>ICC workplan 2026: work only begins towards Incoterms 2030</Label>
 								</Card>
-							) : null}
+							)}</Fd> : null}
 							{f >= S('N15a') ? (
 								<>
 									<Big y={330} size={120} o={tw(f, S('N15a') + 60, S('N15a') + 75)}><span style={{color: RISK}}>RISK</span> ≠ <span style={{color: COST}}>COST</span></Big>
@@ -234,33 +256,47 @@ export const Incoterms: React.FC = () => {
 				<ChapterCard f={f} from={ch2} n={2} title="The road" map={{...MAP, done: 2, upto: 5}} />
 				<Scene a={ch2 + 60} b={S('N29')}>
 					{(f) => {
-						let rule: string | null = null;
-						if (during(f, 'N21', 'N22')) rule = 'EXW';
-						if (during(f, 'N22', 'N23')) rule = 'FCA';
-						if (during(f, 'N23', 'N24')) rule = f >= at('N23', 'free', 0.55, 2) ? 'FOB' : 'FAS';
-						if (during(f, 'N24', 'N25')) rule = f >= at('N24', 'cost', 0.3, 2) ? 'CIF' : 'CFR';
-						if (during(f, 'N25', 'N27')) rule = f >= at('N25', 'carriage', 0.2, 2) ? 'CIP' : 'CPT';
-						if (during(f, 'N27', 'N28')) rule = 'DAP';
-						if (during(f, 'N28', 'N29')) rule = f >= at('N28', 'delivered', 0.45, 2) ? 'DDP' : 'DPU';
+						// flow engine: each rule owns a phrase (from its name to the end of its sentence); the blue line draws across
+						// that whole phrase, the baton slides from the last rule's station to this one, the card crossfades
+						const SEG: {rule: string; from: number; to: number}[] = [
+							{rule: 'EXW', from: W0('N21'), to: E('N21')},
+							{rule: 'FCA', from: W0('N22'), to: E('N22')},
+							{rule: 'FAS', from: W0('N23'), to: at('N23', 'free', 0.55, 2)},
+							{rule: 'FOB', from: at('N23', 'free', 0.55, 2), to: E('N23')},
+							{rule: 'CFR', from: W0('N24'), to: at('N24', 'cost', 0.3, 2)},
+							{rule: 'CIF', from: at('N24', 'cost', 0.3, 2), to: E('N24')},
+							{rule: 'CPT', from: W0('N25'), to: at('N25', 'carriage', 0.2, 2)},
+							{rule: 'CIP', from: at('N25', 'carriage', 0.2, 2), to: E('N26')},
+							{rule: 'DAP', from: W0('N27'), to: E('N27')},
+							{rule: 'DPU', from: W0('N28'), to: at('N28', 'delivered', 0.45, 2)},
+							{rule: 'DDP', from: at('N28', 'delivered', 0.45, 2), to: E('N28')},
+						];
+						const si = SEG.findIndex((g, k) => f >= g.from - 6 && (k === SEG.length - 1 ? f < S('N29') + XF : f < SEG[k + 1].from - 6));
+						const seg = si >= 0 ? SEG[si] : null;
+						const rule = seg ? seg.rule : null;
 						const r = rule ? RULES[rule] : null;
-						// stations appear as they are named (N17, N18)
+						const prev = si > 0 ? RULES[SEG[si - 1].rule] : null;
+						const slide = seg ? tw(f, seg.from, seg.from + 26) : 1;
+						// stations appear as they are named (N17, N18), each drawn while the voice says it
 						let reveal = 0;
-						if (f >= S('N17')) reveal = 1 + 3 * tw(f, S('N17'), E('N17'), (x) => x);
+						if (f >= S('N17')) reveal = 1 + 3 * tw(f, W0('N17'), E('N17'), (x) => x);
 						if (f >= S('N18')) reveal = 4 + 3 * tw(f, S('N18') + 40, E('N18'), (x) => x);
 						if (f >= S('N19')) reveal = 7;
 						const demo = during(f, 'N19', 'N20');
-						const baton = r ? r.risk : demo ? 3 : null;
+						const baton = r ? (prev ? prev.risk + (r.risk - prev.risk) * slide : r.risk) : demo ? 3 : null;
 						const cost = r ? r.cost : demo && f >= at('N19', 'blue', 0.6) ? 4 : null;
+						const cp = seg ? tw(f, seg.from, Math.max(seg.from + 30, seg.to)) : demo ? tw(f, at('N19', 'blue', 0.6), E('N19')) : 1;
+						const rp = demo ? tw(f, at('N19', 'red', 0.2), at('N19', 'red', 0.2) + 24) : 1;
 						return (
 							<>
-								<Road f={f} y={560} reveal={f < S('N17') ? 0 : reveal} baton={demo && f < at('N19', 'red', 0.2) ? null : baton} costTo={cost} hi={r ? [r.risk] : []} dimSea={!!r && !r.sea} rule={rule} />
+								<Road f={f} y={560} reveal={f < S('N17') ? 0 : reveal} baton={demo && f < at('N19', 'red', 0.2) ? null : baton} costTo={cost} hi={r ? [r.risk] : []} dimSea={!!r && !r.sea} rule={rule} rp={rp} cp={cp} />
 								{f < S('N17') ? <Big y={230} size={60} color={C.dim} o={tw(f, S('N16'), S('N16') + 15)}>Seller’s door → buyer’s door</Big> : null}
-								{during(f, 'N20', 'N21') ? <Big y={140} size={64}>11 rules on one road</Big> : null}
-								{r && rule && !during(f, 'N26', 'N27') ? <RuleChip code={rule} name={r.name} sea={r.sea} x={160} y={60} /> : null}
-								{during(f, 'N26', 'N27') ? <Card x={460} y={120} w={1000} h={130} border={C.undo}><Label x={500} y={34} w={940} align="center" size={50} weight={700} color={C.undo}>C rules: two points · risk early, cost to the destination</Label></Card> : null}
-								{rule === 'EXW' ? <Label x={960} y={880} w={1500} align="center" size={38} color={C.dim}>buyer loads and even clears export · the least the seller can do</Label> : null}
-								{rule === 'DDP' ? <Label x={960} y={880} w={1500} align="center" size={38} color={C.dim}>seller clears import and pays the duty · the most the seller can do</Label> : null}
-								{rule === 'DPU' ? <Label x={960} y={880} w={1500} align="center" size={38} color={C.dim}>the only rule where the seller unloads at destination</Label> : null}
+								{vis(f, 'N20', 'N21') ? <Fd o={fo(f, 'N20', 'N21')}>{<Big y={140} size={64}>11 rules on one road</Big>}</Fd> : null}
+								{r && rule && seg && !during(f, 'N26', 'N27') ? <RuleChip key={rule} code={rule} name={r.name} sea={r.sea} x={160} y={60} o={tw(f, seg.from - 6, seg.from + 12)} /> : null}
+								{vis(f, 'N26', 'N27') ? <Fd o={fo(f, 'N26', 'N27')}>{<Card x={460} y={120} w={1000} h={130} border={C.undo}><Label x={500} y={34} w={940} align="center" size={50} weight={700} color={C.undo}>C rules: two points · risk early, cost to the destination</Label></Card>}</Fd> : null}
+								{rule === 'EXW' && seg ? <Label o={tw(f, seg.from + 20, seg.from + 45)} x={960} y={880} w={1500} align="center" size={38} color={C.dim}>buyer loads and even clears export · the least the seller can do</Label> : null}
+								{rule === 'DDP' && seg ? <Label o={tw(f, seg.from + 20, seg.from + 45)} x={960} y={880} w={1500} align="center" size={38} color={C.dim}>seller clears import and pays the duty · the most the seller can do</Label> : null}
+								{rule === 'DPU' && seg ? <Label o={tw(f, seg.from + 20, seg.from + 45)} x={960} y={880} w={1500} align="center" size={38} color={C.dim}>the only rule where the seller unloads at destination</Label> : null}
 							</>
 						);
 					}}
@@ -268,7 +304,7 @@ export const Incoterms: React.FC = () => {
 				<Scene a={S('N29')} b={S('N33')}>
 					{(f) => (
 						<>
-							{during(f, 'N29', 'N30') ? (
+							{vis(f, 'N29', 'N30') ? <Fd o={fo(f, 'N29', 'N30')}>{(
 								<>
 									<div style={{position: 'absolute', left: 160, right: 160, top: 420, height: 34, borderRadius: 17, background: `linear-gradient(90deg, ${C.card}, ${C.market})`}} />
 									<Label x={160} y={300} size={70} weight={700} mono>EXW</Label>
@@ -276,8 +312,8 @@ export const Incoterms: React.FC = () => {
 									<Label x={1760} y={300} w={400} align="right" size={70} weight={700} mono color={C.market}>DDP</Label>
 									<Label x={1760} y={500} w={500} align="right" size={36} color={C.dim}>seller does the most</Label>
 								</>
-							) : null}
-							{during(f, 'N30', 'N31') ? (
+							)}</Fd> : null}
+							{vis(f, 'N30', 'N31') ? <Fd o={fo(f, 'N30', 'N31')}>{(
 								<Card x={260} y={200} w={1400} h={460} border={C.market}>
 									<Label x={60} y={50} size={46} color={C.dim}>Customs</Label>
 									<Label x={60} y={150} size={56} weight={700}>Export clearance → SELLER</Label>
@@ -285,8 +321,8 @@ export const Incoterms: React.FC = () => {
 									<Label x={60} y={310} size={56} weight={700}>Import clearance → BUYER</Label>
 									<Label x={60} y={385} size={40} color={RISK} weight={700}>except DDP (seller)</Label>
 								</Card>
-							) : null}
-							{during(f, 'N31', 'N31a') ? (
+							)}</Fd> : null}
+							{vis(f, 'N31', 'N31a') ? <Fd o={fo(f, 'N31', 'N31a')}>{(
 								<div style={{position: 'absolute', left: 120, right: 120, top: 220, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 30}}>
 									{[{k: 'E', w: 'Exit', d: "from the seller's door", r: 'EXW'}, {k: 'F', w: 'Free', d: 'of the main freight', r: 'FCA · FAS · FOB'}, {k: 'C', w: 'Carriage paid', d: 'but risk already gone', r: 'CFR · CIF · CPT · CIP'}, {k: 'D', w: 'Delivered', d: 'at the destination', r: 'DAP · DPU · DDP'}].map((g, i) => (
 										<div key={g.k} style={{opacity: tw(f, at('N31', ['e', 'f', 'c', 'd'][i], 0.15 + i * 0.22), at('N31', ['e', 'f', 'c', 'd'][i], 0.15 + i * 0.22) + 12), background: C.card, border: `3px solid ${g.k === 'C' ? C.undo : C.line}`, borderRadius: 26, padding: 30, height: 440, boxSizing: 'border-box'}}>
@@ -297,10 +333,10 @@ export const Incoterms: React.FC = () => {
 										</div>
 									))}
 								</div>
-							) : null}
+							)}</Fd> : null}
 							{f >= S('N31a') ? (
 								<>
-									<Road f={f} y={640} o={tw(f, S('N32'), S('N32') + 15)} rule="CPT" dimSea baton={f >= S('N32') ? 1 : null} costTo={f >= S('N32') ? 4 : null} hi={f >= S('N32') ? [1] : []} />
+									<Road f={f} y={640} o={tw(f, S('N32'), S('N32') + 15)} rule="CPT" dimSea baton={f >= S('N32') ? 1 : null} rp={tw(f, W0('N32'), W0('N32') + 30)} costTo={f >= S('N32') ? 4 : null} cp={tw(f, W0('N32'), E('N32'))} hi={f >= S('N32') ? [1] : []} />
 									{f >= S('N32') ? <RuleChip code="CPT" name="Carriage Paid To" x={160} y={60} o={tw(f, S('N32'), S('N32') + 12)} /> : null}
 									<Thoughts f={f} from={at('N31a', 'some', 0.35)} to={S('N32') + 60} a="At the destination: carriage is paid till there." b="When the goods go to the first carrier." bFrom={at('N31a', 'others', 0.6)} reveal={S('N32')} right="b" y={230} />
 									<PauseCard top f={f} from={E('N31a') - 30} to={H('N31a')} q="CPT: where does the risk pass?" timerFrom={E('N31a')} timerFrames={by.N31a.hold} />
@@ -312,7 +348,7 @@ export const Incoterms: React.FC = () => {
 				<Scene a={S('N33')} b={ch3}>
 					{(f) => (
 						<>
-							{during(f, 'N33', 'N34') ? (
+							{vis(f, 'N33', 'N34') ? <Fd o={fo(f, 'N33', 'N34')}>{(
 								<div style={{position: 'absolute', left: 140, right: 140, top: 200, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40}}>
 									{[{t: 'Sea and inland waterway only', n: '4', r: ['FAS', 'FOB', 'CFR', 'CIF'], c: COST}, {t: 'Any mode, even air, rail, road or mixed', n: '7', r: ['EXW', 'FCA', 'CPT', 'CIP', 'DAP', 'DPU', 'DDP'], c: C.text}].map((g, i) => (
 										<div key={g.n} style={{background: C.card, border: `3px solid ${g.c}`, borderRadius: 26, padding: 36, opacity: tw(f, S('N33') + i * 120, S('N33') + i * 120 + 15)}}>
@@ -322,21 +358,21 @@ export const Incoterms: React.FC = () => {
 										</div>
 									))}
 								</div>
-							) : null}
-							{during(f, 'N34', 'N35') ? (
+							)}</Fd> : null}
+							{vis(f, 'N34', 'N35') ? <Fd o={fo(f, 'N34', 'N35')}>{(
 								<>
 									<Card x={160} y={180} w={760} h={420} border={RISK} bg="#FBE9E7"><Label x={380} y={40} w={700} align="center" size={46} weight={700} color={RISK}>✗ Container + FOB / CIF</Label><Label x={380} y={160} w={700} align="center" size={36} color={C.dim}>handed over at the terminal, before it is on board</Label></Card>
 									<Card x={1000} y={180} w={760} h={420} border={C.buy}><Label x={380} y={40} w={700} align="center" size={46} weight={700} color={C.buy}>✓ Container + FCA / CIP</Label><Label x={380} y={160} w={700} align="center" size={36} color={C.dim}>ICC: these fit better for container cargo</Label></Card>
 									<TrapNote x={460} y={660} w={1000}>Container cargo: FCA / CIP, not FOB / CIF</TrapNote>
 								</>
-							) : null}
-							{during(f, 'N35', 'N36') ? (
+							)}</Fd> : null}
+							{vis(f, 'N35', 'N36') ? <Fd o={fo(f, 'N35', 'N36')}>{(
 								<>
 									<Big y={260} size={170} color={C.market}>11 = 7 + 4</Big>
 									<Big y={520} size={50} color={C.dim}>“How many Incoterms?” · asked twice in Jul 2024</Big>
 									<Big y={620} size={44} color={RISK} o={tw(f, at('N35', 'thirteen', 0.7), at('N35', 'thirteen', 0.7) + 12)}>13 was Incoterms 2000 ✗</Big>
 								</>
-							) : null}
+							)}</Fd> : null}
 							{f >= S('N36') ? (
 								<>
 									<div style={{position: 'absolute', left: 0, right: 0, top: 300, textAlign: 'center', fontFamily: F.mono, fontWeight: 700, fontSize: 130}}>
@@ -355,15 +391,15 @@ export const Incoterms: React.FC = () => {
 				<Scene a={ch3 + 60} b={S('N42')}>
 					{(f) => (
 						<>
-							{during(f, 'N37', 'N38') ? (
+							{vis(f, 'N37', 'N38') ? <Fd o={fo(f, 'N37', 'N38')}>{(
 								<>
 									<Big y={180} size={56} color={C.dim}>Seller must insure in only two rules</Big>
 									<RuleChip code="CIF" name="Cost, Insurance and Freight" sea x={160} y={380} w={780} color={C.market} />
 									<RuleChip code="CIP" name="Carriage and Insurance Paid To" x={980} y={380} w={780} color={C.market} />
 									<Big y={640} size={44} color={C.dim}>the “I” is the clue · in all others, the buyer insures (if anyone does)</Big>
 								</>
-							) : null}
-							{during(f, 'N38', 'N40') ? (
+							)}</Fd> : null}
+							{vis(f, 'N38', 'N40') ? <Fd o={fo(f, 'N38', 'N40')}>{(
 								<>
 									{[{code: 'CIF', cl: 'Institute Cargo Clauses (C)', d: 'minimum, basic cover', w: 0.6, x: 200}, {code: 'CIP', cl: 'Institute Cargo Clauses (A)', d: 'wide, all-risks cover', w: 1, x: 1000}].map((u, i) => (
 										<div key={u.code} style={{position: 'absolute', left: u.x, top: 170, width: 720, opacity: tw(f, S('N38') + 40 + i * 90, S('N38') + 55 + i * 90), textAlign: 'center'}}>
@@ -379,15 +415,15 @@ export const Incoterms: React.FC = () => {
 									<Label x={960} y={800} w={1500} align="center" size={34} color={C.dim}>Incoterms® 2020 · unless the parties agree otherwise</Label>
 									{f >= S('N39') ? <Label x={960} y={870} w={1600} align="center" size={36} color={C.text} o={tw(f, S('N39') + 30, S('N39') + 42)}>ICC: CIF is used a lot for bulk commodities at sea · CIP more for manufactured goods</Label> : null}
 								</>
-							) : null}
-							{during(f, 'N40', 'N42') ? (
+							)}</Fd> : null}
+							{vis(f, 'N40', 'N42') ? <Fd o={fo(f, 'N40', 'N42')}>{(
 								<Card x={260} y={200} w={1400} h={480} border={C.market}>
 									<Label x={700} y={50} w={1300} align="center" size={46} color={C.dim}>Minimum cover</Label>
 									<Label x={700} y={120} w={1300} align="center" size={130} weight={700} mono color={C.market}>110%</Label>
 									<Label x={700} y={290} w={1300} align="center" size={40}>of the contract price · in the contract currency</Label>
 									{f >= S('N41') ? <Label x={700} y={370} w={1300} align="center" size={36} color={C.undo} weight={700} o={tw(f, S('N41'), S('N41') + 12)}>UCP 600 Art. 28(f)(ii): LC silent → at least 110% of the CIF or CIP value</Label> : null}
 								</Card>
-							) : null}
+							)}</Fd> : null}
 						</>
 					)}
 				</Scene>
@@ -432,20 +468,20 @@ export const Incoterms: React.FC = () => {
 				<Scene a={S('N48')} b={ch4}>
 					{(f) => (
 						<>
-							{during(f, 'N48', 'N49') ? (
+							{vis(f, 'N48', 'N49') ? <Fd o={fo(f, 'N48', 'N49')}>{(
 								<>
 									<Big y={140} size={50} color={C.dim}>At the LC desk: does the seller send an insurance document?</Big>
 									<Card x={160} y={280} w={760} h={360} border={C.buy}><Label x={380} y={40} w={700} align="center" size={60} weight={700} mono>CIF · CIP</Label><Label x={380} y={160} w={700} align="center" size={44} weight={700} color={C.buy}>✓ Insurance document required</Label></Card>
 									<Card x={1000} y={280} w={760} h={360} border={C.line} o={tw(f, at('N48', 'fob', 0.6), at('N48', 'fob', 0.6) + 12)}><Label x={380} y={40} w={700} align="center" size={60} weight={700} mono>FOB · FCA …</Label><Label x={380} y={160} w={700} align="center" size={44} weight={700} color={C.dim}>Buyer insures · none from the seller</Label></Card>
 								</>
-							) : null}
-							{during(f, 'N49', 'N49a') ? (
+							)}</Fd> : null}
+							{vis(f, 'N49', 'N49a') ? <Fd o={fo(f, 'N49', 'N49a')}>{(
 								<Card x={260} y={240} w={1400} h={380} border={C.undo}>
 									<Label x={700} y={50} w={1300} align="center" size={50} weight={700}>Insurance date ≤ shipment date</Label>
 									<Label x={700} y={150} w={1300} align="center" size={38} color={C.dim}>unless it shows cover effective from the shipment date or earlier</Label>
 									<Label x={700} y={260} w={1300} align="center" size={34} color={C.undo}>UCP 600 Art. 28(e)</Label>
 								</Card>
-							) : null}
+							)}</Fd> : null}
 							{f >= S('N49a') ? (
 								<>
 									<Doc x={420} y={220} title="Bill of lading" sub="“freight prepaid”" />
@@ -464,7 +500,7 @@ export const Incoterms: React.FC = () => {
 				<Scene a={ch4 + 60} b={S('N58')}>
 					{(f) => (
 						<>
-							{during(f, 'N50', 'N51') ? <Road f={f} y={600} rule="CIF" baton={3} costTo={4} hi={[3]} note="CIF: risk on board at Chennai · LC pays · buyer claims on the policy" /> : null}
+							{vis(f, 'N50', 'N51') ? <Fd o={fo(f, 'N50', 'N51')}>{<Road f={f} y={600} rule="CIF" baton={3} rp={tw(f, W0('N50'), W0('N50') + 30)} costTo={4} cp={tw(f, W0('N50'), E('N50'))} hi={[3]} note="CIF: risk on board at Chennai · LC pays · buyer claims on the policy" />}</Fd> : null}
 							{f >= S('N51') ? (
 								<div style={{position: 'absolute', left: 160, right: 160, top: 140}}>
 									{[{q: 'N52', a: 'N53', t: '1 · Most obligations on the seller?', ans: 'DDP · Delivered Duty Paid'}, {q: 'N54', a: 'N55', t: '2 · Which rule replaced DAT in 2020?', ans: 'DPU · Delivered at Place Unloaded'}, {q: 'N56', a: 'N57', t: '3 · CIF USD 1,25,400, LC silent: minimum cover?', ans: '125400 × 1.1 = USD 1,37,940'}].map((x) => (
@@ -505,11 +541,8 @@ export const Incoterms: React.FC = () => {
 				</Scene>
 			</Drift>
 			<Captions f={f} />
-			{LS.filter((l) => l.audio).map((l) => (
-				<Sequence key={l.id} from={l.start} durationInFrames={l.dur + 2}>
-					<Audio src={staticFile(l.audio as string)} />
-				</Sequence>
-			))}
+			{/* flow engine (PLAYBOOK §5d): one continuous track = the owner's recording + the ducked music bed */}
+			<Audio src={staticFile((lines as unknown as {voice: string}).voice)} />
 		</Page>
 	);
 };

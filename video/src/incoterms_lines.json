@@ -1,6 +1,111 @@
 {
  "fps": 30,
- "durationInFrames": 31369,
+ "durationInFrames": 30669,
+ "voice": "audio/inc/mix.flac",
+ "gaps": [
+  {
+   "kind": "hold",
+   "after": "N00c",
+   "start": 1077,
+   "dur": 45
+  },
+  {
+   "kind": "hold",
+   "after": "N06",
+   "start": 3966,
+   "dur": 150
+  },
+  {
+   "kind": "chapter",
+   "before": "N06a",
+   "start": 4116,
+   "dur": 75
+  },
+  {
+   "kind": "hold",
+   "after": "N15",
+   "start": 9153,
+   "dur": 30
+  },
+  {
+   "kind": "chapter",
+   "before": "N16",
+   "start": 9751,
+   "dur": 75
+  },
+  {
+   "kind": "hold",
+   "after": "N31a",
+   "start": 16907,
+   "dur": 150
+  },
+  {
+   "kind": "hold",
+   "after": "N36",
+   "start": 19572,
+   "dur": 30
+  },
+  {
+   "kind": "chapter",
+   "before": "N37",
+   "start": 19983,
+   "dur": 75
+  },
+  {
+   "kind": "hold",
+   "after": "N44",
+   "start": 23534,
+   "dur": 30
+  },
+  {
+   "kind": "hold",
+   "after": "N45",
+   "start": 23796,
+   "dur": 450
+  },
+  {
+   "kind": "chapter",
+   "before": "N50",
+   "start": 26240,
+   "dur": 75
+  },
+  {
+   "kind": "hold",
+   "after": "N50",
+   "start": 26779,
+   "dur": 30
+  },
+  {
+   "kind": "hold",
+   "after": "N52",
+   "start": 27110,
+   "dur": 120
+  },
+  {
+   "kind": "hold",
+   "after": "N54",
+   "start": 27500,
+   "dur": 120
+  },
+  {
+   "kind": "hold",
+   "after": "N56",
+   "start": 28024,
+   "dur": 360
+  },
+  {
+   "kind": "hold",
+   "after": "N61a",
+   "start": 29878,
+   "dur": 30
+  },
+  {
+   "kind": "hold",
+   "after": "N62a",
+   "start": 30519,
+   "dur": 90
+  }
+ ],
  "lines": [
   {
    "id": "N00a",
@@ -9,7 +114,7 @@
    "start": 30,
    "dur": 388,
    "hold": 0,
-   "audio": "audio/inc/N00a.mp3",
+   "audio": null,
    "words": [
     [
      "Hello",
@@ -161,106 +266,106 @@
    "id": "N00b",
    "speaker": "teacher",
    "text": "Okay. Notifications on silent, please. Keep a pen and a calculator nearby. Today we need the calculator only for one small thing, I promise.",
-   "start": 428,
-   "dur": 290,
+   "start": 418,
+   "dur": 294,
    "hold": 0,
-   "audio": "audio/inc/N00b.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
-     8
+     10
     ],
     [
      "notifications",
-     28
+     31
     ],
     [
      "on",
-     40
+     43
     ],
     [
      "silent,",
-     55
+     58
     ],
     [
      "please.",
-     73
+     76
     ],
     [
      "Keep",
-     93
+     96
     ],
     [
      "a",
-     98
+     101
     ],
     [
      "pen",
-     104
+     107
     ],
     [
      "and",
-     110
+     113
     ],
     [
      "a",
-     120
+     122
     ],
     [
      "calculator",
-     127
+     130
     ],
     [
      "nearby.",
-     136
+     139
     ],
     [
      "Today,",
-     166
+     169
     ],
     [
      "we",
-     175
+     178
     ],
     [
      "need",
-     182
+     184
     ],
     [
      "the",
-     186
+     188
     ],
     [
      "calculator",
-     190
+     193
     ],
     [
      "only",
-     205
+     208
     ],
     [
      "for",
-     220
+     223
     ],
     [
      "one",
-     229
+     232
     ],
     [
      "small",
-     241
+     244
     ],
     [
      "thing,",
-     253
+     256
     ],
     [
      "I",
-     267
+     270
     ],
     [
      "promise.",
-     272
+     275
     ]
    ]
   },
@@ -268,174 +373,174 @@
    "id": "N00c",
    "speaker": "teacher",
    "text": "Let me start with a question. How many of you have handled an export or import file at your branch? Just think about it. Some of you do it every day. Many of you have never touched one. Both are fine.",
-   "start": 729,
-   "dur": 361,
+   "start": 712,
+   "dur": 364,
    "hold": 45,
-   "audio": "audio/inc/N00c.mp3",
+   "audio": null,
    "words": [
     [
      "Let",
-     8
+     12
     ],
     [
      "me",
-     10
+     15
     ],
     [
      "start",
-     14
+     18
     ],
     [
      "with",
-     20
-    ],
-    [
-     "a",
      24
     ],
     [
-     "question.",
+     "a",
      28
     ],
     [
+     "question.",
+     33
+    ],
+    [
      "How",
-     56
+     60
     ],
     [
      "many",
-     62
+     66
     ],
     [
      "of",
-     67
+     71
     ],
     [
      "you",
-     72
-    ],
-    [
-     "have",
      77
     ],
     [
+     "have",
+     81
+    ],
+    [
      "handled",
-     83
+     87
     ],
     [
      "an",
-     94
+     99
     ],
     [
      "export",
-     101
+     105
     ],
     [
      "or",
-     117
+     122
     ],
     [
      "import",
-     126
+     130
     ],
     [
      "file",
-     139
+     143
     ],
     [
      "at",
-     147
+     152
     ],
     [
      "your",
-     153
-    ],
-    [
-     "branch?",
      157
     ],
     [
+     "branch?",
+     161
+    ],
+    [
      "Just",
-     180
+     184
     ],
     [
      "think",
-     188
+     192
     ],
     [
      "about",
-     195
+     199
     ],
     [
      "it.",
-     201
+     206
     ],
     [
      "Some",
-     225
+     229
     ],
     [
      "of",
-     230
-    ],
-    [
-     "you",
      234
     ],
     [
-     "do",
+     "you",
      238
     ],
     [
-     "it",
+     "do",
      243
     ],
     [
+     "it",
+     247
+    ],
+    [
      "every",
-     246
+     251
     ],
     [
      "day.",
-     253
+     257
     ],
     [
      "Many",
-     276
-    ],
-    [
-     "of",
      280
     ],
     [
+     "of",
+     285
+    ],
+    [
      "you",
-     287
+     291
     ],
     [
      "have",
-     292
+     296
     ],
     [
      "never",
-     299
+     303
     ],
     [
      "touched",
-     312
+     316
     ],
     [
      "one.",
-     321
+     325
     ],
     [
      "Both",
-     340
+     345
     ],
     [
      "are",
-     346
+     350
     ],
     [
      "fine,",
-     351
+     355
     ]
    ]
   },
@@ -443,10 +548,10 @@
    "id": "N00d",
    "speaker": "teacher",
    "text": "Because today's topic is Incoterms. And here's why it's worth your time. In the papers we checked, letters of credit came up in six out of the last seven exams. And Incoterms questions came up in three of them. One was a full case study.",
-   "start": 1146,
-   "dur": 476,
+   "start": 1122,
+   "dur": 474,
    "hold": 0,
-   "audio": "audio/inc/N00d.mp3",
+   "audio": null,
    "words": [
     [
      "because",
@@ -634,10 +739,10 @@
    "id": "N00e",
    "speaker": "teacher",
    "text": "And honestly, these are easy marks. It's only eleven rules, and one picture holds all of them. No heavy theory, I promise. Stay with me for fifteen minutes, and this topic is yours. Shall we start?",
-   "start": 1632,
-   "dur": 419,
+   "start": 1596,
+   "dur": 425,
    "hold": 0,
-   "audio": "audio/inc/N00e.mp3",
+   "audio": null,
    "words": [
     [
      "and",
@@ -649,7 +754,7 @@
     ],
     [
      "these",
-     32
+     31
     ],
     [
      "are",
@@ -733,7 +838,7 @@
     ],
     [
      "with",
-     284
+     283
     ],
     [
      "me",
@@ -789,162 +894,162 @@
    "id": "N01",
    "speaker": "teacher",
    "text": "So, picture this. A knitwear exporter from Tiruppur. She has a buyer in Rotterdam, in the Netherlands. The deal is for forty-eight thousand US dollars, and it's backed by a letter of credit opened by the buyer's bank.",
-   "start": 2062,
-   "dur": 412,
+   "start": 2021,
+   "dur": 419,
    "hold": 0,
-   "audio": "audio/inc/N01.mp3",
+   "audio": null,
    "words": [
     [
      "So",
-     8
+     16
     ],
     [
      "picture",
-     12
+     20
     ],
     [
      "this,",
-     29
+     38
     ],
     [
      "a",
-     51
+     60
     ],
     [
      "knitwear",
-     57
+     66
     ],
     [
      "exporter",
-     71
+     79
     ],
     [
      "from",
-     86
+     94
     ],
     [
      "Tirupur.",
-     96
+     104
     ],
     [
      "She",
-     123
+     131
     ],
     [
      "has",
-     128
+     136
     ],
     [
      "a",
-     134
+     142
     ],
     [
      "buyer",
-     141
+     149
     ],
     [
      "in",
-     144
+     153
     ],
     [
      "Rotterdam",
-     154
+     163
     ],
     [
      "in",
-     170
+     178
     ],
     [
      "the",
-     180
+     188
     ],
     [
      "Netherlands.",
-     183
+     192
     ],
     [
      "The",
-     208
-    ],
-    [
-     "deal",
      216
     ],
     [
+     "deal",
+     224
+    ],
+    [
      "is",
-     223
+     231
     ],
     [
      "for",
-     232
+     240
     ],
     [
      "48",
-     238
+     246
     ],
     [
      ",000",
-     256
+     264
     ],
     [
      "US",
-     272
+     280
     ],
     [
      "dollars,",
-     278
+     286
     ],
     [
      "and",
-     300
+     309
     ],
     [
      "it's",
-     306
+     314
     ],
     [
      "backed",
-     311
+     319
     ],
     [
      "by",
-     320
-    ],
-    [
-     "a",
      328
     ],
     [
+     "a",
+     337
+    ],
+    [
      "letter",
-     332
+     340
     ],
     [
      "of",
-     338
-    ],
-    [
-     "credit",
      346
     ],
     [
-     "opened",
+     "credit",
      354
     ],
     [
-     "by",
-     368
+     "opened",
+     363
     ],
     [
-     "the",
+     "by",
      376
     ],
     [
+     "the",
+     385
+    ],
+    [
      "buyer's",
-     382
+     390
     ],
     [
      "bank.",
-     396
+     404
     ]
    ]
   },
@@ -952,10 +1057,10 @@
    "id": "N02",
    "speaker": "teacher",
    "text": "In the contract and in the LC, the price is written like this: C-I-F Rotterdam, Incoterms twenty twenty. Keep that line in mind. We'll come back to it again and again.",
-   "start": 2484,
+   "start": 2440,
    "dur": 366,
    "hold": 0,
-   "audio": "audio/inc/N02.mp3",
+   "audio": null,
    "words": [
     [
      "In",
@@ -1083,118 +1188,118 @@
    "id": "N03",
    "speaker": "teacher",
    "text": "Now, she packs the goods, sends them to Chennai port, and the container is loaded on the ship. She gets the bill of lading. Everything looks perfect.",
-   "start": 2861,
-   "dur": 267,
+   "start": 2806,
+   "dur": 273,
    "hold": 0,
-   "audio": "audio/inc/N03.mp3",
+   "audio": null,
    "words": [
     [
      "Now,",
-     8
+     10
     ],
     [
      "she",
-     20
+     22
     ],
     [
      "packs",
-     24
+     27
     ],
     [
      "the",
-     33
+     35
     ],
     [
      "goods,",
-     39
+     42
     ],
     [
      "sends",
-     54
+     57
     ],
     [
      "them",
-     63
+     65
     ],
     [
      "to",
-     70
+     73
     ],
     [
      "Chennai",
-     76
+     79
     ],
     [
      "Port,",
-     83
+     85
     ],
     [
      "and",
-     104
+     106
     ],
     [
      "the",
-     105
+     108
     ],
     [
      "container",
-     109
+     111
     ],
     [
      "is",
-     120
+     122
     ],
     [
      "loaded",
-     130
+     132
     ],
     [
      "on",
-     140
+     142
     ],
     [
      "the",
-     148
+     150
     ],
     [
      "ship.",
-     153
+     155
     ],
     [
      "She",
-     170
+     172
     ],
     [
      "gets",
-     174
+     177
     ],
     [
      "the",
-     179
+     181
     ],
     [
      "bill",
-     184
+     187
     ],
     [
      "of",
-     188
+     190
     ],
     [
      "lading.",
-     192
+     195
     ],
     [
      "Everything",
-     216
+     218
     ],
     [
      "looks",
-     228
+     230
     ],
     [
      "perfect.",
-     238
+     240
     ]
    ]
   },
@@ -1202,110 +1307,110 @@
    "id": "N04",
    "speaker": "teacher",
    "text": "Two days later, there's a storm at sea. And her container goes overboard. Lost. All forty-eight thousand dollars of knitwear, at the bottom of the sea.",
-   "start": 3139,
-   "dur": 320,
+   "start": 3079,
+   "dur": 326,
    "hold": 0,
-   "audio": "audio/inc/N04.mp3",
+   "audio": null,
    "words": [
     [
      "Two",
-     8
-    ],
-    [
-     "days",
      13
     ],
     [
-     "later,",
+     "days",
      19
     ],
     [
+     "later,",
+     25
+    ],
+    [
      "there's",
-     31
+     37
     ],
     [
      "a",
-     45
-    ],
-    [
-     "storm",
      50
     ],
     [
+     "storm",
+     56
+    ],
+    [
      "at",
-     60
+     65
     ],
     [
      "sea,",
-     67
+     73
     ],
     [
      "and",
-     84
-    ],
-    [
-     "her",
      90
     ],
     [
+     "her",
+     95
+    ],
+    [
      "container",
-     96
+     102
     ],
     [
      "goes",
-     108
+     113
     ],
     [
      "overboard.",
-     121
+     127
     ],
     [
      "Lost.",
-     162
+     167
     ],
     [
      "All",
-     191
+     197
     ],
     [
      "$48",
-     200
+     206
     ],
     [
      ",000",
-     222
+     227
     ],
     [
      "of",
-     236
+     241
     ],
     [
      "knitwear",
-     250
+     256
     ],
     [
      "at",
-     264
+     269
     ],
     [
      "the",
-     278
+     284
     ],
     [
      "bottom",
-     282
+     288
     ],
     [
      "of",
-     292
+     298
     ],
     [
      "the",
-     299
+     305
     ],
     [
      "sea.",
-     303
+     309
     ]
    ]
   },
@@ -1313,122 +1418,122 @@
    "id": "N05",
    "speaker": "teacher",
    "text": "Next morning she's at your branch, very worried. She says, the goods are gone. Will I still get my money? Whose loss is this, mine or the buyer's?",
-   "start": 3469,
-   "dur": 300,
+   "start": 3404,
+   "dur": 302,
    "hold": 0,
-   "audio": "audio/inc/N05.mp3",
+   "audio": null,
    "words": [
     [
      "Next",
-     8
+     10
     ],
     [
      "morning,",
-     15
+     18
     ],
     [
      "she's",
-     31
+     33
     ],
     [
      "at",
-     39
+     41
     ],
     [
      "your",
-     42
+     45
     ],
     [
      "branch,",
-     50
+     52
     ],
     [
      "very",
-     74
+     76
     ],
     [
      "worried.",
-     80
+     82
     ],
     [
      "She",
-     108
+     110
     ],
     [
      "says,",
-     108
+     111
     ],
     [
      "the",
-     129
+     132
     ],
     [
      "goods",
-     129
+     132
     ],
     [
      "are",
-     137
+     140
     ],
     [
      "gone.",
-     144
+     147
     ],
     [
      "Will",
-     166
+     168
     ],
     [
      "I",
-     170
+     172
     ],
     [
      "still",
-     173
+     175
     ],
     [
      "get",
-     182
+     184
     ],
     [
      "my",
-     188
+     190
     ],
     [
      "money?",
-     194
+     196
     ],
     [
      "Whose",
-     218
+     220
     ],
     [
      "loss",
-     224
+     226
     ],
     [
      "is",
-     230
+     232
     ],
     [
      "this,",
-     236
+     239
     ],
     [
      "mine",
-     258
-    ],
-    [
-     "or",
      260
     ],
     [
+     "or",
+     262
+    ],
+    [
      "the",
-     270
+     273
     ],
     [
      "buyer's?",
-     274
+     276
     ]
    ]
   },
@@ -1436,106 +1541,106 @@
    "id": "N06",
    "speaker": "teacher",
    "text": "So, let me ask you. Under C-I-F, whose loss is it? The seller's, or the buyer's? Think for a second. Lock your answer in.",
-   "start": 3779,
-   "dur": 258,
+   "start": 3706,
+   "dur": 260,
    "hold": 150,
-   "audio": "audio/inc/N06.mp3",
+   "audio": null,
    "words": [
     [
      "So",
-     8
+     9
     ],
     [
      "let",
-     10
+     12
     ],
     [
      "me",
-     22
+     24
     ],
     [
      "ask",
-     26
+     27
     ],
     [
      "you,",
-     32
+     34
     ],
     [
      "under",
-     54
+     56
     ],
     [
      "CIF,",
-     60
+     62
     ],
     [
      "whose",
-     93
+     95
     ],
     [
      "loss",
-     98
+     99
     ],
     [
      "is",
-     105
+     107
     ],
     [
      "it,",
-     111
+     113
     ],
     [
      "the",
-     128
+     129
     ],
     [
      "seller's",
-     132
+     134
     ],
     [
      "or",
-     147
+     149
     ],
     [
      "the",
-     156
+     158
     ],
     [
      "buyer's?",
-     159
+     161
     ],
     [
      "Think",
-     188
+     190
     ],
     [
      "for",
-     191
+     193
     ],
     [
      "a",
-     196
+     198
     ],
     [
      "second,",
-     200
+     202
     ],
     [
      "lock",
-     218
+     220
     ],
     [
      "your",
-     223
+     225
     ],
     [
      "answer",
-     229
+     231
     ],
     [
      "in.",
-     237
+     238
     ]
    ]
   },
@@ -1543,162 +1648,162 @@
    "id": "N06a",
    "speaker": "teacher",
    "text": "Okay. I know what many of you are thinking. C-I-F means cost, insurance and freight. The seller paid the freight, the seller bought the insurance. So the sea journey is the seller's job. So it's the seller's loss.",
-   "start": 4273,
-   "dur": 433,
+   "start": 4191,
+   "dur": 437,
    "hold": 0,
-   "audio": "audio/inc/N06a.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
-     8
+     10
     ],
     [
      "I",
-     30
+     33
     ],
     [
      "know",
-     35
+     38
     ],
     [
      "what",
-     44
+     47
     ],
     [
      "many",
-     51
+     54
     ],
     [
      "of",
-     60
+     63
     ],
     [
      "you",
-     67
-    ],
-    [
-     "are",
      70
     ],
     [
+     "are",
+     73
+    ],
+    [
      "thinking.",
-     74
+     77
     ],
     [
      "CIF",
-     105
+     108
     ],
     [
      "means",
-     119
+     122
     ],
     [
      "cost,",
-     135
+     138
     ],
     [
      "insurance,",
-     165
+     168
     ],
     [
      "and",
-     186
+     189
     ],
     [
      "freight.",
-     191
+     194
     ],
     [
      "The",
-     213
+     216
     ],
     [
      "seller",
-     219
+     222
     ],
     [
      "paid",
-     226
+     229
     ],
     [
      "the",
-     234
+     237
     ],
     [
      "freight.",
-     238
+     242
     ],
     [
      "The",
-     256
+     260
     ],
     [
      "seller",
-     259
+     262
     ],
     [
      "bought",
-     267
+     270
     ],
     [
      "the",
-     274
+     277
     ],
     [
      "insurance.",
-     279
+     282
     ],
     [
      "So",
-     291
+     294
     ],
     [
      "the",
-     307
+     310
     ],
     [
      "sea",
-     312
+     315
     ],
     [
      "journey",
-     321
+     324
     ],
     [
      "is",
-     330
+     333
     ],
     [
      "the",
-     340
+     343
     ],
     [
      "seller's",
-     348
+     351
     ],
     [
      "job.",
-     362
+     365
     ],
     [
      "So",
-     381
+     384
     ],
     [
      "it's",
-     382
+     385
     ],
     [
      "the",
-     395
+     398
     ],
     [
      "seller's",
-     400
+     403
     ],
     [
      "loss.",
-     414
+     417
     ]
    ]
   },
@@ -1706,94 +1811,94 @@
    "id": "N06b",
    "speaker": "teacher",
    "text": "And a few of you are thinking, hmm, wait. Maybe once the goods are on the ship, they're the buyer's problem.",
-   "start": 4716,
-   "dur": 212,
+   "start": 4628,
+   "dur": 215,
    "hold": 0,
-   "audio": "audio/inc/N06b.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     11
     ],
     [
      "a",
-     9
+     13
     ],
     [
      "few",
-     12
+     16
     ],
     [
      "of",
-     20
+     23
     ],
     [
      "you",
-     25
+     29
     ],
     [
      "are",
-     28
+     32
     ],
     [
      "thinking,",
-     33
+     37
     ],
     [
      "hmm,",
-     58
+     62
     ],
     [
      "wait.",
-     81
+     85
     ],
     [
      "Maybe",
-     110
+     114
     ],
     [
      "once",
-     117
+     121
     ],
     [
      "the",
-     125
+     128
     ],
     [
      "goods",
-     130
+     134
     ],
     [
      "are",
-     136
+     140
     ],
     [
      "on",
-     141
+     145
     ],
     [
      "the",
-     146
-    ],
-    [
-     "ship,",
      149
     ],
     [
+     "ship,",
+     153
+    ],
+    [
      "they're",
-     168
+     172
     ],
     [
      "the",
-     174
+     178
     ],
     [
      "buyer's",
-     177
+     181
     ],
     [
      "problem.",
-     194
+     197
     ]
    ]
   },
@@ -1801,10 +1906,10 @@
    "id": "N07",
    "speaker": "teacher",
    "text": "Well, that second group is right. Under C-I-F, the risk moves to the buyer the moment the goods are on board the ship at the port of shipment. Here, Chennai. After that, the sea is the buyer's risk.",
-   "start": 4939,
+   "start": 4843,
    "dur": 404,
    "hold": 0,
-   "audio": "audio/inc/N07.mp3",
+   "audio": null,
    "words": [
     [
      "Well,",
@@ -1816,11 +1921,11 @@
     ],
     [
      "second",
-     30
+     31
     ],
     [
      "group",
-     42
+     43
     ],
     [
      "is",
@@ -1844,7 +1949,7 @@
     ],
     [
      "risk",
-     126
+     127
     ],
     [
      "moves",
@@ -1856,11 +1961,11 @@
     ],
     [
      "the",
-     150
+     151
     ],
     [
      "buyer",
-     154
+     155
     ],
     [
      "the",
@@ -1872,11 +1977,11 @@
     ],
     [
      "the",
-     184
+     185
     ],
     [
      "goods",
-     192
+     193
     ],
     [
      "are",
@@ -1884,7 +1989,7 @@
     ],
     [
      "onboard",
-     207
+     208
     ],
     [
      "the",
@@ -1908,7 +2013,7 @@
     ],
     [
      "of",
-     253
+     254
     ],
     [
      "shipment.",
@@ -1932,7 +2037,7 @@
     ],
     [
      "the",
-     348
+     349
     ],
     [
      "sea",
@@ -1960,10 +2065,10 @@
    "id": "N08",
    "speaker": "teacher",
    "text": "So why does the seller pay for freight and insurance at all? See, here's the thing. She's paying for a journey that's already at the buyer's risk. She arranges the ship and buys the insurance, but the insurance protects the buyer.",
-   "start": 5354,
+   "start": 5246,
    "dur": 462,
    "hold": 0,
-   "audio": "audio/inc/N08.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -2135,170 +2240,170 @@
    "id": "N09",
    "speaker": "teacher",
    "text": "So what happens now? She hands her documents to the bank. The bill of lading, the invoice, the insurance policy. If they match the LC, the bank pays. Remember, banks deal with documents, not goods. That's UCP six hundred, article five.",
-   "start": 5826,
-   "dur": 515,
+   "start": 5708,
+   "dur": 516,
    "hold": 0,
-   "audio": "audio/inc/N09.mp3",
+   "audio": null,
    "words": [
     [
      "So",
-     8
+     10
     ],
     [
      "what",
-     14
+     16
     ],
     [
      "happens",
-     18
+     20
     ],
     [
      "now?",
-     26
+     28
     ],
     [
      "She",
-     52
+     55
     ],
     [
      "hands",
-     61
+     64
     ],
     [
      "her",
-     69
+     72
     ],
     [
      "documents",
-     76
+     78
     ],
     [
      "to",
-     87
+     89
     ],
     [
      "the",
-     96
+     98
     ],
     [
      "bank.",
-     100
+     103
     ],
     [
      "The",
-     122
+     124
     ],
     [
      "bill",
-     125
+     128
     ],
     [
      "of",
-     129
+     131
     ],
     [
      "lading,",
-     134
+     136
     ],
     [
      "the",
-     154
-    ],
-    [
-     "invoice,",
      157
     ],
     [
+     "invoice,",
+     159
+    ],
+    [
      "the",
-     182
+     184
     ],
     [
      "insurance",
-     183
+     186
     ],
     [
      "policy.",
-     195
+     197
     ],
     [
      "If",
-     224
+     227
     ],
     [
      "they",
-     233
+     236
     ],
     [
      "match",
-     238
+     240
     ],
     [
      "the",
-     246
+     248
     ],
     [
      "LC,",
-     252
+     255
     ],
     [
      "the",
-     275
+     278
     ],
     [
      "bank",
-     277
+     279
     ],
     [
      "pays.",
-     284
+     287
     ],
     [
      "Remember,",
-     314
+     316
     ],
     [
      "banks",
-     346
+     348
     ],
     [
      "deal",
-     346
+     348
     ],
     [
      "with",
-     356
+     358
     ],
     [
      "documents,",
-     363
+     366
     ],
     [
      "not",
-     393
+     396
     ],
     [
      "goods.",
-     402
+     405
     ],
     [
      "That's",
-     433
+     435
     ],
     [
      "UCP",
-     442
+     445
     ],
     [
      "600",
-     457
+     459
     ],
     [
      "Article",
-     478
+     480
     ],
     [
      "5.",
-     492
+     495
     ]
    ]
   },
@@ -2306,122 +2411,122 @@
    "id": "N10",
    "speaker": "teacher",
    "text": "And the buyer? He gets the insurance policy along with the documents. So he claims from the insurer. Nobody is left holding the loss. That's the whole point.",
-   "start": 6351,
-   "dur": 319,
+   "start": 6224,
+   "dur": 321,
    "hold": 0,
-   "audio": "audio/inc/N10.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     9
     ],
     [
      "the",
-     16
+     17
     ],
     [
      "buyer?",
-     20
+     21
     ],
     [
      "He",
-     43
+     44
     ],
     [
      "gets",
-     51
+     52
     ],
     [
      "the",
-     57
+     58
     ],
     [
      "insurance",
-     64
+     65
     ],
     [
      "policy",
-     76
+     77
     ],
     [
      "along",
-     91
+     92
     ],
     [
      "with",
-     103
+     104
     ],
     [
      "the",
-     109
+     110
     ],
     [
      "documents.",
-     113
+     114
     ],
     [
      "So",
-     139
+     140
     ],
     [
      "he",
-     145
+     146
     ],
     [
      "claims",
-     153
+     154
     ],
     [
      "from",
-     163
+     164
     ],
     [
      "the",
-     173
+     174
     ],
     [
      "insurer.",
-     178
+     179
     ],
     [
      "Nobody",
-     209
+     210
     ],
     [
      "is",
-     221
+     222
     ],
     [
      "left",
-     232
+     233
     ],
     [
      "holding",
-     239
+     240
     ],
     [
      "the",
-     253
+     254
     ],
     [
      "loss.",
-     259
+     260
     ],
     [
      "That's",
-     281
+     282
     ],
     [
      "the",
-     289
+     290
     ],
     [
      "whole",
-     292
+     293
     ],
     [
      "point.",
-     298
+     299
     ]
    ]
   },
@@ -2429,134 +2534,134 @@
    "id": "N10a",
    "speaker": "teacher",
    "text": "If you said \"seller\", don't feel bad. Almost everybody does the first time. The word \"insurance\" in the name makes it sound like the seller is carrying the risk. She isn't.",
-   "start": 6680,
-   "dur": 327,
+   "start": 6544,
+   "dur": 331,
    "hold": 0,
-   "audio": "audio/inc/N10a.mp3",
+   "audio": null,
    "words": [
     [
      "If",
-     8
+     11
     ],
     [
      "you",
-     14
-    ],
-    [
-     "said",
      18
     ],
     [
+     "said",
+     22
+    ],
+    [
      "seller,",
-     26
+     29
     ],
     [
      "don't",
-     53
+     57
     ],
     [
      "feel",
-     56
+     59
     ],
     [
      "bad.",
-     61
+     65
     ],
     [
      "Almost",
-     83
+     87
     ],
     [
      "everybody",
-     88
+     92
     ],
     [
      "does",
-     105
+     109
     ],
     [
      "the",
-     116
+     119
     ],
     [
      "first",
-     122
+     125
     ],
     [
      "time.",
-     126
+     130
     ],
     [
      "The",
-     150
+     153
     ],
     [
      "word",
-     157
+     160
     ],
     [
      "insurance",
-     164
+     167
     ],
     [
      "in",
-     183
+     186
     ],
     [
      "the",
-     194
+     197
     ],
     [
      "name",
-     198
+     201
     ],
     [
      "makes",
-     204
+     207
     ],
     [
      "it",
-     213
+     216
     ],
     [
      "sound",
-     219
+     223
     ],
     [
      "like",
-     226
+     230
     ],
     [
      "the",
-     232
+     236
     ],
     [
      "seller",
-     238
+     241
     ],
     [
      "is",
-     249
+     253
     ],
     [
      "carrying",
-     258
+     261
     ],
     [
      "the",
-     266
+     270
     ],
     [
      "risk.",
-     273
+     276
     ],
     [
      "She",
-     294
+     298
     ],
     [
      "isn't.",
-     300
+     304
     ]
    ]
   },
@@ -2564,142 +2669,142 @@
    "id": "N11",
    "speaker": "teacher",
    "text": "So, what is an Incoterm? It's a set of rules published by the International Chamber of Commerce, the ICC. Three letters, a place, and the version. Like \"C-I-F Rotterdam, Incoterms twenty twenty\".",
-   "start": 7018,
-   "dur": 438,
+   "start": 6875,
+   "dur": 445,
    "hold": 0,
-   "audio": "audio/inc/N11.mp3",
+   "audio": null,
    "words": [
     [
      "So",
-     8
-    ],
-    [
-     "what",
      11
     ],
     [
+     "what",
+     14
+    ],
+    [
      "is",
-     28
+     32
     ],
     [
      "an",
-     41
+     44
     ],
     [
      "INCO",
-     50
+     53
     ],
     [
      "term?",
-     60
+     63
     ],
     [
      "It's",
-     82
+     86
     ],
     [
      "a",
-     90
-    ],
-    [
-     "set",
      94
     ],
     [
+     "set",
+     97
+    ],
+    [
      "of",
-     98
+     101
     ],
     [
      "rules",
-     103
+     106
     ],
     [
      "published",
-     112
+     116
     ],
     [
      "by",
-     126
+     130
     ],
     [
      "the",
-     135
+     138
     ],
     [
      "International",
-     140
+     143
     ],
     [
      "Chamber",
-     156
+     159
     ],
     [
      "of",
-     172
+     176
     ],
     [
      "Commerce,",
-     179
+     182
     ],
     [
      "the",
-     202
+     205
     ],
     [
      "ICC.",
-     203
+     206
     ],
     [
      "Three",
-     238
+     242
     ],
     [
      "letters,",
-     249
+     252
     ],
     [
      "a",
-     272
+     275
     ],
     [
      "place",
-     273
+     277
     ],
     [
      "and",
-     283
+     286
     ],
     [
      "the",
-     298
+     301
     ],
     [
      "version.",
-     302
+     305
     ],
     [
      "Like",
-     330
+     334
     ],
     [
      "CIF",
-     333
+     337
     ],
     [
      "Rotterdam,",
-     365
+     368
     ],
     [
      "INCO",
-     393
+     397
     ],
     [
      "terms",
-     401
+     404
     ],
     [
      "2020.",
-     408
+     412
     ]
    ]
   },
@@ -2707,166 +2812,166 @@
    "id": "N12",
    "speaker": "teacher",
    "text": "And those three letters answer three questions for the buyer and seller. One. Where does the seller deliver, and so, where does the risk pass? Two. Who pays which costs? Three. Who does the customs work, export and import?",
-   "start": 7466,
-   "dur": 498,
+   "start": 7320,
+   "dur": 502,
    "hold": 0,
-   "audio": "audio/inc/N12.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     13
     ],
     [
      "those",
-     12
+     18
     ],
     [
      "three",
-     19
+     25
     ],
     [
      "letters",
-     27
+     33
     ],
     [
      "answer",
-     39
+     44
     ],
     [
      "three",
-     54
+     59
     ],
     [
      "questions",
-     66
+     72
     ],
     [
      "for",
-     80
+     86
     ],
     [
      "the",
-     90
+     95
     ],
     [
      "buyer",
-     94
+     100
     ],
     [
      "and",
-     103
+     109
     ],
     [
      "seller.",
-     117
+     122
     ],
     [
      "One,",
-     150
+     155
     ],
     [
      "where",
-     172
-    ],
-    [
-     "does",
      178
     ],
     [
-     "the",
+     "does",
      184
     ],
     [
+     "the",
+     190
+    ],
+    [
      "seller",
-     189
+     195
     ],
     [
      "deliver?",
-     197
+     203
     ],
     [
      "And",
-     223
+     229
     ],
     [
      "so,",
-     225
+     231
     ],
     [
      "where",
-     243
+     248
     ],
     [
      "does",
-     249
+     255
     ],
     [
      "the",
-     254
+     260
     ],
     [
      "risk",
-     259
+     265
     ],
     [
      "pass?",
-     267
+     272
     ],
     [
      "Two,",
-     298
+     304
     ],
     [
      "who",
-     320
+     325
     ],
     [
      "pays",
-     326
+     332
     ],
     [
      "which",
-     336
+     341
     ],
     [
      "costs?",
-     348
+     353
     ],
     [
      "Three,",
-     378
+     383
     ],
     [
      "who",
-     404
+     409
     ],
     [
      "does",
-     408
-    ],
-    [
-     "the",
      414
     ],
     [
+     "the",
+     420
+    ],
+    [
      "customs",
-     421
+     427
     ],
     [
      "work?",
-     431
+     437
     ],
     [
      "Export",
-     464
+     470
     ],
     [
      "and",
-     464
+     470
     ],
     [
      "import.",
-     477
+     483
     ]
    ]
   },
@@ -2874,10 +2979,10 @@
    "id": "N13",
    "speaker": "teacher",
    "text": "Now be careful here, because the exam loves this. Incoterms do not decide the price. They don't decide how or when payment is made. And they don't decide when ownership of the goods passes. That's for the sales contract.",
-   "start": 7974,
-   "dur": 461,
+   "start": 7822,
+   "dur": 460,
    "hold": 0,
-   "audio": "audio/inc/N13.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
@@ -2885,7 +2990,7 @@
     ],
     [
      "be",
-     16
+     17
     ],
     [
      "careful",
@@ -2957,7 +3062,7 @@
     ],
     [
      "how",
-     220
+     221
     ],
     [
      "or",
@@ -3045,146 +3150,146 @@
    "id": "N14",
    "speaker": "teacher",
    "text": "Also, Incoterms are not law. They apply only when the parties write them into the contract. That's why we always add the version, Incoterms twenty twenty. An old contract could still say twenty ten.",
-   "start": 8446,
-   "dur": 422,
+   "start": 8283,
+   "dur": 423,
    "hold": 0,
-   "audio": "audio/inc/N14.mp3",
+   "audio": null,
    "words": [
     [
      "Also,",
-     8
+     9
     ],
     [
      "INCO",
-     32
+     33
     ],
     [
      "terms",
-     37
+     39
     ],
     [
      "are",
-     46
+     48
     ],
     [
      "not",
-     54
+     56
     ],
     [
      "law.",
-     63
+     65
     ],
     [
      "They",
-     90
+     92
     ],
     [
      "apply",
-     96
+     98
     ],
     [
      "only",
-     105
+     107
     ],
     [
      "when",
-     117
+     119
     ],
     [
      "the",
-     127
+     129
     ],
     [
      "parties",
-     132
+     134
     ],
     [
      "write",
-     141
+     142
     ],
     [
      "them",
-     152
+     154
     ],
     [
      "into",
-     160
+     162
     ],
     [
      "the",
-     173
+     175
     ],
     [
      "contract.",
-     178
+     180
     ],
     [
      "That's",
-     204
+     206
     ],
     [
      "why",
-     216
+     218
     ],
     [
      "we",
-     221
+     223
     ],
     [
      "always",
-     227
+     229
     ],
     [
      "add",
-     242
+     243
     ],
     [
      "the",
-     252
+     254
     ],
     [
      "version,",
-     258
+     260
     ],
     [
      "INCO",
-     284
+     286
     ],
     [
      "terms",
-     292
+     294
     ],
     [
      "2020.",
-     300
+     302
     ],
     [
      "An",
-     335
+     337
     ],
     [
      "old",
-     345
+     347
     ],
     [
      "contract",
-     356
+     358
     ],
     [
      "could",
-     371
+     373
     ],
     [
      "still",
-     378
+     380
     ],
     [
      "say",
-     387
+     389
     ],
     [
      "2010.",
-     396
+     398
     ]
    ]
   },
@@ -3192,162 +3297,162 @@
    "id": "N15",
    "speaker": "teacher",
    "text": "And the version we follow today is Incoterms twenty twenty. It came into force on the first of January, twenty twenty. ICC has only just begun work on the next version, so for your exam, twenty twenty is the answer.",
-   "start": 8879,
+   "start": 8706,
    "dur": 447,
    "hold": 30,
-   "audio": "audio/inc/N15.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     10
     ],
     [
      "the",
-     14
+     16
     ],
     [
      "version",
-     18
+     20
     ],
     [
      "we",
-     27
+     29
     ],
     [
      "follow",
-     33
+     35
     ],
     [
      "today",
-     40
+     42
     ],
     [
      "is",
-     52
+     54
     ],
     [
      "INCO",
-     66
+     68
     ],
     [
      "terms",
-     79
+     81
     ],
     [
      "2020.",
-     86
+     88
     ],
     [
      "It",
-     128
+     130
     ],
     [
      "came",
-     134
+     136
     ],
     [
      "into",
-     140
+     142
     ],
     [
      "force",
-     147
+     149
     ],
     [
      "on",
-     155
+     157
     ],
     [
      "the",
-     162
+     164
     ],
     [
      "1st",
-     165
+     167
     ],
     [
      "of",
-     178
+     180
     ],
     [
      "January,",
-     194
+     196
     ],
     [
      "2020.",
-     203
+     205
     ],
     [
      "ICC",
-     246
+     248
     ],
     [
      "has",
-     253
+     255
     ],
     [
      "only",
-     265
+     267
     ],
     [
      "just",
-     278
+     280
     ],
     [
      "begun",
-     289
+     291
     ],
     [
      "work",
-     299
+     301
     ],
     [
      "on",
-     308
+     310
     ],
     [
      "the",
-     313
+     315
     ],
     [
      "next",
-     317
+     319
     ],
     [
      "version.",
-     325
+     327
     ],
     [
      "So",
-     348
+     350
     ],
     [
      "for",
-     355
+     357
     ],
     [
      "your",
-     359
+     361
     ],
     [
      "exam,",
-     366
+     368
     ],
     [
      "2020",
-     389
+     391
     ],
     [
      "is",
-     401
+     403
     ],
     [
      "the",
-     421
+     423
     ],
     [
      "answer.",
-     426
+     428
     ]
    ]
   },
@@ -3355,114 +3460,114 @@
    "id": "N15a",
    "speaker": "teacher",
    "text": "Okay, that's part one. Still with me? Good. You already know the most important thing: risk and cost are two different things. Hold on to that.",
-   "start": 9366,
+   "start": 9183,
    "dur": 308,
    "hold": 0,
-   "audio": "audio/inc/N15a.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
-     8
+     9
     ],
     [
      "that's",
-     24
+     25
     ],
     [
      "part",
-     36
+     37
     ],
     [
      "one.",
-     40
+     41
     ],
     [
      "Still",
-     63
+     64
     ],
     [
      "with",
-     68
+     69
     ],
     [
      "me?",
-     73
+     74
     ],
     [
      "Good.",
-     90
+     92
     ],
     [
      "You",
-     114
+     115
     ],
     [
      "already",
-     118
+     120
     ],
     [
      "know",
-     131
+     132
     ],
     [
      "the",
-     140
+     141
     ],
     [
      "most",
-     144
+     145
     ],
     [
      "important",
-     154
+     156
     ],
     [
      "thing.",
-     167
+     168
     ],
     [
      "Risk",
-     198
+     199
     ],
     [
      "and",
-     202
+     204
     ],
     [
      "cost",
-     214
+     216
     ],
     [
      "are",
-     223
+     224
     ],
     [
      "two",
-     233
+     234
     ],
     [
      "different",
-     243
+     244
     ],
     [
      "things.",
-     260
+     261
     ],
     [
      "Hold",
-     286
+     288
     ],
     [
      "on",
-     292
+     293
     ],
     [
      "to",
-     296
+     297
     ],
     [
      "that.",
-     301
+     302
     ]
    ]
   },
@@ -3470,10 +3575,10 @@
    "id": "N15b",
    "speaker": "teacher",
    "text": "Now stretch for a second if you like. Part two is the picture that holds all eleven rules. I need full attention for this one.",
-   "start": 9684,
-   "dur": 261,
+   "start": 9491,
+   "dur": 260,
    "hold": 0,
-   "audio": "audio/inc/N15b.mp3",
+   "audio": null,
    "words": [
     [
      "Now,",
@@ -3581,10 +3686,10 @@
    "id": "N16",
    "speaker": "teacher",
    "text": "So, here's our picture. A road. On the left, the seller's door. On the right, the buyer's door. And seven stops in between. Let me walk you through them.",
-   "start": 10031,
-   "dur": 321,
+   "start": 9826,
+   "dur": 320,
    "hold": 0,
-   "audio": "audio/inc/N16.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -3708,126 +3813,126 @@
    "id": "N17",
    "speaker": "teacher",
    "text": "Stop one, the seller's own premises. Stop two, the goods are handed over to the carrier. Stop three, alongside the ship at the port. Stop four, on board the ship.",
-   "start": 10363,
-   "dur": 357,
+   "start": 10146,
+   "dur": 358,
    "hold": 0,
-   "audio": "audio/inc/N17.mp3",
+   "audio": null,
    "words": [
     [
      "Stop",
-     8
+     9
     ],
     [
      "one,",
-     8
+     9
     ],
     [
      "the",
-     31
+     32
     ],
     [
      "seller's",
-     35
+     36
     ],
     [
      "own",
-     51
+     52
     ],
     [
      "premises.",
-     59
+     60
     ],
     [
      "Stop",
-     98
-    ],
-    [
-     "two,",
      99
     ],
     [
+     "two,",
+     100
+    ],
+    [
      "the",
-     124
+     125
     ],
     [
      "goods",
-     126
+     127
     ],
     [
      "are",
-     134
+     135
     ],
     [
      "handed",
-     138
+     139
     ],
     [
      "over",
-     146
+     147
     ],
     [
      "to",
-     154
+     156
     ],
     [
      "the",
-     160
+     162
     ],
     [
      "carrier.",
-     165
+     166
     ],
     [
      "Stop",
-     193
+     194
     ],
     [
      "three,",
-     200
+     201
     ],
     [
      "alongside",
-     229
+     230
     ],
     [
      "the",
-     232
+     234
     ],
     [
      "ship",
-     245
+     246
     ],
     [
      "at",
-     251
+     252
     ],
     [
      "the",
-     260
+     261
     ],
     [
      "port.",
-     265
+     266
     ],
     [
      "Stop",
-     272
+     273
     ],
     [
      "four,",
-     296
+     297
     ],
     [
      "onboard",
-     320
+     321
     ],
     [
      "the",
-     327
+     328
     ],
     [
      "ship.",
-     340
+     341
     ]
    ]
   },
@@ -3835,158 +3940,158 @@
    "id": "N18",
    "speaker": "teacher",
    "text": "Then comes the sea, or the air, or the long road. Stop five, the goods arrive at the destination, ready to be unloaded. Stop six, unloaded. And stop seven, cleared through import customs, with the duty paid.",
-   "start": 10730,
-   "dur": 460,
+   "start": 10505,
+   "dur": 462,
    "hold": 0,
-   "audio": "audio/inc/N18.mp3",
+   "audio": null,
    "words": [
     [
      "Then",
-     8
+     11
     ],
     [
      "comes",
-     9
+     12
     ],
     [
      "the",
-     18
+     22
     ],
     [
      "sea,",
-     24
+     27
     ],
     [
      "or",
-     46
+     49
     ],
     [
      "the",
-     48
-    ],
-    [
-     "air,",
      52
     ],
     [
+     "air,",
+     55
+    ],
+    [
      "or",
-     71
+     74
     ],
     [
      "the",
-     73
-    ],
-    [
-     "long",
      76
     ],
     [
+     "long",
+     80
+    ],
+    [
      "road.",
-     84
+     88
     ],
     [
      "Stop",
-     111
+     114
     ],
     [
      "five,",
-     112
+     115
     ],
     [
      "the",
-     142
+     146
     ],
     [
      "goods",
-     143
+     146
     ],
     [
      "arrive",
-     151
+     154
     ],
     [
      "at",
-     164
+     167
     ],
     [
      "the",
-     170
+     173
     ],
     [
      "destination,",
-     174
+     178
     ],
     [
      "ready",
-     207
+     211
     ],
     [
      "to",
-     213
+     216
     ],
     [
      "be",
-     220
+     223
     ],
     [
      "unloaded.",
-     224
+     227
     ],
     [
      "Stop",
-     260
+     263
     ],
     [
      "six,",
-     262
+     265
     ],
     [
      "unloaded.",
-     293
+     296
     ],
     [
      "And",
-     320
+     323
     ],
     [
      "stop",
-     327
+     331
     ],
     [
      "seven,",
-     337
+     340
     ],
     [
      "cleared",
-     369
+     373
     ],
     [
      "through",
-     374
+     377
     ],
     [
      "import",
-     384
+     388
     ],
     [
      "customs",
-     396
+     400
     ],
     [
      "with",
-     410
+     413
     ],
     [
      "the",
-     424
+     427
     ],
     [
      "duty",
-     429
+     432
     ],
     [
      "paid.",
-     439
+     442
     ]
    ]
   },
@@ -3994,10 +4099,10 @@
    "id": "N19",
    "speaker": "teacher",
    "text": "And two markers move on this road. The red baton is the risk. Wherever the baton is handed over, from there, any loss is the buyer's. The blue line is the cost. It shows how far the seller pays.",
-   "start": 11200,
-   "dur": 411,
+   "start": 10967,
+   "dur": 410,
    "hold": 0,
-   "audio": "audio/inc/N19.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -4161,130 +4266,130 @@
    "id": "N20",
    "speaker": "teacher",
    "text": "Now let's put the eleven rules on the road, from the seller's door to the buyer's door. Just watch, don't write. The card at the end has all of it.",
-   "start": 11622,
-   "dur": 268,
+   "start": 11377,
+   "dur": 269,
    "hold": 0,
-   "audio": "audio/inc/N20.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
-     8
+     9
     ],
     [
      "let's",
-     8
+     10
     ],
     [
      "put",
-     18
+     19
     ],
     [
      "the",
-     22
+     24
     ],
     [
      "11",
-     28
+     29
     ],
     [
      "rules",
-     38
+     40
     ],
     [
      "on",
-     49
+     50
     ],
     [
      "the",
-     58
+     59
     ],
     [
      "road,",
-     62
+     64
     ],
     [
      "from",
-     75
+     76
     ],
     [
      "the",
-     84
+     85
     ],
     [
      "seller's",
-     90
+     92
     ],
     [
      "door",
-     102
+     104
     ],
     [
      "to",
-     108
+     109
     ],
     [
      "the",
-     116
+     118
     ],
     [
      "buyer's",
-     121
+     122
     ],
     [
      "door.",
-     134
+     136
     ],
     [
      "Just",
-     152
+     153
     ],
     [
      "watch,",
-     158
+     159
     ],
     [
      "don't",
-     175
+     176
     ],
     [
      "write.",
-     182
+     183
     ],
     [
      "The",
-     199
+     200
     ],
     [
      "card",
-     206
+     207
     ],
     [
      "at",
-     213
+     215
     ],
     [
      "the",
-     218
+     219
     ],
     [
      "end",
-     222
+     224
     ],
     [
      "has",
-     228
+     229
     ],
     [
      "all",
-     236
+     238
     ],
     [
      "of",
-     246
+     248
     ],
     [
      "it.",
-     250
+     251
     ]
    ]
   },
@@ -4292,170 +4397,170 @@
    "id": "N21",
    "speaker": "teacher",
    "text": "First, E-X-W. Ex Works. The seller just keeps the goods ready at her own premises. The buyer comes, loads the truck, and does everything after that. Even the export clearance. This is the least the seller can do.",
-   "start": 11901,
-   "dur": 443,
+   "start": 11646,
+   "dur": 444,
    "hold": 0,
-   "audio": "audio/inc/N21.mp3",
+   "audio": null,
    "words": [
     [
      "First,",
-     8
+     10
     ],
     [
      "E",
-     28
-    ],
-    [
-     "X",
      31
     ],
     [
+     "X",
+     33
+    ],
+    [
      "W.",
-     45
+     48
     ],
     [
      "X",
-     75
+     77
     ],
     [
      "works.",
-     84
+     86
     ],
     [
      "The",
-     108
+     111
     ],
     [
      "seller",
-     114
+     117
     ],
     [
      "just",
-     122
+     124
     ],
     [
      "keeps",
-     133
+     135
     ],
     [
      "the",
-     142
+     144
     ],
     [
      "goods",
-     148
+     150
     ],
     [
      "ready",
-     154
+     156
     ],
     [
      "at",
-     162
+     165
     ],
     [
      "her",
-     171
+     173
     ],
     [
      "own",
-     177
+     179
     ],
     [
      "premises.",
-     185
+     187
     ],
     [
      "The",
-     212
+     214
     ],
     [
      "buyer",
-     216
+     219
     ],
     [
      "comes,",
-     224
+     226
     ],
     [
      "loads",
-     245
+     247
     ],
     [
      "the",
-     253
+     256
     ],
     [
      "truck,",
-     261
+     264
     ],
     [
      "and",
-     274
+     276
     ],
     [
      "does",
-     280
+     282
     ],
     [
      "everything",
-     286
+     288
     ],
     [
      "after",
-     302
+     304
     ],
     [
      "that.",
-     313
+     315
     ],
     [
      "Even",
-     332
+     334
     ],
     [
      "the",
-     337
+     339
     ],
     [
      "export",
-     342
+     344
     ],
     [
      "clearance.",
-     352
+     355
     ],
     [
      "This",
-     378
+     381
     ],
     [
      "is",
-     387
+     389
     ],
     [
      "the",
-     394
+     396
     ],
     [
      "least",
-     400
+     403
     ],
     [
      "the",
-     411
+     413
     ],
     [
      "seller",
-     419
+     421
     ],
     [
      "can",
-     424
+     427
     ],
     [
      "do.",
-     431
+     433
     ]
    ]
   },
@@ -4463,10 +4568,10 @@
    "id": "N22",
    "speaker": "teacher",
    "text": "Next, F-C-A. Free Carrier. The seller hands the goods to the carrier the buyer has chosen. If that happens at the seller's own premises, the seller also loads them. And she clears them for export.",
-   "start": 12354,
-   "dur": 404,
+   "start": 12090,
+   "dur": 405,
    "hold": 0,
-   "audio": "audio/inc/N22.mp3",
+   "audio": null,
    "words": [
     [
      "Next,",
@@ -4622,190 +4727,190 @@
    "id": "N23",
    "speaker": "teacher",
    "text": "F-A-S, Free Alongside Ship. The goods are placed next to the ship at the port of shipment. And F-O-B, Free on Board. The goods are loaded on board the ship. In all these F rules, the buyer pays the main freight.",
-   "start": 12768,
-   "dur": 465,
+   "start": 12495,
+   "dur": 467,
    "hold": 0,
-   "audio": "audio/inc/N23.mp3",
+   "audio": null,
    "words": [
     [
      "F",
-     8
+     11
     ],
     [
      "A",
-     8
+     11
     ],
     [
      "S,",
-     20
+     23
     ],
     [
      "free",
-     51
+     55
     ],
     [
      "alongside",
-     56
+     59
     ],
     [
      "ship.",
-     75
+     79
     ],
     [
      "The",
-     99
+     103
     ],
     [
      "goods",
-     104
+     107
     ],
     [
      "are",
-     110
+     114
     ],
     [
      "placed",
-     116
+     119
     ],
     [
      "next",
-     124
+     128
     ],
     [
      "to",
-     137
+     141
     ],
     [
      "the",
-     144
-    ],
-    [
-     "ship",
      148
     ],
     [
+     "ship",
+     152
+    ],
+    [
      "at",
-     154
+     158
     ],
     [
      "the",
-     162
-    ],
-    [
-     "port",
      166
     ],
     [
+     "port",
+     170
+    ],
+    [
      "of",
-     173
+     177
     ],
     [
      "shipment.",
-     178
+     182
     ],
     [
      "And",
-     204
+     208
     ],
     [
      "F",
-     213
+     217
     ],
     [
      "O",
-     226
+     230
     ],
     [
      "B,",
-     235
+     239
     ],
     [
      "free",
-     255
+     259
     ],
     [
      "on",
-     267
+     271
     ],
     [
      "board.",
-     276
+     280
     ],
     [
      "The",
-     298
-    ],
-    [
-     "goods",
      302
     ],
     [
+     "goods",
+     306
+    ],
+    [
      "are",
-     310
+     314
     ],
     [
      "loaded",
-     315
+     319
     ],
     [
      "on",
-     325
+     329
     ],
     [
      "board",
-     335
+     339
     ],
     [
      "the",
-     344
+     347
     ],
     [
      "ship.",
-     350
+     354
     ],
     [
      "In",
-     369
+     373
     ],
     [
      "all",
-     374
+     377
     ],
     [
      "these",
-     384
+     388
     ],
     [
      "F",
-     392
+     396
     ],
     [
      "rules,",
-     400
+     404
     ],
     [
      "the",
-     422
+     425
     ],
     [
      "buyer",
-     423
+     427
     ],
     [
      "pays",
-     436
+     440
     ],
     [
      "the",
-     444
+     448
     ],
     [
      "main",
-     450
+     454
     ],
     [
      "freight.",
-     456
+     460
     ]
    ]
   },
@@ -4813,10 +4918,10 @@
    "id": "N24",
    "speaker": "teacher",
    "text": "Now the C rules. These are the clever ones. C-F-R, cost and freight. And C-I-F, cost, insurance and freight. The risk passes on board the ship, same place as F-O-B. But the seller pays the freight all the way to the destination port.",
-   "start": 13243,
+   "start": 12962,
    "dur": 544,
    "hold": 0,
-   "audio": "audio/inc/N24.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
@@ -5020,170 +5125,170 @@
    "id": "N25",
    "speaker": "teacher",
    "text": "Then C-P-T, Carriage Paid To. And C-I-P, Carriage and Insurance Paid To. Here the risk passes when the goods are handed to the first carrier. But again, the seller pays the carriage up to the destination.",
-   "start": 13798,
-   "dur": 418,
+   "start": 13506,
+   "dur": 419,
    "hold": 0,
-   "audio": "audio/inc/N25.mp3",
+   "audio": null,
    "words": [
     [
      "Then",
-     8
-    ],
-    [
-     "C",
      10
     ],
     [
+     "C",
+     12
+    ],
+    [
      "P",
-     22
+     25
     ],
     [
      "T,",
-     32
+     34
     ],
     [
      "carriage",
-     58
+     61
     ],
     [
      "paid",
-     63
+     65
     ],
     [
      "to.",
-     75
+     77
     ],
     [
      "And",
-     99
+     101
     ],
     [
      "C",
-     103
+     105
     ],
     [
      "I",
-     113
+     115
     ],
     [
      "P,",
-     122
+     124
     ],
     [
      "carriage",
-     142
+     145
     ],
     [
      "and",
-     152
+     154
     ],
     [
      "insurance",
-     163
+     165
     ],
     [
      "paid",
-     178
+     180
     ],
     [
      "to.",
-     188
+     190
     ],
     [
      "Here,",
-     205
+     207
     ],
     [
      "the",
-     218
-    ],
-    [
-     "risk",
      220
     ],
     [
+     "risk",
+     223
+    ],
+    [
      "passes",
-     229
+     231
     ],
     [
      "when",
-     242
+     244
     ],
     [
      "the",
-     250
+     252
     ],
     [
      "goods",
-     255
+     257
     ],
     [
      "are",
-     261
+     263
     ],
     [
      "handed",
-     266
+     268
     ],
     [
      "to",
-     274
+     277
     ],
     [
      "the",
-     281
+     283
     ],
     [
      "first",
-     285
+     287
     ],
     [
      "carrier.",
-     295
+     297
     ],
     [
      "But",
-     308
+     310
     ],
     [
      "again,",
-     322
+     324
     ],
     [
      "the",
-     342
-    ],
-    [
-     "seller",
      344
     ],
     [
+     "seller",
+     346
+    ],
+    [
      "pays",
-     356
+     358
     ],
     [
      "the",
-     363
+     365
     ],
     [
      "carriage",
-     369
+     371
     ],
     [
      "up",
-     378
+     380
     ],
     [
      "to",
-     387
+     389
     ],
     [
      "the",
-     392
+     394
     ],
     [
      "destination.",
-     395
+     397
     ]
    ]
   },
@@ -5191,10 +5296,10 @@
    "id": "N26",
    "speaker": "teacher",
    "text": "So see what happens with the C rules. The baton is handed over at the start, but the blue line keeps running to the end. Two different points. That's exactly where our Tiruppur exporter's case sits.",
-   "start": 14226,
+   "start": 13925,
    "dur": 369,
    "hold": 0,
-   "audio": "audio/inc/N26.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -5202,59 +5307,59 @@
     ],
     [
      "see",
-     11
+     12
     ],
     [
      "what",
-     19
+     20
     ],
     [
      "happens",
-     24
+     25
     ],
     [
      "with",
-     34
+     35
     ],
     [
      "the",
-     42
+     43
     ],
     [
      "C",
-     45
+     46
     ],
     [
      "rules.",
-     54
+     55
     ],
     [
      "The",
-     75
+     76
     ],
     [
      "batten",
-     80
+     81
     ],
     [
      "is",
-     90
+     91
     ],
     [
      "handed",
-     94
+     95
     ],
     [
      "over",
-     103
+     104
     ],
     [
      "at",
-     111
+     112
     ],
     [
      "the",
-     118
+     119
     ],
     [
      "start,",
@@ -5262,83 +5367,83 @@
     ],
     [
      "but",
-     141
+     142
     ],
     [
      "the",
-     146
+     147
     ],
     [
      "blue",
-     150
+     151
     ],
     [
      "line",
-     158
+     159
     ],
     [
      "keeps",
-     166
+     167
     ],
     [
      "running",
-     178
+     179
     ],
     [
      "to",
-     189
+     190
     ],
     [
      "the",
-     196
+     197
     ],
     [
      "end.",
-     200
+     201
     ],
     [
      "Two",
-     220
+     221
     ],
     [
      "different",
-     225
+     226
     ],
     [
      "points.",
-     240
+     241
     ],
     [
      "That's",
-     263
+     264
     ],
     [
      "exactly",
-     274
+     275
     ],
     [
      "where",
-     291
+     292
     ],
     [
      "our",
-     303
+     304
     ],
     [
      "Thirupur",
-     308
+     309
     ],
     [
      "exporters",
-     321
+     322
     ],
     [
      "case",
-     336
+     337
     ],
     [
      "sits.",
-     345
+     346
     ]
    ]
   },
@@ -5346,10 +5451,10 @@
    "id": "N27",
    "speaker": "teacher",
    "text": "And finally, the D rules. Delivered. D-A-P, Delivered at Place. The goods arrive at the destination, ready to be unloaded, and the buyer unloads them.",
-   "start": 14605,
+   "start": 14294,
    "dur": 332,
    "hold": 0,
-   "audio": "audio/inc/N27.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -5357,107 +5462,107 @@
     ],
     [
      "finally,",
-     9
+     10
     ],
     [
      "the",
-     34
+     35
     ],
     [
      "D",
-     34
+     35
     ],
     [
      "rules,",
-     45
+     46
     ],
     [
      "delivered.",
-     81
+     82
     ],
     [
      "D",
-     104
+     105
     ],
     [
      "A",
-     104
+     105
     ],
     [
      "P,",
-     114
+     115
     ],
     [
      "delivered",
-     132
+     133
     ],
     [
      "at",
-     144
+     145
     ],
     [
      "place.",
-     158
+     159
     ],
     [
      "The",
-     183
+     184
     ],
     [
      "goods",
-     188
+     189
     ],
     [
      "arrive",
-     196
+     197
     ],
     [
      "at",
-     209
+     210
     ],
     [
      "the",
-     215
+     216
     ],
     [
      "destination",
-     219
+     220
     ],
     [
      "ready",
-     235
+     236
     ],
     [
      "to",
-     252
+     253
     ],
     [
      "be",
-     259
+     260
     ],
     [
      "unloaded.",
-     263
+     264
     ],
     [
      "And",
-     285
+     286
     ],
     [
      "the",
-     289
+     290
     ],
     [
      "buyer",
-     293
+     294
     ],
     [
      "unloads",
-     303
+     304
     ],
     [
      "them.",
-     318
+     319
     ]
    ]
   },
@@ -5465,10 +5570,10 @@
    "id": "N28",
    "speaker": "teacher",
    "text": "D-P-U, Delivered at Place Unloaded. Same, but the seller also unloads them. It's the only rule where the seller unloads at the destination. And D-D-P, Delivered Duty Paid. The seller even clears import customs and pays the duty. This is the most the seller can do.",
-   "start": 14948,
-   "dur": 581,
+   "start": 14626,
+   "dur": 580,
    "hold": 0,
-   "audio": "audio/inc/N28.mp3",
+   "audio": null,
    "words": [
     [
      "D",
@@ -5676,10 +5781,10 @@
    "id": "N29",
    "speaker": "teacher",
    "text": "So, E-X-W at one end, seller does the least. D-D-P at the other end, seller does the most. Everything else sits in between. That's a favourite question.",
-   "start": 15540,
-   "dur": 342,
+   "start": 15206,
+   "dur": 340,
    "hold": 0,
-   "audio": "audio/inc/N29.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -5731,7 +5836,7 @@
     ],
     [
      "D",
-     136
+     137
     ],
     [
      "P",
@@ -5811,10 +5916,10 @@
    "id": "N30",
    "speaker": "teacher",
    "text": "And customs is simple. Export clearance is the seller's job in every rule, except E-X-W. Import clearance is the buyer's job in every rule, except D-D-P.",
-   "start": 15892,
-   "dur": 372,
+   "start": 15546,
+   "dur": 371,
    "hold": 0,
-   "audio": "audio/inc/N30.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -5826,7 +5931,7 @@
     ],
     [
      "is",
-     20
+     19
     ],
     [
      "simple.",
@@ -5942,10 +6047,10 @@
    "id": "N31",
    "speaker": "teacher",
    "text": "Easy way to remember the four groups: E for exit, the goods leave from the seller's door. F for free, the seller is free of the main freight. C for carriage paid, but the risk has already gone. And D for delivered, right there at the destination.",
-   "start": 16275,
-   "dur": 528,
+   "start": 15917,
+   "dur": 529,
    "hold": 0,
-   "audio": "audio/inc/N31.mp3",
+   "audio": null,
    "words": [
     [
      "Easy",
@@ -6141,194 +6246,194 @@
    "id": "N31a",
    "speaker": "teacher",
    "text": "Okay, quick check. Everyone with me? Let's test it. Under C-P-T, where does the risk pass? Some of you are saying at the destination, because carriage is paid till there. Others are saying when the goods go to the carrier. What do you say?",
-   "start": 16814,
-   "dur": 459,
+   "start": 16446,
+   "dur": 460,
    "hold": 150,
-   "audio": "audio/inc/N31a.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
-     8
+     10
     ],
     [
      "quick",
-     24
-    ],
-    [
-     "check.",
      27
     ],
     [
+     "check.",
+     30
+    ],
+    [
      "Everyone",
-     49
+     52
     ],
     [
      "with",
-     55
+     58
     ],
     [
      "me?",
-     62
+     65
     ],
     [
      "Let's",
-     82
+     85
     ],
     [
      "test",
-     90
+     93
     ],
     [
      "it.",
-     94
+     97
     ],
     [
      "Under",
-     120
+     123
     ],
     [
      "C",
-     121
+     124
     ],
     [
      "P",
-     130
+     133
     ],
     [
      "T,",
-     137
+     140
     ],
     [
      "where",
-     164
-    ],
-    [
-     "does",
      166
     ],
     [
+     "does",
+     169
+    ],
+    [
      "the",
-     172
+     175
     ],
     [
      "risk",
-     178
+     181
     ],
     [
      "pass?",
-     184
+     187
     ],
     [
      "Some",
-     217
-    ],
-    [
-     "of",
      220
     ],
     [
+     "of",
+     223
+    ],
+    [
      "you",
-     225
+     228
     ],
     [
      "are",
-     230
+     232
     ],
     [
      "saying",
-     234
+     236
     ],
     [
      "at",
-     241
+     244
     ],
     [
      "the",
-     249
+     252
     ],
     [
      "destination",
-     255
+     258
     ],
     [
      "because",
-     270
+     272
     ],
     [
      "carriage",
-     287
+     290
     ],
     [
      "is",
-     300
+     302
     ],
     [
      "paid",
-     308
+     310
     ],
     [
      "till",
-     316
+     319
     ],
     [
      "there.",
-     322
+     325
     ],
     [
      "Others",
-     346
+     349
     ],
     [
      "are",
-     351
+     353
     ],
     [
      "saying",
-     358
+     361
     ],
     [
      "when",
-     366
+     368
     ],
     [
      "the",
-     376
+     379
     ],
     [
      "goods",
-     381
+     384
     ],
     [
      "go",
-     388
+     391
     ],
     [
      "to",
-     397
+     400
     ],
     [
      "the",
-     402
+     404
     ],
     [
      "carrier.",
-     406
+     409
     ],
     [
      "What",
-     432
+     434
     ],
     [
      "do",
-     435
+     438
     ],
     [
      "you",
-     440
+     442
     ],
     [
      "say?",
-     444
+     446
     ]
    ]
   },
@@ -6336,10 +6441,10 @@
    "id": "N32",
    "speaker": "teacher",
    "text": "When it's handed to the first carrier. Did you get it? Good. Because it's a C rule. The seller pays the carriage, but the baton has already gone. Same story as C-I-F.",
-   "start": 17434,
-   "dur": 350,
+   "start": 17057,
+   "dur": 348,
    "hold": 0,
-   "audio": "audio/inc/N32.mp3",
+   "audio": null,
    "words": [
     [
      "When",
@@ -6347,7 +6452,7 @@
     ],
     [
      "it's",
-     10
+     11
     ],
     [
      "handed",
@@ -6363,7 +6468,7 @@
     ],
     [
      "first",
-     40
+     41
     ],
     [
      "carrier.",
@@ -6375,7 +6480,7 @@
     ],
     [
      "you",
-     76
+     77
     ],
     [
      "get",
@@ -6387,7 +6492,7 @@
     ],
     [
      "Good,",
-     100
+     101
     ],
     [
      "because",
@@ -6407,7 +6512,7 @@
     ],
     [
      "rule.",
-     154
+     155
     ],
     [
      "The",
@@ -6483,266 +6588,266 @@
    "id": "N33",
    "speaker": "teacher",
    "text": "Now, look at the road once more. Four of these rules use the ship itself as the point. F-A-S, alongside the ship. And F-O-B, C-F-R and C-I-F, on board. These four are only for sea and inland waterway transport. The other seven work for any mode, even air, rail or road, or more than one together.",
-   "start": 17794,
-   "dur": 766,
+   "start": 17405,
+   "dur": 751,
    "hold": 0,
-   "audio": "audio/inc/N33.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
-     6
+     7
     ],
     [
      "look",
-     14
+     15
     ],
     [
      "at",
-     29
+     30
     ],
     [
      "the",
-     34
+     35
     ],
     [
      "road",
-     37
+     38
     ],
     [
      "once",
-     44
+     45
     ],
     [
      "more.",
-     52
+     53
     ],
     [
      "Four",
-     87
+     88
     ],
     [
      "of",
-     91
+     92
     ],
     [
      "these",
-     96
+     97
     ],
     [
      "rules",
-     103
+     104
     ],
     [
      "use",
-     112
+     113
     ],
     [
      "the",
-     124
+     125
     ],
     [
      "ship",
-     130
+     131
     ],
     [
      "itself",
-     141
+     142
     ],
     [
      "as",
-     157
+     158
     ],
     [
      "the",
-     167
+     168
     ],
     [
      "point.",
-     172
+     173
     ],
     [
      "F",
-     204
+     205
     ],
     [
      "-A",
-     206
+     207
     ],
     [
      "-S",
-     222
+     223
     ],
     [
      "alongside",
-     238
+     239
     ],
     [
      "the",
-     257
+     258
     ],
     [
      "ship,",
-     271
+     272
     ],
     [
      "and",
-     286
+     287
     ],
     [
      "F",
-     305
+     306
     ],
     [
      "-O",
-     317
+     318
     ],
     [
      "-B",
-     325
+     326
     ],
     [
      "-C,",
-     331
+     332
     ],
     [
      "F",
-     356
+     357
     ],
     [
      "-R",
-     358
+     359
     ],
     [
      "and",
-     370
+     371
     ],
     [
      "C",
-     379
+     380
     ],
     [
      "-I",
-     388
+     389
     ],
     [
      "-F",
-     393
+     394
     ],
     [
      "on",
-     404
+     405
     ],
     [
      "board.",
-     421
+     422
     ],
     [
      "These",
-     452
+     453
     ],
     [
      "four",
-     461
+     462
     ],
     [
      "are",
-     470
+     471
     ],
     [
      "only",
-     479
+     480
     ],
     [
      "for",
-     491
+     492
     ],
     [
      "sea",
-     498
+     499
     ],
     [
      "and",
-     511
+     512
     ],
     [
      "inland",
-     519
+     520
     ],
     [
      "waterway",
-     533
+     534
     ],
     [
      "transport.",
-     548
+     549
     ],
     [
      "The",
-     582
+     583
     ],
     [
      "other",
-     586
+     587
     ],
     [
      "seven",
-     594
+     595
     ],
     [
      "work",
-     603
+     604
     ],
     [
      "for",
-     614
+     615
     ],
     [
      "any",
-     622
+     623
     ],
     [
      "mode,",
-     630
+     631
     ],
     [
      "even",
-     652
+     653
     ],
     [
      "air,",
-     656
+     657
     ],
     [
      "rail",
-     677
+     678
     ],
     [
      "or",
-     688
+     689
     ],
     [
      "road",
-     698
+     699
     ],
     [
      "or",
-     710
+     711
     ],
     [
      "more",
-     724
+     725
     ],
     [
      "than",
-     733
+     734
     ],
     [
      "one",
-     739
+     740
     ],
     [
      "together.",
-     745
+     746
     ]
    ]
   },
@@ -6750,10 +6855,10 @@
    "id": "N34",
    "speaker": "teacher",
    "text": "And here's a trap the exam likes. Containers. A container is usually handed over at the container terminal, before it goes on board. So for container cargo, ICC says F-C-A and C-I-P fit better than F-O-B and C-I-F.",
-   "start": 18571,
-   "dur": 527,
+   "start": 18156,
+   "dur": 526,
    "hold": 0,
-   "audio": "audio/inc/N34.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -6761,11 +6866,11 @@
     ],
     [
      "here's",
-     10
+     11
     ],
     [
      "a",
-     21
+     22
     ],
     [
      "trap",
@@ -6777,7 +6882,7 @@
     ],
     [
      "exam",
-     39
+     40
     ],
     [
      "likes.",
@@ -6797,7 +6902,7 @@
     ],
     [
      "is",
-     123
+     124
     ],
     [
      "usually",
@@ -6809,7 +6914,7 @@
     ],
     [
      "over",
-     159
+     160
     ],
     [
      "at",
@@ -6837,7 +6942,7 @@
     ],
     [
      "goes",
-     234
+     235
     ],
     [
      "on",
@@ -6873,7 +6978,7 @@
     ],
     [
      "F",
-     351
+     352
     ],
     [
      "C",
@@ -6897,7 +7002,7 @@
     ],
     [
      "P",
-     417
+     418
     ],
     [
      "fit",
@@ -6909,7 +7014,7 @@
     ],
     [
      "than",
-     454
+     455
     ],
     [
      "F",
@@ -6929,7 +7034,7 @@
     ],
     [
      "C",
-     498
+     499
     ],
     [
      "I",
@@ -6945,10 +7050,10 @@
    "id": "N35",
    "speaker": "teacher",
    "text": "And how many rules in all? Eleven. Seven for any mode, four for sea. That exact question, \"how many Incoterms\", came up twice in one exam cycle. Don't let anyone tell you thirteen. Thirteen was the old two thousand set.",
-   "start": 19108,
-   "dur": 455,
+   "start": 18682,
+   "dur": 471,
    "hold": 0,
-   "audio": "audio/inc/N35.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -6984,7 +7089,7 @@
     ],
     [
      "for",
-     88
+     89
     ],
     [
      "any",
@@ -7004,7 +7109,7 @@
     ],
     [
      "C.",
-     140
+     139
     ],
     [
      "That",
@@ -7088,7 +7193,7 @@
     ],
     [
      "was",
-     400
+     401
     ],
     [
      "the",
@@ -7105,6 +7210,10 @@
     [
      "set.",
      441
+    ],
+    [
+     "One",
+     454
     ]
    ]
   },
@@ -7112,174 +7221,170 @@
    "id": "N36",
    "speaker": "teacher",
    "text": "One more thing that changed in twenty twenty. There used to be a rule called D-A-T, Delivered at Terminal. In twenty twenty it became D-P-U, because now the goods can be unloaded at any place, not only a terminal.",
-   "start": 19574,
-   "dur": 436,
+   "start": 19153,
+   "dur": 419,
    "hold": 30,
-   "audio": "audio/inc/N36.mp3",
+   "audio": null,
    "words": [
     [
-     "One",
+     "more",
      0
     ],
     [
-     "more",
-     17
-    ],
-    [
      "thing",
-     23
+     6
     ],
     [
      "that",
-     29
+     12
     ],
     [
      "changed",
-     35
+     18
     ],
     [
      "in",
-     43
+     26
     ],
     [
      "2020.",
-     51
+     34
     ],
     [
      "There",
-     82
+     65
     ],
     [
      "used",
-     85
+     68
     ],
     [
      "to",
-     92
+     75
     ],
     [
      "be",
-     97
+     80
     ],
     [
      "a",
-     101
+     84
     ],
     [
      "rule",
-     103
+     86
     ],
     [
      "called",
-     111
+     94
     ],
     [
      "D",
-     122
+     106
     ],
     [
      "A",
-     135
+     118
     ],
     [
      "T",
-     143
+     127
     ],
     [
      "delivered",
-     154
+     137
     ],
     [
      "at",
-     172
+     155
     ],
     [
      "terminal.",
-     185
+     168
     ],
     [
      "In",
-     212
+     195
     ],
     [
      "2020,",
-     215
+     198
     ],
     [
      "it",
-     231
+     214
     ],
     [
      "became",
-     244
+     227
     ],
     [
      "D",
-     257
+     240
     ],
     [
      "P",
-     270
+     253
     ],
     [
      "U",
-     278
+     262
     ],
     [
      "because",
-     291
+     274
     ],
     [
      "now",
-     306
+     289
     ],
     [
      "the",
-     317
+     300
     ],
     [
      "goods",
-     325
+     308
     ],
     [
      "can",
-     332
+     315
     ],
     [
      "be",
-     338
+     321
     ],
     [
      "unloaded",
-     341
+     325
     ],
     [
      "at",
-     354
+     337
     ],
     [
      "any",
-     364
+     347
     ],
     [
      "place,",
-     376
+     359
     ],
     [
      "not",
-     395
+     378
     ],
     [
      "only",
-     398
+     381
     ],
     [
      "a",
-     410
+     394
     ],
     [
      "terminal.",
-     415
+     398
     ]
    ]
   },
@@ -7287,146 +7392,146 @@
    "id": "N36a",
    "speaker": "teacher",
    "text": "Okay, deep breath. That was the heaviest part, and you're through it. Eleven rules, one road. Now let's come to the part that touches your desk at the branch: insurance and the LC.",
-   "start": 20050,
-   "dur": 379,
+   "start": 19602,
+   "dur": 381,
    "hold": 0,
-   "audio": "audio/inc/N36a.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
-     8
+     11
     ],
     [
      "deep",
-     18
+     22
     ],
     [
      "breath.",
-     28
+     32
     ],
     [
      "That",
-     50
+     53
     ],
     [
      "was",
-     58
+     61
     ],
     [
      "the",
-     68
+     71
     ],
     [
      "heaviest",
-     74
+     77
     ],
     [
      "part.",
-     88
+     91
     ],
     [
      "And",
-     114
-    ],
-    [
-     "you're",
      117
     ],
     [
+     "you're",
+     120
+    ],
+    [
      "through",
-     128
+     131
     ],
     [
      "it.",
-     134
+     137
     ],
     [
      "11",
-     158
+     161
     ],
     [
      "rules,",
-     160
+     164
     ],
     [
      "one",
-     189
+     193
     ],
     [
      "road.",
-     191
+     194
     ],
     [
      "Now",
-     216
+     219
     ],
     [
      "let's",
-     220
+     223
     ],
     [
      "come",
-     233
+     236
     ],
     [
      "to",
-     237
+     241
     ],
     [
      "the",
-     242
-    ],
-    [
-     "part",
      245
     ],
     [
+     "part",
+     248
+    ],
+    [
      "that",
-     252
+     255
     ],
     [
      "touches",
-     259
+     262
     ],
     [
      "your",
-     268
+     271
     ],
     [
      "desk",
-     280
+     283
     ],
     [
      "at",
-     289
+     292
     ],
     [
      "the",
-     296
-    ],
-    [
-     "branch.",
      299
     ],
     [
+     "branch.",
+     302
+    ],
+    [
      "Insurance",
-     333
+     336
     ],
     [
      "and",
-     334
+     338
     ],
     [
      "the",
-     351
+     355
     ],
     [
      "L",
-     356
+     359
     ],
     [
      "C.",
-     363
+     366
     ]
    ]
   },
@@ -7434,10 +7539,10 @@
    "id": "N37",
    "speaker": "teacher",
    "text": "So, in which rules does the seller have to buy insurance? Only two. C-I-F and C-I-P. The \"I\" in the name is the clue. In every other rule, if anybody insures the goods, it's the buyer, for his own protection.",
-   "start": 20514,
-   "dur": 466,
+   "start": 20058,
+   "dur": 467,
    "hold": 0,
-   "audio": "audio/inc/N37.mp3",
+   "audio": null,
    "words": [
     [
      "So,",
@@ -7605,178 +7710,178 @@
    "id": "N38",
    "speaker": "teacher",
    "text": "And here's the twenty twenty change everybody asks about. Under C-I-P, the seller must buy wide cover, the Institute Cargo Clauses A. That's the all-risks kind. Under C-I-F, the minimum is still Clauses C, the basic kind. Unless the parties agree something else.",
-   "start": 20991,
-   "dur": 570,
+   "start": 20525,
+   "dur": 574,
    "hold": 0,
-   "audio": "audio/inc/N38.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     11
     ],
     [
      "here's",
-     12
+     16
     ],
     [
      "the",
-     22
+     26
     ],
     [
      "2020",
-     27
+     31
     ],
     [
      "change",
-     41
+     45
     ],
     [
      "everybody",
-     58
+     62
     ],
     [
      "asks",
-     73
+     77
     ],
     [
      "about.",
-     87
+     91
     ],
     [
      "Under",
-     117
+     121
     ],
     [
      "CIP,",
-     123
+     127
     ],
     [
      "the",
-     154
+     158
     ],
     [
      "seller",
-     159
+     163
     ],
     [
      "must",
-     170
+     174
     ],
     [
      "buy",
-     182
+     186
     ],
     [
      "wide",
-     195
+     199
     ],
     [
      "cover.",
-     208
+     212
     ],
     [
      "The",
-     230
+     233
     ],
     [
      "Institute",
-     232
+     236
     ],
     [
      "cargo",
-     246
+     250
     ],
     [
      "clauses",
-     258
+     262
     ],
     [
      "A.",
-     271
+     275
     ],
     [
      "That's",
-     295
+     299
     ],
     [
      "the",
-     305
-    ],
-    [
-     "all",
      309
     ],
     [
+     "all",
+     313
+    ],
+    [
      "risks",
-     318
+     322
     ],
     [
      "kind.",
-     327
+     331
     ],
     [
      "Under",
-     354
+     358
     ],
     [
      "CIF,",
-     364
+     368
     ],
     [
      "the",
-     397
+     401
     ],
     [
      "minimum",
-     402
+     406
     ],
     [
      "still",
-     413
+     417
     ],
     [
      "clauses",
-     431
+     435
     ],
     [
      "C.",
-     447
+     451
     ],
     [
      "The",
-     468
+     472
     ],
     [
      "basic",
-     471
+     475
     ],
     [
      "kind.",
-     482
+     485
     ],
     [
      "Unless",
-     504
+     508
     ],
     [
      "the",
-     514
+     518
     ],
     [
      "parties",
-     522
+     526
     ],
     [
      "agree",
-     530
+     534
     ],
     [
      "something",
-     540
+     544
     ],
     [
      "else.",
-     550
+     554
     ]
    ]
   },
@@ -7784,154 +7889,154 @@
    "id": "N39",
    "speaker": "teacher",
    "text": "Why the difference? ICC's thinking is this. C-I-F is used a lot for bulk commodities at sea, where basic cover is the custom. C-I-P is used more for manufactured goods. So C-I-P got the bigger umbrella.",
-   "start": 21571,
-   "dur": 466,
+   "start": 21100,
+   "dur": 470,
    "hold": 0,
-   "audio": "audio/inc/N39.mp3",
+   "audio": null,
    "words": [
     [
      "Why",
-     8
+     11
     ],
     [
      "the",
-     12
+     15
     ],
     [
      "difference?",
-     16
+     20
     ],
     [
      "ICC's",
-     51
+     55
     ],
     [
      "thinking",
-     67
+     70
     ],
     [
      "is",
-     74
+     78
     ],
     [
      "this.",
-     83
+     87
     ],
     [
      "CIF",
-     116
+     120
     ],
     [
      "is",
-     127
+     130
     ],
     [
      "used",
-     137
+     141
     ],
     [
      "a",
-     146
+     149
     ],
     [
      "lot",
-     150
+     154
     ],
     [
      "for",
-     159
+     162
     ],
     [
      "bulk",
-     168
+     172
     ],
     [
      "commodities",
-     177
+     181
     ],
     [
      "at",
-     194
+     197
     ],
     [
      "C,",
-     202
+     205
     ],
     [
      "where",
-     219
+     223
     ],
     [
      "basic",
-     226
+     230
     ],
     [
      "cover",
-     239
+     243
     ],
     [
      "is",
-     246
+     250
     ],
     [
      "the",
-     255
+     258
     ],
     [
      "custom.",
-     259
+     262
     ],
     [
      "CIP",
-     294
+     297
     ],
     [
      "is",
-     306
+     309
     ],
     [
      "used",
-     318
+     322
     ],
     [
      "more",
-     326
+     330
     ],
     [
      "for",
-     336
+     339
     ],
     [
      "manufactured",
-     343
+     346
     ],
     [
      "goods.",
-     357
+     361
     ],
     [
      "So",
-     388
+     392
     ],
     [
      "CIP",
-     394
+     397
     ],
     [
      "got",
-     417
+     421
     ],
     [
      "the",
-     428
+     431
     ],
     [
      "bigger",
-     432
+     436
     ],
     [
      "umbrella.",
-     444
+     447
     ]
    ]
   },
@@ -7939,114 +8044,114 @@
    "id": "N40",
    "speaker": "teacher",
    "text": "And how much cover? At least one hundred and ten percent of the contract price. Not one hundred. One hundred and ten. And the cover must be in the currency of the contract.",
-   "start": 22047,
-   "dur": 331,
+   "start": 21570,
+   "dur": 334,
    "hold": 0,
-   "audio": "audio/inc/N40.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     11
     ],
     [
      "how",
-     12
+     15
     ],
     [
      "much",
-     18
+     21
     ],
     [
      "cover?",
-     24
+     28
     ],
     [
      "At",
-     49
+     52
     ],
     [
      "least",
-     54
+     57
     ],
     [
      "110",
-     65
+     68
     ],
     [
      "%",
-     101
+     104
     ],
     [
      "of",
-     110
+     113
     ],
     [
      "the",
-     120
-    ],
-    [
-     "contract",
      124
     ],
     [
+     "contract",
+     127
+    ],
+    [
      "price.",
-     135
+     138
     ],
     [
      "Not",
-     144
+     148
     ],
     [
      "100,",
-     162
+     166
     ],
     [
      "110.",
-     194
+     197
     ],
     [
      "And",
-     238
+     242
     ],
     [
      "the",
-     244
+     247
     ],
     [
      "cover",
-     248
+     251
     ],
     [
      "must",
-     255
+     259
     ],
     [
      "be",
-     268
+     271
     ],
     [
      "in",
-     278
+     281
     ],
     [
      "the",
-     282
+     286
     ],
     [
      "currency",
-     287
+     290
     ],
     [
      "of",
-     297
+     300
     ],
     [
      "the",
-     304
+     308
     ],
     [
      "contract.",
-     308
+     311
     ]
    ]
   },
@@ -8054,146 +8159,146 @@
    "id": "N41",
    "speaker": "teacher",
    "text": "The LC side says the same thing. Under UCP six hundred, article twenty-eight, if the LC is silent on the amount, the cover must be at least one hundred and ten percent of the C-I-F or C-I-P value.",
-   "start": 22389,
-   "dur": 404,
+   "start": 21904,
+   "dur": 406,
    "hold": 0,
-   "audio": "audio/inc/N41.mp3",
+   "audio": null,
    "words": [
     [
      "The",
-     8
+     10
     ],
     [
      "LC",
-     8
+     11
     ],
     [
      "side",
-     18
+     20
     ],
     [
      "says",
-     28
+     31
     ],
     [
      "the",
-     37
+     40
     ],
     [
      "same",
-     43
+     46
     ],
     [
      "thing.",
-     52
+     55
     ],
     [
      "Under",
-     78
+     80
     ],
     [
      "UCP",
-     82
+     85
     ],
     [
      "600,",
-     97
+     100
     ],
     [
      "Article",
-     125
+     128
     ],
     [
      "28,",
-     131
+     134
     ],
     [
      "if",
-     163
+     166
     ],
     [
      "the",
-     168
+     170
     ],
     [
      "LC",
-     172
+     175
     ],
     [
      "is",
-     183
+     185
     ],
     [
      "silent",
-     189
+     191
     ],
     [
      "on",
-     200
+     203
     ],
     [
      "the",
-     208
+     211
     ],
     [
      "amount,",
-     212
+     215
     ],
     [
      "the",
-     232
+     235
     ],
     [
      "cover",
-     236
+     238
     ],
     [
      "must",
-     243
+     246
     ],
     [
      "be",
-     254
+     257
     ],
     [
      "at",
-     263
+     266
     ],
     [
      "least",
-     271
+     274
     ],
     [
      "110",
-     281
+     284
     ],
     [
      "%",
-     313
+     316
     ],
     [
      "of",
-     325
+     328
     ],
     [
      "the",
-     333
+     336
     ],
     [
      "CIF",
-     340
+     343
     ],
     [
      "or",
-     354
+     356
     ],
     [
      "CIP",
-     363
+     366
     ],
     [
      "value.",
-     379
+     382
     ]
    ]
   },
@@ -8201,118 +8306,118 @@
    "id": "N42",
    "speaker": "teacher",
    "text": "Okay, calculators out. Our exporter's price. Her goods on board at Chennai cost forty-five thousand dollars. That's her F-O-B value. Sea freight to Rotterdam, two thousand four hundred. Insurance premium, six hundred.",
-   "start": 22803,
-   "dur": 426,
+   "start": 22310,
+   "dur": 428,
    "hold": 0,
-   "audio": "audio/inc/N42.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
-     8
+     10
     ],
     [
      "calculators",
-     27
+     29
     ],
     [
      "out.",
-     40
+     43
     ],
     [
      "Our",
-     64
+     67
     ],
     [
      "exporter's",
-     68
+     71
     ],
     [
      "price.",
-     88
+     91
     ],
     [
      "Her",
-     114
+     116
     ],
     [
      "goods",
-     117
+     119
     ],
     [
      "on",
-     125
+     127
     ],
     [
      "board",
-     132
+     134
     ],
     [
      "at",
-     138
+     140
     ],
     [
      "Chennai",
-     142
+     145
     ],
     [
      "cost",
-     152
+     154
     ],
     [
      "$45",
-     165
+     167
     ],
     [
      ",000.",
-     184
+     187
     ],
     [
      "That's",
-     219
+     222
     ],
     [
      "her",
-     232
+     235
     ],
     [
      "FOB",
-     237
+     239
     ],
     [
      "value.",
-     253
+     256
     ],
     [
      "See",
-     286
+     289
     ],
     [
      "freight",
-     286
+     289
     ],
     [
      "to",
-     294
+     296
     ],
     [
      "Rotterdam?",
-     300
+     302
     ],
     [
      "2400.",
-     325
+     328
     ],
     [
      "Insurance",
-     381
+     383
     ],
     [
      "premium?",
-     381
+     383
     ],
     [
      "600.",
-     404
+     407
     ]
    ]
   },
@@ -8320,118 +8425,118 @@
    "id": "N43",
    "speaker": "teacher",
    "text": "Add them up. Forty-five thousand, plus two thousand four hundred, plus six hundred. Forty-eight thousand dollars. That's her C-I-F price. Cost, plus insurance, plus freight. The name is the formula.",
-   "start": 23239,
-   "dur": 402,
+   "start": 22739,
+   "dur": 404,
    "hold": 0,
-   "audio": "audio/inc/N43.mp3",
+   "audio": null,
    "words": [
     [
      "Add",
-     8
+     10
     ],
     [
      "them",
-     13
+     16
     ],
     [
      "up.",
-     18
+     20
     ],
     [
      "45",
-     46
+     49
     ],
     [
      ",000",
-     46
+     49
     ],
     [
      "plus",
-     68
+     71
     ],
     [
      "2",
-     75
+     78
     ],
     [
      ",400",
-     84
+     87
     ],
     [
      "plus",
-     105
+     108
     ],
     [
      "600.",
-     123
+     125
     ],
     [
      "48",
-     155
+     158
     ],
     [
      ",000",
-     168
+     171
     ],
     [
      "dollars.",
-     192
+     194
     ],
     [
      "That's",
-     214
+     217
     ],
     [
      "her",
-     225
+     228
     ],
     [
      "CIF",
-     230
+     233
     ],
     [
      "price.",
-     245
+     248
     ],
     [
      "Cost",
-     280
+     283
     ],
     [
      "plus",
-     282
+     284
     ],
     [
      "insurance",
-     300
+     302
     ],
     [
      "plus",
-     315
+     317
     ],
     [
      "freight.",
-     330
+     333
     ],
     [
      "The",
-     356
+     358
     ],
     [
      "name",
-     359
+     362
     ],
     [
      "is",
-     368
+     371
     ],
     [
      "the",
-     378
+     380
     ],
     [
      "formula.",
-     382
+     385
     ]
    ]
   },
@@ -8439,110 +8544,110 @@
    "id": "N44",
    "speaker": "teacher",
    "text": "Now the minimum insurance cover. Forty-eight thousand, into one point one, equals. Fifty-two thousand eight hundred dollars. Simple. The same multiplier habit as before, no percent key needed.",
-   "start": 23651,
-   "dur": 386,
+   "start": 23143,
+   "dur": 391,
    "hold": 30,
-   "audio": "audio/inc/N44.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
-     8
+     9
     ],
     [
      "the",
-     13
+     14
     ],
     [
      "minimum",
-     18
+     20
     ],
     [
      "insurance",
-     30
+     31
     ],
     [
      "cover.",
-     45
+     47
     ],
     [
      "48",
-     69
+     71
     ],
     [
      ",000",
-     84
+     85
     ],
     [
      "into",
-     100
+     102
     ],
     [
      "1",
-     114
+     115
     ],
     [
      ".1",
-     124
+     125
     ],
     [
      "equals",
-     144
+     145
     ],
     [
      "52",
-     160
+     161
     ],
     [
      ",800",
-     186
+     188
     ],
     [
      "dollars.",
-     218
+     219
     ],
     [
      "Simple.",
-     258
+     259
     ],
     [
      "The",
-     274
+     276
     ],
     [
      "same",
-     278
+     279
     ],
     [
      "multiplier",
-     287
+     289
     ],
     [
      "habit",
-     302
+     304
     ],
     [
      "as",
-     312
+     313
     ],
     [
      "before.",
-     318
+     319
     ],
     [
      "No",
-     341
+     343
     ],
     [
      "percent",
-     346
+     348
     ],
     [
      "key",
-     357
+     358
     ],
     [
      "needed.",
-     365
+     367
     ]
    ]
   },
@@ -8550,90 +8655,90 @@
    "id": "N45",
    "speaker": "teacher",
    "text": "Your turn. A C-I-P price of thirty thousand euros. What's the minimum cover? Pause the video and press the keys.",
-   "start": 24078,
-   "dur": 228,
+   "start": 23564,
+   "dur": 233,
    "hold": 450,
-   "audio": "audio/inc/N45.mp3",
+   "audio": null,
    "words": [
     [
      "Your",
-     8
+     13
     ],
     [
      "turn.",
-     9
+     15
     ],
     [
      "A",
-     34
+     40
     ],
     [
      "CIP",
-     35
+     41
     ],
     [
      "price",
-     49
+     54
     ],
     [
      "of",
-     61
+     66
     ],
     [
      "30",
-     70
+     75
     ],
     [
      ",000",
-     82
+     88
     ],
     [
      "euros.",
-     98
+     104
     ],
     [
      "What's",
-     122
+     128
     ],
     [
      "the",
-     130
+     135
     ],
     [
      "minimum",
-     134
+     140
     ],
     [
      "cover?",
-     142
+     147
     ],
     [
      "Pause",
-     168
+     173
     ],
     [
      "the",
-     174
+     179
     ],
     [
      "video",
-     178
+     184
     ],
     [
      "and",
-     185
+     191
     ],
     [
      "press",
-     195
+     201
     ],
     [
      "the",
-     202
+     208
     ],
     [
      "keys.",
-     208
+     213
     ]
    ]
   },
@@ -8641,66 +8746,66 @@
    "id": "N46",
    "speaker": "teacher",
    "text": "Done? Thirty thousand, into one point one. Thirty-three thousand euros. Did you get it? Great.",
-   "start": 24767,
-   "dur": 211,
+   "start": 24246,
+   "dur": 212,
    "hold": 0,
-   "audio": "audio/inc/N46.mp3",
+   "audio": null,
    "words": [
     [
      "Done?",
-     8
+     9
     ],
     [
      "30",
-     30
+     32
     ],
     [
      ",000",
-     42
+     44
     ],
     [
      "into",
-     60
+     62
     ],
     [
      "1",
-     67
+     69
     ],
     [
      ".1.",
-     76
+     78
     ],
     [
      "33",
-     106
+     108
     ],
     [
      ",000",
-     117
+     119
     ],
     [
      "euros.",
-     140
+     141
     ],
     [
      "Did",
-     163
+     165
     ],
     [
      "you",
-     167
+     169
     ],
     [
      "get",
-     171
+     173
     ],
     [
      "it?",
-     175
+     177
     ],
     [
      "Great.",
-     194
+     195
     ]
    ]
   },
@@ -8708,174 +8813,174 @@
    "id": "N47",
    "speaker": "teacher",
    "text": "Now be careful here, this is where people slip. Some of you will take one hundred and ten percent of the F-O-B value. That's wrong. The base is the C-I-F or C-I-P value. On our numbers, F-O-B would give you forty-nine thousand five hundred. Wrong option.",
-   "start": 24988,
+   "start": 24458,
    "dur": 518,
    "hold": 0,
-   "audio": "audio/inc/N47.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
-     8
+     9
     ],
     [
      "be",
-     11
+     13
     ],
     [
      "careful",
-     18
+     20
     ],
     [
      "here.",
-     27
+     29
     ],
     [
      "This",
-     46
+     48
     ],
     [
      "is",
-     50
+     52
     ],
     [
      "where",
-     57
+     58
     ],
     [
      "people",
-     63
+     65
     ],
     [
      "slip.",
-     73
+     75
     ],
     [
      "Some",
-     98
+     100
     ],
     [
      "of",
-     105
+     107
     ],
     [
      "you",
-     111
+     112
     ],
     [
      "will",
-     115
+     117
     ],
     [
      "take",
-     120
+     122
     ],
     [
      "110",
-     126
+     127
     ],
     [
      "%",
-     156
+     158
     ],
     [
      "of",
-     170
+     171
     ],
     [
      "the",
-     176
+     178
     ],
     [
      "FOB",
-     183
+     184
     ],
     [
      "value.",
-     196
+     198
     ],
     [
      "That's",
-     223
+     225
     ],
     [
      "wrong.",
-     233
+     235
     ],
     [
      "The",
-     254
+     256
     ],
     [
      "base",
-     260
+     261
     ],
     [
      "is",
-     270
+     272
     ],
     [
      "the",
-     280
+     282
     ],
     [
      "CIF",
-     286
+     288
     ],
     [
      "or",
-     303
+     305
     ],
     [
      "CIP",
-     312
+     313
     ],
     [
      "value.",
-     331
+     333
     ],
     [
      "On",
-     358
+     360
     ],
     [
      "our",
-     364
+     366
     ],
     [
      "numbers,",
-     370
+     372
     ],
     [
      "FOB",
-     393
+     395
     ],
     [
      "would",
-     403
+     405
     ],
     [
      "give",
-     413
+     415
     ],
     [
      "you",
-     418
+     420
     ],
     [
      "49",
-     424
+     426
     ],
     [
      ",500.",
-     440
+     442
     ],
     [
      "Wrong",
-     489
+     491
     ],
     [
      "option.",
-     495
+     497
     ]
    ]
   },
@@ -8883,170 +8988,170 @@
    "id": "N48",
    "speaker": "teacher",
    "text": "Now think about what this means at the LC desk. If the LC says C-I-F or C-I-P, the seller's documents must include an insurance document. If it says F-O-B or F-C-A, the buyer insures, so the seller won't send one.",
-   "start": 25517,
+   "start": 24977,
    "dur": 469,
    "hold": 0,
-   "audio": "audio/inc/N48.mp3",
+   "audio": null,
    "words": [
     [
      "Now",
-     8
+     9
     ],
     [
      "think",
-     10
+     12
     ],
     [
      "about",
-     18
+     20
     ],
     [
      "what",
-     26
+     27
     ],
     [
      "this",
-     33
+     34
     ],
     [
      "means",
-     39
+     40
     ],
     [
      "at",
-     46
+     48
     ],
     [
      "the",
-     54
+     56
     ],
     [
      "LC",
-     60
+     61
     ],
     [
      "desk.",
-     71
+     72
     ],
     [
      "If",
-     96
+     98
     ],
     [
      "the",
-     102
+     103
     ],
     [
      "LC",
-     106
+     107
     ],
     [
      "says",
-     117
+     118
     ],
     [
      "CIF",
-     127
+     128
     ],
     [
      "or",
-     146
+     147
     ],
     [
      "CIP,",
-     154
+     156
     ],
     [
      "the",
-     184
+     185
     ],
     [
      "seller's",
-     190
+     191
     ],
     [
      "documents",
-     204
+     206
     ],
     [
      "must",
-     216
+     218
     ],
     [
      "include",
-     230
+     231
     ],
     [
      "an",
-     244
+     246
     ],
     [
      "insurance",
-     252
+     253
     ],
     [
      "document.",
-     264
+     266
     ],
     [
      "If",
-     294
+     295
     ],
     [
      "it",
-     300
+     302
     ],
     [
      "says",
-     303
+     305
     ],
     [
      "FOB",
-     312
+     314
     ],
     [
      "or",
-     330
+     331
     ],
     [
      "FCA,",
-     340
+     341
     ],
     [
      "the",
-     374
-    ],
-    [
-     "buyer",
      375
     ],
     [
+     "buyer",
+     377
+    ],
+    [
      "ensures.",
-     387
+     389
     ],
     [
      "So",
-     414
+     415
     ],
     [
      "the",
-     416
+     417
     ],
     [
      "seller",
-     421
+     422
     ],
     [
      "won't",
-     429
+     431
     ],
     [
      "send",
-     444
+     445
     ],
     [
      "one.",
-     450
+     452
     ]
    ]
   },
@@ -9054,158 +9159,158 @@
    "id": "N49",
    "speaker": "teacher",
    "text": "And the insurance document must not be dated after the shipment date, unless it shows the cover started by then. Cover that starts after the goods have sailed is no cover at all. That's also article twenty-eight.",
-   "start": 25996,
+   "start": 25446,
    "dur": 382,
    "hold": 0,
-   "audio": "audio/inc/N49.mp3",
+   "audio": null,
    "words": [
     [
      "And",
-     8
+     9
     ],
     [
      "the",
-     10
+     11
     ],
     [
      "insurance",
-     14
+     15
     ],
     [
      "document",
-     25
+     26
     ],
     [
      "must",
-     39
+     40
     ],
     [
      "not",
-     48
+     50
     ],
     [
      "be",
-     60
+     61
     ],
     [
      "dated",
-     68
+     69
     ],
     [
      "after",
-     76
+     77
     ],
     [
      "the",
-     90
+     91
     ],
     [
      "shipment",
-     98
+     99
     ],
     [
      "date",
-     106
+     108
     ],
     [
      "unless",
-     117
+     118
     ],
     [
      "it",
-     135
+     136
     ],
     [
      "shows",
-     140
+     141
     ],
     [
      "the",
-     147
+     148
     ],
     [
      "cover",
-     154
+     156
     ],
     [
      "started",
-     161
+     162
     ],
     [
      "by",
-     174
+     175
     ],
     [
      "then.",
-     182
+     183
     ],
     [
      "Cover",
-     206
+     207
     ],
     [
      "that",
-     206
+     207
     ],
     [
      "starts",
-     215
+     216
     ],
     [
      "after",
-     226
+     227
     ],
     [
      "the",
-     240
+     241
     ],
     [
      "goods",
-     246
+     248
     ],
     [
      "have",
-     252
+     253
     ],
     [
      "sailed",
-     257
+     258
     ],
     [
      "is",
-     268
+     270
     ],
     [
      "no",
-     280
+     282
     ],
     [
      "cover",
-     292
+     294
     ],
     [
      "at",
-     301
+     302
     ],
     [
      "all.",
-     306
+     308
     ],
     [
      "That's",
-     326
+     327
     ],
     [
      "also",
-     334
+     336
     ],
     [
      "article",
-     346
+     348
     ],
     [
      "28.",
-     356
+     357
     ]
    ]
   },
@@ -9213,10 +9318,10 @@
    "id": "N49a",
    "speaker": "teacher",
    "text": "And the bill of lading usually tells you who paid the freight. Under C and D rules you'd usually see \"freight prepaid\". Under F rules, \"freight collect\". It's a quick way to see whether the documents fit the term.",
-   "start": 26389,
+   "start": 25828,
    "dur": 412,
    "hold": 0,
-   "audio": "audio/inc/N49a.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -9228,39 +9333,39 @@
     ],
     [
      "bill",
-     17
+     18
     ],
     [
      "of",
-     22
+     23
     ],
     [
      "lading",
-     27
+     28
     ],
     [
      "usually",
-     37
+     38
     ],
     [
      "tells",
-     51
+     52
     ],
     [
      "you",
-     64
+     65
     ],
     [
      "who",
-     73
+     74
     ],
     [
      "paid",
-     83
+     84
     ],
     [
      "the",
-     90
+     91
     ],
     [
      "freight.",
@@ -9272,39 +9377,39 @@
     ],
     [
      "C",
-     126
+     127
     ],
     [
      "and",
-     136
+     137
     ],
     [
      "D",
-     141
+     142
     ],
     [
      "rules,",
-     147
+     148
     ],
     [
      "you'd",
-     167
+     168
     ],
     [
      "usually",
-     171
+     172
     ],
     [
      "see",
-     183
+     184
     ],
     [
      "freight",
-     195
+     196
     ],
     [
      "prepaid.",
-     208
+     209
     ],
     [
      "Under",
@@ -9312,47 +9417,47 @@
     ],
     [
      "F",
-     250
+     251
     ],
     [
      "rules,",
-     261
+     262
     ],
     [
      "freight",
-     288
+     289
     ],
     [
      "collect.",
-     291
+     292
     ],
     [
      "It's",
-     321
+     322
     ],
     [
      "a",
-     326
+     327
     ],
     [
      "quick",
-     330
+     331
     ],
     [
      "way",
-     336
+     337
     ],
     [
      "to",
-     342
+     343
     ],
     [
      "see",
-     348
+     349
     ],
     [
      "whether",
-     353
+     354
     ],
     [
      "the",
@@ -9360,19 +9465,19 @@
     ],
     [
      "documents",
-     368
+     369
     ],
     [
      "fit",
-     380
+     381
     ],
     [
      "the",
-     388
+     389
     ],
     [
      "term.",
-     395
+     396
     ]
    ]
   },
@@ -9380,10 +9485,10 @@
    "id": "N50",
    "speaker": "teacher",
    "text": "So let's go back to Tiruppur. Under C-I-F, the risk passed on board at Chennai. Her documents comply, so the LC pays her. The buyer claims on the insurance. Her lost container is the buyer's problem, and the buyer is covered.",
-   "start": 26887,
-   "dur": 465,
+   "start": 26315,
+   "dur": 464,
    "hold": 30,
-   "audio": "audio/inc/N50.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -9415,7 +9520,7 @@
     ],
     [
      "CIF,",
-     61
+     62
     ],
     [
      "the",
@@ -9431,7 +9536,7 @@
     ],
     [
      "on",
-     118
+     119
     ],
     [
      "board",
@@ -9479,7 +9584,7 @@
     ],
     [
      "The",
-     266
+     265
     ],
     [
      "buyer",
@@ -9535,7 +9640,7 @@
     ],
     [
      "the",
-     418
+     419
     ],
     [
      "buyer",
@@ -9555,10 +9660,10 @@
    "id": "N51",
    "speaker": "teacher",
    "text": "Okay, three quick questions before we finish. Answer each one before I do.",
-   "start": 27392,
-   "dur": 168,
+   "start": 26809,
+   "dur": 182,
    "hold": 0,
-   "audio": "audio/inc/N51.mp3",
+   "audio": null,
    "words": [
     [
      "Okay,",
@@ -9566,51 +9671,55 @@
     ],
     [
      "three",
-     30
+     31
     ],
     [
      "quick",
-     34
+     35
     ],
     [
      "questions",
-     45
+     46
     ],
     [
      "before",
-     58
+     59
     ],
     [
      "we",
-     70
+     71
     ],
     [
      "finish.",
-     76
+     77
     ],
     [
      "Answer",
-     85
+     86
     ],
     [
      "each",
-     103
+     104
     ],
     [
      "one",
-     117
+     118
     ],
     [
      "before",
-     126
+     127
     ],
     [
      "I",
-     136
+     137
     ],
     [
      "do.",
-     145
+     146
+    ],
+    [
+     "One.",
+     171
     ]
    ]
   },
@@ -9618,54 +9727,50 @@
    "id": "N52",
    "speaker": "teacher",
    "text": "One. Under which rule does the seller carry the most obligations?",
-   "start": 27571,
-   "dur": 129,
+   "start": 26991,
+   "dur": 120,
    "hold": 120,
-   "audio": "audio/inc/N52.mp3",
+   "audio": null,
    "words": [
     [
-     "One.",
-     4
-    ],
-    [
      "Under",
-     26
+     11
     ],
     [
      "which",
-     26
+     11
     ],
     [
      "rule",
-     34
+     20
     ],
     [
      "does",
-     46
+     31
     ],
     [
      "the",
-     53
+     38
     ],
     [
      "seller",
-     59
+     44
     ],
     [
      "carry",
-     70
+     55
     ],
     [
      "the",
-     81
+     66
     ],
     [
      "most",
-     88
+     73
     ],
     [
      "obligations?",
-     98
+     83
     ]
    ]
   },
@@ -9673,38 +9778,42 @@
    "id": "N53",
    "speaker": "teacher",
    "text": "D-D-P. Delivered Duty Paid. Even import duty.",
-   "start": 27830,
-   "dur": 138,
+   "start": 27230,
+   "dur": 165,
    "hold": 0,
-   "audio": "audio/inc/N53.mp3",
+   "audio": null,
    "words": [
     [
      "DDP.",
-     8
+     15
     ],
     [
      "Delivered",
-     44
+     52
     ],
     [
      "duty",
-     60
+     68
     ],
     [
      "paid.",
-     71
+     79
     ],
     [
      "Even",
-     98
+     105
     ],
     [
      "import",
-     104
+     111
     ],
     [
      "duty.",
-     117
+     125
+    ],
+    [
+     "Two.",
+     149
     ]
    ]
   },
@@ -9712,38 +9821,34 @@
    "id": "N54",
    "speaker": "teacher",
    "text": "Two. Which rule replaced D-A-T in twenty twenty?",
-   "start": 27979,
-   "dur": 124,
+   "start": 27396,
+   "dur": 105,
    "hold": 120,
-   "audio": "audio/inc/N54.mp3",
+   "audio": null,
    "words": [
     [
-     "Two.",
-     5
-    ],
-    [
      "Which",
-     28
+     8
     ],
     [
      "rule",
-     32
+     11
     ],
     [
      "replaced",
-     42
+     21
     ],
     [
      "DAT",
-     60
+     39
     ],
     [
      "in",
-     84
+     63
     ],
     [
      "2020?",
-     98
+     76
     ]
    ]
   },
@@ -9751,30 +9856,30 @@
    "id": "N55",
    "speaker": "teacher",
    "text": "D-P-U. Delivered at Place Unloaded.",
-   "start": 28233,
-   "dur": 102,
+   "start": 27620,
+   "dur": 105,
    "hold": 0,
-   "audio": "audio/inc/N55.mp3",
+   "audio": null,
    "words": [
     [
      "DPU.",
-     8
+     12
     ],
     [
      "Delivered",
-     44
+     49
     ],
     [
      "at",
-     58
+     62
     ],
     [
      "place",
-     66
+     70
     ],
     [
      "unloaded.",
-     76
+     81
     ]
    ]
   },
@@ -9782,10 +9887,10 @@
    "id": "N56",
    "speaker": "teacher",
    "text": "Three. A C-I-F price of one lakh twenty-five thousand four hundred dollars. The LC says nothing about the insurance amount. What's the minimum cover?",
-   "start": 28345,
-   "dur": 299,
+   "start": 27725,
+   "dur": 298,
    "hold": 360,
-   "audio": "audio/inc/N56.mp3",
+   "audio": null,
    "words": [
     [
      "Three.",
@@ -9873,74 +9978,74 @@
    "id": "N57",
    "speaker": "teacher",
    "text": "One lakh twenty-five thousand four hundred, into one point one. One lakh thirty-seven thousand nine hundred and forty dollars. Did you get all three? Very good.",
-   "start": 29015,
-   "dur": 295,
+   "start": 28384,
+   "dur": 296,
    "hold": 0,
-   "audio": "audio/inc/N57.mp3",
+   "audio": null,
    "words": [
     [
      "1",
-     8
-    ],
-    [
-     ",25",
      9
     ],
     [
+     ",25",
+     11
+    ],
+    [
      ",400",
-     28
+     29
     ],
     [
      "into",
-     66
+     67
     ],
     [
      "1",
-     82
+     84
     ],
     [
      ".1.",
-     97
+     98
     ],
     [
      "$1",
-     122
+     123
     ],
     [
      ",37",
-     131
+     133
     ],
     [
      ",940.",
-     157
+     158
     ],
     [
      "Did",
-     231
+     232
     ],
     [
      "you",
-     237
+     238
     ],
     [
      "get",
-     240
+     242
     ],
     [
      "all",
-     244
+     245
     ],
     [
      "three?",
-     249
+     251
     ],
     [
      "Very",
-     270
+     272
     ],
     [
      "good.",
-     279
+     280
     ]
    ]
   },
@@ -9948,10 +10053,10 @@
    "id": "N58",
    "speaker": "teacher",
    "text": "So here's the whole lesson on one card. Step one: three letters decide three things. Where risk passes, who pays, who clears customs.",
-   "start": 29321,
-   "dur": 289,
+   "start": 28680,
+   "dur": 290,
    "hold": 0,
-   "audio": "audio/inc/N58.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -10051,110 +10156,110 @@
    "id": "N59",
    "speaker": "teacher",
    "text": "Step two: put the rule on the road. E at the seller's door, F at the carrier or the ship, D at the buyer's end.",
-   "start": 29621,
-   "dur": 247,
+   "start": 28970,
+   "dur": 249,
    "hold": 0,
-   "audio": "audio/inc/N59.mp3",
+   "audio": null,
    "words": [
     [
      "Step",
-     8
+     11
     ],
     [
      "two.",
-     10
+     13
     ],
     [
      "Put",
-     33
+     37
     ],
     [
      "the",
-     36
+     39
     ],
     [
      "rule",
-     42
+     46
     ],
     [
      "on",
-     50
+     53
     ],
     [
      "the",
-     58
+     62
     ],
     [
      "road.",
-     63
+     67
     ],
     [
      "E",
-     84
+     87
     ],
     [
      "at",
-     90
+     93
     ],
     [
      "the",
-     98
+     101
     ],
     [
      "seller's",
-     108
+     111
     ],
     [
      "door,",
-     116
+     119
     ],
     [
      "F",
-     132
+     136
     ],
     [
      "at",
-     138
+     142
     ],
     [
      "the",
-     148
+     151
     ],
     [
      "carrier",
-     153
+     157
     ],
     [
      "or",
-     162
+     166
     ],
     [
      "the",
-     171
+     174
     ],
     [
      "ship,",
-     175
+     178
     ],
     [
      "D",
-     198
+     202
     ],
     [
      "at",
-     201
+     204
     ],
     [
      "the",
-     210
+     214
     ],
     [
      "buyer's",
-     216
+     219
     ],
     [
      "end.",
-     230
+     233
     ]
    ]
   },
@@ -10162,10 +10267,10 @@
    "id": "N60",
    "speaker": "teacher",
    "text": "Step three: for C rules, the baton and the blue line split. The risk goes early, the cost goes all the way.",
-   "start": 29878,
+   "start": 29219,
    "dur": 224,
    "hold": 0,
-   "audio": "audio/inc/N60.mp3",
+   "audio": null,
    "words": [
     [
      "Step",
@@ -10173,7 +10278,7 @@
     ],
     [
      "three.",
-     8
+     9
     ],
     [
      "For",
@@ -10193,7 +10298,7 @@
     ],
     [
      "button",
-     65
+     66
     ],
     [
      "and",
@@ -10201,7 +10306,7 @@
     ],
     [
      "the",
-     84
+     85
     ],
     [
      "blue",
@@ -10209,7 +10314,7 @@
     ],
     [
      "line",
-     95
+     96
     ],
     [
      "split.",
@@ -10217,11 +10322,11 @@
     ],
     [
      "The",
-     127
+     128
     ],
     [
      "risk",
-     131
+     132
     ],
     [
      "goes",
@@ -10241,19 +10346,19 @@
     ],
     [
      "goes",
-     185
+     186
     ],
     [
      "all",
-     196
+     197
     ],
     [
      "the",
-     206
+     207
     ],
     [
      "way.",
-     211
+     212
     ]
    ]
   },
@@ -10261,10 +10366,10 @@
    "id": "N61",
    "speaker": "teacher",
    "text": "And for insurance: only C-I-F and C-I-P, at least one hundred and ten percent. C-I-P with the bigger cover.",
-   "start": 30113,
-   "dur": 255,
+   "start": 29443,
+   "dur": 253,
    "hold": 0,
-   "audio": "audio/inc/N61.mp3",
+   "audio": null,
    "words": [
     [
      "And",
@@ -10276,11 +10381,11 @@
     ],
     [
      "insurance,",
-     14
+     13
     ],
     [
      "only",
-     44
+     43
     ],
     [
      "CIF",
@@ -10332,10 +10437,10 @@
    "id": "N61a",
    "speaker": "teacher",
    "text": "So next time an LC lands on your desk with three letters on it, you'll know exactly what they mean.",
-   "start": 30378,
-   "dur": 183,
+   "start": 29696,
+   "dur": 182,
    "hold": 30,
-   "audio": "audio/inc/N61a.mp3",
+   "audio": null,
    "words": [
     [
      "So",
@@ -10355,7 +10460,7 @@
     ],
     [
      "LC",
-     34
+     35
     ],
     [
      "lands",
@@ -10411,11 +10516,11 @@
     ],
     [
      "they",
-     160
+     161
     ],
     [
      "mean.",
-     166
+     167
     ]
    ]
   },
@@ -10423,10 +10528,10 @@
    "id": "N62",
    "speaker": "teacher",
    "text": "That's it for today. Next class, we open the LC itself, and the UCP articles the exam keeps asking.",
-   "start": 30601,
-   "dur": 216,
+   "start": 29908,
+   "dur": 215,
    "hold": 0,
-   "audio": "audio/inc/N62.mp3",
+   "audio": null,
    "words": [
     [
      "That's",
@@ -10510,10 +10615,10 @@
    "id": "N62a",
    "speaker": "teacher",
    "text": "One small homework. Draw the road once tonight, from memory, and put all eleven rules on it. Five minutes. Then do the practice questions. Okay, good night everyone, go and rest. See you in the next class.",
-   "start": 30828,
-   "dur": 395,
+   "start": 30123,
+   "dur": 396,
    "hold": 90,
-   "audio": "audio/inc/N62a.mp3",
+   "audio": null,
    "words": [
     [
      "One",

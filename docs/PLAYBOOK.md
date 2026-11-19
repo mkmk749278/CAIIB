@@ -259,6 +259,18 @@ should feel sudden changes, glitches, blanks."
      - an object morphs into its icon (concreteness fading);
      - the map branch pulses when the lesson calls back to it;
      - the baton is *handed* hand to hand, not placed.
+  - **Tools (built 2026-11-19 for r3):**
+    - `tools/video/flow_voice.py` builds `voice.wav` from the recordings. It splits each recording only at
+      the middle of the natural pauses, opens gaps for holds and chapter cards, swaps in re-recorded lines, and writes
+      the timeline JSON with `voice` and `gaps`.
+    - The music bed is the shared library's `bp08_flow` (no drums), looped with 6 s crossfades. It sits at -21 dB, is
+      sidechain-ducked under the voice (attack 120 ms, release 1.2 s) and rises in pauses (about -25 to -30 LUFS). It
+      is mixed with ffmpeg into `mix.flac` (Drive `CAIIB/BFM/<video>/flow/`), and the composition plays that one track.
+    - In `Incoterms.tsx`: crossfading `vis()/fo()/Fd` instead of `during() ? … : null` pop-ins; scenes crossfade
+      over 18 frames with no dip; captions grey out the words not yet spoken and fade in and out; each rule's blue
+      line draws across its whole phrase with a pen tip; the baton slides from station to station.
+    - `tools/video/smooth_audit.py` runs in `render.yml` and writes its report to the run summary. Baseline r2:
+      18 dead silences and 3 hard cuts, all in silence.
   7. **A smoothness audit before every render:**
      - no silence over 0.8 s outside planned holds;
      - no element whose opacity jumps more than 0.2 in one frame;
