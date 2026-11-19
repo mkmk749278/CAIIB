@@ -192,6 +192,10 @@ W('N17', 'stop', 1, '1 · the seller’s premises', 960, 130, c); W('N17', 'stop
 W('N17', 'stop', 3, '3 · alongside the ship', 960, 130, c); W('N17', 'stop', 4, '4 · on board', 960, 130, c);
 W('N18', 'then', 1, 'then: sea · air · long road', 960, 130, c); W('N18', 'stop', 1, '5 · arrived, ready to unload', 960, 130, c);
 W('N18', 'stop', 2, '6 · unloaded', 960, 130, c); W('N18', 'stop', 3, '7 · import cleared, duty paid', 960, 130, c);
+W('N35', '13', 1, 'not 13!', 960, 760, c);
+W('N42', '2400', 1, 'freight: 2,400', 80, 560);
+W('N61', 'least', 1, 'at least 110%', 140, 160);
+W('N31', 'leave', 1, "E = exit, from the seller's door", 960, 760, c);
 W('N48', 'won', 1, '→ no insurance document', 960, 700, c);
 B('N55', 1, 'Delivered at Place Unloaded', 160, 560);
 W('N15a', 'risk', 1, 'risk ≠ cost', 960, 640, c);
@@ -214,7 +218,7 @@ const Notes: React.FC<{f: number}> = ({f}) => {
 				const o = Math.min(tw(f, b.t0 - 6, b.t0 + 6), 1 - tw(f, end, end + XF));
 				void words;
 				return (
-					<div key={i} style={{position: 'absolute', left: b.x, top: b.y, opacity: o, transform: `${b.center ? 'translateX(-50%) ' : ''}rotate(-1.5deg)`, fontFamily: '"Caveat", cursive', fontWeight: 700, fontSize: b.size ?? 58, color: b.color ?? C.text, whiteSpace: 'nowrap'}}>
+					<div key={i} style={{position: 'absolute', left: b.x, top: b.y, opacity: o, transform: `${b.center ? 'translateX(-50%) ' : ''}rotate(-1.5deg)`, fontFamily: '"Caveat", cursive', fontWeight: 700, fontSize: (b.size ?? 58) * 1.15, color: b.color ?? C.text, whiteSpace: 'nowrap'}}>
 						<div style={{clipPath: `inset(-20px ${(1 - p) * 100}% -20px -10px)`, background: 'linear-gradient(transparent 38%, rgba(242,179,61,0.35) 38%, rgba(242,179,61,0.35) 88%, transparent 88%)', padding: '0 10px'}}>{b.text}</div>
 						<svg width="100%" height={14} viewBox="0 0 100 14" preserveAspectRatio="none" style={{display: 'block', marginTop: -4}}>
 							<path d="M2 9 C 30 3, 70 13, 98 6" stroke="#F2B33D" strokeWidth={6} fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - tw(f, b.t0 + spoken, b.t0 + spoken + 12)} opacity={0.85} />
