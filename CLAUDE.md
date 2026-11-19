@@ -15,6 +15,11 @@ any new stage. New lessons go into the playbook section they belong to, with the
   template (look, pacing, sound) every script is written for. Steps: owner's reaction to r1 → independent viewer
   review → visual upgrade (illustrated scenes, music bed, sound cues, transitions) → owner approves → template locked
   → scripts resume at A01. Renders on GitHub runners (`render.yml`), files in Drive `CAIIB/BFM/A07/`.
+  **Status 2026-11-19:** owner: "voice fine, visuals too plain; mind maps?" → v2 look (PLAYBOOK §5c, `video/src/kit/`),
+  independent review `review_look_v2.md` = ADOPT WITH FIXES (all applied); N33 re-recorded (ship's rail fix);
+  Incoterms rebuilt on the v2 kit (shared `theme.ts`/`parts.tsx`/`road.tsx` now draw the v2 look, so A1 changes too
+  when resumed); r2 render → Drive `CAIIB/BFM/A07/renders/r2_720p.mp4`. Not yet: sound cues and music bed, camera
+  pan across one page.
 - **2026-11-19 (owner): new process.** Fix the exact video order → write a one-page plan for every video → write
   every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
   **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4

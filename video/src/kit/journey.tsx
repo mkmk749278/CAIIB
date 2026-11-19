@@ -74,7 +74,7 @@ const Shop: React.FC<{x: number}> = ({x}) => (
 
 /** The whole road. risk/cost = station index (cost −1 = none); rp/cp = 0..1 draw-on; ship = 0..1 across the sea;
  * split = draw the C-rule bracket between flag and arrowhead; anyMode = label the gap "sea · air · road". */
-export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: number; ship?: number; dim?: boolean; highlight?: number; split?: number; anyMode?: boolean; costLabel?: string}> = ({risk, cost, rp = 1, cp = 1, ship = 0, dim = false, highlight, split = 0, anyMode = false, costLabel}) => {
+export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: number; ship?: number; dim?: boolean; highlight?: number; split?: number; anyMode?: boolean; costLabel?: string; reveal?: number}> = ({risk, cost, rp = 1, cp = 1, ship = 0, dim = false, highlight, split = 0, anyMode = false, costLabel, reveal = 7}) => {
 	const shipX = 1000 + ship * (1300 - 1000);
 	const ARROW_Y = BASE - 300;
 	return (
@@ -94,8 +94,10 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 			<line x1={200} y1={BASE + 120} x2={1790} y2={BASE + 120} stroke={P.ink} strokeWidth={3} strokeDasharray="2 12" strokeLinecap="round" opacity={0.6} />
 			{STATIONS.map((s, i) => {
 				const hot = i === highlight || i === risk;
+				const v = Math.max(0, Math.min(1, reveal - i));
+				if (v <= 0) return null;
 				return (
-					<g key={i}>
+					<g key={i} opacity={v}>
 						<circle cx={s.x} cy={BASE + 120} r={hot ? 24 : 20} fill={hot ? P.ink : '#fff'} stroke={P.ink} strokeWidth={4} />
 						<text x={s.x} y={BASE + 130} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={26} fill={hot ? '#fff' : P.ink}>{i + 1}</text>
 						<text x={s.x} y={BASE + 182} textAnchor="middle" fontFamily={FT.sans} fontWeight={hot ? 700 : 600} fontSize={32} fill={P.ink}>{s.label}</text>
@@ -114,14 +116,19 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 					</g>
 				);
 			})()}
-			{/* red baton: a flag planted where risk passes */}
+			{/* the red baton (a relay baton on a stand) where risk passes, as the voice says */}
 			{risk !== undefined && (() => {
 				const x = STATIONS[risk].x, drop = (1 - rp) * -120;
+				const right = risk <= 1;
 				return (
 					<g transform={`translate(0, ${drop})`} opacity={rp}>
-						<line x1={x} y1={BASE + 96} x2={x} y2={BASE - 200} stroke={P.ink} strokeWidth={6} />
-						<path d={`M${x} ${BASE - 200} l 96 28 l -96 28 Z`} fill={P.risk} stroke={P.ink} strokeWidth={4} />
-						<text x={x - 14} y={BASE - 214} textAnchor="end" fontFamily={FT.hand} fontWeight={700} fontSize={54} fill={P.risk}>risk passes here</text>
+						<line x1={x} y1={BASE + 96} x2={x} y2={BASE - 190} stroke={P.ink} strokeWidth={6} />
+						<g transform={`translate(${x}, ${BASE - 200}) rotate(-24)`}>
+							<rect x={-62} y={-17} width={124} height={34} rx={17} fill={P.risk} stroke={P.ink} strokeWidth={4} />
+							<rect x={-26} y={-17} width={10} height={34} fill="#fff" opacity={0.85} />
+							<rect x={16} y={-17} width={10} height={34} fill="#fff" opacity={0.85} />
+						</g>
+						<text x={right ? x + 80 : x - 70} y={BASE - 228} textAnchor={right ? 'start' : 'end'} fontFamily={FT.hand} fontWeight={700} fontSize={54} fill={P.risk}>risk passes here</text>
 					</g>
 				);
 			})()}

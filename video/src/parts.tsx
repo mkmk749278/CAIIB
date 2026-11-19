@@ -1,6 +1,7 @@
 import React from 'react';
 import {interpolate, spring, useVideoConfig} from 'remotion';
 import {C, F, tw, env} from './theme';
+import {GrowMap, Branch} from './kit/mindmap';
 
 // ---------- text & cards ----------
 export const Label: React.FC<{x: number; y: number; size?: number; color?: string; weight?: number; mono?: boolean; o?: number; align?: 'left' | 'center' | 'right'; w?: number; children: React.ReactNode}> = ({x, y, size = 44, color = C.text, weight = 500, mono, o = 1, align = 'left', w, children}) => (
@@ -12,17 +13,17 @@ export const Tag: React.FC<{text: string; x?: number; y?: number}> = ({text, x =
 );
 
 export const Card: React.FC<{x: number; y: number; w: number; h: number; o?: number; border?: string; bg?: string; children?: React.ReactNode; style?: React.CSSProperties}> = ({x, y, w, h, o = 1, border = C.line, bg = C.card, children, style}) => (
-	<div style={{position: 'absolute', left: x, top: y, width: w, height: h, background: bg, border: `3px solid ${border}`, borderRadius: 26, opacity: o, boxShadow: '0 20px 60px rgba(0,0,0,0.35)', ...style}}>{children}</div>
+	<div style={{position: 'absolute', left: x, top: y, width: w, height: h, background: bg, border: `3px solid ${border}`, borderRadius: 26, opacity: o, boxShadow: '6px 6px 0 rgba(31,42,55,0.12)', ...style}}>{children}</div>
 );
 
 // ---------- pause card (prediction prompt) ----------
-export const PauseCard: React.FC<{f: number; from: number; to: number; q: string; timerFrom: number; timerFrames: number}> = ({f, from, to, q, timerFrom, timerFrames}) => {
+export const PauseCard: React.FC<{f: number; from: number; to: number; q: string; timerFrom: number; timerFrames: number; top?: boolean}> = ({f, from, to, q, timerFrom, timerFrames, top}) => {
 	const o = env(f, from, to, 8);
 	if (o <= 0) return null;
 	const p = interpolate(f, [timerFrom, timerFrom + timerFrames], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 	const R = 46, L = 2 * Math.PI * R;
 	return (
-		<div style={{position: 'absolute', left: 260, right: 260, bottom: 150, height: 180, opacity: o, transform: `translateY(${(1 - tw(f, from, from + 12)) * 40}px)`, background: '#0A1018EE', border: `3px solid ${C.text}`, borderRadius: 30, display: 'flex', alignItems: 'center', padding: '0 40px', gap: 34}}>
+		<div style={{position: 'absolute', left: 260, right: 260, ...(top ? {top: 90} : {bottom: 150}), height: 180, opacity: o, transform: `translateY(${(1 - tw(f, from, from + 12)) * 40}px)`, background: '#FFFFFF', border: `4px solid ${C.text}`, borderRadius: 30, boxShadow: '8px 8px 0 #F2B33D', display: 'flex', alignItems: 'center', padding: '0 40px', gap: 34}}>
 			<svg width={120} height={120} viewBox="0 0 120 120">
 				<circle cx={60} cy={60} r={R} fill="none" stroke={C.line} strokeWidth={10} />
 				<circle cx={60} cy={60} r={R} fill="none" stroke={C.text} strokeWidth={10} strokeDasharray={L} strokeDashoffset={L * p} transform="rotate(-90 60 60)" strokeLinecap="round" />
@@ -37,14 +38,16 @@ export const PauseCard: React.FC<{f: number; from: number; to: number; q: string
 	);
 };
 
-export const ChapterCard: React.FC<{f: number; from: number; n: number; title: string}> = ({f, from, n, title}) => {
+export const ChapterCard: React.FC<{f: number; from: number; n: number; title: string; map?: {centre: [string, string]; branches: Branch[]; done: number; upto: number}}> = ({f, from, n, title, map}) => {
 	const o = env(f, from, from + 75, 12);
 	if (o <= 0) return null;
 	return (
-		<div style={{position: 'absolute', inset: 0, background: C.bg, opacity: o, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-			<div style={{fontFamily: F.mono, fontSize: 40, color: C.dim, letterSpacing: 6}}>CHAPTER {n}</div>
-			<div style={{fontFamily: F.sans, fontWeight: 700, fontSize: 96, color: C.text, transform: `translateY(${(1 - tw(f, from, from + 20)) * 30}px)`}}>{title}</div>
-			<div style={{marginTop: 26, width: 260 * tw(f, from + 6, from + 30), height: 6, background: C.market, borderRadius: 3}} />
+		<div style={{position: 'absolute', inset: 0, background: C.bg, opacity: o}}>
+			{map ? <div style={{position: 'absolute', inset: 0, transform: 'translateY(80px) scale(0.86)', transformOrigin: '50% 50%'}}><GrowMap centre={map.centre} branches={map.branches} shown={map.upto} newFrom={map.done} p={tw(f, from + 15, from + 60)} /></div> : null}
+			<div style={{position: 'absolute', left: map ? 140 : 0, right: 0, top: map ? 40 : 420, textAlign: map ? 'left' : 'center'}}>
+				<div style={{fontFamily: F.mono, fontSize: 36, color: C.dim, letterSpacing: 6}}>CHAPTER {n}</div>
+				<div style={{fontFamily: F.sans, fontWeight: 700, fontSize: map ? 72 : 96, color: C.text, transform: `translateY(${(1 - tw(f, from, from + 20)) * 30}px)`}}>{title}</div>
+			</div>
 		</div>
 	);
 };

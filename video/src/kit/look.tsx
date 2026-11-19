@@ -86,9 +86,10 @@ export const Note: React.FC<{x: number; y: number; p?: number; color?: string; s
 );
 
 /** "Some of you" / "Others": two faceless learners with thought clouds; `wrong` fades and gets a cross. */
-export const Thoughts: React.FC<{f: number; a: number; left: string; right: string; wrong?: 'left' | 'right'; crossAt?: number}> = ({f, a, left, right, wrong, crossAt = 1e9}) => {
+export const Thoughts: React.FC<{f: number; a: number; b?: number; left: string; right: string; wrong?: 'left' | 'right'; crossAt?: number}> = ({f, a, b, left, right, wrong, crossAt = 1e9}) => {
 	const one = (x: number, label: string, text: string, col: string, k: number, side: 'left' | 'right') => {
-		const p = tw(f, a + k * 20, a + k * 20 + 18);
+		const t0 = k === 1 && b !== undefined ? b : a + k * 20;
+		const p = tw(f, t0, t0 + 18);
 		const out = wrong === side ? tw(f, crossAt, crossAt + 20) : 0;
 		return (
 			<g opacity={p * (1 - 0.55 * out)} transform={`translate(${x}, ${740 + 30 * (1 - p)})`}>
@@ -153,5 +154,13 @@ export const TitleCard: React.FC<{code: string; title: string; sub: string; vers
 		<div style={{fontFamily: FT.hand, fontWeight: 700, fontSize: 72, color: P.soft}}>{sub}</div>
 		<div style={{marginTop: 30, background: '#fff', border: `3px solid ${P.ink}`, borderRadius: 16, padding: '14px 30px', fontFamily: FT.sans, fontWeight: 500, fontSize: 34, color: P.ink}}>{version}</div>
 		<div style={{fontFamily: FT.sans, fontWeight: 500, fontSize: 30, color: P.soft}}>The voice in this lesson is AI-generated · names, ship and amounts are illustrative</div>
+	</div>
+);
+
+/** A trap card: a sticky note with an amber edge, slightly tilted (review_look_v2 "make it great" #5). */
+export const TrapNote: React.FC<{x: number; y: number; w?: number; p?: number; title?: string; children: React.ReactNode}> = ({x, y, w = 1000, p = 1, title = 'TRAP', children}) => (
+	<div style={{position: 'absolute', left: x, top: y + 20 * (1 - p), width: w, opacity: p, transform: `rotate(-1.5deg) scale(${0.96 + 0.04 * p})`, background: '#FFF4C9', borderLeft: `16px solid ${P.gold}`, padding: '24px 36px', boxShadow: '8px 10px 0 rgba(31,42,55,0.15)', fontFamily: FT.sans}}>
+		<div style={{fontWeight: 700, fontSize: 32, letterSpacing: 4, color: '#9A5B00'}}>⚠ {title}</div>
+		<div style={{fontWeight: 700, fontSize: 52, lineHeight: 1.15, color: P.ink, marginTop: 6}}>{children}</div>
 	</div>
 );
