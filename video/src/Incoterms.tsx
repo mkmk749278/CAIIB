@@ -72,9 +72,11 @@ const glowOf = (f: number, keys: string[]) => {
 };
 const STATION_KEYS = [['premises'], ['carrier'], ['alongside'], ['board', 'onboard'], ['arrive'], ['unloaded'], ['cleared', 'customs']];
 // a teacher's note, written left to right while the sentence is spoken, underlined when done
-type Beat = {at: [string, number]; text: string; x: number; y: number; size?: number; color?: string; stack?: string; until?: [string, number]; center?: boolean};
+type Beat = {at: [string, number]; word?: [string, number]; text: string; x: number; y: number; size?: number; color?: string; stack?: string; until?: [string, number]; center?: boolean};
 const BEATS: Beat[] = [];
 const B = (id: string, k: number, text: string, x: number, y: number, o: Partial<Beat> = {}) => BEATS.push({at: [id, k], text, x, y, ...o});
+// anchored to a spoken word instead of a sentence (for sentences the voice splits differently from the script)
+const W = (id: string, word: string, nth: number, text: string, x: number, y: number, o: Partial<Beat> = {}) => BEATS.push({at: [id, 0], word: [word, nth], text, x, y, ...o});
 
 // ---- the beats (Incoterms r4). x, y = top-left of the note on the 1920×1080 page; c = centred on x ----
 const c = {center: true};
@@ -123,7 +125,7 @@ B('N31a', 0, 'quick check', 960, 130, c); B('N31a', 1, 'everyone with me?', 960,
 B('N33', 0, 'look at the road once more', 960, 860, c);
 B('N34', 0, 'a trap the exam likes', 960, 130, c);
 B('N35', 0, 'how many in all?', 960, 160, c); B('N35', 3, 'asked twice in one cycle!', 960, 760, c);
-B('N36a', 1, 'the heaviest part: done', 960, 960, c);
+B('N36a', 1, 'the heaviest part: done ✓', 140, 100); B('N36a', 2, 'eleven rules, one road', 140, 100);
 B('N37', 0, 'who must buy insurance?', 960, 110, c); B('N37', 3, 'the "I" is the clue', 960, 110, c);
 B('N37', 4, 'others: buyer insures, if anyone', 960, 110, c);
 B('N38', 0, 'the 2020 change', 960, 110, c); B('N38', 2, 'all-risks kind', 1000, 640); B('N38', 3, 'basic kind', 200, 640);
@@ -135,9 +137,9 @@ B('N48', 0, 'at the LC desk', 960, 70, c);
 B('N49', 1, 'cover after sailing = no cover', 960, 720, c); B('N49', 2, 'Article 28 again', 960, 720, c);
 B('N49a', 3, 'a quick fit check ✓', 960, 780, c);
 // recap and practice
-B('N51', 1, 'answer before I do!', 960, 900, c);
+B('N51', 1, 'answer before I do!', 960, 800, c);
 B('N53', 2, 'even import duty', 160, 400);
-B('N57', 2, 'all three? very good ✓', 960, 900, c);
+B('N57', 2, 'all three? very good ✓', 960, 800, c); B('N57', 1, '= USD 1,37,940', 160, 760);
 
 // r4 pass 2: every remaining sentence
 B('N00c', 1, 'how many of you?', 960, 470, c);
@@ -147,12 +149,12 @@ B('N07', 1, 'on board → risk is the buyer’s', 960, 120, c); B('N07', 2, 'her
 B('N08', 3, 'the insurance protects the buyer', 960, 120, c);
 B('N10', 0, 'and the buyer?', 140, 830); B('N10', 2, 'he claims from the insurer', 140, 830); B('N10', 3, 'nobody is left holding the loss', 140, 830);
 B('N11', 3, 'like: CIF Rotterdam, Incoterms 2020', 960, 600, c);
-B('N12', 2, '→ where risk passes', 960, 760, c);
+B('N12', 2, '→ where does the seller deliver?', 960, 760, c); W('N12', 'risk', 1, '→ there the RISK passes', 960, 760, c);
 B('N14', 1, 'only if written into the contract', 960, 620, c);
 B('N20', 2, 'the card at the end has it all', 1050, 230);
 B('N22', 3, 'at her premises: she loads too', 1150, 130);
 B('N24', 5, 'freight paid to the destination', 1150, 130);
-B('N26', 2, 'two different points', 960, 900, c); B('N26', 3, '= our Tiruppur case (CIF)', 960, 900, c);
+B('N26', 2, 'two different points', 960, 820, c); B('N26', 3, '= our Tiruppur case (CIF)', 960, 820, c);
 B('N28', 5, 'the most the seller can do', 1150, 130);
 B('N31a', 3, 'CPT: where does risk pass?', 960, 130, {...c, until: ['N31a', 4]});
 B('N32', 5, 'same story as CIF', 1150, 230);
@@ -178,8 +180,20 @@ B('N61a', 0, "you'll know exactly what they mean", 140, 100); B('N62', 1, 'next 
 B('N62a', 0, 'one small homework', 140, 100); B('N62a', 2, 'five minutes', 140, 100); B('N62a', 3, 'then the practice questions', 140, 100);
 B('N62a', 4, 'good night, go and rest', 140, 100); B('N62a', 5, 'see you in the next class!', 140, 100);
 
+// r4 pass 3: sentences the voice splits differently (anchored to a word)
+W('N15', 'exam', 1, 'for your exam: 2020 ✓', 960, 740, c);
+W('N21', 'works', 1, 'Ex Works', 1150, 130); W('N21', 'keeps', 1, 'goods ready at her door', 1150, 130);
+W('N29', 'other', 1, 'DDP: the other end', 1100, 600);
+W('N31', 'free', 1, 'F = free (of the main freight)', 960, 760, c); W('N31', 'gone', 1, 'C = risk already gone', 960, 760, c);
+W('N31', 'destination', 1, 'D = delivered at destination', 960, 760, c);
+W('N38', 'institute', 1, 'Institute Cargo Clauses A', 1000, 760);
+W('N42', 'premium', 1, 'insurance premium: 600', 80, 560);
+W('N48', 'won', 1, '→ no insurance document', 960, 700, c);
+B('N55', 1, 'Delivered at Place Unloaded', 160, 560);
+W('N15a', 'risk', 1, 'risk ≠ cost', 960, 640, c);
+
 const Notes: React.FC<{f: number}> = ({f}) => {
-	const list = BEATS.map((b) => ({...b, t0: sk(b.at[0], b.at[1])})).sort((a, b) => a.t0 - b.t0);
+	const list = BEATS.map((b) => ({...b, t0: b.word ? at(b.at[0], b.word[0], 0.5, b.word[1]) : sk(b.at[0], b.at[1])})).sort((a, b) => a.t0 - b.t0);
 	return (
 		<>
 			{list.map((b, i) => {
@@ -190,14 +204,14 @@ const Notes: React.FC<{f: number}> = ({f}) => {
 				const words = by[b.at[0]].words;
 				// write at the speed of the sentence: finish within 80% of it (12–70 frames)
 				const ks = SENT[b.at[0]], ln = by[b.at[0]];
-				const sEnd = b.at[1] + 1 < ks.length ? ks[b.at[1] + 1] : ln.start + ln.dur;
+				const sEnd = b.word ? Math.min(ln.start + ln.dur, b.t0 + 75) : b.at[1] + 1 < ks.length ? ks[b.at[1] + 1] : ln.start + ln.dur;
 				const spoken = Math.max(12, Math.min(70, 0.8 * (sEnd - b.t0), b.text.length * 2.2));
 				const p = tw(f, b.t0 - 4, b.t0 + spoken, (x) => x);
 				const o = Math.min(tw(f, b.t0 - 6, b.t0 + 6), 1 - tw(f, end, end + XF));
 				void words;
 				return (
 					<div key={i} style={{position: 'absolute', left: b.x, top: b.y, opacity: o, transform: `${b.center ? 'translateX(-50%) ' : ''}rotate(-1.5deg)`, fontFamily: '"Caveat", cursive', fontWeight: 700, fontSize: b.size ?? 58, color: b.color ?? C.text, whiteSpace: 'nowrap'}}>
-						<div style={{clipPath: `inset(-20px ${(1 - p) * 100}% -20px -10px)`}}>{b.text}</div>
+						<div style={{clipPath: `inset(-20px ${(1 - p) * 100}% -20px -10px)`, background: 'linear-gradient(transparent 38%, rgba(242,179,61,0.35) 38%, rgba(242,179,61,0.35) 88%, transparent 88%)', padding: '0 10px'}}>{b.text}</div>
 						<svg width="100%" height={14} viewBox="0 0 100 14" preserveAspectRatio="none" style={{display: 'block', marginTop: -4}}>
 							<path d="M2 9 C 30 3, 70 13, 98 6" stroke="#F2B33D" strokeWidth={6} fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - tw(f, b.t0 + spoken, b.t0 + spoken + 12)} opacity={0.85} />
 						</svg>
@@ -328,7 +342,8 @@ export const Incoterms: React.FC = () => {
 						const lost = during(f, 'N04') ? tw(f, sk('N04', 1), sk('N04', 1) + 70) : 0;
 						return (
 							<>
-								{f < S('N03') ? (
+								{/* r4: the deal cards crossfade into the sea scene (was a hard cut) */}
+								{f < S('N03') + XF ? (<AbsoluteFill style={{opacity: 1 - tw(f, S('N03'), S('N03') + XF)}}>
 									<>
 										<Card x={140} y={240} w={520} h={170} border="#E8A87C"><Label x={30} y={26} size={30} color={C.dim}>Seller · exporter</Label><Label x={30} y={74} size={52} weight={700}>Tiruppur, India</Label></Card>
 										<Card x={1260} y={240} w={520} h={170} border="#7FB8D9" o={tw(f, sk('N01', 2) - 4, sk('N01', 2) + 14)}><Label x={30} y={26} size={30} color={C.dim}>Buyer · importer</Label><Label x={30} y={74} size={52} weight={700}>Rotterdam, NL</Label></Card>
@@ -338,7 +353,8 @@ export const Incoterms: React.FC = () => {
 											<div style={{position: 'absolute', left: 360, top: 690, width: 1200, opacity: tw(f, at('N02', 'like', 0.4) + 8, at('N02', 'like', 0.4) + 24), transform: `rotate(-2deg) scale(${1.15 - 0.15 * tw(f, at('N02', 'like', 0.4) + 8, at('N02', 'like', 0.4) + 24)})`, border: `6px solid ${RISK}`, borderRadius: 18, padding: '18px 0', textAlign: 'center', fontFamily: F.mono, fontWeight: 700, fontSize: 64, color: RISK}}>CIF Rotterdam Incoterms® 2020</div>
 										) : null}
 									</>
-								) : (
+								</AbsoluteFill>) : null}
+								{f >= S('N03') ? (<AbsoluteFill style={{opacity: tw(f, S('N03'), S('N03') + XF)}}>
 									<>
 										<svg style={{position: 'absolute', inset: 0}} width={1920} height={1080}>
 											<Sea f={f} y={720} storm={storm} />
@@ -358,7 +374,7 @@ export const Incoterms: React.FC = () => {
 											</div>
 										) : null}
 									</>
-								)}
+								</AbsoluteFill>) : null}
 								<Tag text="ILLUSTRATIVE · NAMES, SHIP AND AMOUNTS MADE UP" />
 							</>
 						);
@@ -508,9 +524,9 @@ export const Incoterms: React.FC = () => {
 								<Card x={260} y={200} w={1400} h={460} border={C.market}>
 									<Label x={60} y={50} size={46} color={C.dim}>Customs</Label>
 									<Label x={60} y={150} size={56} weight={700} o={tw(f, sk('N30', 1) - 4, sk('N30', 1) + 12)}>Export clearance → SELLER</Label>
-									<Label x={60} y={225} size={40} color={RISK} weight={700}>except EXW (buyer)</Label>
+									<Label x={60} y={225} size={40} color={RISK} weight={700} o={tw(f, at('N30', 'except', 0.4, 1) - 4, at('N30', 'except', 0.4, 1) + 12)}>except EXW (buyer)</Label>
 									<Label x={60} y={310} size={56} weight={700} o={tw(f, sk('N30', 2) - 4, sk('N30', 2) + 12)}>Import clearance → BUYER</Label>
-									<Label x={60} y={385} size={40} color={RISK} weight={700}>except DDP (seller)</Label>
+									<Label x={60} y={385} size={40} color={RISK} weight={700} o={tw(f, at('N30', 'except', 0.8, 2) - 4, at('N30', 'except', 0.8, 2) + 12)}>except DDP (seller)</Label>
 								</Card>
 							)}</Fd> : null}
 							{vis(f, 'N31', 'N31a') ? <Fd o={fo(f, 'N31', 'N31a')}>{(
@@ -561,7 +577,7 @@ export const Incoterms: React.FC = () => {
 								<>
 									<Big y={260} size={170} color={C.market} o={tw(f, sk('N35', 1) - 4, sk('N35', 1) + 12)}>11 = 7 + 4</Big>
 									<Big y={520} size={50} color={C.dim}>“How many Incoterms?” · asked twice in Jul 2024</Big>
-									<Big y={620} size={44} color={RISK} o={tw(f, at('N35', 'thirteen', 0.7), at('N35', 'thirteen', 0.7) + 12)}>13 was Incoterms 2000 ✗</Big>
+									<Big y={620} size={44} color={RISK} o={tw(f, at('N35', '13', 0.7, 2), at('N35', '13', 0.7, 2) + 12)}>13 was Incoterms 2000 ✗</Big>
 								</>
 							)}</Fd> : null}
 							{f >= S('N36') ? (
