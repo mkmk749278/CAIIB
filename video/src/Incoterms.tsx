@@ -175,7 +175,7 @@ B('N54', 0, 'two', 160, 645, {size: 46}); B('N55', 0, 'DPU', 160, 645, {size: 46
 B('N56', 1, 'CIF USD 1,25,400', 160, 645, {size: 46}); B('N56', 2, 'LC silent on the amount', 160, 645, {size: 46});
 B('N57', 0, '1,25,400 × 1.1', 160, 645, {size: 46});
 B('N58', 0, 'the whole lesson, one card', 140, 100, {size: 44}); B('N58', 2, 'risk · costs · customs', 140, 100, {size: 44});
-B('N60', 0, 'step 3', 140, 100); B('N60', 1, 'risk early, cost far', 140, 100); B('N61', 1, 'CIP: the bigger cover', 140, 100);
+B('N60', 0, 'step 3', 140, 100); W('N60', 'rules', 1, 'C rules split!', 140, 100, {size: 76}); B('N60', 1, 'risk early, cost far', 140, 100, {size: 70}); B('N61', 1, 'CIP: the bigger cover', 140, 100);
 B('N61a', 0, 'you know the 3 letters', 140, 100); B('N62', 1, 'next: the LC + UCP', 140, 100);
 B('N62a', 0, 'one small homework', 140, 100); B('N62a', 2, 'five minutes', 140, 100); B('N62a', 3, 'then practice Qs', 140, 100);
 B('N62a', 4, 'go and rest', 140, 100, {size: 70}); B('N62a', 5, 'see you next class!', 140, 100);
