@@ -20,6 +20,9 @@ any new stage. New lessons go into the playbook section they belong to, with the
   Incoterms rebuilt on the v2 kit (shared `theme.ts`/`parts.tsx`/`road.tsx` now draw the v2 look, so A1 changes too
   when resumed); r2 render → Drive `CAIIB/BFM/A07/renders/r2_720p.mp4`. Not yet: sound cues and music bed, camera
   pan across one page.
+  **r2 owner reaction (2026-11-19): not smooth** (audio and picture). Measured: not the 6-runner join; it is our line
+  cutting (fixed 0.35 s gaps, dead silences) and scene switching. Fix = **flow engine, PLAYBOOK §5d** (continuous
+  voice, phrase-bound drawing, one page + camera, no change in silence, live holds, smoothness audit). Building r3.
 - **2026-11-19 (owner): new process.** Fix the exact video order → write a one-page plan for every video → write
   every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
   **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4
