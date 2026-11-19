@@ -24,6 +24,10 @@ a warm-up, check-ins, and the teacher voicing what students think ("some of you�
 - **Illustrative**: the exporter, the buyer, the ship and all amounts are made up and labelled "illustrative".
 - **Say it right**: Incoterms "INN-co-terms"; three-letter rules are spelt letter by letter (written E-X-W in the
   lines so the voice spells them); Tiruppur "thi-ROOP-pur".
+- **Fix 2026-11-19 (before r2)**: N33 said the four sea rules use "the ship's rail" as the point. That concept
+  went out with Incoterms 2010; FAS delivers alongside the ship, FOB/CFR/CIF on board. N33 rewritten; the owner
+  re-records that one line. The risk marker stays a red **baton** on screen (a relay baton handed over), to match
+  the spoken words.
 - **Length**: about 2,450 spoken words (A1 v5 has about 2,500), about 16 minutes with pauses; three chapters,
   each under 6 minutes.
 
@@ -172,9 +176,9 @@ What do you say?
 N32 · When it's handed to the first carrier. Did you get it? Good. Because it's a C rule. The seller pays the
 carriage, but the baton has already gone. Same story as C-I-F.
 
-N33 · Now, look at the road once more. Four of these rules use the ship's rail as the point. F-A-S, F-O-B, C-F-R and
-C-I-F. These four are only for sea and inland waterway transport. The other seven work for any mode, even air, rail
-or road, or more than one together.
+N33 · Now, look at the road once more. Four of these rules use the ship itself as the point. F-A-S, alongside the
+ship. And F-O-B, C-F-R and C-I-F, on board. These four are only for sea and inland waterway transport. The other
+seven work for any mode, even air, rail or road, or more than one together.
 
 N34 · And here's a trap the exam likes. Containers. A container is usually handed over at the container terminal,
 before it goes on board. So for container cargo, ICC says F-C-A and C-I-P fit better than F-O-B and C-I-F.

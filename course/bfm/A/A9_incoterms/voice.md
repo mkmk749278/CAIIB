@@ -89,7 +89,7 @@ So let's go back to Tiruppur. Under C-I-F, the risk passed on board at Chennai. 
 - N31: Easy way to remember the four groups: E for exit, the goods leave from
 - N31a: Okay, quick check. Everyone with me? Let's test it. Under C-P-T, where
 - N32: When it's handed to the first carrier. Did you get it? Good. Because i
-- N33: Now, look at the road once more. Four of these rules use the ship's ra
+- N33: Now, look at the road once more. Four of these rules use the ship itself as the point. F-A-S, alongside the ship. And F-O-B, C-F-R and C-I-F, on board. These four are only for sea and inland waterway transport. The other seven work for any mode, even air, rail or road, or more than one together.
 - N34: And here's a trap the exam likes. Containers. A container is usually h
 - N35: And how many rules in all? Eleven. Seven for any mode, four for sea. T
 - N36: One more thing that changed in twenty twenty. There used to be a rule 
