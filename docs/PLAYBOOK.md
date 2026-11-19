@@ -229,3 +229,10 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   - `CAIIB/BFM/_downloads/`: source documents we fetched (RBI PDFs, IIBF rules), so facts can be re-checked.
   - `CAIIB/BFM/research/`: results from the owner's laptop agents, one dated folder per batch with a `VERDICT.md`
     (Cowork's 2026-11-14 batch moved here from `CAIIB BFM Research/` on 2026-11-19; files unchanged, verdict unchanged).
+- **Rendering on GitHub runners** (owner, 2026-11-19): `.github/workflows/render.yml` (Actions → render → Run
+  workflow, from the GitHub app) pulls a lesson's cut voice lines from Drive, renders the Remotion composition,
+  normalises loudness to -16 LUFS and uploads the MP4 to `CAIIB/BFM/<video>/renders/`, printing the Drive link in the
+  run summary. It needs the **repo secret `GDRIVE_RCLONE_TOKEN`**, set once from Termux (a fresh rclone token straight
+  into the secret, never shown in chat):
+  `pkg install -y gh rclone && { gh auth status >/dev/null 2>&1 || gh auth login -h github.com -p https -w; } && rclone authorize drive | grep -o '{"access_token".*}' | gh secret set GDRIVE_RCLONE_TOKEN -R mkmk749278/CAIIB && gh secret list -R mkmk749278/CAIIB`
+  Same as the Creator repo's render workflows. The cloud session itself uses the environment variable of the same name.

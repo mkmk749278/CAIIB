@@ -1,0 +1,63 @@
+# Render one lesson video on a GitHub runner and put it in Drive (owner, 2026-11-19).
+# Pulls the lesson's cut voice lines from Drive into video/public/<audio_dir>/, renders the Remotion composition,
+# normalises loudness to -16 LUFS, and uploads the MP4 to Drive CAIIB/BFM/<video>/renders/<name>.
+# Needs the repo secret GDRIVE_RCLONE_TOKEN (the owner's rclone Drive token; set from Termux, PLAYBOOK §8).
+# Start it from the GitHub app: Actions → render → Run workflow.
+name: render
+on:
+  workflow_dispatch:
+    inputs:
+      comp:
+        description: "Remotion composition id (e.g. Incoterms, A1)"
+        required: true
+      video:
+        description: "video id = Drive folder under CAIIB/BFM (e.g. A07)"
+        required: true
+      lines:
+        description: "Drive folder with the cut voice lines, under CAIIB/ (e.g. BFM/A07/lines)"
+        required: true
+      audio_dir:
+        description: "where the composition expects them, under video/public (e.g. audio/inc)"
+        required: true
+      scale:
+        description: "0.6666666666666666 = 720p review cut (always first), 1 = 1080p master"
+        default: "0.6666666666666666"
+      name:
+        description: "output file name (e.g. r2_720p.mp4)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    env:
+      GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+    steps:
+      - name: Secret present
+        run: '[ -n "$GDRIVE_RCLONE_TOKEN" ] || { echo "::error::repo secret GDRIVE_RCLONE_TOKEN is missing (PLAYBOOK §8)"; exit 1; }'
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: video/package-lock.json
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          cd video && npm ci
+      - name: Pull voice lines from Drive
+        run: tools/drive/drive.sh pull "${{ inputs.lines }}" "video/public/${{ inputs.audio_dir }}" | tail -3
+      - name: Render
+        run: |
+          cd video
+          npx remotion render src/index.ts "${{ inputs.comp }}" out/raw.mp4 --scale=${{ inputs.scale }} --concurrency=4
+      - name: Loudness to -16 LUFS
+        run: |
+          mkdir -p out
+          ffmpeg -y -v error -i video/out/raw.mp4 -c:v copy -af loudnorm=I=-16:TP=-1.5:LRA=11 -c:a aac -b:a 192k \
+            "out/${{ inputs.name }}"
+      - name: Upload to Drive
+        run: tools/drive/drive.sh push "BFM/${{ inputs.video }}/renders" "out/${{ inputs.name }}" | tee -a "$GITHUB_STEP_SUMMARY"

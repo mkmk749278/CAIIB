@@ -132,6 +132,8 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
   `CAIIB/BFM/<video id>/voice|lines|renders/`, `CAIIB/BFM/_shared/` (sfx, template assets), `CAIIB/BFM/_downloads/`
   (sources), `CAIIB/BFM/research/` (laptop-agent batches with a `VERDICT.md`). Music comes from the shared `Music-Library/`. Details PLAYBOOK §8.
 - Send the owner Drive view links (private, open on the phone), never public shares.
+- **Renders run on GitHub runners**: `.github/workflows/render.yml` → Drive `CAIIB/BFM/<video>/renders/` (repo secret
+  `GDRIVE_RCLONE_TOKEN`, set from Termux; command in PLAYBOOK §8). The cloud session renders only short tests.
 
 ## Layout
 - `docs/PLAYBOOK.md`: origin, market research, method, lesson and PDF design, reasons for every rule.
