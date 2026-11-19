@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, getInputProps, staticFile, useCurrentFrame} from 'remotion';
 import lines from './incoterms_lines.json';
 import {C, F, tw, env} from './theme';
 import {Label, Tag, Card, PauseCard, ChapterCard, Person} from './parts';
@@ -311,9 +311,12 @@ const RULES: Record<string, {name: string; risk: number; cost: number; sea?: boo
 export const Incoterms: React.FC = () => {
 	const f = useCurrentFrame();
 	const ch1 = S('N06a'), ch2 = S('N16'), ch3 = S('N37'), ch4 = S('N50'); // r4: no silent chapter cards
+	// overlap check (tools/video/overlap_check.py): render one layer at a time on white
+	const layer = (getInputProps() as {layer?: string}).layer;
+	const Root: React.FC<{children: React.ReactNode}> = layer ? ({children}) => <AbsoluteFill style={{background: '#fff'}}>{children}</AbsoluteFill> : Page;
 	return (
-		<Page>
-			<Drift f={f}>
+		<Root>
+			{!layer || layer === 'scene' ? <Drift f={f}>
 				{/* ---------------- Warm-up ---------------- */}
 				<Scene a={0} b={S('N01')}>
 					{(f) => (
@@ -761,11 +764,11 @@ export const Incoterms: React.FC = () => {
 						</>
 					)}
 				</Scene>
-				<Notes f={f} />
-			</Drift>
-			<Captions f={f} />
+			</Drift> : null}
+			{!layer || layer === 'notes' ? <Notes f={f} /> : null}
+			{!layer || layer === 'caption' ? <Captions f={f} /> : null}
 			{/* flow engine (PLAYBOOK §5d): one continuous track = the owner's recording + the ducked music bed */}
-			<Audio src={staticFile((lines as unknown as {voice: string}).voice)} />
-		</Page>
+			{!layer ? <Audio src={staticFile((lines as unknown as {voice: string}).voice)} /> : null}
+		</Root>
 	);
 };

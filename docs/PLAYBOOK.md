@@ -158,6 +158,19 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
 - **Say the rule twice in two different ways** (once exact, once as a hook: "In means buy, out means sell").
 - **Signpost like a teacher**: "Now be careful here, this is where people slip", "Don't worry about this now".
 - **Close like a class**: "That's it for today… see you there."
+- **A different greeting and a different goodbye in every video** (owner on Incoterms r4, 2026-11-19: "for each
+  video we do different wishes, different off wishes"). Learners watch at any hour, so the default is time-neutral;
+  "good evening" or "good night" only when the lesson is meant for an evening slot, and never in two videos running.
+  Keep a small register per module (`greeting`, `goodbye` per video, in each script's header) so nothing repeats.
+  Openings to draw from: "Welcome back, everyone." · "Hello, and welcome to today's class." · "Good to see you here
+  again." Closings: "That's it for today, see you in the
+  next class." · "Take care, and keep your calculator handy." · "Well done today, rest a little before the next one." ·
+  "That's the class. Revise the map once, and I'll see you soon." Write new ones; do not copy a provider's sign-off.
+- **Money in the currency the deal uses.** Trade, LC, export and import lessons use US dollars, because Indian trade
+  is mostly invoiced in USD and IIBF's forex and LC sums are set in USD. Say "US dollars" the first time, "dollars"
+  after that, and write "USD" on screen. Rupee lessons (NPA, CRR, capital) use rupees. Indian digit grouping
+  (1,25,400; "one lakh twenty-five thousand") is fine for our audience in both, as long as one video does not mix
+  styles.
 - **Voice choice**: a conversational/educational voice, not a narration one; stability around 35–45% so the pitch
   moves; generate per chapter, not the whole lesson in one block, and listen to the first minute before the rest.
 - Facts, numbers, rule versions and line ids do not change when only the voice style changes.
@@ -277,11 +290,51 @@ should feel sudden changes, glitches, blanks."
      - no camera move or scene change during silence;
      - no frame without something moving for more than 2 s.
 
+## 5e. How a lesson becomes smooth: the r4 method (owner on Incoterms r4, 2026-11-19: "came out very good")
+Four rounds on the Incoterms sample taught the method below. Every lesson is built this way from now on, and the
+checks decide when a cut is ready, not a feeling.
+- **1. Voice, as recorded.** The owner records each part in one take. `tools/video/flow_voice.py` splits the takes
+  only in the middle of natural pauses, opens space only for planned holds (prediction countdowns; no chapter gaps,
+  `timeline.py` CHAPTER={}), swaps in re-recorded lines, and writes the timeline JSON with every word's time. The
+  music bed (shared library, no drums) is looped with crossfades and sidechain-ducked under the voice, then mixed
+  into one `mix.flac` (Drive `CAIIB/BFM/<video>/flow/`). No dead silence anywhere.
+- **2. A beat for every sentence (the cue sheet).** For each script sentence, the picture must answer: either a
+  scene element appears or changes on that sentence (`sk(id, k)` = the frame of the k-th script sentence's first
+  spoken word, matched on two words), or the teacher writes a short note (`B(id, k, text, x, y)`; `W(id, word, nth,
+  …)` when the voice splits a sentence differently from the script, or when a number or a letter-code starts it).
+  Notes are written left to right at the speed of their sentence, with a gold highlighter band, and stay until the
+  next note. Things the voice names light up ("the teacher points": stations, documents). Map moments sit where the
+  voice talks about progress ("that's part one", "deep breath"), and chapter titles slide in while the teacher
+  speaks. From now on every script carries this cue sheet next to its lines, written with the script, not after.
+- **3. No jumps.** Every appearance and disappearance is a crossfade (`vis/fo/Fd`, scenes overlap by 18 frames, never
+  a dip to blank); the page holds still (no constant drift: it hid problems and blurs text on phones); a scene
+  switch is a crossfade, never a hard cut.
+- **4. The checks, every render** (all in `tools/video/`, all must be clean before the owner sees a cut):
+  - `smooth_audit.py`: dead silence over 0.8 s, hard cuts, frozen screens (the planned countdowns are listed, not
+    failed). Runs in `render.yml`.
+  - `sentence_sync.py`: for all 335 sentences, does the picture change between 0.8 s before and 1.5 s after the
+    first word (caption strip ignored), and is there any voice over a picture unchanged for more than 6 s.
+  - `overlap_check.mjs` + `overlap_check.py`: the lesson rendered one layer at a time (scene, notes, caption), one
+    frame per second; flags any second where a note's ink lands on the scene's ink, or the caption box hides scene ink.
+  - `sync_sheet.py`: a frame every second (or every 4 s) with the words being spoken under it, for the owner and for
+    any reviewer who wants to see it rather than read numbers.
+- **What the numbers did** (Incoterms, sentences with no picture change of 335): r3 87 *measured with the drift on,
+  which hid most of them*; r4 candidates 214 → 129 → 51 → 22 → 6 → 1 (borderline, a note is there). Each round:
+  render on the 6 runners (≈7 min), run the checks, fix exactly what they list.
+- **Mistakes that cost a round, so they are rules now:** script sentences and transcript sentences differ ("Okay,
+  notifications on silent" is one spoken sentence, two in the script), so anchor on the script and match two words;
+  a common first word ("The…", "So…") latches onto an earlier one; numbers and spelt codes ("13", "D-D-P") need a
+  word anchor; notes placed in the bottom band collide with the caption and are not measured; note writing speed must
+  follow the sentence, or a short sentence's note is still being written when the next begins.
+
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-19: owner on Incoterms r4: "it's came out very good", with three notes: text overlaps in places (→ the
+  overlap check, §5e), a different greeting and goodbye in every video (→ §5b), and asked whether "dollars" is right
+  (yes for trade lessons, → §5b). The r4 method is §5e.
 - 2026-11-19: owner: "first set up Google Drive… we keep the repo lite… see how the Creator repo accesses Drive for
   large files; secrets are in environment secrets." Done the Creator way (rclone, refresh token in the environment
   variable `GDRIVE_RCLONE_TOKEN`, pinned rclone fetched on first use); §8.
