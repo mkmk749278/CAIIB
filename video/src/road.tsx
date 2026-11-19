@@ -32,15 +32,16 @@ export type RoadProps = {
 	rule?: string | null; // v2: the rule on screen, for the cost label and the C-rule bracket
 	rp?: number; // flow: baton hand-over progress 0..1
 	cp?: number; // flow: cost line draw progress 0..1 (across the phrase)
+	glow?: number[]; // r4: a station glows when the voice names it
 };
 
 // v2 (PLAYBOOK §5c): the r1 Road API, drawn as the journey from kit/journey.tsx
-export const Road: React.FC<RoadProps> = ({reveal = 7, baton = null, costTo = null, hi = [], note, o = 1, dimSea, rule, rp = 1, cp = 1}) => {
+export const Road: React.FC<RoadProps> = ({reveal = 7, baton = null, costTo = null, hi = [], note, o = 1, dimSea, rule, rp = 1, cp = 1, glow}) => {
 	const cRule = !!rule && rule[0] === 'C';
 	const costLabel = cRule ? (['CPT', 'CIP'].includes(rule as string) ? 'carriage to the named place' : 'freight to the port of destination') : undefined;
 	return (
 		<div style={{position: 'absolute', inset: 0, opacity: o}}>
-			<Journey reveal={reveal} risk={baton ?? undefined} cost={costTo ?? undefined} highlight={hi[0]} anyMode={dimSea} split={cRule && baton !== null && costTo !== null ? tw(cp, 0.7, 1) : 0} costLabel={costLabel} rp={rp} cp={cp} />
+			<Journey reveal={reveal} risk={baton ?? undefined} cost={costTo ?? undefined} highlight={hi[0]} anyMode={dimSea} split={cRule && baton !== null && costTo !== null ? tw(cp, 0.7, 1) : 0} costLabel={costLabel} rp={rp} cp={cp} glow={glow} />
 			{note ? <div style={{position: 'absolute', left: 140, right: 140, top: 880, textAlign: 'center', fontFamily: F.sans, fontWeight: 700, fontSize: 40, color: C.text}}>{note}</div> : null}
 		</div>
 	);
@@ -68,8 +69,8 @@ export const Thoughts: React.FC<{f: number; from: number; to: number; a: string;
 };
 
 // ---------- trade documents ----------
-export const Doc: React.FC<{x: number; y: number; title: string; sub?: string; o?: number; s?: number; tint?: string}> = ({x, y, title, sub, o = 1, s = 1, tint = '#FFFFFF'}) => (
-	<div style={{position: 'absolute', left: x, top: y, width: 230, height: 290, opacity: o, transform: `scale(${s})`, transformOrigin: 'center', background: tint, borderRadius: 14, padding: 20, boxSizing: 'border-box', border: '3px solid #1F2A37', boxShadow: '6px 6px 0 rgba(31,42,55,0.15)', color: C.ink, fontFamily: F.sans}}>
+export const Doc: React.FC<{x: number; y: number; title: string; sub?: string; o?: number; s?: number; tint?: string; glow?: number}> = ({x, y, title, sub, o = 1, s = 1, tint = '#FFFFFF', glow = 0}) => (
+	<div style={{position: 'absolute', left: x, top: y, width: 230, height: 290, opacity: o, transform: `scale(${s})`, transformOrigin: 'center', background: tint, borderRadius: 14, padding: 20, boxSizing: 'border-box', border: '3px solid #1F2A37', boxShadow: `6px 6px 0 rgba(31,42,55,0.15), 0 0 0 ${10 * glow}px rgba(242,179,61,${0.8 * glow})`, translate: `0 ${-10 * glow}px`, color: C.ink, fontFamily: F.sans}}>
 		<div style={{fontWeight: 700, fontSize: 30, lineHeight: 1.1}}>{title}</div>
 		{sub ? <div style={{fontSize: 22, marginTop: 6, color: '#5B6675'}}>{sub}</div> : null}
 		{[0, 1, 2, 3, 4].map((i) => <div key={i} style={{height: 8, background: '#C9C1B3', borderRadius: 4, marginTop: 18, width: `${90 - i * 12}%`}} />)}

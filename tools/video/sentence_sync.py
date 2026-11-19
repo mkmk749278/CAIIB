@@ -2,7 +2,8 @@
 
 Usage: python3 tools/video/sentence_sync.py <video.mp4> <timeline.json> [window=1.5] [threshold=0.6]
 For every spoken sentence (from the word timings; a sentence starts after a word ending in . ? !), it measures how
-much the picture changes between 0.3 s before and <window> s after the first word. A sentence with no visible change
+much the picture changes between 0.8 s before (a line's picture may land in the pause just before its first word)
+and <window> s after the first word. A sentence with no visible change
 is listed as "picture did not move": the screen still shows the previous idea while the voice says a new one.
 The caption strip (bottom 16%) is ignored: it changes with every word. It also prints, second by second, the seconds where the voice speaks but the picture has not changed for more than
 6 s (a long static picture under a moving voice). Exit 1 if anything is listed.
@@ -36,8 +37,8 @@ def main(video, tl, window=1.5, thr=0.6):
         return sum(abs(x - y) for x, y in zip(fr[a], fr[b])) / n
     dead = []
     for t, lid, txt in sents:
-        a = round((t - 0.3) * FPS)
-        ch = max(diff(a, a + k) for k in range(1, round((window + 0.3) * FPS) + 1))
+        a = round((t - 0.8) * FPS)
+        ch = max(diff(a, a + k) for k in range(1, round((window + 0.8) * FPS) + 1))
         if ch < thr:
             dead.append((t, lid, txt, ch))
     print(f'sentences: {len(sents)}; picture did not move within {window} s: {len(dead)}')

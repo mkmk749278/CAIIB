@@ -53,7 +53,14 @@ def main(video, tl=None):
             if run0 is not None and (i - run0) / FPS > 4:
                 still.append((run0 / FPS, (i - run0) / FPS))
             run0 = None
-    print(f'3. frozen > 4 s: {len(still)}', ' '.join(f'{mmss(a)}({b:.0f}s)' for a, b in still[:20]))
+    # planned pause holds (prediction countdowns) only move the countdown ring: listed, not failed
+    holds = []
+    if tl:
+        holds = [(g['start'] / d['fps'] - 1.0, (g['start'] + g['dur']) / d['fps'] + 1.0) for g in d.get('gaps', [])]
+    planned = [(a, b) for a, b in still if any(h0 <= a and a + b <= h1 + 1.5 for h0, h1 in holds)]
+    still = [x for x in still if x not in planned]
+    print(f'3. frozen > 4 s: {len(still)}', ' '.join(f'{mmss(a)}({b:.0f}s)' for a, b in still[:20]),
+          f'| inside planned pause countdowns (not failed): {len(planned)}')
     bad += len(still)
     print('PASS' if not bad else f'FAIL ({bad} issues)')
     return 1 if bad else 0
