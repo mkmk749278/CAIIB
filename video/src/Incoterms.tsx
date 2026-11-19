@@ -762,7 +762,7 @@ export const Incoterms: React.FC = () => {
 						<>
 							<GrowMap {...MAP} shown={6} />
 							<Label x={140} y={40} size={30} color={C.dim}>NEXT CLASS · the LC and the UCP articles the exam asks</Label>
-							{f >= S('N62a') ? <Note x={1380} y={14} size={50} color={P.risk} rot={-4} p={tw(f, sk('N62a', 1) - 4, sk('N62a', 1) + 30)}>draw the road tonight!</Note> : null}
+							{f >= S('N62a') ? <Note x={140} y={190} size={50} color={P.risk} rot={-4} p={tw(f, sk('N62a', 1) - 4, sk('N62a', 1) + 30)}>draw the road tonight!</Note> : null}
 						</>
 					)}
 				</Scene>
