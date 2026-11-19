@@ -1,6 +1,6 @@
 """Sync sheet: does the picture match what the voice is saying at that moment? (PLAYBOOK §5d)
 
-Usage: python3 tools/video/sync_sheet.py <video.mp4> <timeline.json> <out_prefix> [every_seconds=4]
+Usage: python3 tools/video/sync_sheet.py <video.mp4> <timeline.json> <out_prefix> [every_seconds=4] [from_s] [to_s]
 Takes a frame every N seconds and writes, under each, the time and the words being spoken in the 3 seconds around it
 (or "— silence: hold / chapter —"). Tiles 12 per sheet (<out_prefix>_01.png …) for a reviewer to read.
 """
@@ -9,6 +9,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 video, tl, out = sys.argv[1:4]
 every = float(sys.argv[4]) if len(sys.argv) > 4 else 4.0
+t_from = float(sys.argv[5]) if len(sys.argv) > 5 else 1.0
+t_to = float(sys.argv[6]) if len(sys.argv) > 6 else None
 d = json.load(open(tl)); fps = d['fps']
 words = [(l['start'] + f) / fps for l in d['lines'] for _, f in l['words']]
 wtext = [w for l in d['lines'] for w, _ in l['words']]
@@ -16,8 +18,8 @@ dur = d['durationInFrames'] / fps
 font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 17)
 W, H = 480, 270
 tiles = []
-t = 1.0
-while t < dur:
+t = t_from
+while t < (t_to or dur):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-ss', f'{t:.2f}', '-i', video, '-frames:v', '1', '-vf', f'scale={W}:{H}',
                           '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True).stdout
     if len(raw) < W * H * 3:

@@ -32,6 +32,12 @@ any new stage. New lessons go into the playbook section they belong to, with the
   silence. **Next (r4): a cue sheet per lesson**: every sentence gets its own visual beat, anchored to its words, so
   the picture always shows what is being said; chapter titles slide in while the teacher speaks (no silent chapter
   cards); pause holds only for prediction prompts, kept alive. Cue sheets become part of every script from now on.
+  **r4 done (2026-11-19, Drive `A07/renders/r4_720p.mp4`):** no silent chapter gaps (`timeline.py` CHAPTER={}),
+  chapter strip, title steps back, no wobble, **notes layer** (`B(id, k, …)` per script sentence, `W(id, word, nth, …)`
+  per spoken word; ~170 notes written at sentence speed with a highlighter band), stations/documents glow when named,
+  sentence-timed scene elements, map moments at N15a/b, N36a and the recap. Checks (owner: "check every second"):
+  `sentence_sync.py` 1 of 335 sentences borderline (0.36 vs 0.4, a note appears), 1 stretch of 6 s; `smooth_audit.py`
+  PASS (0 dead silence, 0 cuts, 0 freezes outside the 4 planned countdowns). Waiting for the owner's reaction.
 - **2026-11-19 (owner): new process.** Fix the exact video order → write a one-page plan for every video → write
   every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
   **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4
