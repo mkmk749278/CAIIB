@@ -99,7 +99,7 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 				if (v <= 0) return null;
 				return (
 					<g key={i} opacity={v}>
-						{glow && glow[i] > 0 ? <circle cx={s.x} cy={BASE + 120} r={30 + 14 * glow[i]} fill="#F2B33D" opacity={0.75 * glow[i]} /> : null}
+						{glow && glow[i] > 0 ? <circle cx={s.x} cy={BASE + 120} r={30 + 34 * glow[i]} fill="#F2B33D" opacity={0.85 * glow[i]} /> : null}
 						<circle cx={s.x} cy={BASE + 120} r={hot ? 24 : 20} fill={hot ? P.ink : '#fff'} stroke={P.ink} strokeWidth={4} />
 						<text x={s.x} y={BASE + 130} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={26} fill={hot ? '#fff' : P.ink}>{i + 1}</text>
 						<text x={s.x} y={BASE + 182} textAnchor="middle" fontFamily={FT.sans} fontWeight={hot ? 700 : 600} fontSize={32} fill={P.ink}>{s.label}</text>
