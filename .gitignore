@@ -4,3 +4,5 @@ __pycache__/
 video/public/audio/
 video/out/
 video/node_modules/
+.cache/
+scratch/

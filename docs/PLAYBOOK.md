@@ -190,6 +190,9 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-19: owner: "first set up Google Drive… we keep the repo lite… see how the Creator repo accesses Drive for
+  large files; secrets are in environment secrets." Done the Creator way (rclone, refresh token in the environment
+  variable `GDRIVE_RCLONE_TOKEN`, pinned rclone fetched on first use); §8.
 - 2026-11-19: owner: "prepare the exact order… then a plan for every video… total script for each video… lock all
   the videos… then build one by one; if anything changes, adjust the scripts." Why it is right: videos call back to
   each other (the counter, the road, "as you saw in A05"), so writing every script before building catches gaps and
@@ -207,3 +210,21 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   rate-limited; the owner's laptop tools (Cowork, Gemini, Antigravity) only for what no cloud session can do.
 - 2026-11-14: start with CAIIB BFM. Evidence-based Importance Map instead of copying a course. Synthetic voice is
   acceptable, honestly handled. Repo `mkmk749278/CAIIB` created with `main`; work lands by PR merged the same day.
+
+## 8. Drive: where media lives (2026-11-19)
+- **Why**: git is for text that changes and gets reviewed. Audio, renders and PDFs are big, binary and replaced
+  whole; in git they bloat every clone forever. Cloud containers are wiped, so media must live somewhere durable that
+  opens on the owner's phone: Drive.
+- **How**: `tools/drive/drive.sh` (rclone v1.71.1 downloaded into gitignored `.cache/`; token from the environment
+  variable `GDRIVE_RCLONE_TOKEN`, rebuilt from its refresh token because the app's variable field can strip the JSON).
+  Root = Drive folder `CAIIB/` (id in the script). Large files go up with rclone; the Drive connector can carry small
+  text files only.
+- **Layout**
+  - `CAIIB/_inbox/`: anything the owner sends from the phone (voice parts, screenshots, PDFs); Claude files it.
+  - `CAIIB/BFM/<video id>/voice/`: the owner's generated audio (e.g. `A07/voice/incoterms_1.mp3`); `lines/`: cut
+    lines and word timings; `renders/`: review cuts (`r1_720p.mp4`) and masters. Video ids follow
+    `research/bfm/course_plan.md` v2 (A01, A07…), even where the repo folder keeps an older name (`A/A1`,
+    `A/A9_incoterms`).
+  - `CAIIB/BFM/_shared/`: sound effects and template assets; music from the shared `Music-Library/` (Creator).
+  - `CAIIB/BFM/_downloads/`: source documents we fetched (RBI PDFs, IIBF rules), so facts can be re-checked.
+- The older folder `CAIIB BFM Research/` (Cowork's first inbox batch, 2026-11-14) is left where it is.
