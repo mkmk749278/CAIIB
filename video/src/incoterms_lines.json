@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 31265,
+ "durationInFrames": 31369,
  "lines": [
   {
    "id": "N00a",
@@ -6482,243 +6482,267 @@
   {
    "id": "N33",
    "speaker": "teacher",
-   "text": "Now, look at the road once more. Four of these rules use the ship's rail as the point. F-A-S, F-O-B, C-F-R and C-I-F. These four are only for sea and inland waterway transport. The other seven work for any mode, even air, rail or road, or more than one together.",
+   "text": "Now, look at the road once more. Four of these rules use the ship itself as the point. F-A-S, alongside the ship. And F-O-B, C-F-R and C-I-F, on board. These four are only for sea and inland waterway transport. The other seven work for any mode, even air, rail or road, or more than one together.",
    "start": 17794,
-   "dur": 663,
+   "dur": 766,
    "hold": 0,
    "audio": "audio/inc/N33.mp3",
    "words": [
     [
      "Now",
-     7
+     6
     ],
     [
      "look",
-     12
+     14
     ],
     [
      "at",
-     22
+     29
     ],
     [
      "the",
-     27
+     34
     ],
     [
      "road",
-     30
-    ],
-    [
-     "once",
      37
     ],
     [
+     "once",
+     44
+    ],
+    [
      "more.",
-     46
+     52
     ],
     [
      "Four",
-     72
+     87
     ],
     [
      "of",
-     76
+     91
     ],
     [
      "these",
-     81
+     96
     ],
     [
      "rules",
-     88
+     103
     ],
     [
      "use",
-     97
+     112
     ],
     [
      "the",
-     109
+     124
     ],
     [
-     "ship's",
-     116
+     "ship",
+     130
     ],
     [
-     "rail",
-     129
+     "itself",
+     141
     ],
     [
      "as",
-     135
+     157
     ],
     [
      "the",
-     143
+     167
     ],
     [
      "point.",
-     148
+     172
     ],
     [
      "F",
-     176
+     204
     ],
     [
-     "A",
-     176
+     "-A",
+     206
     ],
     [
-     "S",
-     194
+     "-S",
+     222
     ],
     [
-     "F",
-     214
+     "alongside",
+     238
     ],
     [
-     "O",
-     232
+     "the",
+     257
     ],
     [
-     "B",
-     250
-    ],
-    [
-     "C",
-     261
-    ],
-    [
-     "F",
-     280
-    ],
-    [
-     "R",
-     294
+     "ship,",
+     271
     ],
     [
      "and",
-     309
+     286
     ],
     [
-     "C",
-     321
+     "F",
+     305
     ],
     [
-     "I",
+     "-O",
+     317
+    ],
+    [
+     "-B",
+     325
+    ],
+    [
+     "-C,",
      331
     ],
     [
-     "F.",
-     342
+     "F",
+     356
     ],
     [
-     "These",
-     363
-    ],
-    [
-     "four",
-     374
-    ],
-    [
-     "are",
-     384
-    ],
-    [
-     "only",
-     392
-    ],
-    [
-     "for",
-     404
-    ],
-    [
-     "C",
-     411
+     "-R",
+     358
     ],
     [
      "and",
-     422
+     370
     ],
     [
-     "inland",
-     432
+     "C",
+     379
     ],
     [
-     "waterway",
-     444
+     "-I",
+     388
     ],
     [
-     "transport.",
-     460
+     "-F",
+     393
     ],
     [
-     "The",
-     486
+     "on",
+     404
     ],
     [
-     "other",
-     489
+     "board.",
+     421
     ],
     [
-     "seven",
-     498
+     "These",
+     452
     ],
     [
-     "work",
-     507
+     "four",
+     461
+    ],
+    [
+     "are",
+     470
+    ],
+    [
+     "only",
+     479
     ],
     [
      "for",
-     518
+     491
     ],
     [
-     "any",
-     525
+     "sea",
+     498
     ],
     [
-     "mode,",
-     534
+     "and",
+     511
     ],
     [
-     "even",
-     554
+     "inland",
+     519
     ],
     [
-     "air,",
-     558
+     "waterway",
+     533
     ],
     [
-     "rail",
+     "transport.",
+     548
+    ],
+    [
+     "The",
+     582
+    ],
+    [
+     "other",
      586
     ],
     [
-     "or",
-     588
+     "seven",
+     594
     ],
     [
-     "road,",
-     598
+     "work",
+     603
     ],
     [
-     "or",
+     "for",
      614
     ],
     [
-     "more",
+     "any",
      622
     ],
     [
+     "mode,",
+     630
+    ],
+    [
+     "even",
+     652
+    ],
+    [
+     "air,",
+     656
+    ],
+    [
+     "rail",
+     677
+    ],
+    [
+     "or",
+     688
+    ],
+    [
+     "road",
+     698
+    ],
+    [
+     "or",
+     710
+    ],
+    [
+     "more",
+     724
+    ],
+    [
      "than",
-     632
+     733
     ],
     [
      "one",
-     638
+     739
     ],
     [
      "together.",
-     644
+     745
     ]
    ]
   },
@@ -6726,7 +6750,7 @@
    "id": "N34",
    "speaker": "teacher",
    "text": "And here's a trap the exam likes. Containers. A container is usually handed over at the container terminal, before it goes on board. So for container cargo, ICC says F-C-A and C-I-P fit better than F-O-B and C-I-F.",
-   "start": 18467,
+   "start": 18571,
    "dur": 527,
    "hold": 0,
    "audio": "audio/inc/N34.mp3",
@@ -6921,7 +6945,7 @@
    "id": "N35",
    "speaker": "teacher",
    "text": "And how many rules in all? Eleven. Seven for any mode, four for sea. That exact question, \"how many Incoterms\", came up twice in one exam cycle. Don't let anyone tell you thirteen. Thirteen was the old two thousand set.",
-   "start": 19005,
+   "start": 19108,
    "dur": 455,
    "hold": 0,
    "audio": "audio/inc/N35.mp3",
@@ -7088,7 +7112,7 @@
    "id": "N36",
    "speaker": "teacher",
    "text": "One more thing that changed in twenty twenty. There used to be a rule called D-A-T, Delivered at Terminal. In twenty twenty it became D-P-U, because now the goods can be unloaded at any place, not only a terminal.",
-   "start": 19471,
+   "start": 19574,
    "dur": 436,
    "hold": 30,
    "audio": "audio/inc/N36.mp3",
@@ -7263,7 +7287,7 @@
    "id": "N36a",
    "speaker": "teacher",
    "text": "Okay, deep breath. That was the heaviest part, and you're through it. Eleven rules, one road. Now let's come to the part that touches your desk at the branch: insurance and the LC.",
-   "start": 19947,
+   "start": 20050,
    "dur": 379,
    "hold": 0,
    "audio": "audio/inc/N36a.mp3",
@@ -7410,7 +7434,7 @@
    "id": "N37",
    "speaker": "teacher",
    "text": "So, in which rules does the seller have to buy insurance? Only two. C-I-F and C-I-P. The \"I\" in the name is the clue. In every other rule, if anybody insures the goods, it's the buyer, for his own protection.",
-   "start": 20411,
+   "start": 20514,
    "dur": 466,
    "hold": 0,
    "audio": "audio/inc/N37.mp3",
@@ -7581,7 +7605,7 @@
    "id": "N38",
    "speaker": "teacher",
    "text": "And here's the twenty twenty change everybody asks about. Under C-I-P, the seller must buy wide cover, the Institute Cargo Clauses A. That's the all-risks kind. Under C-I-F, the minimum is still Clauses C, the basic kind. Unless the parties agree something else.",
-   "start": 20888,
+   "start": 20991,
    "dur": 570,
    "hold": 0,
    "audio": "audio/inc/N38.mp3",
@@ -7760,7 +7784,7 @@
    "id": "N39",
    "speaker": "teacher",
    "text": "Why the difference? ICC's thinking is this. C-I-F is used a lot for bulk commodities at sea, where basic cover is the custom. C-I-P is used more for manufactured goods. So C-I-P got the bigger umbrella.",
-   "start": 21468,
+   "start": 21571,
    "dur": 466,
    "hold": 0,
    "audio": "audio/inc/N39.mp3",
@@ -7915,7 +7939,7 @@
    "id": "N40",
    "speaker": "teacher",
    "text": "And how much cover? At least one hundred and ten percent of the contract price. Not one hundred. One hundred and ten. And the cover must be in the currency of the contract.",
-   "start": 21944,
+   "start": 22047,
    "dur": 331,
    "hold": 0,
    "audio": "audio/inc/N40.mp3",
@@ -8030,7 +8054,7 @@
    "id": "N41",
    "speaker": "teacher",
    "text": "The LC side says the same thing. Under UCP six hundred, article twenty-eight, if the LC is silent on the amount, the cover must be at least one hundred and ten percent of the C-I-F or C-I-P value.",
-   "start": 22285,
+   "start": 22389,
    "dur": 404,
    "hold": 0,
    "audio": "audio/inc/N41.mp3",
@@ -8177,7 +8201,7 @@
    "id": "N42",
    "speaker": "teacher",
    "text": "Okay, calculators out. Our exporter's price. Her goods on board at Chennai cost forty-five thousand dollars. That's her F-O-B value. Sea freight to Rotterdam, two thousand four hundred. Insurance premium, six hundred.",
-   "start": 22699,
+   "start": 22803,
    "dur": 426,
    "hold": 0,
    "audio": "audio/inc/N42.mp3",
@@ -8296,7 +8320,7 @@
    "id": "N43",
    "speaker": "teacher",
    "text": "Add them up. Forty-five thousand, plus two thousand four hundred, plus six hundred. Forty-eight thousand dollars. That's her C-I-F price. Cost, plus insurance, plus freight. The name is the formula.",
-   "start": 23135,
+   "start": 23239,
    "dur": 402,
    "hold": 0,
    "audio": "audio/inc/N43.mp3",
@@ -8415,7 +8439,7 @@
    "id": "N44",
    "speaker": "teacher",
    "text": "Now the minimum insurance cover. Forty-eight thousand, into one point one, equals. Fifty-two thousand eight hundred dollars. Simple. The same multiplier habit as before, no percent key needed.",
-   "start": 23548,
+   "start": 23651,
    "dur": 386,
    "hold": 30,
    "audio": "audio/inc/N44.mp3",
@@ -8526,7 +8550,7 @@
    "id": "N45",
    "speaker": "teacher",
    "text": "Your turn. A C-I-P price of thirty thousand euros. What's the minimum cover? Pause the video and press the keys.",
-   "start": 23975,
+   "start": 24078,
    "dur": 228,
    "hold": 450,
    "audio": "audio/inc/N45.mp3",
@@ -8617,7 +8641,7 @@
    "id": "N46",
    "speaker": "teacher",
    "text": "Done? Thirty thousand, into one point one. Thirty-three thousand euros. Did you get it? Great.",
-   "start": 24663,
+   "start": 24767,
    "dur": 211,
    "hold": 0,
    "audio": "audio/inc/N46.mp3",
@@ -8684,7 +8708,7 @@
    "id": "N47",
    "speaker": "teacher",
    "text": "Now be careful here, this is where people slip. Some of you will take one hundred and ten percent of the F-O-B value. That's wrong. The base is the C-I-F or C-I-P value. On our numbers, F-O-B would give you forty-nine thousand five hundred. Wrong option.",
-   "start": 24885,
+   "start": 24988,
    "dur": 518,
    "hold": 0,
    "audio": "audio/inc/N47.mp3",
@@ -8859,7 +8883,7 @@
    "id": "N48",
    "speaker": "teacher",
    "text": "Now think about what this means at the LC desk. If the LC says C-I-F or C-I-P, the seller's documents must include an insurance document. If it says F-O-B or F-C-A, the buyer insures, so the seller won't send one.",
-   "start": 25413,
+   "start": 25517,
    "dur": 469,
    "hold": 0,
    "audio": "audio/inc/N48.mp3",
@@ -9030,7 +9054,7 @@
    "id": "N49",
    "speaker": "teacher",
    "text": "And the insurance document must not be dated after the shipment date, unless it shows the cover started by then. Cover that starts after the goods have sailed is no cover at all. That's also article twenty-eight.",
-   "start": 25893,
+   "start": 25996,
    "dur": 382,
    "hold": 0,
    "audio": "audio/inc/N49.mp3",
@@ -9189,7 +9213,7 @@
    "id": "N49a",
    "speaker": "teacher",
    "text": "And the bill of lading usually tells you who paid the freight. Under C and D rules you'd usually see \"freight prepaid\". Under F rules, \"freight collect\". It's a quick way to see whether the documents fit the term.",
-   "start": 26286,
+   "start": 26389,
    "dur": 412,
    "hold": 0,
    "audio": "audio/inc/N49a.mp3",
@@ -9356,7 +9380,7 @@
    "id": "N50",
    "speaker": "teacher",
    "text": "So let's go back to Tiruppur. Under C-I-F, the risk passed on board at Chennai. Her documents comply, so the LC pays her. The buyer claims on the insurance. Her lost container is the buyer's problem, and the buyer is covered.",
-   "start": 26784,
+   "start": 26887,
    "dur": 465,
    "hold": 30,
    "audio": "audio/inc/N50.mp3",
@@ -9531,7 +9555,7 @@
    "id": "N51",
    "speaker": "teacher",
    "text": "Okay, three quick questions before we finish. Answer each one before I do.",
-   "start": 27289,
+   "start": 27392,
    "dur": 168,
    "hold": 0,
    "audio": "audio/inc/N51.mp3",
@@ -9594,7 +9618,7 @@
    "id": "N52",
    "speaker": "teacher",
    "text": "One. Under which rule does the seller carry the most obligations?",
-   "start": 27467,
+   "start": 27571,
    "dur": 129,
    "hold": 120,
    "audio": "audio/inc/N52.mp3",
@@ -9649,7 +9673,7 @@
    "id": "N53",
    "speaker": "teacher",
    "text": "D-D-P. Delivered Duty Paid. Even import duty.",
-   "start": 27727,
+   "start": 27830,
    "dur": 138,
    "hold": 0,
    "audio": "audio/inc/N53.mp3",
@@ -9688,7 +9712,7 @@
    "id": "N54",
    "speaker": "teacher",
    "text": "Two. Which rule replaced D-A-T in twenty twenty?",
-   "start": 27875,
+   "start": 27979,
    "dur": 124,
    "hold": 120,
    "audio": "audio/inc/N54.mp3",
@@ -9727,7 +9751,7 @@
    "id": "N55",
    "speaker": "teacher",
    "text": "D-P-U. Delivered at Place Unloaded.",
-   "start": 28130,
+   "start": 28233,
    "dur": 102,
    "hold": 0,
    "audio": "audio/inc/N55.mp3",
@@ -9758,7 +9782,7 @@
    "id": "N56",
    "speaker": "teacher",
    "text": "Three. A C-I-F price of one lakh twenty-five thousand four hundred dollars. The LC says nothing about the insurance amount. What's the minimum cover?",
-   "start": 28242,
+   "start": 28345,
    "dur": 299,
    "hold": 360,
    "audio": "audio/inc/N56.mp3",
@@ -9849,7 +9873,7 @@
    "id": "N57",
    "speaker": "teacher",
    "text": "One lakh twenty-five thousand four hundred, into one point one. One lakh thirty-seven thousand nine hundred and forty dollars. Did you get all three? Very good.",
-   "start": 28912,
+   "start": 29015,
    "dur": 295,
    "hold": 0,
    "audio": "audio/inc/N57.mp3",
@@ -9924,7 +9948,7 @@
    "id": "N58",
    "speaker": "teacher",
    "text": "So here's the whole lesson on one card. Step one: three letters decide three things. Where risk passes, who pays, who clears customs.",
-   "start": 29218,
+   "start": 29321,
    "dur": 289,
    "hold": 0,
    "audio": "audio/inc/N58.mp3",
@@ -10027,7 +10051,7 @@
    "id": "N59",
    "speaker": "teacher",
    "text": "Step two: put the rule on the road. E at the seller's door, F at the carrier or the ship, D at the buyer's end.",
-   "start": 29518,
+   "start": 29621,
    "dur": 247,
    "hold": 0,
    "audio": "audio/inc/N59.mp3",
@@ -10138,7 +10162,7 @@
    "id": "N60",
    "speaker": "teacher",
    "text": "Step three: for C rules, the baton and the blue line split. The risk goes early, the cost goes all the way.",
-   "start": 29775,
+   "start": 29878,
    "dur": 224,
    "hold": 0,
    "audio": "audio/inc/N60.mp3",
@@ -10237,7 +10261,7 @@
    "id": "N61",
    "speaker": "teacher",
    "text": "And for insurance: only C-I-F and C-I-P, at least one hundred and ten percent. C-I-P with the bigger cover.",
-   "start": 30010,
+   "start": 30113,
    "dur": 255,
    "hold": 0,
    "audio": "audio/inc/N61.mp3",
@@ -10308,7 +10332,7 @@
    "id": "N61a",
    "speaker": "teacher",
    "text": "So next time an LC lands on your desk with three letters on it, you'll know exactly what they mean.",
-   "start": 30275,
+   "start": 30378,
    "dur": 183,
    "hold": 30,
    "audio": "audio/inc/N61a.mp3",
@@ -10399,7 +10423,7 @@
    "id": "N62",
    "speaker": "teacher",
    "text": "That's it for today. Next class, we open the LC itself, and the UCP articles the exam keeps asking.",
-   "start": 30498,
+   "start": 30601,
    "dur": 216,
    "hold": 0,
    "audio": "audio/inc/N62.mp3",
@@ -10486,7 +10510,7 @@
    "id": "N62a",
    "speaker": "teacher",
    "text": "One small homework. Draw the road once tonight, from memory, and put all eleven rules on it. Five minutes. Then do the practice questions. Okay, good night everyone, go and rest. See you in the next class.",
-   "start": 30725,
+   "start": 30828,
    "dur": 395,
    "hold": 90,
    "audio": "audio/inc/N62a.mp3",

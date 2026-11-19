@@ -12,20 +12,21 @@ export const loadFonts = () =>
 		loadFont({family: 'Caveat', url: staticFile('fonts/caveat-latin-700-normal.woff2'), weight: '700'}),
 	]);
 
+// v2 look (2026-11-19, PLAYBOOK §5c): a notebook page. Shared by every lesson; kit/look.tsx has the full palette.
 export const C = {
-	bg: '#0D1520',
-	bg2: '#121D2B',
-	card: '#182638',
-	line: '#2A3B52',
-	text: '#F2F5F9',
-	dim: '#93A3B8',
-	buy: '#38D996', // bank BUYS: always with an inward arrow and the word BUY
-	sell: '#FF6B6B', // bank SELLS: always with an outward arrow and the word SELL
-	undo: '#FFB547', // reversing a deal
-	market: '#5AA9FF',
-	meera: '#C7A6FF',
-	paper: '#F5EFE3',
-	ink: '#1B2430',
+	bg: '#EDE3CC',
+	bg2: '#E4D8BD',
+	card: '#FFFFFF',
+	line: '#CDBF9F',
+	text: '#1F2A37',
+	dim: '#4E5968',
+	buy: '#2E9E5B', // bank BUYS: always with an inward arrow and the word BUY
+	sell: '#D93A30', // bank SELLS: always with an outward arrow and the word SELL
+	undo: '#B8650A', // reversing a deal / the C-rule split (dark amber, readable on paper)
+	market: '#8A5A1E', // neutral emphasis (dark gold-brown), not a signal colour
+	meera: '#7A4FB8',
+	paper: '#FFFFFF',
+	ink: '#1F2A37',
 };
 
 export const F = {

@@ -11,13 +11,13 @@ const CX = 960, CY = 470, RX = 560, RY = 320;
 // clock positions in teaching order: top, right-up, left-up, right-down, left-down, bottom
 const POS = [0, 2, 10, 4, 8, 6];
 
-export const GrowMap: React.FC<{centre: [string, string]; branches: Branch[]; shown: number; lit?: number; p?: number}> = ({centre, branches, shown, lit, p = 1}) => (
+export const GrowMap: React.FC<{centre: [string, string]; branches: Branch[]; shown: number; lit?: number; p?: number; newFrom?: number}> = ({centre, branches, shown, lit, p = 1, newFrom}) => (
 	<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 		{branches.slice(0, shown).map((b, i) => {
 			const a = (POS[i] / 12) * 2 * Math.PI;
 			const bx = CX + RX * Math.sin(a), by = CY - RY * Math.cos(a);
 			const right = Math.sin(a) > 0.1, left = Math.sin(a) < -0.1, mid = !right && !left;
-			const q = i === shown - 1 ? p : 1;
+			const q = i >= (newFrom ?? shown - 1) ? p : 1;
 			const dimmed = lit !== undefined && lit !== i;
 			const mx = (CX + bx) / 2 + (right ? -60 : left ? 60 : 80), my = (CY + by) / 2 + 40;
 			const px = mid ? bx - 180 : right ? bx : bx - 360; // pill box left
