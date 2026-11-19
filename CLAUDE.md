@@ -130,7 +130,7 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
   when needed: `tools/drive/drive.sh ls|push|pull|link` (rclone with `GDRIVE_RCLONE_TOKEN` from the cloud
   environment, the same method as the Creator repo). Layout: `CAIIB/_inbox/` (owner drops files from the phone),
   `CAIIB/BFM/<video id>/voice|lines|renders/`, `CAIIB/BFM/_shared/` (sfx, template assets), `CAIIB/BFM/_downloads/`
-  (sources). Music comes from the shared `Music-Library/`. Details PLAYBOOK §8.
+  (sources), `CAIIB/BFM/research/` (laptop-agent batches with a `VERDICT.md`). Music comes from the shared `Music-Library/`. Details PLAYBOOK §8.
 - Send the owner Drive view links (private, open on the phone), never public shares.
 
 ## Layout

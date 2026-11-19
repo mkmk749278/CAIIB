@@ -227,4 +227,5 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
     `A/A9_incoterms`).
   - `CAIIB/BFM/_shared/`: sound effects and template assets; music from the shared `Music-Library/` (Creator).
   - `CAIIB/BFM/_downloads/`: source documents we fetched (RBI PDFs, IIBF rules), so facts can be re-checked.
-- The older folder `CAIIB BFM Research/` (Cowork's first inbox batch, 2026-11-14) is left where it is.
+  - `CAIIB/BFM/research/`: results from the owner's laptop agents, one dated folder per batch with a `VERDICT.md`
+    (Cowork's 2026-11-14 batch moved here from `CAIIB BFM Research/` on 2026-11-19; files unchanged, verdict unchanged).
