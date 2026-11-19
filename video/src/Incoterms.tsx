@@ -111,7 +111,7 @@ B('N15', 2, 'for your exam: 2020', 960, 650, c);
 B('N15a', 1, 'still with me? good', 960, 800, c); B('N15a', 4, 'hold on to that!', 960, 800, c);
 B('N15b', 0, 'stretch for a second', 960, 800, c); B('N15b', 2, 'full attention now', 960, 800, c);
 // chapter 2: the road
-B('N16', 1, 'a road', 960, 130, {...c, size: 66}); B('N16', 2, "← the seller's door", 300, 400); B('N16', 3, "the buyer's door →", 1290, 400);
+B('N16', 1, 'a road', 960, 120, {...c, size: 84}); B('N16', 2, "← the seller's door", 300, 400); B('N16', 3, "the buyer's door →", 1290, 400);
 B('N16', 4, '7 stops in between', 960, 130, c); B('N16', 5, "let's walk through them", 960, 130, c);
 B('N19', 0, 'two markers move on this road', 1050, 130); B('N19', 2, 'after the baton: buyer’s loss', 1050, 130);
 B('N19', 4, 'how far the seller pays', 1050, 130);
@@ -178,7 +178,7 @@ B('N58', 0, 'the whole lesson, one card', 140, 100, {size: 44}); B('N58', 2, 'ri
 B('N60', 0, 'step 3', 140, 100); B('N60', 1, 'risk early, cost far', 140, 100); B('N61', 1, 'CIP: the bigger cover', 140, 100);
 B('N61a', 0, 'you know the 3 letters', 140, 100); B('N62', 1, 'next: the LC + UCP', 140, 100);
 B('N62a', 0, 'one small homework', 140, 100); B('N62a', 2, 'five minutes', 140, 100); B('N62a', 3, 'then practice Qs', 140, 100);
-B('N62a', 4, 'go and rest', 140, 100); B('N62a', 5, 'see you next class!', 140, 100);
+B('N62a', 4, 'go and rest', 140, 100, {size: 70}); B('N62a', 5, 'see you next class!', 140, 100);
 
 // r4 pass 3: sentences the voice splits differently (anchored to a word)
 W('N15', 'exam', 1, 'for your exam: 2020 ✓', 960, 740, c);
@@ -748,7 +748,7 @@ export const Incoterms: React.FC = () => {
 						<>
 							{(() => {
 								// each branch lands on the sentence that names it
-								const steps: [number, number, number | undefined][] = [[sk('N58', 1), 2, 1], [sk('N59', 0), 3, 2], [sk('N59', 1), 5, 3], [sk('N60', 0), 5, 3], [sk('N61', 0), 6, 5]];
+								const steps: [number, number, number | undefined][] = [[sk('N58', 1), 2, 1], [sk('N59', 0), 3, 2], [sk('N59', 1), 5, 2], [sk('N60', 0), 5, 3], [sk('N61', 0), 6, 5]];
 								let shown = 0, lit: number | undefined, from = S('N58');
 								for (const [t, n, l] of steps) if (f >= t - 6) { if (n > shown) from = t - 6; shown = n; lit = l; }
 								return <GrowMap {...MAP} shown={shown} lit={lit} p={tw(f, from, from + 40)} newFrom={Math.max(0, shown - 2)} />;
