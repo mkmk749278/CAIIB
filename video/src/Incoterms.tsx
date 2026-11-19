@@ -94,7 +94,7 @@ B('N00e', 0, 'easy marks', 960, 470, c); B('N00e', 2, 'no heavy theory', 960, 78
 B('N00e', 3, '15 minutes → this topic is yours', 960, 780, c); B('N00e', 4, "shall we start?", 960, 780, c);
 // opening
 B('N02', 1, 'keep this line in mind', 960, 432, {...c, size: 46});
-B('N03', 2, 'everything looks perfect', 1060, 560);
+B('N03', 2, 'everything looks perfect', 560, 150);
 B('N04', 3, 'USD 48,000 · gone', 960, 300, c);
 B('N06', 1, 'Under CIF: whose loss?', 620, 610); B('N06', 2, "seller's? or buyer's?", 620, 610);
 // chapter 1: the misconception, built step by step
@@ -164,7 +164,7 @@ B('N35', 2, '7 any mode + 4 sea', 960, 760, c);
 B('N36', 1, 'there used to be DAT…', 960, 640, c);
 B('N39', 1, "ICC's thinking:", 960, 110, c);
 B('N42', 3, 'FOB value: 45,000', 80, 620); B('N42', 5, 'premium: 600', 80, 620);
-B('N43', 0, 'add them up', 80, 620); B('N43', 3, '= her CIF price', 80, 620);
+B('N43', 0, 'add them up', 80, 548, {size: 46}); B('N43', 3, '= her CIF price', 80, 548, {size: 46});
 B('N44', 0, 'minimum cover?', 80, 560); B('N44', 3, 'simple ✓', 80, 560); B('N44', 4, 'multiplier: × 1.1, no % key', 80, 560);
 B('N45', 0, 'your turn!', 80, 560); B('N45', 1, 'CIP: EUR 30,000', 80, 560); B('N45', 2, 'minimum cover = ?', 80, 560);
 B('N46', 3, 'got it? great ✓', 80, 560);
