@@ -18,9 +18,9 @@ any new stage. New lessons go into the playbook section they belong to, with the
   locked). Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review). Scripts:
   `course/bfm/00_start/script.md` written; the rest wait for the sample to be final.
 - **Now: finishing the Incoterms sample (A07, folder `course/bfm/A/A9_incoterms/`) as the template.** History of
-  r1→r4 in PLAYBOOK §5c–§5e and the decisions log. **r4** (Drive `CAIIB/BFM/A07/renders/r4_720p.mp4`): owner "came
-  out very good"; open items: text overlaps in places (fix with `overlap_check`, render r5), then owner approval →
-  template locked → scripts resume at A01. Rules from the r4 feedback: a different greeting and goodbye in every
+  r1→r5 in PLAYBOOK §5c–§5e and the decisions log. r4: owner "came out very good" but text overlapped in places.
+  **r5** (Drive `CAIIB/BFM/A07/renders/r5_720p.mp4`, 2026-11-19): overlaps fixed (overlap check 149 s → 0; sentence
+  check 0 of 335; smooth audit pass). Waiting for owner approval → template locked → scripts resume at A01. Rules from the r4 feedback: a different greeting and goodbye in every
   video; trade lessons in US dollars (PLAYBOOK §5b).
 - **How a lesson video is built (the r4 method, PLAYBOOK §5e):** owner records each part in one take →
   `tools/video/flow_voice.py` (continuous voice, planned holds only, re-recorded lines swapped in) + music bed ducked →
