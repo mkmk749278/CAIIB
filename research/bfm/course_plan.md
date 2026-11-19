@@ -144,8 +144,9 @@ start video 00 and exam-day video X01 added.
 
 ## 4. Production process (owner, 2026-11-19)
 1. **Order** (this file) → owner locks it.
-2. **Video plans** for all 58, module by module: one page each in `course/bfm/<module>/<id>/plan.md` (template in §5).
-   The owner reviews a module's plans together.
+2. **Video plans** for all 58, module by module: one page each, one file per module (`course/bfm/<module>/plans_<module>.md`,
+   easier to review on a phone; template in §5). The owner reviews a module's plans together; each plan moves into
+   its video folder when its script is written.
 3. **Full scripts** for all 58 (PLAYBOOK §5b rules), with each video's `numericals.md` (every sum solved twice,
    calculator keys), `practice.md`, `claims.csv` (every fact with its primary source) and `map_nodes.md`.
 4. **Fact freeze and cross-check**: every rule re-checked against the cut-off of the exam we target (§6); callbacks
