@@ -30,15 +30,17 @@ export type RoadProps = {
 	o?: number;
 	dimSea?: boolean; // r1: "not a sea rule" → v2: label the gap sea · air · road
 	rule?: string | null; // v2: the rule on screen, for the cost label and the C-rule bracket
+	rp?: number; // flow: baton hand-over progress 0..1
+	cp?: number; // flow: cost line draw progress 0..1 (across the phrase)
 };
 
 // v2 (PLAYBOOK §5c): the r1 Road API, drawn as the journey from kit/journey.tsx
-export const Road: React.FC<RoadProps> = ({reveal = 7, baton = null, costTo = null, hi = [], note, o = 1, dimSea, rule}) => {
+export const Road: React.FC<RoadProps> = ({reveal = 7, baton = null, costTo = null, hi = [], note, o = 1, dimSea, rule, rp = 1, cp = 1}) => {
 	const cRule = !!rule && rule[0] === 'C';
 	const costLabel = cRule ? (['CPT', 'CIP'].includes(rule as string) ? 'carriage to the named place' : 'freight to the port of destination') : undefined;
 	return (
 		<div style={{position: 'absolute', inset: 0, opacity: o}}>
-			<Journey reveal={reveal} risk={baton ?? undefined} cost={costTo ?? undefined} highlight={hi[0]} anyMode={dimSea} split={cRule && baton !== null && costTo !== null ? 1 : 0} costLabel={costLabel} />
+			<Journey reveal={reveal} risk={baton ?? undefined} cost={costTo ?? undefined} highlight={hi[0]} anyMode={dimSea} split={cRule && baton !== null && costTo !== null ? tw(cp, 0.7, 1) : 0} costLabel={costLabel} rp={rp} cp={cp} />
 			{note ? <div style={{position: 'absolute', left: 140, right: 140, top: 880, textAlign: 'center', fontFamily: F.sans, fontWeight: 700, fontSize: 40, color: C.text}}>{note}</div> : null}
 		</div>
 	);

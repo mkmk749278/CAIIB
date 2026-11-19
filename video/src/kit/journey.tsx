@@ -16,6 +16,7 @@ export const STATIONS = [
 	{x: 1790, label: 'Cleared'},
 ];
 export const BASE = 680; // ground line
+const sx = (i: number) => { const a = Math.max(0, Math.min(6, Math.floor(i))), b = Math.min(6, a + 1), t = i - a; return STATIONS[a].x + (STATIONS[b].x - STATIONS[a].x) * t; };
 const S = {stroke: P.ink, strokeWidth: 4, strokeLinejoin: 'round' as const};
 
 const Factory: React.FC<{x: number}> = ({x}) => (
@@ -93,7 +94,7 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 			{/* stations: one word each, 32 px */}
 			<line x1={200} y1={BASE + 120} x2={1790} y2={BASE + 120} stroke={P.ink} strokeWidth={3} strokeDasharray="2 12" strokeLinecap="round" opacity={0.6} />
 			{STATIONS.map((s, i) => {
-				const hot = i === highlight || i === risk;
+				const hot = i === highlight || (risk !== undefined && Math.abs(i - risk) < 0.5);
 				const v = Math.max(0, Math.min(1, reveal - i));
 				if (v <= 0) return null;
 				return (
@@ -112,14 +113,15 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 					<g>
 						<path d={`M170 ${ARROW_Y} H${xe}`} stroke={P.cost} strokeWidth={16} strokeLinecap="round" />
 						<path d={`M${xe - 6} ${ARROW_Y - 22} l 30 22 l -30 22 Z`} fill={P.cost} opacity={cp > 0.05 ? 1 : 0} />
+						{cp > 0.02 && cp < 0.98 ? <g transform={`translate(${xe + 26}, ${ARROW_Y - 4}) rotate(35)`}><path d="M0 0 L-12 -48 L12 -48 Z" fill={P.ink} /><rect x={-12} y={-118} width={24} height={70} rx={6} fill={P.gold} stroke={P.ink} strokeWidth={3} /></g> : null}
 						<text x={Math.min(xe, 1700)} y={ARROW_Y - 36} textAnchor="end" fontFamily={FT.hand} fontWeight={700} fontSize={54} fill={P.cost} opacity={cp}>{costLabel ?? 'seller pays up to here'}</text>
 					</g>
 				);
 			})()}
 			{/* the red baton (a relay baton on a stand) where risk passes, as the voice says */}
 			{risk !== undefined && (() => {
-				const x = STATIONS[risk].x, drop = (1 - rp) * -120;
-				const right = risk <= 1;
+				const x = sx(risk), drop = (1 - rp) * -60;
+				const right = risk < 0.5;
 				return (
 					<g transform={`translate(0, ${drop})`} opacity={rp}>
 						<line x1={x} y1={BASE + 96} x2={x} y2={BASE - 190} stroke={P.ink} strokeWidth={6} />
@@ -134,7 +136,7 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 			})()}
 			{/* the C-rule split: the gap between flag and arrowhead, as one shape */}
 			{split > 0 && risk !== undefined && cost !== undefined && (() => {
-				const a = STATIONS[risk].x + 20, b = STATIONS[cost].x;
+				const a = sx(risk) + 20, b = STATIONS[cost].x;
 				const y = ARROW_Y + 50;
 				return (
 					<g opacity={split}>

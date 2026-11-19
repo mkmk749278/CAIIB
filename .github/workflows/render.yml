@@ -118,5 +118,10 @@ jobs:
             "${{ inputs.name }}"
           npx --prefix .. remotion ffprobe -v error -show_entries format=duration:stream=codec_name,width,height \
             -of compact "${{ inputs.name }}"
+      - name: Smoothness audit (PLAYBOOK §5d)
+        continue-on-error: true
+        env:
+          FFMPEG: npx --prefix video remotion ffmpeg
+        run: python3 tools/video/smooth_audit.py "video/out/${{ inputs.name }}" video/src/*lines.json | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Upload to Drive
         run: tools/drive/drive.sh push "BFM/${{ inputs.video }}/renders" "video/out/${{ inputs.name }}" | tee -a "$GITHUB_STEP_SUMMARY"
