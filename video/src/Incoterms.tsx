@@ -139,7 +139,7 @@ B('N49a', 3, 'a quick fit check ✓', 960, 780, c);
 // recap and practice
 B('N51', 1, 'answer before I do!', 960, 800, c);
 B('N53', 2, 'even import duty', 160, 400);
-B('N57', 2, 'all three? very good ✓', 160, 645, {size: 54}); B('N57', 1, '= USD 1,37,940', 160, 645, {size: 54});
+B('N57', 2, 'all three? very good ✓', 160, 760); B('N57', 1, '= USD 1,37,940', 160, 760);
 
 // r4 pass 2: every remaining sentence
 B('N00c', 1, 'how many of you?', 960, 470, c);
@@ -172,8 +172,8 @@ B('N47', 0, 'careful: people slip here', 80, 560); B('N47', 1, '110% of FOB?', 8
 B('N50', 4, 'lost container: the buyer’s problem, and he’s covered', 960, 130, c);
 B('N52', 0, 'one', 160, 645, {size: 46}); B('N53', 0, 'DDP', 160, 645, {size: 46}); B('N53', 1, 'Delivered Duty Paid', 160, 645, {size: 46});
 B('N54', 0, 'two', 160, 645, {size: 46}); B('N55', 0, 'DPU', 160, 645, {size: 46});
-B('N56', 1, 'CIF USD 1,25,400', 160, 645, {size: 46}); B('N56', 2, 'LC silent on the amount', 160, 645, {size: 46});
-B('N57', 0, '1,25,400 × 1.1', 160, 645, {size: 46});
+B('N56', 1, 'CIF USD 1,25,400', 160, 760); B('N56', 2, 'LC silent on the amount', 160, 760);
+B('N57', 0, '1,25,400 × 1.1', 160, 760);
 B('N58', 0, 'the whole lesson, one card', 140, 100, {size: 44}); B('N58', 2, 'risk · costs · customs', 140, 100, {size: 44});
 B('N60', 0, 'step 3', 140, 100); W('N60', 'rules', 1, 'C rules split!', 140, 100, {size: 76}); B('N60', 1, 'risk early, cost far', 140, 100, {size: 70}); B('N61', 1, 'CIP: the bigger cover', 140, 100);
 B('N61a', 0, 'you know the 3 letters', 140, 100); B('N62', 1, 'next: the LC + UCP', 140, 100);

@@ -330,8 +330,10 @@ checks decide when a cut is ready, not a feeling.
 - **Where notes go (from the r4 overlaps):** a note never outlives its line; never under a card (the practice notes
   sit above the pause card); never on a road label, a quote bubble or a card corner: use the free top band
   (y ≈ 100–150) or the space beside the scene; in the recap the notes are short and small, top-left, clear of the
-  map's top branch; the map's bottom branch puts its leaves beside the pill, not under it, so the caption cannot
-  hide them. The overlap check counts scene ink below grey 120, so the sea and tinted fills are not mistaken for text.
+  map's top branch; the map's bottom branch sits higher and puts its leaves under the pill in two short lines, so
+  neither a two-line caption nor the Mode leaves touch them. The overlap check compares layers, so it cannot see two
+  things inside one layer (map leaf on map leaf) or a note on a light card border: look at stills of every map
+  and card moment as well. The overlap check counts scene ink below grey 120, so the sea and tinted fills are not mistaken for text.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
