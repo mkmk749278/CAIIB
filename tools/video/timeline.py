@@ -13,7 +13,8 @@ CFG = {
     'A9_incoterms': dict(
         HOLD={'N00c': 1.5, 'N06': 5, 'N31a': 5, 'N45': 15, 'N52': 4, 'N54': 4, 'N56': 12, 'N15': 1.0, 'N36': 1.0,
               'N44': 1.0, 'N50': 1.0, 'N61a': 1.0, 'N62a': 3.0},
-        CHAPTER={'N06a': 2.5, 'N16': 2.5, 'N37': 2.5, 'N50': 2.5}),
+        # r4 (owner, 2026-11-19): no silent chapter cards; chapter titles slide in while the teacher speaks
+        CHAPTER={}),
 }
 
 
