@@ -6,25 +6,32 @@ import {AbsoluteFill} from 'remotion';
 import {tw} from '../theme';
 
 export const P = {
-	paper: '#F7F1E3',
-	paper2: '#EFE6D2',
-	grid: '#E6DBC4',
+	paper: '#EDE3CC', // toned down for night viewing (review_look_v2 §night)
+	paper2: '#E4D8BD',
+	grid: '#DCCFB2',
 	ink: '#1F2A37',
-	soft: '#5B6676',
-	faint: '#9AA3AE',
+	soft: '#4E5968',
+	faint: '#7D8691',
+	// signal colours: each means ONE thing, never used on scenery (review_look_v2 #2)
 	risk: '#D93A30', // red baton: where risk passes
 	cost: '#2F7FE0', // blue line: how far the seller pays
-	sea: '#3AA6B9',
-	seaDeep: '#23798C',
-	land: '#E4D6B5',
-	gold: '#F2B33D', // highlight marker
-	ok: '#2E9E5B',
-	// rule families
-	E: '#6B7A8F',
-	F: '#1E9E8F',
-	Cc: '#E8891C',
-	D: '#B4459A',
+	gold: '#F2B33D', // marker underline only
+	ok: '#2E9E5B', // correct answer only
+	// scenery: neutral inks, greys and browns
+	sea: '#9FB8BE',
+	land: '#D9C9A5',
+	wall: '#F4EEE1',
+	roof: '#8A7A62',
+	steel: '#6F7782',
+	box: '#B49A74',
+	branch: '#A8946C', // mind-map branch lines
+	// rule families: differ in lightness AND carry a shape (colour-blind safe)
+	E: '#3E4C5E', // dark slate, square
+	F: '#5CC6B8', // light teal, triangle
+	Cc: '#F2A33A', // amber, circle
+	D: '#6B2D5C', // dark plum, diamond
 };
+export const FAM_TEXT: Record<string, string> = {E: '#fff', F: '#1F2A37', C: '#1F2A37', D: '#fff'};
 
 export const FT = {
 	sans: '"Inter Tight", system-ui, sans-serif',
@@ -41,8 +48,8 @@ export const Page: React.FC<{children: React.ReactNode}> = ({children}) => (
 					<path d="M48 0H0V48" fill="none" stroke={P.grid} strokeWidth={1.2} />
 				</pattern>
 				<radialGradient id="vig" cx="50%" cy="45%" r="75%">
-					<stop offset="60%" stopColor="#000" stopOpacity={0} />
-					<stop offset="100%" stopColor="#5a4320" stopOpacity={0.16} />
+					<stop offset="55%" stopColor="#000" stopOpacity={0} />
+					<stop offset="100%" stopColor="#3d2c10" stopOpacity={0.28} />
 				</radialGradient>
 			</defs>
 			<rect width={1920} height={1080} fill="url(#grid)" />
@@ -84,7 +91,7 @@ export const Thoughts: React.FC<{f: number; a: number; left: string; right: stri
 		const p = tw(f, a + k * 20, a + k * 20 + 18);
 		const out = wrong === side ? tw(f, crossAt, crossAt + 20) : 0;
 		return (
-			<g opacity={p * (1 - 0.55 * out)} transform={`translate(${x}, ${620 + 30 * (1 - p)})`}>
+			<g opacity={p * (1 - 0.55 * out)} transform={`translate(${x}, ${740 + 30 * (1 - p)})`}>
 				{/* learner: head and shoulders, no face */}
 				<circle cx={0} cy={0} r={46} fill={col} />
 				<path d="M-90 150 C -90 70, 90 70, 90 150 Z" fill={col} />
@@ -94,7 +101,7 @@ export const Thoughts: React.FC<{f: number; a: number; left: string; right: stri
 				<rect x={-60} y={-430} width={560} height={270} rx={120} fill="#fff" stroke={P.ink} strokeWidth={4} />
 				<text x={220} y={-375} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={30} letterSpacing={2} fill={P.soft}>{label.toUpperCase()}</text>
 				<foreignObject x={-30} y={-360} width={500} height={190}>
-					<div style={{fontFamily: FT.hand, fontWeight: 700, fontSize: 52, lineHeight: 1.05, color: P.ink, textAlign: 'center'}}>{text}</div>
+					<div style={{fontFamily: FT.hand, fontWeight: 700, fontSize: 56, lineHeight: 1.0, color: P.ink, textAlign: 'center'}}>{text}</div>
 				</foreignObject>
 				{out > 0 && <path d={`M-20 -400 L ${-20 + 480 * out} ${-400 + 210 * out}`} stroke={P.risk} strokeWidth={12} strokeLinecap="round" />}
 			</g>
@@ -102,8 +109,49 @@ export const Thoughts: React.FC<{f: number; a: number; left: string; right: stri
 	};
 	return (
 		<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
-			{one(380, 'Some of you', left, '#C9B48A', 0, 'left')}
-			{one(1180, 'Others', right, '#9DB7C9', 1, 'right')}
+			{one(380, 'Some of you', left, '#B8A27A', 0, 'left')}
+			{one(1180, 'Others', right, '#8FA4B4', 1, 'right')}
 		</svg>
 	);
 };
+
+/** Family shape: E square, F triangle, C circle, D diamond (never rely on colour alone). */
+export const FamShape: React.FC<{fam: string; size?: number; color?: string}> = ({fam, size = 34, color}) => {
+	const c = color ?? (P as Record<string, string>)[fam === 'C' ? 'Cc' : fam];
+	const h = size / 2;
+	return (
+		<svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{display: 'inline-block', verticalAlign: 'middle'}}>
+			{fam === 'E' && <rect x={3} y={3} width={size - 6} height={size - 6} fill={c} stroke={P.ink} strokeWidth={3} />}
+			{fam === 'F' && <path d={`M${h} 3 L${size - 3} ${size - 3} H3 Z`} fill={c} stroke={P.ink} strokeWidth={3} strokeLinejoin="round" />}
+			{fam === 'C' && <circle cx={h} cy={h} r={h - 3} fill={c} stroke={P.ink} strokeWidth={3} />}
+			{fam === 'D' && <path d={`M${h} 2 L${size - 2} ${h} L${h} ${size - 2} L2 ${h} Z`} fill={c} stroke={P.ink} strokeWidth={3} strokeLinejoin="round" />}
+		</svg>
+	);
+};
+
+/** Prediction prompt (§5a): PAUSE and a ring that empties over n frames. */
+export const PauseCard: React.FC<{f: number; a: number; n?: number; text?: string}> = ({f, a, n = 120, text = 'Pause. Lock your answer in.'}) => {
+	const left = Math.max(0, 1 - (f - a) / n);
+	const secs = Math.ceil(left * (n / 30));
+	return (
+		<div style={{position: 'absolute', right: 120, top: 200, display: 'flex', alignItems: 'center', gap: 22, background: '#fff', border: `4px solid ${P.ink}`, borderRadius: 24, padding: '16px 28px', boxShadow: `8px 8px 0 ${P.gold}`}}>
+			<svg width={96} height={96}>
+				<circle cx={48} cy={48} r={40} fill="none" stroke={P.grid} strokeWidth={10} />
+				<circle cx={48} cy={48} r={40} fill="none" stroke={P.ink} strokeWidth={10} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - left} transform="rotate(-90 48 48)" strokeLinecap="round" />
+				<text x={48} y={62} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={40} fill={P.ink}>{secs}</text>
+			</svg>
+			<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 44, color: P.ink}}>{text}</div>
+		</div>
+	);
+};
+
+/** Opening card: title, rule version, AI-voice disclosure, illustrative tag (review_look_v2 #11). */
+export const TitleCard: React.FC<{code: string; title: string; sub: string; version: string}> = ({code, title, sub, version}) => (
+	<div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 22}}>
+		<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 32, letterSpacing: 4, color: P.soft}}>{code}</div>
+		<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 120, color: P.ink}}>{title}</div>
+		<div style={{fontFamily: FT.hand, fontWeight: 700, fontSize: 72, color: P.soft}}>{sub}</div>
+		<div style={{marginTop: 30, background: '#fff', border: `3px solid ${P.ink}`, borderRadius: 16, padding: '14px 30px', fontFamily: FT.sans, fontWeight: 500, fontSize: 34, color: P.ink}}>{version}</div>
+		<div style={{fontFamily: FT.sans, fontWeight: 500, fontSize: 30, color: P.soft}}>The voice in this lesson is AI-generated · names, ship and amounts are illustrative</div>
+	</div>
+);

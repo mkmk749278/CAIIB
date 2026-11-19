@@ -209,6 +209,17 @@ space, a road made of dots, and no mind map on screen.
     the lesson reaches it, the rest dim; a small "lesson map" card in the corner shows where we are (done ✓, now,
     next); the finished map is the recap and the homework ("draw this tonight").
 - Style frames were shown to the owner before the full rebuild (`video/src/StyleFrames.tsx`).
+- **Independent review (2026-11-19, `course/bfm/A/A9_incoterms/review_look_v2.md`): ADOPT WITH FIXES**, all applied
+  in rev 1 of the kit: the misconception cloud now shows the script's real trap (N06a) with "Under CIF" in the
+  question and a PAUSE countdown card; signal colours mean one thing only (scenery is neutral inks, greys, browns; map
+  branches neutral, the current one ink); one-word station labels at 32 px, leaves 56 px, nothing under 30 px; the four
+  families differ in lightness and each has a shape (E square, F triangle, C circle, D diamond), ink text on the light
+  ones; cost label at the arrowhead ("freight to Rotterdam port"); the C-rule gap drawn as a bracket ("buyer's risk ·
+  seller's freight"); "sea · air · road" and a plane for any-mode rules; title card with rule version, AI-voice and
+  illustrative notes; map sub-title "whose risk? whose cost?"; balanced map growth, dim 0.55, 3 leaves of about 4
+  words; the corner lesson map only at chapter cards; paper toned down for night viewing. Next (rebuild): every
+  draw-on tied to its spoken word; one camera panning one page; three sound cues (flag thud, arrow whoosh, correct
+  chime) and music only in warm-up, chapter cards and close; a "trap" sticky-note card.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp

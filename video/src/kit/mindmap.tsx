@@ -1,68 +1,70 @@
-// A lesson mind map that grows: same layout every time (place memory), one branch per idea, branch colours fixed.
-// `shown` = how many branches are drawn so far; `lit` = the branch being taught now (others dim); `p` = draw-on
-// progress of the newest branch. The same component, scaled down, sits in the corner as the "where are we" map.
+// A lesson mind map that grows: same layout every time (place memory), one branch per idea.
+// Fixes from review_look_v2: balanced growth (top → right → left → …), earlier branches dim only to 0.55,
+// at most 3 leaves of about 4 words, leaves ≥ 54 px Caveat, neutral branch colours (signal colours stay exclusive),
+// sub-title "whose risk? whose cost?", the corner card only at chapter cards.
 import React from 'react';
 import {P, FT} from './look';
 
-export type Branch = {title: string; color: string; leaves: string[]};
+export type Branch = {title: string; leaves: string[]};
 
-const CX = 960, CY = 530, RX = 560, RY = 320;
-const POS = [0, 2, 4, 6, 8, 10]; // clock positions, fixed per lesson
+const CX = 960, CY = 470, RX = 560, RY = 320;
+// clock positions in teaching order: top, right-up, left-up, right-down, left-down, bottom
+const POS = [0, 2, 10, 4, 8, 6];
 
-export const GrowMap: React.FC<{centre: [string, string]; branches: Branch[]; shown: number; lit?: number; p?: number; scale?: number; x?: number; y?: number}> = ({centre, branches, shown, lit, p = 1, scale = 1, x = 0, y = 0}) => (
-	<svg width={1920} height={1080} viewBox="0 0 1920 1080" style={{position: 'absolute', left: x, top: y, width: 1920 * scale, height: 1080 * scale}}>
+export const GrowMap: React.FC<{centre: [string, string]; branches: Branch[]; shown: number; lit?: number; p?: number}> = ({centre, branches, shown, lit, p = 1}) => (
+	<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 		{branches.slice(0, shown).map((b, i) => {
 			const a = (POS[i] / 12) * 2 * Math.PI;
 			const bx = CX + RX * Math.sin(a), by = CY - RY * Math.cos(a);
-			const right = Math.sin(a) > 0.1, left = Math.sin(a) < -0.1;
-			const anchor = right ? 'start' : left ? 'end' : 'middle';
+			const right = Math.sin(a) > 0.1, left = Math.sin(a) < -0.1, mid = !right && !left;
 			const q = i === shown - 1 ? p : 1;
 			const dimmed = lit !== undefined && lit !== i;
 			const mx = (CX + bx) / 2 + (right ? -60 : left ? 60 : 80), my = (CY + by) / 2 + 40;
-			const mid = !right && !left;
-			// leaves: beside the pill for the top/bottom branch, under it for the side branches
-			const lx = mid ? bx + 195 : right ? bx + 20 : bx - 20;
-			const ly0 = mid ? by + 14 - ((b.leaves.length - 1) * 44) / 2 : by + 80;
+			const px = mid ? bx - 180 : right ? bx : bx - 360; // pill box left
+			const top = mid && Math.cos(a) > 0;
+			// leaves: right of the pill for the top branch, centred under it for the bottom one, under it on the sides
+			const lx = top ? bx + 205 : mid ? bx : right ? bx + 14 : bx - 14;
+			const ly0 = top ? by + 18 - ((b.leaves.length - 1) * 56) / 2 : by + 90;
+			const isLit = lit === i;
 			return (
-				<g key={i} opacity={dimmed ? 0.3 : 1}>
-					<path d={`M${CX} ${CY} Q ${mx} ${my} ${bx} ${by}`} stroke={b.color} strokeWidth={14} fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - Math.min(1, q * 1.6)} />
+				<g key={i} opacity={dimmed ? 0.55 : 1}>
+					<path d={`M${CX} ${CY} Q ${mx} ${my} ${bx} ${by}`} stroke={isLit ? P.ink : P.branch} strokeWidth={12} fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - Math.min(1, q * 1.6)} />
 					<g opacity={Math.max(0, q * 2 - 0.6)}>
-						<rect x={bx - (anchor === 'middle' ? 170 : right ? 0 : 340)} y={by - 36} width={340} height={72} rx={36} fill={b.color} stroke={P.ink} strokeWidth={4} />
-						<text x={bx + (anchor === 'middle' ? 0 : right ? 170 : -170)} y={by + 13} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={36} fill="#fff">{b.title}</text>
+						<rect x={px} y={by - 38} width={360} height={76} rx={38} fill={isLit ? P.ink : '#fff'} stroke={P.ink} strokeWidth={4} />
+						<text x={px + 180} y={by + 14} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={38} fill={isLit ? '#fff' : P.ink}>{b.title}</text>
 						{b.leaves.map((t, k) => (
-							<text key={k} x={lx} y={ly0 + k * 44} textAnchor={mid || right ? 'start' : 'end'} fontFamily={FT.hand} fontWeight={700} fontSize={42} fill={P.ink} opacity={Math.max(0, Math.min(1, q * 3 - 1.4 - k * 0.15))}>{t}</text>
+							<text key={k} x={lx} y={ly0 + k * 56} textAnchor={top || right ? 'start' : mid ? 'middle' : 'end'} fontFamily={FT.hand} fontWeight={700} fontSize={56} fill={P.ink} opacity={Math.max(0, Math.min(1, q * 3 - 1.4 - k * 0.15))}>{t}</text>
 						))}
 					</g>
 				</g>
 			);
 		})}
-		<ellipse cx={CX} cy={CY} rx={190} ry={120} fill="#fff" stroke={P.ink} strokeWidth={6} />
-		<text x={CX} y={CY - 6} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={50} fill={P.ink}>{centre[0]}</text>
-		<text x={CX} y={CY + 46} textAnchor="middle" fontFamily={FT.hand} fontWeight={700} fontSize={44} fill={P.soft}>{centre[1]}</text>
+		<ellipse cx={CX} cy={CY} rx={240} ry={125} fill="#fff" stroke={P.ink} strokeWidth={6} />
+		<text x={CX} y={CY - 6} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={54} fill={P.ink}>{centre[0]}</text>
+		<text x={CX} y={CY + 52} textAnchor="middle" fontFamily={FT.hand} fontWeight={700} fontSize={50} fill={P.soft}>{centre[1]}</text>
 	</svg>
 );
 
-/** The Incoterms map (A07). Order = the order the lesson teaches them. */
+/** The Incoterms map (A07), in teaching order. Leaves: at most 3, about 4 words. */
 export const INCO_MAP: {centre: [string, string]; branches: Branch[]} = {
-	centre: ['Incoterms 2020', 'whose ship is it?'],
+	centre: ['Incoterms 2020', 'whose risk? whose cost?'],
 	branches: [
-		{title: 'What they are', color: P.E, leaves: ['ICC rules, 11 of them', 'version 2020', '"CIF Rotterdam Incoterms 2020"']},
-		{title: 'Decide 3 things', color: P.ink, leaves: ['where risk passes', 'who pays which cost', 'who clears customs', 'not: price, payment, title']},
-		{title: 'The road', color: P.risk, leaves: ['7 stations', 'red baton = risk', 'blue line = cost']},
-		{title: 'E · F · C · D', color: P.Cc, leaves: ['E: at the door', 'F: carrier or ship', 'C: risk early, cost far', 'D: at the buyer']},
-		{title: 'Mode', color: P.F, leaves: ['sea only: FAS FOB CFR CIF', 'any mode: the other 7', 'containers → FCA, CIP']},
-		{title: 'Insurance', color: P.cost, leaves: ['only CIF and CIP', 'CIF: Clauses C (minimum)', 'CIP: Clauses A (wide)', 'at least 110%']},
+		{title: 'What they are', leaves: ['ICC, 11 rules', 'version 2020', '"CIF Rotterdam 2020"']},
+		{title: 'Decide 3 things', leaves: ['risk point', 'costs', 'customs clearance']},
+		{title: 'The road', leaves: ['7 stations', 'red flag = risk', 'blue line = cost']},
+		{title: 'E · F · C · D', leaves: ['E, F, D: same point', 'C: risk early,', 'cost far']},
+		{title: 'Mode', leaves: ['sea only: 4', 'any mode: 7', 'containers: FCA, CIP'.replace(', ', '/')]},
+		{title: 'Insurance', leaves: ['only CIF, CIP', 'CIF: C · CIP: A', 'at least 110%']},
 	],
 };
 
-/** The corner "where are we" card: the six branch names, the current one lit, done ones ticked. */
-export const MiniMap: React.FC<{branches: Branch[]; lit: number; x?: number; y?: number}> = ({branches, lit, x = 1500, y = 80}) => (
-	<div style={{position: 'absolute', left: x, top: y, width: 330, background: 'rgba(255,255,255,0.9)', border: `3px solid ${P.ink}`, borderRadius: 18, padding: '12px 16px', fontFamily: FT.sans}}>
-		<div style={{fontWeight: 700, fontSize: 18, letterSpacing: 2, color: P.soft, marginBottom: 6}}>LESSON MAP</div>
+/** Chapter-card "where are we" card: big enough for a phone; done ✓, now (bold), next (soft). */
+export const MiniMap: React.FC<{branches: Branch[]; lit: number; x?: number; y?: number}> = ({branches, lit, x = 1340, y = 200}) => (
+	<div style={{position: 'absolute', left: x, top: y, width: 480, background: '#fff', border: `4px solid ${P.ink}`, borderRadius: 22, padding: '18px 24px', fontFamily: FT.sans}}>
+		<div style={{fontWeight: 700, fontSize: 30, letterSpacing: 3, color: P.soft, marginBottom: 8}}>LESSON MAP</div>
 		{branches.map((b, i) => (
-			<div key={i} style={{display: 'flex', alignItems: 'center', gap: 10, fontSize: 24, lineHeight: '34px', fontWeight: i === lit ? 700 : 500, color: i <= lit ? P.ink : P.faint}}>
-				<span style={{width: 16, height: 16, borderRadius: 8, background: i <= lit ? b.color : 'transparent', border: `2px solid ${b.color}`}} />
-				{b.title}{i < lit ? ' ✓' : ''}
+			<div key={i} style={{fontSize: 38, lineHeight: '56px', fontWeight: i === lit ? 700 : 600, color: i <= lit ? P.ink : P.soft}}>
+				{i < lit ? '✓ ' : i === lit ? '▶ ' : '· '}{b.title}
 			</div>
 		))}
 	</div>
