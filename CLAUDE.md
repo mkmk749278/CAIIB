@@ -10,11 +10,18 @@ project started, the market research, the lesson design and the reasons behind e
 any new stage. New lessons go into the playbook section they belong to, with the reason; never a new loose doc.
 
 ## Current work (read first when the owner says "continue")
+- **2026-11-19 (owner): new process.** Fix the exact video order → write a one-page plan for every video → write
+  every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
+  **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4
+  revisions, U01, X01), the "builds on" links, pictures, plan template and rule version. **Waiting for the owner to
+  lock the order**; then plans module by module (`course/bfm/<module>/<id>/plan.md`). Target exam: May/June 2027
+  (cut-off 31 Dec 2026) unless the owner says otherwise. Sample folders keep their names: `A/A1` = A01,
+  `A/A9_incoterms` = A07. The A1/Incoterms notes below are history until the build stage.
 - **Paper 1 = CAIIB Bank Financial Management (BFM).** Owner decision, 2026-11-14.
 - **Done:** official IIBF syllabus; 453 recalled exam topics from 7 cycles (Jun 2023 to Jun 2026) tagged to units;
   **BFM Importance Map** (`research/bfm/importance_map.md`), cross-checked against two full memory-based papers
   (`fullpaper_tagged.csv`); **regulatory changes up to the 30 June 2026 cut-off** from 13 IIBF Vision issues and
-  RBI's Master Direction index (`regulatory_updates.md`); **BFM course plan v1** (`course_plan.md`: about 40 lessons,
+  RBI's Master Direction index (`regulatory_updates.md`); **BFM course plan** (`course_plan.md`, now v2: 58 videos in exact order,
   one mind map per module, pilot proposal A1+A2 forex).
 - **Owner decisions (2026-11-14):** build the **full course first**; no YouTube channel until it is complete, then a
   **new channel** only for publicity/free samples. **English only.** **Paid course with free sample lessons** (hosting
