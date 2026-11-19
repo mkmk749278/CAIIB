@@ -236,4 +236,5 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   run summary. It needs the **repo secret `GDRIVE_RCLONE_TOKEN`**, set once from Termux (a fresh rclone token straight
   into the secret, never shown in chat):
   `pkg install -y gh rclone && { gh auth status >/dev/null 2>&1 || gh auth login -h github.com -p https -w; } && rclone authorize drive | grep -o '{"access_token".*}' | gh secret set GDRIVE_RCLONE_TOKEN -R mkmk749278/CAIIB && gh secret list -R mkmk749278/CAIIB`
-  Same as the Creator repo's render workflows. The cloud session itself uses the environment variable of the same name.
+  Same as the Creator repo's render workflows. **Measured 2026-11-19** (Incoterms, 17:22 at 720p): one runner
+  20 min; 6 runners + sound runner 6.5 min, same length (1042.2 s), clean decode, -16.3 LUFS. The cloud session itself uses the environment variable of the same name.
