@@ -9,6 +9,7 @@ export const loadFonts = () =>
 		loadFont({family: 'Inter Tight', url: staticFile('fonts/inter-tight-latin-ext-500-normal.woff2'), weight: '500'}),
 		loadFont({family: 'JetBrains Mono', url: staticFile('fonts/jetbrains-mono-latin-500-normal.woff2'), weight: '500'}),
 		loadFont({family: 'JetBrains Mono', url: staticFile('fonts/jetbrains-mono-latin-700-normal.woff2'), weight: '700'}),
+		loadFont({family: 'Caveat', url: staticFile('fonts/caveat-latin-700-normal.woff2'), weight: '700'}),
 	]);
 
 export const C = {
