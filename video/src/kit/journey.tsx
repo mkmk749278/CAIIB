@@ -75,7 +75,7 @@ const Shop: React.FC<{x: number}> = ({x}) => (
 
 /** The whole road. risk/cost = station index (cost −1 = none); rp/cp = 0..1 draw-on; ship = 0..1 across the sea;
  * split = draw the C-rule bracket between flag and arrowhead; anyMode = label the gap "sea · air · road". */
-export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: number; ship?: number; dim?: boolean; highlight?: number; split?: number; anyMode?: boolean; costLabel?: string; reveal?: number}> = ({risk, cost, rp = 1, cp = 1, ship = 0, dim = false, highlight, split = 0, anyMode = false, costLabel, reveal = 7}) => {
+export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: number; ship?: number; dim?: boolean; highlight?: number; split?: number; anyMode?: boolean; costLabel?: string; reveal?: number; glow?: number[]}> = ({risk, cost, rp = 1, cp = 1, ship = 0, dim = false, highlight, split = 0, anyMode = false, costLabel, reveal = 7, glow}) => {
 	const shipX = 1000 + ship * (1300 - 1000);
 	const ARROW_Y = BASE - 300;
 	return (
@@ -99,6 +99,7 @@ export const Journey: React.FC<{risk?: number; cost?: number; rp?: number; cp?: 
 				if (v <= 0) return null;
 				return (
 					<g key={i} opacity={v}>
+						{glow && glow[i] > 0 ? <circle cx={s.x} cy={BASE + 120} r={30 + 14 * glow[i]} fill="#F2B33D" opacity={0.75 * glow[i]} /> : null}
 						<circle cx={s.x} cy={BASE + 120} r={hot ? 24 : 20} fill={hot ? P.ink : '#fff'} stroke={P.ink} strokeWidth={4} />
 						<text x={s.x} y={BASE + 130} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={26} fill={hot ? '#fff' : P.ink}>{i + 1}</text>
 						<text x={s.x} y={BASE + 182} textAnchor="middle" fontFamily={FT.sans} fontWeight={hot ? 700 : 600} fontSize={32} fill={P.ink}>{s.label}</text>

@@ -36,8 +36,38 @@ const fo = (f: number, a: string, b?: string) => Math.min(tw(f, W0(a) - 8, W0(a)
 
 // ---- r4: every sentence gets a beat (PLAYBOOK §5d; checked by tools/video/sentence_sync.py) ----
 // k-th sentence of a line, from the spoken words (a sentence starts after a word ending in . ? !)
-const SENT: Record<string, number[]> = Object.fromEntries(LS.map((l) => [l.id, l.words.map(([, t], k) => (k === 0 || /[.?!]["'”]?$/.test(l.words[k - 1][0]) ? l.start + t : -1)).filter((x) => x >= 0)]));
+// sentences come from the SCRIPT text (the transcript punctuates differently); each is anchored to the spoken word that
+// starts it, searched forward in the line's word timings, falling back to its share of the line
+const nw = (w: string) => w.toLowerCase().replace(/[^a-z0-9]/g, '');
+const SENT: Record<string, number[]> = Object.fromEntries(LS.map((l) => {
+	const sents = (l.text.match(/[^.?!]+[.?!]*["”]?/g) ?? [l.text]).map((t) => t.trim()).filter(Boolean);
+	const total = sents.reduce((a, t) => a + t.length, 0);
+	let pos = 0, acc = 0;
+	const out = sents.map((t, k) => {
+		const first = nw(t.replace(/^[^A-Za-z0-9]+/, '').split(/\s+/)[0].replace(/-.*/, ''));
+		const guess = l.start + Math.round((acc / total) * l.dur);
+		acc += t.length;
+		if (k === 0) { pos = 0; return l.start + (l.words[0]?.[1] ?? 0); }
+		for (let j = pos + 1; j < l.words.length; j++) {
+			if (nw(l.words[j][0]).startsWith(first) && first) { pos = j; return l.start + l.words[j][1]; }
+		}
+		return guess;
+	});
+	return [l.id, out];
+}));
 const sk = (id: string, k: number) => SENT[id][Math.min(k, SENT[id].length - 1)];
+
+// "the teacher points": an element glows for 1.5 s each time the voice names it (any of its keywords)
+const ALLW: [string, number][] = LS.flatMap((l) => l.words.map(([w, t]) => [nw(w), l.start + t] as [string, number]));
+const glowOf = (f: number, keys: string[]) => {
+	let g = 0;
+	for (const [w, t] of ALLW) {
+		if (t > f) break;
+		if (f - t < 50 && keys.some((k) => w.startsWith(k))) g = Math.max(g, t > f - 6 ? (f - t + 6) / 12 : 1 - (f - t - 6) / 44);
+	}
+	return Math.max(0, Math.min(1, g));
+};
+const STATION_KEYS = [['premises'], ['carrier'], ['alongside'], ['board', 'onboard'], ['arrive'], ['unloaded'], ['cleared', 'customs']];
 // a teacher's note, written left to right while the sentence is spoken, underlined when done
 type Beat = {at: [string, number]; text: string; x: number; y: number; size?: number; color?: string; stack?: string; until?: [string, number]; center?: boolean};
 const BEATS: Beat[] = [];
@@ -63,17 +93,16 @@ B('N03', 2, 'everything looks perfect', 1060, 560);
 B('N04', 3, 'USD 48,000 · gone', 960, 300, c);
 B('N06', 1, 'Under CIF: whose loss?', 620, 610); B('N06', 2, "seller's? or buyer's?", 620, 610);
 // chapter 1: the misconception, built step by step
-B('N06a', 1, 'CIF = cost, insurance, freight', 140, 110, {stack: 'm', size: 50});
-B('N06a', 2, 'seller paid the freight…', 140, 170, {stack: 'm', size: 50});
-B('N06a', 3, '…and bought the insurance', 140, 230, {stack: 'm', size: 50});
+B('N06a', 2, 'CIF = cost, insurance, freight', 140, 110, {stack: 'm', size: 50});
+B('N06a', 3, 'seller paid freight + insurance…', 140, 170, {stack: 'm', size: 50});
 B('N06a', 4, "so the sea is her job?", 900, 170, {stack: 'm', size: 50});
 B('N06a', 5, "so it's her loss?", 900, 230, {stack: 'm', size: 50, until: ['N06b', 0]});
 B('N06b', 1, 'on the ship → buyer’s problem?', 1060, 130);
-B('N09', 3, 'banks deal in documents, not goods', 140, 540); B('N09', 4, 'UCP 600 · Article 5', 140, 540);
+B('N09', 4, 'banks deal in documents, not goods', 140, 540); B('N09', 5, 'UCP 600 · Article 5', 140, 540);
 B('N10a', 0, 'said "seller"? don’t feel bad', 360, 640); B('N10a', 1, 'almost everybody does', 360, 640);
 B('N13', 4, '→ that is for the sales contract', 960, 760, c);
 B('N14', 3, 'an old contract may say 2010', 960, 620, c);
-B('N15', 3, 'for your exam: 2020', 960, 650, c);
+B('N15', 2, 'for your exam: 2020', 960, 650, c);
 B('N15a', 1, 'still with me? good', 960, 860, c); B('N15a', 4, 'hold on to that!', 960, 860, c);
 B('N15b', 0, 'stretch for a second', 960, 860, c); B('N15b', 2, 'full attention now', 960, 860, c);
 // chapter 2: the road
@@ -81,7 +110,7 @@ B('N16', 1, 'a road', 960, 130, c); B('N16', 2, "← the seller's door", 300, 40
 B('N16', 4, '7 stops in between', 960, 130, c); B('N16', 5, "let's walk through them", 960, 130, c);
 B('N19', 0, 'two markers move on this road', 1050, 130); B('N19', 2, 'after the baton: buyer’s loss', 1050, 130);
 B('N19', 4, 'how far the seller pays', 1050, 130);
-B('N20', 2, 'just watch, don’t write', 1050, 230);
+B('N20', 1, 'just watch, don’t write', 1050, 230);
 B('N21', 3, 'buyer loads the truck', 1150, 130); B('N21', 4, 'even the export clearance!', 1150, 130);
 B('N29', 2, 'everything else: in between', 600, 600); B('N29', 3, 'a favourite question!', 600, 600);
 B('N30', 0, 'customs is simple', 960, 720, c);
@@ -90,13 +119,13 @@ B('N31a', 0, 'quick check', 960, 130, c); B('N31a', 1, 'everyone with me?', 960,
 // chapter 2 end and chapter 3
 B('N33', 0, 'look at the road once more', 960, 860, c);
 B('N34', 0, 'a trap the exam likes', 960, 130, c);
-B('N35', 0, 'how many in all?', 960, 160, c); B('N35', 2, 'asked twice in one cycle!', 960, 760, c);
+B('N35', 0, 'how many in all?', 960, 160, c); B('N35', 3, 'asked twice in one cycle!', 960, 760, c);
 B('N36a', 1, 'the heaviest part: done', 960, 960, c);
 B('N37', 0, 'who must buy insurance?', 960, 110, c); B('N37', 3, 'the "I" is the clue', 960, 110, c);
 B('N37', 4, 'others: buyer insures, if anyone', 960, 110, c);
-B('N38', 0, 'the 2020 change', 960, 110, c); B('N38', 3, 'all-risks kind', 1000, 640); B('N38', 5, 'basic kind', 200, 640);
+B('N38', 0, 'the 2020 change', 960, 110, c); B('N38', 2, 'all-risks kind', 1000, 640); B('N38', 3, 'basic kind', 200, 640);
 B('N39', 0, 'why the difference?', 960, 110, c); B('N39', 3, 'manufactured goods → A', 1000, 760); B('N39', 4, 'the bigger umbrella!', 960, 110, c);
-B('N40', 2, 'not 100 → 110!', 960, 720, c); B('N40', 3, 'in the contract currency', 960, 720, c);
+B('N40', 2, 'not 100 → 110!', 960, 720, c); B('N40', 4, 'in the contract currency', 960, 720, c);
 B('N41', 0, 'the LC side says the same', 960, 720, c);
 B('N42', 0, 'calculators out!', 80, 620); B('N42', 1, "our exporter's price", 80, 620);
 B('N48', 0, 'at the LC desk', 960, 70, c);
@@ -297,12 +326,12 @@ export const Incoterms: React.FC = () => {
 					{(f) => (
 						<>
 							<Thoughts f={f} from={S('N06a')} to={S('N08')} a="CIF: seller paid freight and insurance, so the sea is the seller's risk." b="Once it's on the ship, it's the buyer's problem." bFrom={S('N06b')} reveal={S('N07')} right="b" />
-							{f >= S('N07') && f < S('N09') ? <Road f={f} y={640} rule="CIF" baton={3} rp={tw(f, W0('N07'), W0('N07') + 30)} costTo={f >= S('N08') ? 4 : null} cp={tw(f, W0('N08'), E('N08'))} hi={[3]} o={tw(f, S('N07'), S('N07') + 15)} note={f >= S('N08') ? 'CIF: risk passes early · freight paid to Rotterdam port' : 'CIF: risk passes on board at Chennai'} /> : null}
+							{f >= S('N07') && f < S('N09') ? <Road glow={STATION_KEYS.map((k) => glowOf(f, k))} f={f} y={640} rule="CIF" baton={3} rp={tw(f, W0('N07'), W0('N07') + 30)} costTo={f >= S('N08') ? 4 : null} cp={tw(f, W0('N08'), E('N08'))} hi={[3]} o={tw(f, S('N07'), S('N07') + 15)} note={f >= S('N08') ? 'CIF: risk passes early · freight paid to Rotterdam port' : 'CIF: risk passes on board at Chennai'} /> : null}
 							{f >= S('N09') && f < S('N10a') ? (
 								<>
-									<Doc x={140} y={200} title="Bill of lading" o={tw(f, S('N09') + 20, S('N09') + 32)} />
-									<Doc x={400} y={200} title="Commercial invoice" o={tw(f, S('N09') + 40, S('N09') + 52)} />
-									<Doc x={660} y={200} title="Insurance policy" sub="CIF · for the buyer" o={tw(f, S('N09') + 60, S('N09') + 72)}  />
+									<Doc glow={glowOf(f, ['lading'])} x={140} y={200} title="Bill of lading" o={tw(f, S('N09') + 20, S('N09') + 32)} />
+									<Doc glow={glowOf(f, ['invoice'])} x={400} y={200} title="Commercial invoice" o={tw(f, S('N09') + 40, S('N09') + 52)} />
+									<Doc glow={glowOf(f, ['policy'])} x={660} y={200} title="Insurance policy" sub="CIF · for the buyer" o={tw(f, S('N09') + 60, S('N09') + 72)}  />
 									<Card x={1060} y={220} w={720} h={250} border={C.buy} o={tw(f, at('N09', 'match', 0.45), at('N09', 'match', 0.45) + 15)}>
 										<Label x={360} y={40} w={680} align="center" size={56} weight={700} color={C.buy}>Documents comply → LC pays ✓</Label>
 										<Label x={360} y={170} w={680} align="center" size={32} color={C.dim}>UCP 600 Art. 5: documents, not goods</Label>
@@ -359,8 +388,8 @@ export const Incoterms: React.FC = () => {
 							{f >= S('N15a') ? (
 								<>
 									{/* "that's part one": the lesson map shows what is done; "part two is the picture": the next branch draws */}
-									<AbsoluteFill style={{opacity: Math.min(tw(f, sk('N15a', 0) - 6, sk('N15a', 0) + 14), 1 - tw(f, sk('N15a', 2) - 4, sk('N15a', 2) + XF))}}><GrowMap {...MAP} shown={2} /></AbsoluteFill>
-									<Big y={330} size={120} o={Math.min(tw(f, sk('N15a', 2), sk('N15a', 2) + 15), 1 - tw(f, S('N15b'), S('N15b') + XF))}><span style={{color: RISK}}>RISK</span> ≠ <span style={{color: COST}}>COST</span></Big>
+									<AbsoluteFill style={{opacity: Math.min(tw(f, sk('N15a', 0) - 6, sk('N15a', 0) + 14), 1 - tw(f, sk('N15a', 3) - 4, sk('N15a', 3) + XF))}}><GrowMap {...MAP} shown={2} /></AbsoluteFill>
+									<Big y={330} size={120} o={Math.min(tw(f, sk('N15a', 3), sk('N15a', 3) + 15), 1 - tw(f, S('N15b'), S('N15b') + XF))}><span style={{color: RISK}}>RISK</span> ≠ <span style={{color: COST}}>COST</span></Big>
 									<AbsoluteFill style={{opacity: tw(f, S('N15b'), S('N15b') + XF)}}><GrowMap {...MAP} shown={3} newFrom={2} p={tw(f, sk('N15b', 1), sk('N15b', 1) + 50)} lit={2} /></AbsoluteFill>
 								</>
 							) : null}
@@ -406,7 +435,7 @@ export const Incoterms: React.FC = () => {
 						const rp = demo ? tw(f, at('N19', 'red', 0.2), at('N19', 'red', 0.2) + 24) : 1;
 						return (
 							<>
-								<Road f={f} y={560} reveal={f < S('N17') ? 0 : reveal} baton={demo && f < at('N19', 'red', 0.2) ? null : baton} costTo={cost} hi={r ? [r.risk] : []} dimSea={!!r && !r.sea} rule={rule} rp={rp} cp={cp} />
+								<Road glow={STATION_KEYS.map((k) => glowOf(f, k))} f={f} y={560} reveal={f < S('N17') ? 0 : reveal} baton={demo && f < at('N19', 'red', 0.2) ? null : baton} costTo={cost} hi={r ? [r.risk] : []} dimSea={!!r && !r.sea} rule={rule} rp={rp} cp={cp} />
 								{/* r4: the door notes are beats now */}
 								{vis(f, 'N20', 'N21') ? <Fd o={fo(f, 'N20', 'N21')}>{<Big y={140} size={64}>11 rules on one road</Big>}</Fd> : null}
 								{r && rule && seg && !during(f, 'N26', 'N27') ? <RuleChip key={rule} code={rule} name={r.name} sea={r.sea} x={160} y={60} o={tw(f, seg.from - 6, seg.from + 12)} /> : null}
@@ -453,7 +482,7 @@ export const Incoterms: React.FC = () => {
 							)}</Fd> : null}
 							{f >= S('N31a') ? (
 								<>
-									<Road f={f} y={640} o={tw(f, S('N32'), S('N32') + 15)} rule="CPT" dimSea baton={f >= S('N32') ? 1 : null} rp={tw(f, W0('N32'), W0('N32') + 30)} costTo={f >= S('N32') ? 4 : null} cp={tw(f, W0('N32'), E('N32'))} hi={f >= S('N32') ? [1] : []} />
+									<Road glow={STATION_KEYS.map((k) => glowOf(f, k))} f={f} y={640} o={tw(f, S('N32'), S('N32') + 15)} rule="CPT" dimSea baton={f >= S('N32') ? 1 : null} rp={tw(f, W0('N32'), W0('N32') + 30)} costTo={f >= S('N32') ? 4 : null} cp={tw(f, W0('N32'), E('N32'))} hi={f >= S('N32') ? [1] : []} />
 									{f >= S('N32') ? <RuleChip code="CPT" name="Carriage Paid To" x={160} y={60} o={tw(f, S('N32'), S('N32') + 12)} /> : null}
 									<Thoughts f={f} from={at('N31a', 'some', 0.35)} to={S('N32') + 60} a="At the destination: carriage is paid till there." b="When the goods go to the first carrier." bFrom={at('N31a', 'others', 0.6)} reveal={S('N32')} right="b" y={230} />
 									<PauseCard top f={f} from={E('N31a') - 30} to={H('N31a')} q="CPT: where does the risk pass?" timerFrom={E('N31a')} timerFrames={by.N31a.hold} />
@@ -497,7 +526,7 @@ export const Incoterms: React.FC = () => {
 									</div>
 									<Big y={520} size={44} color={C.dim}>Delivered at Terminal → Delivered at Place Unloaded · any place, not only a terminal</Big>
 									{/* "deep breath… eleven rules, one road": the lesson map, five branches done; "insurance and the LC": the sixth draws */}
-									{f >= S('N36a') - 2 ? <AbsoluteFill style={{background: C.bg, opacity: tw(f, S('N36a'), S('N36a') + XF)}}><GrowMap {...MAP} shown={6} newFrom={5} p={tw(f, sk('N36a', 4), sk('N36a', 4) + 60)} lit={f >= sk('N36a', 4) ? 5 : undefined} /></AbsoluteFill> : null}
+									{f >= S('N36a') - 2 ? <AbsoluteFill style={{background: C.bg, opacity: tw(f, S('N36a'), S('N36a') + XF)}}><GrowMap {...MAP} shown={6} newFrom={5} p={tw(f, sk('N36a', 3), sk('N36a', 3) + 60)} lit={f >= sk('N36a', 3) ? 5 : undefined} /></AbsoluteFill> : null}
 								</>
 							) : null}
 						</>
@@ -618,7 +647,7 @@ export const Incoterms: React.FC = () => {
 				<Scene a={ch4} b={S('N58')}>
 					{(f) => (
 						<>
-							{vis(f, 'N50', 'N51') ? <Fd o={fo(f, 'N50', 'N51')}>{<Road f={f} y={600} rule="CIF" baton={3} rp={tw(f, W0('N50'), W0('N50') + 30)} costTo={4} cp={tw(f, W0('N50'), E('N50'))} hi={[3]} note="CIF: risk on board at Chennai · LC pays · buyer claims on the policy" />}</Fd> : null}
+							{vis(f, 'N50', 'N51') ? <Fd o={fo(f, 'N50', 'N51')}>{<Road glow={STATION_KEYS.map((k) => glowOf(f, k))} f={f} y={600} rule="CIF" baton={3} rp={tw(f, W0('N50'), W0('N50') + 30)} costTo={4} cp={tw(f, W0('N50'), E('N50'))} hi={[3]} note="CIF: risk on board at Chennai · LC pays · buyer claims on the policy" />}</Fd> : null}
 							{f >= S('N51') ? (
 								<div style={{position: 'absolute', left: 160, right: 160, top: 140}}>
 									{[{q: 'N52', a: 'N53', t: '1 · Most obligations on the seller?', ans: 'DDP · Delivered Duty Paid'}, {q: 'N54', a: 'N55', t: '2 · Which rule replaced DAT in 2020?', ans: 'DPU · Delivered at Place Unloaded'}, {q: 'N56', a: 'N57', t: '3 · CIF USD 1,25,400, LC silent: minimum cover?', ans: '125400 × 1.1 = USD 1,37,940'}].map((x) => (
