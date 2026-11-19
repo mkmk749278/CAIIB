@@ -185,6 +185,31 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   each part is a single block; the tool still supports multi-speaker turns if a lesson ever needs them. ElevenLabs
   v3 expression tags (`[chuckles]`) are allowed sparingly; the page can strip them for other models.
 
+## 5c. The v2 look: a notebook that is drawn, and a map that grows (owner, 2026-11-19)
+Owner on the Incoterms r1 cut: "voice is fine, but visuals look too plain; need more refinement; and what about mind
+maps? Look at research and use your creativity as tutor." r1 was dark slides with small parts and a lot of empty
+space, a road made of dots, and no mind map on screen.
+- **What the research says** (on top of §5a): concept and knowledge maps help learning more than reading the same
+  content as text (Nesbit & Adesope 2006 meta-analysis, about g = 0.6), most for learners who build or follow them
+  step by step; a map that is *built* in front of the learner beats a finished one shown at once (segmenting,
+  signalling); words placed next to the picture they belong to beat words apart from it (spatial contiguity, Mayer);
+  drawing on screen beats static slides (Guo et al. 2014; Fiorella & Mayer on generative drawing). And a learner on a
+  phone needs large shapes and type: nothing under about 24 px at 1080p.
+- **What we do**:
+  - **A notebook page**, not a dark slide: cream paper with a faint grid and a margin line; ink drawings; teacher's
+    notes in handwriting with a gold marker stroke drawn under them (`video/src/kit/look.tsx`). Warm and familiar,
+    like a good teacher's notebook, and it reads well on a phone at night.
+  - **The road is the real journey** (`kit/journey.tsx`): Tiruppur factory → truck → Chennai crane → ship on the sea →
+    Rotterdam crane → customs → the buyer's shop, with the 7 stations under it; the red baton is a flag planted at
+    the risk station, the blue line an arrow that runs as far as the seller pays. Same places in every Incoterms
+    lesson and in the LC and export-finance lessons.
+  - **Rule cards** in four family colours (E slate, F teal, C amber, D magenta), so the family is seen before it is read.
+  - **"Some of you / Others"**: two faceless learners with thought clouds; the wrong cloud fades and is crossed out.
+  - **A mind map that grows** (`kit/mindmap.tsx`): six branches at fixed clock positions; each branch is drawn on when
+    the lesson reaches it, the rest dim; a small "lesson map" card in the corner shows where we are (done ✓, now,
+    next); the finished map is the recap and the homework ("draw this tonight").
+- Style frames were shown to the owner before the full rebuild (`video/src/StyleFrames.tsx`).
+
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
