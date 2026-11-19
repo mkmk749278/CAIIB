@@ -111,7 +111,7 @@ B('N15', 2, 'for your exam: 2020', 960, 650, c);
 B('N15a', 1, 'still with me? good', 960, 800, c); B('N15a', 4, 'hold on to that!', 960, 800, c);
 B('N15b', 0, 'stretch for a second', 960, 800, c); B('N15b', 2, 'full attention now', 960, 800, c);
 // chapter 2: the road
-B('N16', 1, 'a road', 960, 130, c); B('N16', 2, "← the seller's door", 300, 400); B('N16', 3, "the buyer's door →", 1290, 400);
+B('N16', 1, 'a road', 960, 130, {...c, size: 66}); B('N16', 2, "← the seller's door", 300, 400); B('N16', 3, "the buyer's door →", 1290, 400);
 B('N16', 4, '7 stops in between', 960, 130, c); B('N16', 5, "let's walk through them", 960, 130, c);
 B('N19', 0, 'two markers move on this road', 1050, 130); B('N19', 2, 'after the baton: buyer’s loss', 1050, 130);
 B('N19', 4, 'how far the seller pays', 1050, 130);
@@ -129,7 +129,7 @@ B('N36a', 1, 'the heaviest part: done ✓', 140, 100); B('N36a', 2, 'eleven rule
 B('N37', 0, 'who must buy insurance?', 960, 110, c); B('N37', 3, 'the "I" is the clue', 960, 110, c);
 B('N37', 4, 'others: buyer insures, if anyone', 960, 110, c);
 B('N38', 0, 'the 2020 change', 960, 110, c); B('N38', 2, 'all-risks kind', 1000, 640); B('N38', 3, 'basic kind', 200, 640);
-B('N39', 0, 'why the difference?', 960, 110, c); B('N39', 3, 'manufactured goods → A', 960, 110, c); B('N39', 4, 'the bigger umbrella!', 960, 110, c);
+B('N39', 0, 'why the difference?', 960, 110, c); B('N39', 3, 'manufactured goods → A', 960, 110, {...c, size: 64}); B('N39', 4, 'the bigger umbrella!', 960, 110, c);
 B('N40', 2, 'not 100 → 110!', 960, 720, c); B('N40', 4, 'in the contract currency', 960, 720, c);
 B('N41', 0, 'the LC side says the same', 960, 720, c);
 B('N42', 0, 'calculators out!', 80, 620); B('N42', 1, "our exporter's price", 80, 620);
@@ -139,7 +139,7 @@ B('N49a', 3, 'a quick fit check ✓', 960, 780, c);
 // recap and practice
 B('N51', 1, 'answer before I do!', 960, 800, c);
 B('N53', 2, 'even import duty', 160, 400);
-B('N57', 2, 'all three? very good ✓', 160, 645, {size: 46}); B('N57', 1, '= USD 1,37,940', 160, 645, {size: 46});
+B('N57', 2, 'all three? very good ✓', 160, 645, {size: 54}); B('N57', 1, '= USD 1,37,940', 160, 645, {size: 54});
 
 // r4 pass 2: every remaining sentence
 B('N00c', 1, 'how many of you?', 960, 470, c);
@@ -154,7 +154,7 @@ B('N14', 1, 'only if written into the contract', 960, 620, c);
 B('N20', 2, 'the card at the end has it all', 1050, 230);
 B('N22', 3, 'at her premises: she loads too', 1150, 130);
 B('N24', 5, 'freight paid to the destination', 1150, 130);
-B('N26', 2, '2 points!', 1490, 150, {size: 50}); B('N26', 3, '= Tiruppur (CIF)', 1490, 150, {size: 50});
+B('N26', 2, '2 points!', 1490, 150, {size: 62}); B('N26', 3, '= Tiruppur (CIF)', 1490, 150, {size: 62});
 B('N28', 5, 'the most the seller can do', 1150, 130);
 B('N31a', 3, 'CPT: where does risk pass?', 960, 130, {...c, until: ['N31a', 4]});
 B('N32', 5, 'same story as CIF', 1150, 230);
@@ -175,10 +175,10 @@ B('N54', 0, 'two', 160, 645, {size: 46}); B('N55', 0, 'DPU', 160, 645, {size: 46
 B('N56', 1, 'CIF USD 1,25,400', 160, 645, {size: 46}); B('N56', 2, 'LC silent on the amount', 160, 645, {size: 46});
 B('N57', 0, '1,25,400 × 1.1', 160, 645, {size: 46});
 B('N58', 0, 'the whole lesson, one card', 140, 100, {size: 44}); B('N58', 2, 'risk · costs · customs', 140, 100, {size: 44});
-B('N60', 1, 'risk early, cost far', 140, 100, {size: 44}); B('N61', 1, 'CIP: the bigger cover', 140, 100, {size: 44});
-B('N61a', 0, 'now you know the 3 letters', 140, 100, {size: 44}); B('N62', 1, 'next: the LC + UCP', 140, 100, {size: 44});
-B('N62a', 0, 'one small homework', 140, 100, {size: 44}); B('N62a', 2, 'five minutes', 140, 100, {size: 44}); B('N62a', 3, 'then practice questions', 140, 100, {size: 44});
-B('N62a', 4, 'go and rest', 140, 100, {size: 44}); B('N62a', 5, 'see you next class!', 140, 100, {size: 44});
+B('N60', 0, 'step 3', 140, 100); B('N60', 1, 'risk early, cost far', 140, 100); B('N61', 1, 'CIP: the bigger cover', 140, 100);
+B('N61a', 0, 'you know the 3 letters', 140, 100); B('N62', 1, 'next: the LC + UCP', 140, 100);
+B('N62a', 0, 'one small homework', 140, 100); B('N62a', 2, 'five minutes', 140, 100); B('N62a', 3, 'then practice Qs', 140, 100);
+B('N62a', 4, 'go and rest', 140, 100); B('N62a', 5, 'see you next class!', 140, 100);
 
 // r4 pass 3: sentences the voice splits differently (anchored to a word)
 W('N15', 'exam', 1, 'for your exam: 2020 ✓', 960, 740, c);
@@ -194,13 +194,13 @@ W('N18', 'then', 1, 'then: sea · air · long road', 960, 130, c); W('N18', 'sto
 W('N18', 'stop', 2, '6 · unloaded', 960, 130, c); W('N18', 'stop', 3, '7 · import cleared, duty paid', 960, 130, c);
 W('N35', '13', 1, 'not 13!', 960, 760, c);
 W('N42', '2400', 1, 'freight: 2,400', 80, 560);
-W('N61', 'least', 1, 'at least 110%', 140, 160, {size: 44});
+W('N61', 'least', 1, 'at least 110%', 140, 165);
 W('N31', 'leave', 1, "E = exit, from the seller's door", 960, 760, c);
-W('N11', 'three', 1, '3 letters + a place + the version', 960, 600, c);
+B('N11', 1, 'the ICC writes them', 960, 600, c); W('N11', 'three', 1, '3 letters + a place + the version', 960, 600, c);
 W('N41', 'silent', 1, 'LC silent → at least 110% of CIF/CIP', 960, 720, c);
-W('N44', 'habit', 1, 'the same multiplier habit', 80, 560);
+W('N44', 'equals', 1, '48,000 × 1.1 = 52,800', 80, 560); W('N44', 'habit', 1, 'the same multiplier habit', 80, 560);
 W('N43', 'plus', 1, '45,000 + 2,400 + 600', 80, 620);
-W('N02', 'contract', 1, 'contract + LC say:', 960, 432, {...c, size: 46});
+W('N01', 'letter', 1, "LC: the buyer's bank promises to pay", 960, 700, c); W('N02', 'contract', 1, 'contract + LC say:', 960, 432, {...c, size: 46});
 W('N48', 'won', 1, '→ no insurance document', 960, 700, c);
 B('N55', 1, 'Delivered at Place Unloaded', 160, 645, {size: 46});
 W('N15a', 'risk', 1, 'risk ≠ cost', 960, 640, c);
