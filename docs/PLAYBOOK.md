@@ -190,6 +190,12 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-19: owner: "prepare the exact order… then a plan for every video… total script for each video… lock all
+  the videos… then build one by one; if anything changes, adjust the scripts." Why it is right: videos call back to
+  each other (the counter, the road, "as you saw in A05"), so writing every script before building catches gaps and
+  contradictions while they are cheap to fix, and one fact freeze at the cut-off covers the whole course. Order v2 in
+  `research/bfm/course_plan.md` §3 (dependency order, teach once and link, effort follows marks); process §4.
+  First exam the course can serve: May/June 2027 (cut-off 31 Dec 2026).
 - 2026-11-15: owner: "Incoterms as next sample video; we don't continue the first sample, later." A1 parked (v5 audio
   and r2 cut wait). Incoterms chosen as sample 2: a short, self-contained topic (11 rules, one picture), asked in 3 of
   7 cycles inside the A-LC cluster (6 of 7), and a different kind of lesson from A1 (rules and a picture, little
