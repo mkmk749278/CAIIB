@@ -93,7 +93,7 @@ B('N00d', 4, 'one was a full case study', 960, 800, c);
 B('N00e', 0, 'easy marks', 960, 470, c); B('N00e', 2, 'no heavy theory', 960, 780, c);
 B('N00e', 3, '15 minutes → this topic is yours', 960, 780, c); B('N00e', 4, "shall we start?", 960, 780, c);
 // opening
-B('N02', 1, 'keep this line in mind', 960, 800, c);
+B('N02', 1, 'keep this line in mind', 960, 432, {...c, size: 46});
 B('N03', 2, 'everything looks perfect', 1060, 560);
 B('N04', 3, 'USD 48,000 · gone', 960, 300, c);
 B('N06', 1, 'Under CIF: whose loss?', 620, 610); B('N06', 2, "seller's? or buyer's?", 620, 610);
@@ -129,7 +129,7 @@ B('N36a', 1, 'the heaviest part: done ✓', 140, 100); B('N36a', 2, 'eleven rule
 B('N37', 0, 'who must buy insurance?', 960, 110, c); B('N37', 3, 'the "I" is the clue', 960, 110, c);
 B('N37', 4, 'others: buyer insures, if anyone', 960, 110, c);
 B('N38', 0, 'the 2020 change', 960, 110, c); B('N38', 2, 'all-risks kind', 1000, 640); B('N38', 3, 'basic kind', 200, 640);
-B('N39', 0, 'why the difference?', 960, 110, c); B('N39', 3, 'manufactured goods → A', 1000, 760); B('N39', 4, 'the bigger umbrella!', 960, 110, c);
+B('N39', 0, 'why the difference?', 960, 110, c); B('N39', 3, 'manufactured goods → A', 960, 110, c); B('N39', 4, 'the bigger umbrella!', 960, 110, c);
 B('N40', 2, 'not 100 → 110!', 960, 720, c); B('N40', 4, 'in the contract currency', 960, 720, c);
 B('N41', 0, 'the LC side says the same', 960, 720, c);
 B('N42', 0, 'calculators out!', 80, 620); B('N42', 1, "our exporter's price", 80, 620);
@@ -139,11 +139,11 @@ B('N49a', 3, 'a quick fit check ✓', 960, 780, c);
 // recap and practice
 B('N51', 1, 'answer before I do!', 960, 800, c);
 B('N53', 2, 'even import duty', 160, 400);
-B('N57', 2, 'all three? very good ✓', 960, 800, c); B('N57', 1, '= USD 1,37,940', 160, 760);
+B('N57', 2, 'all three? very good ✓', 160, 645, {size: 46}); B('N57', 1, '= USD 1,37,940', 160, 645, {size: 46});
 
 // r4 pass 2: every remaining sentence
 B('N00c', 1, 'how many of you?', 960, 470, c);
-B('N02', 0, 'in the contract and the LC:', 960, 800, c); B('N02', 2, "we'll come back to it", 960, 800, c);
+B('N02', 0, 'in the contract and the LC:', 960, 800, c); B('N02', 2, "we'll come back to it", 960, 432, {...c, size: 46});
 B('N06', 0, 'let me ask you…', 620, 610);
 B('N07', 1, 'on board → risk is the buyer’s', 960, 120, c); B('N07', 2, 'here: Chennai', 960, 120, c); B('N07', 3, 'after that: the buyer’s sea', 960, 120, c);
 B('N08', 3, 'the insurance protects the buyer', 960, 120, c);
@@ -154,12 +154,12 @@ B('N14', 1, 'only if written into the contract', 960, 620, c);
 B('N20', 2, 'the card at the end has it all', 1050, 230);
 B('N22', 3, 'at her premises: she loads too', 1150, 130);
 B('N24', 5, 'freight paid to the destination', 1150, 130);
-B('N26', 2, 'two different points', 960, 820, c); B('N26', 3, '= our Tiruppur case (CIF)', 960, 820, c);
+B('N26', 2, '2 points!', 1490, 150, {size: 50}); B('N26', 3, '= Tiruppur (CIF)', 1490, 150, {size: 50});
 B('N28', 5, 'the most the seller can do', 1150, 130);
 B('N31a', 3, 'CPT: where does risk pass?', 960, 130, {...c, until: ['N31a', 4]});
 B('N32', 5, 'same story as CIF', 1150, 230);
 B('N33', 2, 'FAS: alongside · FOB, CFR, CIF: on board', 960, 800, c); B('N33', 4, 'sea and inland waterway only', 960, 800, c);
-B('N34', 1, 'containers!', 960, 130, c);
+B('N34', 1, 'containers!', 1300, 110);
 B('N35', 2, '7 any mode + 4 sea', 960, 760, c);
 B('N36', 1, 'there used to be DAT…', 960, 640, c);
 B('N39', 1, "ICC's thinking:", 960, 110, c);
@@ -170,15 +170,15 @@ B('N45', 0, 'your turn!', 80, 560); B('N45', 1, 'CIP: EUR 30,000', 80, 560); B('
 B('N46', 3, 'got it? great ✓', 80, 560);
 B('N47', 0, 'careful: people slip here', 80, 560); B('N47', 1, '110% of FOB?', 80, 560); B('N47', 2, '✗ wrong', 80, 560);
 B('N50', 4, 'lost container: the buyer’s problem, and he’s covered', 960, 130, c);
-B('N52', 0, 'one', 160, 560); B('N53', 0, 'DDP', 160, 560); B('N53', 1, 'Delivered Duty Paid', 160, 560);
-B('N54', 0, 'two', 160, 560); B('N55', 0, 'DPU', 160, 560);
-B('N56', 1, 'CIF USD 1,25,400', 160, 760); B('N56', 2, 'LC silent on the amount', 160, 760);
-B('N57', 0, '1,25,400 × 1.1', 160, 760);
-B('N58', 0, 'the whole lesson on one card', 140, 100); B('N58', 2, 'risk · costs · customs', 140, 100);
-B('N60', 1, 'risk early, cost to the destination', 140, 100); B('N61', 1, 'CIP: the bigger cover', 140, 100);
-B('N61a', 0, "you'll know exactly what they mean", 140, 100); B('N62', 1, 'next class: the LC + UCP articles', 140, 100);
-B('N62a', 0, 'one small homework', 140, 100); B('N62a', 2, 'five minutes', 140, 100); B('N62a', 3, 'then the practice questions', 140, 100);
-B('N62a', 4, 'good night, go and rest', 140, 100); B('N62a', 5, 'see you in the next class!', 140, 100);
+B('N52', 0, 'one', 160, 645, {size: 46}); B('N53', 0, 'DDP', 160, 645, {size: 46}); B('N53', 1, 'Delivered Duty Paid', 160, 645, {size: 46});
+B('N54', 0, 'two', 160, 645, {size: 46}); B('N55', 0, 'DPU', 160, 645, {size: 46});
+B('N56', 1, 'CIF USD 1,25,400', 160, 645, {size: 46}); B('N56', 2, 'LC silent on the amount', 160, 645, {size: 46});
+B('N57', 0, '1,25,400 × 1.1', 160, 645, {size: 46});
+B('N58', 0, 'the whole lesson, one card', 140, 100, {size: 44}); B('N58', 2, 'risk · costs · customs', 140, 100, {size: 44});
+B('N60', 1, 'risk early, cost far', 140, 100, {size: 44}); B('N61', 1, 'CIP: the bigger cover', 140, 100, {size: 44});
+B('N61a', 0, 'now you know the 3 letters', 140, 100, {size: 44}); B('N62', 1, 'next: the LC + UCP', 140, 100, {size: 44});
+B('N62a', 0, 'one small homework', 140, 100, {size: 44}); B('N62a', 2, 'five minutes', 140, 100, {size: 44}); B('N62a', 3, 'then practice questions', 140, 100, {size: 44});
+B('N62a', 4, 'go and rest', 140, 100, {size: 44}); B('N62a', 5, 'see you next class!', 140, 100, {size: 44});
 
 // r4 pass 3: sentences the voice splits differently (anchored to a word)
 W('N15', 'exam', 1, 'for your exam: 2020 ✓', 960, 740, c);
@@ -194,15 +194,15 @@ W('N18', 'then', 1, 'then: sea · air · long road', 960, 130, c); W('N18', 'sto
 W('N18', 'stop', 2, '6 · unloaded', 960, 130, c); W('N18', 'stop', 3, '7 · import cleared, duty paid', 960, 130, c);
 W('N35', '13', 1, 'not 13!', 960, 760, c);
 W('N42', '2400', 1, 'freight: 2,400', 80, 560);
-W('N61', 'least', 1, 'at least 110%', 140, 160);
+W('N61', 'least', 1, 'at least 110%', 140, 160, {size: 44});
 W('N31', 'leave', 1, "E = exit, from the seller's door", 960, 760, c);
 W('N11', 'three', 1, '3 letters + a place + the version', 960, 600, c);
 W('N41', 'silent', 1, 'LC silent → at least 110% of CIF/CIP', 960, 720, c);
 W('N44', 'habit', 1, 'the same multiplier habit', 80, 560);
 W('N43', 'plus', 1, '45,000 + 2,400 + 600', 80, 620);
-W('N02', 'contract', 1, 'contract + LC say:', 960, 800, c);
+W('N02', 'contract', 1, 'contract + LC say:', 960, 432, {...c, size: 46});
 W('N48', 'won', 1, '→ no insurance document', 960, 700, c);
-B('N55', 1, 'Delivered at Place Unloaded', 160, 560);
+B('N55', 1, 'Delivered at Place Unloaded', 160, 645, {size: 46});
 W('N15a', 'risk', 1, 'risk ≠ cost', 960, 640, c);
 
 const Notes: React.FC<{f: number}> = ({f}) => {
@@ -212,7 +212,9 @@ const Notes: React.FC<{f: number}> = ({f}) => {
 			{list.map((b, i) => {
 				// a note stays until the next note outside its stack starts (or its `until`), at most 12 s
 				const next = list.slice(i + 1).find((n) => !b.stack || n.stack !== b.stack);
-				const end = Math.min(b.until ? sk(b.until[0], b.until[1]) : next ? next.t0 : b.t0 + 360, b.t0 + 360);
+				// a note leaves at the next note, or when its own line ends (it never carries into the next line or scene)
+				const lineEnd = by[b.at[0]].start + by[b.at[0]].dur + 12;
+				const end = Math.min(b.until ? sk(b.until[0], b.until[1]) : next ? next.t0 : lineEnd, lineEnd, b.t0 + 360);
 				if (f < b.t0 - 6 || f > end + XF) return null;
 				const words = by[b.at[0]].words;
 				// write at the speed of the sentence: finish within 80% of it (12–70 frames)
@@ -403,7 +405,7 @@ export const Incoterms: React.FC = () => {
 					{(f) => (
 						<>
 							<Thoughts f={f} from={S('N06a')} to={S('N08')} a="CIF: seller paid freight and insurance, so the sea is the seller's risk." b="Once it's on the ship, it's the buyer's problem." bFrom={S('N06b')} reveal={S('N07')} right="b" />
-							{f >= S('N07') && f < S('N09') ? <Road glow={STATION_KEYS.map((k) => glowOf(f, k))} f={f} y={640} rule="CIF" baton={3} rp={tw(f, W0('N07'), W0('N07') + 30)} costTo={f >= S('N08') ? 4 : null} cp={tw(f, W0('N08'), E('N08'))} hi={[3]} o={tw(f, S('N07'), S('N07') + 15)} note={f >= S('N08') ? 'CIF: risk passes early · freight paid to Rotterdam port' : 'CIF: risk passes on board at Chennai'} /> : null}
+							{f >= S('N07') && f < S('N09') ? <Road glow={STATION_KEYS.map((k) => glowOf(f, k))} f={f} y={640} rule="CIF" baton={3} rp={tw(f, W0('N07'), W0('N07') + 30)} costTo={f >= S('N08') ? 4 : null} cp={tw(f, W0('N08'), E('N08'))} hi={[3]} o={tw(f, S('N07'), S('N07') + 15)}  /> : null}
 							{f >= S('N09') && f < S('N10a') ? (
 								<>
 									<Doc glow={glowOf(f, ['lading'])} x={140} y={200} title="Bill of lading" o={tw(f, S('N09') + 20, S('N09') + 32)} />
@@ -760,7 +762,7 @@ export const Incoterms: React.FC = () => {
 						<>
 							<GrowMap {...MAP} shown={6} />
 							<Label x={140} y={40} size={30} color={C.dim}>NEXT CLASS · the LC and the UCP articles the exam asks</Label>
-							{f >= S('N62a') ? <Note x={1300} y={860} size={56} color={P.risk} rot={-4} p={tw(f, sk('N62a', 1) - 4, sk('N62a', 1) + 30)}>draw the road tonight!</Note> : null}
+							{f >= S('N62a') ? <Note x={1380} y={14} size={50} color={P.risk} rot={-4} p={tw(f, sk('N62a', 1) - 4, sk('N62a', 1) + 30)}>draw the road tonight!</Note> : null}
 						</>
 					)}
 				</Scene>

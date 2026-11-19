@@ -303,7 +303,8 @@ checks decide when a cut is ready, not a feeling.
   spoken word, matched on two words), or the teacher writes a short note (`B(id, k, text, x, y)`; `W(id, word, nth,
   …)` when the voice splits a sentence differently from the script, or when a number or a letter-code starts it).
   Notes are written left to right at the speed of their sentence, with a gold highlighter band, and stay until the
-  next note. Things the voice names light up ("the teacher points": stations, documents). Map moments sit where the
+  next note or the end of their own line, whichever comes first (r4 let notes linger into the next scene, which is
+  how they landed on station labels, quotes and the pause card). Things the voice names light up ("the teacher points": stations, documents). Map moments sit where the
   voice talks about progress ("that's part one", "deep breath"), and chapter titles slide in while the teacher
   speaks. From now on every script carries this cue sheet next to its lines, written with the script, not after.
 - **3. No jumps.** Every appearance and disappearance is a crossfade (`vis/fo/Fd`, scenes overlap by 18 frames, never
@@ -326,6 +327,11 @@ checks decide when a cut is ready, not a feeling.
   a common first word ("The…", "So…") latches onto an earlier one; numbers and spelt codes ("13", "D-D-P") need a
   word anchor; notes placed in the bottom band collide with the caption and are not measured; note writing speed must
   follow the sentence, or a short sentence's note is still being written when the next begins.
+- **Where notes go (from the r4 overlaps):** a note never outlives its line; never under a card (the practice notes
+  sit above the pause card); never on a road label, a quote bubble or a card corner: use the free top band
+  (y ≈ 100–150) or the space beside the scene; in the recap the notes are short and small, top-left, clear of the
+  map's top branch; the map's bottom branch puts its leaves beside the pill, not under it, so the caption cannot
+  hide them. The overlap check counts scene ink below grey 120, so the sea and tinted fills are not mistaken for text.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
