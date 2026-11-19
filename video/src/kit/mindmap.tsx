@@ -23,8 +23,9 @@ export const GrowMap: React.FC<{centre: [string, string]; branches: Branch[]; sh
 			const px = mid ? bx - 180 : right ? bx : bx - 360; // pill box left
 			const top = mid && Math.cos(a) > 0;
 			// leaves: right of the pill for the top branch, centred under it for the bottom one, under it on the sides
-			const lx = top ? bx + 205 : mid ? bx : right ? bx + 14 : bx - 14;
-			const ly0 = top ? by + 18 - ((b.leaves.length - 1) * 56) / 2 : by + 90;
+			// bottom branch: leaves to the LEFT of the pill, level with it (under it they ran into the caption)
+			const lx = top ? bx + 205 : mid ? bx - 205 : right ? bx + 14 : bx - 14;
+			const ly0 = mid ? by + 18 - ((b.leaves.length - 1) * 56) / 2 : by + 90;
 			const isLit = lit === i;
 			return (
 				<g key={i} opacity={dimmed ? 0.55 : 1}>
@@ -33,7 +34,7 @@ export const GrowMap: React.FC<{centre: [string, string]; branches: Branch[]; sh
 						<rect x={px} y={by - 38} width={360} height={76} rx={38} fill={isLit ? P.ink : '#fff'} stroke={P.ink} strokeWidth={4} />
 						<text x={px + 180} y={by + 14} textAnchor="middle" fontFamily={FT.sans} fontWeight={700} fontSize={38} fill={isLit ? '#fff' : P.ink}>{b.title}</text>
 						{b.leaves.map((t, k) => (
-							<text key={k} x={lx} y={ly0 + k * 56} textAnchor={top || right ? 'start' : mid ? 'middle' : 'end'} fontFamily={FT.hand} fontWeight={700} fontSize={56} fill={P.ink} opacity={Math.max(0, Math.min(1, q * 3 - 1.4 - k * 0.15))}>{t}</text>
+							<text key={k} x={lx} y={ly0 + k * 56} textAnchor={top || right ? 'start' : 'end'} fontFamily={FT.hand} fontWeight={700} fontSize={56} fill={P.ink} opacity={Math.max(0, Math.min(1, q * 3 - 1.4 - k * 0.15))}>{t}</text>
 						))}
 					</g>
 				</g>

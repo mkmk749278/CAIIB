@@ -10,91 +10,38 @@ project started, the market research, the lesson design and the reasons behind e
 any new stage. New lessons go into the playbook section they belong to, with the reason; never a new loose doc.
 
 ## Current work (read first when the owner says "continue")
-- **2026-11-19 (owner, latest): finish the Incoterms sample video first.** "Incoterms is just a sample video; once we
-  finalise the video, then we continue." Scripts after 00 wait until the sample is final, because it sets the
-  template (look, pacing, sound) every script is written for. Steps: owner's reaction to r1 → independent viewer
-  review → visual upgrade (illustrated scenes, music bed, sound cues, transitions) → owner approves → template locked
-  → scripts resume at A01. Renders on GitHub runners (`render.yml`), files in Drive `CAIIB/BFM/A07/`.
-  **Status 2026-11-19:** owner: "voice fine, visuals too plain; mind maps?" → v2 look (PLAYBOOK §5c, `video/src/kit/`),
-  independent review `review_look_v2.md` = ADOPT WITH FIXES (all applied); N33 re-recorded (ship's rail fix);
-  Incoterms rebuilt on the v2 kit (shared `theme.ts`/`parts.tsx`/`road.tsx` now draw the v2 look, so A1 changes too
-  when resumed); r2 render → Drive `CAIIB/BFM/A07/renders/r2_720p.mp4`. Not yet: sound cues and music bed, camera
-  pan across one page.
-  **r2 owner reaction (2026-11-19): not smooth** (audio and picture). Measured: not the 6-runner join; it is our line
-  cutting (fixed 0.35 s gaps, dead silences) and scene switching. Fix = **flow engine, PLAYBOOK §5d** (continuous
-  voice, phrase-bound drawing, one page + camera, no change in silence, live holds, smoothness audit). Building r3.
-  **r3 (2026-11-19, Drive `A07/renders/r3_720p.mp4`):** continuous voice + ducked music bed (`flow_voice.py`, `mix.flac`
-  in Drive `A07/flow/`), crossfades, word-following captions, phrase-drawn cost line; audit: 0 dead silences, 2 cuts.
-  **Owner on r3:** at 2:18 a chapter card shows with no narration, between the question (N06 + 5 s pause) and its
-  answer, and "the same problem in some places": the picture does not match what is being said. Sync sheets
-  (`tools/video/sync_sheet.py`: a frame every 4 s with the words being spoken) confirm it: the warm-up holds the title
-  card for 25 s while the voice talks about other things, scenes linger after the voice moves on, chapter cards sit in
-  silence. **Next (r4): a cue sheet per lesson**: every sentence gets its own visual beat, anchored to its words, so
-  the picture always shows what is being said; chapter titles slide in while the teacher speaks (no silent chapter
-  cards); pause holds only for prediction prompts, kept alive. Cue sheets become part of every script from now on.
-  **r4 done (2026-11-19, Drive `A07/renders/r4_720p.mp4`):** no silent chapter gaps (`timeline.py` CHAPTER={}),
-  chapter strip, title steps back, no wobble, **notes layer** (`B(id, k, …)` per script sentence, `W(id, word, nth, …)`
-  per spoken word; ~170 notes written at sentence speed with a highlighter band), stations/documents glow when named,
-  sentence-timed scene elements, map moments at N15a/b, N36a and the recap. Checks (owner: "check every second"):
-  `sentence_sync.py` 1 of 335 sentences borderline (0.36 vs 0.4, a note appears), 1 stretch of 6 s; `smooth_audit.py`
-  PASS (0 dead silence, 0 cuts, 0 freezes outside the 4 planned countdowns). Waiting for the owner's reaction.
-- **2026-11-19 (owner): new process.** Fix the exact video order → write a one-page plan for every video → write
-  every full script → lock all → only then build, one by one; changes found while building go back into the scripts.
-  **`research/bfm/course_plan.md` v2** holds the order (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4
-  revisions, U01, X01), the "builds on" links, pictures, plan template and rule version. Order locked (PR #17 merged).
-  Plans module by module in `course/bfm/<module>/plans_<module>.md`: **all four modules' plans draft 1 done
-  (A, B, C, D: 58 videos; 2026-11-19)**; owner reviews them; next: full scripts in course order (00, A01…), each
-  plan moved into its video folder with `numericals.md`, `practice.md`, `claims.csv`, `map_nodes.md`. Target exam: May/June 2027
-  (cut-off 31 Dec 2026) unless the owner says otherwise. Sample folders keep their names: `A/A1` = A01,
-  `A/A9_incoterms` = A07. The A1/Incoterms notes below are history until the build stage.
-- **Paper 1 = CAIIB Bank Financial Management (BFM).** Owner decision, 2026-11-14.
-- **Done:** official IIBF syllabus; 453 recalled exam topics from 7 cycles (Jun 2023 to Jun 2026) tagged to units;
-  **BFM Importance Map** (`research/bfm/importance_map.md`), cross-checked against two full memory-based papers
-  (`fullpaper_tagged.csv`); **regulatory changes up to the 30 June 2026 cut-off** from 13 IIBF Vision issues and
-  RBI's Master Direction index (`regulatory_updates.md`); **BFM course plan** (`course_plan.md`, now v2: 58 videos in exact order,
-  one mind map per module, pilot proposal A1+A2 forex).
-- **Owner decisions (2026-11-14):** build the **full course first**; no YouTube channel until it is complete, then a
-  **new channel** only for publicity/free samples. **English only.** **Paid course with free sample lessons** (hosting
-  decided later). Claude decides the build order. Work starts now in this repo (separate from the Creator films).
-- **Fallback order (owner, 2026-11-14):** Claude does everything it can itself; if this session's IP is rate-limited
-  or blocked, open a new cloud session (may get a different IP) for that narrow job; the owner's laptop (Cowork,
-  Gemini, Antigravity) only for what no cloud session can do. Details and the open laptop tasks:
-  `docs/desktop_tasks.md`. Laptop results arrive as PRs into `research/bfm/inbox/` (Gemini's as pasted chat text).
-- **A1 video (2026-11-14)**: script `course/bfm/A/A1/script_v2.md` (rev 1 after independent review `review_r1.md`,
-  `review_ack_r1.md`); owner generated the voices in the ElevenLabs app (no API until final); audio cut into lines by
-  `tools/video/transcribe_words.py` + `align_lines.py` (media in Drive `CAIIB/BFM/A01/`); Remotion
-  project `video/` (render: `npx remotion render src/index.ts A1 out/x.mp4 --scale=0.6666666666666666`, then
-  loudnorm to -16 LUFS); 720p review cut r1 sent to the owner in chat.
-- **A1 r1 owner reaction (2026-11-14)**: narration felt like a documentary, not a class. Fixed in the words:
-  `script_v3.md` (classroom voice, same facts and line ids) and `voice_blocks_v3.md` (3 teacher blocks + Meera, with
-  voice settings). Rules in PLAYBOOK §5b; every future script follows them. Waiting for the owner's v3 audio, then
-  re-cut (some cues use fixed frame offsets inside a line, e.g. "Exactly backwards." at N05; re-check them).
-- **Then (same day) "make it a live class"**, and finally **one voice** (owner): `script_v5.md` is current. One
-  teacher voice, an online class: warm-up, check-ins, and the teacher voices what students think ("some of you say X,
-  others Y"); no student characters (v4's Meera/Ravi dropped). Rules PLAYBOOK §5b. Copy page for the phone:
-  https://claude.ai/artifact/5L1n5TgBfjStnD4rdrTy2o (from `course/bfm/A/A1/voice_page.html`, built by
-  `tools/video/voice_blocks.py`; text also in `voice_v5.md`). Owner generates `part_1.mp3`…`part_6.mp3` in one voice.
-  To cut lines, adapt `align_lines.py` (it still reads `script_v2.md` and one file per speaker) to run per part with
-  that part's ids in order; video code ids M01/M03 become N04a/N15c. v3 and v4 are superseded.
-- **2026-11-15 (owner): Incoterms is the next sample video; A1 is parked until later.** Lesson folder
-  `course/bfm/A/A9_incoterms/` (the Incoterms part of course-plan A9): `script.md` (v5 rules from the start: one
-  teacher voice, online class, "some of you / others"; signature picture "the road" with a red risk baton and a blue
-  cost line), `numericals.md`, `practice.md`, `claims.csv` (ICC pages checked 2026-11-15; Incoterms 2020 current,
-  ICC 2026 workplan only begins work toward Incoterms 2030; rules marked "re-check against a copy" come from the
-  paid ICC text), `map_nodes.md`, `voice.md`. Phone copy page: https://claude.ai/artifact/W8oruErZHXydDFpKDHWf82.
-  Owner's audio (2026-11-15) came as two files: `incoterms_1.mp3` = parts 1–4 (N00a–N36a), `incoterms_2.mp3` =
-  parts 5–6 (N37–N62a); media in Drive `CAIIB/BFM/A07/voice/` (re-uploaded 2026-11-19, with word timings); cut lines in `CAIIB/BFM/A07/lines/`. Cut with `tools/video/cut_lines.py` (generic: script, out dir,
-  `audio:words.json:first:last`; also writes per-line word times), timeline `tools/video/timeline.py` (holds and
-  chapter cards per lesson) → `video/src/incoterms_lines.json`; composition `Incoterms` (`video/src/Incoterms.tsx`,
-  `road.tsx`; cues use spoken word times via `at(id, word, fallback)`). Render: `npx remotion render src/index.ts
-  Incoterms out/x.mp4 --scale=0.6666666666666666`, loudnorm -16 LUFS. **r1 review cut sent 2026-11-15.**
-  **Next for it:** owner's reaction; independent viewer review (new session); then the visual upgrade shared with A1.
-- **A1, when resumed:** (1) owner's v5 parts, re-cut as r2 (warm-up scene, "some of you / others" thought bubbles replace Meera's
-  bubble, new disclosure card);
-  (2) independent viewer review of the cut (new session); (3) visual upgrade:
-  illustrated characters and counter, music bed and sound cues (Drive `Music-Library/`, shared with Creator),
-  smoother transitions; check line N34 audio ("nine nine nine five"); (4) lock the template, then A2 onwards in
-  `course_plan.md` order. Cowork's first inbox batch is assessed in `research/bfm/inbox/README.md` (mostly unusable).
+- **Paper 1 = CAIIB Bank Financial Management (BFM)** (owner, 2026-11-14). Target exam **May/June 2027**, so rules
+  as at the **31 Dec 2026** cut-off, unless the owner says otherwise.
+- **Process (owner, 2026-11-19):** exact video order → a one-page plan per video → every full script, **with its cue
+  sheet** (PLAYBOOK §5e) → lock all → build one by one; anything found while building goes back into the scripts.
+  Order: `research/bfm/course_plan.md` v2 (58 videos: 00, A01–A21, B01–B14, C01–C09, D01–D07, 4 revisions, U01, X01;
+  locked). Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review). Scripts:
+  `course/bfm/00_start/script.md` written; the rest wait for the sample to be final.
+- **Now: finishing the Incoterms sample (A07, folder `course/bfm/A/A9_incoterms/`) as the template.** History of
+  r1→r4 in PLAYBOOK §5c–§5e and the decisions log. **r4** (Drive `CAIIB/BFM/A07/renders/r4_720p.mp4`): owner "came
+  out very good"; open items: text overlaps in places (fix with `overlap_check`, render r5), then owner approval →
+  template locked → scripts resume at A01. Rules from the r4 feedback: a different greeting and goodbye in every
+  video; trade lessons in US dollars (PLAYBOOK §5b).
+- **How a lesson video is built (the r4 method, PLAYBOOK §5e):** owner records each part in one take →
+  `tools/video/flow_voice.py` (continuous voice, planned holds only, re-recorded lines swapped in) + music bed ducked →
+  `mix.flac` in Drive `<video>/flow/` → timeline JSON → Remotion composition on the v2 kit (`video/src/kit/`:
+  notebook page, journey road, rule cards, growing map; `theme.ts`/`parts.tsx`/`road.tsx` shared) with a beat for
+  every sentence (`sk()`, `B()`, `W()` notes, glow on named things, crossfades only) → render on 6 runners
+  (`render.yml`, ≈7 min) → checks `smooth_audit.py`, `sentence_sync.py`, `overlap_check.mjs/.py`, `sync_sheet.py`
+  → fix what they list → only then to the owner.
+- **A1 (parked):** script `course/bfm/A/A1/script_v5.md` (one teacher voice, online class; copy page
+  https://claude.ai/artifact/5L1n5TgBfjStnD4rdrTy2o). When resumed: owner records the v5 parts, then build it with
+  the r4 method (the shared kit already gives it the new look); check line N34 audio ("nine nine nine five").
+- **Done (research):** IIBF syllabus; 453 recalled exam topics from 7 cycles tagged to units; Importance Map
+  (`research/bfm/importance_map.md`), cross-checked with two full memory-based papers; regulatory changes to the
+  30 June 2026 cut-off (`regulatory_updates.md`; the July–December 2026 changes are still to add before the fact
+  freeze).
+- **Owner decisions (2026-11-14):** build the full course first; no YouTube channel until it is complete, then a new
+  channel for publicity/free samples only; English only; paid course with free sample lessons (hosting decided later);
+  Claude decides the build order.
+- **Fallback order (owner, 2026-11-14):** Claude does everything it can; a new cloud session (new IP) for a
+  rate-limited job; the owner's laptop (Cowork, Gemini, Antigravity) only for what no cloud session can do
+  (`docs/desktop_tasks.md`). Laptop results are leads only until checked (`research/bfm/inbox/README.md`).
 
 ## The goal in one line
 Cover everything the exam needs, put the most effort where IIBF's marks actually are, and teach it with the best
