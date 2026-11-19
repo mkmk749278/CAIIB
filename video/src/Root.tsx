@@ -14,6 +14,6 @@ export const Root: React.FC = () => (
 	<>
 	<Composition id="A1" component={A1} durationInFrames={(lines as {durationInFrames: number}).durationInFrames} fps={30} width={1920} height={1080} />
 	<Composition id="Incoterms" component={Incoterms} durationInFrames={(inc as {durationInFrames: number}).durationInFrames} fps={30} width={1920} height={1080} />
-	<Composition id="StyleFrames" component={StyleFrames} durationInFrames={4} fps={30} width={1920} height={1080} />
+	<Composition id="StyleFrames" component={StyleFrames} durationInFrames={6} fps={30} width={1920} height={1080} />
 	</>
 );
