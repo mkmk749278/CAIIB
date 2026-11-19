@@ -7,6 +7,7 @@
 # Usage (paths are under Drive CAIIB/; layout in docs/PLAYBOOK.md §8):
 #   tools/drive/drive.sh ls   [BFM/A07]                    list (recursive, 2 levels)
 #   tools/drive/drive.sh push BFM/A07/voice FILE [FILE…]   upload; prints a private view link per file
+#   tools/drive/drive.sh sync BFM/A07/lines LOCAL_DIR      upload a whole folder in one go (fast; no links)
 #   tools/drive/drive.sh pull BFM/A07/voice LOCAL_DIR      download a folder (GDRIVE_INCLUDE='*.mp3' to filter)
 #   tools/drive/drive.sh link BFM/A07/renders/r1.mp4       print the view link of one file
 # Optional GDRIVE_CAIIB_FOLDER_ID overrides the CAIIB folder id below.
@@ -53,9 +54,12 @@ case $cmd in
             "$f" "gd:$dest/$(basename "$f")" >&2
           link "$dest/$(basename "$f")"
         done ;;
+  sync) dest=${1:?Drive folder}; src=${2:?local folder}
+        "$RCLONE" copy --transfers 8 --retries 4 --stats-one-line --stats 30s "$src" "gd:$dest" >&2
+        echo "synced $(ls "$src" | wc -l) files to CAIIB/$dest" ;;
   pull) src=${1:?Drive folder}; dst=${2:?local folder}; mkdir -p "$dst"
         "$RCLONE" copy --retries 4 --stats-one-line --stats 30s ${GDRIVE_INCLUDE:+--include "$GDRIVE_INCLUDE"} \
           "gd:$src" "$dst"; ls -la "$dst" ;;
   link) link "${1:?Drive file path}" ;;
-  *)    sed -n 2,13p "$0"; exit 2 ;;
+  *)    sed -n 2,14p "$0"; exit 2 ;;
 esac
