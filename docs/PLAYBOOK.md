@@ -340,6 +340,11 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-20: owner on Incoterms r5: "Video is fine" → the r4 method and v2 kit are the locked template for every
+  lesson; scripts resume at A01. Owner: "We don't need to render in 4k right": right, **masters are 1080p**
+  (`render.yml` scale 1), review cuts 720p. Why not 4K: the audience watches on phones (a 6-inch screen shows no
+  difference above 1080p), the whole page is drawn for 1920×1080 (type ≥ 24 px there), YouTube and course hosts
+  stream 1080p well on mobile data, and 4K would mean about 4× the render time and file size for nothing visible.
 - 2026-11-19: owner on Incoterms r4: "it's came out very good", with three notes: text overlaps in places (→ the
   overlap check, §5e), a different greeting and goodbye in every video (→ §5b), and asked whether "dollars" is right
   (yes for trade lessons, → §5b). The r4 method is §5e.
