@@ -20,7 +20,9 @@ any new stage. New lessons go into the playbook section they belong to, with the
 - **Now: finishing the Incoterms sample (A07, folder `course/bfm/A/A9_incoterms/`) as the template.** History of
   r1→r5 in PLAYBOOK §5c–§5e and the decisions log. r4: owner "came out very good" but text overlapped in places.
   **r5** (Drive `CAIIB/BFM/A07/renders/r5_720p.mp4`, 2026-11-19): overlaps fixed (overlap check 149 s → 0; sentence
-  check 0 of 335; smooth audit pass). Waiting for owner approval → template locked → scripts resume at A01. Rules from the r4 feedback: a different greeting and goodbye in every
+  check 0 of 335; smooth audit pass). **Approved by the owner 2026-11-20 ("Video is fine"): template LOCKED.**
+  Master = 1080p (`scale` 1, Drive `CAIIB/BFM/A07/renders/A07_master_1080p.mp4`); no 4K (PLAYBOOK §7).
+  **Next: scripts with cue sheets, from A01 in course-plan order.** Rules from the r4 feedback: a different greeting and goodbye in every
   video; trade lessons in US dollars (PLAYBOOK §5b).
 - **How a lesson video is built (the r4 method, PLAYBOOK §5e):** owner records each part in one take →
   `tools/video/flow_voice.py` (continuous voice, planned holds only, re-recorded lines swapped in) + music bed ducked →
