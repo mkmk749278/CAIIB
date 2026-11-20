@@ -383,6 +383,13 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-20: **independent review for content.** Owner: "Always take independent session review. I can't review
+  the content because I don't have that much knowledge on that content: syllabus, what much to cover, deep
+  research, books, official sites, web etc. You need to create content for our classes accordingly." Why it works:
+  the author of a script cannot see its own blind spots, and the owner is not a subject expert, so a fresh agent with
+  no stake in the text, the primary sources and the recall data is the content check. Precedent: A1 review r1
+  (`course/bfm/A/A1/review_r1.md`) caught three rate-choice errors the author had missed. Every script now goes
+  author → independent review → fixes → re-review until ADOPT (rule in CLAUDE.md, Current stage).
 - 2026-11-20: **voice.** ElevenLabs stays; the Creator plan only in the months we voice, after all BFM scripts are
   written; the free plan is never used for anything sold. Maya 2 Vasant on Kaggle is the tested fallback. Details,
   costs and test results in §5f. Same day: regulatory updates to early November 2026 added (repo rate 5.50%, FERR,
