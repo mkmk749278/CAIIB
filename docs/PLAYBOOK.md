@@ -253,7 +253,9 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   "Some of you" and "Others", never made-up percentages. Disclosure card: "The voice in this lesson is AI-generated."
   The teacher stays an unnamed AI voice with no back-story, never "Sir".
 - New lines added for class moments get a letter suffix (N00a, N15a, N04a) so the old line ids and video code stay.
-- Voice text is built by `tools/video/voice_blocks.py`: parts of about 1,400–3,000 characters, one generation each,
+- Voice text is built by `tools/video/voice_blocks.py --max 10000`: parts of at most 10,000 characters, cut only at
+  chapter breaks, fewest parts with balanced sizes (owner, 2026-11-20: "max 10000 character where natural gap is
+  there"; earlier 1,400–3,000), one generation each,
   as Markdown and as a phone page with one Copy button per part (the owner generates each part in ElevenLabs from the
   phone). With one voice
   each part is a single block; the tool still supports multi-speaker turns if a lesson ever needs them. ElevenLabs

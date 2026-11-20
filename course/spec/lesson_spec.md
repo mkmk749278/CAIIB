@@ -10,7 +10,7 @@ built from them later; the text files are the master.
 | `practice.md` | 5–8 of our own questions (MCQ and keyed-in numericals) with answers and one-line reasons | every answer traced to `claims.csv` or `numericals.md` |
 | `claims.csv` | every rule or number taught: claim, primary source (title, section, URL), version date, status | no claim without a primary source; version on or before the cut-off the lesson states |
 | `map_nodes.md` | the nodes this lesson adds to the module mind map, in order of appearance | node names match the module map |
-| `voice.md` | the voice text in parts of about 1,400–3,000 characters, built by `tools/video/voice_blocks.py` from the locked script, with a phone page of Copy buttons | built only after the script is locked |
+| `voice.md` | the voice text in parts of at most 10,000 characters, cut only at chapter breaks (owner, 2026-11-20), built by `tools/video/voice_blocks.py --max 10000` from the locked script, with a phone page of Copy buttons | built only after the script is locked |
 
 ## The shape of every lesson (about 12–15 minutes)
 0. **Warm-up** (about 1–1.5 minutes; PLAYBOOK §5b): the AI-voice disclosure card and the rule-version card, a greeting

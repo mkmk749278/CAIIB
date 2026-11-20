@@ -1,6 +1,7 @@
 """Build ElevenLabs dialogue turns from a lesson script, in speaking order.
 
-Usage: python3 tools/video/voice_blocks.py course/bfm/A/A1/script_v4.md OUT.md OUT.html
+Usage: python3 tools/video/voice_blocks.py course/bfm/A/A1/script_v4.md OUT.md OUT.html [--max 10000]
+  --max N: fewest parts of at most N characters, cut only between sections (chapters), sizes balanced.
 
 Script lines look like "N01 · text" (N = teacher, M = Meera, R = Ravi), separated by blank lines, under "## "
 section headings. The owner pastes them into the ElevenLabs app's multi-speaker text to speech (one speaker card
@@ -62,6 +63,39 @@ def turns(lines, turn_max=TURN_MAX):
     return res
 
 
+def parts_balanced(ts, maxc):
+    """Fewest parts of at most maxc characters, cut only at section breaks, sizes as even as possible.
+    (Owner, 2026-11-20: "parts with max 10000 characters where a natural gap is there".)"""
+    secs = []
+    for t in ts:
+        if secs and secs[-1]["section"] == t["section"]:
+            secs[-1]["turns"].append(t); secs[-1]["chars"] += len(t["text"]) + 1
+        else:
+            secs.append({"section": t["section"], "turns": [t], "chars": len(t["text"])})
+    if any(x["chars"] > maxc for x in secs):
+        raise SystemExit(f"a section is longer than {maxc} characters; split it in the script or raise --max")
+    n = len(secs)
+    best = {0: (0, 0, [])}  # i sections used -> (parts, largest part, cut points)
+    for i in range(1, n + 1):
+        cands = []
+        for j in range(i):
+            size = sum(x["chars"] for x in secs[j:i])
+            if size <= maxc and j in best:
+                k, big, cuts = best[j]
+                cands.append((k + 1, max(big, size), cuts + [j]))
+        if cands:
+            best[i] = min(cands)
+    _, _, cuts = best[n]
+    bounds = cuts + [n]
+    out = []
+    for i, (a, b) in enumerate(zip(bounds, bounds[1:]), 1):
+        grp = secs[a:b]
+        out.append({"file": f"part_{i}.mp3", "section": " + ".join(x["section"] for x in grp),
+                    "turns": [{"speaker": SPEAKERS[t["sp"]], "first": t["ids"][0], "last": t["ids"][-1],
+                               "text": t["text"]} for x in grp for t in x["turns"]]})
+    return out
+
+
 def parts(ts):
     res = []
     for t in ts:
@@ -82,10 +116,13 @@ def parts(ts):
     return out
 
 
-def main(src, md_out, html_out):
+def main(src, md_out, html_out, maxc=None):
     lines = parse(src)
     single = len({l["id"][0] for l in lines}) == 1
-    ps = parts(turns(lines, PART_MAX if single else TURN_MAX))
+    if maxc:
+        ps = parts_balanced(turns(lines, maxc if single else TURN_MAX), maxc)
+    else:
+        ps = parts(turns(lines, PART_MAX if single else TURN_MAX))
     if single:  # one voice: one block per part, across section breaks too
         for p in ps:
             ts = p["turns"]
@@ -119,4 +156,7 @@ def main(src, md_out, html_out):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    a = sys.argv[1:]
+    mx = int(a[a.index("--max") + 1]) if "--max" in a else None
+    a = [x for i, x in enumerate(a) if x != "--max" and (i == 0 or a[i - 1] != "--max")]
+    main(*a[:3], maxc=mx)
