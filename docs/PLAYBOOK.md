@@ -144,6 +144,15 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   which is how unseen CBT questions are covered; public classes (several teachers) check that no common sub-point is
   missed and show which rules are commonly taught wrong; recalled questions show IIBF's style; JAIIB prerequisites get
   refreshers; three independent reviews (expert, examiner, beginner) and a module exam test (target 75+) prove it.
+- **What the first full run taught (A00, 2026-11-20)**: fact sheet → script with cue sheet → three fresh reviewers
+  (expert, examiner, beginner) → fixes → re-review, three rounds to ADOPT. The reviews caught one real teaching error
+  the author had made with the rule text in hand: the FEDAI holiday rule ("known holiday → preceding working day")
+  applies only to the delivery date of a merchant forward contract (Rules 1.4, 5.2), while spot simply skips holidays.
+  They also caught a hook that was false under FEMA s. 2(h) ("foreign currency is the note") and a missing JAIIB
+  refresher (balance of payments). Lessons: (a) reviewers must read the rule text, not our notes about it; (b) a
+  beginner reviewer finds the undefined words an expert no longer sees; (c) count spoken words by joining wrapped
+  lines (one reviewer's count missed continuation lines); (d) reviewers' suggested rewrites are checked too: the
+  beginner's holiday rewrite repeated the same scope error.
 - **What the first two class checks taught (2026-11-20)**: the v2 plan, built from recalled questions, missed three
   syllabus sub-topics outright and about 400 sub-points the classes cover; and the most popular classes teach outdated
   rules (old TCS slabs, pre-2026 ECB, CRR above 3%, 90% daily CRR, old LCR run-offs, IFR as capital). Teaching the rule

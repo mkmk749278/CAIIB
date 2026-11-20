@@ -8,11 +8,12 @@ private dataset of audio files. Every .wav/.mp3 found under each source is enhan
 of its source: /kaggle/working/enh/<source>/<file>.wav (44.1 kHz).
 
 Usage:
+  python tools/voice/kaggle_enhance.py from-drive A01     owner's takes BFM/A01/voice/part_*.mp3 -> BFM/A01/voice_enhanced/
   python tools/voice/kaggle_enhance.py run <slug> --kernels caiib-a07-full-vasant ... --datasets caiib-a07-elevenlabs
   python tools/voice/kaggle_maya.py wait <slug>
   python tools/voice/kaggle_maya.py get  <slug> <dir>
 """
-import argparse, json, os, sys, tempfile
+import argparse, glob, json, os, re, subprocess, sys, tempfile, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kaggle_maya import USER, kaggle  # same proxy-token handling
@@ -66,6 +67,39 @@ print("DONE", flush=True)
 '''
 
 
+def drive(*a):
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+    return subprocess.run([os.path.join(root, "tools/drive/drive.sh"), *a], check=True, capture_output=True,
+                          text=True).stdout
+
+
+def from_drive(video):
+    """Owner's takes in Drive BFM/<video>/voice/ (part_*.mp3) -> enhanced WAVs in BFM/<video>/voice_enhanced/."""
+    tag = re.sub(r"[^a-z0-9]+", "-", video.lower()).strip("-")
+    ds, slug = f"caiib-{tag}-voice", f"caiib-{tag}-enh"
+    d = tempfile.mkdtemp()
+    os.environ["GDRIVE_INCLUDE"] = os.environ.get("TAKES", "part_*.mp3")  # TAKES overrides the file pattern
+    drive("pull", f"BFM/{video}/voice", d)
+    files = sorted(f for f in os.listdir(d) if f.endswith(".mp3"))
+    if not files:
+        sys.exit(f"no {os.environ['GDRIVE_INCLUDE']} in Drive BFM/{video}/voice/")
+    print("takes:", files, flush=True)
+    json.dump({"title": ds, "id": f"{USER}/{ds}", "licenses": [{"name": "other"}]},
+              open(f"{d}/dataset-metadata.json", "w"))
+    kaggle("datasets", "create", "-p", d)  # first time
+    kaggle("datasets", "version", "-p", d, "-m", "takes")  # later times (fails harmlessly on the first)
+    time.sleep(90)  # Kaggle needs a moment before a new dataset version can be attached
+    run(slug, [], [ds])
+    me = os.path.join(os.path.dirname(os.path.abspath(__file__)), "kaggle_maya.py")
+    subprocess.run([sys.executable, me, "wait", slug], check=True)
+    out = tempfile.mkdtemp()
+    subprocess.run([sys.executable, me, "get", slug, out], check=True)
+    enh = sorted(glob.glob(f"{out}/enh/*/*.wav"))
+    if len(enh) != len(files):
+        sys.exit(f"enhanced {len(enh)} of {len(files)} takes; see the log in {out}")
+    print(drive("push", f"BFM/{video}/voice_enhanced", *enh))
+
+
 def run(slug, kernels, datasets):
     d = tempfile.mkdtemp()
     open(f"{d}/{slug}.py", "w", encoding="utf-8").write(JOB)
@@ -80,9 +114,9 @@ def run(slug, kernels, datasets):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["run"])
-    ap.add_argument("slug")
+    ap.add_argument("cmd", choices=["run", "from-drive"])
+    ap.add_argument("slug", help="job slug (run) or video id (from-drive)")
     ap.add_argument("--kernels", nargs="*", default=[])
     ap.add_argument("--datasets", nargs="*", default=[])
     a = ap.parse_args()
-    run(a.slug, a.kernels, a.datasets)
+    from_drive(a.slug) if a.cmd == "from-drive" else run(a.slug, a.kernels, a.datasets)

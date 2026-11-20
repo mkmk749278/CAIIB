@@ -21,7 +21,8 @@ COMMON = """      <li>If the app says the text is too long, tell Claude and the 
       <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
       <li>{{SAY}}</li>"""
 SAY = {"A1": 'Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times.',
-       "A9_incoterms": 'Say: Incoterms "INN-co-terms"; C-I-F, F-O-B etc. letter by letter. "Into" means times.'}
+       "A9_incoterms": 'Say: Incoterms "INN-co-terms"; C-I-F, F-O-B etc. letter by letter. "Into" means times.',
+       "A00": 'Say: FEMA "FEE-ma", FERA "FEE-ra", FEDAI "fe-DYE", LERMS "lerms"; R-B-I, O-T-C, F-B-I-L letter by letter.'}
 SINGLE = {"H1": "{{LESSON}} voice · one teacher",
           "SUB": "One voice, in order. Each part is one generation in ElevenLabs text to speech.",
           "TIPS": """      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
