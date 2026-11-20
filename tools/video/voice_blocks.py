@@ -2,6 +2,8 @@
 
 Usage: python3 tools/video/voice_blocks.py course/bfm/A/A1/script_v4.md OUT.md OUT.html [--max 10000]
   --max N: fewest parts of at most N characters, cut only between sections (chapters), sizes balanced.
+  --target T [--max N]: parts of about T characters (never over N), cut between lines; a chapter break near T wins.
+  House setting (owner, 2026-11-20): --target 9000 --max 10000.
 
 Script lines look like "N01 · text" (N = teacher, M = Meera, R = Ravi), separated by blank lines, under "## "
 section headings. The owner pastes them into the ElevenLabs app's multi-speaker text to speech (one speaker card
@@ -96,6 +98,39 @@ def parts_balanced(ts, maxc):
     return out
 
 
+def parts_target(lines, target, maxc, slack=1000):
+    """Parts of about `target` characters (never over maxc), cut only between lines, which are natural pauses.
+    A section break within `slack` of the target is preferred. (Owner, 2026-11-20: "keep around 9k".)"""
+    out, i, n = [], 0, len(lines)
+    while i < n:
+        size, best, best_sec = 0, None, None
+        for j in range(i, n):
+            size += len(lines[j]["text"]) + 1
+            if size > maxc:
+                break
+            end = j + 1
+            if end == n or abs(size - target) < abs((best[1] if best else 10**9) - target):
+                best = (end, size)
+            if end < n and lines[end]["section"] != lines[j]["section"] and abs(size - target) <= slack:
+                if best_sec is None or abs(size - target) < abs(best_sec[1] - target):
+                    best_sec = (end, size)
+            if size >= target + slack:
+                break
+        if best is None:
+            raise SystemExit(f"line {lines[i]['id']} is longer than {maxc} characters")
+        if n - i and sum(len(l["text"]) + 1 for l in lines[i:]) <= maxc:
+            end = n  # the rest fits in one part
+        else:
+            end = (best_sec or best)[0]
+        grp = lines[i:end]
+        out.append({"file": f"part_{len(out) + 1}.mp3",
+                    "section": " + ".join(dict.fromkeys(l["section"] for l in grp)) + f" ({grp[0]['id']}–{grp[-1]['id']})",
+                    "turns": [{"speaker": SPEAKERS[grp[0]["id"][0]], "first": grp[0]["id"], "last": grp[-1]["id"],
+                               "text": " ".join(l["text"] for l in grp)}]})
+        i = end
+    return out
+
+
 def parts(ts):
     res = []
     for t in ts:
@@ -116,10 +151,12 @@ def parts(ts):
     return out
 
 
-def main(src, md_out, html_out, maxc=None):
+def main(src, md_out, html_out, maxc=None, target=None):
     lines = parse(src)
     single = len({l["id"][0] for l in lines}) == 1
-    if maxc:
+    if target and single:
+        ps = parts_target(lines, target, maxc or 10000)
+    elif maxc:
         ps = parts_balanced(turns(lines, maxc if single else TURN_MAX), maxc)
     else:
         ps = parts(turns(lines, PART_MAX if single else TURN_MAX))
@@ -157,6 +194,7 @@ def main(src, md_out, html_out, maxc=None):
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    mx = int(a[a.index("--max") + 1]) if "--max" in a else None
-    a = [x for i, x in enumerate(a) if x != "--max" and (i == 0 or a[i - 1] != "--max")]
-    main(*a[:3], maxc=mx)
+    opt = lambda k: int(a[a.index(k) + 1]) if k in a else None
+    mx, tg = opt("--max"), opt("--target")
+    a = [x for i, x in enumerate(a) if not x.startswith("--") and (i == 0 or not a[i - 1].startswith("--"))]
+    main(*a[:3], maxc=mx, target=tg)
