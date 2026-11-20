@@ -34,8 +34,8 @@ sys.path.insert(0, "/kaggle/tmp/maya2")   # an editable install is only seen by 
 importlib.invalidate_caches()
 import soundfile as sf
 from maya3 import Maya3TTS
-# single take: Maya still cuts long text internally; 60 s chunks (not 20) mean few joins, each at a sentence end
-cfg = dict(max_seats=1, chunk_s=60.0, gap_s=0.30) if TAKE else dict(max_seats=1)
+# single take: Maya cuts long text internally at sentence ends. 60 s chunks skipped text (2026-11-20); 25 s is safe
+cfg = dict(max_seats=1, chunk_s=25.0, gap_s=0.35) if TAKE else dict(max_seats=1)
 t = time.time(); tts = Maya3TTS.from_pretrained("maya-research/maya2-native", **cfg); print("load", round(time.time() - t), flush=True)
 d = f"/kaggle/working/out/{VOICE.lower()}"; os.makedirs(d, exist_ok=True)
 t = time.time(); total = 0.0
