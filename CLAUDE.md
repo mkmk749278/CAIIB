@@ -48,7 +48,7 @@ Never a new loose doc.
     added); depth checklists A–D from 8 public classes (`research/bfm/depth/`); plans draft 2 for **A, B, C, D** (every
     checklist item placed, sub-topic ids, question kinds, prerequisites, B13b plan written); A01 script v6.
   - **Module A plans draft 2 done** (159 additions; plans for A00, A19b, A22 written). Small fixes they found, still to
-    do: 00 line N47 must lead into A00 (not A01); A01 v6 must match A00's closing question; A06's "extension = cancel
+    do (00 N47 → A00 done 2026-11-20; A01 v6's opening already answers A00's closing question): A06's "extension = cancel
     and rebook" clashes with the 10 Oct 2026 no-rebooking rule (check FEDAI + A.P. (DIR) Circular No. 25); A07's
     rule-version card says 30 June 2026 (owner decides at the freeze); JAIIB prerequisite names need checking against
     the JAIIB syllabus; conflicting class figures to settle from primary sources (CHAPS net/gross, gems & jewellery
@@ -61,8 +61,12 @@ Never a new loose doc.
     2_o96hjLbzg HxiSvg9HZDw qjhdvQ4CKoM ON8wO_NVi6g gcu7lNu4yiY`); the fixed script waits and retries. Six of the
     second batch are in Drive (`0eD1Wgwfq_0 4w3vrr0ie8k Bsc02xx_OlA dQ4XMe9CpC0 f7x87ICfG0I ntAuCjiCtME`). When all
     are in, check them against the updated plans (sub-points several teachers cover that we still lack).
-  - **Next after that**: source maps and fact sheets (`research/bfm/facts/`), Module A first; then the A00 script;
-    then the three reviews (expert, examiner, beginner) of A00 and A01; then on through Module A.
+  - **Next (session closed 2026-11-20 evening)**: (1) owner re-voices A00 from the fixed voice page (2 parts) into
+    Drive `BFM/A00/voice/` (folder https://drive.google.com/drive/folders/1dHclG0_nMaU4xN_BzdeutFuzrouPpMld); check
+    each take word by word against the script (faster-whisper + diff), then `kaggle_enhance.py from-drive A00`, then
+    the r4 build. (2) A stray `BFM/A00/voice` folder at the top of the owner's My Drive (created by mistake) holds
+    the discarded a01–a03; delete only if the owner says so. (3) Then fact sheets for the next Module A lessons and
+    the three reviews of A01 v6; on through Module A.
   - **Open fact checks** collected by the agents (also inside each plan's "verify" lines): MPC 2–4 Dec 2026; full
     text of CRR 99% (RBI/2026-27/290) and the CVA directions; IRRBB: BCBS-style mandatory or older gap/duration;
     NIM denominator; FALLCR / MSF carve-out in HQLA; NSFR date in India; charge-to-RWA 12.5 vs 100/9; Payments
