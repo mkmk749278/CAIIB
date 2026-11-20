@@ -25,6 +25,9 @@ sh("pip install -q --no-deps -e /kaggle/tmp/maya2 && pip install -q 'transformer
    "'speechbrain==1.1.2' 'huggingface_hub>=1.0' 'safetensors>=0.6' soundfile pyyaml")
 VOICE = __VOICE__
 PIECES = json.loads(r"""__PIECES__""")
+import sys, importlib, site
+sys.path.insert(0, "/kaggle/tmp/maya2")   # an editable install is only seen by new processes; this one needs the path
+importlib.invalidate_caches()
 import soundfile as sf
 from maya3 import Maya3TTS
 t = time.time(); tts = Maya3TTS.from_pretrained("maya-research/maya2-native", max_seats=1); print("load", round(time.time() - t), flush=True)
