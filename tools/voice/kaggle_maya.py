@@ -49,6 +49,10 @@ print("DONE", len(PIECES), "pieces", round(total, 1), "s audio in", round(time.t
 
 
 def kaggle(*args):
+    # `import kaggle` authenticates at import time, before the class patch below can apply, and the token check sends
+    # the placeholder in the request body, where the proxy cannot replace it. So answer that check locally first.
+    import kagglesdk.security.services.oauth_service as oauth
+    oauth.OAuthClient.introspect_token = lambda self, req: type("R", (), {"active": True, "username": USER})()
     from kaggle.api.kaggle_api_extended import KaggleApi
     KaggleApi._introspect_token = lambda self, t: USER
     from kaggle.cli import main
