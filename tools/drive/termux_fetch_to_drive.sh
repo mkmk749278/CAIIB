@@ -29,13 +29,26 @@ if ! rclone listremotes | grep -q "^creator:$"; then
 fi
 REMOTE="creator,root_folder_id=$CAIIB_FOLDER_ID:"
 
-ok=0; n=0
+# YouTube answers "429 Too Many Requests" when captions are asked for quickly (2026-11-20: 9 of 15 failed), so wait
+# between videos and retry a failure once after two minutes. Only the English track ("en", not every "en-*").
+fetch() { yt-dlp --js-runtimes node --skip-download --write-auto-subs --write-subs --sub-langs "en" --sub-format vtt \
+            --no-warnings -q --sleep-requests 2 --sleep-subtitles 5 -o "%(id)s.%(ext)s" "$1"; }
+ok=0; n=0; failed=()
 for url in "$@"; do
   n=$((n + 1)); echo "== $n $url"
-  if yt-dlp --js-runtimes node --skip-download --write-auto-subs --write-subs --sub-langs "en.*" --sub-format vtt \
-       --no-warnings -q --sleep-requests 1.5 -o "%(id)s.%(ext)s" "$url"; then ok=$((ok + 1))
-  else echo "   failed (try again later or on Wi-Fi)" >&2; fi
+  if fetch "$url"; then ok=$((ok + 1)); else failed+=("$url"); echo "   busy, will retry" >&2; fi
+  sleep 25
 done
+if [[ ${#failed[@]} -gt 0 ]]; then
+  echo "Waiting 2 minutes, then retrying ${#failed[@]} video(s)…"; sleep 120
+  still=()
+  for url in "${failed[@]}"; do
+    echo "== retry $url"
+    if fetch "$url"; then ok=$((ok + 1)); else still+=("$url"); fi
+    sleep 45
+  done
+  [[ ${#still[@]} -gt 0 ]] && echo "Still failed (send these to Claude, or run again later or on Wi-Fi): ${still[*]}" >&2
+fi
 yt-dlp --js-runtimes node --skip-download --no-warnings -q --print "%(id)s,%(channel)s,%(duration)s,%(title)s" "$@" \
   > captions_index.csv 2>/dev/null || true
 echo "$ok of $n fetched. Uploading to Drive: CAIIB/$DEST/"

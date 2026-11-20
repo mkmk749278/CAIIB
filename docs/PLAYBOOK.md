@@ -505,4 +505,8 @@ checks decide when a cut is ready, not a feeling.
   impersonation but captions still download (the script passes `--js-runtimes node`); if YouTube asks to sign in on the
   phone too, switching to Wi-Fi often clears it (Creator's note). Files that land in `_inbox/` are filed with
   `tools/drive/drive.sh move`.
-
+- **Second run (2026-11-20)**: 6 of 15 videos came through; YouTube answered "429 Too Many Requests" for the rest
+  because captions were asked for back to back. The script now waits 25 s between videos and retries failures once
+  after two minutes. rclone also warned that its **shared Google Drive client id is being retired during 2026**:
+  before it stops, the owner should create an own client id once (rclone docs, "Making your own client_id") and add it
+  to the phone's `creator` remote and to `GDRIVE_RCLONE_TOKEN`'s remote; the Creator repo is affected the same way.
