@@ -10,6 +10,7 @@
 #   tools/drive/drive.sh sync BFM/A07/lines LOCAL_DIR      upload a whole folder in one go (fast; no links)
 #   tools/drive/drive.sh pull BFM/A07/voice LOCAL_DIR      download a folder (GDRIVE_INCLUDE='*.mp3' to filter)
 #   tools/drive/drive.sh link BFM/A07/renders/r1.mp4       print the view link of one file
+#   tools/drive/drive.sh move _inbox/x BFM/_downloads/x       move a file or folder inside CAIIB/
 # Optional GDRIVE_CAIIB_FOLDER_ID overrides the CAIIB folder id below.
 set -euo pipefail
 RCLONE_VER=v1.71.1
@@ -60,6 +61,7 @@ case $cmd in
   pull) src=${1:?Drive folder}; dst=${2:?local folder}; mkdir -p "$dst"
         "$RCLONE" copy --retries 4 --stats-one-line --stats 30s ${GDRIVE_INCLUDE:+--include "$GDRIVE_INCLUDE"} \
           "gd:$src" "$dst"; ls -la "$dst" ;;
+  move) "$RCLONE" moveto "gd:${1:?from}" "gd:${2:?to}" && echo "moved CAIIB/$1 -> CAIIB/$2" ;;
   link) link "${1:?Drive file path}" ;;
   *)    sed -n 2,14p "$0"; exit 2 ;;
 esac
