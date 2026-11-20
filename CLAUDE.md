@@ -105,6 +105,7 @@ about 7 min; 720p review cut, then the 1080p master; never 4K) → checks `smoot
 ## Owner and setup
 - Kishore works **only from an Android phone** (GitHub app, Claude app, Termux). Everything runs in cloud sessions or
   GitHub Actions, and every result must open on a phone: Drive view links, claude.ai pages, GitHub.
+- **Times in the session chat are in IST (owner, 2026-11-20).** Every time told to the owner in chat (next check-in, render or CI ETA, reminder, scheduled run, when something finished) is Indian Standard Time, written like "11:00 AM IST", never UTC alone: the owner reads it on a phone in India. Convert first (IST = UTC + 5:30; 05:00 UTC is 10:30 AM IST); add the UTC time in brackets only when it helps match a log. Chat only: the lessons, files, logs and code keep their own conventions.
 - **Git**: branch from fresh `origin/main`, open a PR, and **merge our own PRs and continue without asking** (owner,
   2026-11-19). Tell the owner which branches can be deleted. Never commit `.cache/` or media.
 - Ask the owner (AskUserQuestion, 2–4 options, recommended first) only when the decision is truly theirs. Ask before
