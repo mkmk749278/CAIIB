@@ -1,5 +1,5 @@
 claim,source,section,url,version,status
-Merchant quotes are in direct terms: rupees and paise for 1 or 100 units of foreign currency,FEDAI Rules 10th ed.,Rule 5.7,https://fedai.org.in/UploadPopupPageFiles/FEDAI_Rules_10th_Edition_20Aug2026.pdf,in force 30 Jun 2026 (not amended after),verified
+Merchant quotes are in direct terms: rupees and paise for 1 or 100 units of foreign currency,FEDAI Rules 10th ed.,Rule 5.7,https://fedai.org.in/UploadPopupPageFiles/FEDAI_Rules_10th_Edition_20Aug2026.pdf,in force 30 Jun 2026; unchanged by AR 03/2026 (7 Sep 2026); re-check at 31 Dec 2026 freeze,verified
 Banks are free to determine their own charges (margins not fixed by FEDAI),FEDAI Rules 10th ed.,General guideline 1,same,in force 30 Jun 2026,verified
 Export bills purchased/discounted/negotiated at bill buying rate or contracted rate; transit/usance interest recovered upfront,FEDAI Rules 10th ed.,Rule 2.1(a),same,in force 30 Jun 2026,verified
 Unpaid export bill crystallised into rupee liability at TT selling rate,FEDAI Rules 10th ed.,Rule 2.1(b)(iii),same,in force 30 Jun 2026,verified
@@ -9,3 +9,7 @@ Outward remittance at TT selling or contract rate,FEDAI Rules 10th ed.,Rule 4.1,
 Inward remittance converted at TT buying or contracted rate,FEDAI Rules 10th ed.,Rule 4.4,same,in force 30 Jun 2026,verified
 Purchase contracts cancelled at TT selling; sale contracts at TT buying,FEDAI Rules 10th ed.,Rule 6.4(ii),same,in force 30 Jun 2026,verified
 All sums in numericals.md and practice.md,tools/check/fx_merchant_rates.py,,repo,2026-11-14,"computed two ways; Q4 and Q5 by hand: 6000x85.5054=513032.40; 15000x85.2719=1279078.50"
+Banks formulate their own policy for crystallising unpaid export bills (no fixed day in the rules),FEDAI Rules 10th ed.,Rule 2.1(b)(i),https://fedai.org.in/UploadPopupPageFiles/FEDAI_Rules_10th_Edition_20Aug2026.pdf,read 2026-11-20 in the edition updated to 20 Aug 2026,verified
+Proceeds received after crystallisation converted at TT buying (or contracted) rate,FEDAI Rules 10th ed.,Rule 2.1(c),same,read 2026-11-20,verified
+Crystallisation of an import bill uses the same rate as retirement (bill selling),FEDAI Rules 10th ed.,Rule 3.1(b),same,read 2026-11-20,verified
+Forex rate sums (cluster A-FXNUM) were recalled in all 7 exam cycles Jun 2023 - Jun 2026,our Importance Map,research/bfm/items_tagged.csv,repo,2026-11-14,verified (our data; coaching recollections)
