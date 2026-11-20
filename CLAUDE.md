@@ -24,7 +24,7 @@ any new stage. New lessons go into the playbook section they belong to, with the
   Master = 1080p (`scale` 1, Drive `CAIIB/BFM/A07/renders/A07_master_1080p.mp4`); no 4K (PLAYBOOK §7).
   **Next: scripts with cue sheets, from A01 in course-plan order.** Rules from the r4 feedback: a different greeting and goodbye in every
   video; trade lessons in US dollars (PLAYBOOK §5b).
-- **How a lesson video is built (the r4 method, PLAYBOOK §5e):** owner records each part in one take →
+- **How a lesson video is built (the r4 method, PLAYBOOK §5e):** owner generates each part in ElevenLabs v3 as one take (AI voice, not the owner's own) →
   `tools/video/flow_voice.py` (continuous voice, planned holds only, re-recorded lines swapped in) + music bed ducked →
   `mix.flac` in Drive `<video>/flow/` → timeline JSON → Remotion composition on the v2 kit (`video/src/kit/`:
   notebook page, journey road, rule cards, growing map; `theme.ts`/`parts.tsx`/`road.tsx` shared) with a beat for
@@ -91,8 +91,12 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
 - **Audience**: bank officers studying in the evening on a phone; many in South India want English, not Hindi.
   Plain, warm Indian English; Telugu later if the owner decides.
 - Decided 2026-11-14: English only; paid course with free samples; new YouTube channel only after the full course
-  is built. Still open: where the paid course is hosted, pricing, whether video voice uses the ElevenLabs plan of the
-  Creator channel (paid credits: ask first).
+  is built. Still open: where the paid course is hosted, pricing.
+- **Voice (owner, 2026-11-20):** ElevenLabs v3 stays the course voice ("still ElevenLabs is the top notch"). The
+  free ElevenLabs plan has no commercial licence (and only 10,000 credits a month), so nothing sold is voiced on it.
+  Plan: write all BFM scripts first (no cost); then the Creator plan (about $22/month) only in the months we voice
+  lessons, about Rs 15-17k for all of BFM; other papers only after BFM earns. Fallback tested and ready: Maya 2
+  Native (Apache-2.0) voice Vasant on free Kaggle T4s, `tools/voice/` (PLAYBOOK §7, 2026-11-20).
 
 ## Owner and setup
 - Kishore works **only from an Android phone** (GitHub app, Claude app, Termux). Everything runs in cloud sessions or
