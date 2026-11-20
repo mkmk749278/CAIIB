@@ -5,15 +5,20 @@ built from them later; the text files are the master.
 
 | File | What it holds | Gate |
 |---|---|---|
-| `script.md` | the narration with picture directions; about 1,200–2,000 words (at about 140 words a minute, plus calculator and practice pauses, 12–15 minutes) | read aloud test: no line over 25 words; no reading of rules verbatim except short quotes |
+| `script.md` | the narration with picture directions **and its cue sheet** (a picture beat for every sentence, PLAYBOOK §5e); about 1,200–2,000 words (at about 140 words a minute, plus calculator and practice pauses, 12–15 minutes) | read aloud test: no line over 25 words; no reading of rules verbatim except short quotes |
 | `numericals.md` | every sum in the lesson: data, steps, **calculator key presses**, answer | `tools/check/*.py` computes each answer two independent ways and they match to 4 decimals |
 | `practice.md` | 5–8 of our own questions (MCQ and keyed-in numericals) with answers and one-line reasons | every answer traced to `claims.csv` or `numericals.md` |
 | `claims.csv` | every rule or number taught: claim, primary source (title, section, URL), version date, status | no claim without a primary source; version on or before the cut-off the lesson states |
 | `map_nodes.md` | the nodes this lesson adds to the module mind map, in order of appearance | node names match the module map |
+| `voice.md` | the voice text in parts of about 1,400–3,000 characters, built by `tools/video/voice_blocks.py` from the locked script, with a phone page of Copy buttons | built only after the script is locked |
 
 ## The shape of every lesson (about 12–15 minutes)
-1. **Branch moment** (0:00–0:45): a real kind of situation at a counter or desk, ending in a question with two or
-   more possible answers on screen. No greeting, no "in this video".
+0. **Warm-up** (about 1–1.5 minutes; PLAYBOOK §5b): the AI-voice disclosure card and the rule-version card, a greeting
+   that no other video uses, connect with the class ("long day?", notifications on silent, calculator nearby), why
+   today's topic matters with a true number from the Importance Map, and a promise ("no heavy theory, stay with me").
+   Online class: no physical-room cues ("come in", "hands up").
+1. **Branch moment** (about 45 seconds): a real kind of situation at a counter or desk, ending in a question with two
+   or more possible answers on screen ("some of you think X, others Y"). No "in this video".
 2. **The picture** (to about 3:00): the one stable picture for this idea (e.g. the bank's counter). The rule arrives
    as the answer to the opening question.
 3. **Build** (to about 9:00): two or three steps, each with its own picture; the mind map grows a node at each step.
@@ -21,12 +26,17 @@ built from them later; the text files are the master.
 5. **Trap card(s)**: the classic wrong answer side by side with the right one, and why people fall for it.
 6. **Practice**: "Pause now": three questions, then answers with the one-line reason.
 7. **Map recap**: the finished map for this lesson, read in 30–45 seconds.
-- Every lesson states the **rule version** it teaches ("FEDAI Rules as at 30 June 2026", "RBI Master Direction as
+8. **Close**: a small homework ("draw this map tonight") and a goodbye that no other video uses.
+- Every lesson states the **rule version** it teaches ("FEDAI Rules as at 31 December 2026", "RBI Master Direction as
   updated to …") in the opening card and on its PDF page.
 - Illustrative rates, names and places are labelled "illustrative" on screen; we never present them as real data.
 
-## Voice and words
-- Plain, warm Indian English for a bank officer studying after work on a phone. Talk to one person.
+## Voice and words (full rules: PLAYBOOK §5b)
+- One AI teacher voice, an online class: warm-up, check-ins at each chapter break, the teacher says the learners'
+  thoughts aloud ("some of you… others…"). Plain, warm Indian English for a bank officer studying after work on a
+  phone. Talk to one person.
+- Each script header lists its `greeting` and `goodbye`; check the module's other scripts so none repeats.
+- Money in the deal's currency: trade, LC, export and import lessons in US dollars; rupee lessons in rupees.
 - One idea per sentence; a short line, then a longer one; nothing over 25 words.
 - Explain once, then recap with a picture; never re-explain the same thing from scratch.
 - No "Sir" persona, no claims that a human teacher is speaking; the narrator is a synthetic voice (owner, 2026-11-14).
