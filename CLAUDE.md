@@ -34,11 +34,31 @@ Never a new loose doc.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
   `A07_master_1080p.mp4` in Drive `BFM/A07/renders/`.
-- **Next: the A00 plan and script** (the forex market and why rates move; new in v3), then A01's independent review,
-  then A02 onwards in course-plan order. When A00 exists, 00's last lines must lead into A00 (they now lead into
-  A01), and A00 ends on the "buying or selling?" question that A01 opens with.
-  A script's cue sheet: one beat per sentence under each line (format in `A/A1/script.md`).
-  No voice money is spent until the BFM scripts are written (voice plan below).
+- **Handoff (2026-11-20, end of session; continue from here):**
+  - Done today: voice decision (ElevenLabs Creator plan in voicing months; Maya 2 fallback, PLAYBOOK §5f); regulatory
+    updates to early Nov 2026; independent-review rule; syllabus-first method in layers (below; PLAYBOOK §4–§4c);
+    official syllabus split into 195 sub-topics + coverage ledger; course plan v3 (62 videos: A00, A19b, A22, B13b
+    added); depth checklists A–D from 8 public classes (`research/bfm/depth/`); plans draft 2 for **B, C, D** (every
+    checklist item placed, sub-topic ids, question kinds, prerequisites, B13b plan written); A01 script v6.
+  - **Module A plans**: an agent was updating `course/bfm/A/plans_A.md` when the session ended. If that file has no
+    "v3 additions" lines, redo it: fold in `research/bfm/depth/A.md` (+ A-rows of `depth/C.md`), write plans for A00,
+    A19b, A22, add sub-topic ids, question kinds and JAIIB prerequisites per plan, propose splits (watch A11, A15, A16,
+    A19b), same format as `plans_B.md` draft 2.
+  - **Then decide the proposed splits** (all written inside the plans, with fallbacks): B04b, B07b, B09b, B11b, B14b;
+    C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b; plus Module A's. Apply them as course plan **v4** (renumber or keep
+    "b" ids), update `coverage.csv` rows (C1.2, C2.4, C4.3, C7.2, D5.3, D5.4 now placed), and the counts here.
+  - **Termux retry pending**: 9 class videos failed with YouTube 429 (`-pr6I1QhaNk heoiJDqSPMY Zz2sr5CMdTo fYoRu7bbYHw
+    2_o96hjLbzg HxiSvg9HZDw qjhdvQ4CKoM ON8wO_NVi6g gcu7lNu4yiY`); the fixed script waits and retries. Six of the
+    second batch are in Drive (`0eD1Wgwfq_0 4w3vrr0ie8k Bsc02xx_OlA dQ4XMe9CpC0 f7x87ICfG0I ntAuCjiCtME`). When all
+    are in, check them against the updated plans (sub-points several teachers cover that we still lack).
+  - **Next after that**: source maps and fact sheets (`research/bfm/facts/`), Module A first; then the A00 script;
+    then the three reviews (expert, examiner, beginner) of A00 and A01; then on through Module A.
+  - **Open fact checks** collected by the agents (also inside each plan's "verify" lines): MPC 2–4 Dec 2026; full
+    text of CRR 99% (RBI/2026-27/290) and the CVA directions; IRRBB: BCBS-style mandatory or older gap/duration;
+    NIM denominator; FALLCR / MSF carve-out in HQLA; NSFR date in India; charge-to-RWA 12.5 vs 100/9; Payments
+    Regulatory Board replacing BPSS; IFR final wording; UFCE provision; NARCL guarantee; D-SIB list.
+  - Accounts added today (proxy-injected network secrets): Hugging Face (`huggingface.co`, the Maya 2 demo space),
+    Kaggle (`api.kaggle.com`).
 - **Research done:** IIBF syllabus; 453 recalled exam items from 7 cycles tagged to units; Importance Map
   (`research/bfm/importance_map.md`), cross-checked with two full memory-based papers; regulatory changes to early
   November 2026 (`research/bfm/regulatory_updates.md`).
