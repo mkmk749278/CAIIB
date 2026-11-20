@@ -121,6 +121,20 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   Rules issued before the cut-off but effective later (ECL, new credit-risk SA, both from 1 Apr 2027) are taught as
   "issued, coming"; the old rule remains the answer until then.
 
+## 4b. Public class videos as a depth checklist (2026-11-20)
+- **Why**: the syllabus lists topics but not how deep each goes, and the official courseware is not available to us
+  (§4). Public YouTube classes show which sub-points teachers cover under each syllabus topic and how deep they go.
+  Owner: "we can also get syllabus and depth from YouTube videos; I can run Termux commands".
+- **Rules**: captions only, as a checklist of sub-points and depth (definitions, sums, which rules are named). Where
+  two independent teachers both go deeper than our plan, that sub-point goes into our plan. Facts still come only from
+  primary sources (teachers can be wrong or out of date). Nothing is copied: no wording, examples, numbers or
+  questions. The caption files stay in Drive (`BFM/_downloads/class_captions/`), never in git.
+- **First batch (2026-11-20)**, two teachers per module, English, 2025–26, fetched on the owner's phone:
+  A `iJFpo1KxvwI` (Oliveboard, 6h46m), `WdahzvQFxjM` (JAIIB CAIIB Prep, 3h40m); B `RHRsSMD7jdo` (Oliveboard, 5h08m),
+  `nT9q_w5BHng` (JAIIB CAIIB Prep, 4h17m); C `3JrJW-V0eB0` (Oliveboard, 4h52m), `GOTBkyj8alM` (JAIIB CAIIB Prep,
+  3h30m); D `dKHPEkNXcjo` (Oliveboard, 3h39m), `z9sh93uXimE` (JAIIB CAIIB Prep, 3h32m). Each as `.en.vtt` and
+  `.en-orig.vtt` (identical for these English videos).
+
 ## 5. Lesson design (proven on two samples: A1 and Incoterms; template locked 2026-11-20)
 - After a short warm-up (§5b), open on a real branch situation with a question (A1: a father sending a university fee and a shrimp exporter with a
   sight bill at the same counter, four rates on the board). The rule arrives as the answer. Never reuse a
@@ -464,3 +478,16 @@ checks decide when a cut is ready, not a feeling.
   `pkg install -y gh rclone && { gh auth status >/dev/null 2>&1 || gh auth login -h github.com -p https -w; } && rclone authorize drive | grep -o '{"access_token".*}' | gh secret set GDRIVE_RCLONE_TOKEN -R mkmk749278/CAIIB && gh secret list -R mkmk749278/CAIIB`
   Same as the Creator repo's render workflows. **Measured 2026-11-19** (Incoterms, 17:22 at 720p): one runner
   20 min; 6 runners + sound runner 6.5 min, same length (1042.2 s), clean decode, -16.3 LUFS. The cloud session itself uses the environment variable of the same name.
+- **Phone (Termux) for what the cloud cannot reach (2026-11-20).** YouTube refuses the cloud container ("Sign in to
+  confirm you're not a bot") even for captions; the owner's phone works. The pattern is the Creator repo's
+  (`scripts/termux_fetch_to_drive.sh` there): one `curl … | bash -s -- …` line the owner pastes into Termux; the
+  script installs what it needs (python, nodejs, rclone, yt-dlp), fetches, and uploads straight to Drive with rclone.
+  The phone already has the rclone remote `creator` (Drive, the owner's account); CAIIB reuses it with a folder
+  override, `creator,root_folder_id=1Yw1b2rwppOtup_eCRE5fLP0zLM9qAIXe:` (the CAIIB folder), so no second sign-in.
+  Our script: `tools/drive/termux_fetch_to_drive.sh` (captions only; it must be merged to `main` first, because the
+  phone fetches it from GitHub). Lessons from the first run: storage permission (`termux-setup-storage`) is only
+  needed when files are saved to the phone's Download folder; yt-dlp warns about JavaScript runtimes and
+  impersonation but captions still download (the script passes `--js-runtimes node`); if YouTube asks to sign in on the
+  phone too, switching to Wi-Fi often clears it (Creator's note). Files that land in `_inbox/` are filed with
+  `tools/drive/drive.sh move`.
+

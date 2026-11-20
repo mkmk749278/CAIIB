@@ -7,10 +7,13 @@ order:
    HTTP 418 on repeated requests): new sessions may get a different IP. Give it one narrow job, have it push to a
    branch, then archive it. Never use this to get round a deliberate access control (login walls, paywalls,
    Classplus-type bot blocks), only around rate limits on public pages.
-3. **The owner's laptop** only for what no cloud session can do, each tool by its ability:
+3. **The owner's phone (Termux)** for what needs a normal internet connection: YouTube captions (and any other
+   public download the cloud is refused), by one copy-paste line from `tools/drive/termux_fetch_to_drive.sh` that
+   uploads straight to Drive (PLAYBOOK §8). First used 2026-11-20 for eight BFM class caption files.
+4. **The owner's laptop** only for what neither can do, each tool by its ability:
    - **Cowork** (Claude desktop): things behind the owner's own logins or that need the owner present (Telegram
      groups, sign-up forms that ask for the owner's details, sites that refuse all cloud IPs).
-   - **Gemini**: watching YouTube videos (YouTube fails from the cloud).
+   - **Gemini**: watching a YouTube video when its pictures matter, not only its words (captions come by Termux).
    - **Antigravity**: long, slow, careful browsing with git when cloud sessions keep getting blocked.
 
 ## Open laptop tasks (only what the cloud cannot do)
