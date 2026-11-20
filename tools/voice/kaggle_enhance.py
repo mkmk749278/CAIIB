@@ -26,10 +26,18 @@ sh("nvidia-smi --query-gpu=name --format=csv")
 # resemble-enhance pins torch 2.1.1, which has no wheels for Kaggle's newer Python: give it its own Python 3.11
 sh("pip install -q uv && uv venv -q -p 3.11 /kaggle/tmp/re")
 PY = "/kaggle/tmp/re/bin/python"
-sh(f"VIRTUAL_ENV=/kaggle/tmp/re uv pip install -q torch==2.1.1 torchaudio==2.1.1 'numpy<2' setuptools")
-sh(f"VIRTUAL_ENV=/kaggle/tmp/re DS_BUILD_OPS=0 uv pip install -q resemble-enhance 'torch==2.1.1' 'torchaudio==2.1.1'")
+E = "VIRTUAL_ENV=/kaggle/tmp/re DS_BUILD_OPS=0 uv pip install --python /kaggle/tmp/re/bin/python"
+sh(f"{E} --index-url https://download.pytorch.org/whl/cu121 torch==2.1.1 torchaudio==2.1.1")
+# the package pins old gradio/pandas/matplotlib that need not be there: install it bare plus what inference imports
+sh(f"{E} --index-url https://pypi.org/simple --no-deps resemble-enhance")
+sh(f"{E} --index-url https://pypi.org/simple 'numpy<2' setuptools deepspeed==0.12.4 celluloid==0.2.0 librosa==0.10.1 "
+   "omegaconf==2.3.0 rich tqdm resampy==0.4.2 tabulate scipy soundfile matplotlib pandas ptflops")
+sh(f"{PY} -c 'import torch; print(\"cuda\", torch.cuda.is_available())'")
 os.makedirs("/kaggle/tmp/in", exist_ok=True)
-for src in sorted(glob.glob("/kaggle/input/*")):
+# Kaggle mounts sources as /kaggle/input/<notebooks|datasets>/<user>/<slug> (older images: /kaggle/input/<slug>)
+srcs = glob.glob("/kaggle/input/*/*/*") if glob.glob("/kaggle/input/notebooks") + glob.glob("/kaggle/input/datasets") \
+    else glob.glob("/kaggle/input/*")
+for src in sorted(s for s in srcs if os.path.isdir(s)):
     name = os.path.basename(src)
     files = sorted(glob.glob(f"{src}/**/*.wav", recursive=True) + glob.glob(f"{src}/**/*.mp3", recursive=True))
     d = f"/kaggle/tmp/in/{name}"; os.makedirs(d, exist_ok=True)
