@@ -420,6 +420,17 @@ checks decide when a cut is ready, not a feeling.
     room around numbers.
   - Our pipeline makes the voice swappable: a new take goes through `flow_voice.py` and a render (about 10 minutes
     per video); scripts and visuals stay.
+- **Resemble Enhance tested (2026-11-20, owner asked; MIT licence, usable commercially).** Two stages: a denoiser,
+  then an enhancer that *re-generates* the waveform at 44.1 kHz guided by the input. Same 45 s of Incoterms part 1,
+  files and spectrograms in Drive `BFM/_shared/tests/resemble_enhance/`:
+  - ElevenLabs (128 kbps MP3, nothing above 16 kHz): the denoiser changes nothing (clean input); the enhancer adds
+    16–22 kHz (+31 dB) and redraws 8–12 kHz. Phone speakers barely play that range, so little gain.
+  - Maya 2 (24 kHz output, so nothing above 12 kHz): real gain. Vasant 4–8 kHz −24.8 → −19.6 dB, 12–16 kHz −54 →
+    −35 dB (ElevenLabs −16.7 and −34.6), pauses 8–10 dB quieter, timing kept (envelope match 0.98–0.99). It cannot
+    fix delivery (warmth, room around numbers), which is what made ElevenLabs win.
+  - Speed: 45 s took 4.5 min on the session CPU; in a real run it goes into the Kaggle GPU job after the voice.
+  - Not a way around the free ElevenLabs plan: the output is still that audio, so still non-commercial (owner asked;
+    declined). Owner's ear decides whether enhanced Vasant is the fallback.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
