@@ -1,4 +1,9 @@
-# CAIIB BFM: regulatory changes to teach (as of 2026-11-14)
+# CAIIB BFM: regulatory changes to teach (as of 2026-11-20)
+
+**Our course follows the 31 Dec 2026 cut-off (May/June 2027 exam).** Sections A–C below were first built for the
+30 June 2026 cut-off; their last column says what stood on that date. **The section "July–December 2026" further down
+lists what changed after it.** Where the two disagree, the later section wins for our course (e.g. repo rate is
+5.50%, not 5.25%).
 
 **Which exam uses what** (IIBF rule): Nov/Dec 2026 exams use rules and developments up to **30 June 2026**;
 May/June 2027 exams use them up to **31 December 2026**. Teach the rule **as it stood on the cut-off date**, and
@@ -65,7 +70,7 @@ the primary RBI/FEMA text, not this file.
 ## C. Treasury
 | Change | Date / effect | Cluster | Source | For Dec 2026? |
 |---|---|---|---|---|
-| **Repo rate**: 6.50% → 6.25% (7 Feb 2025) → 6.00% (Apr 2025) → 5.50% (6 Jun 2025) → 5.25% (5 Dec 2025); held at 5.25% on 6 Feb and **5 June 2026** (unanimous, neutral stance). SDF 5.00%, MSF/Bank Rate 5.50% | as at 30 Jun 2026 | C-RESERVES | **RBI verified** (Monetary Policy Statement 5 Jun 2026); earlier steps IV | yes |
+| **Repo rate**: 6.50% → 6.25% (7 Feb 2025) → 6.00% (Apr 2025) → 5.50% (6 Jun 2025) → 5.25% (5 Dec 2025); held at 5.25% on 6 Feb and **5 June 2026** (unanimous, neutral stance). SDF 5.00%, MSF/Bank Rate 5.50% | as at 30 Jun 2026 | C-RESERVES | **RBI verified** (Monetary Policy Statement 5 Jun 2026); earlier steps IV | yes for June; **superseded 7 Oct 2026: 5.50%** (see July–December) |
 | **CRR 4% → 3%** in four 25 bp steps (fortnights from 6 Sep, 4 Oct, 1 Nov, 29 Nov 2025) | done by 29 Nov 2025 | C-RESERVES | IV (Jul 2025) | yes |
 | Penal interest on CRR/SLR shortfall re-set to Bank Rate + 3 / + 5 percentage points (8.50% / 10.50% at Bank Rate 5.50%) | Dec 2025 | C-RESERVES | IV (Jan 2026) | yes |
 | **"Fortnight" for CRR/SLR redefined** (Banking Laws (Amendment) Act, 2025; Amendment Directions 11 Dec 2025): 1st–15th and 16th–last day of each calendar month, instead of Saturday to second following Friday; **effective 15 Dec 2025** (gazette 8 Dec 2025); transition: 16–31 Dec 2025 on NDTL of 28 Nov 2025, 1–15 Jan 2026 on NDTL of 15 Dec 2025 | 15 Dec 2025 | C-RESERVES | **RBI verified** | yes |
@@ -76,7 +81,58 @@ the primary RBI/FEMA text, not this file.
 | LEI for OTC transactions; UTI for OTC derivatives from 1 Jan 2027 | Mar–Apr 2026 | C-DERIV | IV (Apr 2026) | LEI yes; UTI "coming" |
 | VRR limits subsumed in FPI general route (from 1 Apr 2026) | Feb–Mar 2026 | C-TPROD | IV (Mar 2026) | yes |
 
+## July–December 2026 (after the June cut-off; current for our May/June 2027 course)
+Read: IIBF Vision Aug, Sep, Oct, Nov 2026 issues (they cover July–October news) and the RBI pages named in the
+Source column. Still to come before the freeze: **MPC 2–4 Dec 2026**, the Dec 2026 and Jan 2027 Vision issues
+(November–December news), and RBI notifications from 11 Nov to 31 Dec 2026. Last column: what the lesson teaches.
+
+### A. International Banking
+| Change | Date / effect | Cluster | Source | Teach as |
+|---|---|---|---|---|
+| **Foreign Exchange Risk Reserve (FERR)**: AD keeps **20% of the INR equivalent of the notional, in cash with RBI**, for (i) INR forex derivative contracts with users **above USD 2 million** that hedge **current-account** exposures where the **user buys foreign currency** against INR (A.P. (DIR Series) Circular No. 26, RBI/2026-27/292, 10 Oct 2026), and (ii) the AD's own INR derivatives hedging its own assets/liabilities where the **AD buys foreign currency** against INR (Circular No. 27, RBI/2026-27/293, 12 Oct 2026). Kept until the contract ends; reported daily on CIMS; applies to contracts booked after issue | 10–12 Oct 2026 | A-DEALROOM / C-DERIV | **RBI verified** | current rule; a ready numerical (20% of USD 3 m × rate) |
+| **No rebooking** of any cancelled INR forex derivative (deliverable or non-deliverable) cancelled after the directions; **rollover on maturity still allowed**. Hedging contracted exposure **without proving the underlying: USD 100 million → USD 5 million** across all ADs (exchange-traded currency derivatives: same cut, across all exchanges); AD takes a user undertaking that the exposure is not hedged with another AD (Circular No. 25, 10 Oct 2026; PR 2026-2027/1305) | 10 Oct 2026 | A-DEALROOM / C-DERIV | **RBI verified**. **IIBF Vision (Nov 2026) prints "USD 100 million": that is the old figure; teach USD 5 million** | current rule; a trap card (old 100 m vs new 5 m) |
+| **NDDCs** involving INR to non-residents (AD Cat-I with an IBU; standalone PDs as AD Cat-III) **only for hedging** now (Circular No. 27, 12 Oct 2026) | 12 Oct 2026 | A-DEALROOM / A-IFSC | **RBI verified** | current rule |
+| **New FEM (Export and Import of Goods and Services) Regulations, 2026 in force from 1 Oct 2026** (see row in section A): realisation **9 months**, INR-invoiced trade **12 months**; exporters on the **caution list on 30 Sep 2026 stay under the 2015 regulations** until removed; **merchanting trade: 6-month settlement**, AD SOPs and policy for merchanting. **Second Amendment** (FEMA 23(R)/(2)/2026-RB, 2 Nov 2026, effective 1 Oct 2026): a services exporter is *deemed* to have filed the EDF when it gives the AD the payment details: **resident individuals for any amount; others when the inward remittance is up to ₹10 lakh**; importers of services: IDPMS entry rules changed | 1 Oct 2026; 2 Nov 2026 | A-EXIMP | **RBI verified** (2nd amendment text); main provisions IV (Oct 2026) + earlier RBI check | current rule: the A03 export lesson teaches the 2026 regulations, with the 9 → 15 → 9 history as a trap card |
+| **SRVA**: AD banks may open SRVAs of their own overseas branch or a non-resident bank; an extra current account for an exporter/importer only for these settlements; SRVA usable for all permissible current and capital account transactions | Jul 2026 (verify) | A-CORR | IV (Aug 2026) | current rule; verify date |
+| AD Cat-I banks no longer report (i) the annual list of branches keeping rupee accounts of non-resident banks, (ii) temporary overdrawals of vostro accounts beyond limits not adjusted within 5 days | Sep 2026 (verify) | A-CORR | IV (Oct 2026) | light mention |
+| NRE (3 yr+) / FCNR(B) (3–5 yr) rate-ceiling relaxation **ended 31 Aug 2026** (see row in section A). Advances out of those fresh deposits **excluded from ANBC** for priority-sector targets, capped at the deposits that got CRR/SLR exemption; window end moved 30 Sep → **31 Aug 2026** (PSL Third Amendment Directions, 2026) | Aug–Sep 2026 | A-NRI | IV (Sep, Oct 2026) | **as at 31 Dec 2026 the normal ceilings are back** (FCNR(B) ARR + 400/500 bps): teach the temporary window as history |
+| FPIs in G-secs via the general route: **concentration limit withdrawn** (SEBI then dropped investor-group details) | Sep 2026 (verify) | C-TPROD | IV (Oct 2026) | light mention |
+
+### B. Risk Management and D. Balance Sheet Management
+| Change | Date / effect | Cluster | Source | Teach as |
+|---|---|---|---|---|
+| **Leverage ratio** re-written to the Basel "2017 standard" (Capital Adequacy Eleventh Amendment Directions, RBI/2026-27/297, 23 Oct 2026): minimum **4% for D-SIBs, 3.5% for others** (same numbers as today); G-SIB branches 3.5% + G-SIB leverage buffer, with a capital-conservation table; exposure measure = on-balance sheet + derivatives + SFTs + off-balance sheet items; gross values, no netting or collateral; quarter-end basis; met at all times | issued 23 Oct 2026; **effective 1 Apr 2027** | B-BASEL | **RBI verified** | minimums current; new measure "issued, coming" |
+| **CVA capital**: Credit Valuation Adjustment Framework Directions, 2026 (RBI/DOR/2026-27/474, 7 Oct 2026): **BA-CVA** (full or reduced version); banks with small non-centrally-cleared derivative books may set CVA capital = **100% of CCR capital** (no CVA hedges recognised); commercial banks only (not SFBs, PBs, LABs); SFTs excluded | issued 7 Oct 2026; **effective 1 Apr 2027** | B-CAPCALC / C-MKTRISK | RBI (excerpts via search; full text to read); IV (Nov 2026) | "issued, coming" |
+| **Market risk** final Directions (row in section B): trading book = all **HFT**; FX risk (incl. gold and precious metals) on **both books**; no credit for internal risk transfers from trading to banking book; debt MF/ETF capital on underlying risk; TRS hedges in specific risk | issued 21 Sep 2026; effective 1 Apr 2027 | C-MKTRISK | IV (Oct 2026); RBI MD index | "issued, coming"; current SA/duration method stays the rule |
+| **Operational risk**: Forthcoming Instructions Second Amendment Directions, 2026 (23 Oct 2026): mapping of Business Indicator parts (ILDC, SC, FC) to financial statement lines, operating leases, loss component, loss data for the first ILM | effective 1 Apr 2027 | B-OPRISK | RBI listing (title, date); detail IV (Nov 2026) | "issued, coming" |
+| Clearing member's trade exposure to a **QCCP: 2% risk weight** (own account, and client trades where the bank must make good QCCP losses); CVA already written down counts in EAD | Oct 2026 (verify) | B-CAPCALC | IV (Nov 2026) | verify date and whether new or restated |
+| **Pillar 3 disclosure** framework revised (Board-approved disclosure policy, internal control over disclosures) | effective 1 Apr 2027 | B-BASEL | IV (Aug 2026) | "issued, coming" |
+| **SNFA** (immovable assets taken over in settlement): unrealised interest/charges from before acquisition **not income** after 1 Oct 2026; amounts already booked reversed by **30 Sep 2027**; SNFA income = other income when realised | 1 Oct 2026 | D-NPA | IV (Aug 2026) | current rule (light) |
+| Banks to **publish deposit rates in advance each business day** (incl. bulk), same rate across branches for similar deposits on the same day; bulk-deposit differential may reflect LCR run-off rates | 1 Oct 2026 | D-ALM / B-LIQ | IV (Aug 2026) | current rule (light) |
+| Lending-rate framework (MCLR/EBLR, day count, reset dates) to be **rationalised** (announced Aug 2026 policy) | announcement only | D-IRR | IV (Sep 2026) | watch: teach only if directions issue by 31 Dec |
+
+### C. Treasury
+| Change | Date / effect | Cluster | Source | Teach as |
+|---|---|---|---|---|
+| **Repo rate 5.25% → 5.50%** (MPC 5–7 Oct 2026, unanimous); **SDF 5.25%, MSF and Bank Rate 5.75%**; stance **neutral → "calibrated tightening"**. Earlier: held at 5.25% on 5 Aug 2026. Penal rates on CRR/SLR shortfall follow Bank Rate: + 3 = **8.75%**, + 5 = **10.75%** | 7 Oct 2026 | C-RESERVES | **RBI verified** (Governor's statement, PR prid=63744; MPC minutes) | **current: 5.50%** unless the 2–4 Dec 2026 MPC changes it |
+| **Daily minimum CRR 90% → 99%** of the requirement, from the fortnight starting **16 Oct 2026** (RBI/2026-27/290, 9 Oct 2026, scheduled banks). CRR itself stays **3%** | 9 / 16 Oct 2026 | C-RESERVES | RBI (notification excerpt via search; open the full text) | current rule; a numerical on daily shortfall |
+| **PV01 cap removed**: the limit of gross PV01 of non-option rupee derivatives at 0.25% of net worth (para 37, Commercial Banks – Miscellaneous Directions, 2025) deleted (Second Amendment Directions, RBI/2026-27/294, 19 Oct 2026, immediate) | 19 Oct 2026 | C-DERIV / D-IRR | **RBI verified** | current rule; trap: the 0.25% limit no longer exists |
+| **Novation of OTC derivatives**: MTM exchanged upfront between transferor and transferee; "remaining party" may be a market maker or a CCP; no novation between two users (incl. to own group treasury) | Sep 2026 (verify) | C-DERIV | IV (Oct 2026) | current rule (light) |
+| Unquoted **InvIT/REIT units valued at their NAV**; quoted ones at FBIL / exchange prices | Sep 2026 (verify) | C-TPROD | IV (Oct 2026) | current rule (light) |
+| Technical Consultative Committee for Financial Markets constituted (money, G-sec, forex markets; meets at least quarterly) | 4 Nov 2026 | C-TPROD | RBI (search excerpt) | one line |
+
+Outside BFM (noted, not taught here): loan-recovery conduct Directions from 1 Jan 2027; Bankers' Books Evidence Bill
+2026; Board-matters framework 1 Oct 2026; UPI MDR from 15 Oct 2026; NPS, SEBI, IRDAI items.
+
 ## Verification log
+- **2026-11-20 (cloud)**: IIBF Vision Aug–Nov 2026 read in full (PDF links from the listing page). RBI pages fetched one
+  at a time, 8–10 s apart, no blocks: FEMA 23(R)/(2)/2026-RB (2 Nov 2026), Capital Adequacy Eleventh Amendment
+  (RBI/2026-27/297), Miscellaneous Second Amendment (RBI/2026-27/294), FERR circulars No. 26 and 27
+  (RBI/2026-27/292, 293), PR 2026-2027/1305 (10 Oct 2026), Governor's statement 7 Oct 2026 (prid=63744) and MPC
+  minutes (prid=63839). CRR 99% (RBI/2026-27/290) and CVA (RBI/DOR/2026-27/474) seen only as search excerpts of RBI
+  pages: open the full text before the lesson.
+- **Error found in IIBF Vision Nov 2026**: it says hedging without proof of underlying is allowed "up to USD 100
+  million"; RBI's 10 Oct 2026 press release cut it to USD 5 million. A Vision line is a lead, never the number.
 - **2026-11-14 (cloud, single RBI pages, 8–10 s apart; no blocks)**: export realisation (FEMA 23(R)/(7)/2025-RB,
   23(R)/(8)/2026-RB, 23(R)/2026-RB, 23(R)/(1)/2026-RB; PR 2025-2026/2362), ECB (FEMA 3(R)(5)/2026-RB), NRE/FCNR(B)
   ceilings (RBI/2026-27/138, 99, 243), NOP-INR (RBI/2025-26/252), NDD bar (1 Apr 2026), CCyB (PR 2026-27/278), LCR
@@ -94,3 +150,6 @@ the primary RBI/FEMA text, not this file.
    and forex capital charge revamp date.
 3. TCS 2026: confirm the enacted Finance Act 2026 text matches the Budget memorandum (found 2026-11-14).
 4. Keep reading each new IIBF Vision issue; check IIBF Bank Quest for BFM articles.
+5. **Before the 31 Dec 2026 fact freeze**: MPC 2–4 Dec 2026 outcome; Vision Dec 2026 and Jan 2027 issues; RBI
+   notifications 11 Nov – 31 Dec 2026; full text of CRR 99% (RBI/2026-27/290) and CVA Directions; dates marked
+   "verify" in the July–December section.
