@@ -20,6 +20,12 @@ Never a new loose doc.
   as at the **31 Dec 2026** cut-off unless the owner says otherwise.
 - **Process (owner, 2026-11-19):** exact video order → one-page plan per video → every full script **with its cue
   sheet** → lock all → voice and build one by one; anything found while building goes back into the scripts.
+  - **Independent review replaces the owner's content review (owner, 2026-11-20: "always take independent session
+    review; I can't review the content").** Every script, before it counts as done, is reviewed by a separate agent
+    session with fresh context: syllabus coverage, what the exam asks, every rule and number against primary
+    sources (web research allowed), the lesson spec and §5b/§5e rules. It writes `review_v<N>.md` in the lesson folder
+    with a verdict (ADOPT / ADOPT WITH FIXES / REWORK). The author fixes every High and Medium finding (or records
+    why not) and re-runs the review until ADOPT. The owner still decides look, voice and anything paid.
   - Order: `research/bfm/course_plan.md` v2, locked: 58 videos (00, A01–A21, B01–B14, C01–C09, D01–D07,
     4 revisions, U01, X01).
   - Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review).
