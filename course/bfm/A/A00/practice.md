@@ -9,9 +9,12 @@
    a) Thursday b) Friday c) Monday d) Tuesday
    **Answer: c.** Spot is the second working day (FEDAI 5.2): Friday is day 1, Monday is day 2.
 
-3. The value date of a deal falls on a holiday declared three weeks in advance. The deal is settled on:
+3. The fixed delivery date of a customer's forward contract falls on a holiday declared three weeks earlier. The
+   contract is delivered on:
    a) the next working day b) the preceding working day c) the same day anyway d) the bank's choice
-   **Answer: b.** A known holiday moves delivery to the preceding working day; a sudden one to the next (FEDAI 1.4, 5.2).
+   **Answer: b.** A holiday known at least 3 working days before (FEDAI 1.4) moves the delivery date to the preceding
+   working day; a suddenly declared one to the next working day (Rule 5.2). This rule is for forward delivery dates;
+   a spot date simply skips holidays (Q9).
 
 4. Which of these is most likely to **strengthen** the rupee?
    a) a wider current account deficit b) higher inflation in India than abroad
@@ -31,7 +34,25 @@
    a) RBI b) FEDAI c) FBIL d) CCIL
    **Answer: c.** FBIL, since 10 July 2018 (RBI press release, 4 Jul 2018).
 
-8. Buying dollars against rupees in Mumbai, selling them for euros in London and converting the euros back into
-   rupees, all to profit from price gaps, is:
+8. A dealer buys dollars with rupees in Mumbai, sells the dollars for euros in New York and sells the euros for
+   rupees in London, all at the same moment, to profit from the price gaps. This is:
    a) hedging b) simple arbitrage c) compound arbitrage d) speculation
-   **Answer: c.** Three currencies or centres: compound (triangular) arbitrage.
+   **Answer: c.** Three currencies and three centres: compound (triangular) arbitrage. Two currencies or two centres
+   would be simple arbitrage.
+
+9. A spot deal is struck on Monday. Wednesday is a bank holiday announced a week earlier. Value date?
+   a) Tuesday b) Wednesday c) Thursday d) Friday
+   **Answer: c.** Spot is the second working day (FEDAI 5.2); Wednesday is not a working day, so day 2 is Thursday.
+
+10. Unless stated otherwise, a rate quoted in the interbank market is a:
+   a) cash rate b) tom rate c) spot rate d) forward rate
+   **Answer: c.** Spot is the base rate of the market; forward periods are counted from the spot date (FEDAI 5.2).
+
+11. In July 1991 the rupee's official rate was cut in two steps. Under a pegged rate this is called:
+   a) depreciation b) devaluation c) appreciation d) revaluation
+   **Answer: b.** An official cut in a fixed or pegged rate is a devaluation; a market fall under a float is a
+   depreciation (RBI History chronology, July 1991).
+
+12. If the rupee is at a forward discount against the dollar, the dollar is at a forward:
+   a) discount b) premium c) par d) cannot say
+   **Answer: b.** The two sides mirror each other; the higher-interest currency (here the rupee) is at the discount.
