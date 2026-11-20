@@ -391,6 +391,11 @@ checks decide when a cut is ready, not a feeling.
   a common first word ("The…", "So…") latches onto an earlier one; numbers and spelt codes ("13", "D-D-P") need a
   word anchor; notes placed in the bottom band collide with the caption and are not measured; note writing speed must
   follow the sentence, or a short sentence's note is still being written when the next begins.
+- **Voice page = spoken lines only (2026-11-20, cost real credits):** `voice_blocks.py` predated cue sheets and
+  copied each line's cue (">" lines) into the voice text, so the first A00 takes read the picture directions aloud
+  (31 minutes instead of about 14.5; about 23,000 Creator characters lost). The tool now drops ">" lines and refuses
+  to build if cue text leaks. Rule: before a voice page goes to the owner, its word count must match the script's
+  spoken count (A00: 2,036), and a sample part is read through once.
 - **Where notes go (from the r4 overlaps):** a note never outlives its line; never under a card (the practice notes
   sit above the pause card); never on a road label, a quote bubble or a card corner: use the free top band
   (y ≈ 100–150) or the space beside the scene; in the recap the notes are short and small, top-left, clear of the

@@ -30,8 +30,9 @@ Never a new loose doc.
     D01–D07, 4 revisions, U01, X01). v3 (2026-11-20) added A00, A19b, A22, B13b from the syllabus check.
   - Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review).
   - **A00 script v3 locked** (2026-11-20; `A/A00/`): fact sheet `research/bfm/facts/A1.1-A1.3_A00.md`, three
-    independent reviews all ADOPT, voice page `A/A00/voice_page.html` (3 parts of about 9,000 characters, cut between lines:
-    `voice_blocks.py --target 9000 --max 10000`, owner 2026-11-20: "keep around 9k"). **Owner voicing it now on the
+    independent reviews all ADOPT, voice page `A/A00/voice_page.html` (2 parts, 8,153 + 3,778 characters, spoken lines only;
+    `voice_blocks.py --target 9000 --max 10000`, owner 2026-11-20: "keep around 9k"). First takes (2026-11-20)
+    read the cue sheet aloud (tool bug, fixed): re-voice needed. **Owner voicing it now on the
     ElevenLabs Creator plan** (owner, 2026-11-20: "Already we have one creator plan"); takes go to Drive
     `BFM/A00/voice/part_N.mp3`, then `kaggle_enhance.py from-drive A00`, then the r4 build. First lesson through the
     full layered method; the 00 script's N47 now leads into A00.

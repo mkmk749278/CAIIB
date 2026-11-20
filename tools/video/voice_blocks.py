@@ -43,6 +43,9 @@ def parse(path):
     body = open(path, encoding="utf-8").read().split("\n---\n", 1)[1]
     section, out = "", []
     for para in re.split(r"\n\s*\n", body):
+        # Keep only the spoken text: cue-sheet lines (">") are picture directions and must never be voiced.
+        # (2026-11-20: the A00 takes were voiced with the cue sheet read aloud; 23,000 characters of credits lost.)
+        para = "\n".join(l for l in para.splitlines() if not l.lstrip().startswith(">"))
         p = " ".join(para.split())
         if p.startswith("## "):
             section = p[3:]
@@ -154,6 +157,9 @@ def parts(ts):
 def main(src, md_out, html_out, maxc=None, target=None):
     lines = parse(src)
     single = len({l["id"][0] for l in lines}) == 1
+    leak = [l["id"] for l in lines if re.search(r"(^|\s)>\s|\b\d\s?[SNGMC]:", l["text"])]
+    if leak:
+        raise SystemExit(f"cue-sheet text found in spoken lines {leak[:5]}: fix the script before voicing")
     if target and single:
         ps = parts_target(lines, target, maxc or 10000)
     elif maxc:
