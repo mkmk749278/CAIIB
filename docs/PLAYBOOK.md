@@ -293,7 +293,7 @@ should feel sudden changes, glitches, blanks."
 ## 5e. How a lesson becomes smooth: the r4 method (owner on Incoterms r4, 2026-11-19: "came out very good")
 Four rounds on the Incoterms sample taught the method below. Every lesson is built this way from now on, and the
 checks decide when a cut is ready, not a feeling.
-- **1. Voice, as recorded.** The owner records each part in one take. `tools/video/flow_voice.py` splits the takes
+- **1. Voice, as generated.** The owner generates each part in ElevenLabs v3 as one take (an AI voice). `tools/video/flow_voice.py` splits the takes
   only in the middle of natural pauses, opens space only for planned holds (prediction countdowns; no chapter gaps,
   `timeline.py` CHAPTER={}), swaps in re-recorded lines, and writes the timeline JSON with every word's time. The
   music bed (shared library, no drums) is looped with crossfades and sidechain-ducked under the voice, then mixed
@@ -340,6 +340,19 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-20: **voice.** The owner asked about the cost of ElevenLabs for the whole course (about Rs 70-80k for
+  60-70 hours). Tested free open voices that allow commercial use, all reading the same Incoterms lines
+  (comparison page https://claude.ai/artifact/KY1xtd9MeivaomRmcgHS38): Maya 2 Native (Maya Research, Apache-2.0),
+  Indic Parler-TTS (AI4Bharat, Apache-2.0), Veena (Apache-2.0), MeloTTS (MIT). Maya 2 was clearest (2.5-3.2% of words
+  misread by a speech checker, ElevenLabs 1.3%). Maya 2 runs on free Kaggle T4 GPUs at about 2x real time
+  (`tools/voice/kaggle_maya.py`). Lessons learned: Maya 2 has no pause or pitch tags; voicing sentence by sentence
+  breaks the flow (owner: "missing natural flow"); one take with 25 s internal chunks keeps it, while 60 s chunks
+  skipped text, so every take is checked word by word against the script; flow_voice.py then opens the planned holds.
+  An outside AI review (owner's PDF) and the owner's own ear both put ElevenLabs first: warmer, calmer, more room
+  around numbers. Owner: "still ElevenLabs is the top notch… we can't compromise on quality." Decision: ElevenLabs
+  Creator plan only in the months we voice lessons, after all BFM scripts are written (about Rs 15-17k for BFM).
+  The free ElevenLabs plan is not used for anything sold: it has no commercial licence. Maya 2 Vasant stays the
+  tested fallback.
 - 2026-11-20: owner on Incoterms r5: "Video is fine" → the r4 method and v2 kit are the locked template for every
   lesson; scripts resume at A01. Owner: "We don't need to render in 4k right": right, **masters are 1080p**
   (`render.yml` scale 1), review cuts 720p. Why not 4K: the audience watches on phones (a 6-inch screen shows no
