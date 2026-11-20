@@ -148,7 +148,10 @@ a large bank; few questions repeat. So content is built in layers, each checked 
   before spending any credits.
 
 ## How a lesson video is built (the r4 method, PLAYBOOK §5e)
-ElevenLabs take per part → `tools/video/flow_voice.py` (continuous voice, planned holds only, re-generated lines
+ElevenLabs take per part (owner generates from the voice page, drops `part_N.mp3` in Drive `BFM/<video>/voice/`) →
+Resemble Enhance on Kaggle (`tools/voice/kaggle_enhance.py from-drive <video>` → `BFM/<video>/voice_enhanced/`;
+owner, 2026-11-20; it never changes a take's licence, so sold lessons still need Creator-plan takes) →
+`tools/video/flow_voice.py` (continuous voice, planned holds only, re-generated lines
 swapped in) + music bed ducked → `mix.flac` in Drive `BFM/<video>/flow/` → timeline JSON → Remotion composition on
 the shared kit (`video/src/kit/`: notebook page, journey road, rule cards, growing map) with a beat for every
 sentence (`sk()`, `B()`, `W()`, glow on named things, crossfades only) → render on 6 GitHub runners (`render.yml`,
