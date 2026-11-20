@@ -33,6 +33,18 @@ sh(f"{E} --index-url https://pypi.org/simple --no-deps resemble-enhance")
 sh(f"{E} --index-url https://pypi.org/simple 'numpy<2' setuptools deepspeed==0.12.4 celluloid==0.2.0 librosa==0.10.1 "
    "omegaconf==2.3.0 rich tqdm resampy==0.4.2 tabulate scipy soundfile matplotlib pandas ptflops")
 sh(f"{PY} -c 'import torch; print(\"cuda\", torch.cuda.is_available())'")
+# The package fetches its weights with `git lfs`, which Kaggle lacks: fetch them over the Hub API and skip its git step
+sh(f"{E} --index-url https://pypi.org/simple huggingface_hub")
+PATCH = r"""
+import pathlib, re, resemble_enhance.enhancer.download as d
+from huggingface_hub import snapshot_download
+snapshot_download("ResembleAI/resemble-enhance", local_dir=str(d.REPO_DIR), allow_patterns=["enhancer_stage2/*"])
+p = pathlib.Path(d.__file__); s = p.read_text()
+p.write_text(s.replace('logger.info("Downloading the model...")', 'return REPO_DIR / "enhancer_stage2"'))
+print("weights", sorted(x.name for x in (d.REPO_DIR / "enhancer_stage2").rglob("*") if x.is_file()))
+"""
+open("/kaggle/tmp/patch.py", "w").write(PATCH)
+sh(f"{PY} /kaggle/tmp/patch.py")
 os.makedirs("/kaggle/tmp/in", exist_ok=True)
 # Kaggle mounts sources as /kaggle/input/<notebooks|datasets>/<user>/<slug> (older images: /kaggle/input/<slug>)
 srcs = glob.glob("/kaggle/input/*/*/*") if glob.glob("/kaggle/input/notebooks") + glob.glob("/kaggle/input/datasets") \
