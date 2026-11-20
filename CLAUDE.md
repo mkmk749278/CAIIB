@@ -85,6 +85,10 @@ repeat, so past questions can never define the course.
 2. **Recalled questions guide, they do not decide**: they show how IIBF asks (style, difficulty, numbers), set the
    order of work and the amount of practice (Tier A = more drills and a case), and are one check among several
    (`items_tagged.csv`, `importance_map.md`).
+2a. **Depth checklists** `research/bfm/depth/A.md`–`D.md` (2026-11-20, from two public classes per module, PLAYBOOK
+   §4b): per official sub-topic, the sub-points teachers cover and what our plan lacks (about 400 additions), plus
+   statements in those classes that are outdated. **Every script covers its video's "Add to our plan" items** (or the
+   review records why not), checks every "verify" point in the primary source, and never repeats an outdated one.
 3. **Coverage ledger**: a sub-topic with no video, or in an overloaded video, is fixed in the course plan before more
    scripts are written. Each script's independent review checks its ledger rows are really taught.
 4. **Module exam test**: our own syllabus-wide questions plus the recalled ones, answered by a fresh agent using only
