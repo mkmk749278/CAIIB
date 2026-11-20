@@ -1,11 +1,11 @@
-# A00 · "The market behind the counter" (one teacher, online class; script v2 with cue sheet)
+# A00 · "The market behind the counter" (one teacher, online class; script v3 with cue sheet)
 
 - **Plan**: `course/bfm/A/plans_A.md` §A00 (draft 2). Course order v3: video 2, after 00, before A01.
 - **Syllabus**: A1.1 Foreign exchange: definition and markets · A1.2 Factors determining exchange rates · A1.3
   Exchange rate mechanism. A1.4 (dealing room, C01) and A1.5 (derivatives, A05/A06, C08/C09) are only named.
 - **Facts**: every rule and date from `research/bfm/facts/A1.1-A1.3_A00.md`; sources per claim in `claims.csv`.
-- **Status**: v2, 2026-11-20. v1 reviewed by three fresh agents (expert, examiner, beginner: all ADOPT WITH FIXES;
-  `review_v1_*.md`); every High and Medium finding fixed here, see `review_ack_v1.md`. v2 goes back to review.
+- **Status**: v3, 2026-11-20. v1 and v2 reviewed by three fresh agents (expert, examiner, beginner); every High and
+  Medium finding fixed (`review_ack_v1.md`, `review_ack_v2.md`).
 - **Rule version (opening card)**: "FEMA 1999 and FEDAI Rules as at 31 December 2026 · RBI Annual Report 2025-26 ·
   FBIL methodology (version of 15 Jan 2019)". Re-check at the fact freeze (claims marked *freeze*).
 - **Evidence (warm-up line N00d)**: "Factors affecting foreign exchange rates" and a forex settlement-date question
@@ -22,10 +22,11 @@
   "tom" as in Tom; R-B-I, F-B-I-L, O-T-C, I-M-F letter by letter (spelt so in the lines). Numbers and years are
   written in words.
 - **Numericals**: none graded (plan). `numericals.md` records why. The parity sums are in A05, cross rates in A04.
-- **Length**: about 2,000 spoken words: about 14.3 minutes of speech and about 14.6 with the holds; warm-up,
-  opening and four chapters, each under 4.5 minutes (spec: 12–15 minutes).
-- **Holds** (for `tools/video/timeline.py`, key `A00`): N05 5 s (lock your answer), N31 5 s, N45 8 s (pause for the
-  three questions); 1 s after N12a, N24a, N34 (chapter breath).
+- **Length**: about 2,030 spoken words: about 14.5 minutes of speech and about 14.9 with the holds; warm-up,
+  opening and four chapters, each under 4.5 minutes (spec: 12–15 minutes; no room left, so any later addition needs
+  a matching cut).
+- **Holds** (for `tools/video/timeline.py`, key `A00`): N05 5 s (lock your answer), N31 5 s, N45 12 s (pause for the
+  three questions); 1 s after N12b, N24b, N34 (chapter breath).
 - **Left out on purpose**: the date India moved to direct quotes (August 1993 is widely taught, but no RBI or FEDAI
   text for it has been found yet; add it only after one is read); authorised dealers (taught in A02 with FEMA s. 10).
 
@@ -75,8 +76,8 @@ Who changed it? R-B-I?"
 > 1 S: the receipt enlarges: "USD/INR 85.20 · yesterday · illustrative" · 2 S: the board behind the counter:
 > "85.65 · today" · 3 S: a speech bubble "Who changed it?" · 4 N (in bubble): "RBI?"
 
-N03 · Fair question, right? And the officer at the counter has to answer it in one line.
-> 1 N: "fair question" · 2 S: the officer figure, a blank speech bubble
+N03 · Fair question, right?
+> 1 N: "fair question"; S: the officer figure, a blank speech bubble
 
 N04 · Now I know what many of you are thinking. R-B-I fixes the rupee rate every morning, and banks just follow. And
 a few of you are thinking the opposite. Each bank decides its own rate, any rate it likes.
@@ -88,11 +89,10 @@ N05 · So which one is it? Lock your answer.
 
 ## Chapter 1 · What foreign exchange is
 
-N06 · Okay. Here's the honest answer. Neither. And by the end of today you'll know exactly why. But first, we need
-one word clear. What is foreign exchange?
+N06 · Okay. Here's the honest answer. Neither. But first, we need one word clear. What is foreign exchange?
 > 1 S: chapter title slides in "1 · What foreign exchange is" · 2 N: "honest answer" · 3 S: both clouds get a small
-> cross, "neither" · 4 N: "why: by the end" · 5 S: the counter shrinks to the left; a coat with three pockets is
-> drawn on the right · 6 N: "foreign exchange = ?"
+> cross, "neither" · 4 S: the counter shrinks to the left; a coat with three pockets is drawn on the right ·
+> 5 N: "foreign exchange = ?"
 
 N07 · The law for this is FEMA, the Foreign Exchange Management Act of nineteen ninety-nine. It came into force in
 June two thousand, replacing the old FERA.
@@ -122,17 +122,20 @@ N11 · Read that third one again. Payable in rupees, and still foreign exchange,
 Examiners love that line.
 > 1 N: "payable in ₹ … still forex!" · 2 S: a small globe stamp on pocket 3 · 3 N: "exam favourite"
 
-N12 · So the hook is simple. Foreign currency is the money itself. Foreign exchange adds every deposit, balance and
-paper claim that stands for it.
+N12 · So the hook is simple. Foreign currency is the money itself. Foreign exchange adds the deposits and papers in
+those three pockets.
 > 1 N: "the hook" · 2 S: the money on the left: a note and a cheque, tag "foreign currency" · 3 S: the full coat on
 > the right, a bracket "foreign exchange" over both
 
 N12a · And the exchange rate is just the price of one currency in another. In India we quote it directly: so many
-rupees for one dollar. An importer paying dollars wants a strong rupee. An exporter receiving dollars likes a weaker
-one. Same rate, opposite feelings. Okay, first chapter done.
-> 1 S: a price tag "₹ per 1 USD" · 2 N: "direct quote" · 3 S: importer figure, tag "pays USD · wants strong ₹" ·
-> 4 S: exporter figure, tag "gets USD · likes weak ₹" · 5 N: "same rate, opposite feelings" · 6 M: branch node 1
-> "what forex is"; a check mark on the chapter title
+rupees for one dollar.
+> 1 S: a price tag "₹ per 1 USD" · 2 N: "direct quote"
+
+N12b · An importer paying dollars wants a strong rupee. An exporter receiving dollars likes a weaker one. Same rate,
+opposite feelings. Okay, first chapter done. Stretch for a second.
+> 1 S: importer figure, tag "pays USD · wants strong ₹" · 2 S: exporter figure, tag "gets USD · likes weak ₹" ·
+> 3 N: "same rate, opposite feelings" · 4 M: branch node 1 "what forex is"; a check mark on the chapter title ·
+> 5 S: a small stretching stick figure at the margin
 
 ## Chapter 2 · The market and its players
 
@@ -177,10 +180,10 @@ N20 · And because arbitrageurs jump on every gap, prices in different centres s
 > 1 S: the gap between the two centre prices closes; N: "keeps prices together"
 
 N21 · Next, the two tiers. Banks dealing with each other is the interbank market, the wholesale side. A bank dealing
-with you is the merchant market, and merchant here means any customer. Merchant rates are interbank rates plus a
-margin.
+with you is the merchant market, and merchant here means any customer. Merchant rates are built on interbank
+rates, with the bank's margin built in.
 > 1 N: "two tiers" · 2 S: upper tier drawn "interbank · bank ↔ bank · wholesale" · 3 S: lower tier "merchant · bank
-> ↔ any customer" · 4 S: an arrow from interbank down to the counter board, tag "+ margin"
+> ↔ any customer" · 4 S: an arrow from interbank down to the counter board, tag "margin built in"
 
 N22 · Everyone with me? Good. Now a part that's asked as a straight question. When is a deal settled? The day the
 money actually changes hands is called the value date.
@@ -193,21 +196,25 @@ after the deal. And forward, anything beyond spot.
 > 1 S: a small FEDAI badge "banks' association · forex rules" · 2 S: box 1 fills "cash / ready · same day" · 3 S:
 > box 2 "tom · next working day" · 4 S: box 3 "spot · 2nd working day" · 5 S: box 4 "forward · beyond spot"
 
-N23a · Spot is the market's base rate. A dealer's quote is a spot rate unless it says otherwise, and forward periods
-are counted from the spot date.
-> 1 G: box 3, tag "default quote" · 2 S: an arrow from box 3 to box 4 "counted from spot"
+N23a · Spot is the market's base rate. A dealer's quote is a spot rate unless it says otherwise. And a one-month
+forward is counted from the spot date, not from today.
+> 1 G: box 3 · 2 S: tag "default quote" on box 3 · 3 S: an arrow from box 3 to box 4 "1-month forward: counted from
+> spot"
 
 N24 · Now be careful, this is where people slip. Spot does not mean today. Spot means the second working day, so
 weekends and holidays are simply skipped. A Monday deal with Wednesday a holiday settles on Thursday.
 > 1 C: trap card frame drawn · 2 S: trap card "spot = today ✗" · 3 S: "spot = 2nd working day ✓" · 4 S: a calendar
 > "Mon deal · Tue · Wed holiday (struck) · Thu = spot"
 
-N24a · One more date rule, for a customer's forward contract. If its delivery date turns out to be a holiday known at
+N24a · Still with me? One more date rule, for a customer's forward contract. If its delivery date turns out to be a holiday known at
 least three working days ahead, deliver on the working day before. If the holiday is sudden, deliver on the next
-working day. That's chapter two. Deep breath.
-> 1 S: a small forward-contract tag "fwd delivery date on a holiday" · 2 S: arrow back "known (3+ working days) →
-> preceding working day" · 3 S: arrow forward "sudden → next working day · FEDAI 1.4, 5.2" · 4 M: branch nodes 2
-> "players" and 3 "deal dates" · 5 S: chapter tick
+working day.
+> 1 N: "still with me?" · 2 S: a small forward-contract tag "fwd delivery date on a holiday" · 3 S: arrow back
+> "known (3+ working days) → preceding working day" · 4 S: arrow forward "sudden → next working day · FEDAI 1.4, 5.2"
+
+N24b · So for forward delivery: known early, go back. Sudden, go forward. That's chapter two. Deep breath.
+> 1 C: hook card "known early → back · sudden → forward" · 2 G: the hook card · 3 M: branch nodes 2 "players" and
+> 3 "deal dates" · 4 S: chapter tick
 
 ## Chapter 3 · Why rates move
 
@@ -231,18 +238,18 @@ So our customer's eighty-five sixty-five means the rupee fell a little overnight
 > 1 S: the price tag "₹ per 1 USD" returns · 2 S: 85.20 → 85.65, an arrow up on the number, a small arrow down on a
 > rupee coin, tag "more ₹ per $ = weaker ₹" · 3 S: the customer's receipt gets a small "₹ fell" stamp
 
-N28 · What pushes the see-saw? The factors fall into three groups. Fundamental, technical, and speculative.
-> 1 N: "what pushes it?" · 2 S: three empty boxes under the see-saw · 3 S: box labels: fundamental · technical ·
-> speculative
-
-N28a · But first, a thirty-second refresher from J-A-I-I-B. The balance of payments is India's account book with the
+N27b · Now, a thirty-second refresher from J-A-I-I-B. The balance of payments is India's account book with the
 rest of the world.
 > 1 N: "JAIIB refresher · 30 s" · 2 S: the ledger "India ↔ world" drawn, two columns
 
-N28b · The current account holds trade, services, and money sent home by Indians abroad. The capital account holds
+N27c · The current account holds trade, services, income, and money sent home by Indians abroad. The capital account holds
 investment and loans coming in and going out. And no, this current account is not the one at your branch.
-> 1 S: column 1 "current: trade · services · remittances" · 2 S: column 2 "capital: investment · loans" · 3 S: a
+> 1 S: column 1 "current: trade · services · income · remittances" · 2 S: column 2 "capital: investment · loans" · 3 S: a
 > branch passbook marked "CA" with a small cross, tag "not this one"
+
+N28 · So what pushes the see-saw? The factors fall into three groups. Fundamental, technical, and speculative.
+> 1 N: "what pushes it?" · 2 S: three empty boxes under the see-saw · 3 S: box labels: fundamental · technical ·
+> speculative
 
 N29 · Fundamental factors are the economy itself. A big current account deficit means India spends more abroad than it
 earns, so the rupee weakens. Inflation higher here than abroad weakens it. Higher interest rates pull money in and
@@ -266,29 +273,29 @@ time, it's worth less against the dollar. That idea has a name, purchasing power
 > 1 S: "Others" cloud ticked, "Some of you" crossed · 2 S: two baskets, India and USA, same goods; India's price tag
 > grows faster · 3 S: the rupee coin shrinks a little against the dollar coin · 4 N: "PPP" · 5 N: "idea only"
 
-N33 · One more idea. Interest rate parity, and it's about the price for a future date. If the future price is lower
-than today's, that's a forward discount. If it's higher, a forward premium.
-> 1 N: "one more idea" · 2 S: a timeline "today | future date", two price tags · 3 S: future tag lower, label
-> "forward discount" · 4 S: future tag higher, label "forward premium"
+N33 · One more idea. Interest rate parity, and it's about the price for a future date. If a currency's price for a
+future date is lower than today's, that currency is at a forward discount. If higher, it's at a forward premium.
+> 1 N: "one more idea" · 2 S: a timeline "today | future date" · 3 S: a rupee coin, its future price tag lower,
+> label "₹ at forward discount" · 4 S: a dollar coin, its future price tag higher, label "$ at forward premium"
 
-N33a · The rule: the currency with the higher interest rate trades at a forward discount. Not a premium, a discount.
-And if the rupee is at a discount, the dollar is at a premium.
-> 1 S: two piggy banks, "higher interest" and "lower interest"; "forward discount" under the first · 2 C: trap card
-> "forward premium ✗ · forward discount ✓" · 3 S: a flip arrow "₹ at discount ⇄ $ at premium"
+N33a · The rule: the currency with the higher interest rate trades at a forward discount. And if the rupee is at a
+discount, the dollar is at a premium.
+> 1 S: two piggy banks, "higher interest" and "lower interest"; "forward discount" under the first; C: trap card
+> "forward premium ✗ · forward discount ✓" · 2 S: a flip arrow "₹ at discount ⇄ $ at premium"
 
 N33b · Don't mix this with the see-saw. Higher rates pull money in and lift a currency today. Parity is only about the
 forward price. The sums come in A-zero-five.
 > 1 N: "don't mix" · 2 S: the see-saw thumbnail, "today: money in → stronger" · 3 S: the timeline thumbnail,
 > "future price: discount" · 4 N: "sums: A05"
 
-N34 · They're classic traps, and now you won't fall for them. Chapter three, done.
+N34 · Inflation and the forward discount are classic traps, and now you won't fall for them. Chapter three, done.
 > 1 S: both trap cards shrink into the see-saw corner · 2 S: chapter tick; M: branch node 4 pulses
 
 ## Chapter 4 · Who sets the rate in India?
 
-N35 · Now the big question from the start. Does R-B-I fix the rate? Let's walk India's road, quickly.
-> 1 S: chapter title "4 · Who sets the rate in India?" · 2 N: "does RBI fix it?" · 3 S: the road drawn left to
-> right, five milestone posts
+N35 · Now the big question from the start. Does R-B-I fix the rate?
+> 1 S: chapter title "4 · Who sets the rate in India?" · 2 N: "does RBI fix it?"; S: the road drawn left to right,
+> five milestone posts
 
 N36 · First, the regimes. A fixed rate is set officially, and the central bank holds it there. A floating rate is set
 purely by the market. And a managed float is in between: the market sets it, the central bank smooths it, with no
@@ -323,9 +330,10 @@ Article Eight of the I-M-F.
 > 1 S: post 5 "Mar 1993 · unified" · 2 G: post 5, tag "market-determined" · 3 S: a small flag past the road "Aug
 > 1994 · current account convertible · IMF Art. VIII"
 
-N40a · Convertible on the current account means you can freely change rupees into dollars for trade, services or
-travel. Capital moves still have limits.
-> 1 S: an arrow ₹ → $ with "trade · services · travel ✓" · 2 S: "capital: limits" greyed
+N40a · Convertible on the current account means you can change rupees into dollars for trade, services or travel
+without special permission. Only a short list is banned or capped by the rules. Capital moves still have limits.
+> 1 S: an arrow ₹ → $ with "trade · services · travel ✓ · no special permission" · 2 S: a small list "a few items
+> banned or capped (FEMA rules)" · 3 S: "capital: limits" greyed
 
 N41 · So what does R-B-I do today? It doesn't fix the rate. India runs a managed float. In R-B-I's own words, it acts
 to keep the market orderly and contain excessive volatility. It buys or sells dollars from its reserves when the swings
@@ -338,29 +346,29 @@ N42 · And the reference rate you see every afternoon? It's published by F-B-I-L
 July twenty eighteen.
 > 1 S: a notice board "FBIL reference rate" · 2 N: "FBIL · since 10 July 2018"
 
-N42a · It's built from real spot trades in a random fifteen-minute slot, between eleven-thirty and twelve-thirty in the
-morning. It comes out at about one-thirty in the afternoon.
+N42a · It's built from real spot trades in a random fifteen-minute slot, between eleven-thirty and twelve-thirty, around
+midday. It comes out at about one-thirty in the afternoon.
 > 1 S: a clock band 11.30 to 12.30 with a random 15-minute slice lit · 2 S: "≈ 1.30 p.m. · Mumbai business days"
 
 N43 · It's a benchmark, used for things like converting figures in reports. It isn't a rate that R-B-I forces on
-your deal. Your counter rate comes from the interbank market, plus your bank's margin.
+your deal. Your counter rate comes from the interbank rate, with your bank's margin built in.
 > 1 N: "benchmark"; S: a report sheet with "₹ conversion" · 2 N: "not imposed" · 3 S: arrow interbank → board,
-> "+ margin"; M: branch node 5 "regimes and RBI"
+> "margin built in"; M: branch node 5 "regimes and RBI"
 
 N44 · So, back to our customer. What's the one-line answer? The rate moves with the market every day. R-B-I only
 steps in to stop wild swings, and our board follows the interbank rate.
 > 1 S: the customer and officer return · 2 N: "one-line answer" · 3 S: officer's bubble: "moves with the market" ·
-> 4 S: bubble adds "RBI stops wild swings · board follows interbank"; both opening clouds return, each with a half
-> tick
+> 4 S: bubble adds "RBI stops wild swings · board follows interbank"; both opening clouds return, crossed, the right
+> answer beside them
 
 ## Recap and practice
 
 N45 · Okay, pause the video now, and answer three questions. One. A deal is struck on Monday for spot. When is it
 settled, if there's no holiday? Two. Which of these strengthens the rupee: a bigger current account deficit, higher
-inflation in India, or more foreign investment coming in? Three. Since when has the rupee's rate been market
+inflation in India than abroad, or more foreign investment coming in? Three. Since when has the rupee's rate been market
 determined?
 > 1 C: practice card · 2 N: "1" · 3 S: Q1 "Monday deal, spot" · 4 S: Q1 "settled when?" · 5 N: "2" · 6 S: Q2
-> "which strengthens ₹?" with three options · 7 N: "3" · 8 S: Q3 "market-determined since?"; ring 8 s (hold)
+> "which strengthens ₹?" with three options · 7 N: "3" · 8 S: Q3 "market-determined since?"; ring 12 s (hold)
 
 N46 · Answers. One, Wednesday, the second working day. Two, more foreign investment coming in. The other two weaken
 it. Three, March nineteen ninety-three, when the dual rates were unified. Got all three? Well done.
