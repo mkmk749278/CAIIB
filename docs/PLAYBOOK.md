@@ -62,7 +62,8 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
 - **Steps**: extract items (`build_items.py`), tag each to a topic cluster mapped to official IIBF units
   (`tag.py`, first matching rule wins; review untagged and mis-tags by eye every time), score (`score.py`).
 - **Tier rule (v1)**: A if seen in 6+ of 7 cycles with 15+ mentions, or 25+ mentions; B if seen in 4+ cycles;
-  C otherwise. Tune when more data arrives.
+  C otherwise. Tune when more data arrives. **Since 2026-11-20 a tier sets the amount of practice and drills, never whether
+  a topic is taught: every syllabus sub-topic is taught to exam depth.**
 - **Known biases**: recollections over-report memorable items (numericals, case studies, odd facts) and under-report
   plain theory; list lengths differ by site and cycle; a case study counts once but carries 3–5 questions; the
   sources are coaching sites, not IIBF. So a mention count is a signal, not a mark count.
@@ -83,6 +84,19 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   papers) could not reach its sources and filled the gaps with plausible but unsourced text (fake YouTube ids,
   "reconstructed" papers). None of it is used (`research/bfm/inbox/README.md`). Every laptop task now demands a
   working link or file for each claim and an explicit "could not do".
+
+- **2026-11-20: syllabus first, not recall first.** Owner: "What you did is only covering content based on previous
+  questions? We need to cover the full syllabus and required depth, not only previous questions; this is a CBT exam,
+  we don't even get 10–20% of questions repeating." Right: a recall list measures what candidates *remember*, from a
+  large question bank, and the v2 plan built on it had missed three official sub-topics outright (the forex market,
+  factors determining exchange rates, the exchange-rate mechanism) and crammed others into overloaded videos. So the
+  official syllabus split into its 195 sub-topics (`research/bfm/syllabus_official.md`) is now the scope, mapped
+  row by row to videos in `research/bfm/coverage.csv`; the course plan became v3 (A00, A19b, A22, B13b added). The
+  Importance Map keeps its use: style of questions, order and amount of practice, and a check. Tiers no longer decide
+  whether a topic is taught, only how much practice it gets. The IIBF/Macmillan courseware is not available to us
+  (the owner has no copy; the only full contents pages online sit in pirated PDFs, which we do not use), so depth is
+  set by the syllabus wording, the primary sources and the exam's question forms, and checked by the module exam
+  test (target 75+).
 
 ## 4a. Regulatory changes (how to find them)
 - **IIBF Vision** (monthly, https://www.iibf.org.in/iibf-vision) is IIBF's own digest of developments and an exam

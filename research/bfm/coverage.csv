@@ -1,0 +1,196 @@
+id,module,unit,subtopic,videos,status,note
+A1.1,A,A1 Exchange Rates and Forex Business,Foreign exchange: definition and markets,A00,assigned,"v3: new video A00 (was a gap: no video teaches the market itself (definition under FEMA, segments, participants, spot/forward, interbank vs merchant); A01 assumes it)"
+A1.2,A,A1 Exchange Rates and Forex Business,Factors determining exchange rates,A00,assigned,"v3: new video A00 (was a gap: not in any plan: inflation, interest rates, BoP, PPP, speculation, intervention; interest parity only inside A05)"
+A1.3,A,A1 Exchange Rates and Forex Business,Exchange rate mechanism,A00,assigned,"v3: new video A00 (was a gap: not in any plan: fixed, floating, managed float, India's path to the present regime, RBI's role)"
+A1.4,A,A1 Exchange Rates and Forex Business,Foreign exchange dealing room operations,C01,assigned,
+A1.5,A,A1 Exchange Rates and Forex Business,Derivative products,A05;A06;C08;C09,assigned,"forwards in A05/A06; futures, options, swaps in C08/C09"
+A1.6,A,A1 Exchange Rates and Forex Business,RBI / FEDAI guidelines,A01;A03;A06;A21,assigned,
+A1.7,A,A1 Exchange Rates and Forex Business,Foreign exchange arithmetic: concepts and examples,A01;A03;A04;A05;A06;A12,assigned,
+A2.1,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Capital account and current account transactions,A16,assigned,
+A2.2,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Key sections under FEMA vis-à-vis LRS,A16,assigned,
+A2.3,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Permissible and non-permissible remittances under LRS,A16,assigned,
+A2.4,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Operational guidelines,A16,assigned,
+A2.5,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Remittances under LRS for current account transactions,A16,assigned,
+A2.6,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Tax Collected at Source (TCS),A16,assigned,
+A2.7,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,LRS vis-à-vis capital account transactions,A16,assigned,
+A2.8,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Reporting requirements under LRS,A16,assigned,
+A2.9,A,A2 Liberalised Remittance Scheme (LRS) and other remittance facilities for residents,Other remittance facilities for residents,A16,assigned,
+A3.1,A,A3 Correspondent Banking and NRI Accounts,Correspondent banking: accounts and other services,A02,assigned,
+A3.2,A,A3 Correspondent Banking and NRI Accounts,"Nostro, Vostro and Loro accounts",A02,assigned,
+A3.3,A,A3 Correspondent Banking and NRI Accounts,"Electronic modes of transmission / payment gateways: SWIFT, CHIPS, CHAPS, RTGS etc.",A02,assigned,"v3: A02 now names SWIFT, SFMS, RTGS, CHIPS, CHAPS"
+A3.4,A,A3 Correspondent Banking and NRI Accounts,NRI banking,A17,assigned,
+A3.5,A,A3 Correspondent Banking and NRI Accounts,NRI accounts: rupee and foreign currency accounts,A17,assigned,
+A3.6,A,A3 Correspondent Banking and NRI Accounts,Facilities to NRIs,A17;A18,assigned,
+A3.7,A,A3 Correspondent Banking and NRI Accounts,Advances to non-residents against non-resident deposits,A18,assigned,
+A3.8,A,A3 Correspondent Banking and NRI Accounts,Housing loans to non-resident Indians,A18,assigned,
+A4.1,A,A4 Documentary Letters of Credit,Definition of letter of credit,A08,assigned,
+A4.2,A,A4 Documentary Letters of Credit,Types of letters of credit,A08,assigned,
+A4.3,A,A4 Documentary Letters of Credit,Operations of letter of credit,A08,assigned,
+A4.4,A,A4 Documentary Letters of Credit,UCP 600 and important articles,A09,assigned,
+A4.5,A,A4 Documentary Letters of Credit,"Liabilities, responsibilities and rights of the parties",A08;A09,assigned,
+A4.6,A,A4 Documentary Letters of Credit,"Documents under LC: scrutiny, crystallisation, follow-up for bills under LC, safeguards for banks",A09;A10;A13,assigned,
+A4.7,A,A4 Documentary Letters of Credit,Risks relating to LC transactions,A08;A10,assigned,
+A4.8,A,A4 Documentary Letters of Credit,Standby letter of credit (similar to guarantees),A08,assigned,
+A4.9,A,A4 Documentary Letters of Credit,Uniform Rules for Bank-to-Bank Reimbursements (URR 725),A09,assigned,
+A4.10,A,A4 Documentary Letters of Credit,International Standard Banking Practice (ISBP 745),A09,assigned,
+A4.11,A,A4 Documentary Letters of Credit,Incoterms,A07,assigned,
+A4.12,A,A4 Documentary Letters of Credit,Case studies,A10,assigned,
+A5.1,A,A5 Facilities for Exporters and Importers,Exchange and trade control guidelines for exporters,A11,assigned,
+A5.2,A,A5 Facilities for Exporters and Importers,Facilities for exporters,A11,assigned,
+A5.3,A,A5 Facilities for Exporters and Importers,Export finance,A11;A12,assigned,
+A5.4,A,A5 Facilities for Exporters and Importers,Gold Card scheme for exporters,A14,assigned,
+A5.5,A,A5 Facilities for Exporters and Importers,Export Data Processing and Monitoring System (EDPMS),A11,assigned,
+A5.6,A,A5 Facilities for Exporters and Importers,Factoring and forfaiting,A14,assigned,
+A5.7,A,A5 Facilities for Exporters and Importers,Exchange and trade control guidelines for importers,A13,assigned,
+A5.8,A,A5 Facilities for Exporters and Importers,Import finance,A13,assigned,
+A5.9,A,A5 Facilities for Exporters and Importers,Import Data Processing and Monitoring System (IDPMS),A13,assigned,
+A5.10,A,A5 Facilities for Exporters and Importers,Trade credit: supplier's credit and buyer's credit,A13,assigned,
+A5.11,A,A5 Facilities for Exporters and Importers,Case study on export finance,A12,assigned,
+A6.1,A,A6 External Commercial Borrowings and Foreign Investments in India,ECB: concepts,A19,assigned,
+A6.2,A,A6 External Commercial Borrowings and Foreign Investments in India,ECB: other operational concepts,A19,assigned,
+A6.3,A,A6 External Commercial Borrowings and Foreign Investments in India,Reporting requirements,A19,assigned,
+A6.4,A,A6 External Commercial Borrowings and Foreign Investments in India,Conversion of ECB into equity,A19,assigned,
+A6.5,A,A6 External Commercial Borrowings and Foreign Investments in India,Foreign investments: key concepts,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.6,A,A6 External Commercial Borrowings and Foreign Investments in India,Eligible foreign investors,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.7,A,A6 External Commercial Borrowings and Foreign Investments in India,Eligible investee entities,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.8,A,A6 External Commercial Borrowings and Foreign Investments in India,Eligible investment instruments,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.9,A,A6 External Commercial Borrowings and Foreign Investments in India,Prohibited sectors,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.10,A,A6 External Commercial Borrowings and Foreign Investments in India,Rules governing pledge of shares,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.11,A,A6 External Commercial Borrowings and Foreign Investments in India,Operational guidelines,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.12,A,A6 External Commercial Borrowings and Foreign Investments in India,Snapshot of Non-Debt Instruments (NDI) Rules,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.13,A,A6 External Commercial Borrowings and Foreign Investments in India,Documents for obtaining foreign investment,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A6.14,A,A6 External Commercial Borrowings and Foreign Investments in India,Documents for refund of foreign investment,A19b,assigned,v3: moved to new A19b (A19 was overloaded)
+A7.1,A,A7 Risks in Foreign Trade: Role of ECGC,Definition of risk and risks in international trade,A15,assigned,
+A7.2,A,A7 Risks in Foreign Trade: Role of ECGC,Country risk,A15,assigned,
+A7.3,A,A7 Risks in Foreign Trade: Role of ECGC,Export credit insurance in international trade,A15,assigned,
+A7.4,A,A7 Risks in Foreign Trade: Role of ECGC,ECGC role and products,A15,assigned,
+A7.5,A,A7 Risks in Foreign Trade: Role of ECGC,ECGC policies,A15,assigned,
+A7.6,A,A7 Risks in Foreign Trade: Role of ECGC,ECGC's products for banks,A15,assigned,
+A7.7,A,A7 Risks in Foreign Trade: Role of ECGC,Other aspects of ECGC policies and guarantees,A15,assigned,
+A7.8,A,A7 Risks in Foreign Trade: Role of ECGC,Common 'to do' points under ECGC policies,A15,assigned,
+A7.9,A,A7 Risks in Foreign Trade: Role of ECGC,Claims,A15,assigned,
+A8.1,A,"A8 Role of EXIM Bank, RBI, exchange control in India: FEMA, FEDAI and others","EXIM Bank: role, functions and facilities",A15,assigned,
+A8.2,A,"A8 Role of EXIM Bank, RBI, exchange control in India: FEMA, FEDAI and others",RBI: role and exchange control regulations in India,A21,assigned,
+A8.3,A,"A8 Role of EXIM Bank, RBI, exchange control in India: FEMA, FEDAI and others",FEMA 1999,A21,assigned,
+A8.4,A,"A8 Role of EXIM Bank, RBI, exchange control in India: FEMA, FEDAI and others",Role of FEDAI and FEDAI rules,A21,assigned,
+A8.5,A,"A8 Role of EXIM Bank, RBI, exchange control in India: FEMA, FEDAI and others","Short notes: ECB, ADR/GDR, FCCB",A19,assigned,
+A9.1,A,"A9 International Financial Services Centres (IFSC), GIFT City",Scope of IFSC in India,A20,assigned,
+A9.2,A,"A9 International Financial Services Centres (IFSC), GIFT City",Opportunities at GIFT City,A20,assigned,
+A9.3,A,"A9 International Financial Services Centres (IFSC), GIFT City",Guidelines for setting up IFSC Banking Units (IBUs),A20,assigned,
+A9.4,A,"A9 International Financial Services Centres (IFSC), GIFT City",Role of IFSCA,A20,assigned,
+A9.5,A,"A9 International Financial Services Centres (IFSC), GIFT City",Regulatory framework,A20,assigned,
+A9.6,A,"A9 International Financial Services Centres (IFSC), GIFT City",Permissible activities at IBUs,A20,assigned,
+A9.7,A,"A9 International Financial Services Centres (IFSC), GIFT City",Relaxations for FPI entities at GIFT City,A20,assigned,
+A10.1,A,A10 Technology in International Banking,Digitisation in international banking: overview and evolution,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+A10.2,A,A10 Technology in International Banking,Benefits and limitations of technology in international banking,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+A10.3,A,A10 Technology in International Banking,Digital platforms in international banking,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+A10.4,A,A10 Technology in International Banking,Fintech and its evolution in international banking,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+A10.5,A,A10 Technology in International Banking,Delivery channels under fintech,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+A10.6,A,A10 Technology in International Banking,Sample process of international trade using blockchain,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+A10.7,A,A10 Technology in International Banking,Challenges in fintech,A22,assigned,v3: moved to new A22 (A21 was overloaded)
+B1.1,B,B1 Risk and Basic Risk Management Framework,"What is risk; linkages among risk, capital and return",B01,assigned,
+B1.2,B,B1 Risk and Basic Risk Management Framework,Why risk management,B01;B02,assigned,
+B1.3,B,B1 Risk and Basic Risk Management Framework,Basic risk management framework,B02,assigned,
+B2.1,B,B2 Risks in Banking Business,Risk identification in banking business,B01,assigned,
+B2.2,B,B2 Risks in Banking Business,The banking book,B01,assigned,
+B2.3,B,B2 Risks in Banking Business,The trading book,B01,assigned,
+B2.4,B,B2 Risks in Banking Business,Off-balance sheet exposures,B01;B06,assigned,
+B2.5,B,B2 Risks in Banking Business,Banking risks: definitions,B01,assigned,
+B3.1,B,B3 Risk Regulations in Banking Industry,Regulation of banking: necessities and goals,B04,assigned,
+B3.2,B,B3 Risk Regulations in Banking Industry,Need for risk-based regulation in a changed world,B04,assigned,
+B3.3,B,B3 Risk Regulations in Banking Industry,Basel I: the Basel Capital Accord,B04,assigned,
+B3.4,B,B3 Risk Regulations in Banking Industry,1996 amendment to include market risk,B04,assigned,
+B3.5,B,B3 Risk Regulations in Banking Industry,"Basel II: need, goals and the accord",B04,assigned,
+B3.6,B,B3 Risk Regulations in Banking Industry,Towards Basel III,B04;B05,assigned,
+B3.7,B,B3 Risk Regulations in Banking Industry,Capital charge for credit risk,B06,assigned,
+B3.8,B,B3 Risk Regulations in Banking Industry,Credit risk mitigation,B06,assigned,
+B3.9,B,B3 Risk Regulations in Banking Industry,Capital charge for market risk,B07,assigned,
+B3.10,B,B3 Risk Regulations in Banking Industry,Capital charge for operational risk,B07,assigned,
+B3.11,B,B3 Risk Regulations in Banking Industry,Pillar 2: supervisory review process,B04,assigned,
+B3.12,B,B3 Risk Regulations in Banking Industry,Pillar 3: market discipline,B04,assigned,
+B3.13,B,B3 Risk Regulations in Banking Industry,Capital conservation buffer,B05,assigned,
+B3.14,B,B3 Risk Regulations in Banking Industry,Leverage ratio,B05,assigned,
+B3.15,B,B3 Risk Regulations in Banking Industry,Countercyclical capital buffer,B05,assigned,
+B3.16,B,B3 Risk Regulations in Banking Industry,Systemically important financial institutions (SIFIs),B05,assigned,
+B3.17,B,B3 Risk Regulations in Banking Industry,Risk-based supervision (RBS),B02,assigned,
+B4.1,B,B4 Market Risk,Market risk: concept; market risk in banks,B09,assigned,
+B4.2,B,B4 Market Risk,Market risk management framework; organisation structure,B09,assigned,
+B4.3,B,B4 Market Risk,"Risk identification, measurement, monitoring and control, reporting",B09;B03,assigned,
+B4.4,B,B4 Market Risk,Managing trading liquidity,B09,assigned,
+B4.5,B,B4 Market Risk,Risk mitigation,B09,assigned,
+B5.1,B,B5 Credit Risk,General; credit risk management framework; organisation structure,B10,assigned,
+B5.2,B,B5 Credit Risk,Risk identification and measurement,B10,assigned,
+B5.3,B,B5 Credit Risk,Credit risk control and monitoring,B11,assigned,
+B5.4,B,B5 Credit Risk,Credit risk policies at transaction level,B11,assigned,
+B5.5,B,B5 Credit Risk,Credit control and monitoring at portfolio level; active credit portfolio management,B11,assigned,
+B5.6,B,B5 Credit Risk,Loan review mechanism (LRM),B11,assigned,
+B5.7,B,B5 Credit Risk,Credit risk mitigation,B06;B11,assigned,
+B5.8,B,B5 Credit Risk,Securitisation,B11,assigned,
+B5.9,B,B5 Credit Risk,Credit derivatives,B11,assigned,
+B6.1,B,B6 Operational Risk and Integrated Risk Management,Operational risk: general; classification; event types (definitions),B12,assigned,
+B6.2,B,B6 Operational Risk and Integrated Risk Management,Operational risk management practices; management overview and organisation structure,B12,assigned,
+B6.3,B,B6 Operational Risk and Integrated Risk Management,Processes and framework; monitoring and control practices,B12,assigned,
+B6.4,B,B6 Operational Risk and Integrated Risk Management,Operational risk quantification,B12;B07,assigned,
+B6.5,B,B6 Operational Risk and Integrated Risk Management,Operational risk mitigation; scenario analysis,B12,assigned,
+B6.6,B,B6 Operational Risk and Integrated Risk Management,"Integrated risk management: necessity, challenges, approach",B02,assigned,
+B7.1,B,B7 Liquidity Risk Management,Need and importance; potential drivers; types of liquidity risk,B13,assigned,v3: B13 split into B13 + B13b
+B7.2,B,B7 Liquidity Risk Management,Principles for sound liquidity risk management; governance,B13,assigned,v3: B13 split into B13 + B13b
+B7.3,B,B7 Liquidity Risk Management,"Policy, strategies and practices; management of liquidity risk",B13,assigned,v3: B13 split into B13 + B13b
+B7.4,B,B7 Liquidity Risk Management,Ratios for liquidity risk management,B13b,assigned,v3: B13 split into B13 + B13b
+B7.5,B,B7 Liquidity Risk Management,Stress testing; contingency funding plan,B13,assigned,v3: B13 split into B13 + B13b
+B7.6,B,B7 Liquidity Risk Management,Overseas operations of Indian banks; foreign banks' branches in India,B13b,assigned,v3: B13 split into B13 + B13b
+B7.7,B,B7 Liquidity Risk Management,Broad norms for liquidity management; liquidity across currencies,B13b,assigned,v3: B13 split into B13 + B13b
+B7.8,B,B7 Liquidity Risk Management,Management information system; reporting to RBI; internal controls,B13b,assigned,v3: B13 split into B13 + B13b
+B8.1,B,B8 Basel III Framework on Liquidity Standards,Liquidity coverage ratio,B14,assigned,
+B8.2,B,B8 Basel III Framework on Liquidity Standards,Liquidity risk monitoring tools,B14,assigned,v3: added to B14
+B8.3,B,B8 Basel III Framework on Liquidity Standards,Net stable funding ratio,B14,assigned,
+C1.1,C,C1 Introduction to Treasury Management,The concept; functions of integrated treasury,C01,assigned,
+C1.2,C,C1 Introduction to Treasury Management,The process of globalisation,C01,partial,check C01 plan
+C1.3,C,C1 Introduction to Treasury Management,Evolving role of treasury as profit centre,C01,assigned,
+C1.4,C,C1 Introduction to Treasury Management,Organisation of treasury,C01,assigned,
+C2.1,C,C2 Treasury Products,Products of foreign exchange markets,C01;A05;C08,assigned,
+C2.2,C,C2 Treasury Products,Money market products,C02;C03,assigned,
+C2.3,C,C2 Treasury Products,Securities market products,C05,assigned,
+C2.4,C,C2 Treasury Products,Domestic and global markets,C01;C02,partial,check plans
+C3.1,C,C3 International Equity and Debt Products,Regulatory environment,A19,assigned,
+C3.2,C,C3 International Equity and Debt Products,Global depository receipts,A19,assigned,
+C3.3,C,C3 International Equity and Debt Products,Indian depository receipts,A19,assigned,
+C3.4,C,C3 International Equity and Debt Products,External commercial borrowings,A19,assigned,
+C3.5,C,C3 International Equity and Debt Products,Trade credits,A13,assigned,
+C3.6,C,C3 International Equity and Debt Products,Rupee denominated bonds,A19,assigned,
+C4.1,C,C4 Funding and Regulatory Aspects,Reserve assets: CRR and SLR,C04,assigned,
+C4.2,C,C4 Funding and Regulatory Aspects,Liquidity adjustment facility (LAF),C02,assigned,
+C4.3,C,C4 Funding and Regulatory Aspects,Payment and settlement systems,C04,assigned,
+C5.1,C,C5 Treasury Risk Management,Supervision and control of treasury,C07,assigned,
+C5.2,C,C5 Treasury Risk Management,Market risk and credit risk,C07,assigned,
+C5.3,C,C5 Treasury Risk Management,Risk measures: VaR and duration,B09;C06,assigned,
+C5.4,C,C5 Treasury Risk Management,Use of derivatives in risk management,C08;C09,assigned,
+C6.1,C,C6 Derivative Products,Derivatives and the treasury,C08,assigned,
+C6.2,C,C6 Derivative Products,OTC and exchange-traded products,C08,assigned,
+C6.3,C,C6 Derivative Products,"Forwards, options, futures and swaps",C08;C09,assigned,
+C6.4,C,C6 Derivative Products,Interest rate and currency swaps,C08,assigned,
+C6.5,C,C6 Derivative Products,Developments in Indian markets and RBI guidelines on risk exposure,C09,assigned,
+C7.1,C,C7 Treasury and Asset-Liability Management,Meaning of ALM; liquidity risk and interest rate risk,D01,assigned,
+C7.2,C,C7 Treasury and Asset-Liability Management,Role of treasury in ALM; use of derivatives in ALM,D01;C08,partial,check D01 plan for the treasury's role and derivatives
+C7.3,C,C7 Treasury and Asset-Liability Management,Credit risks and credit derivatives,B11,assigned,
+C7.4,C,C7 Treasury and Asset-Liability Management,Transfer pricing,D01,assigned,
+C7.5,C,C7 Treasury and Asset-Liability Management,Policy environment,D01,partial,check D01 plan
+D1.1,D,D1 Components of Assets and Liabilities in a Bank's Balance Sheet and their Management,Components of a bank's balance sheet,D01,assigned,
+D1.2,D,D1 Components of Assets and Liabilities in a Bank's Balance Sheet and their Management,What is ALM; significance; purpose and objectives,D01,assigned,
+D1.3,D,D1 Components of Assets and Liabilities in a Bank's Balance Sheet and their Management,ALM as co-ordinated balance sheet management,D01,assigned,
+D2.1,D,D2 Capital Adequacy: Basel Norms,Scope of application,B04;B05,assigned,
+D2.2,D,D2 Capital Adequacy: Basel Norms,Pillar 1: minimum capital requirements,B05;B06;B07;B08,assigned,
+D2.3,D,D2 Capital Adequacy: Basel Norms,Pillar 2: supervisory review process,B04,assigned,
+D2.4,D,D2 Capital Adequacy: Basel Norms,Pillar 3: market discipline,B04,assigned,
+D3.1,D,D3 Asset Classification and Provisioning Norms,Asset classification,D02,assigned,
+D3.2,D,D3 Asset Classification and Provisioning Norms,Provisioning norms,D03;D04,assigned,
+D4.1,D,D4 Liquidity Management,Definition; dimensions and role of liquidity risk management,B13,assigned,
+D4.2,D,D4 Liquidity Management,Measuring and managing liquidity risk,B13;B14,assigned,
+D5.1,D,D5 Interest Rate Risk Management,"Essentials, sources and effects of interest rate risk",D05,assigned,
+D5.2,D,D5 Interest Rate Risk Management,Measurement and measurement techniques,D05;D06,assigned,
+D5.3,D,D5 Interest Rate Risk Management,Strategies for controlling interest rate risk,D06,partial,check D06 plan
+D5.4,D,D5 Interest Rate Risk Management,Controls and supervision; sound practices,D05;D06,partial,check plans
+D5.5,D,D5 Interest Rate Risk Management,RBI guidelines on interest rate risk in the banking book (IRRBB),D05,assigned,
+D6.1,D,D6 RAROC and Profit Planning,Profit planning,D07,assigned,
+D6.2,D,D6 RAROC and Profit Planning,Risk aggregation and capital allocation,D07,assigned,
+D6.3,D,D6 RAROC and Profit Planning,Economic capital and RAROC,D07,assigned,
