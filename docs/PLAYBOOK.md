@@ -95,13 +95,20 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   (possibly a new IP) before any laptop tool.
   Single pages fetched 8–10 seconds apart worked without a block (2026-11-14, about 10 pages); RBI's FEMA
   notification pages (`BS_FemaNotifications.aspx?Id=`) carry the exact regulation text and footnoted amendment history.
+- **IIBF Vision is a lead, not a source (2026-11-20).** The Nov 2026 issue said hedging without proving the
+  underlying exposure is allowed "up to USD 100 million"; RBI's press release of 10 Oct 2026 had cut it to USD 5
+  million. Vision issues lag about a month (the November issue covers October). Every number goes into a lesson
+  only after it is read in the RBI, FEMA or FEDAI text.
+- **Finding RBI pages without tripping the rate limit (2026-11-20):** the notifications and press-release listing
+  pages show only recent items; a web search limited to rbi.org.in finds older circulars and press releases
+  (read the excerpts, then open the page once). About 10 single pages fetched 8–10 s apart caused no block.
 - **Cut-off traps** are themselves exam material and lesson content: e.g. the export realisation period went
   9 → 15 months (Dec 2025) → 9 months (5 June 2026, before the 30 June cut-off) → new regulations from 1 Oct 2026.
   Rules issued before the cut-off but effective later (ECL, new credit-risk SA, both from 1 Apr 2027) are taught as
   "issued, coming"; the old rule remains the answer until then.
 
-## 5. Lesson design (draft, to be proven in the pilot)
-- Open on a real branch situation with a question (A1: a father sending a university fee and a shrimp exporter with a
+## 5. Lesson design (proven on two samples: A1 and Incoterms; template locked 2026-11-20)
+- After a short warm-up (§5b), open on a real branch situation with a question (A1: a father sending a university fee and a shrimp exporter with a
   sight bill at the same counter, four rates on the board). The rule arrives as the answer. Never reuse a
   competitor's example.
 - One stable picture per idea, reused across lessons: e.g. **the bank's counter** for forex (currency coming in =
@@ -124,10 +131,10 @@ preference is your creativity").
 | Finding | Evidence | How our lessons use it |
 |---|---|---|
 | **Misconception first** beats plain explanation: state the wrong idea learners hold, then break it | Muller et al. 2008 (Newton's laws videos): refutation d ≈ 0.79, dialogue d ≈ 0.83 vs plain exposition; plain videos even raised confidence in wrong ideas | every lesson opens on the wrong answer most candidates give (from our recall data and doubt threads) and makes the viewer commit to an answer first |
-| **Dialogue** of a learner and an explainer | same study (largest effect) | two voices: a teacher (conversational, §5b), and a young officer who says the tempting wrong answers aloud; the viewer argues along |
+| **Dialogue** of a learner and an explainer | same study (largest effect) | one teacher voice that says the learners' thoughts aloud ("some of you think X, others Y"; §5b, after the owner preferred one voice over a two-character dialogue) |
 | **Coherence**: cut everything that is not needed | Mayer 2021: median d ≈ 0.86, 18 of 19 tests | no decorative stock footage, music under speech kept low, no logo animations mid-lesson |
 | **Signalling**: highlight what matters | d ≈ 0.46 | one colour code across the module (green = bank buys, red = bank sells, amber = reversing) |
-| **Segmenting**: short, learner-paced parts | d ≈ 0.67–0.77 | each lesson in 3–4 chapters of 2–5 minutes with chapter cards; the app can serve chapters separately |
+| **Segmenting**: short, learner-paced parts | d ≈ 0.67–0.77 | each lesson in 3–4 chapters of 2–5 minutes; chapter titles slide in while the teacher speaks (no silent cards since r4); the app can serve chapters separately |
 | **Short beats long** | Guo, Kim, Rubin 2014 (6.9 million edX sessions): engagement drops after about 6 minutes; Khan-style drawing beats slides | chapters under 6 minutes; things are *drawn and built* on screen, never slides of text |
 | **Prediction prompts**: ask before telling | anticipatory prompts promising but less studied (Renkl et al.) | "Pause: which rate?" with a visible countdown before every reveal |
 | **Worked example → faded example → own try** | worked-example effect; fading with prompts (Atkinson, Renkl & Merrill 2003); video examples alternated with practice beat practice alone | sum 1 fully worked; sum 2 with steps blanked for the viewer; sum 3 the viewer's alone |
@@ -140,8 +147,9 @@ preference is your creativity").
 - **The rate ladder**: a vertical scale with the interbank quote in the middle and four rungs; every rate in Module A
   is a position on it.
 - **The calculator**: an on-screen 8-function, 12-digit calculator (the IIBF-allowed kind) presses the real keys.
-- **The officer**: a young forex officer at the counter voices the common wrong answers; the narrator never mocks,
-  just shows the counter again.
+- **"Some of you / Others"**: two faceless learners with thought clouds carry the common wrong answer and the right
+  one; the wrong cloud fades and is crossed out. The teacher never mocks, just shows the counter again. (Replaced
+  the first idea, a young officer character, when the owner chose one voice; §5b.)
 
 ## 5b. Voice: a class, not a documentary (owner feedback on A1 r1, 2026-11-14)
 The owner watched the A1 r1 cut and said the narration "feels like a documentary or story narration, it's not like a
@@ -153,8 +161,8 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   "you" and "I"; the teacher is an AI voice with no name or back-story and never claims to be a person.
 - **Spoken English, not written English.** Contractions (it's, that's, don't), full natural sentences, Indian
   classroom phrasing ("into" for times, "simple", "right?"). No three-word dramatic fragments, no trailer lines.
-- **Ask, wait, react.** Every question gets a reaction after the answer ("Got it? Good.", "Did you? Great."). The
-  teacher answers Meera warmly ("Good try, Meera"), never mocks.
+- **Ask, wait, react.** Every question gets a reaction after the answer ("Got it? Good.", "Did you? Great."). A
+  wrong guess gets warmth ("Good try, and many of you thought so"), never mockery.
 - **Say the rule twice in two different ways** (once exact, once as a hook: "In means buy, out means sell").
 - **Signpost like a teacher**: "Now be careful here, this is where people slip", "Don't worry about this now".
 - **Close like a class**: "That's it for today… see you there."
@@ -176,7 +184,7 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
 - Facts, numbers, rule versions and line ids do not change when only the voice style changes.
 - **A live class, not a talk to camera** (owner on v3, same day: "he is teaching in a live class with students
   inside the class; not directly into content; connect them to the class first, and in between also"). So every
-  lesson has: a **warm-up** before the first fact (greet, "long day?", phones on silent and calculator out, ask the
+  lesson has: a **warm-up** before the first fact (greet, "long day?", notifications on silent and calculator out, ask the
   room a question, say why today's topic matters with a true number from the Importance Map, promise "no heavy
   theory, stay with me"); a **check-in at each chapter break** (a student's one-line reaction, a joke, "stretch for
   a second", "I need full attention for this part"); small check-ins inside chapters ("Everyone with me so far?",
@@ -194,7 +202,8 @@ evening want to feel someone is *talking to them*. From A1 v3 on, every script f
   The teacher stays an unnamed AI voice with no back-story, never "Sir".
 - New lines added for class moments get a letter suffix (N00a, N15a, N04a) so the old line ids and video code stay.
 - Voice text is built by `tools/video/voice_blocks.py`: parts of about 1,400–3,000 characters, one generation each,
-  as Markdown and as a phone page with one Copy button per part (the owner records from the phone). With one voice
+  as Markdown and as a phone page with one Copy button per part (the owner generates each part in ElevenLabs from the
+  phone). With one voice
   each part is a single block; the tool still supports multi-speaker turns if a lesson ever needs them. ElevenLabs
   v3 expression tags (`[chuckles]`) are allowed sparingly; the page can strip them for other models.
 
@@ -241,7 +250,7 @@ draw a line or curve from here to there till the sentence finishes, to lock the 
 should feel sudden changes, glitches, blanks."
 - **Measured on r2** (not guessed): the 6-runner join is **not** the cause. All 31,369 frames are exactly 1/30 s apart
   and the sound is rendered in one piece by its own runner. The roughness is ours:
-  - **Sound:** we cut the owner's two continuous recordings into 77 lines and re-spaced them with a fixed 0.35 s gap.
+  - **Sound:** we cut the owner's two continuous takes into 77 lines and re-spaced them with a fixed 0.35 s gap.
     That throws away the natural rhythm and breaths of the voice. There are also 58 silences over 0.6 s and 16 over
     1.5 s (pause holds, chapter cards). They are dead digital silence, which sounds like a fault.
   - **Picture:** whole scenes switch at line starts with a 0.3 s fade, often inside those silences. Elements pop in
@@ -253,9 +262,9 @@ should feel sudden changes, glitches, blanks."
   - Dynamic drawing: watching an instructor draw beats seeing a finished picture (Fiorella & Mayer).
   - Continuity: avoid cuts, since every cut costs a reorientation.
 - **The rules from r3 on ("flow engine")**
-  1. **The voice is never cut up.** Use the owner's continuous recordings as recorded. Open space only where the
+  1. **The voice is never cut up.** Use the owner's continuous takes (generated in ElevenLabs) as they are. Open space only where the
      lesson needs it (pause countdowns, chapter cards). Fill it with room tone and a quiet music bed, faded in and out,
-     never dead silence. Line ids map to the time inside the recording, not to separate files.
+     never dead silence. Line ids map to the time inside the take, not to separate files.
   2. **Every visual is bound to a phrase, not a frame.** It starts on the first word of its phrase and *keeps
      drawing until the phrase ends*: an arrow grows across the sentence, an underline follows the words, a number
      counts up as it is spoken. Nothing appears in a single frame.
@@ -273,8 +282,8 @@ should feel sudden changes, glitches, blanks."
      - the map branch pulses when the lesson calls back to it;
      - the baton is *handed* hand to hand, not placed.
   - **Tools (built 2026-11-19 for r3):**
-    - `tools/video/flow_voice.py` builds `voice.wav` from the recordings. It splits each recording only at
-      the middle of the natural pauses, opens gaps for holds and chapter cards, swaps in re-recorded lines, and writes
+    - `tools/video/flow_voice.py` builds `voice.wav` from the takes. It splits each take only at
+      the middle of the natural pauses, opens gaps for holds and chapter cards, swaps in re-generated lines, and writes
       the timeline JSON with `voice` and `gaps`.
     - The music bed is the shared library's `bp08_flow` (no drums), looped with 6 s crossfades. It sits at -21 dB, is
       sidechain-ducked under the voice (attack 120 ms, release 1.2 s) and rises in pauses (about -25 to -30 LUFS). It
@@ -295,7 +304,7 @@ Four rounds on the Incoterms sample taught the method below. Every lesson is bui
 checks decide when a cut is ready, not a feeling.
 - **1. Voice, as generated.** The owner generates each part in ElevenLabs v3 as one take (an AI voice). `tools/video/flow_voice.py` splits the takes
   only in the middle of natural pauses, opens space only for planned holds (prediction countdowns; no chapter gaps,
-  `timeline.py` CHAPTER={}), swaps in re-recorded lines, and writes the timeline JSON with every word's time. The
+  `timeline.py` CHAPTER={}), swaps in re-generated lines, and writes the timeline JSON with every word's time. The
   music bed (shared library, no drums) is looped with crossfades and sidechain-ducked under the voice, then mixed
   into one `mix.flac` (Drive `CAIIB/BFM/<video>/flow/`). No dead silence anywhere.
 - **2. A beat for every sentence (the cue sheet).** For each script sentence, the picture must answer: either a
@@ -335,24 +344,49 @@ checks decide when a cut is ready, not a feeling.
   things inside one layer (map leaf on map leaf) or a note on a light card border: look at stills of every map
   and card moment as well. The overlap check counts scene ink below grey 120, so the sea and tinted fills are not mistaken for text.
 
+## 5f. Voice: ElevenLabs, and the open voices we tested (2026-11-20)
+- **Decision:** ElevenLabs v3 is the course voice (owner: "still ElevenLabs is the top notch… we can't compromise on
+  quality"). The owner generates each part as one take on the phone. **Licence:** only audio made on a paid plan may
+  be sold; the free plan (10,000 credits a month) has no commercial licence. **Cost:** a 14-minute lesson is about
+  13,600 characters, so BFM (11–12 h) needs about 830,000 credits with retakes: the Creator plan (about $22 a month,
+  about 121,000 credits, which roll over for two months) in the months we voice, about Rs 15–17k in all. The whole
+  CAIIB (60–70 h) would be about Rs 70–80k, which is why the other papers wait until BFM earns.
+- **Why we tested free voices:** that cost. Every candidate allowed commercial use and read the same Incoterms lines
+  (comparison page https://claude.ai/artifact/KY1xtd9MeivaomRmcgHS38):
+
+  | Model (licence) | Share of words a speech checker misheard | Runs on |
+  |---|---|---|
+  | ElevenLabs v3 (paid) | 1.3% | ElevenLabs |
+  | Maya 2 Native, Maya Research, Oct 2026 (Apache-2.0) | 2.5–3.2% | a GPU (free Kaggle T4) |
+  | Indic Parler-TTS, AI4Bharat (Apache-2.0) | 5.1–5.7% | CPU, slow |
+  | Veena, Maya Research (Apache-2.0) | 7.0% | CPU here, GPU advised |
+  | MeloTTS, Indian English voice (MIT) | 8.9% | CPU, fast |
+
+  The checker writes numbers as digits, so part of every score is formatting, not error.
+- **What we learned about Maya 2** (the fallback, tools in `tools/voice/`):
+  - It runs on Kaggle's free T4 GPUs at about 2× real time (14.2 min of audio in 6.8 min; model load about 2.5 min).
+    The Kaggle token sits in the network proxy, so `kaggle_maya.py` skips the Kaggle CLI's own token check.
+  - It has **no pause or pitch tags**; emotion tags are best effort. Long text is split at sentence ends and joined
+    with fixed gaps (0.15 s by default), which sounded rushed.
+  - **Voicing sentence by sentence breaks the flow**: each call starts fresh, so the tone resets at every join
+    (owner: "missing natural flow"). Keep one take per part.
+  - **Internal chunks of 60 s skipped text** (18 words lost in one part); 25 s chunks were complete. Every take is
+    checked word by word against the script (a speech checker plus a diff) before anyone listens.
+  - Voices: Sreekar (male; English, Hindi, Telugu) sounded brisk; Vasant (mature narrator) is closest to ElevenLabs
+    in pitch. An outside AI review (owner's PDF) and the owner's ear both put ElevenLabs first: warmer, calmer, more
+    room around numbers.
+  - Our pipeline makes the voice swappable: a new take goes through `flow_voice.py` and a render (about 10 minutes
+    per video); scripts and visuals stay.
+
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
-- 2026-11-20: **voice.** The owner asked about the cost of ElevenLabs for the whole course (about Rs 70-80k for
-  60-70 hours). Tested free open voices that allow commercial use, all reading the same Incoterms lines
-  (comparison page https://claude.ai/artifact/KY1xtd9MeivaomRmcgHS38): Maya 2 Native (Maya Research, Apache-2.0),
-  Indic Parler-TTS (AI4Bharat, Apache-2.0), Veena (Apache-2.0), MeloTTS (MIT). Maya 2 was clearest (2.5-3.2% of words
-  misread by a speech checker, ElevenLabs 1.3%). Maya 2 runs on free Kaggle T4 GPUs at about 2x real time
-  (`tools/voice/kaggle_maya.py`). Lessons learned: Maya 2 has no pause or pitch tags; voicing sentence by sentence
-  breaks the flow (owner: "missing natural flow"); one take with 25 s internal chunks keeps it, while 60 s chunks
-  skipped text, so every take is checked word by word against the script; flow_voice.py then opens the planned holds.
-  An outside AI review (owner's PDF) and the owner's own ear both put ElevenLabs first: warmer, calmer, more room
-  around numbers. Owner: "still ElevenLabs is the top notch… we can't compromise on quality." Decision: ElevenLabs
-  Creator plan only in the months we voice lessons, after all BFM scripts are written (about Rs 15-17k for BFM).
-  The free ElevenLabs plan is not used for anything sold: it has no commercial licence. Maya 2 Vasant stays the
-  tested fallback.
+- 2026-11-20: **voice.** ElevenLabs stays; the Creator plan only in the months we voice, after all BFM scripts are
+  written; the free plan is never used for anything sold. Maya 2 Vasant on Kaggle is the tested fallback. Details,
+  costs and test results in §5f. Same day: regulatory updates to early November 2026 added (repo rate 5.50%, FERR,
+  USD 5 million hedging limit; `research/bfm/regulatory_updates.md`).
 - 2026-11-20: owner on Incoterms r5: "Video is fine" → the r4 method and v2 kit are the locked template for every
   lesson; scripts resume at A01. Owner: "We don't need to render in 4k right": right, **masters are 1080p**
   (`render.yml` scale 1), review cuts 720p. Why not 4K: the audience watches on phones (a 6-inch screen shows no
@@ -393,7 +427,7 @@ checks decide when a cut is ready, not a feeling.
 - **Layout**
   - `CAIIB/_inbox/`: anything the owner sends from the phone (voice parts, screenshots, PDFs); Claude files it.
   - `CAIIB/BFM/<video id>/voice/`: the owner's generated audio (e.g. `A07/voice/incoterms_1.mp3`); `lines/`: cut
-    lines and word timings; `renders/`: review cuts (`r1_720p.mp4`) and masters. Video ids follow
+    lines and word timings; `flow/`: the built voice track and `mix.flac`; `renders/`: review cuts (`r1_720p.mp4`) and masters. Video ids follow
     `research/bfm/course_plan.md` v2 (A01, A07…), even where the repo folder keeps an older name (`A/A1`,
     `A/A9_incoterms`).
   - `CAIIB/BFM/_shared/`: sound effects and template assets; music from the shared `Music-Library/` (Creator).
