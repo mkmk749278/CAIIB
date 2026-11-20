@@ -135,6 +135,21 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   3h30m); D `dKHPEkNXcjo` (Oliveboard, 3h39m), `z9sh93uXimE` (JAIIB CAIIB Prep, 3h32m). Each as `.en.vtt` and
   `.en-orig.vtt` (identical for these English videos).
 
+## 4c. The content method in layers (2026-11-20)
+- **Why layers**: the owner cannot judge the subject, there is no human beta group, and the official courseware is not
+  available; so no single source can be trusted to decide the course. Each layer catches what the one before misses:
+  the syllabus gives the scope; the **source documents** give the depth (IIBF's question writers and its book both
+  draw on the same RBI/FEMA/FEDAI/ICC/BCBS texts, so a fact sheet of every testable point in them is the closest we can
+  get to "what can be asked"); the **question blueprint** turns each sub-topic into every kind of question it allows,
+  which is how unseen CBT questions are covered; public classes (several teachers) check that no common sub-point is
+  missed and show which rules are commonly taught wrong; recalled questions show IIBF's style; JAIIB prerequisites get
+  refreshers; three independent reviews (expert, examiner, beginner) and a module exam test (target 75+) prove it.
+- **What the first two class checks taught (2026-11-20)**: the v2 plan, built from recalled questions, missed three
+  syllabus sub-topics outright and about 400 sub-points the classes cover; and the most popular classes teach outdated
+  rules (old TCS slabs, pre-2026 ECB, CRR above 3%, 90% daily CRR, old LCR run-offs, IFR as capital). Teaching the rule
+  as at the cut-off is part of our quality edge.
+- Rules in CLAUDE.md ("What the course must cover"). Fact sheets live in `research/bfm/facts/`.
+
 ## 5. Lesson design (proven on two samples: A1 and Incoterms; template locked 2026-11-20)
 - After a short warm-up (§5b), open on a real branch situation with a question (A1: a father sending a university fee and a shrimp exporter with a
   sight bill at the same counter, four rates on the board). The rule arrives as the answer. Never reuse a

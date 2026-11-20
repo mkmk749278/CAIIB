@@ -73,27 +73,36 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
   not change that (owner asked, 2026-11-20; declined).
 - Secrets (OTPs, passwords, tokens) never in git, chat or docs.
 
-## What the course must cover (syllabus first; PLAYBOOK §4)
+## What the course must cover, and how we make sure (syllabus first; PLAYBOOK §4–§4c)
 Owner, 2026-11-20: "We need to cover the full syllabus and the depth the exam needs, not only previous questions…
-The person who followed our courses should clear their exams." A CBT exam draws from a large bank; few questions
-repeat, so past questions can never define the course.
-1. **The official syllabus is the scope, all of it**: `research/bfm/syllabus_official.md` (195 sub-topics). Every
-   sub-topic is taught to **exam depth** in the video named in `research/bfm/coverage.csv`: the concept and *why* (so
-   unseen questions can be reasoned out), the rule exactly as the primary source states it at the cut-off, every kind
-   of numerical the topic allows (calculator keys), the traps, and our own practice in the exam's three forms
-   (concept MCQ, numerical with and without options, caselet). Nothing is "summary only".
-2. **Recalled questions guide, they do not decide**: they show how IIBF asks (style, difficulty, numbers), set the
-   order of work and the amount of practice (Tier A = more drills and a case), and are one check among several
-   (`items_tagged.csv`, `importance_map.md`).
-2a. **Depth checklists** `research/bfm/depth/A.md`–`D.md` (2026-11-20, from two public classes per module, PLAYBOOK
-   §4b): per official sub-topic, the sub-points teachers cover and what our plan lacks (about 400 additions), plus
-   statements in those classes that are outdated. **Every script covers its video's "Add to our plan" items** (or the
-   review records why not), checks every "verify" point in the primary source, and never repeats an outdated one.
-3. **Coverage ledger**: a sub-topic with no video, or in an overloaded video, is fixed in the course plan before more
-   scripts are written. Each script's independent review checks its ledger rows are really taught.
-4. **Module exam test**: our own syllabus-wide questions plus the recalled ones, answered by a fresh agent using only
-   our course; target 75+ (pass is 50); every miss is a gap to fix.
-5. RBI changes up to the cut-off: taught in their lesson and collected in U01.
+The person who followed our courses should clear their exams… this only decides our courses." A CBT exam draws from
+a large bank; few questions repeat. So content is built in layers, each checked by the next:
+1. **Scope = the official syllabus, all of it**: `research/bfm/syllabus_official.md` (195 sub-topics), each mapped
+   to a video in `research/bfm/coverage.csv`. A sub-topic with no video, or in an overloaded video, is fixed in the
+   course plan before more scripts are written. Nothing is "summary only".
+2. **Depth = the source documents** (the strongest layer): for every sub-topic, a **source map** of its governing
+   documents (RBI Master Directions and circulars, FEMA rules and regulations, FEDAI rules, UCP 600 / URR 725 /
+   ISBP 745 / Incoterms, Basel texts, ECGC, IFSCA, SEBI where named) and a **fact sheet** of every testable point in
+   them (definitions, conditions, limits, exceptions, time limits, forms, who approves), each with its paragraph
+   (`research/bfm/facts/<sub-topic>.md`). The script teaches from the fact sheet.
+3. **Question blueprint**: for each sub-topic, every kind of question it allows (define, purpose, who / when / how
+   much, compare, exception, calculate, apply to a case). The lesson equips the learner for each kind; practice and
+   mocks use them all.
+4. **Depth checklists from public classes** `research/bfm/depth/A.md`–`D.md` (PLAYBOOK §4b): sub-points teachers
+   cover, as a check on layer 2, never as facts. Every script covers its video's "Add to our plan" items (or its
+   review records why not) and never repeats the outdated statements listed there.
+5. **Recalled questions guide**: style, difficulty, order of work and amount of practice (`items_tagged.csv`,
+   `importance_map.md`). Tiers set practice volume only.
+6. **Prerequisites**: where a lesson leans on JAIIB knowledge, a 30-second refresher, so no learner is lost.
+7. **Three independent reviews per script** (fresh agents): *subject expert* (every fact against its source),
+   *examiner* (writes 10 hard questions from the syllabus and fact sheet; can the lesson answer them?), *beginner*
+   (an officer new to the topic: does every step follow?). Verdicts in `review_v<N>.md`; fix and re-review until all
+   ADOPT.
+8. **Module exam test**: our own syllabus-wide exam (every sub-topic, all question forms) plus the recalled questions,
+   answered by a fresh agent using only our course; target 75+ (pass is 50); every miss is a gap to fix.
+9. **After launch**: after every exam cycle, check what learners recall against the ledger; keep an errata list.
+   (No human beta group is available, owner 2026-11-20, so layers 7 and 8 carry that weight.)
+10. RBI changes up to the cut-off: taught in their lesson and collected in U01.
 
 ## Product (PLAYBOOK §5–§6; the lesson spec is `course/spec/lesson_spec.md`)
 - **Lessons**, about 12–15 minutes in chapters under 6 minutes: an online class with one AI teacher voice (warm-up,
