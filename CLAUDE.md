@@ -34,8 +34,9 @@ any new stage. New lessons go into the playbook section they belong to, with the
   the r4 method (the shared kit already gives it the new look); check line N34 audio ("nine nine nine five").
 - **Done (research):** IIBF syllabus; 453 recalled exam topics from 7 cycles tagged to units; Importance Map
   (`research/bfm/importance_map.md`), cross-checked with two full memory-based papers; regulatory changes to the
-  30 June 2026 cut-off (`regulatory_updates.md`; the July–December 2026 changes are still to add before the fact
-  freeze).
+  30 June 2026 cut-off (`regulatory_updates.md`); July–early November 2026 added 2026-11-20 (repo 5.50%, FERR,
+  USD 5 m hedging limit, leverage ratio/CVA from 1 Apr 2027). Still to add before the freeze: MPC 2–4 Dec 2026 and
+  news from 11 Nov to 31 Dec 2026.
 - **Owner decisions (2026-11-14):** build the full course first; no YouTube channel until it is complete, then a new
   channel for publicity/free samples only; English only; paid course with free sample lessons (hosting decided later);
   Claude decides the build order.
