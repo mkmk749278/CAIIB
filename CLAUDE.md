@@ -38,14 +38,17 @@ Never a new loose doc.
   - Done today: voice decision (ElevenLabs Creator plan in voicing months; Maya 2 fallback, PLAYBOOK §5f); regulatory
     updates to early Nov 2026; independent-review rule; syllabus-first method in layers (below; PLAYBOOK §4–§4c);
     official syllabus split into 195 sub-topics + coverage ledger; course plan v3 (62 videos: A00, A19b, A22, B13b
-    added); depth checklists A–D from 8 public classes (`research/bfm/depth/`); plans draft 2 for **B, C, D** (every
+    added); depth checklists A–D from 8 public classes (`research/bfm/depth/`); plans draft 2 for **A, B, C, D** (every
     checklist item placed, sub-topic ids, question kinds, prerequisites, B13b plan written); A01 script v6.
-  - **Module A plans**: an agent was updating `course/bfm/A/plans_A.md` when the session ended. If that file has no
-    "v3 additions" lines, redo it: fold in `research/bfm/depth/A.md` (+ A-rows of `depth/C.md`), write plans for A00,
-    A19b, A22, add sub-topic ids, question kinds and JAIIB prerequisites per plan, propose splits (watch A11, A15, A16,
-    A19b), same format as `plans_B.md` draft 2.
+  - **Module A plans draft 2 done** (159 additions; plans for A00, A19b, A22 written). Small fixes they found, still to
+    do: 00 line N47 must lead into A00 (not A01); A01 v6 must match A00's closing question; A06's "extension = cancel
+    and rebook" clashes with the 10 Oct 2026 no-rebooking rule (check FEDAI + A.P. (DIR) Circular No. 25); A07's
+    rule-version card says 30 June 2026 (owner decides at the freeze); JAIIB prerequisite names need checking against
+    the JAIIB syllabus; conflicting class figures to settle from primary sources (CHAPS net/gross, gems & jewellery
+    EDF waiver, Gold Card standby %, NRI-relative loan period, card spends under LRS).
   - **Then decide the proposed splits** (all written inside the plans, with fallbacks): B04b, B07b, B09b, B11b, B14b;
-    C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b; plus Module A's. Apply them as course plan **v4** (renumber or keep
+    C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b; A11b, A15b, A16b, A19c (A18b etc. only if a script runs
+    long). All adopted: 62 → 79 videos. Apply them as course plan **v4** (renumber or keep
     "b" ids), update `coverage.csv` rows (C1.2, C2.4, C4.3, C7.2, D5.3, D5.4 now placed), and the counts here.
   - **Termux retry pending**: 9 class videos failed with YouTube 429 (`-pr6I1QhaNk heoiJDqSPMY Zz2sr5CMdTo fYoRu7bbYHw
     2_o96hjLbzg HxiSvg9HZDw qjhdvQ4CKoM ON8wO_NVi6g gcu7lNu4yiY`); the fixed script waits and retries. Six of the
