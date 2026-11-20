@@ -39,7 +39,8 @@ after approval each plan moves into its video folder and the full script is writ
 - **Misconceptions**: "the customer is buying, so use the buying rate" (customer's view instead of the bank's).
 - **Picture**: the counter from above (green in = bank buys, red out = bank sells); the rate ladder (four rungs).
 - **Chapters**: written (v5): warm-up · which side of the counter · the rate ladder · five deals, one map. ~14 min.
-- **Status**: script v5 and numericals done; re-stamp rule version at the freeze; check line N34 audio later.
+- **Status**: script v6 with cue sheet written 2026-11-20 (`A/A1/script.md`, owner to review); numericals checked;
+  re-stamp rule version at the freeze.
 
 ## A02 · Where the dollar actually sits: Nostro, Vostro, Loro, SWIFT, SRVA
 - **Goal**: explain where foreign currency is held, how it moves, and why that makes a TT rate differ from a bill rate.

@@ -23,11 +23,13 @@ Never a new loose doc.
   - Order: `research/bfm/course_plan.md` v2, locked: 58 videos (00, A01–A21, B01–B14, C01–C09, D01–D07,
     4 revisions, U01, X01).
   - Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review).
-  - Scripts: `course/bfm/00_start/script.md` written; A01 has `A/A1/script_v5.md` (needs the r4 rules applied).
+  - Scripts: `course/bfm/00_start/script.md`; **A01 v6 with cue sheet** `A/A1/script.md` (2026-11-20, owner to
+    review); A07 (Incoterms). Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
   `A07_master_1080p.mp4` in Drive `BFM/A07/renders/`.
-- **Next: write the scripts with cue sheets, from A01 in course-plan order** (A01 = rework of `A/A1/script_v5.md`).
+- **Next: the A02 script with cue sheet** (Nostro, Vostro, Loro, SWIFT, SRVA), then on in course-plan order.
+  A script's cue sheet: one beat per sentence under each line (format in `A/A1/script.md`).
   No voice money is spent until the BFM scripts are written (voice plan below).
 - **Research done:** IIBF syllabus; 453 recalled exam items from 7 cycles tagged to units; Importance Map
   (`research/bfm/importance_map.md`), cross-checked with two full memory-based papers; regulatory changes to early

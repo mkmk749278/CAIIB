@@ -19,7 +19,7 @@ TT selling 85.5054, bill selling 85.6337.
    **Answer: b.** Rule 2.5(a).
 
 4. *(keyed-in)* A customer sends USD 6,000 for medical treatment abroad. How many rupees does the bank debit?
-   **Answer: ₹5,13,032.40** (6,000 × 85.5054, TT selling, Rule 4.1). TCS, if any, is separate (lesson A13).
+   **Answer: ₹5,13,032.40** (6,000 × 85.5054, TT selling, Rule 4.1). TCS, if any, is separate (lesson A16).
 
 5. *(keyed-in)* An exporter's foreign-currency sight bill of USD 15,000 is purchased by the bank. Rupee value before
    interest?
