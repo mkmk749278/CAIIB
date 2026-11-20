@@ -4,8 +4,9 @@
 - **Syllabus**: A1.1 Foreign exchange: definition and markets · A1.2 Factors determining exchange rates · A1.3
   Exchange rate mechanism. A1.4 (dealing room, C01) and A1.5 (derivatives, A05/A06, C08/C09) are only named.
 - **Facts**: every rule and date from `research/bfm/facts/A1.1-A1.3_A00.md`; sources per claim in `claims.csv`.
-- **Status**: v3, 2026-11-20. v1 and v2 reviewed by three fresh agents (expert, examiner, beginner); every High and
-  Medium finding fixed (`review_ack_v1.md`, `review_ack_v2.md`).
+- **Status**: v3, **locked 2026-11-20**: all three independent reviews ADOPT (`review_v3_expert.md`,
+  `review_v3_examiner.md`, `review_v3_beginner.md`); history in `review_v1_*`, `review_v2_*`, `review_ack_v1.md`,
+  `review_ack_v2.md`. Only change after the verdicts: the beginner's optional N06 wording (no fact changed).
 - **Rule version (opening card)**: "FEMA 1999 and FEDAI Rules as at 31 December 2026 · RBI Annual Report 2025-26 ·
   FBIL methodology (version of 15 Jan 2019)". Re-check at the fact freeze (claims marked *freeze*).
 - **Evidence (warm-up line N00d)**: "Factors affecting foreign exchange rates" and a forex settlement-date question
@@ -89,10 +90,11 @@ N05 · So which one is it? Lock your answer.
 
 ## Chapter 1 · What foreign exchange is
 
-N06 · Okay. Here's the honest answer. Neither. But first, we need one word clear. What is foreign exchange?
+N06 · Okay. Here's the honest answer. Neither. We'll see why by the end. First, one word needs to be clear. What is
+foreign exchange?
 > 1 S: chapter title slides in "1 · What foreign exchange is" · 2 N: "honest answer" · 3 S: both clouds get a small
-> cross, "neither" · 4 S: the counter shrinks to the left; a coat with three pockets is drawn on the right ·
-> 5 N: "foreign exchange = ?"
+> cross, "neither" · 4 N: "why: by the end" · 5 S: the counter shrinks to the left; a coat with three pockets is
+> drawn on the right · 6 N: "foreign exchange = ?"
 
 N07 · The law for this is FEMA, the Foreign Exchange Management Act of nineteen ninety-nine. It came into force in
 June two thousand, replacing the old FERA.

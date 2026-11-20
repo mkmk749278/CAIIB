@@ -29,6 +29,11 @@ Never a new loose doc.
   - Order: `research/bfm/course_plan.md` v3: 62 videos (00, A00–A22 with A19b, B01–B14 with B13b, C01–C09,
     D01–D07, 4 revisions, U01, X01). v3 (2026-11-20) added A00, A19b, A22, B13b from the syllabus check.
   - Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review).
+  - **A00 script v3 locked** (2026-11-20; `A/A00/`): fact sheet `research/bfm/facts/A1.1-A1.3_A00.md`, three
+    independent reviews all ADOPT, voice page `A/A00/voice_page.html` (9 parts). **Owner voicing it now on the
+    ElevenLabs Creator plan** (owner, 2026-11-20: "Already we have one creator plan"); takes go to Drive
+    `BFM/A00/voice/part_N.mp3`, then `kaggle_enhance.py from-drive A00`, then the r4 build. First lesson through the
+    full layered method; the 00 script's N47 now leads into A00.
   - Scripts: `course/bfm/00_start/script.md`; **A01 v6 with cue sheet** `A/A1/script.md` (2026-11-20, owner to
     review); A07 (Incoterms). Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder

@@ -107,6 +107,9 @@ course plan is not renumbered here; the owner decides the splits.
   a class (ch4; facts). **6 additions.**
 - **Watch**: if the script runs over 15 minutes, the arbitrage card moves to C01, where `depth/C.md` already puts a
   worked arbitrage sum.
+- **Status**: script v3 locked 2026-11-20 (`A/A00/script.md`; reviews ADOPT; facts in
+  `research/bfm/facts/A1.1-A1.3_A00.md`). Added in review: BoP refresher, devaluation vs depreciation, July 1991,
+  spot as the base rate, the holiday rule limited to forward delivery dates.
 - **Facts to verify**: FEMA 1999 s. 2(m), 2(n); RBI history volumes and Annual Report (LERMS 1992; unified
   market-determined rate, March 1993; current account convertibility, IMF Article VIII, 1994; RBI's policy statement
   on volatility); FBIL reference-rate methodology; FEDAI Rules (value dates: cash, tom, spot; holidays); BIS
