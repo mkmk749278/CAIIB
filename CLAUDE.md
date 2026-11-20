@@ -26,15 +26,17 @@ Never a new loose doc.
     sources (web research allowed), the lesson spec and §5b/§5e rules. It writes `review_v<N>.md` in the lesson folder
     with a verdict (ADOPT / ADOPT WITH FIXES / REWORK). The author fixes every High and Medium finding (or records
     why not) and re-runs the review until ADOPT. The owner still decides look, voice and anything paid.
-  - Order: `research/bfm/course_plan.md` v2, locked: 58 videos (00, A01–A21, B01–B14, C01–C09, D01–D07,
-    4 revisions, U01, X01).
+  - Order: `research/bfm/course_plan.md` v3: 62 videos (00, A00–A22 with A19b, B01–B14 with B13b, C01–C09,
+    D01–D07, 4 revisions, U01, X01). v3 (2026-11-20) added A00, A19b, A22, B13b from the syllabus check.
   - Plans: `course/bfm/<module>/plans_<module>.md`, draft 1 for all four modules (owner to review).
   - Scripts: `course/bfm/00_start/script.md`; **A01 v6 with cue sheet** `A/A1/script.md` (2026-11-20, owner to
     review); A07 (Incoterms). Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
   `A07_master_1080p.mp4` in Drive `BFM/A07/renders/`.
-- **Next: the A02 script with cue sheet** (Nostro, Vostro, Loro, SWIFT, SRVA), then on in course-plan order.
+- **Next: the A00 plan and script** (the forex market and why rates move; new in v3), then A01's independent review,
+  then A02 onwards in course-plan order. When A00 exists, 00's last lines must lead into A00 (they now lead into
+  A01), and A00 ends on the "buying or selling?" question that A01 opens with.
   A script's cue sheet: one beat per sentence under each line (format in `A/A1/script.md`).
   No voice money is spent until the BFM scripts are written (voice plan below).
 - **Research done:** IIBF syllabus; 453 recalled exam items from 7 cycles tagged to units; Importance Map
@@ -71,14 +73,23 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
   not change that (owner asked, 2026-11-20; declined).
 - Secrets (OTPs, passwords, tokens) never in git, chat or docs.
 
-## How we decide what matters (the Importance Map; PLAYBOOK §4)
-1. The official IIBF syllabus is the complete list of units (nothing outside it except recent RBI changes).
-2. Public memory-based papers and shift-wise analyses from as many cycles as possible since the 2023 syllabus.
-3. Tag every recalled item to an official unit (`tools/research/tag.py`); count cycles, mentions, case and numerical
-   mentions (`score.py`).
-4. Tier A (full lesson, map, numericals, practice), B (short lesson + map), C (one-page summary). Re-run after every
-   exam cycle.
-5. RBI changes up to the next cut-off become their own "update" lessons.
+## What the course must cover (syllabus first; PLAYBOOK §4)
+Owner, 2026-11-20: "We need to cover the full syllabus and the depth the exam needs, not only previous questions…
+The person who followed our courses should clear their exams." A CBT exam draws from a large bank; few questions
+repeat, so past questions can never define the course.
+1. **The official syllabus is the scope, all of it**: `research/bfm/syllabus_official.md` (195 sub-topics). Every
+   sub-topic is taught to **exam depth** in the video named in `research/bfm/coverage.csv`: the concept and *why* (so
+   unseen questions can be reasoned out), the rule exactly as the primary source states it at the cut-off, every kind
+   of numerical the topic allows (calculator keys), the traps, and our own practice in the exam's three forms
+   (concept MCQ, numerical with and without options, caselet). Nothing is "summary only".
+2. **Recalled questions guide, they do not decide**: they show how IIBF asks (style, difficulty, numbers), set the
+   order of work and the amount of practice (Tier A = more drills and a case), and are one check among several
+   (`items_tagged.csv`, `importance_map.md`).
+3. **Coverage ledger**: a sub-topic with no video, or in an overloaded video, is fixed in the course plan before more
+   scripts are written. Each script's independent review checks its ledger rows are really taught.
+4. **Module exam test**: our own syllabus-wide questions plus the recalled ones, answered by a fresh agent using only
+   our course; target 75+ (pass is 50); every miss is a gap to fix.
+5. RBI changes up to the cut-off: taught in their lesson and collected in U01.
 
 ## Product (PLAYBOOK §5–§6; the lesson spec is `course/spec/lesson_spec.md`)
 - **Lessons**, about 12–15 minutes in chapters under 6 minutes: an online class with one AI teacher voice (warm-up,

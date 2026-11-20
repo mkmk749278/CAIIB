@@ -36,7 +36,7 @@ Module C and derivatives carry more theory marks than the recalled-topic counts 
 | A-LRS | LRS limits and purposes, TCS, prohibited remittances, foreign currency for travel | A2 | 7/7 | 21 | 2 |
 | B-CREDITRISK | CreditMetrics, expected loss, Altman Z, securitisation (MRR), credit derivatives | B5 | 6/7 | 19 | 2 |
 
-## Tier B: know well (9 clusters; short lesson + map)
+## Tier B: know well (9 clusters; taught to exam depth, some drills)
 | Cluster | What it covers | IIBF unit | Cycles | Mentions |
 |---|---|---|---|---|
 | A-IFSC | IFSC, GIFT City, IBUs, IFSCA | A9 | 5/7 | 15 |
@@ -51,7 +51,7 @@ Module C and derivatives carry more theory marks than the recalled-topic counts 
 
 B-LIQ appears in 6 of 7 cycles with few mentions each: treat it as near-A for the LCR/NSFR/HQLA numericals.
 
-## Tier C: basics (one-page summary each)
+## Tier C: basics (taught to exam depth like every syllabus topic; fewer drills. Was "one-page summary" until 2026-11-20)
 A-CORR (Nostro/Vostro, SWIFT MT700, RTGS), A-EXIM (EXIM Bank, AD category, BIS), D-ALM (ALCO, ALM), A-DEALROOM
 (dealing room, daylight limits, FEDAI), D-RAROC, A-TECH (blockchain in trade).
 
