@@ -173,8 +173,8 @@ N45 · No. So never leave a question blank. Did you get all three? Good.
 N46 · So here's today on one card. Aim beats effort. Tier A first. Theory and sums both. Your own simple calculator,
 every day. And answer before I answer.
 
-N47 · [warmly] That's it for today. Next class, we walk up to a bank's forex counter, and I'll ask you one question
-that most officers get wrong. Is the bank buying, or selling?
+N47 · [warmly] That's it for today. Next class, we start Module A. We'll look at the market behind every forex
+counter: who trades in it, and why a rate moves at all.
 
 N48 · Small homework. Find a basic calculator, the kind you'll carry to the exam, and keep it with your notes from
 today. That's all. Good night everyone, see you in the next class.
