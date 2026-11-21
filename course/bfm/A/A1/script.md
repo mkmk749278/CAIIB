@@ -16,8 +16,7 @@
   greeting "Hello, and welcome back. Last class, I left you with one question…"; goodbye "Well done today… I'll see
   you soon."
 - **Voice**: PLAYBOOK §5b. One AI teacher voice, no name, never "Sir"; an online class (no physical-room cues);
-  "Some of you / Others" thought bubbles, no made-up percentages. Disclosure card at the start: "The voice in this
-  lesson is AI-generated." ElevenLabs expression tags (`[warmly]`) are used sparingly.
+  "Some of you / Others" thought bubbles, no made-up percentages. No AI-voice disclosure card (owner, 2026-11-21). ElevenLabs expression tags (`[warmly]`) are used sparingly.
 - **Money**: US dollars for the deals, rupees for what the customer pays or gets; Indian digit grouping on screen
   (₹15,39,097.20). Rates to 4 decimals (FEDAI Rule 5.7 direct quotes).
 - **Illustrative**: the branch, the father, the exporter, the son and every rate and margin are made up and labelled

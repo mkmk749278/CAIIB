@@ -20,7 +20,7 @@ a warm-up, check-ins, and the teacher voicing what students think ("some of youâ
   at the start, line runs to the destination). Sea-only rules are drawn with a wave icon; any-mode rules with a
   truck-ship-plane icon.
 - **Split answers**: two thought bubbles, "Some of you" and "Others"; the wrong one fades. No made-up percentages.
-- **Disclosure card** at the start: "The voice in this lesson is AI-generated."
+- No AI-voice disclosure card (owner, 2026-11-21).
 - **Illustrative**: the exporter, the buyer, the ship and all amounts are made up and labelled "illustrative".
 - **Say it right**: Incoterms "INN-co-terms"; three-letter rules are spelt letter by letter (written E-X-W in the
   lines so the voice spells them); Tiruppur "thi-ROOP-pur".

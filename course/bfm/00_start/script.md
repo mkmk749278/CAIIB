@@ -7,7 +7,7 @@
 - **Evidence**: our Importance Map (`research/bfm/importance_map.md`): 453 recalled items, 7 exam cycles
   (June 2023 to June 2026); one full memory-based paper (Dec 2025) for the module mix.
 - **Voice**: PLAYBOOK §5b. One AI teacher voice, no name, never "Sir"; an online class; "some of you / others"
-  thought bubbles. Disclosure card at the start: "The voice in this lesson is AI-generated."
+  thought bubbles. No AI-voice disclosure card (owner, 2026-11-21).
 - **Picture**: the four mind-map centres on one screen (Module A: the forex counter; B: the bank as a house with
   risks at the doors; C: the trading desk; D: the balance sheet as two shelves), each with its share of recalled
   questions; tier colours A (deep blue), B (teal), C (grey); the on-screen 8-function calculator.

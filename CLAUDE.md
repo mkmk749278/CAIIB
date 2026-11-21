@@ -106,8 +106,10 @@ pictures, mind maps and worked numericals in the JAIIB/CAIIB market. **Our own c
   "issued, coming". Every lesson states its rule version.
 - **Every numerical is solved twice and checked**, and works on the **IIBF-allowed calculator: basic, 8 functions
   (+ − × ÷ % √ Tax+ Tax−), 12 digits, no scientific calculator**. Show the key presses.
-- **Honesty about the voice**: the narrator is an AI voice (owner, 2026-11-14) and every video says so ("The voice in
-  this lesson is AI-generated"). Never claim a human teacher is speaking, never a "Sir" persona or back-story.
+- **The voice**: the narrator is an AI voice (owner, 2026-11-14). **No AI-voice disclosure and no "checked against the
+  source" line in the lessons** (owner, 2026-11-21: "why give that feel to students; remove"). Still never claim or
+  imply a human teacher, never a "Sir" persona or back-story. Before publishing anywhere, check that platform's rules
+  on labelling synthetic media (PLAYBOOK §7, 2026-11-21).
 - **Everything we sell must be licensed for commercial use**: voice, music, fonts, images, models. The free
   ElevenLabs plan has no commercial licence, so nothing sold is voiced on it; free accounts of friends or family do
   not change that (owner asked, 2026-11-20; declined).

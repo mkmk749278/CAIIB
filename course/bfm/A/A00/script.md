@@ -15,7 +15,7 @@
   the first real class of Module A."; goodbye "That's our class for today. Take care of yourselves, and I'll see you
   in the next one." Time-neutral (00 before it is an evening video).
 - **Voice**: PLAYBOOK §5b. One AI teacher voice, no name, never "Sir"; an online class; "Some of you / Others"
-  bubbles. Disclosure card: "The voice in this lesson is AI-generated." ElevenLabs tags used sparingly.
+  bubbles. No AI-voice disclosure card (owner, 2026-11-21). ElevenLabs tags used sparingly.
 - **Money**: US dollars and rupees; no deal sums in this lesson. The receipt rates in the opening (85.20, 85.65)
   are **illustrative**, labelled so on screen; update them to rates near the market at the freeze, keeping a move
   of tens of paise.

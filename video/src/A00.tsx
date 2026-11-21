@@ -148,7 +148,7 @@ export const A00: React.FC = () => {
 									<div style={{position: 'absolute', top: 500, left: 360, width: 1200, textAlign: 'center', background: '#fff', border: `3px solid ${P.ink}`, borderRadius: 18, padding: '16px 24px', fontFamily: FT.sans, fontWeight: 500, fontSize: 32, color: P.ink, opacity: tw(f, 20, 40)}}>
 										Rules taught: FEMA 1999 and FEDAI Rules as at 31 December 2026 · RBI Annual Report 2025-26 · FBIL methodology (version of 15 Jan 2019)
 									</div>
-									<div style={{position: 'absolute', top: 680, width: '100%', textAlign: 'center', fontFamily: FT.sans, fontWeight: 500, fontSize: 32, color: P.soft, opacity: tw(f, 25, 45)}}>The voice in this lesson is AI-generated · names and rates are illustrative</div>
+									<div style={{position: 'absolute', top: 680, width: '100%', textAlign: 'center', fontFamily: FT.sans, fontWeight: 500, fontSize: 32, color: P.soft, opacity: tw(f, 25, 45)}}>Names and rates are illustrative</div>
 								</AbsoluteFill>
 								{/* N00b: no calculator today */}
 								<Pop x={760} y={520} p={p('N00b', 2)} q={out(S('N00c'))}>
