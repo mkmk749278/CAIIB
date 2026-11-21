@@ -14,7 +14,8 @@ Module B map "Everything that can go wrong" (centre: the bank drawn as a house).
    (liquidity, IRR, FX, commodity, equity); liquidity = long assets, short liabilities: funding (deposits) · time
    (loans) · call (guarantees)
 4. The interest-rate door: NII or market value of equity; gap (mismatch of amounts or dates) · basis (two
-   benchmarks) · embedded option (customer's choice) · yield curve (two periods) · price (sell a bond early; ≠ market
+   rates, same maturity, different amounts) · embedded option (customer's choice; call / put on bonds) · yield curve (different
+   maturities, non-parallel) · price (sell a bond early; ≠ market
    risk) · reinvestment · net interest position (float = natural hedge)
 5. Operational risk and the weather: processes · people · systems · external events; legal (fines) in, strategic and
    reputational out; controls breaking → error, fraud, delay; compliance · reputational · strategic · systemic ·

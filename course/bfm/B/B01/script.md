@@ -333,7 +333,7 @@ N081 · Three. Embedded option risk. Customers have choices. A borrower prepays 
 N082 · Four. Yield curve risk. This one is about maturities. The bank prices loans and deposits off instruments of different maturities, and the curve doesn't move in parallel. Short rates and long rates drift apart.
 > 1 S: rung 4 "yield curve: different maturities, non-parallel moves" [F22] · 2 S: a curve that twists · 3 B: underline "different maturities"
 
-N083 · So four questions sort the first four. A mismatch of amounts or dates? Gap. Two different rates for the same time moving differently? Basis. Rates for different maturities moving differently? Yield curve. A customer's choice? Embedded option.
+N083 · So four questions sort the first four. A mismatch of amounts or dates? Gap. Two different rates for the same maturity moving differently? Basis. Rates for different maturities moving differently? Yield curve. A customer's choice? Embedded option.
 > 1 C: sorting card "mismatch → gap · two rates, same maturity → basis · different maturities → yield curve · customer's choice → option" · 2 G: rungs 1–4 in turn
 
 N084 · Five. Price risk. You sell a bond before maturity, after rates have risen. Bond prices and yields move opposite, so you sell at a loss. R-B-I links it to the trading book, which we meet in chapter six.
@@ -363,8 +363,8 @@ N087 · Basis risk. The amounts match and the dates match, so there's no gap. Th
 N088 · Second. Loans and deposits of equal amounts reset on the same day. Loans are priced off a one-year rate, deposits off a three-month rate. The three-month rate jumps, the one-year rate doesn't. Basis or yield curve?
 > 1 S: Q2 "equal amounts · same reset day · 1-year vs 3-month" · H: 5 s
 
-N089 · Yield curve risk. Two different maturities on the curve moved differently. Careful, R-B-I's yield curve paragraph also talks of different benchmarks. The test is maturity. Different maturities, yield curve.
-> 1 S: answer "✓ yield curve" · 2 G: the sorting card · 3 N: "test = maturity"
+N089 · Yield curve risk. Two different maturities moved differently. Careful, R-B-I's yield curve paragraph also lists benchmarks, like T-bill yields, deposit rates and call money. The test is maturity.
+> 1 S: answer "✓ yield curve" · 2 G: the sorting card · 3 N: "test = maturity (RBI 9.3.4 lists benchmarks too)"
 
 N090 · Third. Rates fall, and many home-loan borrowers prepay. Which interest-rate risk?
 > 1 S: Q3 · H: 3 s

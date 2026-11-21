@@ -66,4 +66,9 @@ if __name__ == "__main__":
     # N8 normal range mean 5, SD 2, about 95% within 2 SD
     check("N8 lower = 5 - 2 x 2", D(5) - 2 * D(2), c12(5 - c12(2 * 2)))
     check("N8 upper = 5 + 2 x 2", D(5) + 2 * D(2), c12(5 + c12(2 * 2)))
+    series("Mixed: values 2,4,6", [2, 4, 6])
+    check("Mixed: 1-day = 18% / sqrt(36)", D(18) / D(36).sqrt(), c12(18 / c12(math.sqrt(36))))
+    check("Mixed: SD from variance 25", D(25).sqrt(), c12(math.sqrt(25)))
+    series("Homework: values 8,10,12", [8, 10, 12])
+    check("Homework: 0.5% x sqrt(250)", D("0.5") * D(250).sqrt(), c12(0.5 * c12(math.sqrt(250))))
     print("all checks passed")

@@ -7,7 +7,7 @@ voice page. This session edits only `course/bfm/B/**`, `research/bfm/facts/B*`, 
 ## Progress per lesson
 | Video | Fact sheet | Script | Reviews | Voice page | PR |
 |---|---|---|---|---|---|
-| B01 | in progress | | | | |
+| B01 | done (`research/bfm/facts/B1.1-B2.5_B01.md`) | v3 locked | v1 ×3, v2, v3, v4: all ADOPT | `B01/voice_page.html` (3 parts: 8,580 · 8,891 · 8,723 chars; 4,424 words) | this PR |
 | B02 | | | | | |
 | B03 | | | | | |
 | B04 | | | | | |

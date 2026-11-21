@@ -1,0 +1,9 @@
+claim,source,section,url,version,status
+"Mean = sum ÷ n; deviations sum to zero; variance = average squared deviation (squared units); SD = √variance",concept,—,—,—,concept (checked in check_b03.py)
+"Population variance ÷ n; sample variance ÷ (n − 1); exam sums give the full set and expect ÷ n unless 'sample'",concept; exam convention,—,—,—,concept
+"Variance = mean of squares − square of mean",concept,—,—,—,concept (checked)
+"CV = SD ÷ mean; mean–variance choice rules",concept,—,—,—,concept
+"Normal curve: ±1σ ≈ 68%, ±2σ ≈ 95% (1.96σ exactly), ±3σ ≈ 99.7%; one tail 1.65σ ≈ 95%, 2.33σ ≈ 99%",concept,—,—,—,concept
+"VaR: 99th percentile one-tailed confidence; computed daily; minimum holding period ten trading days; shorter holding periods may be scaled up to ten days by the square root of time; observation period at least one year",BCBS Amendment to the Capital Accord to incorporate market risks,Part B.4 (a)–(d),https://www.bis.org/publ/bcbs24.pdf,Jan 1996 (historical; later Basel texts in B09),verified (PDF text read)
+"Volatility scales with √time (independent daily moves); variance with time",concept,—,—,—,concept (checked)
+"RBI: sensitivity and VaR limits for trading portfolios measured daily",RBI Guidance Note on Market Risk Management,paras 5–6,https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4788,28 Nov 2025,verified

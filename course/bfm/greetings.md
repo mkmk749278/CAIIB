@@ -20,3 +20,4 @@ order, so they stand; change A07's lines if it is ever re-voiced.
 |---|---|---|
 | B01 | "Hello and welcome, everyone. Today we open a new module." | "That's Module B begun. Rest well, and I'll see you in the next class." |
 | B02 | "Good to have you back. Let's pick up from the house we drew last time." | "Good work today. Close the notebook, stretch, and I'll see you in the next class." |
+| B03 | "Hi everyone. Calculators out today, this one is a working class." | "That's the numbers class done. Two more sums on your own tonight, and we meet again next class." |
