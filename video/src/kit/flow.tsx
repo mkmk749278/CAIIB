@@ -14,7 +14,7 @@ type Beat = {at: [string, number]; word?: [string, number]; text: string; x: num
 export const XF = 18; // crossfade frames: the old thing fades out while the new one fades in, never a dip to blank
 const nw = (w: string) => w.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-export const makeFlow = (tl: Timeline, capFix: [RegExp, string][] = []) => {
+export const makeFlow = (tl: Timeline, capFix: [RegExp, string][] = [], opts: {pen?: boolean} = {}) => {
 	const LS = tl.lines;
 	const TOTAL = tl.durationInFrames;
 	const by: Record<string, L> = Object.fromEntries(LS.map((l) => [l.id, l]));
@@ -93,6 +93,8 @@ export const makeFlow = (tl: Timeline, capFix: [RegExp, string][] = []) => {
 					return (
 						<div key={i} style={{position: 'absolute', left: b.x, top: b.y, opacity: o, transform: `${b.center ? 'translateX(-50%) ' : ''}rotate(-1.5deg)`, fontFamily: '"Caveat", cursive', fontWeight: 700, fontSize: (b.size ?? 58) * 1.15, color: b.color ?? C.text, whiteSpace: 'nowrap'}}>
 							<div style={{clipPath: `inset(-20px ${(1 - p) * 100}% -20px -10px)`, background: 'linear-gradient(transparent 38%, rgba(242,179,61,0.35) 38%, rgba(242,179,61,0.35) 88%, transparent 88%)', padding: '0 10px'}}>{b.text}</div>
+							{/* online-class pen (owner, 2026-11-21): the tip writes the note, then lifts away */}
+							{opts.pen && p > 0 && p < 1 ? <Pen left={`${p * 100}%`} size={(b.size ?? 58) * 1.15} /> : null}
 							<svg width="100%" height={14} viewBox="0 0 100 14" preserveAspectRatio="none" style={{display: 'block', marginTop: -4}}>
 								<path d="M2 9 C 30 3, 70 13, 98 6" stroke="#F2B33D" strokeWidth={6} fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - tw(f, b.t0 + spoken, b.t0 + spoken + 12)} opacity={0.85} />
 							</svg>
@@ -150,6 +152,16 @@ export const makeFlow = (tl: Timeline, capFix: [RegExp, string][] = []) => {
 
 	return {LS, TOTAL, by, S, E, H, at, W0, vis, fo, sk, ap, glowOf, B, W, Notes, ChapterStrip, Captions, Scene, SENT};
 };
+
+/** A pen tip at the writing edge of a note (drawn over the ink, nib at the baseline). */
+const Pen: React.FC<{left: string; size: number}> = ({left, size}) => (
+	<svg width={size * 1.2} height={size * 1.2} viewBox="0 0 60 60" style={{position: 'absolute', left, top: size * 0.15, transform: 'translate(-6px, -70%)', overflow: 'visible', pointerEvents: 'none'}}>
+		<g transform="rotate(35 10 50)">
+			<path d="M6 54 L14 40 L22 44 Z" fill="#1F2A37" />
+			<rect x={13} y={-6} width={10} height={48} rx={3} fill="#2F7FE0" stroke="#1F2A37" strokeWidth={2.5} transform="rotate(26 18 40)" />
+		</g>
+	</svg>
+);
 
 /** Fade-and-rise wrapper for one element (o = 0..1). */
 export const Fd: React.FC<{o: number; children: React.ReactNode}> = ({o, children}) => (

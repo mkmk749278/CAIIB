@@ -1,4 +1,4 @@
-# A00 · "The market behind the counter" · CLASS EDITION (script c4, with cue sheet)
+# A00 · "The market behind the counter" · CLASS EDITION (script c5, with cue sheet)
 
 - **Why this file**: owner, 2026-11-21, after watching A00 r3: "narration still not like a class feel; injecting the
   concept into the student's mind is important… do another video with these fixes, then we can understand which is
@@ -9,6 +9,7 @@
   ways, the wrong belief broken, a worked example, a pause check and "the one thing"; value dates get their own
   chapter; a mixed round; the closing map is filled from memory first; the learner answers the opening customer as
   the officer; a "you can now" self-check.
+- **c5 (2026-11-21)**: online-class refinements (owner "Go"): notebook moments (N007, N032, N075a, N137a), one light line per chapter (N027, N046, N077, N104, N150), signposts (N064, N154), sparing voice tags ([curious] ×3, [warmly] ×2, [seriously] on the five "one thing" lines, [chuckles] ×1).
 - **c4 (2026-11-21)**: owner: no AI-voice line and no source line in the lesson; N002 and the disclosure card removed.
 - **c3 (2026-11-21)**: re-review `review_c2.md` ADOPT; its Lows L1, L2, L4–L8 applied.
 - **c2 (2026-11-21)**: all High and Medium findings of the three c1 reviews fixed (`review_c1_expert.md`,
@@ -50,8 +51,8 @@ N005 · And this area is asked. Factors that move exchange rates came up in June
 N006 · One more thing, and it's important. This class will feel easy while you watch. Easy now is not the same as remembered in May.
 > 1 N: "easy now ≠ remembered in May" · 2 B: box around "remembered"
 
-N007 · So I'll stop and ask you questions. When I do, answer out loud, even a whisper. Then I'll check you. Okay?
-> 1 S: a small pause icon with "answer out loud" · H: 1 s
+N007 · So I'll stop and ask you questions. When I do, answer out loud, even a whisper. Then I'll check you. And keep a notebook and pen with you. This is a class, not a movie. Okay?
+> 1 S: a small pause icon with "answer out loud" · 2 S: a notebook and pen slide in at the margin and stay · H: 2 s
 
 N008 · Let's start with something you already know. At your branch, a customer buys dollars for his son's college fees. Does he pay in rupees, or in dollars?
 > 1 S: the counter from the side; customer with a fee letter · H: 3 s
@@ -70,7 +71,7 @@ N011 · He says, "Yesterday you gave me dollars at eighty-five twenty. Today you
 N012 · Fair question. Now, some of you are thinking: R-B-I fixes the rupee rate every morning, and banks just follow.
 > 1 S: cloud "Some of you": "RBI fixes it every morning · banks follow"
 
-N013 · Others are thinking: each bank decides its own rate, any rate it likes. Which one is it? Lock your answer.
+N013 · Others are thinking: each bank decides its own rate, any rate it likes. [curious] Which one is it? Lock your answer.
 > 1 S: cloud "Others": "each bank sets any rate" · 2 C: pause card "RBI fixes it, or each bank any rate?" · H: 5 s
 
 N014 · Hold on to it. I'll answer it in the last chapter, and I'll ask you again before I do.
@@ -78,7 +79,7 @@ N014 · Hold on to it. I'll answer it in the last chapter, and I'll ask you agai
 
 ## Chapter 1 · What foreign exchange is
 
-N015 · Chapter one. What foreign exchange is. First, a question. A bank in London draws a draft on an Indian bank, payable in rupees. Is that foreign exchange?
+N015 · Chapter one. What foreign exchange is. First, a question. A bank in London draws a draft on an Indian bank, payable in rupees. [curious] Is that foreign exchange?
 > 1 S: chapter title "1 · What foreign exchange is" · 2 S: draft card "drawn in London · payable in ₹" · H: 3 s
 
 N016 · I'm guessing many of you said no. It's rupees, so how can it be foreign? Keep that answer. In two minutes we'll test it.
@@ -114,7 +115,7 @@ N025 · Pocket three is the surprise. The same kinds of paper, drawn by someone 
 N026 · Now, remember my question? The London draft, payable in rupees. Is it foreign exchange?
 > 1 S: the draft card slides back from the margin toward pocket three · H: 3 s
 
-N027 · Yes. Pocket three. It's rupees on paper, but it was drawn outside India. That's why it counts.
+N027 · Yes. Pocket three. It's rupees on paper, but it was born abroad. Drawn outside India. That's why it counts.
 > 1 S: the draft drops into pocket 3; the circle round "drawn outside India" redraws in green · 2 N: "drawn abroad → forex, even in ₹" [F3]
 
 N028 · So, the hook. Foreign currency is the money. Foreign exchange is the money, plus the three pockets.
@@ -129,8 +130,8 @@ N030 · Once more, faster. Balances. Rupee paper, foreign pay. Drawn abroad, rup
 N031 · And as a question. What does foreign exchange add to the money?
 > 1 B: the word "plus" circled · H: 3 s
 
-N032 · Three pockets. Balances. Rupee paper, foreign pay. Drawn abroad, rupee pay.
-> 1 G: pockets 1, 2, 3 in turn, each on its words
+N032 · Three pockets. Write them in your notebook now. Balances. Rupee paper, foreign pay. Drawn abroad, rupee pay.
+> 1 G: pockets 1, 2, 3 in turn, each on its words · 2 S: the margin notebook gets the three lines, written by the pen · H: 5 s
 
 N033 · One more word. The exchange rate is just the price of one currency in another. In India we quote it directly: so many rupees for one dollar.
 > 1 S: price tag "₹ per 1 USD" [F6] · 2 N: "direct quote"
@@ -159,7 +160,7 @@ N040 · Third. Under FEMA, is a dollar cheque foreign currency, or only the doll
 N041 · Both. In FEMA, currency includes cheques, drafts and cards. Only "currency notes" means notes and coins.
 > 1 S: answer "✓ both" · 2 G: the s. 2(h) tag
 
-N042 · If you remember one thing from chapter one: foreign exchange is the money, plus three pockets. Stretch for a second.
+N042 · [seriously] If you remember one thing from chapter one: foreign exchange is the money, plus three pockets. Stretch for a second.
 > 1 B: the coat pulses once; everything else dims · 2 M: map node 1 "what forex is"; tick on the chapter title · H: 1 s
 
 ## Chapter 2 · The market and its players
@@ -173,7 +174,7 @@ N044 · Balances. Rupee paper, foreign pay. Drawn abroad, rupee pay. Good. Now, 
 N045 · No. The main market has no building. It's over the counter. O-T-C. Banks and dealers deal with each other directly, mostly on screens.
 > 1 B: red cross over the building · 2 N: "OTC = no exchange in between" [F8] · 3 S: dealer screens linked by lines
 
-N046 · Careful. Over the counter here doesn't mean our branch counter. It just means there's no exchange in the middle.
+N046 · Careful. Over the counter here doesn't mean our branch counter. It just means there's no exchange in the middle. Nobody in Tokyo is queueing at your branch counter.
 > 1 S: a small branch counter with a "not this" tag
 
 N047 · And it follows the sun. The day starts in Sydney and Tokyo, and ends in New York. So on weekdays, somewhere in the world, it's always open.
@@ -191,7 +192,7 @@ N050 · Four, investors and funds. Five, brokers, who bring buyers and sellers t
 N051 · Without looking back. Who brings buyers and sellers together?
 > 1 S: the six tags blur · H: 3 s
 
-N052 · Brokers. Good. Now, why do they trade? Five reasons. Trade, investment, hedging, speculation, arbitrage.
+N052 · Brokers. [warmly] Good. Now, why do they trade? Five reasons. Trade, investment, hedging, speculation, arbitrage.
 > 1 S: tags sharpen; "brokers" glows · 2 S: five motive tags drop in under the players
 
 N053 · Two of these get mixed up. Hedging means protecting yourself from a rate change. Speculation means taking a risk to profit from one.
@@ -224,12 +225,12 @@ N061 · Compound. Three currencies. Second. Your branch sells dollars to a stude
 N062 · Merchant. Bank with a customer.
 > 1 S: answer "✓ merchant"
 
-N063 · If you remember one thing from chapter two: your counter rate is the interbank rate, plus a margin.
+N063 · [seriously] If you remember one thing from chapter two: your counter rate is the interbank rate, plus a margin.
 > 1 B: the "+ margin" arrow pulses · 2 M: map node 2 "players" · H: 1 s
 
 ## Chapter 3 · When the money moves
 
-N064 · Chapter three. This one turns up in the exam as straight questions, so stay sharp. First, from chapter two. Merchant rates are built on which rate?
+N064 · Chapter three. We're nearly halfway, stay with me. This one turns up in the exam as straight questions, so stay sharp. First, from chapter two. Merchant rates are built on which rate?
 > 1 S: chapter title "3 · When the money moves" · 2 N: "asked straight" · H: 3 s
 
 N065 · The interbank rate. And from chapter one: a draft drawn in Singapore, payable in rupees. Foreign exchange?
@@ -238,7 +239,7 @@ N065 · The interbank rate. And from chapter one: a draft drawn in Singapore, pa
 N066 · Yes. Drawn abroad, rupee pay. Pocket three. Now a branch story. Friday afternoon. An exporter books a spot deal with you, to sell his dollars.
 > 1 S: the coat glows pocket 3 · 2 S: counter, calendar with "Fri" circled, tag "spot deal"
 
-N067 · He asks, "When do the rupees reach my account? I pay salaries on Monday." Some of you are thinking Monday. Others, Tuesday. Hold your answer.
+N067 · He asks, "When do the rupees reach my account? I pay salaries on Monday." [curious] Some of you are thinking Monday. Others, Tuesday. Hold your answer.
 > 1 S: bubble "When do the rupees reach me?" · 2 S: two tags "Mon?" "Tue?" pinned beside the calendar · H: 3 s
 
 N068 · In three minutes, you'll know. Four words first. Cash. Tom. Spot. Forward. Each one is a value date, counted from the deal day.
@@ -265,10 +266,13 @@ N074 · Wednesday. Monday is the deal day. Tuesday, working day one. Wednesday, 
 N075 · And forward is anything beyond spot. A one-month forward is counted from the spot date, not from today.
 > 1 S: open arrow past T+2, "FORWARD · counted from spot" [F13a] · 2 B: underline "from the spot date"
 
+N075a · Write this down. Cash, same day. Tom, next working day. Spot, second working day. Forward, beyond spot.
+> 1 S: the margin notebook gets the four lines as each is spoken · H: 6 s
+
 N076 · Now, a belief many officers carry. Spot means "on the spot", so, today. Are you one of them? Decide now, yes or no.
 > 1 S: "SPOT = TODAY?" writes at right · H: 3 s
 
-N077 · Here's the test. Monday deal, spot. Today? No. Wednesday. Spot is not today. The same-day deal has its own name: cash.
+N077 · Here's the test. Monday deal, spot. Today? No. Wednesday. Spot is not today. [chuckles] Spot is not on the spot. Bankers do like confusing names. The same-day deal is called cash.
 > 1 B: red strike on "today" on the word "No" · 2 N: "same day = cash"
 
 N078 · Spot is also the market's base. A dealer's quote is a spot rate unless it says otherwise.
@@ -316,7 +320,7 @@ N091 · Wednesday. Now harder. Deal on Thursday, spot, and Monday is a holiday. 
 N092 · Tuesday. Friday is day one. Saturday, Sunday and the Monday holiday don't count. Tuesday is day two.
 > 1 S: answer "✓ Tue" with the count 1 Fri · 2 Tue
 
-N093 · If you remember one thing from chapter three: count working days, and spot is the second one.
+N093 · [seriously] If you remember one thing from chapter three: count working days, and spot is the second one.
 > 1 B: the boxed "SPOT = 2nd working day" pulses; everything else dims · 2 M: map node 3 "deal dates" · H: 1 s
 
 ## Chapter 4 · Why rates move
@@ -351,7 +355,7 @@ N102 · Weaker. So our customer's eighty-five sixty-five, up from eighty-five tw
 N103 · A thirty-second refresher from J-A-I-I-B. The balance of payments is India's account book with the world. The current account holds trade, services, income and remittances.
 > 1 S: the ledger "India ↔ world" draws [F15b] · 2 S: column 1 "current: trade · services · income · remittances"
 
-N104 · The capital account holds investment and loans, in and out. And no, this current account is not the one at your branch.
+N104 · The capital account holds investment and loans, in and out. And no, this current account is not the one at your branch. No cheque book comes with it.
 > 1 S: column 2 "capital: investment · loans" · 2 S: a branch passbook "CA" with a red cross
 
 N105 · So what pushes the see-saw? Three groups of factors. Fundamental, technical and speculative. Say them with me. Fundamental. Technical. Speculative.
@@ -408,7 +412,7 @@ N121 · Third. Higher interest rates in India pull money in. Today, does the rup
 N122 · Strengthen. That's today's see-saw. The forward discount is a different question.
 > 1 S: answer "✓ stronger today" · 2 G: the see-saw thumbnail, then the timeline thumbnail
 
-N123 · If you remember one thing from chapter four: more rupees per dollar means a weaker rupee, and the see-saw shows which way.
+N123 · [seriously] If you remember one thing from chapter four: more rupees per dollar means a weaker rupee, and the see-saw shows which way.
 > 1 B: dial and "more ₹ per $ = weaker ₹" pulse · 2 M: map node 4 "why rates move" · H: 1 s
 
 ## Chapter 5 · Who sets the rate in India?
@@ -455,6 +459,9 @@ N136 · Post four. March nineteen ninety-two. LERMS, the Liberalised Exchange Ra
 N137 · Post five. March nineteen ninety-three. The two rates were unified. From then, the rupee's rate is market determined.
 > 1 S: post 5 "Mar 1993 · unified" [F28] · 2 B: circle "1993" on post 5
 
+N137a · Write the road in your notebook. Par value. Nineteen seventy-one, sterling. Seventy-five, basket. Ninety-two, dual rate. Ninety-three, unified.
+> 1 S: the margin notebook gets the five posts as each is spoken · H: 6 s
+
 N138 · One more flag. In August nineteen ninety-four, the rupee became convertible on the current account, as India accepted Article Eight of the I-M-F.
 > 1 S: flag past the road "Aug 1994 · current account convertible · IMF Art. VIII" [F29]
 
@@ -491,7 +498,7 @@ N148 · A benchmark. Published by F-B-I-L, at about one-thirty.
 N149 · Now, our question from the start. R-B-I fixes the rate every morning, or each bank sets any rate it likes? Answer it now.
 > 1 S: the "our question" sticky note opens; both clouds return · H: 4 s
 
-N150 · Neither. The rate moves with the market every day. R-B-I only steps in to stop wild swings. And your board follows the interbank rate, plus the bank's margin.
+N150 · Neither. Sorry, both camps lose this one. The rate moves with the market every day. R-B-I only steps in to stop wild swings. And your board follows the interbank rate, plus the bank's margin.
 > 1 S: both clouds crossed · 2 S: the officer's bubble "moves with the market · RBI stops wild swings · board = interbank + margin"
 
 N151 · Now you be the officer. Your customer asks, "Who changed it? R-B-I?" Answer him out loud, in one line.
@@ -500,12 +507,12 @@ N151 · Now you be the officer. Your customer asks, "Who changed it? R-B-I?" Ans
 N152 · Something like this. "The market moved overnight. R-B-I only stops wild swings. Our board is the interbank rate, plus our margin."
 > 1 S: the officer's bubble fills with the model answer
 
-N153 · If you remember one thing from chapter five: India's rate is market determined since nineteen ninety-three, and R-B-I steadies it, it doesn't fix it.
+N153 · [seriously] If you remember one thing from chapter five: India's rate is market determined since nineteen ninety-three, and R-B-I steadies it, it doesn't fix it.
 > 1 B: post 5 and the hand pulse · 2 M: map node 5 "regimes and RBI" · H: 1 s
 
 ## Mixed practice
 
-N154 · Now a mixed round, like the exam mixes them. Five questions. Answer each before I do. One. A rupee draft issued by a bank in Chennai, payable in Mumbai. Foreign exchange?
+N154 · Last stretch now. Five questions, then the map, and we're done. A mixed round, like the exam mixes them. Answer each before I do. One. A rupee draft issued by a bank in Chennai, payable in Mumbai. Foreign exchange?
 > 1 C: practice card "Mixed round · 5" · 2 S: Q1 · H: 4 s
 
 N155 · No. It's Indian currency, drawn and paid in India. It fits none of the three pockets. Two. A deal on Thursday, spot, and Friday is a holiday. Which day?
@@ -520,7 +527,7 @@ N157 · Nineteen ninety-two. Unified a year later, in ninety-three. Four. Govern
 N158 · Technical. Five, the trap one. Rupee interest rates are higher than dollar rates. Is the rupee at a forward premium, or a forward discount?
 > 1 S: ✓ Q4 · 2 S: Q5 · H: 4 s
 
-N159 · Discount. The higher-interest currency is at a forward discount. Count your score. Four or five, you're ready. Fewer, rewatch the chapter you missed, tonight.
+N159 · Discount. The higher-interest currency is at a forward discount. [warmly] Count your score. Four or five, you're ready. Fewer, rewatch the chapter you missed, tonight.
 > 1 S: ✓ Q5 · 2 N: "4–5: ready · fewer: rewatch the chapter you missed"
 
 ## The map, from memory
