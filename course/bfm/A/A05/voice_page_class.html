@@ -1,0 +1,150 @@
+<title>A05 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A05 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A05/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Value dates + Chapter 2 · Premium and discount + Chapter 3 · The option period + Chapter 4 · Usance bills + Close (N001–N068)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N068", "text": "[warmly] Hi, everyone. Calculator out, please; today we look a little ahead. Last class, I asked: why is the dollar dearer three months from now? We answer it today. Forex sums came in all seven exam cycles we studied. Picture an importer in Coimbatore. He owes a US supplier fifty thousand dollars, due in about two months. The exact day isn't fixed yet. The newspaper says the rupee may fall. Some of you would say, wait and hope. Others, fix the rate today. What would you tell him? Hold that thought. By the end, you'll quote him the exact rate. Chapter one. Every forex deal has two dates. The day you agree it, and the day the money moves. That second day is the value date. Cash, or ready, means the money moves the same day. Value next day, or tom, means the next working day. And spot means the second working day after the deal. That's the market's normal date. Quick one. A deal on Thursday, the third of December. When is spot? Remember, Saturday is not a forex working day. Monday, the seventh. Friday is day one, the weekend is skipped, Monday is day two. A holiday in between is skipped the same way. Anything later than spot is a forward. And a forward's months are counted from the spot date, not the deal date. So a one-month forward from that Thursday's deal falls on the seventh of January. What if that day is a holiday? A known holiday, known three working days ahead, moves delivery back to the working day before. A sudden one moves it forward, to the next working day. A forward with a bank is O-T-C, over the counter. Any amount, any date. A currency future is standard, traded on an exchange. You keep a deposit there, topped up daily. The clearing corporation guarantees every deal. Pause check for chapter one. One. Spot is which day after the deal? The second working day. Two. A known holiday on the delivery date. Earlier day or later day? Earlier, the working day before. Three, the twist. A one-month forward is counted from which date? From spot. [seriously] If you remember one thing from chapter one: spot is two working days, and forwards count from spot. Chapter two. First, from chapter one. A forward with a bank: exchange or over the counter? Over the counter. Now, the price. A forward rate is the spot rate, plus or minus some points. Here, points are just rupees. Zero point three six is thirty-six paise. If the dollar costs more later, it's at a premium. You add. If it costs less later, it's at a discount. You take away. How do you tell from the screen? Look at the two point figures. Small then big, it's a premium. Big then small, a discount. Press along. Spot eighty-five point six zero, eighty-five point six two. Two-month points, zero point three six, zero point three nine. Small then big, so add. Bid: eighty-five point six, plus point three six, equals. Eighty-five point nine six. Ask: eighty-five point six two, plus point three nine, equals. Eighty-six point zero one. Now last class's question. Why is the dollar dearer later? Many of you think the market expects the rupee to fall. Not quite. The premium comes from interest rates. Rupee deposits pay more than dollar deposits. The forward rate evens that out. Say you borrow dollars at four and a half percent. Change them to rupees, and earn six and a half. Change back at the same rate, and that's two percent free. The premium closes that door. Buying dollars back costs more, and eats the two percent. Let's see it. Spot eighty-five point six zero. Rupee interest six and a half percent, dollar four and a half. Three months. Three months is a quarter year. A quarter of six and a half percent is one point six two five percent. So one rupee grows to one point zero one six two five. A quarter of four and a half is one point one two five percent. One dollar grows to one point zero one one two five. Forward equals spot, times the rupee growth, divided by the dollar growth. Eighty-five point six, times one point zero one six two five, divided by one point zero one one two five, equals. Eighty-six point zero two three two. Dollar at a premium means the rupee, the higher-interest currency, is at a discount. How big a premium, per year? Forward minus spot, divided by spot. Then times twelve over the months, times a hundred. Eighty-six point zero two three two, minus eighty-five point six. Divided by eighty-five point six, times four, times a hundred, equals. One point nine eight. The gap. Exams also run it backwards, with no options. Premium two point four percent a year, two months. Two point four, divided by twelve, times two, equals. Point four percent. So eighty-three point five, times one point zero zero four, equals. Eighty-three point eight three four zero. One condition. The premium follows the interest gap fully only when both currencies are freely convertible. For the rupee, exporters' and importers' demand also moves it. Pause check for chapter two. One. Points zero point two four, zero point two zero. Premium or discount? Discount. Big then small, so take away. Two. Which currency trades at a forward discount, the higher-interest one or the lower? The higher-interest one. [seriously] If you remember one thing from chapter two: small then big, add; and the premium is the interest gap. Chapter three. First, from chapter two. Zero point three six, zero point three nine. Add or take away? Add. Now, like our importer, a customer often doesn't know the exact day. So he picks a window: the option period. The window is at most one month. The contract states the first and the last date. And the customer chooses the day of delivery inside it. \"Second month\" means from the end of month one to the end of month two. \"Third month\", from the end of month two to the end of month three. But which rate does the bank quote for a whole window? The date in it that's best for the bank. Selling, it wants the most rupees. Buying, it wants to pay the fewest. So, if the bank is selling dollars at a premium, it charges the premium to the last date. The highest rate. If the bank is buying dollars at a premium, it gives the premium only to the first date. The lowest rate. That's the exam convention, not an F-E-D-A-I rule. Our importer doesn't know the day. So the bank sells him dollars, delivery any day in the second month. Premium, so which date? Pause. The last date, end of month two. Two-month ask, eighty-six point zero one. Plus the T-T selling margin, point one two percent. Eighty-six point zero one, times one point zero zero one two, equals. Eighty-six point one one three two. That's his rate. Round it to four decimals first. Eighty-six point one one three two, times fifty thousand, equals. Forty-three lakh, five thousand, six hundred sixty rupees. Fixed today. Your turn. An exporter sells the bank dollars, delivery in the third month. T-T buying margin, point zero eight percent. Same points; the card is still up. Pause the video. The bank buys at a premium, so only to the first date, the end of month two. Two-month bid, eighty-five point nine six, times point nine nine nine two. Eighty-five point eight nine one two. Did you get eighty-six point zero seven one one? You used three-month points, the last date. That's the trap. Pause check for chapter three. One. How long can an option period be? One month at most. Two, the twist. The bank buys dollars at a discount. First date or last date? The last date. The discount is biggest there, so the rate is lowest. [seriously] If you remember one thing from chapter three: pick the date that's best for the bank. Chapter four. First, from chapter three. Bank selling, premium. First date or last? Last. Now, a usance bill: a bill with time to pay. The buyer pays sixty days after sight, after he first sees the bill. The bank buys the bill today. The dollars come in later, so the bank prices them for that later date. That's a forward rate. How long does the bank wait? First the bill travels abroad, and the money comes back. That's the normal transit period. For a foreign currency bill not under a letter of credit, F-E-D-A-I sets it at twenty-five days. For a bill payable after sight, the bank adds it to the usance. Sixty plus twenty-five, eighty-five days. Premium, and the bank is buying. Round up to three months, or down to two? Down, to two completed months. Rounding up would give more premium than he has earned. Exam convention again. At a discount, it's the other way. Round up to the next month. A bigger discount gives a lower rate, again in the bank's favour. Two-month bid, eighty-five point nine six. Less the bill buying margin, point one five percent. Times point nine nine eight five, equals. Eighty-five point eight three one one. Rounded first: eighty-five point eight three one one, times twenty thousand, equals. Seventeen lakh, sixteen thousand, six hundred twenty-two rupees. And the bank recovers interest for those eighty-five days upfront. One exception. If the bill has a fixed due date, the bank already knows when it's paid. Then the transit period doesn't apply. [seriously] If you remember one thing from chapter four: usance plus transit, round in the bank's favour, then the margin. Back to our importer. Wait and hope, or fix the rate? He fixes it, at eighty-six point one one three two, to know his cost. Now the map, from memory. Branch one. Spot is which day? The second working day; forwards count from it. Branch two. Small then big? Premium, add; it's the interest gap. Branch three. The option period? Up to a month, priced at the bank's best date. Branch four. A usance bill? Usance plus transit, rounded in the bank's favour. That's the map. Homework. Use discount points, zero point two four, zero point two zero, for one month. The bank sells, delivery in the second month. Which date, and what rate? Next class: the exporter's buyer pays a month early. What happens to his forward contract? [warmly] Thank you for staying till the end. Keep that calendar in mind, and we'll meet again soon."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
