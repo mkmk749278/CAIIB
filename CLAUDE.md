@@ -100,7 +100,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04–A06 locked (A07 locked earlier); fix A08 c1 from its three reviews, re-review, voice page; then A09 onward:** fact sheet →
+    A04–A06 locked (A07 locked earlier). A08 c2 written (all c1 High/Medium fixed, `A/A08/review_ack_c1.md`): next run its fresh re-review (c2), apply, lock, voice page, greetings already in; then A09 (fact sheet `A4.4-A4.10_A09.md` drafted, URR 725 / ISBP rows to verify) onward:** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
