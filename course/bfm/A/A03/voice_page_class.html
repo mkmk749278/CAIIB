@@ -1,0 +1,150 @@
+<title>A03 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A03 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A03/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · The ladder in one minute + Chapter 2 · Four rates from one quote + Chapter 3 · Eight deals, eight rates + Chapter 4 · No options + Close (N001–N060)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N060", "text": "[warmly] Welcome, everyone. Calculators ready? Today we practise. Last time I asked which sum trips people most. Many learners find bill selling the hardest. Today we fix that, and do it fast. In the exam you'll have a little over a minute a question. Here's a board of eight deals. For each, which rate? Just guess for now, quickly. We'll come back to it. Chapter one. From two classes ago. Say the ladder, top to bottom, before I show it. Bill selling. T-T selling. The market, bid and ask. T-T buying. Bill buying. Selling rates climb up from the ask. Buying rates come down from the bid. And bill selling sits on top of T-T selling. One more tool. To add a percent, multiply by one plus it. To take a percent off, multiply by one minus it. Quick one. Less point one five percent. What do you multiply by? Point nine nine eight five. And plus point one two percent? One point zero zero one two. Good. That's all the tools we need. Chapter two. First, from chapter one: plus point one two percent, what do you multiply by? One point zero zero one two. Good. Sum one, I do it with you. Press along. The interbank dollar is eighty-five point six zero, eighty-five point six two. Margins: T-T buying point zero eight percent. Bill buying point one five. T-T selling point one two. Bill selling, another point one five on T-T selling. T-T buying first. Which number do we start from, the bid or the ask? The bid. Buying comes down from the bid. Eighty-five point six zero, times point nine nine nine two, equals. Eighty-five point five three one five. Bill buying. Straight off the bid, with a bigger margin. Not off T-T buying. Eighty-five point six zero, times point nine nine eight five. Eighty-five point four seven one six. T-T selling. From the ask. Eighty-five point six two, times one point zero zero one two. Eighty-five point seven two two seven four four. Rounded to four decimals, eighty-five point seven two two seven. The exam convention: if the fifth decimal is five or more, round up. Never just cut it off. But keep the full figure on your screen, for one job only: building bill selling. Don't clear it. Bill selling. Press times one point zero zero one five, right on that full figure. Eighty-five point eight five one three. Four rates, one quote. That's sum one. Now sum two, and you do the last step. A euro remittance of five thousand euros comes in. Interbank euro is ninety-nine point two zero, ninety-nine point two four. T-T buying margin, point zero eight percent. Which rate? T-T buying, because the money comes in by wire. Ninety-nine point two zero, times point nine nine nine two. Ninety-nine point one two zero six. And the exam convention for every rupee amount: multiply by the rate rounded to four decimals. Now your step. How many rupees for five thousand euros? Pause and press. Five thousand times ninety-nine point one two zero six. Four lakh, ninety-five thousand, six hundred three rupees. Sum three is all yours. An importer retires a bill of eight thousand pounds, with no forward cover. Interbank pound, one hundred fourteen point five zero, one hundred fourteen point five five. T-T selling margin point one two percent. Bill selling, another point one five. First, which rate? Then the rate, then the rupees. Pause the video, and take your time. Bill selling, for an import bill without cover. One fourteen point five five, times one point zero zero one two. Then times one point zero zero one five. One fourteen point eight five nine five. Times eight thousand, using the rounded rate. Nine lakh, eighteen thousand, eight hundred seventy-six rupees. Now, did anyone get one fourteen point eight five nine three? Then you added both margins to the ask in one go. Point two seven percent. That's a different answer. In the exam, both numbers may be in the options. The two-step answer is right, unless the question says the margin is on the market rate. Sum four, quickly. Twenty-five thousand dollars, an export bill bought at sight, the dollar quote from sum one. Rate, then rupees. Pause. Bill buying, eighty-five point four seven one six. Times twenty-five thousand. Twenty-one lakh, thirty-six thousand, seven hundred ninety rupees. Before interest for the transit days, the days the bill takes to be paid. Pause check for chapter two. One. For T-T selling, do you start from the bid or the ask? The ask. Two, the twist. You've rounded T-T selling. Do you load bill selling on the rounded figure, or the full one? The full one. Usually the answer comes out the same. But use the full figure, so you're never one digit off. [seriously] If you remember one thing from chapter two: buying from the bid, selling from the ask, and bill selling in two steps. Chapter three. Back to our board of eight deals. First, from chapter two. Bill buying: from the bid or the ask? The bid. Now the board. I'll read a deal. You say the rate, before I do. An inward remittance, paid in rupees. T-T buying. A fee sent abroad by wire? T-T selling. An export bill bought at sight? Bill buying. An import bill retired, no cover? Bill selling. Now four harder ones. A traveller buys dollar notes for a trip. The bank's selling rate for notes. Notes have their own rate, with the widest spread. In a sum, it's given. An N-R-I has an F-C-N-R B deposit. That's a foreign currency fixed deposit an N-R-I keeps in India. It matures, and he wants rupees. Which rate? T-T buying. The dollars are with the bank, and it buys them. The other way, his N-R-E rupees into a new F-C-N-R deposit, is T-T selling. N-R-E is an N-R-I's rupee account in India. That's the in-and-out rule, as exam sums use it. A customer brings a dollar cheque drawn on a bank abroad, and the bank buys it today. Bill buying, as exam sums treat it. The bank pays first and collects later, just like a bill. If it only sends the cheque for collection, T-T buying, after the Nostro is credited. Last one, the trap. An export bill the bank bought comes back unpaid, before the bank has turned it into a rupee debt. Many say bill buying, the same rate as the purchase. Which rate is it? T-T selling. The bank undoes its purchase, so it flips to the selling side. The foreign bank's charges too, plus interest. How did your guesses from the start do? If you got six or more, well done. [seriously] If you remember one thing from chapter three: first ask, is the money coming in or going out? Then, does it move at once, or does the bank pay first? And if a deal is undone, flip. Chapter four. First, from chapter three: a returned export bill, which rate? T-T selling. Now, some exam sums come with no options. You key in the answer. So all four decimals, and paise, must be right. Three quick ones. One. An N-R-I's F-C-N-R deposit of thirty thousand dollars matures, paid in rupees. Interbank eighty-five point four zero, eighty-five point four two. T-T buying margin point zero eight percent. Rupees? Pause. T-T buying, eighty-five point three three one seven. Times thirty thousand. Twenty-five lakh, fifty-nine thousand, nine hundred fifty-one rupees. Two. An export bill of twenty thousand dollars, bought earlier, comes back unpaid. Use sum one's quote and margins, still on your screen. Amount to recover, before interest? Pause. T-T selling, eighty-five point seven two two seven. Times twenty thousand. Seventeen lakh, fourteen thousand, four hundred fifty-four rupees. Three, the yen. Yen is quoted per hundred yen. Fifty-seven point four zero, fifty-seven point four five, per hundred. Build the rate per hundred, then multiply by the yen divided by a hundred. A customer sends five lakh yen abroad. T-T selling margin point one five percent. Rupees? Pause. Fifty-seven point four five, times one point zero zero one five. Fifty-seven point five three six two, per hundred. Times five thousand. Two lakh, eighty-seven thousand, six hundred eighty-one rupees. If you forgot to divide by a hundred, you got a crore-sized answer. Always check that the rupees look sensible. Now the map, from memory. Branch one. Where do buying rates start, and selling rates? Buying from the bid, selling from the ask. Bill selling in two steps. Branch two. A returned export bill? T-T selling. Undo, flip. That's the map. You can now build all four rates from one quote, pick the rate for eight common deals, and key in a no-options answer. That's the rate side of A-one point seven. If a sum went wrong, rewatch chapter two and press along. Homework. Take any quote you like, and build the four rates. Two minutes, on the calculator. Next class: cross rates. When the bank has no direct quote for a currency, how does it make one? [warmly] Good work today. Keep the calculator close, and see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

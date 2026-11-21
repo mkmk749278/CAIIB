@@ -1,6 +1,6 @@
-# A03 · "Four rates in two minutes" · CLASS EDITION (script c2, with cue sheet) · DRILL (N)
+# A03 · "Four rates in two minutes" · CLASS EDITION (script c3, with cue sheet) · DRILL (N)
 
-- **Status**: c2, 2026-11-21: all High and Medium findings of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-21. Standard style, drill format: the time goes to sums (`course/spec/lesson_spec.md`).
+- **Status**: **c3 locked, 2026-11-21**: re-review `review_c2.md` ADOPT WITH FIXES (0 H, 1 M, 6 L), all applied; no further re-review needed. c2, 2026-11-21: all High and Medium findings of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-21. Standard style, drill format: the time goes to sums (`course/spec/lesson_spec.md`).
 - **Plan**: `course/bfm/A/plans_A.md` §A03. Course order v4: A02 → **A03** → A04.
 - **Syllabus**: A1.6 (FEDAI merchant-rate rules), A1.7 (forex arithmetic).
 - **Facts**: `research/bfm/facts/A1.6-A1.7_A03.md` (and A01's sheet for the rate rules); rows cited as [F3], [A01-F13].
@@ -11,7 +11,7 @@
 - **Money**: all quotes and margins illustrative, labelled on screen.
 - **Holds**: questions at least 3 s; "your turn" sums 12–15 s (the learner presses keys); map 5 s.
 - **Say it right**: rates digit by digit after the point ("eighty-five point five three one five").
-- **Length target**: about 11–12 minutes (drill). Chapters: 1 ladder (~1.5 min) · 2 four rates (~5.5 min) · 3 eight
+- **Length target**: about 13–14 minutes (drill). Chapters: 1 ladder (~1.5 min) · 2 four rates (~5.5 min) · 3 eight
   deals (~3 min) · 4 no options (~2.5 min) · close (~1 min).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Calculator keys light as spoken.
 
@@ -53,8 +53,8 @@ N010 · One point zero zero one two. Good. That's all the tools we need.
 
 ## Chapter 2 · Four rates from one quote
 
-N011 · Chapter two. Sum one, I do it with you. Press along. The interbank dollar is eighty-five point six zero, eighty-five point six two.
-> 1 S: chapter title "2 · Four rates from one quote" · 2 S: quote card "USD/INR 85.60 / 85.62 (illustrative)"
+N011 · Chapter two. First, from chapter one: plus point one two percent, what do you multiply by? One point zero zero one two. Good. Sum one, I do it with you. Press along. The interbank dollar is eighty-five point six zero, eighty-five point six two.
+> 1 S: chapter title "2 · Four rates from one quote" · H: 3 s after the question · 2 S: quote card "USD/INR 85.60 / 85.62 (illustrative)"
 
 N012 · Margins: T-T buying point zero eight percent. Bill buying point one five. T-T selling point one two. Bill selling, another point one five on T-T selling.
 > 1 S: margin card, four lines, each appearing as spoken [F1]
@@ -62,23 +62,35 @@ N012 · Margins: T-T buying point zero eight percent. Bill buying point one five
 N013 · T-T buying first. Which number do we start from, the bid or the ask?
 > 1 S: the quote card, both numbers glowing · H: 3 s
 
-N014 · The bid. Buying comes down from the bid. Eighty-five point six zero, times point nine nine nine two, equals. Eighty-five point five three one five.
-> 1 S: keys 85.60 × 0.9992 = · H: 6 s · 2 B: box "TT buying 85.5315"
+N014 · The bid. Buying comes down from the bid. Eighty-five point six zero, times point nine nine nine two, equals.
+> 1 S: keys 85.60 × 0.9992 = · H: 6 s
 
-N015 · Bill buying. Straight off the bid, with a bigger margin. Not off T-T buying. Eighty-five point six zero, times point nine nine eight five. Eighty-five point four seven one six.
-> 1 S: keys 85.60 × 0.9985 = · H: 6 s · 2 B: box "bill buying 85.4716 (off the bid, not off TT buying)"
+N014a · Eighty-five point five three one five.
+> 1 B: box "TT buying 85.5315"
 
-N016 · T-T selling. From the ask. Eighty-five point six two, times one point zero zero one two. Eighty-five point seven two two seven four four.
-> 1 S: keys 85.62 × 1.0012 = · H: 6 s · 2 N: display "85.722744"
+N015 · Bill buying. Straight off the bid, with a bigger margin. Not off T-T buying. Eighty-five point six zero, times point nine nine eight five.
+> 1 S: keys 85.60 × 0.9985 = · H: 6 s
 
-N017 · Rounded to four decimals, eighty-five point seven two two seven. The rule: if the fifth decimal is five or more, round up. Never just cut it off.
+N015a · Eighty-five point four seven one six.
+> 1 B: box "bill buying 85.4716 (off the bid, not off TT buying)"
+
+N016 · T-T selling. From the ask. Eighty-five point six two, times one point zero zero one two.
+> 1 S: keys 85.62 × 1.0012 = · H: 6 s
+
+N016a · Eighty-five point seven two two seven four four.
+> 1 N: display "85.722744"
+
+N017 · Rounded to four decimals, eighty-five point seven two two seven. The exam convention: if the fifth decimal is five or more, round up. Never just cut it off.
 > 1 B: box "TT selling 85.7227" · 2 C: card "4 decimals: 5th digit ≥ 5 → round up" [F1]
 
 N017a · But keep the full figure on your screen, for one job only: building bill selling. Don't clear it.
 > 1 B: underline the display "keep 85.722744 → for bill selling only"
 
-N018 · Bill selling. Press times one point zero zero one five, right on that full figure. Eighty-five point eight five one three.
-> 1 S: keys × 1.0015 = on 85.722744 · H: 6 s · 2 B: box "bill selling 85.8513"
+N018 · Bill selling. Press times one point zero zero one five, right on that full figure.
+> 1 S: keys × 1.0015 = on 85.722744 · H: 6 s
+
+N018a · Eighty-five point eight five one three.
+> 1 B: box "bill selling 85.8513"
 
 N019 · Four rates, one quote. That's sum one. Now sum two, and you do the last step.
 > 1 S: the four boxes on the ladder · 2 N: "sum 2: you finish it"
@@ -89,8 +101,8 @@ N020 · A euro remittance of five thousand euros comes in. Interbank euro is nin
 N021 · Which rate? T-T buying, because the money comes in by wire. Ninety-nine point two zero, times point nine nine nine two. Ninety-nine point one two zero six.
 > 1 N: "inward remittance → TT buying" [F3] · 2 S: keys 99.20 × 0.9992 = · 3 B: box "99.1206"
 
-N021a · One rule for every rupee amount: multiply by the rate rounded to four decimals.
-> 1 C: card "rupees = amount × rate rounded to 4 decimals" [F1]
+N021a · And the exam convention for every rupee amount: multiply by the rate rounded to four decimals.
+> 1 C: card "exam convention: rupees = amount × rate rounded to 4 decimals" [F1]
 
 N022 · Now your step. How many rupees for five thousand euros? Pause and press.
 > 1 S: blank "₹ = ?" · H: 12 s
@@ -163,7 +175,7 @@ N043 · The bank's selling rate for notes. Notes have their own rate, with the w
 N044 · An N-R-I has an F-C-N-R B deposit. That's a foreign currency fixed deposit an N-R-I keeps in India. It matures, and he wants rupees. Which rate?
 > 1 G: card 2 · H: 3 s
 
-N045 · T-T buying. The dollars are with the bank, and it buys them. The other way, his N-R-E rupees into a new F-C-N-R deposit, is T-T selling. That's the in-and-out rule, as exam sums use it.
+N045 · T-T buying. The dollars are with the bank, and it buys them. The other way, his N-R-E rupees into a new F-C-N-R deposit, is T-T selling. N-R-E is an N-R-I's rupee account in India. That's the in-and-out rule, as exam sums use it.
 > 1 N: card 2 "FCNR(B) → rupees: TT buying · rupees → FCNR(B): TT selling (convention)" [F9]
 
 N046 · A customer brings a dollar cheque drawn on a bank abroad, and the bank buys it today.
@@ -172,7 +184,7 @@ N046 · A customer brings a dollar cheque drawn on a bank abroad, and the bank b
 N047 · Bill buying, as exam sums treat it. The bank pays first and collects later, just like a bill. If it only sends the cheque for collection, T-T buying, after the Nostro is credited.
 > 1 N: card 7 "cheque bought: bill buying (exam convention) · on collection: TT buying" [F10]
 
-N048 · Last one, the trap. An export bill the bank bought comes back unpaid, before it's crystallised. Many say bill buying, the same rate as the purchase. Which rate is it?
+N048 · Last one, the trap. An export bill the bank bought comes back unpaid, before the bank has turned it into a rupee debt. Many say bill buying, the same rate as the purchase. Which rate is it?
 > 1 G: card 8 · H: 3 s
 
 N049 · T-T selling. The bank undoes its purchase, so it flips to the selling side. The foreign bank's charges too, plus interest.
@@ -186,8 +198,8 @@ N051 · [seriously] If you remember one thing from chapter three: first ask, is 
 
 ## Chapter 4 · No options
 
-N052 · Chapter four. Some exam sums come with no options. You key in the answer. So all four decimals, and paise, must be right. Three quick ones.
-> 1 S: chapter title "4 · No options"; a blank answer box with a keypad
+N052 · Chapter four. First, from chapter three: a returned export bill, which rate? T-T selling. Now, some exam sums come with no options. You key in the answer. So all four decimals, and paise, must be right. Three quick ones.
+> 1 S: chapter title "4 · No options"; a blank answer box with a keypad · H: 3 s after the question
 
 N052a · One. An N-R-I's F-C-N-R deposit of thirty thousand dollars matures, paid in rupees. Interbank eighty-five point four zero, eighty-five point four two. T-T buying margin point zero eight percent. Rupees? Pause.
 > 1 S: card "FCNR(B) USD 30,000 → ₹ · 85.40 / 85.42 · TT buying 0.08%" (illustrative) · H: 15 s
@@ -195,8 +207,8 @@ N052a · One. An N-R-I's F-C-N-R deposit of thirty thousand dollars matures, pai
 N052b · T-T buying, eighty-five point three three one seven. Times thirty thousand. Twenty-five lakh, fifty-nine thousand, nine hundred fifty-one rupees.
 > 1 S: keys 85.40 × 0.9992 = → 85.33168 · 2 B: box "₹25,59,951.00" [F9]
 
-N052c · Two. An export bill of twenty thousand dollars, bought earlier, comes back unpaid. Use sum one's quote and margins. Amount to recover, before interest? Pause.
-> 1 S: card "returned bill USD 20,000 · quote of sum 1" · H: 12 s
+N052c · Two. An export bill of twenty thousand dollars, bought earlier, comes back unpaid. Use sum one's quote and margins, still on your screen. Amount to recover, before interest? Pause.
+> 1 S: card "returned bill USD 20,000"; sum 1 answer boxes on screen (TT selling 85.7227) · H: 15 s
 
 N052d · T-T selling, eighty-five point seven two two seven. Times twenty thousand. Seventeen lakh, fourteen thousand, four hundred fifty-four rupees.
 > 1 B: box "₹17,14,454.00 (+ interest, charges)" [F7]
