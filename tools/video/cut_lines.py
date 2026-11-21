@@ -21,9 +21,21 @@ def script_lines(path):
     for para in re.split(r'\n\s*\n', body):
         # cue-sheet lines (">") are picture directions, never spoken text (PLAYBOOK §5e)
         para = '\n'.join(l for l in para.splitlines() if not l.lstrip().startswith('>'))
-        m = re.match(r'([NMR]\d\d[a-z]?) · (.*)', ' '.join(para.split()))
+        m = re.match(r'([NMR]\d{2,3}[a-z]?) · (.*)', ' '.join(para.split()))
         if m:
             out[m.group(1)] = m.group(2)
+    return out
+
+
+def script_holds(path):
+    """Holds written in the cue sheet as "H: n s" under a line (class-edition scripts), {line id: seconds}."""
+    body = open(path, encoding='utf-8').read().split('\n---\n', 1)[1]
+    out = {}
+    for para in re.split(r'\n\s*\n', body):
+        m = re.match(r'([NMR]\d{2,3}[a-z]?) · ', para.strip())
+        h = re.search(r'\bH: (\d+(?:\.\d+)?) s\b', para)
+        if m and h:
+            out[m.group(1)] = float(h.group(1))
     return out
 
 
