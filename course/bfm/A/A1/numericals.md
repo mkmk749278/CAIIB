@@ -12,7 +12,7 @@
 
 Why multipliers: the `%` key behaves differently on different basic calculators; a multiplier is one keystroke
 shorter and the same on all. **Trap**: adding both selling margins to the ask (`85.42 × 1.0025 =` → 85.63355)
-gives **85.6336**, one digit off.
+gives **85.6336**, one digit off. **Second trap (A01 c3, N042)**: putting only the bill-selling margin on the ask (`85.42 × 1.0015 =` → 85.54813) gives **85.5481**.
 
 Note: bill selling is loaded on the **unrounded** TT selling rate (85.50542). Loading on 85.5054 gives 85.633678,
 which still rounds to 85.6337.
