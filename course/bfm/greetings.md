@@ -13,3 +13,9 @@ videos running.
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.
+
+## Module B
+
+| Video | Greeting (first words) | Goodbye (last words) |
+|---|---|---|
+| B01 | "Hello and welcome, everyone. Today we open a new module." | "That's the first class of Module B done. Look after yourselves, and I'll see you in the next class." |
