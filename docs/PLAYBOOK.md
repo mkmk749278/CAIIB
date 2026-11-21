@@ -460,7 +460,11 @@ checks decide when a cut is ready, not a feeling.
   is compared word by word with its raw take (`tools/voice/check_enhanced.py`), each damaged span is re-enhanced from
   the raw take (`--tau 0.1`, 10 s clip, about 1 min on the session CPU), checked, and spliced in at the middle of the
   pauses on either side (length unchanged, so the timeline stays). Checking only the raw take, as on 2026-11-21, is
-  not enough.
+  not enough. The full check of A00 found two more: "simply skipped" → "simply skate" and "cash or ready" →
+  "cash already" (part 1, 5:11 and 5:44; small.en, medium.en and large-v3 compared). These two broke again on
+  re-enhancing at `--tau 0.1`, `0.3` and with more steps: only `--tau 0.0 --lambd 0.0` (or `--denoise_only`) kept them.
+  Short clips mislead the checker ("cash or ready" sounds like "already" even in the raw take when cut to 4 s): check
+  repairs in 8 s of context with large-v3. Owner's ear on the whole repaired take is still the last check.
 - **A00, the first lesson on the shared engine (2026-11-21).** The A07 timing engine (beats, notes, captions,
   scenes) now lives in `video/src/kit/flow.tsx` (`makeFlow(timeline, captionFixes)`), and Module A's pictures in
   `kit/forex.tsx` (counter, three-pocket coat, world strip, calendar boxes, see-saw, ledger, road, RBI's hand); A07
