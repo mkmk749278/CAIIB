@@ -1,6 +1,6 @@
 # A09 · "Count the days" · CLASS EDITION (script c2, with cue sheet)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked**, 2026-11-21: re-review c2 ADOPT WITH FIXES (0 H, 2 M), both Mediums and Lows 3–8, 10 applied (mechanical; no further round, per the reviewer). c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style (`course/spec/lesson_spec.md`): concepts, a date calendar, no sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A09. Course order v4: A08 → **A09** → A10.
 - **Syllabus**: A4.4 (UCP 600 articles), A4.5 (liabilities, with A08), A4.6 (document checks, with A10, A13), A4.9
@@ -10,7 +10,7 @@
 - **Rule version (opening card)**: "UCP 600 (ICC Publication No. 600, 2007 revision) · ISBP 821 (2023; syllabus: ISBP
   745) · URR 725 · as at 31 December 2026".
 - **ISBP edition**: the IIBF syllabus names ISBP 745; ICC replaced it with ISBP 821 on 3 July 2023, and in March 2026
-  decided not to revise UCP 600 or ISBP 821 [F21]. The lesson says both names (N033–N034).
+  decided not to revise UCP 600 or ISBP 821 [F21]. The lesson says both names (N041–N042).
 - **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Hello, everyone. Diaries open, please; today we count
   days."; goodbye "That's today's class. Count your days carefully, and I'll see you next time."
 - **Story**: A08's Tiruppur exporter and her Hamburg buyer. Her Indian bank confirmed the L-C and is the nominated
@@ -24,7 +24,7 @@
 - **Not in this video** (by plan or for length; all in the PDF traps page): eUCP 2.1; certificate of origin, packing
   list and bill of exchange desk cards (A10's case uses the B/L, invoice and insurance); Art. 14(g) (extra documents
   disregarded), 14(k) (shipper need not be the beneficiary); Art. 32 (instalments).
-- **Length target**: about 15 minutes (~1,900 spoken words + ~2 min of holds; 15.2 min at 145 wpm). Chapters: 1 the rule book (~2 min) ·
+- **Length target**: about 15 minutes (~1,870 spoken words + ~2 min of holds; ≈ 14.9 min at 145 wpm). Chapters: 1 the rule book (~2 min) ·
   2 the checking clock (~3.5 min) · 3 three documents (~2.5 min) · 4 the date calendar (~3.5 min) · 5 getting the money
   back (~2 min) · close (~1.5 min).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Pictures: the scrutiny desk with a
@@ -41,14 +41,14 @@ N001 · [warmly] Hello, everyone. Diaries open, please; today we count days.
 N002 · Last class, our Tiruppur exporter got a confirmed L-C from her Hamburg buyer. She shipped. Now she takes the documents to her bank.
 > 1 S: the A08 relay, faint; the "documents ←" lane glows
 
-N002a · Why it matters: L-C questions came in six of the seven exam cycles we studied. Many ask, how many days?
-> 1 N: "LC: 6 of 7 cycles · many 'how many days?'" [importance_map A-LC]
+N002a · Why it matters: L-Cs are asked almost every cycle, and recent papers asked, how many days?
+> 1 N: "LC: 6 of 7 cycles · FP Dec 2025: 'how many days?'" [importance_map A-LC; fullpaper_tagged Q7, Q8]
 
-N003 · Here's her week. The L-C expires on a Sunday. Monday is a bank holiday. Does she get one more day?
+N003 · Here's her week. The L-C expires on a Sunday. Monday is a bank holiday. Does she get more time?
 > 1 S: calendar strip, March 2027; Sunday 28 boxed "expiry"; Monday 29 "holiday (illustrative)"
 
-N004 · Some of you would say, a holiday always gives her one more day. Others, expiry is expiry. Who is right?
-> 1 S: two buttons "one more day" · "expiry is expiry" · H: 3 s
+N004 · Some of you would say, a holiday always gives her more time. Others, expiry is expiry. Who is right?
+> 1 S: two buttons "more time" · "expiry is expiry" · H: 3 s
 
 N005 · It depends on why the bank is shut. By the end of the class, you'll answer it, and name the article.
 > 1 G: the holiday glows; a cloud icon appears beside it, "and if a cyclone?"
@@ -96,13 +96,13 @@ N017 · No. It must be written into the credit. [seriously] If you remember one 
 N018 · Chapter two. First, from chapter one. Which shelf holds the checking?
 > 1 S: chapter title "2 · The checking clock" · H: 3 s
 
-N019 · Fourteen to sixteen. Now picture the desk. Handing the documents to a bank under the L-C is called presentation.
+N019 · Fourteen to sixteen. Handing the documents to a bank under the L-C is called presentation.
 > 1 S: the scrutiny desk; three documents land on it; an empty five-slot clock above · 2 N: "presentation = handing in the documents"
 
 N020 · Which banks check them? Think.
 > 1 S: three empty labels over the desk · H: 3 s
 
-N021 · The nominated bank, where she presents, acting on its nomination. Then the confirming bank, and the issuing bank. Each checks on its own.
+N021 · The nominated bank, where she presents, acting on its nomination. Then the confirming bank, and the issuing bank.
 > 1 N: "examined by: nominated (acting on its nomination) · confirming · issuing" [F2]
 
 N022 · They check the documents alone, on their face. Never the goods.
@@ -129,7 +129,7 @@ N028 · U-C-P five hundred said a reasonable time, up to seven banking days. Six
 N029 · What does the checker look for? Not identical words. Data must not conflict, within a document, between documents, or with the credit.
 > 1 C: card "Art. 14(d): need not be identical · must not conflict" [F5]
 
-N030 · Two quick rules. Say the L-C says "goods must be new", but asks for no document to prove it. The checker ignores that line.
+N030 · Say the L-C says "goods must be new", but asks for no document to prove it. The checker ignores that line.
 > 1 C: card "Art. 14(h): a condition with no document named → ignored" [F8]
 
 N031 · And a document may be dated before the L-C was issued. Never after it is presented.
@@ -144,7 +144,7 @@ N033 · The issuing bank may ask its buyer to waive, that is, accept the discrep
 N034 · A bank that misses the notice, or the five days, loses the right to refuse. The rules say it is precluded.
 > 1 N: "miss the notice → can't refuse later (precluded)" [F11]
 
-N035 · One more case. Her bank finds the documents complying, pays her, and posts them to Hamburg. The courier loses them. Must Hamburg still pay?
+N035 · Her bank finds the documents complying, pays her, and posts them to Hamburg. The courier loses them. Must Hamburg still pay?
 > 1 S: a courier van; the envelope vanishes · H: 3 s
 
 N036 · Yes. Found complying and sent on, they must be paid for, even if lost on the way.
@@ -197,7 +197,7 @@ N050 · So a broker signing only as broker fails. A broker signing as the insure
 N051 · Dated no later than shipment, unless it shows cover from the shipment date. Quick one. If the credit names no cover amount?
 > 1 N: "dated ≤ shipment, or cover effective from shipment" [F15] · H: 3 s
 
-N052 · At least a hundred and ten per cent of the C-I-F or C-I-P value. You met C-I-F in our Incoterms class.
+N052 · At least a hundred and ten per cent of the C-I-F or C-I-P value.
 > 1 B: circle "110%" · 2 N: "≥ 110% of CIF / CIP value" [F15]
 
 N053 · Pause check for chapter three. One. Is I-S-B-P a rule?
@@ -223,13 +223,13 @@ N058 · The twenty-one days count when the credit asks for an original transport
 N059 · Her bill of lading shows shipped on board Thursday, the fourth of March. Expiry is Sunday the twenty-eighth. What's her last day?
 > 1 S: tag "on board: Thu 4 Mar" · tag "expiry: Sun 28 Mar" · H: 6 s
 
-N060 · Thursday the twenty-fifth. Four plus twenty-one. The earlier date wins, so expiry on the twenty-eighth doesn't help her.
+N060 · Thursday the twenty-fifth. Four plus twenty-one, before the expiry.
 > 1 S: the strip fills 5 → 25; 25 circled "last day" · 2 B: cross out 28 [F4]
 
 N061 · Many of you think only the expiry date matters. It doesn't. Two limits; the earlier one wins. Documents presented too late are called stale.
 > 1 C: trap card "only expiry matters ✗ · earlier of expiry and shipment + 21 ✓ · late = stale"
 
-N062 · Now change one thing. She ships on the eleventh. Eleven plus twenty-one is thirty-two. March has thirty-one days, so that's the first of April.
+N062 · She ships on the eleventh. Eleven plus twenty-one is thirty-two. March has thirty-one days, so that's the first of April.
 > 1 S: tag moves "on board: Thu 11 Mar" · "shipment + 21: Thu 1 Apr"
 
 N063 · Now expiry, the twenty-eighth, comes first. But it's a Sunday, and Monday the twenty-ninth is a bank holiday. Her bank is simply closed.
@@ -256,7 +256,7 @@ N069 · Her way out: an amendment of the expiry, agreed by the banks, and accept
 N070 · [lightly] So pray for holidays, not cyclones.
 > 1 S: a small sun icon beside the holiday; the cloud fades
 
-N071 · One more shelf-five rule. "About" in an L-C allows ten per cent either way, on whatever it refers to.
+N071 · One more shelf-five rule. "About" or "approximately" in an L-C allows ten per cent either way, on whatever it refers to.
 > 1 C: card "Art. 30(a): 'about' = ±10% of the amount, quantity or unit price it refers to" [F18]
 
 N072 · Without it, a quantity may still vary five per cent, unless counted in units. Partial shipments are allowed, unless the L-C says no.
@@ -294,7 +294,7 @@ N081 · The authorisation is Hamburg's instruction to New York: pay the claiming
 N082 · Quick one. Does New York check the documents?
 > 1 G: the New York bank · H: 3 s
 
-N083 · Many of you would say yes. It never sees them, or even the credit. And no one certifies to it that they complied.
+N083 · Many of you would say yes. It never gets them, and it ignores the credit, even if sent a copy. And no one certifies to it that they complied.
 > 1 C: trap card "reimbursing bank checks documents ✗ · acts on the authorisation only ✓ · no compliance certificate" [F19, F20]
 
 N084 · Must New York pay? Only if it gave its own promise, a reimbursement undertaking.
@@ -303,7 +303,7 @@ N084 · Must New York pay? Only if it gave its own promise, a reimbursement unde
 N085 · It has up to three banking days after receiving the claim to process it. Its charges go to the issuing bank, unless agreed otherwise.
 > 1 C: card "URR: ≤ 3 banking days to process a claim (+ any pre-debit notice period) · charges: issuing bank" [F20] · 2 B: circle "3"
 
-N086 · And if New York doesn't pay? Hamburg still owes her bank, plus interest and costs. That's Article thirteen of U-C-P.
+N086 · And if New York doesn't pay? Hamburg still owes her bank. That's Article thirteen of U-C-P.
 > 1 N: "UCP 13: issuing bank stays liable" [F19]
 
 N087 · Pause check for chapter five. One. Who checks the documents: the reimbursing bank?
