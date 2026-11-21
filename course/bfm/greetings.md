@@ -15,3 +15,11 @@ videos running.
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.
+
+## Module B
+
+| Video | Greeting (first words) | Goodbye (last words) |
+|---|---|---|
+| B01 | "Hello and welcome, everyone. Today we open a new module." | "That's Module B begun. Rest well, and I'll see you in the next class." |
+| B02 | "Good to have you back. Let's pick up from the house we drew last time." | "That's the framework done. Close the notebook, stretch, and I'll see you in the next class." |
+| B03 | "Hi everyone. Pen, notebook and calculator, please. This one is a working class." | "That's the numbers class done. Two more sums on your own tonight, and we meet again next class." |

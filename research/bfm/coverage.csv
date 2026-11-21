@@ -88,14 +88,14 @@ A10.4,A,A10 Technology in International Banking,Fintech and its evolution in int
 A10.5,A,A10 Technology in International Banking,Delivery channels under fintech,A22,assigned,v3: moved to new A22 (A21 was overloaded)
 A10.6,A,A10 Technology in International Banking,Sample process of international trade using blockchain,A22,assigned,v3: moved to new A22 (A21 was overloaded)
 A10.7,A,A10 Technology in International Banking,Challenges in fintech,A22,assigned,v3: moved to new A22 (A21 was overloaded)
-B1.1,B,B1 Risk and Basic Risk Management Framework,"What is risk; linkages among risk, capital and return",B01,assigned,
-B1.2,B,B1 Risk and Basic Risk Management Framework,Why risk management,B01;B02,assigned,
+B1.1,B,B1 Risk and Basic Risk Management Framework,"What is risk; linkages among risk, capital and return",B01,assigned,B01 script v3 locked 2026-11-21 (reviews to v4 ADOPT)
+B1.2,B,B1 Risk and Basic Risk Management Framework,Why risk management,B01;B02,assigned,B01 part done 2026-11-21
 B1.3,B,B1 Risk and Basic Risk Management Framework,Basic risk management framework,B02,assigned,
-B2.1,B,B2 Risks in Banking Business,Risk identification in banking business,B01,assigned,
-B2.2,B,B2 Risks in Banking Business,The banking book,B01,assigned,
-B2.3,B,B2 Risks in Banking Business,The trading book,B01,assigned,
-B2.4,B,B2 Risks in Banking Business,Off-balance sheet exposures,B01;B06,assigned,
-B2.5,B,B2 Risks in Banking Business,Banking risks: definitions,B01,assigned,
+B2.1,B,B2 Risks in Banking Business,Risk identification in banking business,B01,assigned,B01 script v3 locked 2026-11-21 (reviews to v4 ADOPT)
+B2.2,B,B2 Risks in Banking Business,The banking book,B01,assigned,B01 script v3 locked 2026-11-21 (reviews to v4 ADOPT)
+B2.3,B,B2 Risks in Banking Business,The trading book,B01,assigned,B01 script v3 locked 2026-11-21 (reviews to v4 ADOPT)
+B2.4,B,B2 Risks in Banking Business,Off-balance sheet exposures,B01;B06,assigned,B01 part done 2026-11-21
+B2.5,B,B2 Risks in Banking Business,Banking risks: definitions,B01,assigned,B01 script v3 locked 2026-11-21 (reviews to v4 ADOPT)
 B3.1,B,B3 Risk Regulations in Banking Industry,Regulation of banking: necessities and goals,B04,assigned,
 B3.2,B,B3 Risk Regulations in Banking Industry,Need for risk-based regulation in a changed world,B04,assigned,
 B3.3,B,B3 Risk Regulations in Banking Industry,Basel I: the Basel Capital Accord,B04,assigned,
