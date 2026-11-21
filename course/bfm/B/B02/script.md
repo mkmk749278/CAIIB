@@ -14,7 +14,7 @@
 - **Say it right**: R-M-C-B, A-L-C-O "AL-co", C-R-O, C-R-M-C, COSO "KOH-so", E-R-M, C-A-M-E-L-S "camels", M-D and
   C-E-O. Numbers in words.
 - **Greeting and goodbye** (checked against `course/bfm/greetings.md`): "Good to have you back. Let's pick up from the
-  house we drew last time." / "Good work today. Close the notebook, stretch, and I'll see you in the next class."
+  house we drew last time." / "That's the framework done. Close the notebook, stretch, and I'll see you in the next class."
 - **Picture**: the same house from B01. Today it gets a family tree of committees under the roof (the Board at the
   top), three walls round it (the three lines of defence), a dial on the door (risk appetite, with a green band for
   tolerance and a red line for capacity), and three test dials in the yard (sensitivity, scenario, stress). The
@@ -514,5 +514,5 @@ N156 · If any line made you hesitate, rewatch that chapter. Homework. Tonight, 
 N157 · Next class, we pick up the one tool every risk number needs. The calculator. Here's a question for you. Can a basic calculator find a standard deviation? Think about it.
 > 1 S: the 8-function calculator · 2 S: the question written large
 
-N158 · Good work today. Close the notebook, stretch, and I'll see you in the next class.
+N158 · That's the framework done. Close the notebook, stretch, and I'll see you in the next class.
 > 1 N: "that's our class" · 2 S: the page closes; map B in the corner with branches 1 and 2 lit

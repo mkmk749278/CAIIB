@@ -14,8 +14,8 @@
   totals are written in the notebook table. Squares are keyed as "d × d =".
 - **Holds**: as "H: n s". Pause questions at least 3 s; calculator tries 15–25 s; chapter ends 1 s.
 - **Say it right**: "sigma" for σ; "root" for √; numbers in words; "point" for decimals.
-- **Greeting and goodbye** (checked against `course/bfm/greetings.md`): "Hi everyone. Calculators out today, this one
-  is a working class." / "That's the numbers class done. Two more sums on your own tonight, and we meet again next
+- **Greeting and goodbye** (checked against `course/bfm/greetings.md`): "Hi everyone. Pen, notebook and calculator,
+  please. This one is a working class." / "That's the numbers class done. Two more sums on your own tonight, and we meet again next
   class."
 - **Picture**: the on-screen basic calculator pressing real keys; a notebook table (value · deviation · square);
   dots scattered round a mean line; a bell curve with 1, 2, 3 SD bands; a "√ stairs" picture for volatility over
@@ -26,7 +26,7 @@
 
 ## Warm-up
 
-N001 · Hi everyone. Calculators out today, this one is a working class.
+N001 · Hi everyone. Pen, notebook and calculator, please. This one is a working class.
 > 1 S: notebook page opens; the rule-version card · 2 S: the basic calculator slides in at the right and stays · 3 N: "Module B · class 3"
 
 N002 · Last two classes were words. Today is numbers. By the end, you'll find a standard deviation with just these keys, and you'll scale volatility from one day to a year, and back.
