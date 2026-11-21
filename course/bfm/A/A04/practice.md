@@ -1,4 +1,4 @@
-# A04 practice · DRAFT from the examiner review (c1, 2026-11-21)
+# A04 practice (c2, 2026-11-21; from the examiner review draft, every key in `tools/check/fx_cross_rates.py`)
 
 Own questions; all quotes illustrative. Rates to 4 decimals (round half up); rupees to paise. Every key checked with
 Python `Decimal` (review_c1_examiner.md). Basic 8-function calculator; key presses shown.
