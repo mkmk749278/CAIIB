@@ -18,6 +18,10 @@ Never a new loose doc.
 ## Current stage (update this block whenever the stage changes)
 - **Paper 1 = CAIIB Bank Financial Management (BFM)** (owner, 2026-11-14). Target exam **May/June 2027**, so rules
   as at the **31 Dec 2026** cut-off unless the owner says otherwise.
+- **NOW (owner, 2026-11-21): write every BFM script first. No recording, no video, no builds until all scripts are
+  done.** Per lesson: fact sheet → script with cue sheet → three independent reviews → fix until ADOPT → voice page
+  (`voice_blocks.py`). Then compare the whole written course with the public classes (31 Module A captions, Drive
+  `BFM/_downloads/playlist_GdPR6Y/`) and the module exam tests. The A00 builds below are paused. PLAYBOOK §7.
 - **Process (owner, 2026-11-19):** exact video order → one-page plan per video → every full script **with its cue
   sheet** → lock all → voice and build one by one; anything found while building goes back into the scripts.
   - **Independent review replaces the owner's content review (owner, 2026-11-20: "always take independent session
@@ -66,7 +70,9 @@ Never a new loose doc.
     (3 parts, c5) https://claude.ai/artifact/VNQKFu8nxyVaij52dffmkj; takes go to Drive
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
-  - **Next**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
+  - **Next (from 2026-11-21, scripts first)**: (a) course plan v4: adopt the proposed splits, give the six "partial"
+    sub-topics (C1.2, C2.4, C7.2, C7.5, D5.3, D5.4) a clear home; (b) the three reviews of A01 v6, then fact sheet →
+    script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
     engine `kit/flow.tsx` + pictures `kit/forex.tsx`; 720p review cut on the runners, then the checks, then the

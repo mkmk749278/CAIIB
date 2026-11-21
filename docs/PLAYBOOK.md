@@ -487,6 +487,16 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-21: **all scripts first; no recording, no video until then.** Owner: "before going to the 31 videos, we
+  first complete the scripts for all our BFM videos. No audio recording, no video for now. We complete the scripts and
+  audio blocks, then we get an idea what actually we are covering." Why: the owner's worry is one thing only: full
+  syllabus, right content, right depth, explained the way bankers need, in simple words that are easy to remember. That
+  can only be judged on the whole written course, not lesson by lesson while building media. Order per lesson: fact
+  sheet → script with cue sheet (teaching method) → three independent reviews → fixes until ADOPT → voice page. The
+  A00 builds (v3 and class edition) and the compare with public classes (31 Module A captions in Drive
+  `BFM/_downloads/playlist_GdPR6Y/`) wait until the scripts are done. Same day, a lesson learned: recalled questions
+  are memories, not papers; they show that a topic IS asked, never that one is not, so they set practice volume only
+  (as decided 2026-11-20), never lesson length or what to leave out.
 - 2026-11-21: **no AI-voice disclosure in the lessons.** Owner: "Why do we need to disclose that the voice is AI? Why
   give that feel to students? Remove the AI lines and source lines." The spoken line and the opening card are removed
   (A00 class edition c4, A00/A07 title cards). Kept: the teacher never claims to be a person, has no name and is never
