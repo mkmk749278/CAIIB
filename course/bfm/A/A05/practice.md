@@ -1,4 +1,4 @@
-# A05 practice (examiner draft, 2026-11-21; every number checked with Python `Decimal`, review_c1_examiner.md)
+# A05 practice (c2, 2026-11-21; from the examiner review draft; every number in `tools/check/fx_forwards.py`)
 
 Own questions; all quotes, points, margins and rates illustrative. Rates to 4 decimals (round half up); rupees to
 paise. Basic 8-function calculator; key presses shown. Weekdays checked with Python `datetime`.
@@ -40,7 +40,7 @@ Answer (c): `2.2 ÷ 12 × 3 =` 0.55%; `84.90 × 1.0055 =` 85.36695 → 85.3670; 
 Answer **85.8969**: `84.90 × 1.034 ÷ 1.022 =` 85.896869. (85.9188 is the shortcut spot × (1 + 2.4% × ½);
 83.9147 inverts the rates; 86.8517 uses full-year rates.)
 
-**P7 (option period, sale at a discount, MCQ; the A05 homework).** Using the common quote, the bank sells USD to an
+**P7 (option period, sale at a discount, MCQ).** Using the common quote, the bank sells USD to an
 importer, delivery at his option during the second month. Rate?
 (a) 84.7816 (b) **84.9118** (c) 84.8417 (d) 85.1521
 Answer (b): sale + discount → the first date of the window (end of month 1): `84.93 − 0.12 =` 84.81;
@@ -51,3 +51,7 @@ Answer (b): sale + discount → the first date of the window (end of month 1): `
 Answer **₹12,65,299.50**: 45 + 25 = 70 days = 2 months 10 days; discount, bank buying → round **up** to 3 months:
 `84.90 − 0.42 =` 84.48; `× 0.9985 =` 84.35328 → 84.3533; `× 15000 =` 12,65,299.50. (Rounding down to 2 months gives
 84.4631 and ₹12,66,946.50; no margin gives ₹12,67,200.00.)
+
+**Homework answer (N066).** Spot 85.60 / 85.62, one-month discount points 0.24 / 0.20; bank sells, delivery in the
+second month. Sale + discount → the **first** date (end of month 1): `85.62 − 0.20 =` **85.42**, then add the TT
+selling margin.

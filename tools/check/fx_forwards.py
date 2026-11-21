@@ -31,3 +31,22 @@ ub = check("usance bill buying", (sb + D("0.36"))*D("0.9985"), c12(85.96*0.9985)
 r = (ub*20000).quantize(D("0.01")); assert r == D("1716622.00"), r
 check("trap usance rounded up to 3m", (sb + D("0.54"))*D("0.9985"), c12(86.14*0.9985), "86.0108")
 print("importer ₹43,05,660.00 · usance bill ₹17,16,622.00 OK")
+# --- c2 additions (2026-11-21) ---
+check("annual % from parity forward", (D("86.0232")-sb)/sb*4*100, c12(c12(c12(86.0232-85.60)/85.60)*4*100), "1.98", "0.01")
+check("premium 2.4% pa, 2m -> forward", D("83.50")*(1+D("2.4")/12*2/100), c12(83.50*1.004), "83.8340")
+check("trap full 2.4%", D("83.50")*D("1.024"), c12(83.50*1.024), "85.5040")
+check("homework sale+discount first date", sa - D("0.20"), c12(85.62-0.20), "85.4200")
+# practice.md: spot 84.90/84.93; 1m 0.16/0.12; 2m 0.31/0.25; 3m 0.42/0.38 (discount)
+check("P3 3m bid", D("84.90")-D("0.42"), c12(84.90-0.42), "84.4800")
+check("P3 3m ask", D("84.93")-D("0.38"), c12(84.93-0.38), "84.5500")
+check("P4 annual %", (D("85.35")-D("84.90"))/D("84.90")*4*100, c12(c12(c12(85.35-84.90)/84.90)*4*100), "2.12", "0.01")
+p5 = check("P5 forward 2.2% pa 3m", D("84.90")*(1+D("2.2")/12*3/100), c12(84.90*1.0055), "85.3670")
+assert (p5*40000).quantize(D("0.01")) == D("3414680.00")
+check("P6 parity 6m", D("84.90")*D("1.034")/D("1.022"), c12(c12(84.90*1.034)/1.022), "85.8969")
+check("P7 sale+discount first date", (D("84.93")-D("0.12"))*D("1.0012"), c12(84.81*1.0012), "84.9118")
+p8 = check("P8 usance discount round up 3m", (D("84.90")-D("0.42"))*D("0.9985"), c12(84.48*0.9985), "84.3533")
+assert (p8*15000).quantize(D("0.01")) == D("1265299.50")
+import datetime as dt
+assert dt.date(2026,12,3).weekday()==3 and dt.date(2026,12,7).weekday()==0 and dt.date(2026,11,12).weekday()==3
+assert dt.date(2026,12,16).weekday()==2 and dt.date(2026,12,15).weekday()==1
+print("c2 additions and practice OK")
