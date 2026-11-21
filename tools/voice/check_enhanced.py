@@ -7,7 +7,8 @@ enhance of the same few seconds was correct, so the fault is random: every enhan
 Usage: python3 tools/voice/check_enhanced.py <raw take> <enhanced take> [model=small.en]
 Transcribes both (faster-whisper, word timings) and lists every place where the enhanced take's words differ from
 the raw take's, with the time. Exit 1 if anything differs. For each listed span: re-enhance a clip of the raw take
-around it (resemble-enhance <dir> <out> --tau 0.1), check the clip, and splice it in at the pauses either side.
+around it (resemble-enhance <dir> <out> --tau 0.1; if the same word breaks again, --tau 0.0 --lambd 0.0, which fixed
+"simply skipped" and "cash or ready" in A00), check the clip with a larger model, and splice it in at the pauses.
 """
 import difflib, re, subprocess, sys
 import numpy as np

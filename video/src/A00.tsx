@@ -114,7 +114,8 @@ B('N26', 1, '← want dollars', 140, T); W('N26', 'other', 1, 'have dollars to s
 W('N27a', 'customer', 1, '85.65: the ₹ fell a little', 960, T, c);
 W('N29', 'weakens', 1, 'CAD → ₹ weaker', 140, T); W('N29', 'finances', 1, '+ fiscal · FDI/FPI · stability', 140, T);
 W('N30', 'speculative', 1, 'speculative = expectations', 140, T);
-W('N33', 'future', 1, 'a price for a future date', 960, T, c);
+W('N33', 'about', 1, 'a price for a future date', 960, T, c);
+W('N04', 'each', 1, 'each bank: any rate?', 1180, T);
 W('N34', 'fall', 1, "now you won't fall for them ✓", 960, T, c);
 W('N47', 'money', 1, 'money + 3 pockets', 140, 70, {size: 48}); W('N47', 'cash', 1, 'cash · tom · spot · forward', 140, 70, {size: 48});
 W('N47', 'value', 1, 'par value → managed float', 140, 70, {size: 48}); W('N47', 'steadying', 1, 'RBI steadies, never fixes', 140, 70, {size: 48});
