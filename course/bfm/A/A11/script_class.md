@@ -1,6 +1,6 @@
 # A11 · "Papers and the clock" · CLASS EDITION (script c2, with cue sheet)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked**, 2026-11-21: re-review c2 ADOPT WITH FIXES (0 H, 2 M), both Mediums and the main Lows applied (reviewer: no full re-review needed). c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style (`course/spec/lesson_spec.md`): rules along a journey, one calendar question, no sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A11 (with its 2026-11-21 note: the 2026 regime). Course order v4: A10 → **A11**
   → A11b.
@@ -35,13 +35,13 @@ N001 · [warmly] Hi, everyone. Glad you're here. Today, the rules behind every e
 N002 · First, from last class. A buyer says the goods are poor, but the documents comply. Can he stop the L-C payment?
 > 1 S: the A10 case card · H: 3 s
 
-N002a · No; banks pay on paper. Over four classes we followed her L-C. Today, the rules around the whole export. What must she do before she even ships?
+N002a · No; banks pay on paper. Over four classes we followed her deal. Today, the rules around the whole export. What must she do before she even ships?
 > 1 N: "no ✓" · 2 S: the A07 road, A08 relay, A09 calendar, A10 case shrink into one corner
 
 N003 · Here's her news. A new buyer in Milan orders forty thousand shirts.
 > 1 S: order card "40,000 shirts · buyer: Milan" (illustrative)
 
-N004 · Some of you think the bank's job starts when the money comes in. Others, when she ships. When does it start?
+N004 · Some of you think the rules start when the money comes in. Others, when she ships. When do they start?
 > 1 S: two buttons "when money comes" · "when she ships" · H: 3 s
 
 N005 · Before both. She needs a code before she trades, and a declaration when she ships. Export questions, rules and finance together, came in all seven exam cycles we studied.
@@ -71,7 +71,7 @@ N012 · Many of you think an I-E-C needs renewal. It doesn't. It's permanent, un
 > 1 C: trap card "IEC renewal ✗ · permanent unless cancelled ✓ · update every Apr–Jun or deactivated" [F3]
 
 N013 · A few don't need one. Government departments, and people moving goods for personal use, not trade. A service exporter needs one only to claim F-T-P benefits.
-> 1 N: "IEC exempt: Govt departments · personal use · small border trade · services: only for FTP benefits" [F2, F4]
+> 1 N: "IEC exempt: Govt departments · personal use · services: only for FTP benefits" [F2, F4]
 
 N014 · Pause check for chapter one. One. Who issues the I-E-C?
 > 1 S: card "IEC issued by?" · H: 3 s
@@ -120,7 +120,7 @@ N027 · Pause check for chapter two. One. For goods, who receives the E-D-F?
 N028 · Customs. Two, the twist. A freelance designer, a resident individual, receives twenty-five lakh rupees for a service. Must she fill an E-D-F?
 > 1 N: "Customs ✓" · H: 3 s
 
-N029 · No. It's deemed filed, for any amount. [seriously] If you remember one thing from chapter two: goods to Customs, services to the bank, and small service receipts are deemed filed.
+N029 · No. It's deemed filed, for any amount. [seriously] If you remember one thing from chapter two: goods to Customs, services to the bank, and many services are deemed filed.
 > 1 N: "deemed filed ✓" · 2 S: the road; finished parts dim to grey
 
 ## Chapter 3 · Money in
@@ -143,7 +143,7 @@ N034 · From Nepal and Bhutan, in rupees. From the Asian Clearing Union, a group
 N035 · Before her bank credits her account, it checks the payment is genuine. Then it closes the export entry at once. That system is in chapter five.
 > 1 N: "AD credits only after checking genuineness · closes the EDPMS entry at the same time" [F18]
 
-N036 · Now, say the Milan buyer pays an advance before shipment. Through which bank must the export papers then go?
+N036 · Now, say the Milan buyer pays an advance before shipment. Through which bank must the export money then come?
 > 1 S: an arrow "advance" before the shipment point · H: 3 s
 
 N037 · The same bank that received the advance. If she moves banks, she tells both, and the new one takes over.
@@ -182,7 +182,7 @@ N047 · Goods sent to a warehouse abroad, to be sold later? Nine months from the
 > 1 N: "warehouse: 9 months from the date of sale · project exports: per contract" [F23, F24]
 
 N048 · Is there a different clock for an S-E-Z unit, or a status holder, an exporter D-G-F-T recognises for big export volumes? No. Same rule for all.
-> 1 N: "SEZ / EOU / status holders: same rule" [F26]
+> 1 N: "SEZ / status holders: same rule" [F26]
 
 N049 · Let's try it. She ships on the twentieth of January twenty twenty-seven, invoiced in dollars. Realise by when? And if invoiced in rupees?
 > 1 S: calendar strip "ship: 20 Jan 2027" · H: 8 s
@@ -199,10 +199,10 @@ N052 · Many of you remember a longer period from older notes. For a May or June
 N053 · What if money is still not home a year after the due date, or the extended date? Then she may export only against full advance, or an irrevocable L-C.
 > 1 C: card "unrealised > 1 year after the due date (or extended date) → further exports only against full advance or irrevocable LC (R26 reg 13)" [F29]
 
-N054 · Older notes mention R-B-I's caution list. Since twenty twenty, R-B-I listed an exporter only on the bank's recommendation, for example when she couldn't be traced.
+N054 · Older notes mention R-B-I's caution list. Since twenty twenty, R-B-I listed an exporter only on the bank's recommendation, for example when an exporter couldn't be traced.
 > 1 N: "caution list (since Oct 2020): RBI, on the AD's recommendation" [F40]
 
-N055 · Listed exporters ship only against advance or an L-C. Those on the list on the thirtieth of September twenty twenty-six stay on it, until removed.
+N055 · Listed exporters ship only against full advance or an irrevocable L-C. Those on the list on the thirtieth of September twenty twenty-six stay on it, until removed.
 > 1 N: "listed → advance or LC only · on the list on 30 Sep 2026 → stays until removed (R26 reg 13 proviso)" [F30, F40]
 
 N056 · Pause check for chapter four. One. Services exported: nine months from when?
@@ -255,7 +255,7 @@ N070 · Pause check for chapter five. One. For goods, what opens the E-D-P-M-S e
 N071 · The shipping bill from Customs. Two, the twist. A buyer pays less. Who allows the lower value today?
 > 1 N: "Customs data ✓" · H: 3 s
 
-N072 · Her bank, as a reduction. [seriously] If you remember one thing from chapter five: E-D-P-M-S opens at shipment, and closes when the money comes.
+N072 · Her bank, as a reduction. [seriously] If you remember one thing from chapter five: for goods, E-D-P-M-S opens at shipment, and closes when the money comes.
 > 1 N: "the AD: reduction ✓" · 2 S: the strip; finished parts dim to grey
 
 ## Close

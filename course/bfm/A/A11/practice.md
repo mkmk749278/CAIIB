@@ -60,7 +60,7 @@ superseded from 1 Oct 2026 [F40].*
 **P8.** An exporter sells garments to a Milan buyer and buys dyes from the same buyer. Under R26 the AD may allow
 set-off of the export receivable against the import payable:
 (a) only if both are in the same calendar year and both are goods
-(b) **with the same overseas buyer / supplier or its group company, within the realisation period**
+(b) **with the same overseas buyer / supplier or its group or associate company, within the realisation period**
 (c) never; each leg must be settled gross
 (d) only with RBI approval
 *Reason: R26 reg 7 [F43]; the same-calendar-year and goods-vs-services conditions were the old Master Direction's [F44].*
@@ -73,7 +73,7 @@ work. Which is correct at the cut-off?
 (d) she needs RBI approval above ₹10 lakh
 *Reason: Second Amendment (notified 2 Nov 2026, effective 1 Oct 2026): resident individuals, any amount [F9].*
 
-**P10.** A status holder's export bill of USD 40,000 has been partly unrealised for a long time after a quality
+**P10.** A status holder's export bill of USD 40,000, shipped on 10 January 2027, has been partly unrealised for a long time after a quality
 dispute. Under the rules at 31 Dec 2026, the lower value can be settled by:
 (a) self write-off up to 10% of last year's realisation
 (b) AD write-off up to 10%, then RBI

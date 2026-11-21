@@ -1,0 +1,150 @@
+<title>A11 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A11 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A11/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Two regulators and the I-E-C + Chapter 2 · The E-D-F + Chapter 3 · Money in + Chapter 4 · The realisation clock + Chapter 5 · EDPMS, reduction, set-off + Close (N001–N084)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N084", "text": "[warmly] Hi, everyone. Glad you're here. Today, the rules behind every export. First, from last class. A buyer says the goods are poor, but the documents comply. Can he stop the L-C payment? No; banks pay on paper. Over four classes we followed her deal. Today, the rules around the whole export. What must she do before she even ships? Here's her news. A new buyer in Milan orders forty thousand shirts. Some of you think the rules start when the money comes in. Others, when she ships. When do they start? Before both. She needs a code before she trades, and a declaration when she ships. Export questions, rules and finance together, came in all seven exam cycles we studied. One warning. On the first of October twenty twenty-six, new export rules began. Many older notes are out of date. In this exam, pick the new rule whenever it's an option. Chapter one. Two bodies watch every export. Quick one. Who decides what India may export, and what help exporters get? D-G-F-T, the Directorate General of Foreign Trade, under the Commerce Ministry. It runs the trade side, through the Foreign Trade Policy, the F-T-P. And the money side? R-B-I, under FEMA, the foreign exchange law. R-B-I authorises banks to deal in foreign exchange: authorised dealers, A-Ds. Banks follow both. Her first paper: the I-E-C, Importer-Exporter Code. Ten characters, issued by D-G-F-T, online. And here's a neat trick. Her I-E-C is the same as her firm's PAN. One PAN, one I-E-C. Many of you think an I-E-C needs renewal. It doesn't. It's permanent, unless cancelled. But she must update it online every April to June, or it is deactivated. A few don't need one. Government departments, and people moving goods for personal use, not trade. A service exporter needs one only to claim F-T-P benefits. Pause check for chapter one. One. Who issues the I-E-C? D-G-F-T. Two, the twist. Her I-E-C is five years old. Must she renew it? No. She updates it each year; it never expires. [seriously] If you remember one thing from chapter one: D-G-F-T for trade, R-B-I for the money; the I-E-C comes first. Chapter two. First, from chapter one. Her I-E-C is the same as what? Her firm's PAN. Now she ships. She must declare the full export value, on the Export Declaration Form, the E-D-F. Quick one. For goods, does the E-D-F go to Customs, or to her bank? Customs. The shipping bill is the form she files with Customs to send goods out. At most ports it's electronic, and the E-D-F is part of it. From a Special Economic Zone, an S-E-Z, it goes to the zone's officer, the Development Commissioner. Services, like consulting? The E-D-F goes to her bank, within thirty days from the end of the month of the invoice. Software? To her bank, or to S-T-P-I, Software Technology Parks of India. It used to be a separate form, SOFTEX. Now it's the same E-D-F. One exception. A traveller carrying personal belongings abroad is not an exporter here. No E-D-F. And a later change, back-dated to the first of October. For services, the E-D-F is deemed filed, treated as filed, when she gives her bank the payment details. For a resident individual, like a freelancer, any amount. For anyone else, if the money received is up to ten lakh rupees. Pause check for chapter two. One. For goods, who receives the E-D-F? Customs. Two, the twist. A freelance designer, a resident individual, receives twenty-five lakh rupees for a service. Must she fill an E-D-F? No. It's deemed filed, for any amount. [seriously] If you remember one thing from chapter two: goods to Customs, services to the bank, and many services are deemed filed. Chapter three. First, from chapter two. Software: to whom does the E-D-F go? Her bank, or S-T-P-I. Now the documents go to her bank. Who sets the time limit for that? Her own bank. The new rules fix no number of days. Each bank's own policy and procedure lists the documents, the timelines and the charges. How may the money come in? Through a bank. From most countries, in rupees or any foreign currency. From Nepal and Bhutan, in rupees. From the Asian Clearing Union, a group of Asian central banks that settle with each other, through the A-C-U. Before her bank credits her account, it checks the payment is genuine. Then it closes the export entry at once. That system is in chapter five. Now, say the Milan buyer pays an advance before shipment. Through which bank must the export money then come? The same bank that received the advance. If she moves banks, she tells both, and the new one takes over. And there's no fixed time to ship against the advance now. Any interest she pays the buyer is capped. And if someone other than the buyer pays her? Her bank may allow it, if satisfied the deal is genuine. Pause check for chapter three. One. Payment from Bhutan: in which currency? Rupees. Two, the twist. Within how many days must she hand her documents to the bank? None fixed by the rules; her bank's policy says. [seriously] If you remember one thing from chapter three: money through a bank, and an advance stays with one bank. Chapter four. First, from chapter three. Who may allow a payment from a third party? Her bank. Now the big one. Realisation means the export money actually comes back to India. Repatriation, the same idea. By when? Nine months. For goods, from the date of shipment. For services, from the date of the invoice. If she invoices in rupees instead of dollars, twelve months. Goods sent to a warehouse abroad, to be sold later? Nine months from the date they're sold. A project export, like building a plant abroad, follows its contract. Is there a different clock for an S-E-Z unit, or a status holder, an exporter D-G-F-T recognises for big export volumes? No. Same rule for all. Let's try it. She ships on the twentieth of January twenty twenty-seven, invoiced in dollars. Realise by when? And if invoiced in rupees? By the twentieth of October twenty twenty-seven. In rupees, by the twentieth of January twenty twenty-eight. That last day is the due date. And if the buyer is slow? Her bank may extend the period, if satisfied with her reasons. The rules set no cap; the bank's policy guides it. Many of you remember a longer period from older notes. For a May or June twenty twenty-seven exam, the answer is nine. What if money is still not home a year after the due date, or the extended date? Then she may export only against full advance, or an irrevocable L-C. Older notes mention R-B-I's caution list. Since twenty twenty, R-B-I listed an exporter only on the bank's recommendation, for example when an exporter couldn't be traced. Listed exporters ship only against full advance or an irrevocable L-C. Those on the list on the thirtieth of September twenty twenty-six stay on it, until removed. Pause check for chapter four. One. Services exported: nine months from when? The invoice date. Two, the twist. Goods shipped to a warehouse in March, sold in May. Nine months from? From the sale, in May. [seriously] If you remember one thing from chapter four: nine months, twelve for rupees, and her bank can extend it. Chapter five. First, from chapter four. Invoiced in rupees: how many months? Twelve. Now, how does anyone know which exports are still unpaid? E-D-P-M-S. The Export Data Processing and Monitoring System, R-B-I's platform since March twenty fourteen. For goods, when does her entry appear? Quick one. When she ships, or when the money comes? When she ships. Customs sends the shipping bill data. The money, when it comes, closes the entry. For services, and paper forms from the few non-electronic ports, her bank makes the entry, within five working days. The old half-yearly statement, X-O-S, is gone. Small bills got simpler. If a shipping bill or invoice is up to ten lakh rupees, her bank may close it on her own declaration. Even quarterly, in bulk. Now, the buyer pays less, say for a quality claim. Her bank may allow a reduction in the export value, if satisfied with her reasons. And if the bill itself is worth up to ten lakh, her declaration alone is enough. Even if nothing at all was paid. Older notes call this write-off: five per cent on her own, ten for status holders, ten by the bank. That was the old rule. Last idea: set-off. She also buys dyes from the same Milan buyer. Can her bank net what she's owed against what she owes? Yes. With the same buyer or supplier, or its group or associate companies abroad, within the realisation period. The set-off counts as realisation. Pause check for chapter five. One. For goods, what opens the E-D-P-M-S entry? The shipping bill from Customs. Two, the twist. A buyer pays less. Who allows the lower value today? Her bank, as a reduction. [seriously] If you remember one thing from chapter five: for goods, E-D-P-M-S opens at shipment, and closes when the money comes. Back to her question. What does she need before she ships? An I-E-C from D-G-F-T, and an E-D-F at shipment. Then the nine-month clock starts. Quick mix. One. A company receives twenty lakh rupees for software. Is the E-D-F deemed filed? No. It isn't an individual, and it's above ten lakh. Two. A shipment on the fifteenth of February twenty twenty-seven, in dollars. Realise by? The fifteenth of November twenty twenty-seven. Three. Who extends the realisation period? Her bank, the A-D. Now the map, from memory. First node: the papers. I-E-C from D-G-F-T, equal to the PAN; E-D-F at shipment; deemed for many services. Second node: money in. Through a bank; advance with one bank; timelines in the bank's policy. Third node: the clock. Nine months; twelve in rupees; warehouse from sale; the bank extends. Fourth node: E-D-P-M-S. Opens at shipment, ten-lakh closures, reduction, set-off. That's the map. Homework. Write the realisation date for three shipments: goods, services, and rupee-invoiced. Next class: forty thousand shirts need fabric before she can ship. Who pays for it? [warmly] That's it for this class. Nine months, remember. See you soon."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
