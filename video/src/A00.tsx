@@ -45,7 +45,7 @@ B('N00e', 1, 'the foundation', 960, T, c); B('N00e', 2, 'no heavy theory', 960, 
 B('N01', 0, '11 a.m. at the counter', 1180, T);
 B('N03', 0, 'fair question', 1180, T);
 B('N04', 0, 'what are you thinking?', 960, T, c);
-B('N05', 0, 'which one?', 960, T, c);
+B('N05', 0, 'which one?', 960, T, {...c, until: ['N05', 1]});
 B('N06', 1, 'the honest answer…', 960, T, c); B('N06', 2, 'neither!', 960, T, {...c, size: 70, color: P.risk}); B('N06', 3, 'why: by the end', 960, T, c);
 B('N06', 5, 'foreign exchange = ?', 1200, T);
 B('N07', 1, 'in force 1 June 2000 · replaced FERA', 1180, T, {size: 50});
@@ -76,8 +76,8 @@ B('N25', 0, 'back to our customer', 960, T, c); B('N25', 1, 'why dearer today?',
 B('N27', 1, '₹ weakens', 960, T, c); B('N27', 3, 'the whole engine', 960, T, c);
 B('N27a', 0, 'the rate = ₹ for one $', 960, T, c); B('N27a', 1, 'more ₹ per $ = weaker ₹', 960, T, c);
 B('N27b', 0, 'JAIIB refresher · 30 s', 960, T, c);
-B('N28', 0, 'what pushes it?', 960, T, c);
-B('N31', 0, 'quick check', 960, T, c);
+B('N28', 0, 'what pushes it?', 140, T);
+B('N31', 0, 'quick check', 960, T, {...c, until: ['N31', 3]});
 B('N32', 0, 'weaker ✓', 960, T, {...c, color: P.ok}); B('N32', 3, 'purchasing power parity (PPP)', 960, T, c); B('N32', 4, 'the idea only, today', 960, T, c);
 B('N33', 0, 'one more idea', 960, T, c);
 B('N33a', 1, '₹ at discount ⇄ $ at premium', 960, T, c);
@@ -98,6 +98,27 @@ B('N48', 0, 'small homework', 960, T, c); B('N48', 2, 'two minutes, that’s all
 B('N49', 1, 'one question…', 960, T, c);
 B('N50', 0, "that's our class", 960, T, c); B('N50', 1, 'see you in the next one', 960, T, c);
 W('N45', 'one', 1, '1', 120, 160, {size: 70}); W('N45', 'two', 1, '2', 120, 370, {size: 70}); W('N45', 'three', 1, '3', 120, 580, {size: 70});
+
+
+// r2: sentences the voice splits differently from the script (sentence_sync on r1), anchored to a spoken word
+W('N10a', 'drawn', 1, 'drawn in ₹, payable in foreign currency', 1100, T, {size: 48});
+B('N10b', 0, 'pocket 3: the surprise', 1180, T);
+W('N11', 'because', 1, '… because it is drawn outside India', 1100, T, {size: 48});
+W('N12a', 'so', 1, 'so many ₹ for one $', 1180, T);
+W('N16', 'evening', 1, '9 a.m. to 5 p.m. IST', 1330, 560);
+W('N21', 'merchant', 2, 'merchant = any customer', 960, T, c);
+W('N23', 'cash', 1, 'cash = same day', 960, T, c); W('N23', 'tom', 1, 'tom = next working day', 960, T, c);
+W('N23', 'spot', 1, 'spot = 2nd working day', 960, T, c); W('N23', 'forward', 1, 'forward = beyond spot', 960, T, c);
+W('N24', 'weekends', 1, 'weekends, holidays: skipped', 960, T, {...c, color: P.ink});
+B('N26', 1, '← want dollars', 140, T); W('N26', 'other', 1, 'have dollars to sell →', 1180, T);
+W('N27a', 'customer', 1, '85.65: the ₹ fell a little', 960, T, c);
+W('N29', 'weakens', 1, 'CAD → ₹ weaker', 140, T); W('N29', 'finances', 1, '+ fiscal · FDI/FPI · stability', 140, T);
+W('N30', 'speculative', 1, 'speculative = expectations', 140, T);
+W('N33', 'future', 1, 'a price for a future date', 960, T, c);
+W('N34', 'fall', 1, "now you won't fall for them ✓", 960, T, c);
+W('N47', 'money', 1, 'money + 3 pockets', 140, 70, {size: 48}); W('N47', 'cash', 1, 'cash · tom · spot · forward', 140, 70, {size: 48});
+W('N47', 'value', 1, 'par value → managed float', 140, 70, {size: 48}); W('N47', 'steadying', 1, 'RBI steadies, never fixes', 140, 70, {size: 48});
+W('N48', 'side', 1, 'each on the side it pushes', 960, T, c);
 
 const Full: React.FC<{o: number; children: React.ReactNode}> = ({o, children}) => (o <= 0 ? null : <AbsoluteFill style={{background: P.paper, opacity: o}}>{children}</AbsoluteFill>);
 
@@ -174,7 +195,7 @@ export const A00: React.FC = () => {
 																	</div>
 								{/* N04–N06: "Some of you" / "Others", both crossed on "Neither" */}
 								<AbsoluteFill style={{opacity: Math.min(tw(f, sk('N04', 0), sk('N04', 0) + 14), 1)}}>
-									<Thoughts f={f} a={sk('N04', 1) - 20} b={sk('N04', 3) - 6} left="RBI fixes it every morning · banks follow" right="each bank sets its own, any rate" />
+									<Thoughts f={f} a={sk('N04', 1) - 20} b={at('N04', 'few', 0.6) - 10} left="RBI fixes it every morning · banks follow" right="each bank sets its own, any rate" />
 								</AbsoluteFill>
 								{f >= sk('N05', 0) && f < sk('N05', 1) ? <AbsoluteFill style={{opacity: 0.5 + 0.5 * Math.sin((f - sk('N05', 0)) / 5) ** 2, pointerEvents: 'none'}} /> : null}
 								<Cross x={330} y={330} w={520} h={230} p={tw(f, sk('N06', 2) - 2, sk('N06', 2) + 20)} />
@@ -547,7 +568,7 @@ export const A00: React.FC = () => {
 							<Fig x={330} y={450} color="#8FA4B4" o={p('N44', 0)} />
 							<Fig x={1350} y={560} s={1.3} color="#B8A27A" o={p('N44', 0)} label="customer" />
 							<Speech x={1000} y={200} w={820} p={p('N44', 2)}>moves with the market, every day<div style={{opacity: p('N44', 3), fontSize: 44, marginTop: 6}}>RBI only stops wild swings · the board follows interbank</div></Speech>
-							<Pop x={1060} y={450} p={tw(f, sk('N44', 3) + 20, sk('N44', 3) + 40)}>
+							<Pop x={1060} y={450} p={tw(f, at('N44', 'board', 0.8) - 6, at('N44', 'board', 0.8) + 14)}>
 								<div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
 									<Tag2 size={32} color={P.soft}><span style={{textDecoration: 'line-through', textDecorationColor: P.risk, textDecorationThickness: 5}}>RBI fixes it every morning</span> <span style={{color: P.risk}}>✗</span></Tag2>
 									<Tag2 size={32} color={P.soft}><span style={{textDecoration: 'line-through', textDecorationColor: P.risk, textDecorationThickness: 5}}>each bank sets any rate</span> <span style={{color: P.risk}}>✗</span></Tag2>
@@ -559,7 +580,9 @@ export const A00: React.FC = () => {
 
 				{/* ---------------- Recap and practice ---------------- */}
 				<Scene a={S('N45')} b={S('N47')}>
-					{(f) => (
+					{(f) => {
+						const ansAt = [at('N46', 'wednesday', 0.2), at('N46', 'more', 0.4), at('N46', 'march', 0.7)];
+						return (
 						<>
 							<Pop x={200} y={60} p={p('N45', 0)}><Tag2 size={34} color="#fff" bg={P.ink} border={P.ink}>PAUSE THE VIDEO · 3 QUESTIONS</Tag2></Pop>
 							{[
@@ -568,16 +591,17 @@ export const A00: React.FC = () => {
 								{y: 570, k: [7, 7], q: ["Since when is the ₹'s rate market-determined?", ''], a: 'March 1993 · the dual rates unified', ak: 4},
 							].map((x, i) => (
 								<Pop key={i} x={200} y={x.y} p={p('N45', x.k[0])}>
-									<div style={{width: 1300, background: '#fff', border: `4px solid ${f >= sk('N46', x.ak) - 4 ? P.ok : P.ink}`, borderRadius: 18, padding: '14px 26px', boxShadow: '7px 7px 0 rgba(31,42,55,0.12)'}}>
+									<div style={{width: 1300, background: '#fff', border: `4px solid ${f >= ansAt[i] - 4 ? P.ok : P.ink}`, borderRadius: 18, padding: '14px 26px', boxShadow: '7px 7px 0 rgba(31,42,55,0.12)'}}>
 										<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 40, color: P.ink}}>{x.q[0]}</div>
-										{x.q[1] ? <div style={{fontFamily: FT.sans, fontWeight: 600, fontSize: 32, color: P.soft, opacity: p('N45', x.k[1])}}>{x.q[1]}</div> : null}
-										<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 38, color: P.ok, minHeight: 44, opacity: p('N46', x.ak)}}>{f >= sk('N46', x.ak) - 6 ? '✓ ' + x.a : ''}</div>
+										{x.q[1] ? <div style={{fontFamily: FT.sans, fontWeight: 600, fontSize: 32, color: P.soft, opacity: i === 1 ? ap(f, at('N45', 'bigger', 0.6)) : p('N45', x.k[1])}}>{x.q[1]}</div> : null}
+										<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 38, color: P.ok, minHeight: 44, opacity: ap(f, ansAt[i])}}>{f >= ansAt[i] - 6 ? '✓ ' + x.a : ''}</div>
 									</div>
 								</Pop>
 							))}
 							<PauseCard f={f} from={E('N45') - 20} to={H('N45') + 4} q="Answer all three, then play." timerFrom={E('N45')} timerFrames={by.N45.hold} />
 						</>
-					)}
+						);
+					}}
 				</Scene>
 				<Scene a={S('N47')} b={S('N48')}>
 					{(f) => {

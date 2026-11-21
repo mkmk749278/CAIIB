@@ -43,7 +43,10 @@ export const makeFlow = (tl: Timeline, capFix: [RegExp, string][] = []) => {
 			const guess = l.start + Math.round((acc / total) * l.dur);
 			acc += t.length;
 			if (k === 0) { pos = 0; return l.start + (l.words[0]?.[1] ?? 0); }
-			for (let j = pos + 1; j < l.words.length; j++) {
+			// start the search a little before where this sentence should be (its share of the line's words), so a
+			// repeated phrase earlier in the line ("defines foreign exchange … Foreign exchange means") cannot latch
+			const est = Math.floor((ws.length ? (acc - t.length) / total : 0) * l.words.length) - 3;
+			for (let j = Math.max(pos + 1, est); j < l.words.length; j++) {
 				const ok2 = !second || !l.words[j + 1] || nw(l.words[j + 1][0]).startsWith(second.slice(0, 3)) || nw(l.words[j][0]).length > 3 && nw(l.words[j][0]) === first && second.length < 2;
 				if (first && nw(l.words[j][0]).startsWith(first) && ok2) { pos = j; return l.start + l.words[j][1]; }
 			}

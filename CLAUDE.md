@@ -166,7 +166,10 @@ ElevenLabs take per part (owner generates from the voice page, drops `part_N.mp3
 Resemble Enhance on Kaggle (`tools/voice/kaggle_enhance.py from-drive <video>` → `BFM/<video>/voice_enhanced/`;
 owner, 2026-11-20; it never changes a take's licence, so sold lessons still need Creator-plan takes). **Only enhanced
 takes are used, re-generated lines included** (owner, 2026-11-21: the raw ElevenLabs voice, Prithvi, has a hiss that
-tires the ear; enhancement removes it). `flow_voice.py` refuses a raw take (`--raw-ok` only for old tests) →
+tires the ear; enhancement removes it). `flow_voice.py` refuses a raw take (`--raw-ok` only for old tests). **Every
+enhanced take is word-checked against its raw take** (`tools/voice/check_enhanced.py`; 2026-11-21: the enhancer turned
+A00's "R, B, I, the government" into "Are I, a government"); a damaged span is re-enhanced (`--tau 0.1`), checked and
+spliced in at the pauses →
 `tools/video/flow_voice.py` (continuous voice, planned holds only, re-generated lines
 swapped in) + music bed ducked → `mix.flac` in Drive `BFM/<video>/flow/` → timeline JSON → Remotion composition on
 the shared kit (`video/src/kit/`: notebook page, journey road, rule cards, growing map) with a beat for every
