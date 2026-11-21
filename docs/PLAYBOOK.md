@@ -453,6 +453,14 @@ checks decide when a cut is ready, not a feeling.
     Maya takes word-checked against the script: nothing skipped (the flagged runs were numbers written as digits).
   - Not a way around the free ElevenLabs plan: the output is still that audio, so still non-commercial (owner asked;
     declined). Owner's ear decides whether enhanced Vasant is the fallback.
+- **The enhancer can change words (2026-11-21, the owner heard it).** In A00 part 1 the raw take said "R, B, I, the
+  government, the market"; the enhanced take said "Are I, a government, a market" (three speech checkers agree).
+  Enhancing the same 10 s again, with the default settings and with `--tau 0.1`, `0.0` and `--lambd 0.5`, gave the right
+  words every time: the generative stage is random, and slow spelt letters are where it slips. So every enhanced take
+  is compared word by word with its raw take (`tools/voice/check_enhanced.py`), each damaged span is re-enhanced from
+  the raw take (`--tau 0.1`, 10 s clip, about 1 min on the session CPU), checked, and spliced in at the middle of the
+  pauses on either side (length unchanged, so the timeline stays). Checking only the raw take, as on 2026-11-21, is
+  not enough.
 - **A00, the first lesson on the shared engine (2026-11-21).** The A07 timing engine (beats, notes, captions,
   scenes) now lives in `video/src/kit/flow.tsx` (`makeFlow(timeline, captionFixes)`), and Module A's pictures in
   `kit/forex.tsx` (counter, three-pocket coat, world strip, calendar boxes, see-saw, ledger, road, RBI's hand); A07
