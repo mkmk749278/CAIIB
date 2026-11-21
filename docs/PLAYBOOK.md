@@ -453,12 +453,23 @@ checks decide when a cut is ready, not a feeling.
     Maya takes word-checked against the script: nothing skipped (the flagged runs were numbers written as digits).
   - Not a way around the free ElevenLabs plan: the output is still that audio, so still non-commercial (owner asked;
     declined). Owner's ear decides whether enhanced Vasant is the fallback.
+- **Enhanced takes only (owner, 2026-11-21).** "In Prithvi voice there is hissing noise while listening that
+  irritates the ears, but after Resemble Enhance it's gone." The numbers above said little gain on ElevenLabs; the
+  owner's ear on a phone says otherwise: the hiss in the raw take is what a listener notices over 15 minutes. So
+  every take, and every re-generated line, goes through `kaggle_enhance.py` before `flow_voice.py`, which now
+  refuses a path in a `voice/` folder or named `part_N.mp3` (`--raw-ok` for old tests only). The full chain, as the
+  owner confirmed it: paid ElevenLabs plan → voice page, parts up to 10,000 characters (target about 9,000) so a part
+  is one continuous take → owner uploads to Drive `BFM/<video>/voice/` → word check against the script → Resemble
+  Enhance → `BFM/<video>/voice_enhanced/` → build.
 
 ## 6. Next-gen PDF (draft)
 - One mind map per module; a traps page; a formula sheet with a worked example per formula; a rule-version stamp
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-21: **enhanced voice only.** Owner: ElevenLabs paid, blocks up to 10,000 characters for continuous
+  narration, upload to Drive, Resemble Enhance, "we use that after enhance only" because the raw Prithvi take hisses.
+  Details §5f; guard in `flow_voice.py`.
 - 2026-11-20: **independent review for content.** Owner: "Always take independent session review. I can't review
   the content because I don't have that much knowledge on that content: syllabus, what much to cover, deep
   research, books, official sites, web etc. You need to create content for our classes accordingly." Why it works:

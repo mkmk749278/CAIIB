@@ -67,7 +67,21 @@ def dur_of(p):
                                 capture_output=True, text=True).stdout)
 
 
+def raw_takes(argv):
+    """Takes that did not come through Resemble Enhance (owner, 2026-11-21: only enhanced takes are used; the raw
+    ElevenLabs voice has a hiss). Enhanced takes come from Drive BFM/<video>/voice_enhanced/ (kaggle_enhance.py);
+    a path in a plain voice/ folder or named part_N.mp3 is a raw take."""
+    paths = [a.split(' ', 1)[-1].split('=', 1)[-1].split(':')[0] if a.startswith('--replace') else a.rsplit(':', 3)[0]
+             for a in argv[4:] if a != '--raw-ok']
+    return [x for x in paths if '/voice/' in x.replace('\\', '/') or re.fullmatch(r'part_\d+\.mp3', os.path.basename(x))]
+
+
 def main(argv):
+    raw = raw_takes(argv)
+    if raw and '--raw-ok' not in argv:
+        sys.exit('Raw (un-enhanced) takes: ' + ', '.join(raw) + '\nRun tools/voice/kaggle_enhance.py from-drive <video> '
+                 'and use BFM/<video>/voice_enhanced/ (re-generated lines too). --raw-ok only for old tests.')
+    argv = [a for a in argv if a != '--raw-ok']
     src, out_dir, tl_out, adir = argv[:4]
     specs = [a for a in argv[4:] if not a.startswith('--replace')]
     repl = {}
