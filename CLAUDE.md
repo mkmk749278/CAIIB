@@ -22,6 +22,18 @@ Never a new loose doc.
   done.** Per lesson: fact sheet → script with cue sheet → three independent reviews → fix until ADOPT → voice page
   (`voice_blocks.py`). Then compare the whole written course with the public classes (31 Module A captions, Drive
   `BFM/_downloads/playlist_GdPR6Y/`) and the module exam tests. The A00 builds below are paused. PLAYBOOK §7.
+- **Course plan v4 (2026-11-21): 79 videos.** All 17 proposed splits adopted with "b" ids (no renumbering): A11b, A15b,
+  A16b, A19c; B04b, B07b, B09b, B11b, B14b; C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b. Each one's plan is in
+  its module's plans file. No "partial" rows left in `coverage.csv`.
+- **Parallel work (owner, 2026-11-21): one module per session, so sessions never touch the same files.** Module A:
+  the owner's main account. Module B: a session on the owner's second Claude account (same GitHub repo). C and D
+  later, when one finishes. A module session edits only `course/bfm/<its module>/**`, `research/bfm/facts/<its
+  module's sub-topic ids>*`, its own rows of `research/bfm/coverage.csv`, and its own section of
+  `course/bfm/greetings.md` (add a `## Module <X>` heading; check the other sections so no greeting repeats). It
+  never edits this file's other lines, the PLAYBOOK, `course_plan.md` or shared tools: it writes what it needs there
+  into `course/bfm/<module>/STATUS.md` (progress per lesson, open questions, changes wanted in shared files), and the
+  Module A session applies them. Each session branches from fresh `origin/main`, uses its own branch name, and merges
+  its own PRs; before a PR, `git fetch origin main && git merge origin/main`.
 - **Process (owner, 2026-11-19):** exact video order → one-page plan per video → every full script **with its cue
   sheet** → lock all → voice and build one by one; anything found while building goes back into the scripts.
   - **Independent review replaces the owner's content review (owner, 2026-11-20: "always take independent session
@@ -70,8 +82,7 @@ Never a new loose doc.
     (3 parts, c5) https://claude.ai/artifact/VNQKFu8nxyVaij52dffmkj; takes go to Drive
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
-  - **Next (from 2026-11-21, scripts first)**: (a) course plan v4: adopt the proposed splits, give the six "partial"
-    sub-topics (C1.2, C2.4, C7.2, C7.5, D5.3, D5.4) a clear home; (b) the three reviews of A01 v6, then fact sheet →
+  - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) the three reviews of A01 v6, then fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared

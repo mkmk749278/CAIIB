@@ -34,7 +34,7 @@ lock all of them → only then build, one by one. Built from `importance_map.md`
 (8–12 min); R = module revision: the finished map, traps, 10 quick questions (6–8 min). Every video follows PLAYBOOK
 §5–§5b (live online class, one teacher voice, "some of you / others", worked → faded → own try, finished map at the end).
 
-## 3. The order (62 videos, v3)
+## 3. The order (79 videos, v4)
 
 ### 0. Start here
 | # | Title (working) | Fmt | Tier | Builds on | Picture |
@@ -61,15 +61,18 @@ Part 2: trade (the deal, the documents, the money)
 | A09 | UCP 600 articles that get asked, ISBP 745, URR 725 (reimbursement through the Nostro) | L | A | A4 | A02, A08 | the scrutiny desk with a 5-day clock |
 | A10 | LC case study, exam style | C | A | A4 | A07–A09 | relay + road |
 | A11 | Export finance: packing credit to realisation, post-shipment, EDPMS, the realisation-period history and the rule at the cut-off | L | A | A5 | A03, A07, A08 | the export journey timeline |
+| A11b | Export finance: packing credit to post-shipment (**added v4**, split from A11; plan in `plans_A.md`) | L | A | A5 | A11 | — |
 | A12 | Export bill discounting and crystallisation: the full case | N+C | A | A1, A5 | A03, A05, A06, A11 | timeline + the counter flipped |
 | A13 | Import finance: import bills and retirement sums, supplier's and buyer's credit, trade credit, IDPMS | L+N | A | A5 | A03, A05, A08 | the import journey (mirror of A11) |
 | A14 | Factoring, forfaiting, Gold Card, status holders | L | B | A5 | A11, A13 | — (to design) |
 | A15 | ECGC and country risk (policies, claims); EXIM Bank | L | B | A7, A8 | A11 | umbrella over the journey |
+| A15b | ECGC for banks, claims; EXIM Bank (**added v4**, split from A15; plan in `plans_A.md`) | L | B | A7, A8 | A15 | — |
 
 Part 3: people (residents and NRIs)
 | # | Title (working) | Fmt | Tier | Unit | Builds on | Picture |
 |---|---|---|---|---|---|---|
 | A16 | LRS and remittances for residents: current vs capital account, USD 250,000, TCS, what is prohibited, forex for travel | L+N | A | A2 | A01 | the counter, money going out (red) |
+| A16b | Beyond the basics: FEMA's sections, investing abroad under LRS, reporting, other remittances (**added v4**, split from A16; plan in `plans_A.md`) | L+N | A | A2 | A16 | — |
 | A17 | NRE, NRO, FCNR(B), SNRR: one table you will never forget | L | A | A3 | A01, A16 | the four-drawer table |
 | A18 | Residency (RNOR, deemed resident), loans and housing loans to NRIs, deposit rate rules: case | C | A | A3 | A17 | four-drawer table |
 
@@ -78,6 +81,7 @@ Part 4: capital flows and the rule-makers
 |---|---|---|---|---|---|---|
 | A19 | ECB after the 2026 overhaul, conversion to equity, reporting; ADR, GDR, IDR, FCCB, rupee-denominated (masala) bonds (also syllabus C3) | L | B | A6, A8, C3 | A02 | borrowing bridge (to design) |
 | A19b | Foreign investment in India under the NDI Rules: key concepts, eligible investors, investee entities and instruments, prohibited sectors, pledge of shares, operational guidelines, documents (**added v3**: A19 was overloaded) | L | B | A6 | A19 | the borrowing bridge, equity lane |
+| A19c | The paper trail of foreign investment (**added v4**, split from A19b; plan in `plans_A.md`) | L | B | A6 | A19b | — |
 | A20 | IFSC, GIFT City, IBUs, IFSCA | L | B | A9 | A19 | the special zone on the map |
 | A21 | Who sets the rules: RBI and exchange control, FEMA 1999, AD categories, FEDAI and its rules | L | C | A8 | A01–A20 | the referees around the counter |
 | A22 | Technology in international banking: digitisation, platforms, fintech and its delivery channels, a trade deal on blockchain, benefits, limits and challenges (**added v3**: A21 was overloaded) | L | C | A10 | A02, A08 | the trade journey, digitised |
@@ -90,43 +94,56 @@ Part 4: capital flows and the rule-makers
 | B02 | Managing risk: framework, risk appetite, three lines of defence, ERM, stress, scenario and sensitivity tests, risk-based supervision | L | A | B1, B6 | B01 | — (to design) |
 | B03 | Statistics on a basic calculator: mean, variance, SD, normal curve, volatility over time (√t) | N | B | B4 | — | the calculator; the bell curve |
 | B04 | Basel I → 1996 → II → III in one timeline; three pillars; ICAAP and SREP | L | A | B3, D2 | B01 | the Basel timeline |
+| B04b | Pillars 2 and 3: ICAAP, SREP, disclosure (**added v4**, split from B04; plan in `plans_B.md`) | L | A | B3, D2 | B04 | — |
 | B05 | The capital stack: CET1, AT1, Tier 2, CCB, CCyB, leverage ratio, D-SIBs; dividend buckets; changes up to the cut-off | L | A | B3, D2 | B04 | the stack of bricks |
 | B06 | Credit risk-weighted assets: risk weights (new standardised approach where in force), CCF for off-balance sheet, mitigation and haircuts | N | A | B3, B5 | B05 | — (to design) |
 | B07 | Market and operational risk capital (capital charge × 12.5; BIA, TSA) and the full CRAR sum | N | A | B3, B6 | B06 | the stack + three RWA buckets |
+| B07b | Operational-risk capital and the full CRAR (**added v4**, split from B07; plan in `plans_B.md`) | N | A | B3, B6 | B07 | — |
 | B08 | Capital adequacy case study, exam style | C | A | B3, D2 | B05–B07 | the stack |
 | B09 | Market risk and VaR: framework, limits, trading liquidity, VaR from SD and confidence level | L+N | A | B4, C5 | B03 | the bell curve with a cut-off tail |
+| B09b | VaR, back-testing and stress tests: the sums (**added v4**, split from B09; plan in `plans_B.md`) | L+N | A | B4, C5 | B09 | — |
 | B10 | Credit risk measured: ratings, PD × LGD × EAD, expected vs unexpected loss, CreditMetrics, Altman Z | L+N | A | B5 | B03 | — (to design) |
 | B11 | Credit risk controlled and passed on: loan review, portfolio limits, securitisation and MRR, credit derivatives | L | A | B5, C7 | B10 | — (to design) |
+| B11b | Credit risk passed on: CRM, securitisation, credit derivatives (**added v4**, split from B11; plan in `plans_B.md`) | L | A | B5, C7 | B11 | — |
 | B12 | Operational risk: event types, causes, mitigation, scenario analysis, measurement approaches | L | B | B6 | B07 | — (to design) |
 | B13 | Liquidity risk 1: need, drivers, types, principles, governance, policy and strategy, stress testing, contingency funding plan | L | B | B7, D4 | B01 | — (to design) |
 | B13b | Liquidity risk 2: RBI's broad norms, ratios, the structural liquidity statement, liquidity across currencies, overseas branches and foreign banks in India, MIS, reporting and internal controls (**added v3**: B13 carried 16 official sub-topics) | L | B | B7, D4 | B13 | the bank's water tanks (to design) |
 | B14 | LCR, HQLA, run-off rates, NSFR: the sums; liquidity risk monitoring tools | N | B (near A) | B8 | B13 | — (to design) |
+| B14b | NSFR and the liquidity monitoring tools (**added v4**, split from B14; plan in `plans_B.md`) | N | B (near A) | B8 | B14 | — |
 | BR | Module B revision | R | | | all B | full map B |
 
 ### Module C: Treasury Management. Mind map C: "The bank's trading desk"
 | # | Title (working) | Fmt | Tier | Unit | Builds on | Picture |
 |---|---|---|---|---|---|---|
 | C01 | Integrated treasury: front, mid, back office; profit centre; the dealing room, NOP and dealer limits | L | A | C1, A1 | A01, B09 | the desk from above |
+| C01b | Organising the treasury and the dealing room (**added v4**, split from C01; plan in `plans_C.md`) | L | A | C1, A1 | C01 | — |
 | C02 | Money market: call/notice/term, repo, reverse repo, TREPS, LAF, SDF, MSF, CP, CD | L | A | C2, C4 | C01 | — (to design) |
+| C02b | RBI's liquidity tools and domestic vs global markets (**added v4**, split from C02; plan in `plans_C.md`) | L | A | C2, C4 | C02 | — |
 | C03 | T-Bills, CMBs, CP and CD: price and yield sums | N | A | C2 | C02 | the calculator |
 | C04 | CRR, SLR, NDTL and the rules up to the cut-off; payment and settlement systems | C | B | C4 | C02 | — (to design) |
+| C04b | Payment and settlement systems (**added v4**, split from C04; plan in `plans_C.md`) | C | B | C4 | C04 | — |
 | C05 | Bonds: G-secs, coupon, price and yield, YTM, accrued interest, clean and dirty price | N | A | C2, C5 | C03 | the see-saw (price vs yield) |
 | C06 | Duration, modified duration, BPV/PV01 | N | A | C5 | C05 | see-saw with a pivot |
 | C07 | Treasury risk control: limits, stop loss, VaR on the desk, investment classification, IFR removal | L | A | C5 | B09, C06 | desk + bell curve |
 | C08 | Derivatives 1: OTC vs exchange, forwards, futures, FRAs, swaps (interest rate and currency) | L | B | C6 | A05, C05 | — (to design) |
+| C08b | Derivatives: FRAs and swaps (**added v4**, split from C08; plan in `plans_C.md`) | L | B | C6 | C08 | — |
 | C09 | Derivatives 2: options (call, put, ITM/ATM/OTM, payoffs) and RBI's derivative rules | L+N | B | C6 | C08 | payoff lines |
+| C09b | RBI's derivative rules and Indian market developments (**added v4**, split from C09; plan in `plans_C.md`) | L+N | B | C6 | C09 | — |
 | CR | Module C revision | R | | | all C | full map C |
 
 ### Module D: Balance Sheet Management. Mind map D: "Reading a bank's balance sheet"
 | # | Title (working) | Fmt | Tier | Unit | Builds on | Picture |
 |---|---|---|---|---|---|---|
 | D01 | The bank's balance sheet: what sits on each side, ALM, ALCO, transfer pricing | L | C | D1, C7 | B13, C01 | the balance sheet as two shelves |
+| D01b | ALM, ALCO, treasury and transfer pricing (**added v4**, split from D01; plan in `plans_D.md`) | L | C | D1, C7 | D01 | — |
 | D02 | Asset classification: NPA, SMA, agriculture by crop season, OD/CC and credit cards, upgrade; ECL coming 1 Apr 2027 | L | A | D3 | D01 | the 90-day clock |
 | D03 | Provisioning: percentages, PCR, accelerated provisioning, wilful defaulters | N | A | D3 | D02 | — (to design) |
 | D04 | NPA and provisioning case study, exam style | C | A | D3 | D02, D03 | 90-day clock |
 | D05 | Interest rate risk 1: gap analysis, RSA/RSL, NII and NIM, IRRBB | N | B | D5 | D01, C05 | the gap bars |
 | D06 | Interest rate risk 2: duration gap and economic value; MCLR and EBLR | N | B | D5 | C06, D05 | see-saw on the balance sheet |
+| D06b | Managing interest rate risk: strategies, controls and IRRBB (**added v4**, split from D06; plan in `plans_D.md`) | N | B | D5 | D06 | — |
 | D07 | RAROC, economic capital, risk aggregation, profit planning | L+N | C | D6 | B05, B10 | — (to design) |
+| D07b | RAROC, risk-adjusted performance and EVA: the sums (**added v4**, split from D07; plan in `plans_D.md`) | L+N | C | D6 | D07 | — |
 | DR | Module D revision | R | | | all D | full map D |
 
 ### Whole paper
@@ -135,9 +152,15 @@ Part 4: capital flows and the rule-makers
 | U01 | What changed up to the exam cut-off: every update in `regulatory_updates.md` marked "yes" | L | all |
 | X01 | Exam-day plan: time per section, no-options numericals, the night-before sheet | L | all |
 
-**Count (v3):** 1 start + 24 A + 15 B + 9 C + 7 D + 4 revisions + U01 + X01 = **62 videos**, about 12–13 hours, in
+**Count (v4):** 1 start + 28 A + 20 B + 14 C + 10 D + 4 revisions + U01 + X01 = **79 videos**, about 16–18 hours, in
 chapters of under 6 minutes. **Also:** module PDFs (map, traps, formula sheet, night-before page) and two full mocks
 written by us (100 questions each). These are written after the scripts are locked, from the same facts.
+
+**v3 → v4 changes (2026-11-21, owner: "write every script first"):** every split proposed inside the module
+plans is adopted, keeping "b" ids so nothing is renumbered: A11b, A15b, A16b, A19c; B04b, B07b, B09b, B11b, B14b;
+C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b (17 new videos, 62 → 79). Reason: with every sub-topic at exam depth
+those videos no longer fit 12–15 minutes. The plan page for each new video is inside its module's plans file. The six
+"partial" ledger rows get a full home: C1.2 → C01, C2.4 → C02b, C7.2 and C7.5 → D01b, D5.3 and D5.4 → D06b.
 
 **v1 → v2 changes:** Nostro/Vostro moved to A02 (it explains TT vs bill rates); forwards split into rates (A05) and
 cancellation (A06); Incoterms (A07) now before LCs, since the deal comes before the payment; crystallisation (A12)
