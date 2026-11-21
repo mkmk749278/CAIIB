@@ -9,11 +9,11 @@
    a) time risk b) funding risk c) call risk d) reinvestment risk
    **Answer: b.** Funding risk: replacing net outflows from withdrawal or non-renewal of deposits (RBI 1999, 8.2.3).
 
-3. A bank's loans and deposits reprice on the same date, but the deposit rate rises by more than the loan rate. The
-   risk is:
+3. A bank's loans and deposits are of equal amounts and reprice on the same date, but the deposit rate (on a
+   different benchmark) rises by more than the loan rate. The risk is:
    a) gap risk b) basis risk c) yield curve risk d) embedded option risk
    **Answer: b.** Basis risk: rates of different items change by different magnitudes (RBI 1999, 9.3.2). Gap risk
-   needs different repricing dates.
+   comes from different principal amounts, maturity dates or repricing dates (9.3.1); here none differ.
 
 4. Under the Basel definition, operational risk excludes:
    a) legal risk b) risk from external events c) strategic and reputational risk d) risk from failed systems
@@ -38,3 +38,8 @@
    best described as:
    a) Herstatt (settlement) risk b) transfer risk c) price risk d) model risk
    **Answer: a.** Principal risk in FX settlement, "sometimes referred to as Herstatt risk" (BCBS 2013).
+
+9. Nationalisation of a foreign borrower's assets by its government, so that it cannot repay, is:
+   a) transfer risk b) sovereign risk c) political (non-sovereign) risk d) settlement risk
+   **Answer: c.** RBI Guidance Note 2002, 7.1: political risk, "also referred to as risk of appropriation and
+   expropriation".

@@ -18,4 +18,5 @@ order, so they stand; change A07's lines if it is ever re-voiced.
 
 | Video | Greeting (first words) | Goodbye (last words) |
 |---|---|---|
-| B01 | "Hello and welcome, everyone. Today we open a new module." | "That's the first class of Module B done. Look after yourselves, and I'll see you in the next class." |
+| B01 | "Hello and welcome, everyone. Today we open a new module." | "That's Module B begun. Rest well, and I'll see you in the next class." |
+| B02 | "Good to have you back. Let's pick up from the house we drew last time." | "Good work today. Close the notebook, stretch, and I'll see you in the next class." |
