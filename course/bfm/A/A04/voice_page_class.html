@@ -1,0 +1,150 @@
+<title>A04 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A04 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A04/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Reading a quote + Chapter 2 · Cross rates: multiply or divide + Chapter 3 · The chain rule + Chapter 4 · Exam case + Close (N001–N054)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N054", "text": "[warmly] Hello again, everyone. Good to see you back, calculator in hand. Forex sums came up in all seven exam cycles we studied. Cross rates are part of that. Last class ended with a question. When the bank has no direct quote for a currency, how does it make one? Today's answer is the cross rate: a rate made through a third currency. Picture an exporter in Tiruppur. She sells T-shirts to Germany and gets paid in euros. Her bank's screen shows only euro-dollar and dollar-rupee. What rupee rate does she get? Hold that. By the end of this class, you'll work it out in under a minute. Chapter one. Every quote is a pair of currencies. Euro-dollar one point zero eight five zero means one euro costs one point zero eight five zero dollars. The currency on the left is the base. Always one unit. The one on the right is the quote currency. It tells you the price. Quick one. In dollar-rupee eighty-five point six zero, which is the base? The dollar. One dollar costs eighty-five point six zero rupees. That's a direct quote: so many rupees for one unit of foreign currency. India quotes directly. Turn it round, and you get an indirect quote: foreign currency for a hundred rupees. A hundred, divided by eighty-five point six. One point one six eight two dollars per hundred rupees. With two sides, flip and swap. The indirect bid is a hundred divided by the direct ask. The indirect ask is a hundred divided by the direct bid. Careful. Here the rupee is the base. So the bank buys dollars at the higher figure, one point one six eight two. Buy high, sell low. And remember the two sides. The bid is where the bank buys the base currency. The ask is where it sells it. Now the word for today. A cross rate is the rate between two currencies, fixed through a third. Usually the dollar. Pause check for chapter one. One. In pound-dollar, which is the base? The pound. Two. Rupees for one dollar: direct or indirect? Direct. Three, the twist. The direct quote is eighty-five point six zero, eighty-five point six two. Which figure gives the indirect bid? The direct ask. A hundred divided by eighty-five point six two. Flip and swap. [seriously] If you remember one thing from chapter one: base on the left, one unit. And a cross rate goes through a third currency. Chapter two. First, from chapter one. In euro-dollar, which currency is the base? The euro. Now look where the dollar sits. In euro-dollar, it's on the right. In dollar-rupee, it's on the left. Opposite sides. Rule one. When the dollar sits on opposite sides, multiply. The dollars cancel, and you're left with euro-rupee. And multiply like with like. Bid with bid. Ask with ask. Small times small gives the smallest answer. That's the bid. Press along. Euro-dollar: bid one point zero eight five zero, ask one point zero eight five five. Dollar-rupee: bid eighty-five point six zero, ask eighty-five point six two. Bid: one point zero eight five. The last zero needn't be keyed. Times eighty-five point six, equals. Ninety-two point eight seven six zero. Ask: one point zero eight five five, times eighty-five point six two, equals. Ninety-two point nine four zero five. Many of you will multiply the euro-dollar bid by the dollar-rupee ask. That gives ninety-two point eight nine seven seven. Wrong. Bid goes with bid. A cross rate's spread, in percent, is about the two spreads added. So a cross costs a little more. Your turn. Pound-dollar: bid one point two six five zero, ask one point two six six zero. Same dollar-rupee. Find pound-rupee, bid and ask. Pause. Bid, one point two six five, times eighty-five point six. One hundred eight point two eight four zero. Ask, one point two six six, times eighty-five point six two. One hundred eight point three nine four nine. Now rule two. Look at dollar-rupee and dollar-yen. Dollar-yen: bid one hundred forty-nine point five zero, ask one hundred forty-nine point six zero. The dollar is the base in both. Same side. When the dollar sits on the same side in both, divide. Here, rupees per dollar, divided by yen per dollar, gives rupees per yen. And here the sides cross. For the bid, divide the rupee bid by the yen ask. For the ask, divide the rupee ask by the yen bid. Why? The bid must be the smallest answer you can make. So put the smaller rupee figure on top, and the bigger yen figure below. Small on top, big below: the smallest answer. That's the bid. The ask is the other way round: big on top, small below. Press along. Eighty-five point six, divided by one forty-nine point six, times a hundred, for per hundred yen, equals. Fifty-seven point two one nine three. Ask: eighty-five point six two, divided by one forty-nine point five, times a hundred, equals. Fifty-seven point two seven zero nine. Many of you divided bid by bid, and ask by ask. That gives fifty-seven point two five seven five, and fifty-seven point two three two six. Look. That bid is above that ask. That can't be. So always check: is my bid below my ask? Same side works on the right too. Euro-dollar and pound-dollar: the dollar is the quote currency in both. Divide, and cross the sides, for euro-pound. Pause check for chapter two. One. Euro-dollar and dollar-rupee: multiply or divide? Multiply. The dollar sits on opposite sides. Two. Dollar-rupee and dollar-yen? Divide. The dollar is on the same side. Three, the twist. For the yen-rupee bid, which yen figure do you divide by? The yen ask, the bigger one. So the bid comes out smaller. [seriously] If you remember one thing from chapter two: dollar on opposite sides, multiply, like with like. Dollar on the same side, divide, and cross the sides. Chapter three. First, from chapter two. Bid times bid, or bid times ask? Bid times bid. Now, sometimes a question gives three or four links. That's the chain rule. Think of rings, each holding the next. How many rupees for one pound? On another day's rates: one pound is one point one seven euro. One euro is one point zero eight five dollars. One dollar is eighty-five point six zero rupees. See how each ring starts with the currency the last one ended in? Pound, euro, dollar, rupee. So multiply along the chain. One point one seven, times one point zero eight five, times eighty-five point six, equals. One hundred eight point six six four nine. Sometimes a ring starts with a number other than one, like a hundred yen. Then the full rule: multiply the right-hand numbers, and divide by the left-hand ones. Your turn. One pound is one point one seven euro. Zero point nine two one seven euro is one dollar. One dollar is one forty-nine point five yen. A hundred yen is fifty-seven point two two rupees. Rupees for one pound? Pause the video if you need. Right side: one point one seven, times one forty-nine point five, times fifty-seven point two two. Then divide by zero point nine two one seven, and by a hundred. One hundred eight point five eight eight nine. If you multiplied by zero point nine two one seven, you got ninety-two point two four nine six. Too small. Check the left side. One more. At the first chain's rate, how many pounds for five lakh rupees? Some of you will multiply again. Think first. Pause. Divide. The rate is rupees for one pound. You have rupees and want pounds, so divide. Five lakh, divided by one hundred eight point six six four nine. Four thousand, six hundred one pounds, thirty pence. Pause check for chapter three. One. In a chain, what joins each ring to the next? The same currency. Two, the twist. A ring starts with a hundred yen. Multiply by that hundred, or divide? Divide. It's on the left-hand side. [seriously] If you remember one thing from chapter three: link the rings, multiply the right side, divide by the left side. Chapter four, the exam case. Back to our Tiruppur exporter. Forty thousand euros come in. The bank buys euros. Which side of the cross rate? The bid. The bank buys the base, the euro. Ninety-two point eight seven six zero. Round the cross to four decimals first, as in A-zero-three. Before the bank's margin, how many rupees? Pause. Forty thousand times ninety-two point eight seven six. Thirty-seven lakh, fifteen thousand, forty rupees. Then the bank's margin comes off. Now the opposite deal. A Coimbatore importer pays twenty lakh yen to Japan. The bank sells yen. Which side, and how many rupees? Pause. The ask, fifty-seven point two seven zero nine per hundred. Twenty lakh yen is twenty thousand hundreds. Eleven lakh, forty-five thousand, four hundred eighteen rupees. Last one, with no options. Work backwards. Euro-rupee is ninety-two point eight seven six zero, ninety-two point nine four zero five. Euro-dollar is one point zero eight five zero, one point zero eight five five. Find dollar-rupee, bid and ask. Pause. Here the euro is the link, the base in both. Same side, so divide, and cross the sides. Bid: ninety-two point eight seven six, divided by one point zero eight five five. Eighty-five point five six zero six. Ask: ninety-two point nine four zero five, divided by one point zero eight five. Eighty-five point six five nine four. If you got exactly eighty-five point six zero, you divided bid by bid. It looks right. It's the trap. Now the map, from memory. Branch zero. The currency on the left? The base, one unit. Branch one. Dollar on opposite sides? Multiply, like with like. Branch two. Dollar on the same side? Divide, and cross the sides. Branch three. The chain rule? Multiply the right side, divide by the left. That's the map. You can now read any quote, build any cross rate, and solve a chain. Homework. Make up your own dollar-yen and dollar-rupee quotes, and find yen-rupee per hundred. Then check: is your bid below your ask? Next class: forward rates. Why is the dollar dearer three months from now? [warmly] That's all for today. Practise one cross rate tonight. Until next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

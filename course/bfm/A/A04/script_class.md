@@ -1,6 +1,6 @@
-# A04 · "Rates through a third currency" · CLASS EDITION (script c2, with cue sheet) · DRILL (N)
+# A04 · "Rates through a third currency" · CLASS EDITION (script c3, with cue sheet) · DRILL (N)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked, 2026-11-21**: re-review `review_c2.md` ADOPT WITH FIXES (0 H, 2 M, 7 L), all applied; no further re-review needed. c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style, drill format (`course/spec/lesson_spec.md`).
 - **Plan**: `course/bfm/A/plans_A.md` §A04. Course order v4: A03 → **A04** → A05.
 - **Syllabus**: A1.3 (quotes, cross rates), A1.7 (forex arithmetic).
@@ -15,8 +15,9 @@
   15–20 s; map 3–5 s.
 - **Say it right**: "EUR/USD" as "euro-dollar"; "USD/JPY" as "dollar-yen"; "per hundred yen"; the first time,
   "one hundred forty-nine point five zero", after that "one forty-nine".
-- **Length target**: about 13–14 minutes. Chapters: 1 reading a quote (~3 min) · 2 cross rates (~4.5 min) · 3 chain
-  rule (~2.5 min) · 4 exam case (~2.5 min) · close (~1 min).
+- **Length target**: about 14–15 minutes (drill; ~1,700 spoken words + ~195 s holds). Chapters: 1 reading a quote
+  (~3.5 min) · 2 cross rates (~4.5 min) · 3 chain rule (~3 min) · 4 exam case (~3 min) · close (~1 min). If the
+  measured take runs over 15:00, cut N022–N023 (practice P2 drills the same rule).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: the balance scale (base
   left, quote currency right); the chain of rings.
 
@@ -27,7 +28,7 @@
 N001 · [warmly] Hello again, everyone. Good to see you back, calculator in hand.
 > 0 C: rule-version card · 1 S: notebook page; title "A04 · Rates through a third currency"
 
-N001a · Phone on silent? Good. Forex sums came up in all seven exam cycles we studied. Cross rates are part of that.
+N001a · Forex sums came up in all seven exam cycles we studied. Cross rates are part of that.
 > 1 N: "forex sums: 7 of 7 cycles" [importance_map A-FXNUM]
 
 N002 · Last class ended with a question. When the bank has no direct quote for a currency, how does it make one? Today's answer is the cross rate: a rate made through a third currency.
@@ -36,7 +37,7 @@ N002 · Last class ended with a question. When the bank has no direct quote for 
 N003 · Picture an exporter in Tiruppur. She sells T-shirts to Germany and gets paid in euros. Her bank's screen shows only euro-dollar and dollar-rupee. What rupee rate does she get?
 > 1 S: a Tiruppur exporter with a euro invoice "EUR 40,000"; a screen with two quotes "EUR/USD · USD/INR" · H: 3 s
 
-N004 · Hold that. By the end of this class, you'll work it out in under a minute. No heavy theory, just keys. Stay with me.
+N004 · Hold that. By the end of this class, you'll work it out in under a minute.
 > 1 G: the two quotes
 
 ## Chapter 1 · Reading a quote
@@ -59,17 +60,14 @@ N009 · Turn it round, and you get an indirect quote: foreign currency for a hun
 N009a · With two sides, flip and swap. The indirect bid is a hundred divided by the direct ask. The indirect ask is a hundred divided by the direct bid.
 > 1 S: "85.60 / 85.62 → USD 1.1680 / 1.1682 per ₹100" · 2 B: crossed arrows "÷ ask → bid · ÷ bid → ask" [F2]
 
-N009b · So in an indirect quote, the bank buys high and sells low. It gets more dollars per hundred rupees when it buys.
-> 1 N: "indirect: buy high, sell low" [F2, F3]
+N009b · Careful. Here the rupee is the base. So the bank buys dollars at the higher figure, one point one six eight two. Buy high, sell low.
+> 1 N: "indirect: bank buys USD at 1.1682, sells USD at 1.1680 → buy high, sell low (for the foreign currency)" [F2, F12]
 
 N010 · And remember the two sides. The bid is where the bank buys the base currency. The ask is where it sells it.
 > 1 N: "bid: bank buys the base · ask: bank sells the base" [F3]
 
 N011 · Now the word for today. A cross rate is the rate between two currencies, fixed through a third. Usually the dollar.
-> 1 C: card "cross rate = rate between two currencies through a third (usually USD)" [F4] · 2 B: box "through a third"
-
-N012 · Even F-B-I-L, India's benchmark body, does this. Its euro, pound and yen reference rates are crossed through dollar-rupee. And yen is quoted per hundred.
-> 1 N: "FBIL: EUR, GBP, JPY reference rates crossed via USD/INR · JPY per 100" [F5]
+> 1 C: card "cross rate = rate between two currencies through a third (usually USD)" [F4]; second line "FBIL crosses its EUR, GBP, JPY rates through USD/INR · JPY per 100" [F5] · 2 B: box "through a third"
 
 N012a · Pause check for chapter one. One. In pound-dollar, which is the base?
 > 1 S: card "GBP/USD: base = ?" · H: 3 s
@@ -112,11 +110,11 @@ N020 · Ask: one point zero eight five five, times eighty-five point six two, eq
 N021 · Many of you will multiply the euro-dollar bid by the dollar-rupee ask. That gives ninety-two point eight nine seven seven. Wrong. Bid goes with bid.
 > 1 C: trap card "bid × ask = 92.8977 ✗ · bid × bid = 92.8760 ✓" [F7]
 
-N021a · Notice the spread. In percent, a cross rate's spread is about the two spreads added together. So a cross always costs a little more to deal in.
+N021a · A cross rate's spread, in percent, is about the two spreads added. So a cross costs a little more.
 > 1 N: "EUR/USD 0.046% + USD/INR 0.023% ≈ EUR/INR 0.069%"
 
 N022 · Your turn. Pound-dollar: bid one point two six five zero, ask one point two six six zero. Same dollar-rupee. Find pound-rupee, bid and ask. Pause.
-> 1 S: card "GBP/USD 1.2650 / 1.2660 · USD/INR 85.60 / 85.62" (illustrative) · H: 20 s
+> 1 S: card "GBP/USD 1.2650 / 1.2660 · USD/INR 85.60 / 85.62" (illustrative) · H: 15 s
 
 N023 · Bid, one point two six five, times eighty-five point six. One hundred eight point two eight four zero. Ask, one point two six six, times eighty-five point six two. One hundred eight point three nine four nine.
 > 1 B: boxes "GBP/INR 108.2840 / 108.3949"
@@ -183,7 +181,7 @@ N039 · See how each ring starts with the currency the last one ended in? Pound,
 N040 · So multiply along the chain. One point one seven, times one point zero eight five, times eighty-five point six, equals. One hundred eight point six six four nine.
 > 1 S: keys 1.17 × 1.085 × 85.60 = · H: 8 s (after "equals") · 2 B: box "₹108.6649 per GBP"
 
-N040a · Sometimes a ring starts with more than one unit, like a hundred yen. Then the full rule: multiply the right-hand numbers, and divide by the left-hand ones.
+N040a · Sometimes a ring starts with a number other than one, like a hundred yen. Then the full rule: multiply the right-hand numbers, and divide by the left-hand ones.
 > 1 C: card "chain: × every right-hand number · ÷ every left-hand number" [F10, F11]
 
 N040b · Your turn. One pound is one point one seven euro. Zero point nine two one seven euro is one dollar.
@@ -195,11 +193,11 @@ N040c · One dollar is one forty-nine point five yen. A hundred yen is fifty-sev
 N040d · Right side: one point one seven, times one forty-nine point five, times fifty-seven point two two. Then divide by zero point nine two one seven, and by a hundred.
 > 1 S: keys 1.17 × 149.5 × 57.22 ÷ 0.9217 ÷ 100 =
 
-N040e · One hundred eight point five eight eight nine. If you multiplied by zero point nine two one seven, you got ninety-two point two five. Too small. Check the left side.
+N040e · One hundred eight point five eight eight nine. If you multiplied by zero point nine two one seven, you got ninety-two point two four nine six. Too small. Check the left side.
 > 1 B: box "₹108.5889 per GBP" · 2 C: trap card "× 0.9217 → 92.2496 ✗" [F10]
 
 N041 · One more. At the first chain's rate, how many pounds for five lakh rupees? Some of you will multiply again. Think first. Pause.
-> 1 S: card "₹5,00,000 → GBP ? (at ₹108.6649)" · H: 20 s
+> 1 S: card "₹5,00,000 → GBP ? (at ₹108.6649)" · H: 15 s
 
 N042 · Divide. The rate is rupees for one pound. You have rupees and want pounds, so divide. Five lakh, divided by one hundred eight point six six four nine.
 > 1 S: the rings walked backward, rupee → pound, "÷" · keys 500000 ÷ 108.6649 = · H: 6 s
@@ -210,7 +208,7 @@ N042a · Four thousand, six hundred one pounds, thirty pence.
 N042b · Pause check for chapter three. One. In a chain, what joins each ring to the next?
 > 1 S: card "ring joins by ?" · H: 3 s
 
-N042c · The same currency. Two, the twist. A ring says a hundred yen. Multiply by that hundred, or divide?
+N042c · The same currency. Two, the twist. A ring starts with a hundred yen. Multiply by that hundred, or divide?
 > 1 N: "same currency ✓" · H: 3 s
 
 N042d · Divide. It's on the left-hand side.
@@ -242,7 +240,7 @@ N046c · Last one, with no options. Work backwards. Euro-rupee is ninety-two poi
 N046d · Euro-dollar is one point zero eight five zero, one point zero eight five five. Find dollar-rupee, bid and ask. Pause.
 > 1 S: card "EUR/USD 1.0850 / 1.0855 → USD/INR ?" · H: 20 s
 
-N046e · The euro is the base in both. Same side, so divide, and cross the sides. Bid: ninety-two point eight seven six, divided by one point zero eight five five.
+N046e · Here the euro is the link, the base in both. Same side, so divide, and cross the sides. Bid: ninety-two point eight seven six, divided by one point zero eight five five.
 > 1 S: keys 92.876 ÷ 1.0855 =
 
 N046f · Eighty-five point five six zero six. Ask: ninety-two point nine four zero five, divided by one point zero eight five. Eighty-five point six five nine four.
@@ -254,21 +252,21 @@ N046g · If you got exactly eighty-five point six zero, you divided bid by bid. 
 ## Close
 
 N047 · Now the map, from memory. Branch zero. The currency on the left?
-> 1 M: branch "Rates", nodes "quotes", "cross rates", "chain rule" empty · H: 3 s
+> 1 M: branch "Rates", nodes "quotes · multiply · divide · chain rule" empty · H: 3 s
 
 N047a · The base, one unit. Branch one. Dollar on opposite sides?
 > 1 M: node "quotes" fills · H: 5 s
 
 N048 · Multiply, like with like. Branch two. Dollar on the same side?
-> 1 M: node fills · H: 5 s
+> 1 M: node "cross rates · multiply" fills · H: 5 s
 
 N049 · Divide, and cross the sides. Branch three. The chain rule?
-> 1 M: node "cross rates" fills · H: 5 s
+> 1 M: node "cross rates · divide" fills · H: 5 s
 
 N050 · Multiply the right side, divide by the left. That's the map.
 > 1 M: node "chain rule" fills; branch completes
 
-N051 · You can now read any quote, build any cross rate, and solve a chain. If a step slipped, rewatch chapter two and press along.
+N051 · You can now read any quote, build any cross rate, and solve a chain.
 > 1 S: checklist ticks
 
 N052 · Homework. Make up your own dollar-yen and dollar-rupee quotes, and find yen-rupee per hundred. Then check: is your bid below your ask?

@@ -40,4 +40,4 @@ Answer **0.8586 / 0.8596**: USD is the quote in both, so divide crossing the sid
 **P8 (check, MCQ).** A learner's JPY/INR cross comes out bid 57.2709, ask 57.2193. What went wrong?
 (a) He forgot ×100 (b) **He crossed the sides the wrong way round: bid used the yen bid** (c) He should have
 multiplied (d) Nothing; yen quotes are reversed
-Answer (b): the cross bid must be below the ask; for the bid divide the rupee bid by the yen **ask**.
+Answer (b): he swapped the two answers: 57.2709 is rupee ask ÷ yen bid, which is the ask. For the bid, divide the rupee bid by the yen **ask**; the bid must be below the ask.
