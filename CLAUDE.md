@@ -170,7 +170,7 @@ tires the ear; enhancement removes it). `flow_voice.py` refuses a raw take (`--r
 `tools/video/flow_voice.py` (continuous voice, planned holds only, re-generated lines
 swapped in) + music bed ducked → `mix.flac` in Drive `BFM/<video>/flow/` → timeline JSON → Remotion composition on
 the shared kit (`video/src/kit/`: notebook page, journey road, rule cards, growing map) with a beat for every
-sentence (`sk()`, `B()`, `W()`, glow on named things, crossfades only) → render on 6 GitHub runners (`render.yml`,
+sentence (`sk()`, `B()`, `W()`, glow on named things, crossfades only) → render on 6 GitHub runners, up to 18 when the owner says the account's runners are free (`render.yml`,
 about 7 min; 720p review cut, then the 1080p master; never 4K) → checks `smooth_audit.py`, `sentence_sync.py`,
 `overlap_check.mjs/.py`, `sync_sheet.py` → fix what they list → only then to the owner.
 
