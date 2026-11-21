@@ -1,6 +1,6 @@
-# A05 · "Today's price for a later date" · CLASS EDITION (script c2, with cue sheet)
+# A05 · "Today's price for a later date" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked, 2026-11-21**: re-review `review_c2.md` ADOPT WITH FIXES (0 H, 2 M, 4 L), all applied; no further re-review needed. If the measured take runs over 15:00, cut in order: merge N014–N015; merge N029b into N029a; drop N019's "one thing" sentence. c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style (`course/spec/lesson_spec.md`): teaching plus sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A05. Course order v4: A04 → **A05** → A06.
 - **Syllabus**: A1.5 (forwards), A1.6 (FEDAI rules: value dates, option period, transit period), A1.7 (forex
@@ -138,13 +138,13 @@ N031a · How big a premium, per year? Forward minus spot, divided by spot. Then 
 N031b · Eighty-six point zero two three two, minus eighty-five point six. Divided by eighty-five point six, times four, times a hundred, equals. One point nine eight. The gap.
 > 1 S: keys 86.0232 − 85.60 = ÷ 85.60 × 4 × 100 = · H: 8 s (after "equals") · 2 B: box "≈ 1.98% a year ≈ 6.5% − 4.5%"
 
-N031c · Exams also run it backwards, with no options. Premium two point four percent a year, two months. Two point four, divided by twelve, times two.
-> 1 S: label "No options · 4 decimals" · card "spot 83.50 · premium 2.4% p.a. · 2 months" (illustrative) · H: 8 s
+N031c · Exams also run it backwards, with no options. Premium two point four percent a year, two months. Two point four, divided by twelve, times two, equals.
+> 1 S: label "No options · 4 decimals" · card "spot 83.50 · premium 2.4% p.a. · 2 months" (illustrative) · H: 6 s (after "equals")
 
-N031d · Point four percent. So eighty-three point five, times one point zero zero four. Eighty-three point eight three four zero.
-> 1 S: keys 2.4 ÷ 12 × 2 = · 83.50 × 1.004 = · 2 B: box "83.8340" · 3 C: trap card "× 1.024 = 85.5040 ✗ (not cut to 2 months)"
+N031d · Point four percent. So eighty-three point five, times one point zero zero four, equals. Eighty-three point eight three four zero.
+> 1 S: keys 2.4 ÷ 12 × 2 = · 83.50 × 1.004 = · H: 6 s (after "equals") · 2 B: box "83.8340" · 3 C: trap card "× 1.024 = 85.5040 ✗ (not cut to 2 months)"
 
-N031e · One condition. The premium equals the interest gap exactly only for freely convertible currencies. For the rupee, exporters' and importers' demand also moves it.
+N031e · One condition. The premium follows the interest gap fully only when both currencies are freely convertible. For the rupee, exporters' and importers' demand also moves it.
 > 1 C: card "premium = interest gap exactly → only for freely convertible currencies" [F10] · 2 N: "C01: how dealers trade the gap"
 
 N032 · Pause check for chapter two. One. Points zero point two four, zero point two zero. Premium or discount?
@@ -176,7 +176,7 @@ N038 · But which rate does the bank quote for a whole window? The date in it th
 N039 · So, if the bank is selling dollars at a premium, it charges the premium to the last date. The highest rate.
 > 1 B: arrow to the window's end "sale + premium → last date" [F12]
 
-N040 · If the bank is buying dollars at a premium, it gives the premium only to the first date. The lowest rate. That's the exam convention, not a F-E-D-A-I line.
+N040 · If the bank is buying dollars at a premium, it gives the premium only to the first date. The lowest rate. That's the exam convention, not an F-E-D-A-I rule.
 > 1 B: arrow to the window's start "purchase + premium → first date" [F12] · 2 N: "(exam convention)"
 
 N041 · Our importer doesn't know the day. So the bank sells him dollars, delivery any day in the second month. Premium, so which date? Pause.
@@ -188,8 +188,8 @@ N042 · The last date, end of month two. Two-month ask, eighty-six point zero on
 N043 · Eighty-six point zero one, times one point zero zero one two, equals. Eighty-six point one one three two. That's his rate.
 > 1 S: keys 86.01 × 1.0012 = · H: 6 s (after "equals") · 2 B: box "86.1132"
 
-N044 · Times fifty thousand, equals. Forty-three lakh, five thousand, six hundred sixty rupees. Fixed today.
-> 1 S: keys × 50000 = · H: 5 s (after "equals") · 2 B: box "₹43,05,660.00"
+N044 · Round it to four decimals first. Eighty-six point one one three two, times fifty thousand, equals. Forty-three lakh, five thousand, six hundred sixty rupees. Fixed today.
+> 1 S: keys 86.1132 × 50000 = · H: 5 s (after "equals") · 2 B: box "₹43,05,660.00"
 
 N045 · Your turn. An exporter sells the bank dollars, delivery in the third month. T-T buying margin, point zero eight percent. Same points; the card is still up. Pause the video.
 > 1 S: card "bank buys USD · option: 3rd month · TT buying − 0.08%" (illustrative) · H: 20 s
@@ -238,8 +238,8 @@ N055a · At a discount, it's the other way. Round up to the next month. A bigger
 N056 · Two-month bid, eighty-five point nine six. Less the bill buying margin, point one five percent. Times point nine nine eight five, equals. Eighty-five point eight three one one.
 > 1 S: keys 85.96 × 0.9985 = · H: 6 s (after "equals") · 2 B: box "85.8311"
 
-N057 · Times twenty thousand, equals. Seventeen lakh, sixteen thousand, six hundred twenty-two rupees. And the bank recovers interest for those eighty-five days upfront.
-> 1 S: keys × 20000 = · H: 5 s (after "equals") · 2 B: box "₹17,16,622.00" · 3 N: "interest for transit + usance: recovered upfront" [F13]
+N057 · Rounded first: eighty-five point eight three one one, times twenty thousand, equals. Seventeen lakh, sixteen thousand, six hundred twenty-two rupees. And the bank recovers interest for those eighty-five days upfront.
+> 1 S: keys 85.8311 × 20000 = · H: 5 s (after "equals") · 2 B: box "₹17,16,622.00" · 3 N: "interest for transit + usance: recovered upfront" [F13]
 
 N058 · One exception. If the bill has a fixed due date, the bank already knows when it's paid. Then the transit period doesn't apply.
 > 1 C: card "fixed due date → no transit period" [F16]

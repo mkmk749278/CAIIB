@@ -32,7 +32,7 @@ Answer **2.12%**: `85.35 − 84.90 =` 0.45; `÷ 84.90 × 4 × 100 =` 2.120141. (
 **P5 (premium % a year → rupee cost, MCQ).** An importer owes USD 40,000 in 3 months. Spot 84.90; the 3-month forward
 premium is 2.2% a year (months basis). Rupee cost at the forward rate, before margin?
 (a) ₹34,70,712.00 (b) ₹33,77,324.00 (c) **₹34,14,680.00** (d) ₹33,96,000.00
-Answer (c): `2.2 ÷ 12 × 3 =` 0.55%; `84.90 × 1.0055 =` 85.36695 → 85.3670; `× 40000 =` 34,14,680. (a) uses the full
+Answer (c): `2.2 ÷ 12 × 3 =` 0.55%; `84.90 × 1.0055 =` 85.36695 → 85.3670; `85.367 × 40000 =` 34,14,680. (a) uses the full
 2.2%; (b) subtracts the premium; (d) is spot with no premium.
 
 **P6 (interest parity, no options).** Spot USD/INR 84.90. Rupee interest 6.8%, dollar interest 4.4% a year.
@@ -49,9 +49,9 @@ Answer (b): sale + discount → the first date of the window (end of month 1): `
 **P8 (usance bill at a discount, no options).** Exporter's bill USD 15,000 at 45 days sight; normal transit period
 25 days. The bank buys it today. Using the common quote, rupees paid before interest?
 Answer **₹12,65,299.50**: 45 + 25 = 70 days = 2 months 10 days; discount, bank buying → round **up** to 3 months:
-`84.90 − 0.42 =` 84.48; `× 0.9985 =` 84.35328 → 84.3533; `× 15000 =` 12,65,299.50. (Rounding down to 2 months gives
+`84.90 − 0.42 =` 84.48; `× 0.9985 =` 84.35328 → 84.3533; `84.3533 × 15000 =` 12,65,299.50. (Rounding down to 2 months gives
 84.4631 and ₹12,66,946.50; no margin gives ₹12,67,200.00.)
 
 **Homework answer (N066).** Spot 85.60 / 85.62, one-month discount points 0.24 / 0.20; bank sells, delivery in the
-second month. Sale + discount → the **first** date (end of month 1): `85.62 − 0.20 =` **85.42**, then add the TT
-selling margin.
+second month. Sale + discount → the **first** date (end of month 1): `85.62 − 0.20 =` **85.42**; with the TT selling
+margin 0.12%: `85.42 × 1.0012 =` **85.5225**.

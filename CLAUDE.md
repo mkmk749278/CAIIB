@@ -66,8 +66,10 @@ Never a new loose doc.
     sheet `research/bfm/facts/A1.6-A1.7_A01.md`, reviews c1 ×3 + re-review c2, voice page `A/A1/voice_page_class.html`,
     2 parts); A07 (Incoterms). **A02 class edition c3 locked** (2026-11-21, `A/A02/`, fact sheet
     `research/bfm/facts/A3.1-A3.3_A02.md`, voice page 2 parts); **A03 drill c3 locked** (`A/A03/`, voice page 1 part); **A04 drill c3 locked** (2026-11-21, `A/A04/`, fact sheet `A1.3-A1.7_A04.md`,
-    checker `tools/check/fx_cross_rates.py`, reviews c1 ×3 + re-review c2, voice page 1 part); **A05 c1** written
-    (`A/A05/`, fact sheet `A1.5-A1.7_A05.md`, checker `tools/check/fx_forwards.py`), reviews c1 running. Greetings and goodbyes used so far: `course/bfm/greetings.md`.
+    checker `tools/check/fx_cross_rates.py`, reviews c1 ×3 + re-review c2, voice page 1 part); **A05 c3 locked**
+    (`A/A05/`, fact sheet `A1.5-A1.7_A05.md`, checker `tools/check/fx_forwards.py`, voice page 1 part); **A06 c1**
+    written (`A/A06/`, fact sheet `A1.5-A1.7_A06.md`, checker `tools/check/fx_forward_contracts.py`), reviews running.
+    Open: FEDAI 6.3 "cancel and rebook" vs RBI Circular 25 (10 Oct 2026) no rebooking: re-check FEDAI at the freeze. Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
   `A07_master_1080p.mp4` in Drive `BFM/A07/renders/`.
@@ -97,7 +99,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04 locked; fix A05 c1 from its three reviews, re-review, voice page; then A06 onward:** fact sheet →
+    A04, A05 locked; fix A06 c1 from its three reviews, re-review, voice page; then A08 onward (A07 Incoterms exists; re-check it against plans draft 2):** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
