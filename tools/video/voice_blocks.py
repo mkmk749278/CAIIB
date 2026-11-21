@@ -50,7 +50,7 @@ def parse(path):
         if p.startswith("## "):
             section = p[3:]
             continue
-        m = re.match(r"([NMR]\d\d[a-z]?) · (.*)", p)
+        m = re.match(r"([NMR]\d{2,3}[a-z]?) · (.*)", p)
         if m:
             out.append({"id": m.group(1), "text": m.group(2), "section": section})
     return out

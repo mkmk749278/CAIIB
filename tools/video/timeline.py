@@ -32,7 +32,7 @@ def main(src, adir, out):
     words = json.load(open(wp)) if os.path.exists(wp) else {}
     t, lines = 1.0, []
     for para in re.split(r'\n\s*\n', body):
-        m = re.match(r'([NMR]\d\d[a-z]?) · (.*)', ' '.join(para.split()))
+        m = re.match(r'([NMR]\d{2,3}[a-z]?) · (.*)', ' '.join(para.split()))
         if not m:
             continue
         lid, text = m.groups()

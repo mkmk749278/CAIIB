@@ -14,7 +14,7 @@ Writes <out_dir>/voice.wav (48 kHz mono) and the timeline JSON (same schema as t
 import difflib, json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from cut_lines import script_lines, toks, isnum  # same script parsing and token rules as the line cutter
+from cut_lines import script_lines, script_holds, toks, isnum  # same script parsing and token rules as the line cutter
 from timeline import CFG
 
 FPS, SR = 30, 48000
@@ -93,7 +93,9 @@ def main(argv):
     tmp = os.path.join(out_dir, 'pieces'); os.makedirs(tmp, exist_ok=True)
     text = script_lines(src)
     order = list(text)
-    cfg = CFG[src.split('/')[-2]]
+    # holds: the lesson's CFG entry, then any "H: n s" written in the cue sheet (class-edition scripts) on top
+    cfg = dict(CFG.get(src.split('/')[-2], {'HOLD': {}, 'CHAPTER': {}}))
+    cfg['HOLD'] = {**cfg['HOLD'], **script_holds(src)} if 'class' in os.path.basename(src) else cfg['HOLD']
     pieces = []  # (kind, path or seconds, line id, word list relative to piece start)
     for spec in specs:
         audio, wj, i0, i1 = spec.rsplit(':', 3)
