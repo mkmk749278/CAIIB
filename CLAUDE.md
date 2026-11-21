@@ -22,6 +22,10 @@ Never a new loose doc.
   done.** Per lesson: fact sheet → script with cue sheet → three independent reviews → fix until ADOPT → voice page
   (`voice_blocks.py`). Then compare the whole written course with the public classes (31 Module A captions, Drive
   `BFM/_downloads/playlist_GdPR6Y/`) and the module exam tests. The A00 builds below are paused. PLAYBOOK §7.
+- **Style lock pending (2026-11-21):** the teaching moves are the rule; the surface style is decided on the sample
+  `course/bfm/A/A1/script_class_sample.md` (A01 chapter 1, tighter than A00 class edition: lessons 12–15 min, one
+  question per idea, one pause check per chapter). **Until the owner says "fine" (or changes it), every session writes
+  fact sheets only, no full scripts.** When decided, record the style in `course/spec/lesson_spec.md`.
 - **Course plan v4 (2026-11-21): 79 videos.** All 17 proposed splits adopted with "b" ids (no renumbering): A11b, A15b,
   A16b, A19c; B04b, B07b, B09b, B11b, B14b; C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b. Each one's plan is in
   its module's plans file. No "partial" rows left in `coverage.csv`.
