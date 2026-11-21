@@ -57,7 +57,7 @@ superseded from 1 Oct 2026 [F40].*
 (d) needed by every traveller carrying personal effects
 *Reason: FTP 2.05; HBP 2.08–2.13 [F2, F3]; personal effects are not an export [F6].*
 
-**P8.** An exporter sells garments to a Rotterdam buyer and buys dyes from the same buyer. Under R26 the AD may allow
+**P8.** An exporter sells garments to a Milan buyer and buys dyes from the same buyer. Under R26 the AD may allow
 set-off of the export receivable against the import payable:
 (a) only if both are in the same calendar year and both are goods
 (b) **with the same overseas buyer / supplier or its group company, within the realisation period**
