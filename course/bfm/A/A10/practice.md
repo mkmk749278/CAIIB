@@ -1,4 +1,4 @@
-# A10 · Practice (author's draft c1, 2026-11-21; reviewed with the script)
+# A10 · Practice (c2, 2026-11-21; c1 review fixes applied)
 
 Our own items, exam style: one case, several questions, then variants. Names, banks, amounts and dates are
 illustrative (weekdays are real 2027 weekdays; no holidays). Reasons cite `research/bfm/facts/A4.12_A10.md` [F#] or
@@ -33,13 +33,13 @@ available with the issuing bank, presentation is made there.*
 (d) discrepant only if the applicant objects
 *Reason: the credit asks for 110% (and Art. 28(f)(ii) sets 110% if silent) [A09-F15]; 60,000 × 1.10 = 66,000.*
 
-**P4.** The importer then says the parts are of poor quality and asks his bank not to pay even if he waives the
-insurance point. The bank should:
+**P4.** Suppose instead the insurance policy covers USD 66,000 and every document complies. The importer says the parts
+are of poor quality and asks his bank not to pay. The bank should:
 (a) refuse payment, since the applicant has asked
-(b) **decide on the documents alone; quality is a matter of the sale contract**
+(b) **honour, deciding on the documents alone; quality is a matter of the sale contract**
 (c) pay only after inspecting the goods
 (d) refer the matter to the advising bank
-*Reason: Arts. 4, 5; only a court, on established fraud, can restrain payment [F3].*
+*Reason: Arts. 4, 5, 15; only a court order, on established fraud, can restrain payment [F1, F3].*
 
 **P5.** The Busan advising bank:
 (a) must pay the seller if the issuing bank refuses
@@ -75,3 +75,23 @@ dated, and be signed by the beneficiary [F9]. The issuer never investigates the 
 (d) timely if the applicant agreed
 *Reason: Rule 5.01: within 3 business days is not unreasonable, beyond 7 is unreasonable; Rule 5.03: failure to give
 timely notice precludes the issuer [F10].*
+
+## Waiver and loss
+
+**P9.** In the case above (the USD 60,000 policy), the issuing bank asks the importer for a waiver on Tue 20 Apr. He
+agrees on Tue 27 Apr. The bank had sent no notice by Mon 26 Apr. Which is correct?
+(a) the bank could still refuse on 27 Apr, as it was waiting for the applicant
+(b) **the bank is precluded from claiming the discrepancy, as no notice went by the fifth banking day (Mon 26 Apr)**
+(c) the five days restarted when the bank asked for the waiver
+(d) the bank must refuse, as the waiver came late
+*Reason: seeking a waiver does not extend the five banking days; a bank that gives no notice in time cannot claim
+non-compliance (Art. 16(b), (f)) [F4, F5].*
+
+**P10.** A nominated bank that has **not** confirmed the credit negotiates discrepant documents and pays the
+beneficiary. The issuing bank refuses within time. Who finally bears the loss, in the usual case?
+(a) the issuing bank, as the nominated bank acted on its nomination
+(b) the applicant
+(c) **the beneficiary, as a non-confirming nominated bank normally negotiates with recourse**
+(d) the advising bank
+*Reason: the issuing bank reimburses only a complying presentation (Art. 7(c)); a non-confirming negotiating bank
+normally keeps recourse to the beneficiary (practice) [F5].*
