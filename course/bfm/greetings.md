@@ -18,6 +18,7 @@ videos running.
 | A08 | "Hi there, everyone. Today we follow the paper, not the goods." | "That's our class. Rest easy, and we'll follow the documents again next time." |
 | A09 | "Hello, everyone. Diaries open, please; today we count days." | "That's today's class. Count your days carefully, and I'll see you next time." |
 | A10 | "Here we are again, everyone. Today, no new rules; we use them." | "Well worked, everyone. Sleep on the case, and I'll see you next class." |
+| A11 | "Hi, everyone. Glad you're here. Today, the rules behind every export." | "That's it for this class. Nine months, remember. See you soon." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.

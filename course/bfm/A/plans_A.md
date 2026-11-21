@@ -395,6 +395,16 @@ course plan is not renumbered here; the owner decides the splits.
 - **Facts to verify**: UCP 600 Art. 4, 5, 15, 16, 38; ISP98 rules used in the SBLC variant; ISBP 745 paragraphs used.
 
 ## A11 · Export rules: IEC to realisation (v3: proposed split A11 + A11b)
+- **2026-11-21 (fact sheet `research/bfm/facts/A5.1-A5.5_A11.md`, primary texts read)**: from **1 Oct 2026** the FEM
+  (Export and Import of Goods and Services) Regulations, 2026 apply, and A.P. (DIR) Circular No. 20 (16 Jan 2026)
+  supersedes the export Master Direction and ~96 circulars. At the cut-off: **no fixed document period** (AD's SOP; the
+  21 days is history); **no shipment period against advance** (same AD, trade-credit interest ceiling); warehouse
+  exports **9 months from sale**; **AD extends with no cap**; no separate SEZ/EOU period; **reduction in realisation**
+  (₹10 lakh on declaration) replaces write-off 5% / 10%; **set-off** wider (same buyer or group, within the realisation
+  period); caution listing replaced by reg 13 (unrealised > 1 year after due date → full advance or irrevocable LC),
+  those listed on 30 Sep 2026 stay under their order; no exemption list in the 2026 text (verify the Annex). A11 teaches
+  the 2026 rules as current and puts every old number on a "before 1 Oct 2026" trap card. A14's write-off and EDF-waiver
+  items are old-regime: teach them there only as history.
 - **Goal**: follow an export from order to money in the bank, with the RBI and DGFT rules at each step (A11) and the
   finance at each step (A11b).
 - **Evidence**: A-EXIMP 7/7, 22 mentions: PCL limit calculation (5 marks, Jun 2023), PCL liquidation and total period
