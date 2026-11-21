@@ -3,7 +3,8 @@
 # lesson's sound at the same time; a last job glues the slices (no re-encode), lays the sound under them, normalises
 # loudness to -16 LUFS and uploads the MP4 to Drive CAIIB/BFM/<video>/renders/<name>, printing the link in the summary.
 # Each runner pulls the lesson's cut voice lines from Drive. Needs the repo secret GDRIVE_RCLONE_TOKEN (PLAYBOOK §8).
-# The account shares about 20 runners with the owner's other repos, so keep runners at 6 or fewer.
+# The account shares about 20 runners with the owner's other repos: 6 by default; up to 18 (+ the sound runner, then
+# the join) when the owner says the runners are free (owner, 2026-11-21: "all 20 runners are free, use all of them").
 # Start it from the GitHub app: Actions → render → Run workflow.
 name: render
 on:
@@ -25,7 +26,7 @@ on:
         description: "2/3 = 720p review cut (always first), 1 = 1080p master"
         default: "2/3"
       runners:
-        description: "parallel video runners (max 6)"
+        description: "parallel video runners (6 default; max 18, only when the account's runners are free)"
         default: "6"
       name:
         description: "output file name (e.g. r2_720p.mp4)"
@@ -47,7 +48,7 @@ jobs:
         run: '[ -n "$GDRIVE_RCLONE_TOKEN" ] || { echo "::error::repo secret GDRIVE_RCLONE_TOKEN is missing (PLAYBOOK §8)"; exit 1; }'
       - id: p
         run: |
-          n=$(( ${{ inputs.runners }} )); (( n >= 1 && n <= 6 )) || n=6
+          n=$(( ${{ inputs.runners }} )); (( n >= 1 && n <= 18 )) || n=6
           echo "jobs=$(python3 -c "import json; print(json.dumps(['sound'] + [f'{i}/$n' for i in range($n)]))")" >> "$GITHUB_OUTPUT"
 
   render:
