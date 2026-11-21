@@ -270,7 +270,7 @@ N065 · Usance plus transit, rounded in the bank's favour. That's the map.
 N066 · Homework. Use discount points, zero point two four, zero point two zero, for one month. The bank sells, delivery in the second month. Which date, and what rate?
 > 1 S: notebook page "spot 85.60 / 85.62 · 1m 0.24 / 0.20 (discount)"; the four-row card faint
 
-N067 · Next class: the exporter's buyer pays a month early. What happens to his forward contract?
+N067 · Next class: an exporter's buyer pays two months early. What happens to her forward contract?
 > 1 S: a calendar page tears off early
 
 N068 · [warmly] Thank you for staying till the end. Keep that calendar in mind, and we'll meet again soon.
