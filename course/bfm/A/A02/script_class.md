@@ -1,6 +1,6 @@
-# A02 · "Where the dollar actually sits" · CLASS EDITION (script c2, with cue sheet)
+# A02 · "Where the dollar actually sits" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-21: all High and Medium findings of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-21. Standard style (`course/spec/lesson_spec.md`). First script for A02.
+- **Status**: **c3 locked, 2026-11-21**: re-review `review_c2.md` ADOPT WITH FIXES (0 H, 2 M, 4 L), all applied; no further re-review needed. c2, 2026-11-21: all High and Medium findings of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-21. Standard style (`course/spec/lesson_spec.md`). First script for A02.
 - **Plan**: `course/bfm/A/plans_A.md` §A02. Course order v4: A01 → **A02** → A03.
 - **Syllabus**: A3.1 correspondent banking, A3.2 Nostro / Vostro / Loro, A3.3 electronic transmission and payment
   systems (`coverage.csv`).
@@ -13,7 +13,7 @@
 - **Money**: US dollars; names of banks are illustrative ("Bank A", "Bank B", "Bank C").
 - **Holds**: "H: n s"; questions to the learner at least 3 s; map from memory 5 s.
 - **Say it right**: "Nostro" NOSS-tro, "Vostro" VOSS-tro, "Loro" LOH-ro; "SWIFT" as a word; "CHIPS" and "CHAPS" as
-  words; "T-two"; "R-T-G-S", "N-E-F-T", "S-F-M-S", "S-R-V-A" as letters; "FEDAI" fed-eye.
+  words; "T-two"; "R-T-G-S", "N-E-F-T", "S-F-M-S", "S-R-V-A", "I-D-R-B-T" as letters; "INFINET" as a word; "FEDAI" fed-eye.
 - **Not here (planned elsewhere)**: CCIL and DvP settlement (C04b, payment and settlement systems); NEFT's Nepal-only
   outward rule (A16).
 - **Length target**: 12–15 minutes. Chapters: 1 accounts (~4 min) · 2 messages and pipes (~5 min) · 3 time and rules
@@ -50,7 +50,7 @@ N006 · Chapter one. Your bank in Chennai wants to pay and receive dollars. But 
 N007 · It opens an account with a bank in New York. That bank becomes its correspondent. Your bank is the respondent.
 > 1 S: a New York bank tower "correspondent"; Chennai bank "respondent"; a line joins them [F1]
 
-N008 · Correspondent banking means one bank giving banking services to another. Payments and receipts in that currency. Collecting bills. Advising and confirming letters of credit. Guarantees, credit lines, investing spare balances.
+N008 · Correspondent banking means one bank giving banking services to another. Payments and receipts in that currency. Reimbursing letters of credit. Collecting bills. Advising and confirming letters of credit. Guarantees, credit lines, investing spare balances.
 > 1 C: card "correspondent banking = bank → services → bank" [F1] · 2 S: service tiles: payments · collections · LC advising / confirming · reimbursement · guarantees · credit lines · surplus investment [F3]
 
 N008a · Some of these need an account. Paying, receiving, reimbursing, investing balances: money must sit there. Others need only a secure SWIFT link, like advising a letter of credit.
@@ -172,7 +172,7 @@ N042 · N-E-F-T, also R-B-I. It settles in half-hourly batches, round the clock.
 N043 · And the messages for both travel on S-F-M-S, India's own messaging system.
 > 1 S: box "SFMS: messaging for RTGS / NEFT" [F34]
 
-N043a · Now a trap. Who built R-T-G-S? IDRBT, the banking technology institute set up by R-B-I. It built the network and S-F-M-S, and R-T-G-S went live in March twenty-oh-four. But R-B-I owns and runs it.
+N043a · Now a trap. Who built R-T-G-S? I-D-R-B-T, the banking technology institute set up by R-B-I. It built INFINET, the banks' network, and S-F-M-S. R-T-G-S went live in March twenty-oh-four. But R-B-I owns and runs it.
 > 1 C: trap card "IDRBT built RTGS, SFMS, INFINET · RBI owns and runs RTGS · live 26 Mar 2004 · SFMS now run by IFTAS (RBI subsidiary)" [F34]
 
 N043b · So, the whole set on one card. Fedwire, the Fed, gross. CHIPS, private, net. CHAPS, Bank of England, gross. T-two, Eurosystem, gross. R-T-G-S and N-E-F-T, R-B-I.
@@ -184,7 +184,7 @@ N044 · One R-T-G-S rule to know. The receiving bank must credit the customer wi
 N045 · If it's late, it pays compensation at repo rate plus two percent. Automatically. The customer doesn't have to ask.
 > 1 N: "delay → repo + 2%, paid automatically" [F32]
 
-N046 · Pause check for chapter two. Five quick ones. One. Which American system is run by the Federal Reserve?
+N046 · Pause check for chapter two. Four quick ones. One. Which American system is run by the Federal Reserve?
 > 1 S: card "Fed runs: Fedwire or CHIPS?" · H: 3 s
 
 N047 · Fedwire. Two. A customer wants to send one lakh rupees by R-T-G-S. Can he?
@@ -193,10 +193,10 @@ N047 · Fedwire. Two. A customer wants to send one lakh rupees by R-T-G-S. Can h
 N048 · No. R-T-G-S starts at two lakh. He uses N-E-F-T.
 > 1 N: "RTGS min ₹2 lakh → use NEFT ✓" · H: 3 s
 
-N048a · Four. Who developed R-T-G-S: R-B-I, or IDRBT?
+N048a · Three. Who developed R-T-G-S: R-B-I, or I-D-R-B-T?
 > 1 S: card "RTGS: developed by?" · H: 3 s
 
-N048b · IDRBT developed it. R-B-I runs it. And five. Does SWIFT settle the payment?
+N048b · I-D-R-B-T developed it. R-B-I runs it. And four. Does SWIFT settle the payment?
 > 1 N: "IDRBT ✓ · RBI runs" [F34] · H: 3 s
 
 N049 · No. SWIFT only carries the message. The money settles in the accounts and the payment systems.
@@ -205,10 +205,10 @@ N049 · No. SWIFT only carries the message. The money settles in the accounts an
 N050 · [seriously] If you remember one thing from chapter two: SWIFT carries the message. The money settles in the Nostro and in the payment systems.
 > 1 S: the chapter board: envelope → ledgers → system boxes; finished parts dim to grey
 
-## Chapter 3 · Why time costs money, and the rules of the Nostro
+## Chapter 3 · Time, rules and rupee trade
 
 N051 · Chapter three. First, from chapter two. CHAPS: gross or net?
-> 1 S: chapter title "3 · Why time costs money" · H: 3 s
+> 1 S: chapter title "3 · Time, rules and rupee trade" · H: 3 s
 
 N052 · Gross. Each payment, in real time. Now, our question from the start. Why does the T-T rate beat the bill rate?
 > 1 N: "CHAPS: gross ✓" · 2 G: the margin question from N002
@@ -231,13 +231,13 @@ N057 · They must reconcile the Nostro often. Normally at least once an hour. No
 N058 · And they should try to credit money received in forex market hours the same business day. After hours, the next business day.
 > 1 N: "aim: market hours → same business day · after → next" [F16]
 
-N059 · For export bills on collection, FEDAI has the same aim. And an outer limit: credit the exporter within two working days of the Nostro credit. If late, the bank pays interest at its export-credit rate, and any exchange loss.
+N059 · For export bills on collection, FEDAI has the same aim. And an outer limit: credit the exporter within two working days of the Nostro credit. If late, the bank pays interest at its lowest export-credit rate. And any exchange loss, as its policy sets out.
 > 1 N: "collection: aim same day · outer limit 2 working days · late → interest at the minimum export-credit rate + exchange loss per policy" [F17]
 
 N060 · Last idea of this chapter, and a new one. Trade settled in rupees. The Special Rupee Vostro Account. S-R-V-A.
 > 1 S: a rupee symbol on a Vostro ledger, "SRVA" [F19]
 
-N061 · A foreign bank, or an Indian bank's own branch abroad, opens a special rupee account with an Indian bank. It's separate from an ordinary rupee Vostro. Exports and imports are then paid in rupees, through it.
+N061 · A foreign bank, or the Indian bank's own branch abroad, opens a special rupee account with the bank in India. It's separate from an ordinary rupee Vostro. Exports and imports are then paid in rupees, through it.
 > 1 S: foreign bank → SRVA (₹) with an Indian AD bank, beside an ordinary "rupee Vostro" marked "separate"; an invoice in ₹ [F19] [F20] [F24]
 
 N062 · No R-B-I approval is needed to open one now. The balance is freely repatriable. It can be used for any permitted current or capital account deal, or invested in Indian government and corporate debt.

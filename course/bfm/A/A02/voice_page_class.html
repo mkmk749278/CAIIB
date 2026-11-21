@@ -1,0 +1,150 @@
+<title>A02 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A02 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A02/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · One account, three names + Chapter 2 · Messages, not money + Chapter 3 · Time, rules and rupee trade (N001–N067)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N067", "text": "[warmly] Good to have you here again. Settle in, and let's pick up where we stopped. Last class ended with a question. When the money moves together, the bank gives a better rate. The T-T rate. Why? Hold your guess. To answer it, we follow a dollar out of the branch. Where does it actually sit? And how does it move? And this is asked. Nostro, SWIFT and R-T-G-S questions came up in three of the seven recent exams we checked. Quick warm-up. When an exporter's buyer in New York pays him, does a plane carry the dollars to India? No. The dollars never leave America. Only the record moves. Keep that in mind. It's the key to today. Chapter one. Your bank in Chennai wants to pay and receive dollars. But it has no branch in New York. What does it do? It opens an account with a bank in New York. That bank becomes its correspondent. Your bank is the respondent. Correspondent banking means one bank giving banking services to another. Payments and receipts in that currency. Reimbursing letters of credit. Collecting bills. Advising and confirming letters of credit. Guarantees, credit lines, investing spare balances. Some of these need an account. Paying, receiving, reimbursing, investing balances: money must sit there. Others need only a secure SWIFT link, like advising a letter of credit. Now the names. Your bank's dollar account in New York. Your bank calls it the Nostro. Latin for \"ours\". The New York bank keeps the same account in its books. For it, it's a Vostro. \"Yours\". Your account, with us. Many of you are thinking: Nostro and Vostro are two different accounts. They're not. It's one account, seen from two sides. Then a third name. Loro, \"theirs\". When two banks talk about a third bank's account. So, ours, yours, theirs. Nostro, Vostro, Loro. Just ask: whose account, and who is speaking? Let's try one. Bank A in Mumbai keeps a dollar account with Bank B in New York. Bank A writes to Bank B about it. What does Bank A call it? Nostro. Its own account, over there. Now Bank B replies about the same account. What does Bank B call it? Vostro. Your account, with us. And if Bank C in London writes to Bank B about Bank A's account? Loro. Their account. A third bank speaking. One more word. Your bank also keeps its own copy of the Nostro in its books. That copy is the mirror account. It's checked against the New York statement. And the rules. Every bank needs a Board-approved policy on correspondent banks. Before opening one, it checks the other bank. Its business, its supervision, its anti-money-laundering controls. Senior management approves it first. The Board, or its committee, approves it afterwards. And never, with a shell bank. A shell bank has no real presence in the country where it's licensed, and belongs to no properly supervised group. A brass plate, a local agent, nothing more. Pause check for chapter one. One. An Indian bank's euro account with a bank in Frankfurt. What does the Indian bank call it? Nostro. Ours. Two. A Japanese bank holds a rupee account with your bank in Mumbai. What do you call it? Vostro. Yours, with us. Three, the twist. Can an Indian bank keep a correspondent relationship with a shell bank, if the Board approves? No. Never. Not with any approval. Four. Advising a letter of credit to an exporter. Does your bank need an account with the foreign bank? No. A secure SWIFT link is enough. Paying and receiving money, that needs the account. [seriously] If you remember one thing from chapter one: one account, three names. Ours, yours, theirs, by who is speaking. Chapter two. First, from chapter one. Which bank is the correspondent: the one giving the services, or the one using them? The one giving them. Good. Now, how does your bank tell New York to pay someone? With a message. Through SWIFT. SWIFT is a cooperative, owned by its member banks, based in Belgium. Here's the trap. SWIFT carries messages. It does not move money. The money moves when the New York bank debits your Nostro, and credits the other bank. The message is the instruction. And if the payee banks with a different New York bank? Then the dollars cross between the two New York banks, through America's payment system. That's where the systems come in. Each message has a number. M-T one-oh-three, a customer's payment. M-T two-oh-two, a payment between banks. M-T seven hundred, a letter of credit is issued. M-T seven-oh-seven, it's amended. For payments, SWIFT now uses a newer format, called ISO twenty-oh-twenty-two. But the M-T numbers still appear in exam questions. Quick one. An Indian bank issues a letter of credit for an importer. Which message goes to the bank abroad? M-T seven hundred. Now the systems that move the money between banks. For each, ask just two things. Who runs it? And is it gross, or net? Gross means each payment is settled on its own, in full, as it goes. Net means payments are matched and offset first, and only the difference moves. Gross needs more money in the account. Net needs less. Now the systems. Start with America. Two systems for dollars. Fedwire, run by the Federal Reserve. Real-time gross. Each payment final the moment it's done. CHIPS, run by The Clearing House, a private body, in New York. It matches and offsets payments, so it needs far less money. The net type. Many of you think CHIPS belongs to the Federal Reserve. It doesn't. Fed runs Fedwire. CHIPS is private. In Britain, CHAPS, run by the Bank of England. Sterling, gross. In Europe, T-two, run by the Eurosystem. Euro, gross. And at home. R-T-G-S, run by R-B-I. Real-time gross. Open twenty-four by seven since December twenty twenty. Minimum two lakh rupees. No maximum. N-E-F-T, also R-B-I. It settles in half-hourly batches, round the clock. No minimum amount. And the messages for both travel on S-F-M-S, India's own messaging system. Now a trap. Who built R-T-G-S? I-D-R-B-T, the banking technology institute set up by R-B-I. It built INFINET, the banks' network, and S-F-M-S. R-T-G-S went live in March twenty-oh-four. But R-B-I owns and runs it. So, the whole set on one card. Fedwire, the Fed, gross. CHIPS, private, net. CHAPS, Bank of England, gross. T-two, Eurosystem, gross. R-T-G-S and N-E-F-T, R-B-I. One R-T-G-S rule to know. The receiving bank must credit the customer within thirty minutes. If it can't, it returns the money within one hour. If it's late, it pays compensation at repo rate plus two percent. Automatically. The customer doesn't have to ask. Pause check for chapter two. Four quick ones. One. Which American system is run by the Federal Reserve? Fedwire. Two. A customer wants to send one lakh rupees by R-T-G-S. Can he? No. R-T-G-S starts at two lakh. He uses N-E-F-T. Three. Who developed R-T-G-S: R-B-I, or I-D-R-B-T? I-D-R-B-T developed it. R-B-I runs it. And four. Does SWIFT settle the payment? No. SWIFT only carries the message. The money settles in the accounts and the payment systems. [seriously] If you remember one thing from chapter two: SWIFT carries the message. The money settles in the Nostro and in the payment systems. Chapter three. First, from chapter two. CHAPS: gross or net? Gross. Each payment, in real time. Now, our question from the start. Why does the T-T rate beat the bill rate? Look at the Nostro. With a T-T, the dollars land in the Nostro today, and the bank pays the rupees today. Nothing waits. With a bill bought, the bank pays the rupees today. But the dollars reach the Nostro weeks later. The bank's rupees are out, and its dollars aren't in yet. So the bill rate carries a wider margin, for the risk and work of paying first. And the days of waiting are charged as interest, separately. That's the answer to last class. Next, the newer rules on inward payments, in force since October twenty twenty-six. Banks must tell the customer as soon as the payment message arrives. If it comes after hours, at the start of the next business day. They must reconcile the Nostro often. Normally at least once an hour. Not just at the end of the day. And they should try to credit money received in forex market hours the same business day. After hours, the next business day. For export bills on collection, FEDAI has the same aim. And an outer limit: credit the exporter within two working days of the Nostro credit. If late, the bank pays interest at its lowest export-credit rate. And any exchange loss, as its policy sets out. Last idea of this chapter, and a new one. Trade settled in rupees. The Special Rupee Vostro Account. S-R-V-A. A foreign bank, or the Indian bank's own branch abroad, opens a special rupee account with the bank in India. It's separate from an ordinary rupee Vostro. Exports and imports are then paid in rupees, through it. No R-B-I approval is needed to open one now. The balance is freely repatriable. It can be used for any permitted current or capital account deal, or invested in Indian government and corporate debt. And the Indian bank may open an extra current account for an exporter or importer, only for these rupee trade settlements. Why does it matter? The Indian trader invoices in rupees. So his exchange-rate risk is reduced. Pause check for chapter three. Two quick ones. One. An inward payment message arrives at eight at night, after the bank's hours. When must the bank inform the customer? At the start of the next business day. Two, the twist. Can a bank convert its old rupee Vostro account into an S-R-V-A? No. They're different kinds of account. A new S-R-V-A is opened. [seriously] If you remember one thing from chapter three: time in the Nostro costs money. That's why T-T beats the bill rate."}]}, {"file": "part_2.mp3", "section": "Close (N068–N078)", "turns": [{"speaker": "Teacher", "first": "N068", "last": "N078", "text": "Last stretch. A mixed round. One. Bank X in Delhi keeps a yen account with Bank Y in Tokyo. Bank Y writes about it. What does Bank Y call it? Vostro. Two. A sterling payment between two banks in London settles one by one, in real time. Which system? CHAPS. Three. Who approves a new correspondent relationship first? Senior management. The Board, after. Now the map, from memory. Say each branch before I show it. Branch one. The three names? Nostro, Vostro, Loro. Ours, yours, theirs. Branch two. What carries the message, and where does the money settle? SWIFT carries it. The money settles in the accounts and the systems: Fedwire, CHIPS, CHAPS, T-two, R-T-G-S, N-E-F-T. Branch three. Why does T-T beat the bill rate? Time in the Nostro. And the rules: tell the customer at once, reconcile within an hour, and S-R-V-A for trade in rupees. That's the whole map. You can now name any account from any side, pick the payment system, and explain why time costs money. If one chapter made you pause, rewatch it. Small homework. Tonight, draw three banks and label every account, from every side. Two minutes. Next class, back to the counter with a calculator. T-T, bill buying and bill selling, in full sums. Which one do you think trips people most? [warmly] That's it for today. Go well, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
