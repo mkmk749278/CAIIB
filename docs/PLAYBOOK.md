@@ -487,6 +487,9 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-21: **lessons are 12–15 minutes, in every module.** The two parallel sessions had drifted: Module A wrote
+  tight lessons (10–15 min), Module B followed the A00 class edition (B01 about 35 min, B02 about 28). Asked, the owner
+  chose "Tight 12–15 min" for every remaining lesson; B01 stays long as a comparison sample for the video stage.
 - 2026-11-21: **style judged on video, not text.** Owner, shown a sample chapter: "With the read I can't tell. Once
   watching the video only I decide how it felt. So first continue to build the full BFM for each video." So every
   script is written now in one standard style (the A01 sample: teaching method, 12–15 min, one question per idea),

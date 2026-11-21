@@ -27,6 +27,11 @@ Never a new loose doc.
   (the teaching moves, lessons 12–15 min, one question per idea, one pause check per chapter, at most one light line
   per chapter, plain words; recorded in `course/spec/lesson_spec.md`). The owner judges the style on the first built
   video after the scripts are done; any change then is a revision pass over the scripts.
+- **Lesson length (owner, 2026-11-21, chose "Tight 12–15 min"):** every remaining lesson, in every module session,
+  is 12–15 minutes (drills about 10–14) in the standard style: one question per idea, not one per sentence. **Module B:
+  from B02 on**, write to this length (B02 at about 28 min is to be tightened to 12–15, or split if its syllabus truly
+  needs two videos: say so in `B/STATUS.md`). **B01 (about 35 min) stays as it is**, as the long comparison sample: when
+  videos are built, the owner watches A01 (tight) and B01 (long) and confirms.
 - **Course plan v4 (2026-11-21): 79 videos.** All 17 proposed splits adopted with "b" ids (no renumbering): A11b, A15b,
   A16b, A19c; B04b, B07b, B09b, B11b, B14b; C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b. Each one's plan is in
   its module's plans file. No "partial" rows left in `coverage.csv`.
