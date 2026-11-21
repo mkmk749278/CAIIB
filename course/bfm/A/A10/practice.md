@@ -91,7 +91,7 @@ non-compliance (Art. 16(b), (f)) [F4, F5].*
 beneficiary. The issuing bank refuses within time. Who finally bears the loss, in the usual case?
 (a) the issuing bank, as the nominated bank acted on its nomination
 (b) the applicant
-(c) **the beneficiary, as a non-confirming nominated bank normally negotiates with recourse**
+(c) **the nominated bank first; it normally recovers from the beneficiary, having negotiated with recourse**
 (d) the advising bank
 *Reason: the issuing bank reimburses only a complying presentation (Art. 7(c)); a non-confirming negotiating bank
 normally keeps recourse to the beneficiary (practice) [F5].*

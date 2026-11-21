@@ -1,0 +1,150 @@
+<title>A10 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A10 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A10/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Read the case + Chapter 2 · Five questions + Chapter 3 · Two variants + Close (N001–N067)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N067", "text": "[warmly] Here we are again, everyone. Today, no new rules; we use them. First, from last class. Documents reach a bank on Thursday. How many days does it get, and what kind? Five banking days, following the day of presentation. Good. Today we join A-zero-eight and A-zero-nine, the way the exam does: one case, five questions. L-C questions came in six of the seven exam cycles we studied, often as a case. Some of you freeze when a long case appears. Don't. A case is old rules, in a story. Chapter one. Here's the case. Read along with me. Anand, an importer in Chennai, buys a C-N-C lathe, a computer-run machine tool, from Mei, a seller in Singapore. Eighty thousand dollars, C-I-F Chennai. His bank in Chennai opens an irrevocable L-C, subject to U-C-P six hundred. It's available by negotiation with a bank in Singapore. At the Chennai bank's request, the Singapore bank adds its confirmation. The L-C asks for an original bill of lading, an invoice, and insurance for a hundred and ten per cent. Latest shipment, Friday the fourteenth of May. Expiry, Tuesday the fifteenth of June. Why insurance from Mei? Under C-I-F, the seller insures, so the policy is one of her documents. Take a look at the card. Before the questions, a thirty-second checklist. Do it on every case. One: is it subject to U-C-P six hundred? Yes. Two: name every bank, and its job. Quick one. Who is the beneficiary? Mei, the one who gets paid under the L-C. Anand is the applicant. Chennai issues, Singapore confirms and negotiates. Three: how is it paid? By negotiation. Singapore buys her documents and pays her early. Now the rest of the case. Mei ships on Wednesday the twelfth of May. The bill of lading shows that date on board. She presents the documents to the Singapore bank on Monday the thirty-first of May. It finds them complying, pays her, and sends them to Chennai. They reach Chennai on Thursday the third of June. The Chennai checker spots one thing: the insurance is dated the thirteenth of May. The day after shipment, with no cover from shipment. And Anand phones his bank. He's heard the lathe is a cheaper model than he ordered. He says, don't pay. Take a look at the card. Box four: the three dates. Latest shipment, fourteenth of May. Expiry, fifteenth of June. And shipment plus twenty-one. Box five, what's asked: that's chapter two. Pause check for chapter one. One. Did she ship in time? Yes, the twelfth is before the fourteenth. Two, the twist. Was her presentation on the thirty-first in time? Twelve plus twenty-one is thirty-three. May has thirty-one days, so that's the second of June. Expiry is later, so the thirty-first is fine. And Chennai got them on the third, after the second. Stale? No. She presented in time to the nominated bank. That's what counts. [seriously] If you remember one thing from chapter one: run the checklist before you read the options. Chapter two. First, from chapter one. What's the first box on the checklist? Is it subject to U-C-P six hundred. Now, the questions. Pause before each, and answer first. Question one. Anand says the lathe is a cheaper model. Must the Chennai bank stop payment? No. Many of you would say yes; it's his money. But the L-C is separate from the sale, and banks deal in documents, not goods. Some of you are thinking: isn't a wrong machine fraud? His word isn't enough. For a goods complaint, only a court order stops payment, for established fraud. His real remedy is against Mei, under the sale contract. Question two. The documents reached Chennai on Thursday the third. By when must it decide? The bank shuts on weekends. Friday is day one. Monday, Tuesday, Wednesday. Thursday the tenth of June is day five. Question three. Is the insurance date a real discrepancy? Yes. Insurance must be dated no later than shipment, unless it shows cover from shipment. Here it's a day late, with no such cover. So now the story joins up. Anand can't refuse over the goods. But the insurance gives his bank a paper reason. Question four. The bank asks Anand if he'll waive, that is, accept the insurance anyway. He takes a week to reply. Does the bank's clock stop? No. Asking for a waiver doesn't extend the five days. The bank chooses to ask, and the bank decides after. So if he hasn't said yes by Thursday the tenth, it sends one notice to Singapore: refused, the discrepancy, and documents held pending waiver. Held pending waiver means: we're keeping the papers. If Anand later says yes, we may pay. And if the bank misses Thursday? It can't refuse later. It must pay, discrepancy or not. Can Mei send a corrected policy instead? No. Her twenty-one days ended on the second of June, though expiry is later. Question five. Anand refuses to waive, so Chennai won't pay. Singapore already paid Mei. Who bears the loss? Singapore. It missed the date. Chennai pays back only for complying documents. And Singapore's confirmation covers only complying documents too. Can Singapore claim from Mei? Only if it paid her with recourse, under reserve, or against her indemnity. That's why checkers take insurance dates seriously. A bank that only negotiates, without confirming, normally keeps that recourse. So the loss usually goes back to the seller. Now flip one fact. Suppose the insurance was fine. Anand still says, don't pay. What happens? The documents comply, so Chennai must honour, that is, pay. It reimburses Singapore. Anand pays his bank, and argues with Mei. And how does Chennai protect itself? A margin and a limit from Anand. And the bill of lading made out to its order, so it controls the lathe until he pays. One more risk: local law. U-C-P is only part of the contract, so a court order or a sanction can still stop payment. Pause check for chapter two. One. Quality dispute: can the bank stop payment? No. Two, the twist. Who decides whether to accept a waiver: Anand, or his bank? His bank. [seriously] If you remember one thing from chapter two: the bank decides on paper, the buyer argues on goods. Chapter three. First, from chapter two. Complying documents: must the issuing bank honour? Yes. Now, the exam often keeps the case and changes one thing. Two favourite changes. Variant one. A Mumbai trader holds a transferable L-C for a hundred thousand dollars. Partial shipments allowed. He wants to pass forty thousand to a Surat mill, and forty-five thousand to a Ludhiana mill. Allowed? Yes. Two second beneficiaries are fine, because partial drawings or shipments are allowed. And his bank must agree to transfer. Now Ludhiana wants to pass its part to its own cotton supplier. Allowed? No. A credit is transferred only once. The mills are the end of the line, though a part may come back to the trader. Variant two. Anand's bank issues a standby L-C under I-S-P ninety-eight, for fifty thousand dollars, backing his payment to another supplier. Anand doesn't pay. The supplier sends a signed, dated statement: payment is due, because Anand has defaulted. Does the bank check whether he really defaulted? No. A standby is documentary and independent. A signed, dated statement of default is enough, if the standby asks for nothing more. And if the bank refuses the claim? It must tell the supplier in time. Under I-S-P ninety-eight, a business day is a day the bank is normally open. Within three business days is always in time. Beyond seven is always too late. In between, it depends on the facts. Many mix this with U-C-P. U-C-P six hundred gives a hard five banking days. Don't pick \"seven allowed\" for I-S-P. One more I-S-P difference. If the bank is closed on the standby's last day, the supplier gets thirty calendar days after it reopens, unless the standby says otherwise. Pause check for chapter three. One. Transferable L-C: how many times? Once. Two, the twist. Does a standby issuer investigate the default? No; it checks the statement. [seriously] If you remember one thing from chapter three: change one fact, then rerun the checklist. Back to Anand. Can he stop payment because the lathe is a cheaper model? No. The bank pays on paper. But he can refuse to waive the bad insurance. Quick mix. One. A confirming bank negotiated complying documents and paid. The issuing bank later fails. Can it recover from the seller? No. Without recourse. Two. Refusal notice sent on day three. On day four, a second discrepancy turns up. Can it be added? No. One notice, every discrepancy. Now the map, from memory. First node: the case checklist. U-C-P, the banks, how paid, the dates, what's asked. Second node: stop payment. Only a court, for established fraud; quality goes to the sale contract. Third node: waiver and loss. The bank asks; the clock runs; one notice by day five; the bank that paid on bad paper bears it. Fourth node: the variants. Transfer once, to several only with partial drawings; a standby pays on a statement. That's the map. Homework. Change one fact in Anand's case, and write the question an examiner would ask. Next class: from the L-C to the exporter's whole journey. What must she do before she even ships? [warmly] Well worked, everyone. Sleep on the case, and I'll see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

@@ -1,6 +1,6 @@
 # A10 · "Read the case" · CLASS EDITION (script c2, with cue sheet) · CASE (C)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked**, 2026-11-21: re-review c2 ADOPT WITH FIXES (0 H, 2 M), both Mediums and the Lows applied. c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style, case format: the time goes to the case questions (`course/spec/lesson_spec.md`).
 - **Plan**: `course/bfm/A/plans_A.md` §A10. Course order v4: A09 → **A10** → A11.
 - **Syllabus**: A4.12 (case studies), with A4.6 (documents, safeguards) and A4.7 (risks, incl. legal risk) applied.
@@ -15,7 +15,7 @@
 - **Say it right**: "L-C"; "U-C-P six hundred"; "I-S-P ninety-eight"; "C-N-C".
 - **Phone layout**: the case card sits on the left third, but only the line the current question needs shows at full
   size; the others dim. A date strip (A09 style) runs along the bottom from N009; each date lands on it when spoken.
-- **Length target**: about 12.5 minutes (case band 10–14). Chapters: 1 read the case (~3.5 min) · 2 five questions
+- **Length target**: about 13 minutes (case band 10–14). Chapters: 1 read the case (~3.5 min) · 2 five questions
   (~4.5 min) · 3 two variants (~3 min) · close (~1.5 min).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold.
 
@@ -74,7 +74,7 @@ N013b · She presents the documents to the Singapore bank on Monday the thirty-f
 > 1 S: case line 6 "presented Mon 31 May · Singapore negotiates, pays, forwards" · 2 S: "31 May" lands on the strip
 
 N013c · They reach Chennai on Thursday the third of June. The Chennai checker spots one thing: the insurance is dated the thirteenth of May. The day after shipment, with no cover from shipment.
-> 1 S: case line 7 "reach Chennai Thu 3 Jun · insurance dated 13 May" · 2 B: circle "13 May" · 3 S: "3 Jun" lands on the strip
+> 1 S: case line 7 "reach Chennai Thu 3 Jun · insurance dated 13 May" · 2 S: "3 Jun" lands on the strip · 3 B: circle "13 May"
 
 N013d · And Anand phones his bank. He's heard the lathe is a cheaper model than he ordered. He says, don't pay. Take a look at the card.
 > 1 S: case line 8 "Anand: 'cheaper model; don't pay'" · H: 5 s
@@ -88,11 +88,11 @@ N015 · Pause check for chapter one. One. Did she ship in time?
 N016 · Yes, the twelfth is before the fourteenth. Two, the twist. Was her presentation on the thirty-first in time?
 > 1 N: "shipment ✓" · H: 8 s
 
-N017 · Twelve plus twenty-one is thirty-three. May has thirty-one days, so that's the second of June. The thirty-first is fine.
+N017 · Twelve plus twenty-one is thirty-three. May has thirty-one days, so that's the second of June. Expiry is later, so the thirty-first is fine.
 > 1 S: strip 12 May → 2 Jun circled; 31 May ticked [A09-F4]
 
 N018 · And Chennai got them on the third, after the second. Stale? No. She presented in time to the nominated bank. That's what counts.
-> 1 N: "presented to the nominated bank 31 May ✓ · reached the issuing bank later: not stale" [A09-F4]
+> 1 N: "presented to the nominated bank 31 May ✓ · reached the issuing bank later: not stale" [F18, A09-F4]
 
 N019 · [seriously] If you remember one thing from chapter one: run the checklist before you read the options.
 > 1 S: finished parts dim to grey
@@ -111,7 +111,7 @@ N022 · Question one. Anand says the lathe is a cheaper model. Must the Chennai 
 N023 · No. Many of you would say yes; it's his money. But the L-C is separate from the sale, and banks deal in documents, not goods.
 > 1 C: card "Q1: no · Art. 4 credit ≠ contract · Art. 5 documents, not goods" [F3]
 
-N024 · Some of you are thinking: isn't a wrong machine fraud? His word isn't enough. Only a court order stops payment, and only for established fraud.
+N024 · Some of you are thinking: isn't a wrong machine fraud? His word isn't enough. For a goods complaint, only a court order stops payment, for established fraud.
 > 1 N: "his word ✗ · court order, established fraud only" [F3, A08-F22]
 
 N024a · His real remedy is against Mei, under the sale contract.
@@ -153,11 +153,14 @@ N032 · Can Mei send a corrected policy instead? No. Her twenty-one days ended o
 N033 · Question five. Anand refuses to waive, so Chennai won't pay. Singapore already paid Mei. Who bears the loss?
 > 1 S: Q5 card · H: 8 s
 
-N034 · Singapore. Chennai pays back only for complying documents. And Singapore's confirmation covers only complying documents too.
+N034 · Singapore. It missed the date. Chennai pays back only for complying documents. And Singapore's confirmation covers only complying documents too.
 > 1 C: card "Q5: the paying bank bears it · Art. 7(c), 8: only complying documents are reimbursed / confirmed" [F5]
 
-N035 · Can Singapore claim from Mei? Only if it paid her with recourse, or under reserve. That's why checkers take insurance dates seriously.
-> 1 N: "recover from Mei: only if paid with recourse / under reserve (practice)" [F5]
+N035 · Can Singapore claim from Mei? Only if it paid her with recourse, under reserve, or against her indemnity. That's why checkers take insurance dates seriously.
+> 1 N: "recover from Mei: only if paid with recourse / under reserve / against indemnity (practice)" [F5]
+
+N035a · A bank that only negotiates, without confirming, normally keeps that recourse. So the loss usually goes back to the seller.
+> 1 N: "nominated, not confirming → negotiates with recourse → loss back to the seller (practice)" [F5]
 
 N036 · Now flip one fact. Suppose the insurance was fine. Anand still says, don't pay. What happens?
 > 1 S: the insurance line turns green · H: 3 s
@@ -198,7 +201,7 @@ N045 · Yes. Two second beneficiaries are fine, because partial drawings or ship
 > 1 C: card "several second beneficiaries → only if partial drawings / shipments allowed · bank must consent" [F7]
 
 N046 · Now Ludhiana wants to pass its part to its own cotton supplier. Allowed?
-> 1 S: a third arrow, dashed, "Ludhiana → cotton supplier?" · H: 3 s
+> 1 S: a third arrow, dashed, "Ludhiana → cotton supplier?" · H: 8 s
 
 N047 · No. A credit is transferred only once. The mills are the end of the line, though a part may come back to the trader.
 > 1 C: trap card "onward transfer ✗ · once only · back to the first beneficiary ✓" [F7]
@@ -221,7 +224,7 @@ N052 · Within three business days is always in time. Beyond seven is always too
 N053 · Many mix this with U-C-P. U-C-P six hundred gives a hard five banking days. Don't pick "seven allowed" for I-S-P.
 > 1 B: box "UCP: max 5" and "ISP: ≤ 3 safe · > 7 late" side by side
 
-N053a · One more I-S-P difference. If the bank is closed on the standby's last day, she gets thirty calendar days after it reopens.
+N053a · One more I-S-P difference. If the bank is closed on the standby's last day, the supplier gets thirty calendar days after it reopens, unless the standby says otherwise.
 > 1 N: "ISP98 3.14: closed on last day → +30 calendar days after reopening · UCP: Art. 29 / 36" [F11]
 
 N054 · Pause check for chapter three. One. Transferable L-C: how many times?
