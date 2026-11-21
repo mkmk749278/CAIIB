@@ -88,7 +88,7 @@ Never a new loose doc.
     and rebook" clashes with the 10 Oct 2026 no-rebooking rule (check FEDAI + A.P. (DIR) Circular No. 25); A07's
     rule-version card says 30 June 2026 (owner decides at the freeze); JAIIB prerequisite names need checking against
     the JAIIB syllabus; conflicting class figures to settle from primary sources (CHAPS net/gross, gems & jewellery
-    EDF waiver, Gold Card standby %, NRI-relative loan period, card spends under LRS).
+    EDF waiver, Gold Card standby % (settled: not less than 20%, Credit Facilities Directions 2025 para 374), NRI-relative loan period, card spends under LRS).
   - **Then decide the proposed splits** (all written inside the plans, with fallbacks): B04b, B07b, B09b, B11b, B14b;
     C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b; A11b, A15b, A16b, A19c (A18b etc. only if a script runs
     long). All adopted: 62 → 79 videos. Apply them as course plan **v4** (renumber or keep
