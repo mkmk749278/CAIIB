@@ -56,3 +56,7 @@
 12. If the rupee is at a forward discount against the dollar, the dollar is at a forward:
    a) discount b) premium c) par d) cannot say
    **Answer: b.** The two sides mirror each other; the higher-interest currency (here the rupee) is at the discount.
+
+
+## Teacher's note (not in the video)
+- Interbank contracts (FEDAI 8.09): a maturity later declared a holiday is preponed only if it is a known month-end holiday; otherwise it is postponed to the next working day. Taught with A05. A fact row for the two-centre (New York) holiday rule is added to A05's plan once a FEDAI or interbank source has been read.

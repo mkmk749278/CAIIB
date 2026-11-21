@@ -1,4 +1,4 @@
-# A00 · "The market behind the counter" · CLASS EDITION (script c2, with cue sheet)
+# A00 · "The market behind the counter" · CLASS EDITION (script c3, with cue sheet)
 
 - **Why this file**: owner, 2026-11-21, after watching A00 r3: "narration still not like a class feel; injecting the
   concept into the student's mind is important… do another video with these fixes, then we can understand which is
@@ -9,13 +9,14 @@
   ways, the wrong belief broken, a worked example, a pause check and "the one thing"; value dates get their own
   chapter; a mixed round; the closing map is filled from memory first; the learner answers the opening customer as
   the officer; a "you can now" self-check.
+- **c3 (2026-11-21)**: re-review `review_c2.md` ADOPT; its Lows L1, L2, L4–L8 applied.
 - **c2 (2026-11-21)**: all High and Medium findings of the three c1 reviews fixed (`review_c1_expert.md`,
   `review_c1_examiner.md`, `review_c1_beginner.md`; what was done and why not in `review_ack_c1.md`).
 - **Syllabus**: A1.1, A1.2, A1.3 (same as v3). **Facts**: `research/bfm/facts/A1.1-A1.3_A00.md` only; rows cited as
   [F12] in the cue sheet. Nothing is taught that is not on the sheet.
 - **Rule version (opening card)**: as v3: "FEMA 1999 and FEDAI Rules as at 31 December 2026 · RBI Annual Report
   2025-26 · FBIL methodology (version of 15 Jan 2019)".
-- **Money**: as v3. The receipt rates (85.20, 85.65; N014, N015, N144) are illustrative, labelled so, and updated to
+- **Money**: as v3. The receipt rates (85.20, 85.65; N011, N102 and their cues) are illustrative, labelled so, and updated to
   near the market at the fact freeze, keeping a rise of tens of paise.
 - **Holds**: written in the cue sheet as "H: n s" and read from there by `flow_voice.py`. Every pause question holds
   at least 3 s; chapter ends hold 1 s.
@@ -337,10 +338,10 @@ N097 · Picture a see-saw. On one side, people who want dollars. Importers payin
 N098 · On the other side, people who have dollars to sell. Exporters. Money sent home from abroad. Investors bringing money in.
 > 1 S: right pan "offer $" with three icons
 
-N099 · When more people want dollars than offer them, the dollar side goes down. So the dollar gets dearer, and the rupee weakens.
+N099 · When more people want dollars than offer them, the buyers' side goes down. So the dollar gets dearer, and the rupee weakens.
 > 1 S: left pan sinks on the word "so", never before · 2 S: dial needle to "₹ weaker" · 3 B: underline "weakens"
 
-N100 · When dollars pour in, the other side goes down, and the rupee strengthens. That's the whole engine. One limit: the see-saw shows the direction, not how far.
+N100 · When dollars pour in, the sellers' side goes down, and the rupee strengthens. That's the whole engine. One limit: the see-saw shows the direction, not how far.
 > 1 S: right pan sinks; needle to "₹ stronger" · 2 S: dashed outline round the see-saw, "direction, not size"
 
 N101 · Now, careful with the numbers. The rate is rupees for one dollar. If you need more rupees for one dollar, is the rupee stronger or weaker?
@@ -397,7 +398,7 @@ N117 · Pause check for chapter four. Three questions. First. Which of these str
 N118 · More foreign investment coming in. The other two weaken it. If you picked inflation, go back to the baskets: each rupee buys less.
 > 1 S: option 3 ticked; options 1 and 2 crossed · 2 N: "inflation → weaker"
 
-N119 · Second, the exam's favourite twist. Which of these does NOT move the rupee-dollar rate? India's inflation. U-S interest rates. Japan's rainfall.
+N119 · Second, a twist the exam likes. Which of these does NOT move the rupee-dollar rate? India's inflation. U-S interest rates. Japan's rainfall.
 > 1 S: Q2 with three options · H: 4 s
 
 N120 · Japan's rainfall. India's inflation and U-S rates both move it, because the rate compares the two countries.
@@ -459,8 +460,8 @@ N137 · Post five. March nineteen ninety-three. The two rates were unified. From
 N138 · One more flag. In August nineteen ninety-four, the rupee became convertible on the current account, as India accepted Article Eight of the I-M-F.
 > 1 S: flag past the road "Aug 1994 · current account convertible · IMF Art. VIII" [F29]
 
-N139 · That means you can change rupees into dollars for trade, services or travel without special permission. Only a short list is banned or has a cap. Capital moves still have limits.
-> 1 S: "₹ → $ for trade · services · travel ✓" · 2 S: "a short list banned or capped" [F29a] · 3 S: "capital: limits" greyed
+N139 · That means you can change rupees into dollars for trade, services or travel without special permission. Only a short list is banned, needs approval, or has a cap. Capital moves still have limits.
+> 1 S: "₹ → $ for trade · services · travel ✓" · 2 S: "a short list banned · needs approval · capped" [F29a] · 3 S: "capital: limits" greyed
 
 N140 · Quick one. Since when has the rupee's rate been market determined?
 > 1 S: the road; posts dim · H: 3 s
@@ -471,7 +472,7 @@ N141 · March nineteen ninety-three. Not ninety-one, that was the devaluation. N
 N142 · So what does R-B-I do today? It doesn't fix the rate. In R-B-I's own words, it acts to keep the market orderly and contain excessive volatility.
 > 1 S: RBI's hand reaches toward the see-saw · 2 S: quote card "orderly · contain excessive volatility · RBI Annual Report 2025-26" [F30]
 
-N143 · It buys or sells dollars from its reserves when the swings get jerky. The see-saw still moves. R-B-I only stops the wild swings.
+N143 · It sells dollars from its reserves, or buys them into its reserves, when the swings get jerky. The see-saw still moves. R-B-I only stops the wild swings.
 > 1 S: the hand damps a wild swing; the see-saw keeps moving gently [F31]
 
 N144 · And the reference rate you see every afternoon? It's published by F-B-I-L, Financial Benchmarks India, since July twenty eighteen.
@@ -509,13 +510,13 @@ N153 · If you remember one thing from chapter five: India's rate is market dete
 N154 · Now a mixed round, like the exam mixes them. Five questions. Answer each before I do. One. A rupee draft issued by a bank in Chennai, payable in Mumbai. Foreign exchange?
 > 1 C: practice card "Mixed round · 5" · 2 S: Q1 · H: 4 s
 
-N155 · No. It fits none of the three pockets. Two. A deal on Thursday, spot, and Friday is a holiday. Which day?
+N155 · No. It's Indian currency, drawn and paid in India. It fits none of the three pockets. Two. A deal on Thursday, spot, and Friday is a holiday. Which day?
 > 1 S: ✓ Q1 · 2 S: Q2 · H: 4 s
 
-N156 · Tuesday. Monday is day one, Tuesday is day two. Three. Since when has the rupee's rate been market determined?
+N156 · Tuesday. Monday is day one, Tuesday is day two. Three. LERMS, the dual rate. Which year?
 > 1 S: ✓ Q2 · 2 S: Q3 · H: 3 s
 
-N157 · March nineteen ninety-three. Four. Government limits on capital flows. Fundamental, technical, or speculative factor?
+N157 · Nineteen ninety-two. Unified a year later, in ninety-three. Four. Government limits on capital flows. Fundamental, technical, or speculative factor?
 > 1 S: ✓ Q3 · 2 S: Q4 · H: 4 s
 
 N158 · Technical. Five, the trap one. Rupee interest rates are higher than dollar rates. Is the rupee at a forward premium, or a forward discount?

@@ -43,8 +43,11 @@ EOF
 export RCLONE_CONFIG_GD_TYPE=drive RCLONE_CONFIG_GD_SCOPE=drive RCLONE_CONFIG_GD_TOKEN="$TOKEN"
 export RCLONE_CONFIG_GD_ROOT_FOLDER_ID="$FOLDER_ID" RCLONE_CONFIG=/dev/null
 
-link() { local id; id=$("$RCLONE" lsjson --stat --no-mimetype "gd:$1" | python3 -c 'import json,sys; print(json.load(sys.stdin)["ID"])')
-         echo "$(basename "$1")  https://drive.google.com/file/d/$id/view"; }
+# a file: its view link; a folder (lsjson --stat gives no ID for folders): found in its parent's listing
+link() { local id; id=$("$RCLONE" lsjson --stat --no-mimetype "gd:$1" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("ID",""))')
+         if [[ -n $id ]]; then echo "$(basename "$1")  https://drive.google.com/file/d/$id/view"; return; fi
+         id=$("$RCLONE" lsjson --dirs-only --no-mimetype "gd:$(dirname "$1")" | python3 -c 'import json,sys; n=sys.argv[1]; print(next(d["ID"] for d in json.load(sys.stdin) if d["Name"]==n))' "$(basename "$1")")
+         echo "$(basename "$1")/  https://drive.google.com/drive/folders/$id"; }
 
 cmd=${1:-}; shift || true
 case $cmd in
