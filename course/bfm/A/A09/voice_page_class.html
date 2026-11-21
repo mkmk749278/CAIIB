@@ -1,0 +1,150 @@
+<title>A09 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A09 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A09/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · The rule book + Chapter 2 · The checking clock + Chapter 3 · Three documents + Chapter 4 · The date calendar (N001–N075)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N075", "text": "[warmly] Hello, everyone. Diaries open, please; today we count days. Last class, our Tiruppur exporter got a confirmed L-C from her Hamburg buyer. She shipped. Now she takes the documents to her bank. Why it matters: L-Cs are asked almost every cycle, and recent papers asked, how many days? Here's her week. The L-C expires on a Sunday. Monday is a bank holiday. Does she get more time? Some of you would say, a holiday always gives her more time. Others, expiry is expiry. Who is right? It depends on why the bank is shut. By the end of the class, you'll answer it, and name the article. Chapter one. First, from last class. Banks deal in goods, or in documents? Documents. And the rule book for those documents is U-C-P six hundred. Uniform Customs and Practice for Documentary Credits, from the I-C-C in Paris. Many of you think it is a law. It isn't. It applies only when the L-C itself says it is subject to U-C-P six hundred. How many articles? Thirty-nine. The one before it, U-C-P five hundred, had forty-nine. You don't need all thirty-nine. Think of them as seven shelves. One to five, the basics. Six to thirteen, how a credit works: promises, amendments, reimbursement. Fourteen to sixteen, checking. Seventeen to twenty-eight, documents. Twenty-nine to thirty-three, dates and tolerances. Thirty-four to thirty-seven, what banks aren't liable for. Thirty-eight and thirty-nine, transfer. Today we live on three shelves: checking, documents, dates. Plus reimbursement. Pause check for chapter one. One. U-C-P six hundred, how many articles? Thirty-nine. Two, the twist. An L-C doesn't mention U-C-P at all. Does U-C-P six hundred still apply? No. It must be written into the credit. [seriously] If you remember one thing from chapter one: U-C-P is a rule book the L-C chooses. Chapter two. First, from chapter one. Which shelf holds the checking? Fourteen to sixteen. Handing the documents to a bank under the L-C is called presentation. Which banks check them? Think. The nominated bank, where she presents, acting on its nomination. Then the confirming bank, and the issuing bank. They check the documents alone, on their face. Never the goods. What are they checking against? A complying presentation. That means the L-C's terms, the U-C-P articles, and standard banking practice. Last class I asked: how many days does each bank get? Five calendar days, or five banking days? Five banking days, following the day of presentation. A banking day is a day the bank is normally open. Say hers shuts on weekends. Documents arrive Thursday. Friday is day one. Monday two, Tuesday three, Wednesday four, Thursday five. And if the L-C expires inside those five days? The bank still gets all five. Expiry doesn't shorten the clock. U-C-P five hundred said a reasonable time, up to seven banking days. Six hundred made it a firm five. What does the checker look for? Not identical words. Data must not conflict, within a document, between documents, or with the credit. Say the L-C says \"goods must be new\", but asks for no document to prove it. The checker ignores that line. And a document may be dated before the L-C was issued. Never after it is presented. A problem the checker finds is a discrepancy. Then the bank may refuse. But it sends one notice: every discrepancy, and what it does with the documents. The issuing bank may ask its buyer to waive, that is, accept the discrepancy anyway. That doesn't stop the clock. A bank that misses the notice, or the five days, loses the right to refuse. The rules say it is precluded. Her bank finds the documents complying, pays her, and posts them to Hamburg. The courier loses them. Must Hamburg still pay? Yes. Found complying and sent on, they must be paid for, even if lost on the way. Pause check for chapter two. One. Five calendar days, or banking? Banking. Two, the twist. The refusal notice lists two discrepancies. Next day the bank finds a third. Can it add it? No. One notice, every discrepancy. [seriously] If you remember one thing from chapter two: five banking days, one complete notice. Chapter three. First, from chapter two. A complying presentation: L-C terms, U-C-P articles, and what third thing? Standard banking practice. Its book is I-S-B-P, International Standard Banking Practice. Many of you think it is a second rule book. It isn't. It's how checkers apply U-C-P six hundred. The syllabus calls it I-S-B-P seven forty-five; that's the name you'll see in the exam. The current edition is eight twenty-one, from twenty twenty-three. Now three desk cards. First, the invoice. Quick one. Must the exporter sign it? No. Issued by the beneficiary, to the applicant, in the credit's currency. It needn't be signed. Its goods description must correspond with the credit's. Elsewhere, general terms are fine. An invoice above the credit amount? A bank may accept it, but pays no more than the credit. Second, the bill of lading. Signed by the carrier, the master, or an agent for either. Shipped on board a named vessel. And the full set of originals. The on-board date is the shipment date. Now, the B-L says \"two cartons torn\". Can it still be clean? No. Clean means no note of damaged goods or packing. The word \"clean\" needn't appear. Goods carried on deck, out in the open: not acceptable. Third, insurance. It must come from an insurance company or an underwriter, a person who takes the risk, or their agents. So a broker signing only as broker fails. A broker signing as the insurer's agent is fine. And a cover note, a temporary promise of cover, is never accepted. Dated no later than shipment, unless it shows cover from the shipment date. Quick one. If the credit names no cover amount? At least a hundred and ten per cent of the C-I-F or C-I-P value. Pause check for chapter three. One. Is I-S-B-P a rule? No, practice. Two, the twist. The insurance is dated a day after shipment, but says cover starts from shipment. Accept? Yes. Cover started in time. [seriously] If you remember one thing from chapter three: each document has a few checks; learn those, not the whole book. Chapter four. First, from chapter three. Insurance from a broker, signing only as broker? Not accepted. Now three dates rule every presentation. The latest shipment date, the expiry date, and twenty-one days after shipment. The twenty-one days count when the credit asks for an original transport document, like a bill of lading, and sets no period of its own. Calendar days, not banking days. Her bill of lading shows shipped on board Thursday, the fourth of March. Expiry is Sunday the twenty-eighth. What's her last day? Thursday the twenty-fifth. Four plus twenty-one, before the expiry. Many of you think only the expiry date matters. It doesn't. Two limits; the earlier one wins. Documents presented too late are called stale. She ships on the eleventh. Eleven plus twenty-one is thirty-two. March has thirty-one days, so that's the first of April. Now expiry, the twenty-eighth, comes first. But it's a Sunday, and Monday the twenty-ninth is a bank holiday. Her bank is simply closed. For a closure like that, the expiry moves to the first banking day after: Tuesday the thirtieth. That's Article twenty-nine. So, our opening question. For a holiday, yes, she gets more time. But one date never moves: the latest shipment date. A different story, on its own calendar. Her L-C expires on Wednesday the seventeenth. A cyclone shuts her bank from Tuesday the sixteenth to Friday the nineteenth. The bank reopens on Monday the twenty-second. Can she present then? No. That's force majeure: events nobody can control, like storms, riots, wars or strikes. A credit that expires during the closure is not honoured afterwards. Her way out: an amendment of the expiry, agreed by the banks, and accepted by her. [lightly] So pray for holidays, not cyclones. One more shelf-five rule. \"About\" or \"approximately\" in an L-C allows ten per cent either way, on whatever it refers to. Without it, a quantity may still vary five per cent, unless counted in units. Partial shipments are allowed, unless the L-C says no. Pause check for chapter four. One. Twenty-one days: calendar or banking? Calendar. Two, the twist. Expiry on Sunday, Monday a holiday, so it moves to Tuesday. But on Tuesday a strike shuts the bank. More days? No. Tuesday's closure is force majeure, Article thirty-six. [seriously] If you remember one thing from chapter four: closed for a holiday, it moves; closed by force majeure, it doesn't."}]}, {"file": "part_2.mp3", "section": "Chapter 5 · Getting the money back + Close (N076–N102)", "turns": [{"speaker": "Teacher", "first": "N076", "last": "N102", "text": "Chapter five. First, from chapter four. Which date never moves? The latest shipment date. Now, her Indian bank paid her under its confirmation. How does it get its dollars back from Hamburg? Hamburg says: claim from my dollar account in New York. Its own Nostro, as in our correspondent banking class. That's a bank-to-bank reimbursement. Its rule book is U-R-R seven twenty-five, from the I-C-C. It applies when the authorisation says so. Four words. The issuing bank, Hamburg. The claiming bank, her Indian bank. The reimbursing bank, New York. And the reimbursement authorisation. The authorisation is Hamburg's instruction to New York: pay the claiming bank. It stands apart from the L-C. Quick one. Does New York check the documents? Many of you would say yes. It never gets them, and it ignores the credit, even if sent a copy. And no one certifies to it that they complied. Must New York pay? Only if it gave its own promise, a reimbursement undertaking. It has up to three banking days after receiving the claim to process it. Its charges go to the issuing bank, unless agreed otherwise. And if New York doesn't pay? Hamburg still owes her bank. That's Article thirteen of U-C-P. Pause check for chapter five. One. Who checks the documents: the reimbursing bank? No. Two, the twist. Days to process a claim: three or five? Three under U-R-R. Five is the checking clock under U-C-P. [seriously] If you remember one thing from chapter five: the reimbursing bank follows the authorisation, never the credit. Quick mix. One. Shipped on board the second, expiry the thirtieth, original bill of lading. Last day to present? The twenty-third. Two. The L-C says, goods must be of good quality, and names no document. What does the checker do? Ignores it. Three. A presentation complied, and the courier lost it on the way to the issuing bank. Who bears it? The issuing bank still pays, Article thirty-five. Now the map, from memory. First node: U-C-P six hundred. Thirty-nine articles, only if the L-C says so. Second node: the checking. Five banking days, one notice, documents only. Third node: the documents. Invoice, bill of lading, insurance; I-S-B-P is practice. Fourth node: the dates. Twenty-one calendar days; Article twenty-nine moves expiry, thirty-six doesn't. Fifth node: U-R-R seven twenty-five. Authorisation, three banking days, no documents. That's the map. Homework. Take this month's calendar. Pick a shipment date, and mark the last presentation day. Next class, a full L-C case, exam style. The buyer asks the bank not to pay. Can he stop it? [warmly] That's today's class. Count your days carefully, and I'll see you next time."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

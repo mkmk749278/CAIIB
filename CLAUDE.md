@@ -69,7 +69,10 @@ Never a new loose doc.
     checker `tools/check/fx_cross_rates.py`, reviews c1 ×3 + re-review c2, voice page 1 part); **A05 c3 locked**
     (`A/A05/`, fact sheet `A1.5-A1.7_A05.md`, checker `tools/check/fx_forwards.py`, voice page 1 part); **A06 c3 locked**
     (`A/A06/`, fact sheet `A1.5-A1.7_A06.md`, checker `tools/check/fx_forward_contracts.py`, voice page 2 parts);
-    **A08 c1** written (`A/A08/`, fact sheet `A4.1-A4.8_A08.md`: UCP 600 + FEM (Guarantees) Regs 2026), reviews running.
+    **A08 c3 locked** (2026-11-21, `A/A08/`, fact sheet `A4.1-A4.8_A08.md`, reviews c1 ×3 + re-review c2 ADOPT, voice
+    page 2 parts); **A09 c3 locked** (`A/A09/`, fact sheet `A4.4-A4.10_A09.md`: URR 725 read, **ISBP 821 (Jul 2023) is current;
+    the syllabus still says 745**, taught as both; voice page 2 parts); **A10 c3 locked** (case, `A/A10/`, fact sheet
+    `A4.12_A10.md`, ISP98 rules read; voice page 1 part); A11 fact sheet being drafted.
     Open: FEDAI 6.3 "cancel and rebook" vs RBI Circular 25 (10 Oct 2026) no rebooking: re-check FEDAI at the freeze. Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
@@ -100,7 +103,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04–A06 locked (A07 locked earlier). A08 c2 written (all c1 High/Medium fixed, `A/A08/review_ack_c1.md`): next run its fresh re-review (c2), apply, lock, voice page, greetings already in; then A09 (fact sheet `A4.4-A4.10_A09.md` drafted, URR 725 / ISBP rows to verify) onward:** fact sheet →
+    A04–A06 locked (A07 locked earlier). A08, A09, A10 locked (c3, voice pages); A11 fact sheet `A5.1-A5.5_A11.md` drafting; then A11 script onward:** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared

@@ -315,7 +315,7 @@ course plan is not renumbered here; the owner decides the splits.
   and deals in documents (Art. 5) · 2 The relay: parties, flow and who is liable for what (advising, confirming,
   nominated, negotiating, reimbursing) · 3 Types by story: sight, usance (acceptance) and (v3) deferred payment,
   (v3) negotiation (free vs restricted), confirmed, revolving, red and green clause, transferable, back-to-back,
-  standby LC with RBI's conditions for import SBLCs · 4 What can go wrong (risk card) and check-in quiz: name the LC.
+  standby LC under the FEM (Guarantees) Regulations 2026 (the old RBI import-SBLC conditions are gone) · 4 What can go wrong (risk card) and check-in quiz: name the LC.
   ~15 min.
 - **Traps**: red vs green clause; confirming vs advising bank; back-to-back vs transferable; "revocable" (UCP 600
   credits are irrevocable); (v3) acceptance vs deferred payment (no bill of exchange in a deferred payment credit).

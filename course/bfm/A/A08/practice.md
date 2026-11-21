@@ -1,8 +1,7 @@
-# A08 · Practice (examiner's draft, c1 review, 2026-11-21)
+# A08 · Practice (c3, 2026-11-21). Every item is taught in the lesson.
 
 Our own items. Names, places and amounts are illustrative. Each answer cites the UCP 600 article (via the fact sheet
-`research/bfm/facts/A4.1-A4.8_A08.md`, row in brackets) or marks "practice" where UCP has no article. Items 4, 5 and 7
-need review findings 2, 4 and 3 to be voiced in the lesson first.
+`research/bfm/facts/A4.1-A4.8_A08.md`, row in brackets) or marks "practice" where UCP has no article.
 
 ## Story questions (name it / who bears it)
 
