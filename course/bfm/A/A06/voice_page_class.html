@@ -1,0 +1,150 @@
+<title>A06 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A06 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A06/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Cancellation: the opposite deal + Chapter 2 · Early delivery (N001–N039)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N039", "text": "[warmly] Good to see you, everyone. Today, plans change, and we find out what it costs. First, last class's homework. A bank sale at a discount, delivery in the second month. Which date? The first date, the bank's best. Eighty-five point four two, before the margin. Forex sums came in all seven exam cycles we studied. And one recent paper asked straight out: at which rate is a forward contract cancelled? Last class ended with a question. Picture an exporter in Ludhiana. A month ago, she sold the bank a lakh of dollars, three months forward, at eighty-six point zero five. Now her buyer pays two months early. What happens to her contract? Some of you would say, the bank just uses the contract rate. Others say, she gains if the market moved her way. What happens? Hold that. By the end, you'll work out what she actually gets. Chapter one. Start with the simplest change. The deal is off, and the customer cancels the contract. Here's the picture. Cancelling is doing the opposite deal, at today's rate for the same date. The counter flips. A contract where the bank buys dollars is a purchase contract. Our exporter sold the bank dollars, so for the bank, hers is a purchase contract. To cancel a purchase contract, the bank sells the dollars back. At its T-T selling rate. Quick one. A sale contract, where the bank sells dollars. Cancelled at which rate? T-T buying. The bank buys the dollars back. Then it settles the difference: contract rate against cancellation rate. Press along. A different exporter: a purchase contract, a lakh of dollars at eighty-six point zero five. His buyer cancels the order. On maturity, spot is eighty-six point three eight, eighty-six point four zero. T-T selling, from the ask. Eighty-six point four, times one point zero zero one two, equals. Eighty-six point five zero three seven. Rounded to four places; key that in fresh. The bank bought at eighty-six point zero five. It sells back at eighty-six point five zero three seven. Who pays the difference? The exporter. Eighty-six point five zero three seven, minus eighty-six point zero five, times a lakh, equals. Forty-five thousand, three hundred seventy rupees. Why him? He must buy the dollars back dearer than he sold them. So the rule. Purchase contract: cancellation rate above the contract rate, the customer pays. Below it, the bank pays him. Your turn. An importer's sale contract, fifty thousand dollars at eighty-six point two zero. Cancelled on maturity. Spot eighty-five point eight zero, eighty-five point eight two. T-T buying margin, point zero eight percent. Pause. T-T buying, from the bid. Eighty-five point eight, times point nine nine nine two, equals. Eighty-five point seven three one four. The importer pays the difference: twenty-three thousand, four hundred thirty rupees. A sale contract is the mirror. Cancellation rate below the contract rate, the customer pays. Above it, the bank pays. Many of you will use T-T selling here, because he bought dollars. That's the trap. The bank cancels by buying back. T-T buying. And before maturity? The same opposite deal. Today's rate for the maturity date is the forward T-T rate. A loss can be paid in one go, or in instalments at least once a quarter, until the original maturity. Pause check for chapter one. One. A purchase contract is cancelled at which rate? T-T selling. Two, the twist. Cancelled a month before maturity. Spot rate, or forward? The forward T-T rate. [seriously] If you remember one thing from chapter one: cancelling is the opposite deal, at today's rate for the same date. Chapter two. First, from chapter one. A sale contract is cancelled at which rate? T-T buying. Now our Ludhiana exporter. Her dollars came two months early. The bank doesn't have to accept early delivery. It's optional. But usually it does. Here's the problem. When the bank bought her dollars forward, it sold the same dollars forward in the market, to stay safe. That sale is due in two months. But her dollars came today. So the bank does a swap. It sells today's dollars at spot, and buys dollars forward, to meet its market sale on the original date. With the dollar at a premium, buying forward costs more than selling spot. That gap is the swap cost. The customer pays it, even if the bank does no actual swap. Press along. Interbank spot, eighty-five point seven zero, eighty-five point seven two. Two-month points, zero point three six, zero point three nine. In the market, the bank sells at the bid, eighty-five point seven zero. It buys forward at the ask: eighty-five point seven two plus point three nine. Eighty-six point one one. Eighty-six point one one, minus eighty-five point seven, times a lakh, equals. Forty-one thousand rupees of swap cost. One more piece. The bank pays her eighty-six point zero five today. But it got only eighty-five point seven zero from the spot sale. That gap is the bank's outlay: its own money, paid out until the original date. The bank charges interest on that outlay, for the two months. Say ten percent a year. Thirty-five thousand, times point one, times two, divided by twelve, equals. Five hundred eighty-three rupees, thirty-three paise. If the swap had brought money in instead, the bank would pay her interest. And a swap can earn, too. With the dollar at a discount, buying forward is cheaper than selling spot. Then the bank pays the customer a swap gain. Same for an importer taking dollars early at a premium. Back to her. A lakh of dollars at eighty-six point zero five is eighty-six lakh, five thousand. Less forty-one thousand, less five hundred eighty-three thirty-three, equals. Eighty-five lakh, sixty-three thousand, four hundred sixteen rupees, sixty-seven paise. Not the full contract amount. A cousin of early delivery: an export bill paid early. The bank refunds interest for the days left, and settles a notional swap, just like this. Pause check for chapter two. One. Early delivery: must the bank accept it? No, it's optional. Two, the twist. The bank never actually did a swap. Does it still recover swap cost? Yes. In all cases. [seriously] If you remember one thing from chapter two: early delivery means a swap. Swap cost or gain, plus interest on the outlay."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · Extension and the 2026 rules + Chapter 4 · When the customer does nothing + Close (N040–N067)", "turns": [{"speaker": "Teacher", "first": "N040", "last": "N067", "text": "Chapter three. First, from chapter two. Early delivery: what two costs? Swap cost, and interest on the outlay. Now, the opposite problem. The buyer will pay late. The customer wants more time: a rollover, carrying the contract on to a later date. F-E-D-A-I's rule: settle the old contract at today's rate, and start a new one at the current rate. The request must come on or before maturity. Press along. The importer from chapter one, fifty thousand dollars at eighty-six point two zero. On maturity, he asks for one more month. Step one: settle at T-T buying, eighty-five point seven three one four. He pays twenty-three thousand, four hundred thirty, as before. Step two: a new one-month contract at today's forward T-T selling. Eighty-five point eight two, plus point two, times one point zero zero one two, equals. Eighty-six point one two three two. Not his old eighty-six point two zero. A rollover is always at the current rate. Now, on the tenth of October twenty twenty-six, R-B-I changed the game. A rupee forward contract cancelled after that can't be rebooked, with any bank. What's still allowed? A rollover, done on the maturity date itself. He may ask earlier, but it happens on maturity. Priced just as we did. So F-E-D-A-I's method is still how a rollover is priced, and exams ask it. What's gone is cancelling, then booking again, with any bank. Same circular, one more number. A customer can fix a forward rate without showing papers for the real trade behind it. That's hedging without proving the underlying. The limit was a hundred million dollars. Now, how much? Five million dollars, across all banks. And the bank takes an undertaking that the same exposure isn't hedged elsewhere. One line for later. For some contracts, the bank now keeps twenty percent of the rupee value in cash with R-B-I. We'll work that in C-zero-eight. Pause check for chapter three. One. A rollover: old rate or current rate? Current. Two, the twist. A contract cancelled with Bank A. Can it be rebooked with Bank B? No, with no bank. [seriously] If you remember one thing from chapter three: extend by rollover on maturity, at the current rate. A cancelled contract stays cancelled. Chapter four. First, from chapter three. Rollover is allowed on which date? On maturity. Now, a customer simply forgets. Maturity passes, no delivery, no instructions. What does the bank do? It cancels the contract itself, within three working days after maturity. Any swap cost is charged to the customer, with a written note, an advice. On time, a cancellation gain goes to the customer. But after maturity? Say the market moved in his favour. Does he get the gain? No. He defaulted, so the gain stays with the bank. A loss, he must pay. The bank may pass the gain only if the delay was beyond his control. And if a government order makes the deal impossible? The contract still stands. The customer must ask to cancel it. Pause check for chapter four. No instructions after maturity. Within how many days does the bank cancel? Three working days. [seriously] If you remember one thing from chapter four: do nothing, and the bank cancels. You pay the loss, but don't get the gain. Back to Ludhiana. The contract rate, with no cost? No. She gets the contract rate, less swap cost and interest on the outlay. And any market gain? Not here. Early delivery is priced by the swap. Eighty-five lakh, sixty-three thousand, four hundred sixteen rupees, sixty-seven paise. Now the map, from memory. Branch one. Cancelling a purchase contract? T-T selling: the opposite deal. Branch two. Early delivery? Swap cost or gain, plus interest on the outlay. Branch three. Extension? Rollover on maturity, at the current rate; no rebooking. Branch four. No instructions? Cancelled within three working days; gain not passed. That's the map. Homework. Take sum one, but the market fell: spot eighty-five point nine zero, eighty-five point nine two. Who pays now, and how much? Next class: the goods themselves. Who pays the freight, and where does the risk pass? Incoterms. [warmly] That's the class. Go easy tonight, and we'll pick up the next one together."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

@@ -1,6 +1,6 @@
-# A06 · "When the plan changes" · CLASS EDITION (script c2, with cue sheet)
+# A06 · "When the plan changes" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked, 2026-11-21**: re-review `review_c2.md` ADOPT (0 H, 0 M, 4 L), all Lows applied. If a take runs over 15:00, cut N036a, then N048, then N046. c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style (`course/spec/lesson_spec.md`): teaching plus sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A06. Course order v4: A05 → **A06** → A07.
 - **Syllabus**: A1.5 (forwards), A1.6 (FEDAI rules: Rules 2.2(c), 6), A1.7 (forex arithmetic).
@@ -141,10 +141,10 @@ N033 · The bank charges interest on that outlay, for the two months. Say ten pe
 N034 · Five hundred eighty-three rupees, thirty-three paise. If the swap had brought money in instead, the bank would pay her interest.
 > 1 B: box "interest on outlay ₹583.33" · 2 N: "inflow → bank pays interest" [F4]
 
-N034a · And a swap can earn, too. With the dollar at a discount, buying forward is cheaper than selling spot. Then the bank pays the customer a swap gain.
+N034a · And a swap can earn, too. With the dollar at a discount, buying forward is cheaper than selling spot. Then the bank pays the customer a swap gain. Same for an importer taking dollars early at a premium.
 > 1 C: card "swap cost → customer pays · swap gain → customer receives (e.g. a discount market; an importer taking early delivery at a premium)" [F2, F3]
 
-N035 · Back to her. Eighty-six lakh, five thousand, less forty-one thousand, less five hundred eighty-three thirty-three, equals.
+N035 · Back to her. A lakh of dollars at eighty-six point zero five is eighty-six lakh, five thousand. Less forty-one thousand, less five hundred eighty-three thirty-three, equals.
 > 1 S: keys 8605000 − 41000 − 583.33 = · H: 6 s
 
 N036 · Eighty-five lakh, sixty-three thousand, four hundred sixteen rupees, sixty-seven paise. Not the full contract amount.
@@ -167,7 +167,7 @@ N039 · Yes. In all cases. [seriously] If you remember one thing from chapter tw
 N040 · Chapter three. First, from chapter two. Early delivery: what two costs?
 > 1 S: chapter title "3 · Extension" · H: 3 s
 
-N041 · Swap cost, and interest on the outlay. Now, the opposite problem. The buyer will pay late. The customer wants more time.
+N041 · Swap cost, and interest on the outlay. Now, the opposite problem. The buyer will pay late. The customer wants more time: a rollover, carrying the contract on to a later date.
 > 1 N: "swap cost + interest ✓" · 2 S: calendar strip, the due date sliding later
 
 N042 · F-E-D-A-I's rule: settle the old contract at today's rate, and start a new one at the current rate. The request must come on or before maturity.
@@ -188,7 +188,7 @@ N042d · Eighty-six point one two three two. Not his old eighty-six point two ze
 N043 · Now, on the tenth of October twenty twenty-six, R-B-I changed the game. A rupee forward contract cancelled after that can't be rebooked, with any bank.
 > 1 C: card "RBI, 10 Oct 2026: no rebooking of a cancelled INR forex contract · with any AD" [F6]
 
-N044 · What's still allowed? A rollover: carrying the contract on to a later date, done on the maturity date itself. Priced just as we did.
+N044 · What's still allowed? A rollover, done on the maturity date itself. He may ask earlier, but it happens on maturity. Priced just as we did.
 > 1 B: box "rollover on maturity ✓ · rebook after cancelling ✗" [F6]
 
 N045 · So F-E-D-A-I's method is still how a rollover is priced, and exams ask it. What's gone is cancelling, then booking again, with any bank.

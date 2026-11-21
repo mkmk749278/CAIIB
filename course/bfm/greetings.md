@@ -15,6 +15,7 @@ videos running.
 | A05 | "Hi, everyone. Calculator out, please; today we look a little ahead." | "Thank you for staying till the end. Keep that calendar in mind, and we'll meet again soon." |
 | A06 | "Good to see you, everyone. Today, plans change, and we find out what it costs." | "That's the class. Go easy tonight, and we'll pick up the next one together." |
 | A07 | "Hello everyone, good evening, and welcome to the class." | "Okay, good night everyone, go and rest. See you in the next class." |
+| A08 | "Hi there, everyone. Today we follow the paper, not the goods." | "That's our class. Rest easy, and we'll follow the documents again next time." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.
