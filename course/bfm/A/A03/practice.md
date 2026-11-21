@@ -4,7 +4,7 @@ All data illustrative. Basic calculator. Rates to 4 decimals (half up); rupees t
 
 1. Interbank USD/INR 85.60 / 85.62; TT selling margin 0.12%. TT selling rate? (a) 85.7027 (b) 85.7227 (c) 85.6627 (d) 85.7224
    **Answer: (b) 85.7227.** Selling starts from the ask: 85.62 × 1.0012. (a) is off the bid.
-2. Same quote; TT selling 0.12%, bill selling a further 0.15%. Bill selling? (a) 85.8513 (b) 85.8511 (c) 85.8484 (d) 85.7227
+2. Same quote; TT selling 0.12%, bill selling a further 0.15%. Bill selling? (a) 85.8513 (b) 85.8512 (c) 85.8484 (d) 85.7227
    **Answer: (a).** Two steps on the full TT selling figure. (b) adds 0.27% to the ask in one step.
 3. Which rate converts an inward remittance into rupees? (a) bill buying (b) TT buying (c) TT selling (d) notes buying
    **Answer: (b).** FEDAI 4.4.
