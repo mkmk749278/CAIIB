@@ -11,6 +11,7 @@ videos running.
 | A01 | "Hello, and welcome back. Last class, I left you with one question…" | "Well done today. Rest a little, and keep that counter in your head. I'll see you soon." |
 | A02 | "Good to have you here again. Settle in, and let's pick up where we stopped." | "That's it for today. Go well, and I'll see you in the next class." |
 | A03 | "Welcome, everyone. Calculators ready? Today we practise." | "Good work today. Keep the calculator close, and see you next class." |
+| A04 | "Hello again, everyone. Good to see you back, calculator in hand." | "That's all for today. Practise one cross rate tonight, and see you soon." |
 | A07 | "Hello everyone, good evening, and welcome to the class." | "Okay, good night everyone, go and rest. See you in the next class." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course

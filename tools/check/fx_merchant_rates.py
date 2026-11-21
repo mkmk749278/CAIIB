@@ -81,3 +81,9 @@ if __name__ == "__main__":
     assert str(q4(D("114.55") * D("1.0027"))) == "114.8593"
     assert (t2 * 25000).quantize(D("0.01")) == D("2136790.00")
     print("A03 rupee amounts: 4,95,603.00 · 9,18,876.00 · 21,36,790.00 OK")
+    f5 = check("A03 S5 FCNR(B) TT buying 85.40 less 0.08%", way1_buy(85.40, 0.08), way2_buy(85.40, 0.08)); assert str(f5) == "85.3317"
+    assert (f5 * 30000).quantize(D("0.01")) == D("2559951.00")
+    assert (t3 * 20000).quantize(D("0.01")) == D("1714454.00")
+    y = check("A03 S7 JPY TT selling 57.45 plus 0.15% (per 100)", way1_sell(57.45, 0.15), way2_sell(57.45, 0.15)); assert str(y) == "57.5362"
+    assert (y * 5000).quantize(D("0.01")) == D("287681.00")
+    print("A03 no-options sums: 25,59,951.00 · 17,14,454.00 · 2,87,681.00 OK")
