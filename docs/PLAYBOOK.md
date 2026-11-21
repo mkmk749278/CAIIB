@@ -453,6 +453,14 @@ checks decide when a cut is ready, not a feeling.
     Maya takes word-checked against the script: nothing skipped (the flagged runs were numbers written as digits).
   - Not a way around the free ElevenLabs plan: the output is still that audio, so still non-commercial (owner asked;
     declined). Owner's ear decides whether enhanced Vasant is the fallback.
+- **A00, the first lesson on the shared engine (2026-11-21).** The A07 timing engine (beats, notes, captions,
+  scenes) now lives in `video/src/kit/flow.tsx` (`makeFlow(timeline, captionFixes)`), and Module A's pictures in
+  `kit/forex.tsx` (counter, three-pocket coat, world strip, calendar boxes, see-saw, ledger, road, RBI's hand); A07
+  keeps its inline copy as the locked template. Two fixes found on the way: `cut_lines.script_lines` read the cue
+  sheet into the spoken text (now drops ">" lines, as `voice_blocks.py` does), and the music mix was never a tool,
+  so `tools/video/mix_bed.py` now makes `mix.flac` with A07's settings (voice to -18 LUFS, bed -21 dB, ducked).
+  Stills of every scene caught a see-saw tilting the wrong way and SVG text that ignored its colour (`fill`, not
+  `color`): look at stills before the runners.
 - **Enhanced takes only (owner, 2026-11-21).** "In Prithvi voice there is hissing noise while listening that
   irritates the ears, but after Resemble Enhance it's gone." The numbers above said little gain on ElevenLabs; the
   owner's ear on a phone says otherwise: the hiss in the raw take is what a listener notices over 15 minutes. So

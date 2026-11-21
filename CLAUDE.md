@@ -61,10 +61,11 @@ Never a new loose doc.
     2_o96hjLbzg HxiSvg9HZDw qjhdvQ4CKoM ON8wO_NVi6g gcu7lNu4yiY`); the fixed script waits and retries. Six of the
     second batch are in Drive (`0eD1Wgwfq_0 4w3vrr0ie8k Bsc02xx_OlA dQ4XMe9CpC0 f7x87ICfG0I ntAuCjiCtME`). When all
     are in, check them against the updated plans (sub-points several teachers cover that we still lack).
-  - **Next (session closed 2026-11-20 evening)**: (1) owner re-voices A00 from the fixed voice page (2 parts) into
-    Drive `BFM/A00/voice/` (folder https://drive.google.com/drive/folders/1dHclG0_nMaU4xN_BzdeutFuzrouPpMld); check
-    each take word by word against the script (faster-whisper + diff), then `kaggle_enhance.py from-drive A00`, then
-    the r4 build. (2) A stray `BFM/A00/voice` folder at the top of the owner's My Drive (created by mistake) holds
+  - **Next**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
+    owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
+    `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
+    engine `kit/flow.tsx` + pictures `kit/forex.tsx`; 720p review cut on the runners, then the checks, then the
+    owner. Re-run `flow_voice.py` with the enhanced takes if a line is re-generated. (2) A stray `BFM/A00/voice` folder at the top of the owner's My Drive (created by mistake) holds
     the discarded a01–a03; delete only if the owner says so. (3) Then fact sheets for the next Module A lessons and
     the three reviews of A01 v6; on through Module A.
   - **Open fact checks** collected by the agents (also inside each plan's "verify" lines): MPC 2–4 Dec 2026; full
