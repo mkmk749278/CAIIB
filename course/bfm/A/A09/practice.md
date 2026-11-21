@@ -1,4 +1,4 @@
-# A09 · Practice (author's draft c1, 2026-11-21; reviewed with the script)
+# A09 · Practice (c2, 2026-11-21; c1 review fixes applied)
 
 Our own items. Names, places, banks and dates are illustrative (weekdays are real 2027 weekdays; holidays are made
 up). Each answer cites the article via the fact sheet `research/bfm/facts/A4.4-A4.10_A09.md` (row in brackets).
@@ -7,9 +7,10 @@ up). Each answer cites the article via the fact sheet `research/bfm/facts/A4.4-A
 
 **P1.** An L-C subject to UCP 600 calls for an original bill of lading. The B/L shows "shipped on board"
 **Monday 1 March 2027**. The credit expires **Wednesday 31 March 2027**. The last day to present is:
-(a) 31 March (b) **22 March** (c) 26 March (d) 29 March
+(a) 31 March (b) **22 March** (c) 30 March (d) 26 March
 *Reason: present within 21 **calendar** days after shipment and not after expiry; 1 + 21 = 22 March, earlier than 31
-March (Art. 14(c)) [F4]. (c) and (d) count banking days, a trap.*
+March (Art. 14(c)) [F4]. (a) uses only the expiry date; (c) counts 21 banking days (Tue 30 March), a trap; (d) is
+a miscount.*
 
 **P2.** Documents are presented to the nominated bank on **Thursday 4 March 2027**. The bank is closed on Saturday,
 Sunday and (illustrative) on Monday 8 March for a local holiday. The latest day by which it must decide is:
@@ -17,8 +18,8 @@ Sunday and (illustrative) on Monday 8 March for a local holiday. The latest day 
 *Reason: maximum five banking days following the day of presentation: Fri 5 (1), Tue 9 (2), Wed 10 (3), Thu 11 (4),
 Fri 12 (5) (Art. 14(b)) [F3].*
 
-**P3.** A credit expires **Sunday 28 March 2027**. Shipment is on 11 March, so 21 days run to 1 April. The beneficiary's
-bank is closed on 28 March (Sunday) and 29 March (holiday). Separately, in a second scenario, all banks in the city
+**P3.** A credit expires **Sunday 28 March 2027**. Shipment is on 11 March, so 21 days run to 1 April. The nominated bank,
+where documents are to be presented, is closed on 28 March (Sunday) and 29 March (holiday). Separately, in a second scenario, all banks in the city
 are shut from 26 to 31 March by a cyclone. Which pair is correct?
 (a) both scenarios: present on 30 March
 (b) **first: present by 30 March · second: the credit is not honoured after the banks reopen**
@@ -47,9 +48,24 @@ it finds a third. Which is correct?
 *Reason: Art. 16(c), (f): a single notice stating each discrepancy; a bank that fails to comply is precluded [F11].*
 
 **P6.** Which of these is **not** a discrepancy under UCP 600?
-(a) insurance issued by an insurance broker
+(a) an insurance document signed only by a broker, as broker
 (b) a cover note in place of an insurance policy
 (c) **a bill of lading dated before the credit's issue date**
 (d) a bill of lading showing goods loaded on deck
-*Reason: a document may be dated before the credit's issue date (Art. 14(i)) [F9]; brokers' documents and cover notes
-are not accepted (Art. 28) [F15]; on-deck loading is not acceptable (Art. 26(a)) [F14].*
+*Reason: a document may be dated before the credit's issue date (Art. 14(i)) [F9]; a document signed by a broker only as broker, and a cover note,
+are not accepted (Art. 28(a), (c)) [F15]; on-deck loading is not acceptable (Art. 26(a)) [F14].*
+
+**P7.** The nominated bank finds a presentation complying, pays the beneficiary and couriers the documents to the
+issuing bank. The courier loses them. The issuing bank:
+(a) may refuse, as it never saw the documents
+(b) may ask the beneficiary for a fresh set before paying
+(c) **must still honour, or reimburse the nominated bank**
+(d) is liable only if the applicant agrees
+*Reason: Art. 35, second paragraph: documents lost in transit between banks after a nominated bank found them
+complying and forwarded them [F22].*
+
+**P8.** An L-C says "documents must be presented within 15 days after the date of shipment". The B/L shows shipped on
+board **Tuesday 2 March 2027**; the credit expires 31 March. The last day for presentation is:
+(a) 16 March (b) **17 March** (c) 31 March (d) 23 March, as the 21-day rule overrides the credit
+*Reason: the 21-day rule applies only when the credit sets no presentation period of its own (Art. 14(c)); here 2 +
+15 = Wed 17 March [F4].*
