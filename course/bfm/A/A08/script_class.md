@@ -1,6 +1,6 @@
 # A08 · "Paper you can trust" · CLASS EDITION (script c2, with cue sheet)
 
-- **Status**: c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked**, 2026-11-21: re-review c2 ADOPT (`review_c2.md`), its Lows 1, 3–12 applied (Low 2 left out for length). c2, 2026-11-21: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-21. Standard style (`course/spec/lesson_spec.md`): concepts and stories, no sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A08. Course order v4: A07 → **A08** → A09.
 - **Syllabus**: A4.1 (definition), A4.2 (types), A4.3 (operations), A4.5 (parties' liabilities, with A09), A4.7 (risks,
@@ -59,8 +59,8 @@ N010 · The letter of credit. In a collection, banks only pass the documents; th
 N011 · Here's the promise in one line. An L-C is the issuing bank's definite promise to pay, against documents that comply.
 > 1 C: card "LC = issuing bank's definite undertaking to honour a complying presentation" [F4]
 
-N011a · Comply means the documents match the L-C's terms. Same goods, same amounts, same dates.
-> 1 N: "comply = match the LC's terms" [F4]
+N011a · Comply means the documents meet the L-C's terms. The right description, amounts and dates, on paper.
+> 1 N: "comply = documents meet the LC's terms" [F4]
 
 N012 · U-C-P six hundred is the I-C-C's rule book for L-Cs. Each L-C says it follows it. Under it, every L-C is irrevocable, even if it doesn't say so.
 > 1 C: card "UCP 600 applies when the LC says so · irrevocable even if silent" [F1, F3]
@@ -95,7 +95,7 @@ N020 · On the left, the buyer. He asks his bank to open the L-C. He's the appli
 > 1 S: figure 1 "applicant (the buyer, Hamburg)" [F2]
 
 N021 · His bank is the issuing bank. It makes the promise, and it is bound from the moment it issues the L-C.
-> 1 S: figure 2 "issuing bank: makes the promise · bound from issue" [F2, F8]
+> 1 S: figure 2 "issuing bank: makes the promise · bound from issue" [F2, F8] · 2 G: a promise badge pins on figure 2 on "promise"
 
 N022 · The issuing bank sends the L-C to a bank in India, near the exporter. That's the advising bank.
 > 1 S: figure 3 "advising bank (India)" [F2]
@@ -128,7 +128,7 @@ N026 · Now, what if she doesn't trust the issuing bank, or its country? She ask
 > 1 S: a second promise badge pinned on figure 3 [F9]
 
 N027 · The confirming bank's promise is in addition to the issuing bank's. Two banks now promise her. And if it negotiates, it's without recourse: it can't claim the money back from her.
-> 1 C: card "confirming bank: added at the issuing bank's request (Arts. 2, 8) · definite undertaking in addition · bound from confirmation · negotiates without recourse" [F9]
+> 1 C: card "confirming bank: on the issuing bank's request (Arts. 2, 8) · promise in addition · negotiates without recourse" [F9]
 
 N027a · And if the Indian bank won't confirm? It tells the issuing bank at once. It may still advise the L-C, without its promise.
 > 1 N: "unwilling to confirm → inform the issuing bank · may advise without confirming" [F9]
@@ -172,16 +172,19 @@ N037 · Chapter three. First, from chapter two. Who must agree to amend an L-C?
 > 1 S: chapter title "3 · How she gets paid" · H: 3 s
 
 N038 · Issuing bank, confirming bank, and beneficiary. Now a quick refresher from JAIIB. A bill of exchange, or draft, is a written order to pay.
-> 1 N: "issuing + confirming + beneficiary ✓" · 2 C: card "bill of exchange = draft · at sight = paid when shown · usance = paid later, at maturity"
+> 1 N: "issuing + confirming + beneficiary ✓" · 2 C: card "bill of exchange = draft"
 
 N038a · At sight, it's paid when shown. Usance means paid later, on its due date, the maturity. Every L-C must say which of four ways it pays.
-> 1 S: four tiles "sight · acceptance · deferred payment · negotiation" [F7]
+> 1 N: "at sight = paid when shown · usance = paid later, at maturity" · 2 S: four tiles "sight · acceptance · deferred payment · negotiation" [F7]
 
 N039 · Sight: paid when compliant documents are presented. Acceptance: the bank signs her draft, promising to pay at maturity. That's accepting it.
 > 1 S: tiles fill "sight: pay on presentation" · "acceptance: accept a draft, pay at maturity" [F4]
 
 N040 · Deferred payment: also paid later, but with no draft. Just the bank's promise to pay on a date. Many mix these two up.
 > 1 C: trap card "acceptance = with a draft · deferred payment = no draft" [F4]
+
+N040b · Paying in any of these first three ways, the rules call honour.
+> 1 N: "honour = sight · deferred payment · acceptance" [F4]
 
 N040a · One rule on drafts. An L-C can't ask for a draft drawn on the applicant. Drafts go on a bank.
 > 1 C: trap card "draft drawn on the applicant ✗ (Art. 6c)" [F7]
@@ -192,8 +195,11 @@ N041 · Negotiation: a bank buys the documents and pays early. Restricted, if on
 N041a · Pause check for chapter three. Paid later, but with no draft?
 > 1 S: card "later, no draft → ?" · H: 3 s
 
-N041b · Deferred payment. [seriously] If you remember one thing from chapter three: acceptance has a draft; deferred payment has none.
-> 1 N: "deferred payment ✓" · 2 S: finished parts dim to grey
+N041b · Deferred payment. Two, the twist. Can an L-C ask for a draft drawn on the buyer?
+> 1 N: "deferred payment ✓" · H: 3 s
+
+N041c · No. Drafts go on a bank. [seriously] If you remember one thing from chapter three: acceptance has a draft; deferred payment has none.
+> 1 N: "drawn on a bank ✓" · 2 S: finished parts dim to grey
 
 ## Chapter 4 · Special types, by story
 
@@ -212,17 +218,20 @@ N043 · She needs cash to buy cotton before she ships. Can the L-C help?
 N043a · Yes. A red clause lets the bank advance her money before shipment. If that advance is secured by goods warehoused in the bank's name, it's a green clause.
 > 1 C: card "red = advance before shipment · green = advance against goods warehoused in the bank's name" [F17]
 
-N045 · Who carries the risk if she takes the red-clause advance and never ships? The issuing bank, and so the buyer who asked for the clause.
+N045 · Who carries the risk if she takes the red-clause advance and never ships? Think.
+> H: 3 s
+
+N045a · The issuing bank, and so the buyer who asked for the clause.
 > 1 N: "red clause risk → issuing bank → applicant" [F17]
 
 N046 · Now a trader in Mumbai. He buys from a mill in Coimbatore and sells to Dubai. He has an L-C from Dubai. How does the mill get paid?
 > 1 S: story card "mill (Coimbatore) → trader (Mumbai) → buyer (Dubai)" · H: 3 s
 
-N047 · Two answers. If the Dubai L-C says "transferable", the trader passes part of it to the mill. He's the first beneficiary; the mill, the second.
-> 1 C: card "transferable: must say 'transferable' · bank transfers only if it consents · transferred once" [F14]
+N047 · Two answers. If the Dubai L-C says "transferable", the trader asks his bank to pass part of it to the mill. He's the first beneficiary; the mill, the second.
+> 1 C: card "transferable: must say 'transferable' · bank transfers only if it consents" [F14]
 
-N047a · It can be transferred only once. To more than one mill? Only if the L-C allows partial shipments.
-> 1 N: "more than one second beneficiary → only if partial drawings or shipments allowed" [F14]
+N047a · It can be transferred only once. To more than one mill? Only if the L-C allows partial drawings or shipments.
+> 1 N: "transferred once" · 2 N: "more than one second beneficiary → only if partial drawings or shipments allowed" [F14]
 
 N047b · The transfer may cut the amount, the unit price and the dates. Only the insurance percentage may go up.
 > 1 C: card "transfer may reduce: amount, unit price, expiry, presentation period, last shipment date · may increase: insurance %" [F14]
@@ -243,7 +252,7 @@ N051 · Many older notes list special R-B-I conditions for import standbys. Not 
 > 1 C: trap card "old RBI list of import-SBLC conditions ✗ (FEM (Guarantees) Regs 2026)" [F21]
 
 N051a · The deal behind it must be allowed under FEMA. And the issuing bank reports it every quarter, in Form G-R-N.
-> 1 N: "underlying not prohibited · reported quarterly, Form GRN" [F21]
+> 1 N: "underlying not prohibited · reported quarterly by the issuing bank, Form GRN" [F21]
 
 N052 · Pause check for chapter four. One. An advance before shipment?
 > 1 S: card "advance before shipment → ?" · H: 3 s
@@ -262,14 +271,14 @@ N055 · Back-to-back. [seriously] If you remember one thing from chapter four: r
 N056 · Chapter five. First, from chapter four. Transferable: how many times?
 > 1 S: chapter title "5 · What can go wrong" · H: 3 s
 
-N057 · Once. Now, the risks. The biggest for an exporter: documents that don't comply. Then the bank may refuse to pay. She can correct them before expiry, or the buyer may waive.
-> 1 S: risk card, row 1 "documents don't comply → bank may refuse · re-present before expiry, or buyer waives (exporter's risk)" [F4]
+N057 · Once. Now, the risks. The biggest for an exporter: documents that don't comply. Then the bank may refuse to pay. She can correct them before expiry. Or the issuing bank may ask the buyer to waive them.
+> 1 S: risk card, row 1 "documents don't comply → bank may refuse · re-present before expiry, or issuing bank seeks the buyer's waiver (exporter's risk)" [F4]
 
 N058 · Second, the issuing bank or its country may fail, or block payments. That's what confirmation covers.
 > 1 S: row 2 "issuing bank / country risk → exporter's, unless confirmed"
 
-N059 · Many of you think: the goods were bad, so the buyer can always stop payment. No. Courts stop it only for clear fraud the bank knows of.
-> 1 S: row 3 "fraud: a narrow exception to independence (case law)" [F22]
+N059 · Many of you think: the goods were bad, so the buyer can always stop payment. No. Courts stop it only in rare cases: clear fraud the bank knows of, or harm that can't be undone. That's the fraud exception.
+> 1 S: row 3 "fraud exception: narrow (case law) · until shown, applicant and issuing bank bear it" [F22] · 2 N: "legal risk: local law vs UCP → A10"
 
 N060 · Fourth, a red-clause advance that is never repaid. The issuing bank, and its buyer, bear that.
 > 1 S: row 4 "red-clause advance not repaid → issuing bank / applicant" [F17] · 2 N: "details in A10's case"
@@ -277,8 +286,11 @@ N060 · Fourth, a red-clause advance that is never repaid. The issuing bank, and
 N060a · Pause check for chapter five. Which risk does confirmation cover?
 > 1 S: card "confirmation covers?" · H: 3 s
 
-N061 · Issuing bank and country risk. [seriously] If you remember one thing from chapter five: an L-C pays on correct paper. Get the documents right.
-> 1 N: "issuing bank / country ✓" · 2 S: the risk card; finished parts dim to grey
+N061 · Issuing bank and country risk. Two, the twist. The goods are poor, the documents comply, no fraud. Can the buyer stop payment?
+> 1 N: "issuing bank / country ✓" · H: 3 s
+
+N061a · No. Documents, not goods. [seriously] If you remember one thing from chapter five: an L-C pays on correct paper. Get the documents right.
+> 1 N: "documents, not goods ✓" · 2 S: the risk card; finished parts dim to grey
 
 ## Close
 
