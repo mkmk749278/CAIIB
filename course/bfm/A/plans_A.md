@@ -165,6 +165,8 @@ course plan is not renumbered here; the owner decides the splits.
   trap) · (5) RTGS credit within a set time and compensation for delay (ch2) · (6) a three-bank Nostro/Vostro/Loro
   case (practice) · (7, reg.) SRVA widening of 2026 (an AD's own overseas branch or a non-resident bank; an extra
   current account for these settlements; use for all permissible transactions: date to verify) (ch4). **7 additions.**
+  (2026-11-21, public strategy-video check) (8) which correspondent services need an account (Nostro/Vostro)
+  and which run on a SWIFT RMA alone, with no account (ch1; asked as "which needs an account relationship").
 - **Watch**: ~14 min with the table; if over, the full table goes to the PDF and the video shows four rows.
 - **Facts to verify**: SWIFT message types (MT103, MT700/701/707, MT202) and ISO 20022 status; swift.com (ownership);
   The Clearing House (CHIPS); Federal Reserve (Fedwire); Bank of England (CHAPS settlement model); ECB (T2 after the
@@ -539,7 +541,8 @@ course plan is not renumbered here; the owner decides the splits.
 - **JAIIB prerequisite**: recourse vs non-recourse finance; bills of exchange (JAIIB PPB).
 - **v3 additions (depth checklist)**: (1) Gold Card eligibility, features and processing timelines as one card
   (standby percentage: the classes disagree, verify; confirm the scheme still exists) · (2) the full factoring vs
-  forfaiting table · (3) forfaiting charges: commitment fee (not refunded), discount. **3 additions** (plus 3 moved in
+  forfaiting table · (3) forfaiting charges: commitment fee (not refunded), discount. **3 additions** (2026-11-21, public strategy-video
+  check: (4) the factoring study group by name, asked Dec 2023; verify the name and year in RBI's own text) (plus 3 moved in
   from A11, counted there).
 - **Facts to verify**: Factoring Regulation Act 2011; RBI directions on factoring and TReDS; RBI circular permitting
   forfaiting by ADs; RBI Gold Card Scheme for Exporters (2004 and its place in the current export credit directions);
@@ -635,7 +638,9 @@ course plan is not renumbered here; the owner decides the splits.
   purpose code · (8) designated branch and the relationship rule · (9) no bank credit for LRS · (10) clubbing with the
   co-ownership condition for property · (11) money brought back does not restore the limit · (12) gift rules (relative
   as defined; no resident-to-resident gift abroad) · (13) card spends abroad (whether they count at the cut-off: verify)
-  · (14) TCS: not on trade or company payments; no-PAN rate; overseas tour packages; dated-question trap. Into
+  · (14) TCS: not on trade or company payments; no-PAN rate; overseas tour packages; dated-question trap. (2026-11-21)
+  trap card: **Schedule I is the prohibited list**, II needs Government approval, III is within LRS (a public class
+  said Schedule I = permitted; check the FEM (CAT) Rules 2000 text). Into
   **A16b**: (15) a card of FEMA ss. 4, 6, 10(6), 11, 13 with the end-use declaration · (16) LRS to IFSC (account,
   permitted investments, idle-funds rule) · (17) loans to NRI/PIO close relatives (the classes disagree: minimum or
   maximum period; verify) · (18) ODI by resident individuals in outline · (19) daily reporting by ADs with nil reports,
