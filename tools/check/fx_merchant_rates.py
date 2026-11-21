@@ -62,6 +62,8 @@ if __name__ == "__main__":
     check("A1 multiplier x1.0015 on TT selling", D(str(calc12(calc12(85.42*1.001)*1.0015))), bs)
     wrong = q4(D("85.42") * D("1.0025"))
     print(f"Trap: both margins on the ask -> {wrong} (must differ from {bs})"); assert wrong != bs
+    wrong2 = check("Trap 2: bill margin only on the ask (85.42 +0.15%)", way1_sell(ask, 0.15), way2_sell(ask, 0.15))
+    assert str(wrong2) == "85.5481" and wrong2 != bs
     print(f"Stakes: father {(D(18000)*(tts-ttb)).quantize(D('0.01'))}, exporter {(D(40000)*(ttb-bb)).quantize(D('0.01'))}")
     # spread the customer pays on a round trip (buy then sell back) per USD
     print(f"\nTT round trip spread per USD: {tts - ttb}  (interbank spread {D(str(ask)) - D(str(bid))})")

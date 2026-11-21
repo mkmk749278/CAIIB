@@ -1,0 +1,150 @@
+<title>A1 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A1 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>Say: FEDAI "fed-eye", Nostro "noss-tro". "Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A1/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · Which side of the counter? + Chapter 2 · The rate ladder + Chapter 3 · Which rate for which deal (N001–N074)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N074", "text": "[warmly] Hello, and welcome back. Last class, I left you with one question. At a forex counter, is the bank buying, or selling? Hold your answer. By the end of chapter one, you'll never get it wrong again. And this one matters. Forex rate sums came up in all seven recent exams we checked. Picture a forex counter in a busy branch. Monday morning. The board shows four dollar rates. Two customers walk in. A father sending eighteen thousand dollars for his daughter's fees. And an exporter with a bill for forty thousand dollars. Easy one first. The exporter's dollars. Coming into the bank, or going out? In. Good. Keep that word, in. Now the harder one. Here's my question. The father. Does he get the higher rate on the board, or the lower one? Lock your answer. Chapter one. Many of you are thinking: the father is buying dollars, so he pays the bank's buying rate. It sounds logical. But it's wrong. And here's why. The rate on that board is not the customer's price. It is the bank's price. Buying and selling are always from the bank's side. So ask one thing only. Is the foreign currency coming into the bank, or going out? Coming in, the bank buys it. Going out, the bank sells it. In means buy. Out means sell. Now, which number is which? Think of a money-changer. He buys low and sells high. The bank is the same. Only here, the margin is small, and set by the bank. From last class. How does India quote the dollar? Directly. So many rupees for one dollar. The bank pays fewer rupees when it buys, and takes more when it sells. So buying is the lower number. Back to the father. His dollars are leaving the bank, going to the university. Out. So the bank sells. He pays the higher rate. And the exporter? His bill brings dollars in. In. So the bank buys. He gets the lower rate. If you said \"buying rate\" for the father, you were standing on the customer's side. Come round to the bank's side, and it's easy. Pause check. Three quick ones. Answer each before I do. One. A son abroad sends two thousand five hundred dollars home to his mother. Bank buying, or selling? Buying. The dollars come in. Two. A student pays her foreign college fee by wire. Buying or selling? Selling. The dollars go out. Three, the twist. An importer wants dollars, so many of you think \"importer buys\". Which side is the bank on? Selling. The importer's dollars go out of the bank. Always the bank's side, never the customer's. [seriously] If you remember one thing from chapter one: in means the bank buys, out means the bank sells. And buying is always the lower number. Chapter two. First, from chapter one. An exporter's dollars come in. Is the bank buying or selling? And is that the lower number, or the higher? Buying, and the lower number. Good. But the board had four rates, not two. So which buying rate? Start with where prices come from. Last class: banks dealing with each other. Which market is that? The interbank market. Today, say, eighty-five point four zero, eighty-five point four two. The lower number is the bid. The price at which a bank buys. The higher number is the ask, or offer. The price at which it sells. The gap between them is the spread. Here, just two paise. Now, your counter is the merchant market, bank with customer. So the bank adds its margin. Selling rates go up from the ask. Buying rates come down from the bid. How big is the margin? Each bank decides its own. FEDAI doesn't fix it. In an exam sum, the margin is always given. Which rung for which deal? Watch two things. The rupees at your counter, and the dollars in the bank's account abroad, the Nostro. When both move at the same time, we use the rungs nearest the market. The T-T rates. T-T means telegraphic transfer: money sent by wire, at once. T-T buying sits just below the bid. T-T selling, just above the ask. When the bank pays first, or handles documents, it goes one rung further out. The bill rates. Bill buying: the bank pays the exporter today, but his dollars reach the Nostro weeks later. Bill selling: the bank handles the importer's documents. The interest for the waiting days is charged on top, separately. That's lesson A-twelve. So the ladder, top to bottom. Bill selling. T-T selling. The market. T-T buying. Bill buying. Say it with me once. Now say it back, top to bottom, without looking. Then tell me: which rate is the very highest? Bill selling, at the top. And at the bottom, bill buying. The bank pays first, and carries the bill until the dollars arrive. So it sits furthest out on the buying side. Now let's build the board ourselves. Calculators out. The four margins are on the screen. We'll take them one at a time. T-T selling. The ask, plus point one percent. Plus point one percent means times one point zero zero one. Press eighty-five point four two, times one point zero zero one, equals. Eighty-five point five zero five four two. Rounded to four decimals, eighty-five point five zero five four. T-T buying. The bid, less point zero five percent. Less means take it from one: times point nine nine nine five. Eighty-five point four zero, times point nine nine nine five, equals. Eighty-five point three five seven three. Your turn. Bill buying is the bid, less point one five percent. What do you multiply by? Pause, press the keys, then come back. Eighty-five point four zero, times point nine nine eight five. Eighty-five point two seven one nine. Last one, and here people slip. Bill selling, another point one five percent. Many of you will add it to the ask. But in exam sums, it goes on top of T-T selling, unless the question says otherwise. So, the full T-T selling figure, not the rounded one. Eighty-five point five zero five four two, times one point zero zero one five. Eighty-five point six three three seven. If you got eighty-five point five four eight one, you added it to the ask. Look. The same four rates we saw on the board at the start. And one tip. Use the multiplier, not the percent key. It works the same on every basic calculator. Pause check for chapter two. Three quick ones. One. In \"eighty-five forty, eighty-five forty-two\", which is the bid? Eighty-five forty, the lower one. The bank buys there. Two. T-T rates, or bill rates: which sit closer to the market? T-T rates. Money moves at the same time, nothing to wait for. Three, the twist. Who fixes the bank's margin: FEDAI, R-B-I, or the bank? The bank itself. FEDAI fixes which rate to use. Not how big the margin is. [seriously] If you remember one thing from chapter two: T-T rates sit next to the market, bill rates one rung further out. Chapter three. First, from chapter two. Bill selling. Is its margin added to the ask, or to T-T selling? To T-T selling. Good. FEDAI's rules tell us which rung each deal uses. I give the deal, you say the rate, before I do. One. A remittance from abroad, paid out in rupees. T-T buying. The dollars are already in the Nostro. Two. The father's fee goes out by wire. T-T selling. Three. The bank buys, discounts or negotiates an exporter's bill the day he brings it. Bill buying. The bank pays now and waits. Four, a little tricky. An export bill is sent on collection. The bank pays the exporter only after the dollars reach its Nostro. Many of you said bill buying. But the bank pays only once the money has arrived. Nothing to wait for. So, T-T buying. Five. An importer pays his import bill. He has no forward contract. Bill selling. And one rule above all five. If the customer has already booked a contract with the bank, a forward contract, that contract rate applies, not the board. Now a question that splits the class. The bank bought an export bill. On the due date, it isn't paid. The bank converts the unpaid dollars into a rupee debt on the exporter. Which rate? Some of you are thinking bill buying, since it was a bill. Others, bill selling. Both are wrong. It's T-T selling. Think it through. The bank paid him rupees for dollars that never came. Now he owes the bank those dollars. In effect, the bank sells them to him. No documents move now. It's a plain conversion. So, T-T selling. Turning an unpaid foreign currency bill into a rupee debt like this is called crystallisation. When to do it is the bank's own stated policy. And if his dollars arrive later after all, the bank converts them at T-T buying, or at his contract rate. The same flip happens when a forward contract is cancelled on or after its due date. A purchase contract, where the bank agreed to buy, is cancelled at T-T selling. A sale contract, at T-T buying. Cancelled before the due date? Then the forward T-T rate. We'll do those sums in lesson A-zero-six. So here's a memory hook. Undo a deal the bank already did, and you go to the other side of the counter, on the T-T rung. Now test that hook. The bank paid an importer's supplier under a letter of credit. The importer doesn't pay on time, and the bank crystallises it. Does the side flip? No. Nothing is undone. The bank sold dollars to pay the supplier, and the importer still owes for them. So, the same rate as retirement: bill selling, or his contract rate. Pause check for chapter three. Three quick ones. One. An importer sends an advance payment for goods, by wire. Which rate? T-T selling. It's a remittance going out, not an import bill. Two, the twist. A customer cancels a forward sale contract on its due date. Which rate? T-T buying. Undoing a sale, so the bank buys back. Three. An exporter has a forward contract at eighty-five point three. The bank buys his bill today. Which rate? His contract rate, eighty-five point three. A booked contract beats the board. [seriously] If you remember one thing from chapter three: undo a deal, flip sides on the T-T rung. An unpaid import bill doesn't flip."}]}, {"file": "part_2.mp3", "section": "Close (N075–N083)", "turns": [{"speaker": "Teacher", "first": "N075", "last": "N083", "text": "Last stretch. Back to our two customers. The father's eighteen thousand dollars go out. Which rate, and how many rupees? Calculators. T-T selling. Eighteen thousand times eighty-five point five zero five four. Fifteen lakh, thirty-nine thousand, ninety-seven rupees, twenty paise. The exporter's forty thousand dollar bill, bought today. Which rate? Bill buying. Thirty-four lakh, ten thousand, eight hundred seventy-six rupees, before interest. Now the map, from memory. Say each answer before I show it. Step one. What do you ask first, at any counter? Is the currency coming in, or going out? In, the bank buys. Out, it sells. Step two. T-T or bill: how do you choose? Money moving together, T-T. Bank paying first or handling documents, bill. Step three. What happens when a deal is undone? Flip sides, on the T-T rung. Except an unpaid import bill, which doesn't flip. That's the whole lesson. You can now pick the side, build the four rates, and name the rate for any deal, even when it goes wrong. If one step made you pause, rewatch that chapter. Small homework. Tonight, draw the ladder from memory, five rungs, top to bottom. Two minutes. Next class: why does money moving together get the better rate? We follow the dollars into the Nostro. [warmly] Well done today. Rest a little, and keep that counter in your head. I'll see you soon."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

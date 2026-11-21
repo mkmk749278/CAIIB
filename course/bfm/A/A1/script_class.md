@@ -1,6 +1,6 @@
-# A01 · "Which side of the counter?" · CLASS EDITION (script c1, with cue sheet)
+# A01 · "Which side of the counter?" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-21: all High and Medium findings of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-21. The standard style (`course/spec/lesson_spec.md`, "Standard style") applied to the
+- **Status**: **c3 locked, 2026-11-21**: re-review `review_c2.md` (all c1 Highs/Mediums fixed; its two new Mediums, N034 and N072, and Lows applied; no further re-review needed). c2, 2026-11-21: all High and Medium findings of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-21. The standard style (`course/spec/lesson_spec.md`, "Standard style") applied to the
   content of `script.md` v6. Same deals, numbers and rules; tighter wording; a question per idea; a pause check per
   chapter. Chapter 1 is the owner-shown sample (`script_class_sample.md`). `script.md` v6 is history once c1 is
   reviewed to ADOPT.
@@ -15,7 +15,7 @@
 - **Greeting / goodbye** (registered in `course/bfm/greetings.md` for A01): greeting "Hello, and welcome back. Last
   class, I left you with one question…" (answers A00's closing question word for word); goodbye "Well done today.
   Rest a little, and keep that counter in your head. I'll see you soon."
-- **Holds**: "H: n s" in the cue sheet; every question to the learner holds at least 3 s; the calculator turn holds 8 s.
+- **Holds**: "H: n s" in the cue sheet; every question to the learner holds at least 3 s; calculator turns hold 8–10 s.
 - **Say it right**: numbers in words; "T-T" as two letters; "Nostro" as written; "FEDAI" as "fed-eye".
 - **Length**: about 1,975 spoken words and 115 s of holds: about 16 minutes at 140 words a minute, 15 at 150 (upper edge; owner: longer lessons are fine). Chapters: 1 (~4 min) · 2 (~5 min) · 3 (~4 min) ·
   close (~1.5 min).
@@ -25,6 +25,7 @@
 ---
 
 ## Warm-up
+
 N001 · [warmly] Hello, and welcome back. Last class, I left you with one question. At a forex counter, is the bank buying, or selling?
 > 0 C: rule-version card "FEDAI Rules, 10th edition (updated to 20 Aug 2026), as at 31 December 2026" · 1 S: notebook page; title "A01 · Which side of the counter?" · 2 N: the question in the margin "bank: buying or selling?"
 
@@ -32,6 +33,7 @@ N002 · Hold your answer. By the end of chapter one, you'll never get it wrong a
 > 1 G: the margin question pulses once
 
 ## Opening
+
 N003 · Picture a forex counter in a busy branch. Monday morning. The board shows four dollar rates.
 > 1 S: the counter from above; a rate board with four USD rates (illustrative, `numericals.md`): 85.6337 · 85.5054 · 85.3573 · 85.2719
 
@@ -48,6 +50,7 @@ N005 · Here's my question. The father. Does he get the higher rate on the board
 > 1 B: circle the top and bottom rates · H: 3 s
 
 ## Chapter 1 · Which side of the counter?
+
 N006 · Chapter one. Many of you are thinking: the father is buying dollars, so he pays the bank's buying rate.
 > 1 S: chapter title "1 · Which side of the counter?" · 2 N: thought bubble "father buys → buying rate?"
 
@@ -95,6 +98,7 @@ N020 · [seriously] If you remember one thing from chapter one: in means the ban
 
 
 ## Chapter 2 · The rate ladder
+
 N021 · Chapter two. First, from chapter one. An exporter's dollars come in. Is the bank buying or selling? And is that the lower number, or the higher?
 > 1 S: chapter title "2 · The rate ladder" · 2 S: exporter card, arrow IN · H: 3 s
 
@@ -137,7 +141,7 @@ N032 · So the ladder, top to bottom. Bill selling. T-T selling. The market. T-T
 N033 · Now say it back, top to bottom, without looking. Then tell me: which rate is the very highest?
 > 1 S: the ladder hides its labels · H: 5 s
 
-N034 · Bill selling, at the top. And at the bottom, bill buying. The bank pays first, and carries the bill until the dollars arrive. So it keeps the widest margin.
+N034 · Bill selling, at the top. And at the bottom, bill buying. The bank pays first, and carries the bill until the dollars arrive. So it sits furthest out on the buying side.
 > 1 N: top rung "bill selling" ✓ · 2 N: bottom rung "bill buying"
 
 N035 · Now let's build the board ourselves. Calculators out. The four margins are on the screen. We'll take them one at a time.
@@ -183,6 +187,7 @@ N048 · [seriously] If you remember one thing from chapter two: T-T rates sit ne
 > 1 S: the ladder, TT rungs glowing, bill rungs outside; finished parts dim to grey
 
 ## Chapter 3 · Which rate for which deal
+
 N049 · Chapter three. First, from chapter two. Bill selling. Is its margin added to the ask, or to T-T selling?
 > 1 S: chapter title "3 · Which rate for which deal" · H: 3 s
 
@@ -237,7 +242,7 @@ N065 · No documents move now. It's a plain conversion. So, T-T selling. Turning
 N066 · And if his dollars arrive later after all, the bank converts them at T-T buying, or at his contract rate.
 > 1 N: "proceeds later → TT buying" [F19]
 
-N067 · The same flip happens when a forward contract is cancelled on its due date. A purchase contract, where the bank agreed to buy, is cancelled at T-T selling. A sale contract, at T-T buying.
+N067 · The same flip happens when a forward contract is cancelled on or after its due date. A purchase contract, where the bank agreed to buy, is cancelled at T-T selling. A sale contract, at T-T buying.
 > 1 S: card "cancel on due date: purchase → TT selling · sale → TT buying" [F22] [F23]
 
 N067a · Cancelled before the due date? Then the forward T-T rate. We'll do those sums in lesson A-zero-six.
@@ -255,7 +260,7 @@ N070 · No. Nothing is undone. The bank sold dollars to pay the supplier, and th
 N071 · Pause check for chapter three. Three quick ones. One. An importer sends an advance payment for goods, by wire. Which rate?
 > 1 S: card "importer's advance by wire" · H: 3 s
 
-N072 · T-T selling. It's a remittance going out, not an import bill. Two, the twist. A customer cancels a forward sale contract. Which rate?
+N072 · T-T selling. It's a remittance going out, not an import bill. Two, the twist. A customer cancels a forward sale contract on its due date. Which rate?
 > 1 N: "outward remittance → TT selling ✓" [F14] · H: 3 s
 
 N073 · T-T buying. Undoing a sale, so the bank buys back. Three. An exporter has a forward contract at eighty-five point three. The bank buys his bill today. Which rate?
@@ -268,6 +273,7 @@ N074 · [seriously] If you remember one thing from chapter three: undo a deal, f
 > 1 S: the deal list complete beside the ladder; finished parts dim to grey · Music bed in
 
 ## Close
+
 N075 · Last stretch. Back to our two customers. The father's eighteen thousand dollars go out. Which rate, and how many rupees? Calculators.
 > 1 S: father's card "$18,000 out" · H: 3 s after "Which rate" · H: 8 s after "Calculators"
 
