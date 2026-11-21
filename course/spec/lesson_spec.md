@@ -13,7 +13,7 @@ built from them later; the text files are the master.
 | `voice.md` | the voice text in parts of about 9,000 characters (never over 10,000), cut between lines, a chapter break preferred (owner, 2026-11-20), built by `tools/video/voice_blocks.py --target 9000 --max 10000` from the locked script, with a phone page of Copy buttons | built only after the script is locked |
 
 ## The shape of every lesson (about 12–15 minutes)
-0. **Warm-up** (about 1–1.5 minutes; PLAYBOOK §5b): the AI-voice disclosure card and the rule-version card, a greeting
+0. **Warm-up** (about 1–1.5 minutes; PLAYBOOK §5b): the rule-version card (no AI-voice disclosure, owner 2026-11-21), a greeting
    that no other video uses, connect with the class ("long day?", notifications on silent, calculator nearby), why
    today's topic matters with a true number from the Importance Map, and a promise ("no heavy theory, stay with me").
    Online class: no physical-room cues ("come in", "hands up").
@@ -30,6 +30,19 @@ built from them later; the text files are the master.
 - Every lesson states the **rule version** it teaches ("FEDAI Rules as at 31 December 2026", "RBI Master Direction as
   updated to …") in the opening card and on its PDF page.
 - Illustrative rates, names and places are labelled "illustrative" on screen; we never present them as real data.
+
+## Standard style (owner, 2026-11-21; model: `course/bfm/A/A1/script_class_sample.md`)
+The teaching moves of `research/pedagogy/teaching_method.md`, kept tight:
+- Lesson 12–15 minutes; chapters 3–5 minutes. About 1,600–2,000 spoken words plus holds.
+- **One question to the learner per idea** (asked, a hold of at least 3 s, then the answer), not one per sentence.
+- The common wrong belief is said aloud ("Many of you are thinking…") and broken in the next line.
+- **One pause check per chapter** (2–3 quick questions, easy first, one twist) and a **"one thing to remember"** line.
+- Each chapter (after the first) opens with one recall question from an earlier chapter.
+- At most **one light line per chapter**; "write this down" at most once per lesson; voice tags sparing.
+- Plain words: one new term at a time, said with its meaning; no line over 25 words.
+- Close: a mixed check, the map filled from memory, a small homework, a question that leads into the next lesson.
+- Drills (N) and case walk-throughs (C) keep the moves but spend the time on sums and steps.
+The owner judges this style on the first built video; any change is then a revision pass over all scripts.
 
 ## Voice and words (full rules: PLAYBOOK §5b)
 - One AI teacher voice, an online class: warm-up, check-ins at each chapter break, the teacher says the learners'
