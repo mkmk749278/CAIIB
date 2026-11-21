@@ -1,4 +1,4 @@
-# A11 · Practice (author's draft c1, 2026-11-21; reviewed with the script)
+# A11 · Practice (c2, 2026-11-21; c1 review fixes applied)
 
 Our own items. Rules as at 31 Dec 2026: FEM (Export and Import of Goods and Services) Regulations, 2026 ("R26").
 Names, amounts and dates illustrative. Reasons cite `research/bfm/facts/A5.1-A5.5_A11.md` [F#].
@@ -7,8 +7,8 @@ Names, amounts and dates illustrative. Reasons cite `research/bfm/facts/A5.1-A5.
 export value must be realised by:
 (a) 20 October 2027 (b) **20 January 2028** (c) 20 April 2028 (d) 20 July 2028
 *Reason: INR-invoiced or INR-settled exports: 12 months from shipment (R26 reg 5(1), first proviso) [F25]. (a) is the
-9-month rule for foreign-currency invoices; (c) is the never-in-force 15-month text; (d) is the never-in-force
-18-month INR text [F32].*
+9-month rule for foreign-currency invoices; (c) is 15 months, the 2015 rules' period from 14 Nov 2025 to 4 Jun 2026; (d)
+is R26's first 18-month INR text, changed before it came into force [F32].*
 
 **P2.** Goods are shipped to a warehouse in Dubai on 10 February 2027 and sold from it on 5 May 2027. Realisation is
 due within 9 months from:
@@ -23,7 +23,7 @@ due within 9 months from:
 (b) the AD, up to 6 months at a time
 (c) **the AD, on the exporter's reasoned request, with no cap set in the regulations**
 (d) DGFT, up to one year
-*Reason: R26 reg 5(1) second proviso; the AD's Board policy covers extensions [F27]. (b) is the pre-1 Oct 2026 rule
+*Reason: R26 reg 5(1) second proviso; the AD's internal policy covers extensions [F27]. (b) is the pre-1 Oct 2026 rule
 [F28].*
 
 **P4.** A company exports IT services and receives **₹8 lakh** for one service. Which is correct?
@@ -64,3 +64,20 @@ set-off of the export receivable against the import payable:
 (c) never; each leg must be settled gross
 (d) only with RBI approval
 *Reason: R26 reg 7 [F43]; the same-calendar-year and goods-vs-services conditions were the old Master Direction's [F44].*
+
+**P9.** A freelance graphic designer, a **resident individual**, receives **₹25 lakh** from a client abroad for design
+work. Which is correct at the cut-off?
+(a) she must file an EDF with the AD, as the amount is above ₹10 lakh
+(b) **she is deemed to have filed the EDF when she gives the AD the payment details, whatever the amount**
+(c) she must file a SOFTEX form
+(d) she needs RBI approval above ₹10 lakh
+*Reason: Second Amendment (notified 2 Nov 2026, effective 1 Oct 2026): resident individuals, any amount [F9].*
+
+**P10.** A status holder's export bill of USD 40,000 has been partly unrealised for a long time after a quality
+dispute. Under the rules at 31 Dec 2026, the lower value can be settled by:
+(a) self write-off up to 10% of last year's realisation
+(b) AD write-off up to 10%, then RBI
+(c) **a reduction in the export value allowed by the AD, on the exporter's reasoned request**
+(d) only an RBI approval
+*Reason: R26 reg 6 replaces the old write-off; (a) and (b) are the pre-1 Oct 2026 limits [F41, F42]. If every option
+were an old figure, the question would be on the old rules: then self 5%, status holder 10%, AD 10%.*
