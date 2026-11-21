@@ -62,6 +62,22 @@ if __name__ == "__main__":
     check("A1 multiplier x1.0015 on TT selling", D(str(calc12(calc12(85.42*1.001)*1.0015))), bs)
     wrong = q4(D("85.42") * D("1.0025"))
     print(f"Trap: both margins on the ask -> {wrong} (must differ from {bs})"); assert wrong != bs
+    wrong2 = check("Trap 2: bill margin only on the ask (85.42 +0.15%)", way1_sell(ask, 0.15), way2_sell(ask, 0.15))
+    assert str(wrong2) == "85.5481" and wrong2 != bs
     print(f"Stakes: father {(D(18000)*(tts-ttb)).quantize(D('0.01'))}, exporter {(D(40000)*(ttb-bb)).quantize(D('0.01'))}")
     # spread the customer pays on a round trip (buy then sell back) per USD
     print(f"\nTT round trip spread per USD: {tts - ttb}  (interbank spread {D(str(ask)) - D(str(bid))})")
+
+    # A03 drill (course/bfm/A/A03/numericals.md)
+    b3, a3 = 85.60, 85.62
+    t1 = check("A03 S1 TT buying 85.60 less 0.08%", way1_buy(b3, 0.08), way2_buy(b3, 0.08)); assert str(t1) == "85.5315"
+    t2 = check("A03 S1 bill buying 85.60 less 0.15%", way1_buy(b3, 0.15), way2_buy(b3, 0.15)); assert str(t2) == "85.4716"
+    t3 = check("A03 S1 TT selling 85.62 plus 0.12%", way1_sell(a3, 0.12), way2_sell(a3, 0.12)); assert str(t3) == "85.7227"
+    t4 = check("A03 S1 bill selling +0.15% on TT selling", way1_sell(way1_sell(a3, 0.12), 0.15), way2_sell(way2_sell(a3, 0.12), 0.15)); assert str(t4) == "85.8513"
+    e = check("A03 S2 EUR TT buying 99.20 less 0.08%", way1_buy(99.20, 0.08), way2_buy(99.20, 0.08)); assert str(e) == "99.1206"
+    assert (e * 5000).quantize(D("0.01")) == D("495603.00")
+    g = check("A03 S3 GBP bill selling", way1_sell(way1_sell(114.55, 0.12), 0.15), way2_sell(way2_sell(114.55, 0.12), 0.15)); assert str(g) == "114.8595"
+    assert (g * 8000).quantize(D("0.01")) == D("918876.00")
+    assert str(q4(D("114.55") * D("1.0027"))) == "114.8593"
+    assert (t2 * 25000).quantize(D("0.01")) == D("2136790.00")
+    print("A03 rupee amounts: 4,95,603.00 · 9,18,876.00 · 21,36,790.00 OK")

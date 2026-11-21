@@ -487,6 +487,11 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-21: **style judged on video, not text.** Owner, shown a sample chapter: "With the read I can't tell. Once
+  watching the video only I decide how it felt. So first continue to build the full BFM for each video." So every
+  script is written now in one standard style (the A01 sample: teaching method, 12–15 min, one question per idea),
+  and the owner's style verdict comes from the first built video; a change then is a revision pass, which is cheap
+  because the facts, order and sums do not change with the style.
 - 2026-11-21: **all scripts first; no recording, no video until then.** Owner: "before going to the 31 videos, we
   first complete the scripts for all our BFM videos. No audio recording, no video for now. We complete the scripts and
   audio blocks, then we get an idea what actually we are covering." Why: the owner's worry is one thing only: full

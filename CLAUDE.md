@@ -22,6 +22,11 @@ Never a new loose doc.
   done.** Per lesson: fact sheet → script with cue sheet → three independent reviews → fix until ADOPT → voice page
   (`voice_blocks.py`). Then compare the whole written course with the public classes (31 Module A captions, Drive
   `BFM/_downloads/playlist_GdPR6Y/`) and the module exam tests. The A00 builds below are paused. PLAYBOOK §7.
+- **Standard style (owner, 2026-11-21: "with the read I can't tell; only watching a video I decide… so first continue to
+  build the full BFM, each video"):** write every full script now in the style of `course/bfm/A/A1/script_class_sample.md`
+  (the teaching moves, lessons 12–15 min, one question per idea, one pause check per chapter, at most one light line
+  per chapter, plain words; recorded in `course/spec/lesson_spec.md`). The owner judges the style on the first built
+  video after the scripts are done; any change then is a revision pass over the scripts.
 - **Course plan v4 (2026-11-21): 79 videos.** All 17 proposed splits adopted with "b" ids (no renumbering): A11b, A15b,
   A16b, A19c; B04b, B07b, B09b, B11b, B14b; C01b, C02b, C04b, C08b, C09b; D01b, D06b, D07b. Each one's plan is in
   its module's plans file. No "partial" rows left in `coverage.csv`.
@@ -52,8 +57,10 @@ Never a new loose doc.
     ElevenLabs Creator plan** (owner, 2026-11-20: "Already we have one creator plan"); takes go to Drive
     `BFM/A00/voice/part_N.mp3`, then `kaggle_enhance.py from-drive A00`, then the r4 build. First lesson through the
     full layered method; the 00 script's N47 now leads into A00.
-  - Scripts: `course/bfm/00_start/script.md`; **A01 v6 with cue sheet** `A/A1/script.md` (2026-11-20, owner to
-    review); A07 (Incoterms). Greetings and goodbyes used so far: `course/bfm/greetings.md`.
+  - Scripts: `course/bfm/00_start/script.md`; **A01 class edition c3 locked** (2026-11-21, `A/A1/script_class.md`, fact
+    sheet `research/bfm/facts/A1.6-A1.7_A01.md`, reviews c1 ×3 + re-review c2, voice page `A/A1/voice_page_class.html`,
+    2 parts); A07 (Incoterms). **A02 class edition c3 locked** (2026-11-21, `A/A02/`, fact sheet
+    `research/bfm/facts/A3.1-A3.3_A02.md`, voice page 2 parts); **A03 drill c1** in review (`A/A03/`). Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
   `A07_master_1080p.mp4` in Drive `BFM/A07/renders/`.
@@ -82,7 +89,7 @@ Never a new loose doc.
     (3 parts, c5) https://claude.ai/artifact/VNQKFu8nxyVaij52dffmkj; takes go to Drive
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
-  - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) the three reviews of A01 v6, then fact sheet →
+  - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01, A02 done (c3 locked); A03 in review; then A04 onward: fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
