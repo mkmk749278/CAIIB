@@ -11,7 +11,7 @@ further 0.15% on TT selling.
 | TT buying | `85.60 × 0.9992 =` → 85.531520 | **85.5315** |
 | Bill buying | `85.60 × 0.9985 =` → 85.47160 | **85.4716** |
 | TT selling | `85.62 × 1.0012 =` → 85.722744 | **85.7227** |
-| Bill selling | `85.722744 × 1.0015 =` → 85.85132812 | **85.8513** |
+| Bill selling | `85.722744 × 1.0015 =` → 85.851328116 | **85.8513** |
 
 ## Sum 2 (faded): EUR inward remittance
 Interbank EUR/INR **99.20 / 99.24**; TT buying margin 0.08%. A remittance of **EUR 5,000** comes in.
@@ -25,3 +25,12 @@ Rupees `8000 × 114.8595 =` → **₹9,18,876.00**. Trap: `114.55 × 1.0027 =` �
 ## Sum 4 (on your own): USD export bill bought
 Quote and margins of Sum 1. Bill **USD 25,000** bought at sight. Bill buying **85.4716**.
 Rupees `25000 × 85.4716 =` → **₹21,36,790.00** (before transit-period interest, A12).
+
+## Chapter 4: no-options sums (keyed answers)
+| # | Data (illustrative) | Rate | Keys | Answer |
+|---|---|---|---|---|
+| 5 | FCNR(B) USD 30,000 paid in rupees; 85.40 / 85.42; TT buying 0.08% | TT buying (in/out convention) | `85.40 × 0.9992 =` → 85.33168 → 85.3317; `30000 × 85.3317 =` | **₹25,59,951.00** |
+| 6 | Export bill USD 20,000 returned unpaid before crystallisation; Sum 1 quote and margins | TT selling (FEDAI 2.1(d)) | 85.7227 (Sum 1); `20000 × 85.7227 =` | **₹17,14,454.00** (+ interest, foreign charges) |
+| 7 | JPY 5,00,000 outward; JPY/INR 57.40 / 57.45 per 100; TT selling 0.15% | TT selling, per 100 | `57.45 × 1.0015 =` → 57.536175 → 57.5362; `5000 × 57.5362 =` | **₹2,87,681.00** (trap: forgetting ÷100 → ₹2,87,68,100) |
+
+Rounding: rates to 4 decimals, half up (5th decimal ≥ 5 → round up); rupee amounts = amount × the rounded rate, to paise.
