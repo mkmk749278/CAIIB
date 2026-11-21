@@ -487,6 +487,12 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-21: **no AI-voice disclosure in the lessons.** Owner: "Why do we need to disclose that the voice is AI? Why
+  give that feel to students? Remove the AI lines and source lines." The spoken line and the opening card are removed
+  (A00 class edition c4, A00/A07 title cards). Kept: the teacher never claims to be a person, has no name and is never
+  "Sir". Open point for publishing: platforms (YouTube's altered or synthetic content label, India's IT Rules on
+  synthetically generated information) may require a label for AI audio; read the rules in force at launch and, if
+  needed, put it where the platform asks (description or upload setting), not in the lesson.
 - 2026-11-21: **enhanced voice only.** Owner: ElevenLabs paid, blocks up to 10,000 characters for continuous
   narration, upload to Drive, Resemble Enhance, "we use that after enhance only" because the raw Prithvi take hisses.
   Details §5f; guard in `flow_voice.py`.

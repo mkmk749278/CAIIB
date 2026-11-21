@@ -153,7 +153,7 @@ export const TitleCard: React.FC<{code: string; title: string; sub: string; vers
 		<div style={{fontFamily: FT.sans, fontWeight: 700, fontSize: 120, color: P.ink}}>{title}</div>
 		<div style={{fontFamily: FT.hand, fontWeight: 700, fontSize: 72, color: P.soft}}>{sub}</div>
 		<div style={{marginTop: 30, background: '#fff', border: `3px solid ${P.ink}`, borderRadius: 16, padding: '14px 30px', fontFamily: FT.sans, fontWeight: 500, fontSize: 34, color: P.ink}}>{version}</div>
-		<div style={{fontFamily: FT.sans, fontWeight: 500, fontSize: 30, color: P.soft}}>The voice in this lesson is AI-generated · names, ship and amounts are illustrative</div>
+		<div style={{fontFamily: FT.sans, fontWeight: 500, fontSize: 30, color: P.soft}}>Names, ship and amounts are illustrative</div>
 	</div>
 );
 

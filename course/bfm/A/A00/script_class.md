@@ -1,4 +1,4 @@
-# A00 · "The market behind the counter" · CLASS EDITION (script c3, with cue sheet)
+# A00 · "The market behind the counter" · CLASS EDITION (script c4, with cue sheet)
 
 - **Why this file**: owner, 2026-11-21, after watching A00 r3: "narration still not like a class feel; injecting the
   concept into the student's mind is important… do another video with these fixes, then we can understand which is
@@ -9,6 +9,7 @@
   ways, the wrong belief broken, a worked example, a pause check and "the one thing"; value dates get their own
   chapter; a mixed round; the closing map is filled from memory first; the learner answers the opening customer as
   the officer; a "you can now" self-check.
+- **c4 (2026-11-21)**: owner: no AI-voice line and no source line in the lesson; N002 and the disclosure card removed.
 - **c3 (2026-11-21)**: re-review `review_c2.md` ADOPT; its Lows L1, L2, L4–L8 applied.
 - **c2 (2026-11-21)**: all High and Medium findings of the three c1 reviews fixed (`review_c1_expert.md`,
   `review_c1_examiner.md`, `review_c1_beginner.md`; what was done and why not in `review_ack_c1.md`).
@@ -35,10 +36,7 @@ under rules, traps and checks: N017–N041, N068–N093, N110–N122, N154–N16
 ## Warm-up
 
 N001 · [warmly] Hi everyone, good to see you. Welcome to the first real class of Module A.
-> 1 S: notebook page opens; disclosure card "The voice in this lesson is AI-generated." then the rule-version card · 2 N: "Module A · class 1"
-
-N002 · The voice you're hearing is AI-generated, and every rule in this class is checked against its official source.
-> 1 S: small badge "AI voice · rules checked at source"
+> 1 S: notebook page opens; the rule-version card · 2 N: "Module A · class 1"
 
 N003 · Last time we talked about the paper. Today we finally start the subject.
 > 1 N: "last time: the paper → today: the subject"
