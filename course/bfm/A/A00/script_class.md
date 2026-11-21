@@ -9,7 +9,7 @@
   ways, the wrong belief broken, a worked example, a pause check and "the one thing"; value dates get their own
   chapter; a mixed round; the closing map is filled from memory first; the learner answers the opening customer as
   the officer; a "you can now" self-check.
-- **c5 (2026-11-21)**: online-class refinements (owner "Go"): notebook moments (N007, N032, N075a, N137a), one light line per chapter (N027, N046, N077, N104, N150), signposts (N064, N154), sparing voice tags ([curious] ×4, [warmly] ×2, [seriously] on the five "one thing" lines, [chuckles] ×1).
+- **c5 (2026-11-21)**: online-class refinements (owner "Go"): notebook moments (N007, N032, N075a, N137a), one light line per chapter (N027, N046, N077, N104, N150), signposts (N064, N154), sparing voice tags ([curious] ×3, [warmly] ×2, [seriously] on the five "one thing" lines, [chuckles] ×1).
 - **c4 (2026-11-21)**: owner: no AI-voice line and no source line in the lesson; N002 and the disclosure card removed.
 - **c3 (2026-11-21)**: re-review `review_c2.md` ADOPT; its Lows L1, L2, L4–L8 applied.
 - **c2 (2026-11-21)**: all High and Medium findings of the three c1 reviews fixed (`review_c1_expert.md`,
@@ -174,7 +174,7 @@ N044 · Balances. Rupee paper, foreign pay. Drawn abroad, rupee pay. Good. Now, 
 N045 · No. The main market has no building. It's over the counter. O-T-C. Banks and dealers deal with each other directly, mostly on screens.
 > 1 B: red cross over the building · 2 N: "OTC = no exchange in between" [F8] · 3 S: dealer screens linked by lines
 
-N046 · Careful. Over the counter here doesn't mean our branch counter. It just means there's no exchange in the middle. Nobody in Tokyo is queueing at your cash counter.
+N046 · Careful. Over the counter here doesn't mean our branch counter. It just means there's no exchange in the middle. Nobody in Tokyo is queueing at your branch counter.
 > 1 S: a small branch counter with a "not this" tag
 
 N047 · And it follows the sun. The day starts in Sydney and Tokyo, and ends in New York. So on weekdays, somewhere in the world, it's always open.
@@ -512,7 +512,7 @@ N153 · [seriously] If you remember one thing from chapter five: India's rate is
 
 ## Mixed practice
 
-N154 · Last stretch now. Five questions, then the map, and we're done. A mixed round, like the exam mixes them. Five questions. Answer each before I do. One. A rupee draft issued by a bank in Chennai, payable in Mumbai. Foreign exchange?
+N154 · Last stretch now. Five questions, then the map, and we're done. A mixed round, like the exam mixes them. Answer each before I do. One. A rupee draft issued by a bank in Chennai, payable in Mumbai. Foreign exchange?
 > 1 C: practice card "Mixed round · 5" · 2 S: Q1 · H: 4 s
 
 N155 · No. It's Indian currency, drawn and paid in India. It fits none of the three pockets. Two. A deal on Thursday, spot, and Friday is a holiday. Which day?
