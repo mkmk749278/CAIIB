@@ -156,12 +156,16 @@ a large bank; few questions repeat. So content is built in layers, each checked 
   are written: about Rs 15–17k for all of BFM; other papers only after BFM earns. The owner generates each part as
   one take from the phone (voice page from `tools/video/voice_blocks.py`). Tested free fallback: Maya 2 Native,
   voice Vasant, on Kaggle (`tools/voice/`). `ELEVENLABS_API_KEY` in the environment is not a course budget: ask
-  before spending any credits.
+  before spending any credits. **Confirmed 2026-11-21:** paid ElevenLabs takes, voice pages of parts up to 10,000
+  characters (about 9,000) so each part is one continuous take, owner uploads to Drive, Resemble Enhance, and only
+  the enhanced take goes into a lesson.
 
 ## How a lesson video is built (the r4 method, PLAYBOOK §5e)
 ElevenLabs take per part (owner generates from the voice page, drops `part_N.mp3` in Drive `BFM/<video>/voice/`) →
 Resemble Enhance on Kaggle (`tools/voice/kaggle_enhance.py from-drive <video>` → `BFM/<video>/voice_enhanced/`;
-owner, 2026-11-20; it never changes a take's licence, so sold lessons still need Creator-plan takes) →
+owner, 2026-11-20; it never changes a take's licence, so sold lessons still need Creator-plan takes). **Only enhanced
+takes are used, re-generated lines included** (owner, 2026-11-21: the raw ElevenLabs voice, Prithvi, has a hiss that
+tires the ear; enhancement removes it). `flow_voice.py` refuses a raw take (`--raw-ok` only for old tests) →
 `tools/video/flow_voice.py` (continuous voice, planned holds only, re-generated lines
 swapped in) + music bed ducked → `mix.flac` in Drive `BFM/<video>/flow/` → timeline JSON → Remotion composition on
 the shared kit (`video/src/kit/`: notebook page, journey road, rule cards, growing map) with a beat for every
