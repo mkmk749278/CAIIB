@@ -21,7 +21,8 @@ mkdir -p "$OUT" && cd "$OUT" || exit 1
 
 command -v rclone >/dev/null && command -v node >/dev/null && command -v python3 >/dev/null \
   || pkg install -y python nodejs rclone
-python3 -m pip show yt-dlp >/dev/null 2>&1 || python3 -m pip install -q yt-dlp
+# Always the newest yt-dlp: an old one is a common cause of YouTube errors.
+python3 -m pip install -q -U yt-dlp 2>/dev/null || python3 -m pip install -q yt-dlp
 
 if ! rclone listremotes | grep -q "^creator:$"; then
   echo "One-time Google Drive sign-in: a browser opens; choose the account that owns the CAIIB folder and tap Allow."
@@ -29,9 +30,24 @@ if ! rclone listremotes | grep -q "^creator:$"; then
 fi
 REMOTE="creator,root_folder_id=$CAIIB_FOLDER_ID:"
 
+# A playlist URL is expanded into its videos first, so each video is fetched (and retried) on its own with a pause
+# between, instead of one burst (2026-11-21: a whole playlist in one go got 429 at once).
+urls=()
+for u in "$@"; do
+  if [[ "$u" == *list=* ]]; then
+    mapfile -t ids < <(yt-dlp --js-runtimes node --flat-playlist --no-warnings -q --print "%(id)s" "$u")
+    echo "Playlist: ${#ids[@]} videos"
+    for id in "${ids[@]}"; do urls+=("https://youtu.be/$id"); done
+  else urls+=("$u"); fi
+done
+set -- "${urls[@]}"
+[[ $# -ge 1 ]] || { echo "no videos found" >&2; exit 2; }
+
 # YouTube answers "429 Too Many Requests" when captions are asked for quickly (2026-11-20: 9 of 15 failed), so wait
-# between videos and retry a failure once after two minutes. Only the English track ("en", not every "en-*").
-fetch() { yt-dlp --js-runtimes node --skip-download --write-auto-subs --write-subs --sub-langs "en" --sub-format vtt \
+# between videos and retry a failure once after two minutes. Only the ORIGINAL-language track ("<lang>-orig": English
+# for English classes, Hindi for Hindi ones), never YouTube's machine translation into English: the translated track
+# is what YouTube throttles hardest (2026-11-21), and we translate Hindi ourselves in the session.
+fetch() { yt-dlp --js-runtimes node --skip-download --write-auto-subs --write-subs --sub-langs ".*-orig" --sub-format vtt \
             --no-warnings -q --sleep-requests 2 --sleep-subtitles 5 -o "%(id)s.%(ext)s" "$1"; }
 ok=0; n=0; failed=()
 for url in "$@"; do
