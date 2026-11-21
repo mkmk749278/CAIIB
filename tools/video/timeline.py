@@ -15,6 +15,8 @@ CFG = {
               'N44': 1.0, 'N50': 1.0, 'N61a': 1.0, 'N62a': 3.0},
         # r4 (owner, 2026-11-19): no silent chapter cards; chapter titles slide in while the teacher speaks
         CHAPTER={}),
+    # A00 script v3 "Holds": thinking time on the two prediction cards and the practice card; a breath at chapter ends
+    'A00': dict(HOLD={'N05': 5, 'N31': 5, 'N45': 12, 'N12b': 1.0, 'N24b': 1.0, 'N34': 1.0}, CHAPTER={}),
 }
 
 

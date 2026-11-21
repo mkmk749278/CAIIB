@@ -19,6 +19,8 @@ def script_lines(path):
     body = open(path, encoding='utf-8').read().split('\n---\n', 1)[1]
     out = {}
     for para in re.split(r'\n\s*\n', body):
+        # cue-sheet lines (">") are picture directions, never spoken text (PLAYBOOK §5e)
+        para = '\n'.join(l for l in para.splitlines() if not l.lstrip().startswith('>'))
         m = re.match(r'([NMR]\d\d[a-z]?) · (.*)', ' '.join(para.split()))
         if m:
             out[m.group(1)] = m.group(2)

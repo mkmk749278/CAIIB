@@ -6,6 +6,8 @@ import inc from './incoterms_lines.json';
 import {Incoterms} from './Incoterms';
 import {loadFonts} from './theme';
 import {StyleFrames} from './StyleFrames';
+import {A00} from './A00';
+import a00 from './a00_lines.json';
 
 const h = delayRender('fonts');
 loadFonts().then(() => continueRender(h)).catch(() => continueRender(h));
@@ -14,6 +16,7 @@ export const Root: React.FC = () => (
 	<>
 	<Composition id="A1" component={A1} durationInFrames={(lines as {durationInFrames: number}).durationInFrames} fps={30} width={1920} height={1080} />
 	<Composition id="Incoterms" component={Incoterms} durationInFrames={(inc as {durationInFrames: number}).durationInFrames} fps={30} width={1920} height={1080} />
+	<Composition id="A00" component={A00} durationInFrames={(a00 as {durationInFrames: number}).durationInFrames} fps={30} width={1920} height={1080} />
 	<Composition id="StyleFrames" component={StyleFrames} durationInFrames={6} fps={30} width={1920} height={1080} />
 	</>
 );
