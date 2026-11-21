@@ -139,6 +139,13 @@ a large bank; few questions repeat. So content is built in layers, each checked 
    (No human beta group is available, owner 2026-11-20, so layers 7 and 8 carry that weight.)
 10. RBI changes up to the cut-off: taught in their lesson and collected in U01.
 
+## Teaching method (owner, 2026-11-21: "injecting the concept into the brain is important… students should satisfy")
+Every script follows `research/pedagogy/teaching_method.md` (deep research on learning science, video evidence and master
+teachers): the learner answers from memory before and after each idea (pause, then the answer), the board marks land on
+the spoken word (circle, box, underline, drawn live), key terms come back as things the learner must do, the common wrong
+belief is named and broken, each chapter (3–6 min) ends with a recall check, and the closing map is filled from memory
+first. Longer lessons are fine (owner). Its 30-item reviewer checklist is part of every independent review.
+
 ## Product (PLAYBOOK §5–§6; the lesson spec is `course/spec/lesson_spec.md`)
 - **Lessons**, about 12–15 minutes in chapters under 6 minutes: an online class with one AI teacher voice (warm-up,
   check-ins, "some of you think X, others Y"); a real branch situation, then the rule as the answer; one picture per
