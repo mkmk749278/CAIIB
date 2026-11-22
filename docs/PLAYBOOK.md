@@ -572,6 +572,7 @@ checks decide when a cut is ready, not a feeling.
   - `CAIIB/BFM/_downloads/`: source documents we fetched (RBI PDFs, IIBF rules), so facts can be re-checked.
   - `CAIIB/BFM/research/`: results from the owner's laptop agents, one dated folder per batch with a `VERDICT.md`
     (Cowork's 2026-11-14 batch moved here from `CAIIB BFM Research/` on 2026-11-19; files unchanged, verdict unchanged).
+- **2026-11-22: GitHub's runners are retired for rendering; renders move to Modal (owner).** GitHub removed the owner's Creator repo for rendering 4K video on its runners. GitHub's Actions terms allow its compute only for building, testing and shipping the repository's own software, and a video farm is not that, so the same could happen to this repo. No render, plate or Short runs on GitHub Actions any more, at any resolution; the workflows moved to `.github/workflows-retired/` and are kept only as the reference for the Modal port (the shard plan, the join, the loudness pass and the Drive upload carry over). The notes below on runners are history until the Modal pipeline replaces them.
 - **Rendering on GitHub runners** (owner, 2026-11-19; 6 runners like Creator): `.github/workflows/render.yml` (Actions
   → render → Run workflow, from the GitHub app) splits the lesson over up to 6 runners (`tools/video/render_part.mjs`:
   each renders a slice as silent video; a 7th renders the sound), joins them without re-encoding,
