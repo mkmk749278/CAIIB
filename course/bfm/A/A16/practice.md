@@ -67,6 +67,13 @@ Answers at the end.
 32. "Maintenance of close relatives abroad" uses "relative" as defined in: (a) FEMA s. 2(j) (b) the Companies Act
     2013, s. 2(77) (c) the Income-tax Act (d) the Hindu Succession Act
 
+33. FY 2024-25: ₹12 lakh fees from own funds (the line was then ₹7 lakh; rate 5 %). TCS: (a) ₹10,000 (b) ₹25,000
+    (c) ₹60,000 (d) nil
+34. FY 2026-27, own funds, in date order: April ₹4 lakh gift, July ₹5 lakh fees, October ₹3 lakh medical, January
+    ₹2 lakh own travel. Total TCS for the year: (a) ₹44,000 (b) ₹80,000 (c) ₹24,000 (d) ₹2,80,000
+35. An Indian company pays USD 500,000 for imported machinery. TCS under the LRS entry of s. 394: (a) 20 % (b) 2 %
+    (c) not applicable: a company's import payment is not an LRS remittance (d) 5 %
+
 ## Answers (one-line reasons)
 1 b [F1]. · 2 c: fees create no asset abroad [F2, F5]. · 3 b [F7]. · 4 c [F10]. · 5 b [F8]. · 6 b [F9]. · 7 b
 [F4, F20, F21]. · 8 c: individuals only [F16]. · 9 b [F17]. · 10 c: money back does not restore the limit [F21].
@@ -75,4 +82,5 @@ Answers at the end.
 [F28]. · 19 b [F29]. · 20 b [F26]. · 21 b [F44]. · 22 b [F51]. · 23 a: not above ₹10 lakh (numericals Q1) [F47].
 · 24 b: 5 lakh × 2 % [F45]. · 25 b: 5 lakh × 20 %; (a) ignores the line [F45]. · 26 c [F46]. · 27 b: aggregate 14
 lakh; 4 lakh above × 20 % [F47]. · 28 b [F45]. · 29 c: higher of 4 % or 5 % [F50]. · 30 b [F52]. · 31 b [F47].
-· 32 b [F35, F40].
+· 32 b [F35, F40]. · 33 b: (12 − 7) lakh × 5 % [F52]. · 34 a: aggregate 4 → 9 → 12 (₹2 lakh of the medical above
+the line × 2 % = ₹4,000) → 14 (₹2 lakh travel × 20 % = ₹40,000) [F47]. · 35 c: LRS is for individuals only [F51].

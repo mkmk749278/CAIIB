@@ -54,4 +54,9 @@ if __name__ == "__main__":
     check("P: tour package Rs 3 lakh x 2%", D(300000) * D("0.02"), c12(300000 * 2 / 100), "6000")
     check("P: tour package no PAN: max(2x2%, 5%) = 5%", D(300000) * max(2 * D("0.02"), D("0.05")),
           c12(300000 * 5 / 100), "15000")
+    check("P33 FY 2024-25: (12-7) lakh x 5%", (D(1200000) - D(700000)) * D("0.05"),
+          c12(c12(1200000 - 700000) * 5 / 100), "25000")
+    check("P34 Apr 4 gift, Jul 5 fees, Oct 3 medical, Jan 2 travel",
+          tcs_year([(400000, "other"), (500000, "edu"), (300000, "med"), (200000, "other")]),
+          c12(c12(200000 * 2 / 100) + c12(200000 * 20 / 100)), "44000")
     print("All OK")

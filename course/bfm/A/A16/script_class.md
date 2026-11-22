@@ -1,7 +1,8 @@
 # A16 · "Money out of India, by the rules" · CLASS EDITION (script c1, with cue sheet)
 
-- **Status**: c1, 2026-11-22, for the three independent reviews. Standard style (`course/spec/lesson_spec.md`): one
-  question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
+- **Status**: **c2**, 2026-11-22: every High and Medium of the three c1 reviews fixed, main Lows applied
+  (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause
+  check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A16 (v4 split: **A16 = A2.1, A2.3, A2.4, A2.5, A2.6**; A16b = A2.2, A2.7–A2.9 and
   the travel-cash rules). Course order v4: A15b → **A16** → A16b.
 - **Syllabus**: A2.1 (capital and current account transactions), A2.3 (permissible and non-permissible), A2.4
@@ -23,7 +24,7 @@
 - **Not settled**: TCS on "the amount above ten lakh" is our reading of s. 394 ("exceeding ten lakh") and the old
   proviso; CBDT FAQs not read [F47]: re-check at the freeze. Finance Act 2026 as enacted not read (Bill and memorandum
   read) [F45]. A reported RBI ₹50 lakh sub-limit proposal (Nov 2026) has no RBI text: not taught.
-- **Dated questions**: FY 2025-26 TCS (5 % education/medical) and the ₹7 lakh era are trap cards; answer by the year
+- **Dated questions**: FY 2025-26 TCS (5 % education/medical) and the ₹7 lakh line (to 31 Mar 2025, Finance Act 2025) are trap cards; answer by the year
   the question names (PLAYBOOK §4a).
 - **Holds**: questions at least 3 s; one-step sums 8 s; multi-step 10 s; "your turn" 15 s; map 3–5 s per node.
 - **Say it right**: "L-R-S"; "FEMA" as a word ("FAY-ma"); "T-C-S"; "P-A-N" as a word ("pan"); "Form A-two"; "A-D"
@@ -31,10 +32,11 @@
 - **Not in this video (A16b)**: FEMA ss. 4, 6, 10(6), 11, 13; LRS capital uses in detail (ODI, OPI, property, IFSC,
   loans to NRI relatives); reporting; remittances outside LRS for non-individuals; travel cash per trip, surrender and
   retention.
-- **Length**: ~1,500 spoken words + ~2.5 min of holds ≈ 13.5 min (measure the take). Chapters: warm-up
-  (~1.3 min) · 1 current vs capital, the three lists (~3.5 min) · 2 LRS: who, how much, what for (~3.8 min) · 3 how:
-  the counter rules (~2.6 min) · 4 TCS (~3 min) · close (~1.4 min). If over 15:00, cut in order: N036a, N043a,
-  N024a. Protect N021–N022 (limit per year, not per transaction), N029 (money back), N055–N061 (TCS sums).
+- **Length**: ~1,600 spoken words + ~2.5 min of holds ≈ 14 min (measure the take). Chapters: warm-up (~1.3 min) ·
+  1 current vs capital, the three lists (~2.6 min) · 2 LRS: who, how much, what for (~3.2 min) · 3 the counter rules
+  (~2 min) · 4 TCS (~3.4 min) · close (~1.5 min). Chapter 3 is short by design (one idea: the counter's checks). If
+  over 15:00, cut in order: N043a, N011a, N032a. Protect N021–N022 (per year, not per transaction), N029 (money back),
+  N049a (running total), N053 (dated trap), N055–N061 (TCS sums).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: the bank's **forex
   counter**; a **gate** marked "FEMA" with two lanes, "current" and "capital"; a **jar** labelled "USD 250,000 · this
   financial year" per person that fills as she sends; in chapter 4 a **tax meter** that starts only past ₹10 lakh.
@@ -52,7 +54,7 @@ N002 · First, homework. The standard policy paid ninety per cent of a forty tho
 N003 · Nine thousand dollars. Recoveries are shared in the ratio of the loss: ninety-ten.
 > 1 S: keys "10000 × 90 % = 9000" · 2 N: "homework ✓" [A15b numericals]
 
-N004 · And from two classes back. A bank's exposure to a C-two country, above one per cent of assets. Provision?
+N004 · And from two classes back. A bank's net funded exposure to a C-two country is above one per cent of its assets. Provision?
 > 1 S: A15's ladder · H: 3 s
 
 N005 · One hundred per cent. Good. Today, no exporters. A family.
@@ -75,11 +77,14 @@ N009 · L-R-S came up in every one of the last seven exams. The limit, the gift,
 N010 · Chapter one. FEMA, the foreign exchange law, sorts every payment abroad into two lanes. Current account, and capital account.
 > 1 S: chapter title "1 · Current or capital" · 2 S: a gate "FEMA" with two lanes "current" · "capital"
 
-N011 · Capital account: it creates or changes an asset or a liability outside India. Buying shares abroad. Opening a bank account abroad.
-> 1 C: card "capital account = changes a resident's assets or liabilities outside India (s. 2(e)) · e.g. foreign shares, account abroad, property abroad" [F1] · 2 B: underline "asset or a liability outside India"
+N011 · Capital account: it changes a resident's assets or liabilities outside India, or a non-resident's in India. Like buying shares abroad.
+> 1 C: card "capital account = changes assets or liabilities (incl. contingent) of a resident outside India, or of a non-resident in India (s. 2(e))" [F1] · 2 B: underline "outside India"
+
+N011a · Or opening a bank account abroad. Both leave her owning something outside India.
+> 1 S: icons "foreign shares" · "account abroad" slide into the capital lane [F5]
 
 N012 · Current account: everything else. Fees, travel, medical bills, gifts, interest.
-> 1 C: card "current account = everything else (s. 2(j)): trade, travel, education, medical, family maintenance, gifts, interest" [F2]
+> 1 C: card "current account = everything else (s. 2(j)): trade, travel, studies, medical, family, gifts, interest" [F2]
 
 N013 · One quick test: does it leave her owning or owing something abroad? Yes, capital. No, current.
 > 1 B: box "owning or owing abroad? yes → capital · no → current"
@@ -90,8 +95,8 @@ N014 · Your turn. Four quick ones: her son's fees. Shares of a U-S company. The
 N015 · Fees: current. Shares: capital. Gift: current. Bank account abroad: capital.
 > 1 S: each card slides into its lane [F5] · 2 N: "2 current · 2 capital"
 
-N016 · Who rules each lane? Current account is free, except where the Central Government's rules say no.
-> 1 C: card "current: free, except as the Central Government's rules restrict (FEMA s. 5; FEM (Current Account Transactions) Rules 2000) · capital: RBI specifies (s. 6)" [F3]
+N016 · Who rules each lane? Current account is free, except where the Central Government's rules say no. Capital account: only what the rules allow.
+> 1 C: card "current: free, except as the Central Government's rules restrict (s. 5) · capital: only what the rules permit (s. 6; Government for non-debt, RBI for debt, since 2019)" [F3]
 
 N017 · Those rules have three lists, called schedules. Schedule one, schedule two, schedule three. Guess: which one is the banned list?
 > 1 S: three folders "I" · "II" · "III" · H: 3 s
@@ -99,14 +104,17 @@ N017 · Those rules have three lists, called schedules. Schedule one, schedule t
 N018 · Schedule one. Many of you thought one means permitted. No: one is prohibited.
 > 1 C: trap card "'Schedule I = permitted' ✗ · Schedule I = prohibited ✓" [F7] · 2 B: circle "I = prohibited"
 
-N019 · On it: lottery winnings, racing income, lottery tickets, banned magazines, sweepstakes, and call-back phone services.
-> 1 C: card "Schedule I (prohibited): lottery winnings · racing / riding / hobby income · lottery tickets, banned magazines, football pools, sweepstakes · call-back services · interest on NRSR accounts · certain export commissions" [F8]
+N019 · On it: lottery winnings, lottery tickets, racing income, and call-back phone services.
+> 1 C: card "Schedule I (banned): lottery winnings and tickets · racing / hobby income · sweepstakes, banned magazines · call-back services · NRSR interest · some export commissions" [F8]
 
 N020 · Schedule two needs a Government ministry's approval. Like sports prize money above a hundred thousand dollars.
-> 1 C: card "Schedule II: prior approval of the named Ministry · e.g. sports prize money / sponsorship above USD 100,000 (not by sports bodies) · State Government ads abroad above USD 10,000" [F10]
+> 1 C: card "Schedule II: a named Ministry's approval · e.g. sports prize money above USD 100,000 (not by sports bodies)" [F10]
 
-N020a · And schedule three is ours: individuals, within the L-R-S limit. Nepal and Bhutan are barred outright.
-> 1 C: card "Schedule III: individuals within the LRS limit; RBI approval above (except three cases, chapter 2) · Nepal, Bhutan: no forex drawal for travel or deals with residents (rule 3)" [F7, F9]
+N020a · And schedule three is for individuals, within a yearly limit you'll meet in chapter two.
+> 1 C: card "Schedule III: individuals, within the LRS limit; above it RBI, except three cases (chapter 2)" [F7]
+
+N020e · Separately, the rules allow no foreign exchange at all for travel to Nepal or Bhutan.
+> 1 C: card "Nepal, Bhutan: no foreign exchange for travel there or deals with their residents (rule 3)" [F9]
 
 N020b · Pause check for chapter one. One. Buying a flat in Dubai: current or capital?
 > 1 S: card "flat in Dubai?" · H: 3 s
@@ -131,23 +139,23 @@ N022 · Two lakh fifty thousand dollars per financial year, April to March. Per 
 N023 · One jar for both lanes. Current and capital purposes share the same two lakh fifty thousand.
 > 1 C: card "one limit for current + capital together · no cap on the number of remittances" [F4, F21]
 
-N024 · Who can use it? Resident individuals, minors too. A minor's form is signed by the parent.
-> 1 C: card "who: resident individuals, including minors (natural guardian countersigns Form A2) · not: companies, firms, HUFs, trusts" [F16] · 2 B: box "individuals only"
+N024 · Who can use it? Resident individuals, minors too. For a minor, the natural guardian countersigns the form.
+> 1 C: card "who: resident individuals, incl. minors (natural guardian countersigns Form A2)" [F16] · 2 B: box "individuals only"
 
-N024a · Not companies, partnership firms, H-U-Fs or trusts. And a sole proprietor sending from his firm's account? That's his own jar.
-> 1 C: card "sole proprietor: the firm's remittance counts in his own USD 250,000 (RBI FAQ)" [F17]
+N024a · Not companies, partnership firms, H-U-Fs or trusts. A sole proprietor sending from his firm's account? That's his own jar.
+> 1 C: card "not: companies, firms, HUFs, trusts · sole proprietor: counts in his own USD 250,000 · an LLP sponsoring a partner's studies: the LLP's own payment, outside his LRS" [F16, F17, F18]
 
-N025 · What can she send it for? Under the current lane: travel, studies, medical treatment, gifts, donations, and maintaining close relatives abroad.
-> 1 C: card "Schedule III purposes: private visits · gift or donation · employment abroad · emigration · maintenance of close relatives · business trips · medical treatment · studies · any other current account deal" [F33]
+N025 · What can she send it for? Almost any current purpose: travel, studies, medical treatment, gifts, and support for relatives abroad.
+> 1 C: card "travel · studies · medical · gift or donation · relatives' maintenance · employment, emigration · business trips" [F33]
 
 N026 · Now our opening. Can she gift her son's friend a lakh of rupees?
 > 1 S: the buttons from N008 · H: 3 s
 
 N027 · Yes. A gift under L-R-S can go to any person abroad. The relative rule is for maintenance, not for gifts.
-> 1 C: card "gift: to any person resident outside India, within USD 250,000 · maintenance: close relatives only ('relative' as in the Companies Act, s. 2(77))" [F35, F40] · 2 G: "all of it" lights; "not the gift" greys
+> 1 C: card "gift: to any person abroad, within USD 250,000 · maintenance: close relatives (Companies Act s. 2(77)) · rupee gift to an NRI relative's NRO account: also within LRS" [F35, F40] · 2 G: "all of it" lights; "not the gift" greys
 
-N028 · One gift that can't go: a resident gifting foreign currency into another resident's account abroad.
-> 1 C: trap card "resident → another resident's account abroad: not allowed under LRS ✗" [F12]
+N028 · One gift that can't go. Her sister in Chennai holds a U-S account. Mrs Lakshmi can't gift dollars into it.
+> 1 C: trap card "resident → another resident's account abroad: not allowed under LRS" [F12]
 
 N029 · Many of you think: money I bring back frees up the limit again. Does it?
 > 1 S: a hand pours coins back into the jar · H: 3 s
@@ -155,17 +163,20 @@ N029 · Many of you think: money I bring back frees up the limit again. Does it?
 N029a · No. What's sent is counted. Bring it back, and the jar stays used for that year.
 > 1 C: trap card "'money brought back restores the limit' ✗ · once used, used for that financial year ✓ (RBI FAQ)" [F21] · 2 B: underline "stays used"
 
-N030 · What's barred even inside the limit? Margin trading on foreign exchanges, forex trading abroad, and Schedule one items.
-> 1 C: card "never under LRS: Schedule I items · Schedule II items (need Ministry approval) · margins / margin calls abroad · foreign exchange trading abroad · FCCBs bought abroad · capital remittances to FATF non-co-operative countries" [F12]
+N030 · What's barred even inside the limit? Margin money or margin calls to exchanges abroad, forex trading abroad, and Schedule one items.
+> 1 C: card "never under LRS: Schedule I and II items · margins abroad · forex trading abroad · FCCBs bought abroad · capital remittances to FATF non-co-operative countries" [F12]
 
 N031 · And above two lakh fifty thousand? Three cases go higher, without R-B-I: medical treatment, studies, and emigration.
-> 1 C: card "above USD 250,000 without RBI: medical treatment (doctor's / hospital's estimate) · studies (university's estimate) · emigration (amount the country prescribes)" [F36] · 2 B: box "medical · studies · emigration"
+> 1 C: card "above USD 250,000 without RBI: medical treatment · studies · emigration" [F36] · 2 B: box "medical · studies · emigration"
 
-N032 · The bank releases on an estimate: from the hospital, or the university. Any other purpose above the limit needs R-B-I.
-> 1 N: "other purposes above the limit: RBI approval (Schedule III)" [F33, F36]
+N032 · The bank releases on an estimate: from the hospital, or the university. Falls sick while abroad? The bank can still release.
+> 1 C: card "medical: doctor's or hospital's estimate · studies: university's estimate · emigration: what the country prescribes · sick abroad: no RBI approval · attendant: up to USD 250,000" [F36, F38]
+
+N032a · Any other purpose above the limit needs R-B-I.
+> 1 N: "other purposes above the limit: RBI approval" [F33]
 
 N033 · Credit card spends while she visits him abroad? They don't count against her jar. Her debit or forex card does.
-> 1 C: card "international credit card spends while abroad: not counted under LRS (CAT rule 7) · debit cards, forex prepaid cards: counted" [F41] · 2 N: "2023: rule 7 dropped on 16 May, restored 30 Jun from the same date: never took effect" [F42]
+> 1 C: card "credit card spends while abroad: not counted (rule 7) · debit and forex prepaid cards: counted" [F41] · 2 N: "2023: rule 7 dropped 16 May, restored 30 Jun from the same date" [F42]
 
 N034 · Pause check for chapter two. One. The L-R-S limit, per person per year?
 > 1 S: card "LRS limit?" · H: 3 s
@@ -185,25 +196,25 @@ N036a · No. Only individuals. Now, at the counter. What does the bank ask Mrs L
 > 1 N: "no: individuals only ✓" · H: 3 s
 
 N037 · Her PAN. Every L-R-S remittance needs PAN, whatever the amount.
-> 1 C: card "PAN: mandatory for every LRS remittance, any amount (since 19 Jun 2018)" [F22] · 2 B: box "every remittance"
+> 1 C: card "PAN: every LRS remittance, any amount (since 19 Jun 2018)" [F22] · 2 B: box "every remittance"
 
 N038 · Old books say: no PAN up to twenty-five thousand dollars. That was before twenty eighteen. Today, always.
 > 1 C: trap card "'no PAN up to USD 25,000' ✗ old (to Jun 2018) · PAN for every LRS remittance ✓" [F22]
 
 N039 · Then Form A-two: purpose, a declaration that the money is hers, and not for a banned purpose. Paper or online.
-> 1 C: card "Form A2: purpose (with its code) · funds are her own · not for prohibited purposes · physical or digital, any value" [F23, F24]
+> 1 C: card "Form A2: purpose code · own funds · not prohibited · paper or digital, any value" [F23, F24]
 
 N040 · She uses one designated branch for her L-R-S remittances. For capital ones, like shares, the bank wants a year's relationship.
-> 1 C: card "one designated AD branch for LRS remittances · capital account: account held at least one year (else due diligence: last year's bank statement or tax return)" [F25, F26]
+> 1 C: card "one designated branch · capital uses: one year's relationship (new customer: last year's statement or tax return)" [F25, F26]
 
 N041 · Can her bank lend her the money to send?
 > 1 S: two buttons "yes" · "no" · H: 3 s
 
 N042 · It depends on the lane. For capital uses, like U-S shares, no bank credit at all. For current ones, like fees, a loan is fine.
-> 1 C: trap card "no bank credit for capital account remittances under LRS ✓ · current account (e.g. education loan): banks may lend (RBI FAQ)" [F28] · 2 B: underline "depends on the lane"
+> 1 C: trap card "capital uses: no bank credit · current uses (e.g. education loan): banks may lend" [F28] · 2 B: underline "depends on the lane"
 
 N043 · And family? Each member has a jar. They can club them: Mrs Lakshmi and her husband together, for his fees.
-> 1 S: two jars side by side, "mother" · "father" · 2 C: card "family members may club their limits · capital uses: only if co-owners / co-partners of the investment or account" [F29]
+> 1 S: two jars "mother" · "father" · 2 C: card "family may club · capital uses: co-owners only" [F29]
 
 N043a · For a capital use, like a joint account abroad, only co-owners can club.
 > 1 B: circle "only co-owners"
@@ -223,25 +234,31 @@ N046 · Chapter four. First, a recall. Money brought back: does it refill the ja
 > 1 S: chapter title "4 · TCS" · H: 3 s
 
 N047 · No. Now a second law: the income-tax law. When she sends money, the bank may collect tax at source, T-C-S.
-> 1 S: a tax meter appears beside the counter · 2 C: card "TCS: tax collected at source by the bank (authorised dealer) · Income-tax Act 2025, s. 394 (from 1 Apr 2026)" [F44]
+> 1 S: a tax meter beside the counter · 2 C: card "TCS: collected by the bank · Income-tax Act 2025, s. 394 (from 1 Apr 2026)" [F44]
 
 N048 · Many of you think T-C-S is a fee she loses. It isn't. It's an advance on her income tax; it comes back as credit.
 > 1 C: trap card "'TCS is a cost lost' ✗ · TCS = tax paid on her behalf, credited against her income tax ✓" [F51] · 2 B: underline "comes back as credit"
 
-N049 · The meter starts only after ten lakh rupees in the year. That's the tax law's line, not FEMA's two lakh fifty thousand dollars.
-> 1 S: the meter's needle sits at zero until a mark "₹10 lakh" · 2 C: card "two laws, two limits: FEMA USD 250,000 · tax ₹10 lakh threshold" [F47]
+N049 · The meter starts only after ten lakh rupees in the year. That's the tax law's line, not FEMA's dollar limit.
+> 1 S: the needle sits at zero until "₹10 lakh" · 2 C: card "two laws: FEMA USD 250,000 · tax ₹10 lakh" [F47]
+
+N049a · All her remittances in the year add up, from April, whatever the purpose. The one that crosses the line pays its own rate above it.
+> 1 C: card "one running total from 1 April, all purposes · tax on the part above ₹10 lakh, at that remittance's rate" [F47] · 2 B: underline "add up"
 
 N050 · Above ten lakh, the rate depends on purpose. For education or medical treatment, two per cent.
-> 1 C: card "TCS from 1 Apr 2026, above ₹10 lakh in the year: education or medical 2 % · other purposes 20 %" [F45]
+> 1 C: card "from 1 Apr 2026, above ₹10 lakh: education or medical 2 % · other 20 %" [F45]
 
 N051 · For everything else, gifts, travel, investment, twenty per cent. And if the fees come from a bank education loan? Nil.
-> 1 C: card "education funded by a loan from a bank / financial institution: nil" [F46] · 2 B: box "20 %" and "nil"
+> 1 C: card "education on a bank loan: nil" [F46] · 2 B: box "20 %" and "nil"
+
+N051a · And this T-C-S is only on L-R-S, so only on individuals. A company paying for imports? Not this T-C-S.
+> 1 C: card "LRS TCS: individuals' LRS remittances only · company import or trade payments: not LRS" [F51]
 
 N052 · Overseas tour packages are separate: two per cent from the first rupee, collected by the tour operator.
-> 1 C: card "overseas tour package: 2 %, no threshold, collected by the seller · no PAN: twice the rate or 5 %, higher (max 20 %)" [F45, F50]
+> 1 C: card "overseas tour package: 2 % from the first rupee, collected by the seller · no PAN: 2 × rate or 5 %, higher" [F45, F50]
 
-N053 · Careful with dates. Last year, education was five per cent above ten lakh. Before October twenty twenty-three, the line was seven lakh.
-> 1 C: trap card "FY 2025-26: education / medical 5 %, other 20 % (above ₹10 lakh); tour 5 % / 20 % · to 30 Sep 2023: 5 % above ₹7 lakh · answer by the year the question names" [F52]
+N053 · Careful with dates. In twenty twenty-five to twenty-six, education was five per cent above ten lakh. Until March twenty twenty-five, the line was seven lakh.
+> 1 C: trap card "FY 2025-26: 5 % education / medical, 20 % other, above ₹10 lakh · to 31 Mar 2025: line ₹7 lakh (loan-funded education 0.5 %)" [F52]
 
 N054 · So answer by the year the question names. If none, use today's rates.
 > 1 B: underline "the year the question names"
@@ -252,7 +269,7 @@ N055 · Back to Mrs Lakshmi. Ten lakh in total: six fees, three rent, one gift. 
 N056 · Nil. Ten lakh doesn't exceed ten lakh. The meter hasn't started.
 > 1 S: the needle stays at zero · 2 B: box "nil" [numericals Q1]
 
-N057 · Next year, she sends fifteen lakh for fees from her savings. T-C-S?
+N057 · Now suppose instead she sends fifteen lakh this year, all for fees, from her savings. T-C-S?
 > 1 S: sum card "₹15,00,000 fees · own funds · FY 2026-27 · illustrative" · H: 10 s
 
 N058 · Only the five lakh above the line is taxed, at two per cent: ten thousand rupees.
@@ -290,7 +307,7 @@ N066 · Quick mix. One. Buying shares abroad: which lane?
 N067 · Capital. Two. Schedule two: what's needed?
 > 1 N: "capital ✓" · H: 6 s
 
-N068 · A ministry's approval. Three. T-C-S on a fifteen lakh medical remittance, own funds, this year?
+N068 · A ministry's approval. Three. Her only remittance this year: fifteen lakh for medical treatment, own funds. T-C-S?
 > 1 N: "Ministry approval ✓" · H: 6 s
 
 N069 · Ten thousand: two per cent of five lakh. Now the map, from memory. First node: two lanes.
@@ -308,7 +325,7 @@ N072 · PAN always, Form A-two, one branch; no credit for capital uses; family c
 N073 · Above ten lakh; two per cent education and medical, twenty the rest, nil on a loan; credit, not cost. That's the map.
 > 1 M: node "TCS" fills; branch completes
 
-N074 · Homework. This year she sends six lakh for fees in May, then an eight lakh gift in August. T-C-S on the gift?
+N074 · Homework. This year she sends six lakh for fees in May, then an eight lakh gift in August. T-C-S on the gift? Add up first.
 > 1 S: notebook page; sum card "May ₹6 lakh fees · Aug ₹8 lakh gift · own funds · FY 2026-27 · illustrative"
 
 N075 · Next class, her son wants to buy shares abroad, and borrow from his mother. What does FEMA say?
