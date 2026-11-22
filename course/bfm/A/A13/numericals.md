@@ -1,4 +1,4 @@
-# A13 · Numericals (c2, 2026-11-22)
+# A13 · Numericals (c3, 2026-11-22)
 
 All rates, interest rates, amounts and dates illustrative. Checked by `python3 tools/check/import_bills.py` (two
 ways: Decimal, and 12-digit calculator key presses; dates by calendar); all OK. Basic 8-function calculator only.

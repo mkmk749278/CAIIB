@@ -1,11 +1,11 @@
-# A13 · Practice (c2, 2026-11-22)
+# A13 · Practice (c3, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A4.6-A5.10_A13.md`. Sums checked by
 `tools/check/import_bills.py`. All figures illustrative. Answers at the end.
 
 1. From 1 October 2026, the time within which an importer must pay for an import of goods is:
-   (a) 6 months from the date of shipment (b) 12 months from the bill of entry (c) the period in the underlying
-   contract, which the AD may extend on reasons (d) fixed by DGFT
+   (a) the period in the underlying contract, which the AD may extend on reasons (b) 6 months from the date of shipment
+   (c) 12 months from the bill of entry (d) fixed by DGFT
 2. An importer in India pays a supplier in Bhutan. The currency is:
    (a) US dollar (b) ACU Dollar (c) Indian rupees (d) any freely convertible currency
 3. Which is **not** a unit of the Asian Clearing Union? (a) ACU Dollar (b) ACU Euro (c) ACU Yen (d) ACU Rupee
@@ -33,8 +33,8 @@ Our own questions, written from the fact sheet `research/bfm/facts/A4.6-A5.10_A1
 14. Who may **not** give FCY buyers' credit? (a) a bank abroad (b) a foreign equity holder (c) an FI in GIFT IFSC
     (d) an Indian bank's branch in India
 15. An airline imports an aircraft part. The trade credit limit per import transaction is: (a) USD 20 m (b) USD 50 m
-    (c) USD 150 m (d) no limit
-16. The evidence of import for goods is: (a) the commercial invoice (b) the bill of lading (c) the bill of entry
+    (c) no limit (d) USD 150 m
+16. The evidence of import for goods is: (a) the commercial invoice (b) the bill of entry (c) the bill of lading
     (d) the LC
 17. A bill of entry of ₹7 lakh. The IDPMS entry may be closed: (a) only by RBI (b) on the importer's declaration, or
     a quarterly bulk declaration (c) after 3 months (d) never without the original bill of entry
@@ -55,9 +55,9 @@ Our own questions, written from the fact sheet `research/bfm/facts/A4.6-A5.10_A1
     pick, and is it today's rule?
 
 ## Answers
-1 c [F5] · 2 c [F3] · 3 d [F4] · 4 b [F7] · 5 c [F10] · 6 c (the only exception: qualified jewellers / CEPA quota holders through IIBX, 11 days) [F9, F9a] · 7 c (same as retirement) [F21] ·
+1 a [F5] · 2 c [F3] · 3 d [F4] · 4 b [F7] · 5 c [F10] · 6 c (the only exception: qualified jewellers / CEPA quota holders through IIBX, 11 days) [F9, F9a] · 7 c (same as retirement) [F21] ·
 8 bill selling `86.02 × 1.0012 = × 1.0015 =` 86.2524; `30000 × 86.2524 =` **₹25,87,572** [numericals] ·
 9 `30000 × 86.4 =` **₹25,92,000** [F21] · 10 `6.85 + 2.5 =` **9.35 %** [F19] · 11 (i)-q, (ii)-p [F14] ·
 12 c (lesser of 1 year and the cycle) [F18] · 13 b (TC up to 3 years is not ECB) [F15] · 14 d [F17] ·
-15 c [F16] · 16 c [F24] · 17 b [F26] · 18 a [F24] · 19 False: an old Import MD rule, superseded 1 Oct 2026; today
+15 d [F16] · 16 b [F24] · 17 b [F26] · 18 a [F24] · 19 False: an old Import MD rule, superseded 1 Oct 2026; today
 IDPMS matching and the AD's follow-up [F28] · 20 b [F30] · 21 `30000 × 86.2524 =` 25,87,572; `× 10.95 % = × 25 = ÷ 365 =` 19,406.79; total **₹26,06,978.79** [F21, F22] · 22 b (guarantee allowed; LoU/LoC not permitted) [F20] · 23 b, USD 200,000: only old figures are offered, so the item follows the superseded MD; today there is no RBI figure, the AD's own policy decides [F7, F8]

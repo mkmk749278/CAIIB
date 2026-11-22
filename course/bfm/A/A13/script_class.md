@@ -1,6 +1,6 @@
-# A13 · "The importer's side of the counter" · CLASS EDITION (script c2, with cue sheet)
+# A13 · "The importer's side of the counter" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT (0 H, 0 M, 7 L), Lows applied (`review_c2.md`). c2: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1,
   2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause check per chapter, at most
   one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A13. Course order v4: A12 → **A13** → A14.
@@ -33,9 +33,9 @@
   two thousand five hundred ninety-five rupees"); "eighty-six point zero five one nine".
 - **Not in this video**: import factoring and forfaiting (A14); ECGC (A15); ECB itself (A19); LC mechanics (A08, A10);
   the IIBX itself (A20); TC reporting (card only); the old per-transaction cap and LIBOR spreads (fact sheet only).
-- **Length**: ~1,790 spoken words + ~2.7 min of holds ≈ 15 min. Chapters: 1 rules for paying (~3.5 min) · 2 retiring
+- **Length**: ~1,790 spoken words + ~2.7 min of holds ≈ 15–15.5 min (measure the take). Chapters: 1 rules for paying (~3.5 min) · 2 retiring
   the bill (~4 min) · 3 trade credit (~3.5 min) · 4 proof of import: IDPMS (~3 min) · close (~1.5 min). If the
-  measured take runs over 15:00, cut in order: N042 (card stays); N068a; N012b.
+  measured take runs over 15:00, cut in order: N042, N068a, N012b (voice only: their cards stay, as practice P3 and P20 need them).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: A01's bank counter,
   **red side** "bank sells" now facing us; the import road (A11's export road mirrored: goods come in, money goes out);
   a calendar strip; IDPMS drawn as a two-pan scale (payments on one pan, bills of entry on the other).
@@ -53,7 +53,7 @@ N002 · First, last class's homework. T-T selling at eighty-seven: her crystalli
 N003 · Eighty-seven lakh; a loss of one lakh twenty thousand.
 > 1 S: keys "100000 × 87 = 8700000 − 8580000 = 120000" · 2 N: "homework ✓"
 
-N004 · And last class's question: an importer's bill arrives, and the bank pays out dollars. Which side of the counter is that?
+N004 · Last class ended with an importer's bill: the bank pays out dollars. First, which side of the counter is that?
 > 1 S: the counter turns; red side "bank sells" faces us · H: 3 s
 
 N005 · The selling side. The bank sells the importer foreign currency. That's today, from the rules to the rupees.
@@ -122,7 +122,7 @@ N019 · Two fixed rules stay. First, gold and silver: no advance, except one rou
 > 1 C: card "gold, silver: no advance remittance" [F9]
 
 N019a · Qualified jewellers buying through the I-I-B-X, the bullion exchange in GIFT City, may pay up to eleven days ahead.
-> 1 N: "exception: qualified jewellers (and CEPA quota holders, for gold) importing through IIBX → advance for 11 days" [F9a]
+> 1 N: "exception: qualified jewellers (and CEPA quota holders, for gold) importing through IIBX → advance for 11 days; unused advance back to the same AD within 11 days" [F9a]
 
 N020 · Second, if the goods never come, the importer must bring the advance back.
 > 1 C: card "import not made → repatriate the advance" [F10]
@@ -186,7 +186,7 @@ N035 · Now, the hospital doesn't pay. The bank paid abroad under its L-C on the
 N036 · It crystallises: turns the dollar debt into a rupee debt. On which day? The bank's own stated policy decides.
 > 1 C: card "import bill under LC unpaid → crystallised as per the bank's stated policy" [F22]
 
-N036a · Older books gave the tenth day after the documents arrive, or the next working day. In the exam, the question gives you the day.
+N036a · Older books gave the tenth day after the documents arrive; a holiday moved it on. In the exam, the question gives you the day.
 > 1 C: trap card "'FEDAI: 10th day after receipt of documents' ✗ old rule (holiday → next working day) · today: the bank's stated policy ✓ · export bills (A12): old 30th day" [Leads] · 2 B: circle "the question gives the day"
 
 N037 · Which rate? In A-twelve, the export bill flipped to T-T selling. Here?
@@ -195,7 +195,7 @@ N037 · Which rate? In A-twelve, the export bill flipped to T-T selling. Here?
 N038 · No flip. The bank was already selling. So it's the same as retirement: bill selling, or the forward rate.
 > 1 C: trap card "import crystallisation flips ✗ · same as retirement ✓ (FEDAI 3.1(b))" [F21]
 
-N039 · The bank's policy here: the tenth day, the fifteenth of April. Rates unchanged, so the rupee debt is forty-three lakh two thousand five hundred ninety-five.
+N039 · In this case, the bank's policy is the tenth day: the fifteenth of April. Rates unchanged: forty-three lakh two thousand five hundred ninety-five.
 > 1 S: pin "Thu 15 Apr 2027 · crystallise" · 2 N: "50000 × 86.0519 = 4302595" [numericals Q2]
 
 N040 · Interest? The bank charges its normal loan rate, say ten point nine five per cent, from the day it paid abroad.
@@ -260,7 +260,7 @@ N053 · How much, per import? Fifty million dollars. A hundred and fifty million
 N054 · The cost is capped, all in: interest plus fees. Foreign-currency credit: a benchmark rate plus three hundred basis points, three per cent.
 > 1 C: card "all-in-cost ceiling a year: FCY = benchmark (6-month ARR for the currency) + 300 bps · INR = G-sec yield of the same maturity + 250 bps" [F19]
 
-N054a · For rupee credit, the benchmark is the government bond yield, plus two fifty.
+N054a · For rupee credit, the benchmark is the government bond yield, plus two hundred fifty basis points.
 > 1 N: "1 bp = 0.01% · 300 bps = 3%"
 
 N055 · Benchmark four point two per cent, illustrative. The highest the Frankfurt bank may charge, all in?
