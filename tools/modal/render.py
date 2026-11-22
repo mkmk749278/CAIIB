@@ -2,8 +2,8 @@
 rendering 4K video on its runners, so renders moved to Modal; PLAYBOOK §8).
 
 Same method as the retired `.github/workflows-retired/render.yml`: N containers each render one slice of the
-composition as silent video (`tools/video/render_part.mjs`), one more renders the whole lesson's sound, then one
-container glues the slices (no re-encode), lays the sound under them, normalises loudness to -16 LUFS, runs the
+composition as silent video (`tools/video/render_part.mjs`), as many render the sound in the same slices
+(joined losslessly), then one container glues the slices (no re-encode), lays the sound under them, normalises loudness to -16 LUFS, runs the
 smoothness audit and uploads the MP4 to Drive `CAIIB/BFM/<video>/renders/<name>`. Next to it goes
 `<name>.log.txt` with the result, the Drive link, the timings and the estimated cost, so the session can read the
 result from Drive (`tools/drive/drive.sh pull BFM/<video>/renders …`), even when the render failed.
