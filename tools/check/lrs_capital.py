@@ -32,5 +32,6 @@ if __name__ == "__main__":
     check("HW used: fees 60,000 + ODI 40,000 + loan 50,000", used, D(str(c12(60000 + 40000 + 50000))), 150000)
     check("HW headroom 250,000 - 150,000", LIMIT - used, D(str(c12(250000 - 150000))), 100000)
     check("F61 loan Rs 42,50,000 / 85 = USD", D(4250000) / D(85), D(str(c12(4250000 / 85))), 50000)
-    check("P  sale proceeds back: headroom unchanged", LIMIT - used, D(100000), 100000)
+    check("HW fees refund USD 10,000 back: headroom unchanged", LIMIT - used, D(str(c12(250000 - 150000))), 100000)
+    check("N057 two banks: 250,000 - 200,000", LIMIT - D(200000), D(str(c12(250000 - 200000))), 50000)
     print("All OK")
