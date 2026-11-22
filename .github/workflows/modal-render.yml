@@ -1,0 +1,66 @@
+# Start a lesson render on Modal (owner, 2026-11-22: GitHub removed the Creator repo for rendering 4K video on its
+# runners, so nothing renders here any more). This job only deploys tools/modal/render.py and starts it, about a
+# minute of work; Modal renders, joins and uploads the MP4 and its .log.txt to Drive CAIIB/BFM/<video>/renders/.
+# Needs repo secrets MODAL_TOKEN_ID, MODAL_TOKEN_SECRET and GDRIVE_RCLONE_TOKEN. Start it from the GitHub app:
+# Actions → modal-render → Run workflow.
+name: modal-render
+on:
+  workflow_dispatch:
+    inputs:
+      comp:
+        description: "Remotion composition id (e.g. Incoterms, A00)"
+        required: true
+      video:
+        description: "video id = Drive folder under CAIIB/BFM (e.g. A07)"
+        required: true
+      lines:
+        description: "Drive folder with the voice or mix the composition plays, under CAIIB/ (e.g. BFM/A07/flow)"
+        required: true
+      audio_dir:
+        description: "where the composition expects them, under video/public (e.g. audio/inc)"
+        required: true
+      scale:
+        description: "2/3 = 720p review cut (always first), 1 = 1080p master; never 4K"
+        default: "2/3"
+      parts:
+        description: "parallel Modal containers for the picture (1-48; default 6)"
+        default: "6"
+      name:
+        description: "output file name (e.g. r2_720p.mp4)"
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: modal-deploy
+  cancel-in-progress: false
+
+jobs:
+  launch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+      GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+    steps:
+      - name: Secrets present
+        run: |
+          for s in MODAL_TOKEN_ID MODAL_TOKEN_SECRET GDRIVE_RCLONE_TOKEN; do
+            [ -n "${!s}" ] || { echo "::error::repo secret $s is missing"; exit 1; }
+          done
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-python@v5.3.0
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet modal==1.1.0
+      - name: Drive token into the Modal secret
+        run: modal secret create caiib-drive GDRIVE_RCLONE_TOKEN="$GDRIVE_RCLONE_TOKEN" --force > /dev/null
+      - name: Deploy (the first time builds the image, a few minutes; later only when package-lock.json changes)
+        run: modal deploy tools/modal/render.py
+      - name: Start the render
+        run: |
+          python3 tools/modal/launch.py --comp "${{ inputs.comp }}" --video "${{ inputs.video }}" \
+            --lines "${{ inputs.lines }}" --audio-dir "${{ inputs.audio_dir }}" --scale "${{ inputs.scale }}" \
+            --parts "${{ inputs.parts }}" --name "${{ inputs.name }}" | tee -a "$GITHUB_STEP_SUMMARY"
