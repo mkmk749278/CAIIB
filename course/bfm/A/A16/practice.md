@@ -1,4 +1,4 @@
-# A16 · Practice (c1, 2026-11-22)
+# A16 · Practice (c3, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A2.1-A2.6_A16.md`. Sums checked by
 `tools/check/lrs_tcs.py`. All figures illustrative; TCS at FY 2026-27 rates unless a question names another year.

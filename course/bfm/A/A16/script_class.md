@@ -1,6 +1,7 @@
-# A16 · "Money out of India, by the rules" · CLASS EDITION (script c1, with cue sheet)
+# A16 · "Money out of India, by the rules" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: **c2**, 2026-11-22: every High and Medium of the three c1 reviews fixed, main Lows applied
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT (0 H, 0 M, 7 L); Lows applied (ack at the end of
+  `review_c2.md`). c2: every High and Medium of the three c1 reviews fixed, main Lows applied
   (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause
   check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A16 (v4 split: **A16 = A2.1, A2.3, A2.4, A2.5, A2.6**; A16b = A2.2, A2.7–A2.9 and
@@ -143,7 +144,7 @@ N024 · Who can use it? Resident individuals, minors too. For a minor, the natur
 > 1 C: card "who: resident individuals, incl. minors (natural guardian countersigns Form A2)" [F16] · 2 B: box "individuals only"
 
 N024a · Not companies, partnership firms, H-U-Fs or trusts. A sole proprietor sending from his firm's account? That's his own jar.
-> 1 C: card "not: companies, firms, HUFs, trusts · sole proprietor: counts in his own USD 250,000 · an LLP sponsoring a partner's studies: the LLP's own payment, outside his LRS" [F16, F17, F18]
+> 1 C: card "not: companies, firms, HUFs, trusts · sole proprietor: his own jar" · 2 N: "LLP paying a partner's studies: the LLP's payment, outside his LRS" [F16, F17, F18]
 
 N025 · What can she send it for? Almost any current purpose: travel, studies, medical treatment, gifts, and support for relatives abroad.
 > 1 C: card "travel · studies · medical · gift or donation · relatives' maintenance · employment, emigration · business trips" [F33]
@@ -164,13 +165,13 @@ N029a · No. What's sent is counted. Bring it back, and the jar stays used for t
 > 1 C: trap card "'money brought back restores the limit' ✗ · once used, used for that financial year ✓ (RBI FAQ)" [F21] · 2 B: underline "stays used"
 
 N030 · What's barred even inside the limit? Margin money or margin calls to exchanges abroad, forex trading abroad, and Schedule one items.
-> 1 C: card "never under LRS: Schedule I and II items · margins abroad · forex trading abroad · FCCBs bought abroad · capital remittances to FATF non-co-operative countries" [F12]
+> 1 C: card "never under LRS: Schedule I, II items · margins abroad · forex trading abroad · FATF non-co-operative countries (capital)" [F12]
 
 N031 · And above two lakh fifty thousand? Three cases go higher, without R-B-I: medical treatment, studies, and emigration.
 > 1 C: card "above USD 250,000 without RBI: medical treatment · studies · emigration" [F36] · 2 B: box "medical · studies · emigration"
 
 N032 · The bank releases on an estimate: from the hospital, or the university. Falls sick while abroad? The bank can still release.
-> 1 C: card "medical: doctor's or hospital's estimate · studies: university's estimate · emigration: what the country prescribes · sick abroad: no RBI approval · attendant: up to USD 250,000" [F36, F38]
+> 1 C: card "medical, studies: on the estimate · sick abroad: no RBI approval needed" · 2 N: "attendant: up to USD 250,000" [F36, F38]
 
 N032a · Any other purpose above the limit needs R-B-I.
 > 1 N: "other purposes above the limit: RBI approval" [F33]
@@ -213,7 +214,7 @@ N041 · Can her bank lend her the money to send?
 N042 · It depends on the lane. For capital uses, like U-S shares, no bank credit at all. For current ones, like fees, a loan is fine.
 > 1 C: trap card "capital uses: no bank credit · current uses (e.g. education loan): banks may lend" [F28] · 2 B: underline "depends on the lane"
 
-N043 · And family? Each member has a jar. They can club them: Mrs Lakshmi and her husband together, for his fees.
+N043 · And family? Each member has a jar. They can club them, add jars together: Mrs Lakshmi and her husband, for his fees.
 > 1 S: two jars "mother" · "father" · 2 C: card "family may club · capital uses: co-owners only" [F29]
 
 N043a · For a capital use, like a joint account abroad, only co-owners can club.
@@ -254,7 +255,7 @@ N051 · For everything else, gifts, travel, investment, twenty per cent. And if 
 N051a · And this T-C-S is only on L-R-S, so only on individuals. A company paying for imports? Not this T-C-S.
 > 1 C: card "LRS TCS: individuals' LRS remittances only · company import or trade payments: not LRS" [F51]
 
-N052 · Overseas tour packages are separate: two per cent from the first rupee, collected by the tour operator.
+N052 · A tour package bought from a tour operator is separate: two per cent from the first rupee, collected by the tour operator.
 > 1 C: card "overseas tour package: 2 % from the first rupee, collected by the seller · no PAN: 2 × rate or 5 %, higher" [F45, F50]
 
 N053 · Careful with dates. In twenty twenty-five to twenty-six, education was five per cent above ten lakh. Until March twenty twenty-five, the line was seven lakh.
