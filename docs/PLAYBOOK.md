@@ -574,6 +574,15 @@ checks decide when a cut is ready, not a feeling.
     (Cowork's 2026-11-14 batch moved here from `CAIIB BFM Research/` on 2026-11-19; files unchanged, verdict unchanged).
 - **2026-11-22: GitHub's runners are retired for rendering; renders move to Modal (owner).** GitHub removed the owner's Creator repo for rendering 4K video on its runners. GitHub's Actions terms allow its compute only for building, testing and shipping the repository's own software, and a video farm is not that, so the same could happen to this repo. No render, plate or Short runs on GitHub Actions any more, at any resolution; the workflows moved to `.github/workflows-retired/` and are kept only as the reference for the Modal port (the shard plan, the join, the loudness pass and the Drive upload carry over). The notes below on runners are history until the Modal pipeline replaces them.
 - **The Modal pipeline (2026-11-22):** `tools/modal/render.py` (app `caiib-render`) does what `render.yml` did: N containers render slices with `render_part.mjs`, one renders the sound, one joins, normalises to -16 LUFS, runs `smooth_audit.py` and pushes the MP4 plus `<name>.log.txt` (result, link, timings, cost estimate) to Drive `BFM/<video>/renders/`. Started by `.github/workflows/modal-render.yml`, which only deploys and starts the app (no rendering on GitHub); the session reads the result from the log file in Drive. Repo secrets: `MODAL_TOKEN_ID`, `MODAL_TOKEN_SECRET`, `GDRIVE_RCLONE_TOKEN`.
+- **Measured on Modal (2026-11-22, A07 Incoterms 16:52 at 720p, 6 slices of 2 physical cores each):** sound in one
+  container 524 s held the render to 605 s; with the sound in 6 slices too (`render_part.mjs soundpart`), 435 s start
+  to finish (picture slices 189–268 s, sound slices about 103 s), about **$0.09** in render containers, smooth audit
+  PASS. The sliced sound is bit-identical to the one-piece sound (RMS difference 0.0 over the whole lesson), so the
+  joints add no clicks. Lessons learned on the way: inside a container the app file is `/root/render.py` (a path
+  computed from the repo crashed every container, and a deployed app retries crashes forever: `max_containers`
+  now caps every function); Remotion counts the container's cores (2) while Python's `os.cpu_count()` reports the
+  host's, so `render_part.mjs` caps concurrency itself; the client must support the account's image builder (1.6.3
+  for 2026.10). Watch a render with `modal-status.yml` (logs, and `stop=true` to stop the app).
 - **Rendering on GitHub runners** (owner, 2026-11-19; 6 runners like Creator): `.github/workflows/render.yml` (Actions
   → render → Run workflow, from the GitHub app) splits the lesson over up to 6 runners (`tools/video/render_part.mjs`:
   each renders a slice as silent video; a 7th renders the sound), joins them without re-encoding,
