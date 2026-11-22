@@ -93,6 +93,11 @@ Never a new loose doc.
     ch. XV: standby ≥ 20 %), status holders (FTP 1.25–1.30; free-of-cost limit ₹1 cr or 2 % still in force), EEFC /
     FCA abroad (IFSC 3 months) / DDA (3 years in FEMA, CF 338 still prints 2: re-check at the freeze); checker
     `tools/check/export_factoring.py`; reviews c1 ×3, c2, c3 ADOPT; ch3–4 merged; voice page 2 parts, https://claude.ai/artifact/EYawTrwipzzeQTtD6GnzcV).
+    **A15 c3 locked** (2026-11-22, `A/A15/`, fact sheet `A7.1-A7.5_A15.md`: country risk per RBI Credit Risk Management
+    Directions 2025 ch. VI (policy, own rating, net funded ≥ 1 %) and IRACP Directions 2025 para 113 (0.25/0.25/5/20/25/100/100);
+    **old RBI words (to Nov 2025) differ: B2 "high", C1 "very high", C2 "restricted", D "off-credit": go by the letter**;
+    ECGC 7 grades, open / restricted I-II / off-cover; SCR 90 %, ≤ 180 days, SSP/BWP/MBEP 80 %, SEP 95/100 % (FAQ); checker
+    `tools/check/country_risk.py`; reviews c1 ×3, c2, c3 ADOPT; voice page 2 parts, https://claude.ai/artifact/CX93MJyXu4TkfCVNDioHm1).
     Open: FEDAI 6.3 "cancel and rebook" vs RBI Circular 25 (10 Oct 2026) no rebooking: re-check FEDAI at the freeze. Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
@@ -123,7 +128,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04–A06 locked (A07 locked earlier). A08–A14 locked (c3, voice pages; 2026-11-22); next A15 (risks in foreign trade and ECGC's policies; v4 plan in `plans_A.md`) onward:** fact sheet →
+    A04–A06 locked (A07 locked earlier). A08–A15 locked (c3, voice pages; 2026-11-22); A15 locked (2026-11-22); next A15b (ECGC for banks, claims; EXIM Bank; v4 plan in `plans_A.md` §A15) onward:** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
