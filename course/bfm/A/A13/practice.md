@@ -1,4 +1,4 @@
-# A13 · Practice (c1, 2026-11-22)
+# A13 · Practice (c2, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A4.6-A5.10_A13.md`. Sums checked by
 `tools/check/import_bills.py`. All figures illustrative. Answers at the end.
@@ -16,8 +16,8 @@ Our own questions, written from the fact sheet `research/bfm/facts/A4.6-A5.10_A1
 5. An importer paid an advance, the goods never came, and the advance was not brought back. Its next advance needs:
    (a) RBI approval (b) nothing extra (c) an unconditional irrevocable SBLC or a guarantee of an international bank of
    repute (or an AD's guarantee against such a bank's counter-guarantee) (d) a Ministry of Finance waiver
-6. Advance remittance for import of **silver** is: (a) allowed up to USD 100,000 (b) allowed against an SBLC (c) not
-   permitted (d) allowed for nominated agencies only
+6. An ordinary trader asks for an advance remittance to import **silver** (not through the IIBX). It is: (a) allowed
+   up to USD 100,000 (b) allowed against an SBLC (c) not permitted (d) allowed if the AD's Board policy says so
 7. An import bill under LC is not retired and the bank crystallises it. No forward contract. The rate is:
    (a) TT buying (b) TT selling (c) bill selling (d) the rate on the LC opening date
 8. Interbank USD/INR 86.00 / 86.02; TT selling margin 0.12 %; bill selling a further 0.15 %. An import bill of
@@ -44,10 +44,20 @@ Our own questions, written from the fact sheet `research/bfm/facts/A4.6-A5.10_A1
 20. In a merchanting trade, the outward and inward legs must normally be completed within: (a) 3 months (b) 6 months
     (c) 9 months (d) 1 year
 
+21. The P8 bill is not retired. The bank crystallises it at that day's bill selling rate 86.2524 per its stated policy;
+    commercial rate 10.95 % a year, charged from the day the bank paid abroad; the importer pays 25 days after the
+    bank paid. Total payable?
+22. Which is **NOT TRUE** of trade credit at 31 Dec 2026? (a) for non-capital goods: up to one year or the operating
+    cycle, whichever is less (b) an AD bank may issue a Letter of Undertaking / Letter of Comfort to the overseas lender
+    (c) FCY trade credit all-in cost: benchmark + 300 bps (d) trade credit may be in INR
+23. (Old-rule item) "Under the Import Master Direction, an AD could allow advance remittance for import of goods
+    without a bank guarantee up to: (a) USD 100,000 (b) USD 200,000 (c) USD 500,000 (d) USD 5 million". Which do you
+    pick, and is it today's rule?
+
 ## Answers
-1 c [F5] · 2 c [F3] · 3 d [F4] · 4 b [F7] · 5 c [F10] · 6 c [F9] · 7 c (same as retirement) [F21] ·
+1 c [F5] · 2 c [F3] · 3 d [F4] · 4 b [F7] · 5 c [F10] · 6 c (the only exception: qualified jewellers / CEPA quota holders through IIBX, 11 days) [F9, F9a] · 7 c (same as retirement) [F21] ·
 8 bill selling `86.02 × 1.0012 = × 1.0015 =` 86.2524; `30000 × 86.2524 =` **₹25,87,572** [numericals] ·
 9 `30000 × 86.4 =` **₹25,92,000** [F21] · 10 `6.85 + 2.5 =` **9.35 %** [F19] · 11 (i)-q, (ii)-p [F14] ·
 12 c (lesser of 1 year and the cycle) [F18] · 13 b (TC up to 3 years is not ECB) [F15] · 14 d [F17] ·
 15 c [F16] · 16 c [F24] · 17 b [F26] · 18 a [F24] · 19 False: an old Import MD rule, superseded 1 Oct 2026; today
-IDPMS matching and the AD's follow-up [F28] · 20 b [F30]
+IDPMS matching and the AD's follow-up [F28] · 20 b [F30] · 21 `30000 × 86.2524 =` 25,87,572; `× 10.95 % = × 25 = ÷ 365 =` 19,406.79; total **₹26,06,978.79** [F21, F22] · 22 b (guarantee allowed; LoU/LoC not permitted) [F20] · 23 b, USD 200,000: only old figures are offered, so the item follows the superseded MD; today there is no RBI figure, the AD's own policy decides [F7, F8]

@@ -44,17 +44,20 @@ if __name__ == "__main__":
     check("Q1b rupees at the forward rate 86.25", D(50000) * D("86.25"), c12(50000 * 86.25))
     check("Q1b cover vs no cover (difference)", D(50000) * D("86.25") - r1, c12(4312500 - 4302595))
 
-    # Q2 · Not retired: crystallised per the bank's stated policy (the case: 10th day after the documents arrive)
-    docs = date(2027, 4, 5)
-    cry = docs + timedelta(10)
-    check_date("Q2 crystallisation day (documents + 10 days, case)", cry, date(2027, 4, 15))
-    paid = cry + timedelta(20)
-    check_date("Q2 hospital pays (crystallisation + 20 days)", paid, date(2027, 5, 5))
+    # Q2 · Not retired: the bank paid abroad Mon 5 Apr 2027 (sight LC); its stated policy crystallises on the
+    # 10th day (case); interest at the commercial rate from the day the bank paid till the hospital pays (case).
+    paidabroad = date(2027, 4, 5)
+    cry = paidabroad + timedelta(10)
+    check_date("Q2 crystallisation day (bank paid + 10 days, case)", cry, date(2027, 4, 15))
+    paid = date(2027, 5, 5)
+    check_date("Q2 hospital pays", paid, date(2027, 5, 5))
+    days = (paid - paidabroad).days
+    assert days == 30, days
     # Same rate as retirement (FEDAI 3.1(b)); bill selling that day 86.0519 (rates unchanged, illustrative)
     cr = check("Q2 crystallised at bill selling 86.0519", D(50000) * D("86.0519"), c12(50000 * 86.0519))
-    i = check("Q2 interest 10.95% x 20/365 on the rupee debt", interest_w1(cr, "10.95", 20),
-              interest_w2(4302595, 10.95, 20))
-    check("Q2 total the hospital pays", cr + i, c12(4302595 + 25815.57))
+    i = check("Q2 interest 10.95% x 30/365 from the bank's payment", interest_w1(cr, "10.95", days),
+              interest_w2(4302595, 10.95, days))
+    check("Q2 total the hospital pays", cr + i, c12(4302595 + 38723.36))
 
     # Q3 · Trade credit all-in-cost ceiling: benchmark 4.20 % (illustrative) + 300 bps (FCY) / G-sec 6.60 % + 250 bps (INR)
     check("Q3 FCY TC ceiling 4.20 + 3.00", D("4.20") + D("3.00"), c12(4.2 + 3))
@@ -66,9 +69,9 @@ if __name__ == "__main__":
     assert e == D("86.1521"), e
     check("V rupees for USD 20,000 at 86.1521", D(20000) * e, c12(20000 * 86.1521))
 
-    # Homework (N079): bill selling rises to 86.20; crystallised USD 50,000; interest 10.95 % x 20 days
+    # Homework (N079): bill selling 86.20 on crystallisation day; USD 50,000; interest 10.95 % x 30 days
     h = check("HW rupees at 86.20", D(50000) * D("86.20"), c12(50000 * 86.2))
-    check("HW interest 10.95% x 20/365", interest_w1(h, "10.95", 20), interest_w2(4310000, 10.95, 20))
+    check("HW interest 10.95% x 30/365", interest_w1(h, "10.95", 30), interest_w2(4310000, 10.95, 30))
 
     # Practice P8: USD 30,000 bill, interbank 86.00 / 86.02, TT selling 0.12 %, bill selling +0.15 %; P9: forward 86.40
     pr = check("P8 bill selling (86.02 x 1.0012 x 1.0015)", D("86.02") * D("1.0012") * D("1.0015"),
@@ -77,4 +80,8 @@ if __name__ == "__main__":
     check("P9 rupees at the forward 86.40", D(30000) * D("86.40"), c12(30000 * 86.4))
     # P10: INR TC, G-sec of matching maturity 6.85 % (illustrative) + 250 bps
     check("P10 INR TC ceiling 6.85 + 2.50", D("6.85") + D("2.50"), c12(6.85 + 2.5))
+    # P21: the P8 bill not retired; crystallised at 86.2524; commercial rate 10.95 % from the bank's payment, 25 days
+    c21 = check("P21 crystallised rupees", D(30000) * D("86.2524"), c12(30000 * 86.2524))
+    i21 = check("P21 interest 10.95% x 25/365", interest_w1(c21, "10.95", 25), interest_w2(2587572, 10.95, 25))
+    check("P21 total", c21 + i21, c12(2587572 + float(i21)))
     print("all OK")
