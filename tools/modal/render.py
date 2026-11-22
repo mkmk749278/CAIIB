@@ -27,7 +27,7 @@ import modal
 
 APP = "caiib-render"
 NODE = "22.11.0"
-CPU = 2.0          # physical cores (= 4 vCPU, a GitHub runner); render_part.mjs renders with concurrency 4
+CPU = 2.0          # physical cores (= 4 vCPU, a GitHub runner); concurrency = the cores the container shows
 MEM = 8192         # MiB per render container
 # Modal's list prices (USD) as read on 2026-11-22: the log's cost line is an estimate; the Modal bill is the truth.
 USD_PER_CORE_S = 0.0000131
@@ -104,7 +104,9 @@ def render_piece(run: str, job: str, comp: str, lines: str, audio_dir: str, scal
         _run(["node", tool, comp, "sound", str(out / "sound.wav")], cwd=work / "video")
     else:
         i, n = job.split("/")
-        _run(["node", tool, comp, "part", i, n, scale, str(out / f"part_{int(i):02d}.mp4")], cwd=work / "video")
+        # Remotion counts the container's cores (2 for cpu=2.0) and refuses a higher concurrency (2026-11-22)
+        _run(["node", tool, comp, "part", i, n, scale, str(out / f"part_{int(i):02d}.mp4")], cwd=work / "video",
+             env={"RENDER_CONCURRENCY": str(max(1, os.cpu_count() or int(CPU)))})
     vol.commit()
     return {"job": job, "seconds": round(time.time() - t0, 1), "cpu": CPU, "mem": MEM}
 
