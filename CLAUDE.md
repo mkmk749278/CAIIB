@@ -113,7 +113,7 @@ Never a new loose doc.
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
-    engine `kit/flow.tsx` + pictures `kit/forex.tsx`; 720p review cut on the runners, then the checks, then the
+    engine `kit/flow.tsx` + pictures `kit/forex.tsx`; 720p review cut on Modal, then the checks, then the
     owner. Re-run `flow_voice.py` with the enhanced takes if a line is re-generated. (2) A stray `BFM/A00/voice` folder at the top of the owner's My Drive (created by mistake) holds
     the discarded a01–a03; delete only if the owner says so. (3) Then fact sheets for the next Module A lessons and
     the three reviews of A01 v6; on through Module A.
@@ -231,8 +231,7 @@ spliced in at the pauses →
 `tools/video/flow_voice.py` (continuous voice, planned holds only, re-generated lines
 swapped in) + music bed ducked → `mix.flac` in Drive `BFM/<video>/flow/` → timeline JSON → Remotion composition on
 the shared kit (`video/src/kit/`: notebook page, journey road, rule cards, growing map) with a beat for every
-sentence (`sk()`, `B()`, `W()`, glow on named things, crossfades only) → render on 6 GitHub runners, up to 18 when the owner says the account's runners are free (`render.yml`,
-about 7 min; 720p review cut, then the 1080p master; never 4K) → checks `smooth_audit.py`, `sentence_sync.py`,
+sentence (`sk()`, `B()`, `W()`, glow on named things, crossfades only) → render on Modal (720p review cut, then the 1080p master; never 4K; never GitHub's runners) → checks `smooth_audit.py`, `sentence_sync.py`,
 `overlap_check.mjs/.py`, `sync_sheet.py` → fix what they list → only then to the owner.
 
 ## Owner and setup
@@ -253,8 +252,8 @@ about 7 min; 720p review cut, then the 1080p master; never 4K) → checks `smoot
   (text only, straight into Drive). The phone's rclone remote is `creator` (set up by the Creator repo); CAIIB uses
   it as `creator,root_folder_id=1Yw1b2rwppOtup_eCRE5fLP0zLM9qAIXe:`. The script must be on `main` before the owner
   runs it. YouTube refuses the cloud container, so never try yt-dlp downloads here beyond search.
-- **Accounts the cloud environment holds** (values never shown): `GDRIVE_RCLONE_TOKEN` (Drive, also a repo secret
-  for `render.yml`); network secrets for `huggingface.co`, the Maya 2 demo space and `api.kaggle.com` (added
+- **Accounts the cloud environment holds** (values never shown): `GDRIVE_RCLONE_TOKEN` (Drive; the Modal
+  renders need it too); network secrets for `huggingface.co`, the Maya 2 demo space and `api.kaggle.com` (added
   2026-11-20; the proxy injects them, so tools get a placeholder; see `tools/voice/kaggle_maya.py`).
 
 ## Code and text in git, media in Drive (owner, 2026-11-19; PLAYBOOK §8)
@@ -266,8 +265,7 @@ about 7 min; 720p review cut, then the 1080p master; never 4K) → checks `smoot
   `BFM/_shared/` (sfx, template assets), `BFM/_downloads/` (sources), `BFM/research/` (laptop batches with a
   `VERDICT.md`); music from the shared `Music-Library/`.
 - Send the owner Drive view links (private, open on the phone), never public shares.
-- Renders run on GitHub runners (`.github/workflows/render.yml` → Drive `BFM/<video>/renders/`); the cloud session
-  renders only short tests.
+- **Renders run on Modal, never on GitHub's runners (owner, 2026-11-22):** GitHub removed the owner's Creator repo for rendering 4K video on its runners, so no render, Blender plate, Short or other heavy media job runs on GitHub Actions in any repo, at any resolution. The old workflows sit in `.github/workflows-retired/` (GitHub never runs that folder), kept only as the reference for the Modal port. Until the Modal pipeline is built and tested, no full renders; the session renders stills and short tests only. Modal is paid compute past its monthly free credit: state the expected cost of every render and ask before going past the free credit.
 
 ## Layout
 - `docs/PLAYBOOK.md`: the why (origin, market, method, lesson and video design, decisions log, Drive).
