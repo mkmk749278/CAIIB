@@ -78,7 +78,10 @@ Never a new loose doc.
     list, RBI caution list, 15 months, SOFTEX) taught as trap cards; voice page 2 parts); **A11b c3 locked** (`A/A11b/`,
     fact sheet `A5.3_A11b.md` from Credit Facilities Directions 2025 ch. XV; "lower of FOB and domestic cost less
     margin" is bank practice, not RBI text, taught as the exam method; checker `tools/check/export_pcl.py`; voice page
-    2 parts). Gold Card facts for A14 already in `A5.3_A11b.md` (standby ≥ 20 %).
+    2 parts). **A12 c3 locked** (`A/A12/`, fact sheet `A5.11-A5.3_A12.md`: **FEDAI 10th ed. sets no
+    crystallisation day; each bank's published policy decides** (old "30th day" taught as history; the case gives the
+    day); TT selling to crystallise, TT buying for later proceeds; checker `tools/check/export_bills.py`; voice page 2
+    parts). Gold Card facts for A14 already in `A5.3_A11b.md` (standby ≥ 20 %).
     Open: FEDAI 6.3 "cancel and rebook" vs RBI Circular 25 (10 Oct 2026) no rebooking: re-check FEDAI at the freeze. Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
@@ -109,7 +112,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04–A06 locked (A07 locked earlier). A08–A11b locked (c3, voice pages; 2026-11-22); next A12 (export bill discounting and crystallisation, the full case) onward:** fact sheet →
+    A04–A06 locked (A07 locked earlier). A08–A12 locked (c3, voice pages; 2026-11-22); next A13 (import rules and finance: retiring bills, supplier's and buyer's credit, trade credit, IDPMS) onward:** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared

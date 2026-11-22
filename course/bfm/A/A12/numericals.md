@@ -1,4 +1,4 @@
-# A12 · Numericals (c2, 2026-11-22)
+# A12 · Numericals (c3, 2026-11-22)
 
 All rates, interest rates and dates illustrative. Checked by `python3 tools/check/export_bills.py` (two ways: Decimal,
 and 12-digit calculator key presses; dates by calendar); all OK. Basic 8-function calculator only. Interest on a
@@ -15,7 +15,7 @@ money finally comes ₹85.95 (illustrative).
 `85.5 + 0.4375 =` 85.9375 · `× 0.9984 =` → **₹85.8000** (85 days → 2 completed months; bank buys → completed months only).
 Usance bill → discounted at the **bill buying rate** [F2]. `100000 × 85.8 =` → **₹85,80,000**.
 
-### Q2 · Interest up front, and her credit (N021–N025c)
+### Q2 · Interest up front, and her credit (N021–N025b)
 Notional due date = NTP 25 + usance 60 = **85 days** [F4]. Interest is taken up front [F3].
 `8580000 × 7.3 % =` 626340 · `× 85 =` 53238900 · `÷ 365 =` → **₹1,45,860**.
 Credit: `8580000 − 145860 =` → **₹84,34,140** (first used to repay any packing credit, A11b).
@@ -30,7 +30,7 @@ Overdue interest, 25 May → 24 Jun = 30 days, on the advance [F11]:
 `8580000 × 10.95 % =` 939510 · `× 30 =` 28185300 · `÷ 365 =` → **₹77,220**.
 On crystallisation day she **pays the overdue interest ₹77,220** [F11]; the **₹86,40,000 stays owed** as her rupee debt, with interest from that day. Total due that day: `8640000 + 77220 =` → **₹87,17,220** (N046a).
 
-### Q5 · Money comes later (N048–N051a)
+### Q5 · Money comes later (N048–N051)
 Hamburg pays on Wed 14 Jul 2027, 20 days after crystallisation. TT buying [F13]: `100000 × 85.95 =` → ₹85,95,000.
 Interest on the crystallised ₹86,40,000 for 20 days [F11]: `8640000 × 10.95 % =` 946080 · `× 20 =` 18921600 ·
 `÷ 365 =` → ₹51,840.
@@ -41,7 +41,7 @@ USD 60,000 sight bill, not under LC, purchased at bill buying ₹85.50; NTP 25 d
 `60000 × 85.5 =` ₹51,30,000 · `5130000 × 7.3 % =` 374490 · `× 25 =` · `÷ 365 =` → ₹25,650 · credit
 `5130000 − 25650 =` → **₹51,04,350**.
 
-## Early payment (N029–N030a)
+## Early payment (N029–N030)
 Hamburg pays the usance bill 10 days early: refund `8580000 × 7.3 % =` · `× 10 =` · `÷ 365 =` → **₹17,160**, plus or
 minus the notional swap cost [F8] (swap cost not computed).
 

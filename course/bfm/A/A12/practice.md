@@ -1,4 +1,4 @@
-# A12 · Practice (c2, 2026-11-22; c1 review fixes applied)
+# A12 · Practice (c3, 2026-11-22; c1 and c2 review fixes applied)
 
 Our own items; figures illustrative. Rules as at 31 Dec 2026. Reasons cite `research/bfm/facts/A5.11-A5.3_A12.md`
 [F#], A11b's sheet [A11b F#] or `numericals.md`. Sums checked by `tools/check/export_bills.py`. Interest on a
@@ -30,8 +30,8 @@ USD 200. TT selling ₹86.10. What rupee amount does the bank recover, before in
 
 **P6.** (keyed in) A sight bill of USD 20,000, not under an LC, is purchased at ₹86.00. NTP 25 days; interest 7.3 % a
 year. The interest recovered up front is:
-(a) ₹0, as it is a sight bill (b) **₹8,600** (c) ₹10,320 (d) ₹1,25,560
-*Reason: `1720000 × 7.3 % × 25 ÷ 365 =` 8,600 [F3, F4]. (a) forgets the NTP; (c) uses 30 days; (d) is a full year.*
+(a) ₹0, as it is a sight bill (b) ₹10,320 (c) ₹1,25,560 (d) **₹8,600**
+*Reason: `1720000 × 7.3 % × 25 ÷ 365 =` 8,600 [F3, F4]. (a) forgets the NTP; (b) uses 30 days; (c) is a full year.*
 
 **P7.** Under RBI's definition, a **usance** export bill becomes overdue when:
 (a) it is not paid within the NTP plus grace (b) **it is not paid on the due date** (c) it is not paid within 30 days
@@ -40,10 +40,10 @@ of the due date (d) it is crystallised
 definition.*
 
 **P8.** Which statement is **true** at the 31 Dec 2026 cut-off?
-(a) FEDAI fixes crystallisation on the 30th day after the due date (b) **each bank sets its crystallisation policy
-and must make it transparently available to customers** (c) a crystallised exporter no longer has to realise the
+(a) **each bank sets its crystallisation policy and must make it transparently available to customers** (b) FEDAI
+fixes crystallisation on the 30th day after the due date (c) a crystallised exporter no longer has to realise the
 export (d) a bill with a fixed due date carries the NTP as well
-*Reason: FEDAI 2.1(b)(i)–(ii) [F9]; (a) old rule; (c) EDPMS stays open [F17]; (d) NTP not applicable [F4].*
+*Reason: FEDAI 2.1(b)(i)–(ii) [F9]; (b) old rule; (c) EDPMS stays open [F17]; (d) NTP not applicable [F4].*
 
 **P9.** Packing-credit statements. Which is **false**?
 (a) Not adjusted by export documents within 360 days → not export credit from the start (b) If exports never happen,
@@ -53,8 +53,8 @@ and domestic cost** (d) A running account is only for good-track-record exporter
 are A11b F3, F4, F8.*
 
 **P10.** The bill is paid 10 days before its notional due date. The bank:
-(a) keeps all the interest (b) **refunds interest for the unexpired period and pays or recovers the notional swap
-cost** (c) charges overdue interest (d) crystallises the bill
+(a) keeps all the interest (b) charges overdue interest (c) **refunds interest for the unexpired period and pays or
+recovers the notional swap cost** (d) crystallises the bill
 *Reason: FEDAI 2.2(c) [F8].*
 
 **P11.** (linked case, keyed in) A USD 80,000 bill at 90 days after sight, not under an LC, is discounted on Fri 9 Apr

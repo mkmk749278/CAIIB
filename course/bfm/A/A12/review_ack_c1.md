@@ -24,3 +24,10 @@ Three independent c1 reviews, all **ADOPT WITH FIXES**: expert 0 H · 3 M · 12 
 | Lows applied | N004 "linked case questions"; N037 "keeps it open to customers"; N060 "or EOU and SEZ"; ₹86 forward and ₹85.95 labelled illustrative; P2 "FBIL reference rate"; faded variant USD 60,000 (₹25,650; ₹51,04,350); N023 card "+ grace, if any"; F5 source split CF 291 / FEDAI 2.2(a); N024 card "due date never changed after discount"; N042 card "even if a forward was used at discount"; N049 card "a contract booked for them"; N052 card collection bill (F20); N051a 60,000 → 45,000 explained; N023 says "N-T-P"; N063 second pause question; N075 a question; header length |
 | Not done | `%` then `=` in key presses: kept, the course's convention since A11b (course-wide decision, not this lesson's); recall from A05 in the close: dropped for length (N015 rebuilds A05's rate instead); F12 / F18 not voiced (PDF traps page) |
 | Length | ~1,708 spoken words + ~182 s holds ≈ 15 min; cut order in the header if the take runs long |
+
+## Re-review c2 (`review_c2.md`): ADOPT WITH FIXES, 1 H · 1 M · 7 L → all applied in c3 (locked)
+- H1 N065–N066: "the sight bill buying rate"; card "ready rates, same day: sight bill buying < TT buying < TT selling ·
+  a usance bill buying rate adds the premium: don't rank it".
+- M1 N015: "The bill's sixty days, plus twenty-five in transit: eighty-five days."
+- Lows: N051a cut (length ≈ 15 min: 1,692 words + 182 s holds); header holds 10 s; N046a "total dues"; N043 "the
+  bank's advance was"; numericals line ids; N027 keys in full; practice keys rebalanced (P6 → d, P8 → a, P10 → c).

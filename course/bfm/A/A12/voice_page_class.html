@@ -1,0 +1,150 @@
+<title>A12 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A12 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A12/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Discounting the bill + Chapter 2 · Interest up front (N001–N032)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N032", "text": "[warmly] Hello, everyone. Today the money is late, and we find out who carries the risk. First, from last class. What normally repays her packing credit? The export bill, when the bank buys or discounts it. Today we do that sum in full, and then the bill goes wrong. Why it matters: this came in the papers we studied as linked case questions. Discounting, then crystallisation. Our Tiruppur exporter ships a second lot to Hamburg. Her bill: a hundred thousand dollars, payable sixty days after sight. Her bank discounts it on the first of March. On the due date, Hamburg doesn't pay. What does the bank do? Some of you say, it simply waits. Others, it makes her owe the money in rupees. Keep your answer. We settle it in chapter three, with the rule and the numbers. Chapter one. Banks use three words here. A sight bill is purchased. A usance bill is discounted. A bill under an L-C is negotiated. All three are the same idea. The bank pays her now, and collects from Hamburg later. Many of you think the bank has now bought the risk too. It hasn't. If Hamburg doesn't pay, she owes the bank those dollars. Her bill is payable after sight. Which word fits? Discounted. It's a usance bill, not under an L-C. Which rate does the bank use? Think back to the counter. The bank receives dollars, so it buys them. The bill buying rate. Or, if she booked a forward contract, that contracted rate. Let's build it, as we did before. Spot buying, eighty-five fifty. The bill's sixty days, plus twenty-five in transit: eighty-five days. So two completed months of premium. Premium forty-three point seven five paise: eighty-five point nine three seven five. Less a margin of point one six per cent. Eighty-five rupees eighty paise. That's her bill buying rate. Her rupee value? A hundred thousand times eighty-five rupees eighty paise. Eighty-five lakh eighty thousand rupees. Hold on to that number. It's what the bank pays out. On bills not under an L-C, many banks also hold back a margin. That's bank practice; the case will say. Here, none. Pause check for chapter one. One. A bill under an L-C: purchased, discounted, or negotiated? Negotiated. Two, the twist. She had booked a forward at eighty-six rupees, illustrative. Which rate now? Eighty-six, the contracted rate. [seriously] If you remember one thing from chapter one: bank receives dollars, bill buying rate, unless there's a forward. Chapter two. First, from chapter one. Which rate for discounting, if there's no forward? Bill buying. Now, the bank pays today but gets the dollars later. So it charges interest, and it takes it up front. For how many days? Sixty days after sight. But sight happens only when the bill reaches Hamburg. So we add the normal transit period, N-T-P, twenty-five days for a foreign currency bill. Sixty plus twenty-five: eighty-five days. Nobody knows when Hamburg will see the bill, so the bank assumes a date: eighty-five days on. That assumed date is the notional due date. A bill due a fixed date after shipment needs no transit period. Its due date is already known. Interest at seven point three per cent a year, illustrative, on eighty-five lakh eighty thousand, for eighty-five days. Work it out. Times seven point three, per cent. Times eighty-five, divided by three sixty-five. One lakh forty-five thousand eight hundred sixty rupees. So she gets eighty-five lakh eighty thousand, less the interest. Eighty-four lakh thirty-four thousand one hundred forty rupees. Your turn. A sight bill for sixty thousand dollars, bought at eighty-five rupees fifty paise. First, its rupee value? Fifty-one lakh thirty thousand. Now interest at seven point three per cent, for the transit period. How many days, and how much? Twenty-five days: twenty-five thousand six hundred fifty rupees. Her credit, fifty-one lakh four thousand three hundred fifty. Many of you forget the transit period for a sight bill. It's paid at sight, but the bill still takes time to get there. What if Hamburg pays early? The bank refunds interest for the days it didn't need. Ten days early here: seventeen thousand one hundred sixty rupees back. Pause check for chapter two. One. Interest on a discounted bill is taken when? Up front. Two, the twist. A bill payable ninety days from shipment. Do we add the transit period? No. Its due date is fixed. [seriously] If you remember one thing from chapter two: after sight, add the transit period; a fixed date, don't."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · Unpaid: crystallisation + Chapter 4 · The packing-credit statements + Close (N033–N076)", "turns": [{"speaker": "Teacher", "first": "N033", "last": "N076", "text": "Chapter three. First, from chapter two. Her bill's notional due date was how many days after discounting? Eighty-five. From the first of March, that's the twenty-fifth of May. Hamburg doesn't pay. From that day, the bill is overdue. That's the rule for a usance bill: not paid on the due date. A sight bill is overdue if not paid within the transit period, plus any grace. Remember, she owes the bank those hundred thousand dollars. The bank paid rupees for dollars it still doesn't have. And the rate keeps moving. So the bank moves that risk to her. It turns her dollar debt into a fixed rupee debt. The exam word is crystallisation. On which day? Today, F-E-D-A-I sets no day. Each bank makes its own policy, and keeps it open to customers. Older books gave a fixed day: thirty days after the transit period for sight bills, after the due date for usance bills. A holiday moved it to the next working day. In the exam, the case tells you the day. Her bank's policy: thirty days after the due date. Twenty-fifth of May plus thirty. Which date? The twenty-fourth of June. Now the big question. Which rate? Think about the counter. Many of you say bill buying again. No. The dollars never came, and she owes them. So the bank sells her the dollars. The T-T selling rate on that day. Here, eighty-six rupees forty paise, illustrative. Her rupee debt? Eighty-six lakh forty thousand rupees. The bank's advance was eighty-five lakh eighty thousand. That sixty thousand gap is her exchange loss, for now. And interest for the overdue days. The bank takes it on the crystallisation day, from the due date. Overdue rate ten point nine five per cent, illustrative. Till today the advance was eighty-five lakh eighty thousand. Thirty days. Work it out. Seventy-seven thousand two hundred twenty rupees, paid that day. The eighty-six lakh forty thousand stays as her rupee debt. So on that day, her total dues are eighty-seven lakh seventeen thousand two hundred twenty rupees. So our opening question. The bank doesn't simply wait. It fixes her debt in rupees, at T-T selling, and adds interest. Then, on the fourteenth of July, Hamburg pays. Dollars arrive now. Which rate converts them? T-T buying. The dollars are already in the bank's account abroad. At eighty-five rupees ninety-five paise, illustrative: eighty-five lakh ninety-five thousand. Her debt is now in rupees, so interest runs on eighty-six lakh forty thousand. Twenty days: fifty-one thousand eight hundred forty. Debt eighty-six lakh forty thousand, dollars bring eighty-five lakh ninety-five thousand. What does she still pay? Work it out. Forty-five thousand short, plus fifty-one thousand eight hundred forty. Ninety-six thousand eight hundred forty rupees. One more case: the bill comes back dishonoured before crystallisation. The bank recovers the bill, plus foreign charges, at T-T selling. And her export entry in E-D-P-M-S stays open till Hamburg pays. Paying the bank isn't the same as the export being paid for. Pause check for chapter three. One. Crystallisation uses which rate? T-T selling. Two, the twist. After crystallisation, the dollars arrive. Which rate? T-T buying. [seriously] If you remember one thing from chapter three: unpaid, the bank sells; money in, the bank buys. Chapter four. First, from chapter three. Who decides the crystallisation day today? The bank's own policy. Now the second case the exam likes: five statements on packing credit. True or false? Say it before I do. One. Packing credit not closed by export documents in three hundred and sixty days stops being export credit from the start. True. Ab initio. Two. If the export never happens, the bank keeps charging the export credit rate. False. Domestic lending rate, plus penal charges. Three. Packing credit is normally repaid by the export bill's proceeds. True. That's liquidation. Four. Any exporter may have a running account, with no order in hand. False. Only exporters with a good track record, or E-O-U and S-E-Z units. Five. R-B-I fixes the limit as the lower of F-O-B and cost. False, and it's a sharp one. R-B-I says need-based. The lower of the two is bank practice, and how exam sums are set. Pause check for chapter four. One. The outer limit for packing credit, in days? Three sixty. Two, the twist. A P-C-F-C where export never happens: which rate settles it? T-T selling, as she must buy dollars. [seriously] If you remember one thing from chapter four: read every word of a statement. Quick mix. One. On the same day, which rate is higher: the sight bill buying rate, or T-T selling? T-T selling: it's the bank's selling side. Two. A sight bill's interest: how many days? The normal transit period, twenty-five days. Three. Why crystallise at all? To move the exchange risk from the bank to the exporter. Now the map, from memory. First node: discounting. Usance bill discounted, at bill buying or the forward rate. Second node: interest up front. Transit plus usance days; fixed dates need no transit period; early payment, a refund. Third node: overdue. Usance, not paid on the due date; sight, not paid within transit and grace. Fourth node: crystallisation. Bank's policy for the day, T-T selling, overdue interest. Fifth node: after crystallisation. Proceeds at T-T buying; dishonour at T-T selling; E-D-P-M-S open till paid. That's the map. Homework. Change the T-T selling rate to eighty-seven, and work out her crystallised debt and her exchange loss. Next class, we cross the counter. An importer's bill arrives, and the bank must pay out dollars. Which rate will it use? [warmly] That's the full case, start to finish. Breathe out, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

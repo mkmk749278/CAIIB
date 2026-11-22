@@ -1,6 +1,6 @@
-# A12 · "When the money is late" · CLASS EDITION (script c2, with cue sheet)
+# A12 · "When the money is late" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22.
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT WITH FIXES (1 H, 1 M, 7 L), all applied (`review_c2.md`). c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22.
   Standard style (`course/spec/lesson_spec.md`); a case lesson (C): the moves kept, the time spent on the case's steps
   and sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A12. Course order v4: A11b → **A12** → A13.
@@ -19,15 +19,15 @@
   set-up ("the case tells you the day"), never as today's FEDAI rule (fact sheet "Leads").
 - **What happens on crystallisation day** [F10, F11]: the dollar debt becomes a rupee debt at TT selling; the overdue
   interest is recovered that day; the rupee debt stays owed, with interest, until she pays or the dollars come.
-- **Holds**: questions at least 3 s; one-step sums 8 s; multi-step "work it out" sums 12 s; map 3–5 s per node.
+- **Holds**: questions at least 3 s; one-step sums 8 s; multi-step "work it out" sums 10 s; map 3–5 s per node.
 - **Say it right**: "T-T selling"; "N-T-P"; "F-E-D-A-I"; "E-D-P-M-S"; rupee amounts in full ("eighty-five lakh eighty
   thousand rupees", "eighty-five rupees ninety-five paise"); "ten point nine five per cent".
 - **Not in this video**: import bill crystallisation (A13); ECGC cover (A15); EBR detail (A11b); externalisation
   countries and EBR overdue rules (fact sheet F12, F18: PDF traps page). The five statements of chapter 4 cover period,
   no export, liquidation, running account and amount basis (eligibility was A11b's N012a).
-- **Length**: ~1,700 spoken words + ~3 min of holds ≈ 15 min. Chapters: 1 discounting the bill (~3.5 min) ·
+- **Length**: ~1,680 spoken words + ~3 min of holds ≈ 15 min. Chapters: 1 discounting the bill (~3.5 min) ·
   2 interest up front (~3.5 min) · 3 unpaid: crystallisation (~5 min) · 4 the packing-credit statements (~2 min) ·
-  close (~1.5 min). If the measured take runs over 15:00, cut in order: N051a; N017a's second sentence; N052a.
+  close (~1.5 min). If the measured take runs over 15:00, cut in order: N017a's second sentence; N052a.
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: A11b's money lane under the
   export road (green band "post-shipment"), A01's bank counter beside it (green side "bank buys", red side "bank
   sells"), and a calendar strip with three pins: discount, due date, crystallisation.
@@ -83,7 +83,7 @@ N013 · Which rate does the bank use? Think back to the counter. The bank receiv
 N014 · The bill buying rate. Or, if she booked a forward contract, that contracted rate.
 > 1 C: card "purchase / discount / negotiation → bill buying rate, or the contracted rate" [F2]
 
-N015 · Let's build it, as we did before. Spot buying, eighty-five fifty. Her bill runs eighty-five days, so two completed months of premium.
+N015 · Let's build it, as we did before. Spot buying, eighty-five fifty. The bill's sixty days, plus twenty-five in transit: eighty-five days. So two completed months of premium.
 > 1 S: sum card "spot bid ₹85.5000 · 85 days → 2 completed months (A05) · illustrative"
 
 N015a · Premium forty-three point seven five paise: eighty-five point nine three seven five. Less a margin of point one six per cent.
@@ -146,7 +146,7 @@ N026a · Fifty-one lakh thirty thousand. Now interest at seven point three per c
 > 1 S: keys "60000 × 85.5 = 5130000" · H: 10 s [numericals V]
 
 N027 · Twenty-five days: twenty-five thousand six hundred fifty rupees. Her credit, fifty-one lakh four thousand three hundred fifty.
-> 1 S: keys "5130000 × 7.3 % × 25 ÷ 365 = 25650 · 5130000 − 25650 = 5104350" · 2 B: box "credit ₹51,04,350" [numericals V]
+> 1 S: keys "5130000 × 7.3 % = 374490 × 25 = 9362250 ÷ 365 = 25650 · 5130000 − 25650 = 5104350" · 2 B: box "credit ₹51,04,350" [numericals V]
 
 N028 · Many of you forget the transit period for a sight bill. It's paid at sight, but the bill still takes time to get there.
 > 1 C: trap card "sight bill: interest 0 days ✗ · NTP 25 days ✓" [F4]
@@ -204,7 +204,7 @@ N041 · Many of you say bill buying again. No. The dollars never came, and she o
 N042 · The T-T selling rate on that day. Here, eighty-six rupees forty paise, illustrative. Her rupee debt?
 > 1 C: card "crystallisation → TT selling rate (FEDAI 2.1(b)(iii)) · even if a forward was used at discount" [F10] · 2 S: sum card "USD 100,000 × ₹86.40" · H: 8 s
 
-N043 · Eighty-six lakh forty thousand rupees. The bank paid out eighty-five lakh eighty thousand. That sixty thousand gap is her exchange loss, for now.
+N043 · Eighty-six lakh forty thousand rupees. The bank's advance was eighty-five lakh eighty thousand. That sixty thousand gap is her exchange loss, for now.
 > 1 S: keys "100000 × 86.4 = 8640000" · 2 B: box "rupee debt ₹86,40,000" · 3 N: "8640000 − 8580000 = 60000: exchange loss so far" [numericals Q4]
 
 N044 · And interest for the overdue days. The bank takes it on the crystallisation day, from the due date.
@@ -216,7 +216,7 @@ N045 · Overdue rate ten point nine five per cent, illustrative. Till today the 
 N046 · Seventy-seven thousand two hundred twenty rupees, paid that day. The eighty-six lakh forty thousand stays as her rupee debt.
 > 1 S: keys "8580000 × 10.95 % = 939510 × 30 = 28185300 ÷ 365 = 77220" · 2 B: box "overdue interest ₹77,220 (paid 24 Jun)" · 3 N: "still owed: ₹86,40,000" [numericals Q4]
 
-N046a · So on that day, her bill stands at eighty-seven lakh seventeen thousand two hundred twenty rupees in all.
+N046a · So on that day, her total dues are eighty-seven lakh seventeen thousand two hundred twenty rupees.
 > 1 S: keys "8640000 + 77220 = 8717220" · 2 N: "total due on crystallisation day ₹87,17,220" [numericals Q4]
 
 N047 · So our opening question. The bank doesn't simply wait. It fixes her debt in rupees, at T-T selling, and adds interest.
@@ -236,9 +236,6 @@ N050a · Debt eighty-six lakh forty thousand, dollars bring eighty-five lakh nin
 
 N051 · Forty-five thousand short, plus fifty-one thousand eight hundred forty. Ninety-six thousand eight hundred forty rupees.
 > 1 S: keys "8640000 − 8595000 = 45000 + 51840 = 96840" · 2 B: box "she pays ₹96,840" [numericals Q5]
-
-N051a · Her exchange loss shrank from sixty thousand to forty-five, because the dollar came in a little higher than the bank paid her.
-> 1 N: "loss: 60,000 at crystallisation → 45,000 after proceeds (85.95 vs 85.80)"
 
 N052 · One more case: the bill comes back dishonoured before crystallisation. The bank recovers the bill, plus foreign charges, at T-T selling.
 > 1 C: card "dishonoured before crystallisation → bill + foreign charges at TT selling + interest, rupee charges" [F14] · 2 N: "bill only sent for collection, not bought → nothing to crystallise; TT buying when paid" [F20]
@@ -292,11 +289,11 @@ N064 · T-T selling, as she must buy dollars. [seriously] If you remember one th
 
 ## Close
 
-N065 · Quick mix. One. On the same day, which rate is higher: bill buying, or T-T selling?
+N065 · Quick mix. One. On the same day, which rate is higher: the sight bill buying rate, or T-T selling?
 > 1 S: story card · H: 6 s
 
 N066 · T-T selling: it's the bank's selling side. Two. A sight bill's interest: how many days?
-> 1 N: "bill buying < TT buying < TT selling (same day) ✓" · H: 6 s
+> 1 N: "ready rates, same day: sight bill buying < TT buying < TT selling ✓ · a usance bill buying rate adds the premium: don't rank it" · H: 6 s
 
 N067 · The normal transit period, twenty-five days. Three. Why crystallise at all?
 > 1 N: "NTP 25 days ✓" · H: 6 s
