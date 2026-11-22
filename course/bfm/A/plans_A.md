@@ -417,7 +417,7 @@ course plan is not renumbered here; the owner decides the splits.
 - **Chapters, A11**: 1 Two regulators (DGFT and the FTP, IEC; RBI under FEMA); declaring an export (EDF, SOFTEX, the
   deemed EDF for services) and what is exempt · 2 Documents to the AD within the set days; permitted ways to receive
   payment · 3 The realisation clock: the rule at the cut-off (9 months; 12 for INR-invoiced; warehouse and SEZ/EOU
-  cases; extension by the AD; caution-listed exporters stay under the 2015 rules), the 9 → 15 → 9 history as a trap
+  cases; extension by the AD; caution-listed exporters stay under RBI's caution-list order (2015 reg 16)), the 9 → 15 → 9 history as a trap
   card · 4 EDPMS (what it is, XOS gone, caution listing, simplified closure), write-off and set-off. ~14 min.
 - **Chapters, A11b**: 1 Packing credit: eligibility, amount (lower of FOB value and domestic cost), running account,
   PCFC · 2 Period, extension, liquidation, and what happens if it is not liquidated · 3 Post-shipment: the forms
