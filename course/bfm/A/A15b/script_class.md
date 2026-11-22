@@ -1,7 +1,8 @@
 # A15b · "Who covers the lender?" · CLASS EDITION (script c1, with cue sheet)
 
-- **Status**: c1, 2026-11-22, for the three independent reviews. Standard style (`course/spec/lesson_spec.md`): one
-  question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
+- **Status**: **c2**, 2026-11-22: every High and Medium of the three c1 reviews fixed, most Lows applied
+  (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause
+  check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A15 (v4 split: A15 = A7.1–A7.5; **A15b = A7.6–A7.9, A8.1**). Course order v4:
   A15 → **A15b** → A16.
 - **Syllabus**: A7.6 (ECGC's products for banks), A7.7 (other aspects of ECGC policies and guarantees), A7.8 (common
@@ -31,10 +32,11 @@
 - **Not in this video**: exporters' policies, risk lists, country risk (A15); packing credit rules (A11b); Gold Card,
   factoring, forfaiting (A14); import buyer's credit (A13, a trap here only); RELIEF West Asia scheme (time-limited,
   over before the cut-off); DCIB (domestic).
-- **Length**: target ~1,850 spoken words + ~2.3 min of holds ≈ 15 min (measure the take). Chapters: warm-up
-  (~1.4 min) · 1 ECGC's covers for banks (~4.6 min) · 2 duties and claims (~4.8 min) · 3 EXIM Bank (~3.4 min) · close
-  (~1.6 min). If the take runs over 15:00, cut in order: N068a, N029, N051; keep N013 (whose default: trap), N041–N044
-  (bank's clock), N069–N070a (the "can't give" question: recalled Jun 2026).
+- **Length**: ~1,840 spoken words + ~2.3 min of holds ≈ 15 min (measure the take). Chapters: warm-up (~1.3 min) ·
+  1 ECGC's covers for banks (~4.4 min) · 2 duties and claims (~4.8 min) · 3 EXIM Bank (~3.4 min) · close (~1.7 min).
+  If the take runs over 15:00, cut in order: N025a, N068, N059a, N082a. Protect N013a (whose default), N029 (old
+  names), N041–N046a (the two clocks), N068a–N068b (s. 10, Export Development Fund) and N069–N070a (the "can't give"
+  question: recalled Jun 2026).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: A15's **umbrella** over
   the export road (buyer · country panels) stays; a **second, smaller umbrella** opens over the **bank building** in
   chapter 1 ("ECIB"). In chapter 2 a **clock face** for each deadline. In chapter 3 a **bridge** from India to the
@@ -56,7 +58,7 @@ N003 · Eighty per cent: forty thousand dollars. She bears ten thousand.
 N004 · One from two classes back. In factoring with recourse, who keeps the risk of a buyer not paying?
 > 1 S: A14's factor card, "with recourse" · H: 3 s
 
-N005 · The seller. The factor can come back to her. Today, a lender wants the same comfort.
+N005 · The seller. The factor can come back to her.
 > 1 N: "the seller (exporter) ✓"
 
 N006 · Our Tiruppur exporter again. Her bank gave her a packing credit of fifty lakh rupees to make the shirts.
@@ -68,8 +70,8 @@ N007 · Last class, her E-C-G-C policy protected her if the buyer didn't pay. No
 N008 · Some of you say: her policy does. Others: nobody, the bank carries it alone. Keep your answer.
 > 1 S: two buttons "her policy" · "nobody: the bank alone" · H: 3 s
 
-N009 · E-C-G-C came up in recent exams, and EXIM Bank had several questions in June twenty twenty-six, a case study too.
-> 1 N: "asked: ECGC standard policy Dec 2023 · ECGC Jul 2024 · EXIM Bank, EXIM Bank case study, 'which facility can't EXIM Bank give' Jun 2026" [Leads]
+N009 · E-C-G-C came up in four of the last seven exams, and EXIM Bank had several questions in June twenty twenty-six.
+> 1 N: "asked: ECGC in 4 of the last 7 exams (2023–26) · EXIM Bank, EXIM Bank EMF, EXIM case study, 'which facility can't EXIM Bank give' Jun 2026" [Leads]
 
 ## Chapter 1 · ECGC's covers for banks
 
@@ -77,49 +79,46 @@ N010 · Chapter one. Her policy pays when the buyer abroad fails. But who is the
 > 1 S: chapter title "1 · ECGC's covers for banks" · 2 S: a thread from the bank to the factory, not to the buyer · H: 3 s
 
 N011 · The exporter herself. So the bank needs its own insurance, against her failing. E-C-G-C calls it E-C-I-B: export credit insurance for banks.
-> 1 S: a second, smaller umbrella opens over the bank building, label "ECIB" · 2 C: card "ECIB = Export Credit Insurance for Banks · protects the bank's export advance · against the exporter-borrower's default" [F1]
+> 1 S: a second, smaller umbrella opens over the bank building, label "ECIB" · 2 C: card "ECIB = Export Credit Insurance for Banks · covers the bank against its own borrower's default" [F1]
 
 N012 · Two words for that failing. Protracted default: she just doesn't repay by the due date. Insolvency: she goes bankrupt.
-> 1 C: card "protracted default = exporter doesn't repay by the due date (a genuine dispute with the bank may not count) · insolvency = bankruptcy / winding-up" [F2]
+> 1 C: card "protracted default = not repaid by the due date · insolvency = bankruptcy / winding-up" [F2]
 
 N013 · Many of you think the bank's cover pays when the buyer abroad fails. Does it?
 > 1 S: two arrows "buyer fails" · "exporter fails"; which one points at the small umbrella? · H: 3 s
 
 N013a · No. The buyer's failure is her risk, under her policy. Her failure is the bank's risk, under E-C-I-B.
-> 1 C: trap card "'ECIB pays when the overseas buyer defaults' ✗ · buyer fails → exporter's policy · exporter fails → bank's ECIB ✓" [F1] · 2 B: underline "her failure"
+> 1 C: trap card "'ECIB pays when the overseas buyer defaults' ✗ · ECIB covers the bank's own borrower: here, the exporter ✓" [F1] · 2 B: underline "her failure"
 
 N014 · And the word, from last class. To an exporter, E-C-G-C sells a policy. To a bank?
 > 1 S: two labels "exporter → ?" · "bank → ?" · H: 3 s
 
 N015 · A cover. And the covers follow the loan. Before shipment, packing credit covers, P-C. After shipment, post-shipment covers, P-S.
-> 1 N: "cover ✓" · 2 C: card "PC covers: packing credit / pre-shipment advances · PS covers: bills purchased, negotiated, discounted; advances against collection bills" [F5] · 3 B: box "PC" and "PS"
+> 1 N: "cover ✓" · 2 C: card "PC = before shipment (packing credit) · PS = after shipment (export bills)" [F5] · 3 B: box "PC" and "PS"
 
 N016 · Then a choice. The bank covers all its export accounts in one go: whole turnover. Or it picks accounts one by one: individual.
 > 1 C: card "whole turnover: WT-PC · WT-PS (all accounts, one proposal) · individual: IN-PC · IN-PS (account by account)" [F3, F6]
 
 N017 · Whole turnover suits a big exporting bank, generally fifty accounts or more. Because it covers everything, cover is higher and premium lower.
-> 1 C: card "WT: generally ≥ 50 accounts and ₹50 lakh premium a year · higher cover, lower premium · may exclude only set categories (MSME, PSUs, offshore banking units; for PS also associates, LC advances)" [F6] · 2 B: underline "covers everything"
+> 1 C: card "WT: generally ≥ 50 accounts, ₹50 lakh premium a year · higher cover, lower premium" [F6] · 2 B: underline "covers everything"
 
 N018 · How much does a cover pay? Guess for the individual packing credit cover.
 > 1 S: a loss bar "₹100" with a slider · H: 3 s
 
 N019 · Two-thirds. Sixty-six and two-thirds per cent.
-> 1 C: card "IN-PC: 66⅔ % · branch-wise PC (BI-PC): 66⅔ %" [F7] · 2 B: box "66⅔ %"
+> 1 C: cover table opens at the screen edge and stays: "IN-PC 66⅔ %" [F7] · 2 B: box "66⅔ %"
 
-N019a · Individual post-shipment: seventy-five per cent if the exporter holds her own whole-turnover policy, sixty if she doesn't.
-> 1 C: card "IN-PS: 75 % (exporter has a whole-turnover policy; associate buyers 60 %) · 60 % (no policy; no cover on associates)" [F8]
+N019a · Individual post-shipment: seventy-five per cent, if she holds her own whole-turnover policy and the buyer isn't her associate.
+> 1 C: cover table adds "IN-PS 75 % (policyholder, non-associate) · 60 % otherwise; no cover on associates without a policy" [F8] · 2 B: circle "her own policy"
 
-N019b · See the link? Her policy earns her bank more cover.
-> 1 S: a thread from the big umbrella to the small one · 2 B: circle "her policy"
-
-N020 · Whole-turnover covers move in a band, set by the bank's claims record. Fifty to seventy-five per cent before shipment; up to ninety-five after.
-> 1 C: card "WT-PC: 50–75 % · WT-PS: 50–95 % · set by the bank's claim-premium ratio and its premium paid (ECGC terms, Dec 2023)" [F9, F10]
+N020 · Whole-turnover covers move in a band, set by the bank's own claims record. The bands stay on the card.
+> 1 C: cover table adds "WT-PC 50–75 % · WT-PS 50–95 % (by claim-premium ratio, premium paid, and whether the exporter holds a policy; ECGC terms Dec 2023)" [F9, F10]
 
 N021 · And for eligible small exporters' accounts, whole turnover now offers ninety per cent, so banks can lend to them cheaper.
-> 1 C: card "enhanced WT cover 90 %: eligible small (MSME) exporters' accounts, since July 2022, limits widened since (check the latest) · aim: a lower interest rate" [F11]
+> 1 C: cover table adds "WT, eligible small exporters' accounts: 90 % (since Jul 2022; check the latest)" [F11] · 2 B: box "90 %"
 
-N022 · So when a question says "E-C-I-B pays", ask: which cover, which account? Sixty-six, seventy-five and ninety each belong to one.
-> 1 C: trap card "'ECIB cover is 75 %' ✗ as a rule · 66⅔ % IN-PC · 75 % IN-PS (policyholder), Surety, EF · 50–75 / 50–95 % WT · 90 % eligible small exporters under WT ✓" [F12]
+N022 · So when a question says "E-C-I-B pays", ask: which cover, which account? Two-thirds, seventy-five and ninety each belong to one.
+> 1 C: trap card "'ECIB pays 75 %' as a rule ✗ · ask: which cover, which account ✓" [F12] · 2 S: the cover table glows
 
 N023 · Premium is in paise per hundred rupees per month. Individual packing credit: twelve paise, on the highest amount outstanding that month.
 > 1 C: card "IN-PC premium: 12 paise per ₹100 per month · on the highest amount outstanding on any day · WT covers: on the average daily product" [F7, F19]
@@ -127,20 +126,23 @@ N023 · Premium is in paise per hundred rupees per month. Individual packing cre
 N024 · Quick sum. Her highest packing credit this month: fifty lakh rupees. The premium at twelve paise per hundred?
 > 1 S: sum card "highest outstanding ₹50,00,000 · 12 paise per ₹100 per month · illustrative" · H: 8 s
 
-N025 · Fifty lakh divided by a hundred, times point one two: six thousand rupees for the month.
+N025 · Twelve paise is point one two rupees. So, fifty lakh divided by a hundred, times point one two: six thousand rupees.
 > 1 S: keys "5000000 ÷ 100 × 0.12 = 6000" · 2 B: box "₹6,000" [numericals Q1]
 
+N025a · Got six lakh? You typed twelve, not point one two. Paise first become rupees.
+> 1 C: trap card "5000000 ÷ 100 × 12 = 600000 ✗ · × 0.12 ✓"
+
 N026 · Three more names. Surety cover, once called export performance cover, protects the bank's guarantees for exporters: bid bonds, performance bonds.
-> 1 C: card "Surety Cover (formerly Export Performance Cover): bank guarantees for exports (bid bond, due performance, advance payment) and LCs for raw-material imports · up to 75 %" [F13]
+> 1 C: card "Surety Cover (formerly Export Performance Cover): bank guarantees for exporters · up to 75 %" [F13] · 2 S: cover table adds "Surety ≤ 75 %"
 
 N027 · Export finance cover: advances against export incentives, like duty drawback. These two pay up to seventy-five per cent.
-> 1 C: card "EF (Export Finance): post-shipment advances against export incentives (duty drawback etc.) · 75 % · 6 paise" [F14]
+> 1 C: card "EF: advances against export incentives · 75 %" [F14] · 2 S: cover table adds "EF 75 %"
 
-N028 · And buyer's credit cover. Here the bank lends to a buyer abroad, so this cover is against the foreign borrower's default. The one exception.
-> 1 C: card "Buyer's Credit Cover (medium/long term): bank lends to an overseas buyer for Indian machinery or projects · ECGC covers the foreign borrower's default (commercial + political) · 75 %" [F16] · 2 B: circle "foreign borrower"
+N028 · And buyer's credit cover. Here the bank lends to a buyer abroad. Same rule: the cover is against its own borrower, now the foreign buyer.
+> 1 C: card "Buyer's Credit Cover: bank lends to an overseas buyer · borrower = foreign buyer · 75 %" [F16] · 2 B: circle "its own borrower"
 
-N029 · Old books say export performance guarantee, overseas lending guarantee, transfer guarantee. Today's list says covers, and the last two aren't on it.
-> 1 C: trap card "old names: Export Performance / Export Finance / Packing Credit 'Guarantee' → today ECIB covers · Overseas Lending and Transfer Guarantee: not on ECGC's 2026 list (history)" [F4]
+N029 · Old books say export performance guarantee, export finance guarantee. Today: surety cover, E-F cover. Answer with today's names; old ones only if nothing else fits.
+> 1 C: trap card "old → today: Export Performance Guarantee → Surety Cover · Export Finance Guarantee → EF cover · Packing Credit Guarantee → PC covers · Overseas Lending, Transfer Guarantee: not on ECGC's 2026 list" [F4] · 2 B: underline "today's names"
 
 N030 · Pause check for chapter one. One. E-C-I-B protects the bank against whose default?
 > 1 S: card "ECIB: whose default?" · H: 3 s
@@ -160,43 +162,49 @@ N033 · Two-thirds. Now, cover isn't automatic. Both sides have duties. The expo
 > 1 S: a to-do board with two columns "exporter" · "bank"
 
 N034 · Her premium is paid in advance, on her projected exports, into a deposit. A shipment with no premium behind it is not insured.
-> 1 C: card "exporter's premium: in advance, on projected exports, into a deposit premium account (minimum ₹10,000) · rate by payment terms and the buyer's country grade · no premium → no cover" [F18]
+> 1 C: card "exporter's premium: in advance, on projected exports · no premium → no cover" [F18]
 
 N035 · Each buyer needs a credit limit from E-C-G-C. Commercial risk on that buyer is covered only up to that limit.
-> 1 C: card "credit limit per buyer: ECGC's cap on its commercial-risk exposure · revolving · not a cap on shipments · small limits without applying (discretionary): ₹40 lakh DP · ₹20 lakh DA (premium ≥ ₹5 lakh)" [F21, F22]
+> 1 C: card "credit limit per buyer = ECGC's cap on commercial risk · small discretionary limits without applying" [F21, F22]
 
 N036 · Want to give a buyer more time, or switch D-P to D-A? Ask E-C-G-C first. Without prior approval, that bill isn't covered.
-> 1 C: card "prior approval before: extending a due date · converting DP to DA · a compromise with the buyer · assigning the receivable without recourse" [F24, F36] · 2 B: underline "first"
+> 1 C: card "prior approval before: a longer due date · DP → DA · a compromise" [F24, F36] · 2 B: underline "first"
 
 N037 · Every month, by the fifteenth, she declares her shipments, and her bills thirty days overdue.
-> 1 S: clock face "15th of next month" · 2 C: card "monthly by the 15th: shipments (NIL if none) · bills 30 days or more overdue · events likely to cause loss: tell ECGC within 30 days" [F30]
+> 1 S: clock face "15th of next month" · 2 C: card "by the 15th: shipments · bills 30 days overdue" [F30]
 
-N038 · Her bank declares its advances monthly too, with premium: by the tenth for individual covers, by the month's end for whole turnover.
-> 1 S: clock faces "10th (IN-PC, IN-PS, EF)" · "end of next month (WT)" [F31]
+N038 · Her bank declares its advances monthly too, with premium: by the tenth for individual covers, by the end of the next month for whole turnover.
+> 1 S: clock faces "10th (individual covers)" · "end of next month (WT)" [F31]
 
 N039 · Before some steps, the bank needs E-C-G-C's approval: packing credit beyond three hundred sixty days, a compromise, restructuring, or a sale to an A-R-C.
-> 1 C: card "bank's prior approval: PC due date beyond 360 days · PS beyond 180 (status holders 360) · further operations once the account is sub-standard / NPA · restructuring · OTS / compromise · sale to an ARC" [F33]
+> 1 C: card "bank's prior approval: PC beyond 360 days · PS beyond 180 · compromise · restructuring · sale to an ARC (asset reconstruction company)" [F33]
 
 N040 · Now the bank's clock. Her packing credit falls due, and she doesn't pay. When must the bank report the default?
 > 1 S: clock face, due date marked · H: 3 s
 
-N041 · Within four months of the due date, or within one month of recalling the advance, whichever comes first.
-> 1 C: card "Report of Default: 4 months from the due date · or 1 month (30 days) from recalling the advance · whichever is earlier" [F34] · 2 B: box "whichever is earlier"
+N041 · Within four months of the due date, or within one month of recalling the advance, whichever is earlier.
+> 1 C: card "Report of Default: 4 months from the due date (or extended due date) · or 1 month from recall · whichever is earlier" [F34] · 2 B: box "whichever is earlier"
 
 N042 · Then it recalls the whole loan before claiming, and claims within six months of when the default report was due.
-> 1 C: card "recall the advance before the claim · claim within 6 months of the default report's due date · keep up recovery action" [F34, F40]
+> 1 C: card "recall before claim · claim within 6 months of the default report's due date" [F34, F40]
 
 N043 · Many of you think: the bank claims first, and does the paperwork later. Is that safe?
 > 1 S: two buttons "claim first" · "duties first" · H: 3 s
 
 N044 · No. A late report, no recall, or a compromise without approval, and E-C-G-C can refuse the claim. Duties come before money.
-> 1 C: trap card "claim lost: report late · no recall · OTS, restructuring or ARC sale without approval · claim after 6 months · false statements (cover void) ✓" [F35] · 2 B: underline "before money"
+> 1 C: trap card "claim lost: late report · no recall · deal without approval · late claim ✓" [F35] · 2 B: underline "before money"
 
 N045 · The exporter's claim has its own clock. When the buyer simply doesn't pay, E-C-G-C waits four months after the due date.
-> 1 C: card "exporter's claim payable: protracted default → 4 months after due date · buyer insolvent → 4 months, or 1 month after the debt is admitted, earlier · other political events → 4 months after the event · SEP: 2 months" [F37]
+> 1 S: a second clock "exporter's claim" · 2 C: card "default → 4 months after due date · SEP: 2 months" [F37]
 
 N046 · If the buyer goes insolvent, it can be sooner: one month after the debt is admitted. For a war, four months after the event.
-> 1 B: circle "one month after the debt is admitted" · 2 N: "file within 360 days of due date or 540 days of policy expiry, earlier" [F30]
+> 1 B: circle "one month after the debt is admitted" · 2 N: "SCR: file within 360 days of due date or 540 of policy expiry, earlier; other policies, own limits" [F30, F37]
+
+N046a · Two "four months", so don't mix them. The bank must report within four months: a deadline. Her claim waits four months: a waiting period.
+> 1 S: the two clocks side by side: "bank: report WITHIN 4 months (deadline)" · "exporter: claim AFTER 4 months (wait)" · 2 B: underline "within" and "after"
+
+N051 · After paying, E-C-G-C steps into the insured's shoes. When it asks, she assigns it her rights, bills and securities. That's subrogation, from JAIIB insurance.
+> 1 C: card "subrogation: after paying, ECGC takes over the insured's rights against the defaulter" [F42]
 
 N047 · Now, money after a claim. On her eighty thousand dollar loss, E-C-G-C paid seventy-two thousand.
 > 1 S: A15's sum card "loss USD 80,000 · ECGC paid USD 72,000 (90 %)" [A15-F20]
@@ -205,10 +213,7 @@ N047a · Later, twenty thousand dollars is recovered from Country Z. Whose is it
 > 1 S: a bag "USD 20,000 recovered · illustrative" · H: 3 s
 
 N048 · Shared, in the same ratio as the loss: ninety-ten. E-C-G-C gets eighteen thousand. She keeps two thousand.
-> 1 S: keys "20000 × 90 % = 18000 · 20000 − 18000 = 2000" · 2 C: card "recoveries: recovery costs first · the rest shared in the ratio the loss was borne · held in trust for ECGC" [F41] [numericals Q2]
-
-N048a · Some of you said: E-C-G-C paid, so it takes all twenty. No. It takes only its share.
-> 1 C: trap card "'ECGC takes the whole recovery' ✗ · shared 90:10 ✓"
+> 1 S: keys "20000 × 90 % = 18000 · 20000 − 18000 = 2000" · 2 C: card "recoveries: costs first · rest shared in the loss ratio" [F41] [numericals Q2]
 
 N049 · Your turn, the bank's side. Packing credit loss, thirty lakh rupees, under the individual cover. What does E-C-G-C pay?
 > 1 S: sum card "loss ₹30,00,000 · IN-PC 66⅔ % · illustrative" · H: 15 s
@@ -219,14 +224,11 @@ N050 · Twenty lakh rupees. Thirty lakh, times two, divided by three.
 N050a · Did you get twenty-two and a half lakh? That's seventy-five per cent: the post-shipment figure.
 > 1 C: trap card "30,00,000 × 75 % = 22,50,000 ✗ (IN-PS) · IN-PC two-thirds = 20,00,000 ✓"
 
-N051 · After paying, E-C-G-C steps into the insured's shoes: her rights, bills and securities pass to it. That's subrogation, from your JAIIB insurance.
-> 1 C: card "subrogation: after paying, ECGC takes over the insured's rights · contract rights, bills, guarantees, securities assigned to ECGC" [F42]
-
 N052 · One more idea. Can she hand her policy to her bank, so the bank gets her claim money?
 > 1 S: the exporter passing the big umbrella's handle to the bank · H: 3 s
 
 N053 · Yes, but only with E-C-G-C's prior written approval. That's assignment. It's still her policy on her buyer, not the bank's own cover.
-> 1 C: card "assignment of the policy to the bank: only with ECGC's prior written approval · bank gets the exporter's claim if the BUYER fails · ECIB: bank's own cover if the EXPORTER fails" [F25] · 2 B: box "prior written approval"
+> 1 C: card "assignment: only with ECGC's prior written approval · her claim if the BUYER fails · not the bank's own ECIB" [F25] · 2 B: box "prior written approval"
 
 N054 · Pause check for chapter two. One. The exporter's monthly declaration: by which date?
 > 1 S: card "exporter declares by?" · H: 3 s
@@ -252,10 +254,10 @@ N058 · The Export-Import Bank of India. Set up by its own Act of nineteen eight
 > 1 C: card "Export-Import Bank of India Act, 1981 (Act 28 of 1981) · in force 1 Jan 1982 · established under s. 3 · head office Mumbai" [F45]
 
 N059 · Fully owned by the Government of India. Not a company, not a commercial bank: a statutory corporation.
-> 1 C: card "capital wholly subscribed by the Central Government (s. 4) · statutory corporation · Board includes RBI, IDBI, ECGC nominees (s. 6) · not a scheduled commercial bank" [F47, F51]
+> 1 C: card "capital wholly from the Central Government (s. 4) · statutory corporation · not a commercial bank" [F47, F51]
 
 N059a · R-B-I regulates it as an all-India financial institution, like NABARD and SIDBI.
-> 1 C: card "RBI regulates EXIM Bank as an All India Financial Institution (AIFI) · with NABARD, SIDBI, NHB, NaBFID · RBI AIFI Directions 2025" [F51]
+> 1 C: card "RBI regulates EXIM Bank as an All India Financial Institution (AIFI), with NABARD, SIDBI, NHB, NaBFID" [F51]
 
 N060 · Many of you think: EXIM Bank only finances exports. Look at its name again.
 > 1 S: the name "Export-Import Bank"; "Import" glows · H: 3 s
@@ -264,43 +266,46 @@ N061 · Export and import. The Act lets it finance imports too, and makes it the
 > 1 C: trap card "'exports only' ✗ · exporters and importers; principal FI co-ordinating export-import finance (long title; s. 10(1)) ✓" [F46] · 2 B: underline "imports too"
 
 N062 · What does it do? Its biggest tool: lines of credit. It lends to a foreign government or bank, so buyers there can import Indian goods.
-> 1 S: the bridge carries goods from India; money from EXIM Bank goes to a foreign government building · 2 C: card "Line of Credit: EXIM Bank → overseas government / bank / institution → its buyers import Indian goods on credit · Indian exporter paid, no payment risk" [F53]
+> 1 S: goods cross the bridge from India; EXIM money goes to a foreign government building · 2 C: card "Line of Credit: to an overseas government or bank · Indian exporter paid" [F53]
 
 N063 · Many are Government of India lines, under a scheme called IDEAS. At least seventy-five per cent of the value must come from India.
-> 1 C: card "GoI-supported LOCs under IDEAS (Indian Development and Economic Assistance Scheme, since 2003-04) · ≥ 75 % of contract value sourced from India" [F53]
+> 1 C: card "GoI lines under IDEAS (since 2003-04) · ≥ 75 % sourced from India (10 % relaxation case by case)" [F53]
 
 N064 · Next, buyer's credit: a loan to one overseas buyer, so he pays our exporter in cash, with no recourse to her.
-> 1 C: card "Buyer's Credit (EXIM Bank): loan to an overseas buyer for Indian exports · exporter paid without recourse · deferred-payment deal becomes a cash deal for her" [F54]
+> 1 C: card "Buyer's Credit: loan to an overseas buyer of Indian goods · exporter paid, no recourse" [F54]
 
 N065 · Careful. This isn't the import buyer's credit from A-thirteen, where an Indian importer borrows abroad. Same name, opposite direction.
-> 1 C: trap card "EXIM Bank buyer's credit: lends TO a foreign buyer of Indian goods · import buyer's credit (A13): Indian importer borrows FROM abroad" [F54] · 2 B: circle "opposite direction"
+> 1 C: trap card "EXIM buyer's credit: TO a foreign buyer · import buyer's credit (A13): Indian importer borrows FROM abroad" [F54] · 2 B: circle "opposite direction"
 
-N066 · For big projects, EXIM Bank also lends to foreign governments with cover from N-E-I-A, a Government of India account run by E-C-G-C.
-> 1 C: card "NEIA: National Export Insurance Account, GoI trust, administered by ECGC · covers project exports ECGC can't carry alone · BC-NEIA (since Apr 2011): EXIM Bank lends to foreign governments, generally ≤ 85 % of contract value, no recourse to the exporter" [F43, F44]
+N066 · For big projects, EXIM Bank gives buyer's credit to foreign governments, backed by the National Export Insurance Account, N-E-I-A, run by E-C-G-C.
+> 1 C: card "BC-NEIA (since Apr 2011): EXIM lends to foreign governments or government-owned entities · NEIA cover · generally ≤ 85 % of contract" [F43, F44]
 
 N067 · At home, it gives exporters packing and post-shipment credit, term loans to export units, and loans to invest in joint ventures abroad.
-> 1 C: card "pre- and post-shipment credit · term loans to export-oriented units · R&D finance · Overseas Investment Finance (equity / loans for JVs and WOS abroad) · import finance" [F52, F55, F56]
+> 1 C: card "pre- and post-shipment credit · term loans to export units · Overseas Investment Finance" [F52, F55, F56]
 
 N068 · And for small firms with promise, a programme called Ubharte Sitaare: money plus handholding.
-> 1 C: card "Ubharte Sitaare: finance + handholding for small and mid-sized firms with export potential · Trade Assistance Programme: credit enhancement for exports to new, high-risk markets" [F57]
+> 1 C: card "Ubharte Sitaare: finance + handholding · Trade Assistance Programme: credit support for risky new markets" [F57]
 
 N068a · The Act also lets it refinance banks, give guarantees, open L-Cs, and run research on trade.
-> 1 C: card "s. 10(2): refinance to banks · guarantees, bid bonds · LCs · discount export bills · lines of credit · JV loans · leasing · research and market information" [F48]
+> 1 C: card "s. 10(2): refinance banks · guarantees · LCs · discount bills · lines of credit · JV loans · research" [F48]
 
-N069 · An exam favourite: which facility can't EXIM Bank give? Some of you say guarantees. Others, deposits.
-> 1 S: two buttons "guarantees" · "deposits" · H: 3 s
+N068b · It also keeps an Export Development Fund, for loans banks wouldn't ordinarily give, each with the Government's prior approval.
+> 1 C: card "Export Development Fund (ss. 15–20): loans banks wouldn't ordinarily give · prior Central Government approval · old books' Export Marketing Fund (EMF): history" [F50]
 
-N070 · Guarantees, it gives. Deposits? Only for twelve months or more, on terms R-B-I approves. No savings or current accounts.
-> 1 C: card "deposits: only for ≥ 12 months, on RBI-approved terms (s. 12(1)(d)) · no savings / current accounts · no loans against its own bonds (s. 10(4)) · guarantees: allowed (s. 10(2)(c))" [F49, F58] · 2 B: box "≥ 12 months"
+N069 · An exam favourite: which facility can't EXIM Bank give? Some of you say guarantees. Others, export credit insurance.
+> 1 S: two buttons "guarantees" · "export credit insurance" · H: 3 s
 
-N070a · And it doesn't sell export credit insurance. That's E-C-G-C's job.
-> 1 C: card "ECGC: insurer (company, IRDAI, Commerce Ministry) · EXIM Bank: lender (statutory corporation, RBI-regulated AIFI)" [F59]
+N070 · Guarantees, it gives: the Act says so. Export credit insurance, it can't: that's E-C-G-C's job.
+> 1 G: "guarantees" ✓ (s. 10(2)(c)); "export credit insurance" ✗ → ECGC · 2 B: box "ECGC's job"
+
+N070a · And two limits in its Act. Deposits only for twelve months or more, no savings or current accounts. And no loans against its own bonds.
+> 1 C: card "EXIM Bank: insurer ✗ · deposits only ≥ 12 months, RBI-approved terms (s. 12(1)(d)) · no loans against its own bonds (s. 10(4)) · Ministry of Finance; ECGC: Commerce" [F49, F58, F59]
 
 N071 · Pause check for chapter three. One. EXIM Bank's Act is of which year?
 > 1 S: card "EXIM Bank Act: year?" · H: 3 s
 
-N071a · Nineteen eighty-one; it began in January eighty-two. Two, the twist. Under a line of credit, whom does EXIM Bank lend to?
-> 1 N: "1981 Act · 1 Jan 1982 ✓" · H: 3 s
+N071a · Nineteen eighty-one, in force from January eighty-two; work started that March. Two, the twist. Under a line of credit, whom does it lend to?
+> 1 N: "1981 Act · in force 1 Jan 1982 · operations Mar 1982 ✓" · H: 3 s
 
 N072 · The foreign side: a government or bank abroad. Our exporter simply gets paid. [seriously] One thing from chapter three: E-C-G-C insures, EXIM Bank lends.
 > 1 N: "overseas government / bank ✓" · 2 S: chapter-three parts dim to grey
@@ -336,6 +341,9 @@ N081 · Report in four months, or a month after recall; claim in six; recoveries
 
 N082 · Act of nineteen eighty-one; Government-owned, R-B-I-regulated; lines of credit, buyer's credit, Ubharte Sitaare. That's the map.
 > 1 M: node "EXIM Bank" fills; both branches complete
+
+N082a · You can now name the bank's covers, the duties, both clocks, and what EXIM Bank does, and doesn't.
+> 1 N: "you can now: A7.6 bank covers · A7.7–A7.8 duties · A7.9 claims · A8.1 EXIM Bank"
 
 N083 · Homework. The standard policy paid ninety per cent of a forty thousand dollar loss. Later, ten thousand is recovered. How much goes to E-C-G-C?
 > 1 S: notebook page; sum card "loss USD 40,000 · SCR 90 % · recovered USD 10,000 · illustrative"

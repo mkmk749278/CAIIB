@@ -49,6 +49,12 @@ if __name__ == "__main__":
     print(f"{'N054a report of default by (earlier date)':<60} {by}   {'OK' if ok else 'MISMATCH'}")
     if not ok: sys.exit(1)
 
+    # Practice 35: due 15 Jun, recalled 20 Aug -> 15 Oct vs 20 Sep -> 20 Sep.
+    by = min(add_months(date(2027, 6, 15), 4), add_months(date(2027, 8, 20), 1))
+    ok = by == date(2027, 9, 20)
+    print(f"{'P35 report of default by (earlier date)':<60} {by}   {'OK' if ok else 'MISMATCH'}")
+    if not ok: sys.exit(1)
+
     # Practice: recovery with costs. Loss Rs 30,00,000 under IN-PC; ECGC paid 20,00,000. Recovered Rs 9,00,000,
     # costs Rs 60,000 first; balance 8,40,000 shared 2/3 : 1/3.
     net = check("P recovery net of costs 9,00,000 - 60,000", D(900000) - D(60000), c12(900000 - 60000), "840000")

@@ -47,8 +47,8 @@ end.
     (a) USD 20,000 (b) USD 18,000 (c) USD 2,000 (d) USD 10,000
 20. IN-PC; the bank's packing credit loss is ₹30,00,000. ECGC pays: (a) ₹22,50,000 (b) ₹27,00,000 (c) ₹20,00,000
     (d) ₹30,00,000
-21. IN-PC; ECGC paid the bank ₹20,00,000 on a ₹30,00,000 loss. Later ₹9,00,000 is recovered; recovery costs ₹60,000.
-    ECGC's share: (a) ₹6,00,000 (b) ₹5,60,000 (c) ₹8,40,000 (d) ₹2,80,000
+21. IN-PC; ECGC paid the bank ₹20,00,000 on a ₹30,00,000 loss. Later ₹9,00,000 is recovered; recovery costs, incurred with ECGC's
+    consent, ₹60,000. ECGC's share: (a) ₹6,00,000 (b) ₹5,60,000 (c) ₹8,40,000 (d) ₹2,80,000
 22. IN-PS; exporter holds a whole-turnover policy; non-associate buyer; loss ₹40,00,000. ECGC pays the bank:
     (a) ₹24,00,000 (b) ₹26,66,667 (c) ₹30,00,000 (d) ₹36,00,000
 23. Highest packing credit outstanding in a month ₹50,00,000; IN-PC premium 12 paise per ₹100 per month. Premium:
@@ -67,10 +67,17 @@ end.
     buyer of Indian goods (b) is lent to Indian importers (c) is only in rupees (d) needs no documents
 31. Which can EXIM Bank **not** do under its Act? (a) give guarantees (b) refinance banks (c) accept deposits for less
     than 12 months (d) open LCs
+31a. An exporter asks EXIM Bank for one of these. Which can it **not** provide? (a) a guarantee for a bid bond
+    (b) post-shipment credit (c) export credit insurance of her buyers (d) finance for a joint venture abroad
 32. "Ubharte Sitaare" is: (a) an ECGC policy (b) an EXIM Bank programme of finance and handholding for small firms
     with export potential (c) an RBI scheme (d) a FEDAI rule
 33. Buyer's Credit under NEIA is given by: (a) ECGC to exporters (b) EXIM Bank to overseas governments for Indian
     project exports, with NEIA cover (c) RBI (d) commercial banks to importers
+
+34. EXIM Bank's Export Development Fund is used for: (a) deposits from exporters (b) loans and arrangements that banks
+    and FIs would not ordinarily give, each with prior Central Government approval (c) ECGC's claims (d) RBI refinance
+35. A bank's packing credit fell due on 15 June. It recalled the advance on 20 August. Under ECIB the Report of Default
+    is due by: (a) 15 October (b) 20 September (c) 15 December (d) 20 February
 
 ## Answers (one-line reasons)
 1 b: ECIB covers the bank against its own borrower, the exporter [F1]. · 2 b [F3; A15-F27]. · 3 b: whole turnover
@@ -81,4 +88,5 @@ end.
 (numericals Q2) [F41]. · 20 c: 30,00,000 × 2 ÷ 3 (a is the 75 % trap) [F7]. · 21 b: (9,00,000 − 60,000) × ⅔ [F41].
 · 22 c: 75 % [F8]. · 23 b: 50,00,000 ÷ 100 × 0.12 [F7]. · 24 b [F42]. · 25 b [F25]. · 26 c: Act 28 of 1981, in force
 1 Jan 1982 [F45]. · 27 b [F47, F51]. · 28 b [F53]. · 29 b [F53]. · 30 a [F54]. · 31 c: deposits only for 12 months
-or more (s. 12(1)(d)) [F49]. · 32 b [F57]. · 33 b [F44].
+or more (s. 12(1)(d)) [F49]. · 31a c: insurance is ECGC's; guarantees, credit and JV finance are in s. 10 [F48, F58]. · 32 b [F57]. · 33 b [F44].
+· 34 b: ss. 15–17 [F50]. · 35 b: 4 months from due date = 15 Oct; 1 month from recall = 20 Sep; earlier [F34].
