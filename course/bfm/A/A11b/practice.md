@@ -1,4 +1,4 @@
-# A11b · Practice (c1, 2026-11-22)
+# A11b · Practice (c2, 2026-11-22; c1 review fixes applied)
 
 Our own items; figures illustrative. Rules as at 31 Dec 2026. Reasons cite `research/bfm/facts/A5.3_A11b.md` [F#] or
 `numericals.md`.
@@ -34,9 +34,28 @@ from the bill date (d) 25 days
 (a) available for deemed exports of all kinds (b) only for imported inputs (c) **for cash exports, domestic and
 imported inputs, up to 360 days; if no export, adjusted at the TT selling rate** (d) must be in the invoice
 currency
-*Reason: CF 294, 295, 297, 304, 305 [F22].*
+*Reason: CF 294, 295, 297, 304, 305 [F22]. (a) is wrong: PCFC for deemed exports only for supplies to projects funded
+by multilateral / bilateral agencies (CF 335); (d) is wrong: PCFC may be in another convertible currency (CF 297).*
 
 **P7.** A running-account packing credit facility:
 (a) is open to all sub-suppliers (b) **needs a good track record (or EOU / SEZ status); bills are marked off on a
 first-in, first-out basis** (c) needs a firm order before each drawal (d) has no time limit
 *Reason: CF 243, 246 [F8].*
+
+**P8.** Which statements on liquidation of packing credit are true? (i) It is normally liquidated from the proceeds of
+the export bill, turning it into post-shipment credit. (ii) By agreement it may be repaid from the exporter's EEFC
+balance or own rupees, to the extent exports have taken place. (iii) For good-track-record exporters, a bill of
+another order may liquidate it (substitution of contract), but not for group concerns.
+(a) (i) only (b) (i) and (ii) (c) **(i), (ii) and (iii)** (d) (ii) and (iii)
+*Reason: CF 240, 242 [F6, F7].*
+
+**P9.** A packing credit limit of ₹45 lakh (margin already deducted) has drawals of ₹20 lakh and ₹12 lakh. The
+exporter asks for ₹15 lakh more. The bank can give at most:
+(a) ₹15,00,000 (b) **₹13,00,000** (c) ₹11,70,000 (d) ₹8,50,000
+*Reason: 45 − 20 − 12 = ₹13 lakh (`export_pcl.py` P9). (c) deducts a 10 % margin a second time.*
+
+**P10.** Packing credit outstanding is ₹40 lakh. The exporter ships part of the order; the bill of USD 25,000 is
+purchased at ₹84.00 (illustrative). Ignoring interest:
+(a) the whole PC is closed (b) **₹19,00,000 stays as packing credit, to be liquidated within 360 days of each
+advance** (c) ₹19,00,000 becomes a domestic loan at once (d) the bill proceeds go to the exporter first
+*Reason: 25,000 × 84 = ₹21,00,000 liquidates part; 40 − 21 = ₹19 lakh remains PC (CF 235, 240) [F3, F6].*
