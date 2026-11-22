@@ -104,9 +104,9 @@ def render_piece(run: str, job: str, comp: str, lines: str, audio_dir: str, scal
         _run(["node", tool, comp, "sound", str(out / "sound.wav")], cwd=work / "video")
     else:
         i, n = job.split("/")
-        # Remotion counts the container's cores (2 for cpu=2.0) and refuses a higher concurrency (2026-11-22)
+        # Remotion counts the container's cores (2 for cpu=2.0) and refuses more; render_part.mjs caps it too
         _run(["node", tool, comp, "part", i, n, scale, str(out / f"part_{int(i):02d}.mp4")], cwd=work / "video",
-             env={"RENDER_CONCURRENCY": str(max(1, os.cpu_count() or int(CPU)))})
+             env={"RENDER_CONCURRENCY": str(int(CPU))})
     vol.commit()
     return {"job": job, "seconds": round(time.time() - t0, 1), "cpu": CPU, "mem": MEM}
 
