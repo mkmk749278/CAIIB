@@ -1,7 +1,7 @@
-# A15 · "When the money doesn't come" · CLASS EDITION (script c2, with cue sheet)
+# A15 · "When the money doesn't come" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for
-  re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause check per
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT WITH FIXES (0 H, 1 M, 9 L); M1 and the Lows applied
+  (ack at the end of `review_c2.md`). c2: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause check per
   chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A15 (v4 split: A15 = A7.1–A7.5; A15b = bank covers, claims, EXIM Bank).
   Course order v4: A14 → **A15** → A15b.
@@ -23,7 +23,7 @@
   monthly declarations are ECGC's published product terms [F17–F22, F28–F34]: spoken as "ECGC's standard policy
   pays…", never as RBI rules. The country-risk policy, ratings and provisions are RBI rules [F10–F13]. The rating
   factors are general practice [F5]: "usually".
-- **Old labels**: until Nov 2025 RBI's words sat one rung lower (B2 "high" 20 %, C1 "very high" 25 %, C2
+- **Old labels**: until Nov 2025 RBI used other words for the same letters (the words moved; B2 "high" 20 %, C1 "very high" 25 %, C2
   "restricted", D "off-credit"); the letters and percentages never moved [F14]. Taught as "go by the letter", with
   A13's exam rule for old figures (PLAYBOOK §4a).
 - **Holds**: questions at least 3 s; one-step sums 8 s; multi-step 10 s; "your turn" 15 s; map 3–5 s per node.
@@ -31,7 +31,7 @@
   "I-R-D-A-I"; "D-A" (documents against acceptance); "A-one", "B-two", "C-one", "D" for the grades; "point two five".
 - **Not in this video**: ECGC's covers for banks (ECIB), credit limits in detail, the "to do" points and claim
   procedure, NEIA, EXIM Bank (all A15b); marine insurance (A07 only as a contrast).
-- **Length**: ~1,830 spoken words + ~2.4 min of holds ≈ 15 min (measure the take). Chapters: warm-up (~1.3 min) ·
+- **Length**: ~1,800 spoken words + ~2.2 min of holds ≈ 15 min (measure the take). Chapters: warm-up (~1.3 min) ·
   1 risks in trade (~2.6 min) · 2 country risk (~4.5 min) · 3 ECGC and its policies (~5 min) · close (~1.5 min). If
   the take runs over 15:00, cut in order: N047a, N069, N031's second sentence; keep N041–N041b (old labels: trap),
   N059 (180 days) and N064 (shipment risk: recalled items).
@@ -161,7 +161,7 @@ N035 · R-B-I treats country risk as part of credit risk. So the bank needs a Bo
 N035a · For watching a country, count everything: funded, like loans; non-funded, like L-Cs and guarantees. From Indian and foreign branches.
 > 1 C: card "exposure for the policy: funded + non-funded · domestic + foreign branches · indirect: an Indian borrower dependent on one country" [F11]
 
-N036 · But the hard rules use net funded exposure only: loans and money, not L-Cs. They start at one per cent of the bank's total assets.
+N036 · But the hard rules use net funded exposure only: loans, deposits, investments; not L-Cs. They start at one per cent of total assets.
 > 1 C: card "net funded exposure ≥ 1 % of total assets → full policy, own country rating, provisions · LCs and guarantees: not in the 1 % test or the provision" [F10, F13] · 2 B: underline "net funded only"
 
 N037 · Second, the bank rates countries itself, at least yearly, never better than an international rating agency. Until then, it may use E-C-G-C's seven grades.
@@ -176,13 +176,13 @@ N039 · B-two, twenty. C-one, twenty-five. C-two and D, one hundred per cent.
 N040 · Short-term exposure, under a hundred eighty days? The bank may hold just twenty-five per cent of that provision. And nothing on India itself.
 > 1 C: card "short-term (< 180 days): may, say 25 % of the requirement (bank's choice) · no provision on India (home country) · foreign branches: host-country exposure included · in addition to the asset-classification provision (standard or NPA) · doubtful / loss: total ≤ 100 % of outstanding" [F13]
 
-N041 · Careful with the words. Until late twenty twenty-five, R-B-I's labels sat one rung lower. B-two was "high", C-one "very high".
+N041 · Careful with the words. Until late twenty twenty-five, R-B-I used other words for the same letters. B-two was "high", C-one "very high".
 > 1 C: trap card, two rows: "old words (RBI to Nov 2025): A1 insignificant · A2 low · B1 moderate · B2 high · C1 very high · C2 restricted · D off-credit" · "today: … B1 moderately low · B2 moderate · C1 moderately high · C2 high · D very high" [F14]
 
 N041a · C-two was "restricted", D "off-credit". The letters and percentages never moved. So go by the letter, not the word.
-> 1 S: the ladder's letters and % column stay fixed while the word tags slide one rung · 2 B: box "go by the letter" · 3 N: "older still (2003): threshold 2 %; today 1 %" [F14]
+> 1 S: the ladder's letters and % column stay fixed; the old word tags appear beside them, then today's · 2 B: box "go by the letter" · 3 N: "older still (2003): threshold 2 %; today 1 %" [F14]
 
-N041b · In the exam, answer by today's rule. If the options only fit the old words, the question follows them: pick that.
+N041b · In the exam, answer by today's rule. If only the old figure is offered, pick it.
 > 1 C: card "'very high risk' → today D, 100 % · old books C1, 25 % · only the old figure offered → pick it" · 2 B: underline "only the old"
 
 N042 · A sum. Total assets two lakh crore rupees. Net funded exposure to Country Y, a B-two country, three thousand crore. Is a provision needed?
@@ -253,14 +253,14 @@ N057a · Or the buyer refuses to accept the goods.
 N058 · Political risks: the transfer is blocked, a war, a new import ban, or a voyage diverted at extra cost.
 > 1 C: card "political: payment transfer blocked or delayed · war, civil war, revolution, unrest · new import ban or licence cancelled · voyage diverted, extra freight · other causes outside India beyond both parties' control" [F18]
 
+N033 · How much political cover for each country? For most, open cover: no limit. For riskier ones, restricted: a yearly limit, or case by case.
+> 1 C: card "open cover: most countries, no limit on political-risk cover · restricted cover: Group I revolving limits (normally a year) · Group II specific approval, case by case · off-cover: no cover at all (e.g. Pakistan, short-term, since 12 May 2025)" [F9] · 2 N: "cover status ≠ grade · not the old word 'restricted'"
+
 N058a · Not covered: quality disputes, the exporter's own fault, exchange-rate losses, and damage to goods.
 > 1 C: card "NOT covered: commercial / quality disputes (unless a court decree abroad) · exporter's own default · exchange fluctuation · goods' loss or damage · agent's or collecting bank's default · buyer's failure to get import or exchange permits" [F19]
 
 N058b · And two sly ones. The buyer fails to get his own import permit: not covered. The collecting bank or agent defaults: not covered.
 > 1 C: trap card "new import ban by the government ✓ covered · buyer fails to get his own permit ✗ · collecting bank / agent defaults ✗" [F18, F19]
-
-N033 · How much political cover for each country? For most, open cover: no limit. For riskier ones, restricted: a yearly limit, or case by case.
-> 1 C: card "open cover: most countries, no limit on political-risk cover · restricted cover: Group I revolving limits (normally a year) · Group II specific approval, case by case · off-cover: no cover at all (e.g. Pakistan, short-term, since 12 May 2025)" [F9] · 2 N: "cover status ≠ grade · not the old word 'restricted'"
 
 N059 · Now the standard policy: the Shipments Comprehensive Risks Policy, S-C-R. For exports above five crore rupees a year, on short credit.
 > 1 S: the policy shelf; first box "SCR · the Standard Policy" · 2 C: card "SCR: export turnover > ₹5 cr · short-term credit, normally ≤ 180 days · whole turnover: all shipments (LC-backed or associates may be excluded) · 12 months · commercial + political + LC bank" [F28]
@@ -286,19 +286,19 @@ N063 · Seventy-two thousand from E-C-G-C. Eight thousand she bears.
 N063a · Her side of the deal: declare every shipment by the fifteenth of the next month, and report bills overdue by thirty days.
 > 1 C: card "declare shipments monthly by the 15th · report bills unpaid 30 days after due date · claim within 360 days of due date or 540 days of policy expiry, earlier (A15b) · no-claim bonus 5 % a year, max 50 %" [F28]
 
-N064 · And the cover starts at shipment. Before shipment, say the buyer cancels? Not under the standard policy. That's the "shipment risk" line.
+N064 · And the cover starts at shipment. Before shipment, say the buyer cancels? Not under the standard policy. Exams call this pre-shipment and post-shipment risk.
 > 1 C: card "shipment risk: post-shipment → SCR covers from the date of shipment · pre-shipment (contract cancelled, import ban, buyer insolvent before shipment) → separate add-on (manufacturer exporters, under MBEP, 80 %)" [F21] · 2 B: circle "from shipment"
 
 N065 · The rest of the shelf, one line each. Exports up to five crore: the Small Exporters Policy, S-E-P, with a shorter wait.
 > 1 S: shelf box "SEP: turnover ≤ ₹5 cr · overdues reported after 60 days · waiting period 2 months" [F29]
 
-N065a · And richer cover: E-C-G-C's F-A-Q says ninety-five per cent for commercial losses, a hundred for political. The one policy that can pay in full.
+N065a · And richer cover: ninety-five per cent for commercial losses, a hundred for political. The one policy on this shelf that can pay in full.
 > 1 C: card "SEP (ECGC FAQ): 95 % commercial · 100 % political · standard policy: 90 % both" [F29] · 2 B: circle "100 % political, SEP only"
 
 N066 · Very small exporters, up to one crore: M-E-P, the micro exporters' policy. Large ones, twenty lakh premium or more: the Export Turnover Policy.
 > 1 S: shelf boxes "MEP (ECGC's menu: 'SME policy'): ≤ ₹100 lakh, 90 %" · "ETP: premium ≥ ₹20 lakh a year, whole turnover, 90 %" [F30, F33]
 
-N067 · Just one shipment? The Specific Shipment Policy, S-S-P. Just chosen buyers? The Export Specific Buyers Policy, B-W-P. Both pay eighty per cent.
+N067 · Just one shipment? The Specific Shipment Policy, S-S-P. Just chosen buyers? The Export Specific Buyers Policy, B-W-P, buyer-wise. Both pay eighty per cent.
 > 1 S: shelf boxes "SSP: pick a contract or shipment, 80 %" · "BWP (Export Specific Buyers): chosen buyer(s), per shipment, 12 months, 80 %" [F31, F32]
 
 N068 · Many shipments to one buyer: the Buyer Exposure Policy. Many buyers: the Multi-Buyer Exposure Policy. Premium on the most E-C-G-C will pay, not per shipment.
