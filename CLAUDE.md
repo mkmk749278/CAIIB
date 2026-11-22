@@ -81,7 +81,13 @@ Never a new loose doc.
     2 parts). **A12 c3 locked** (`A/A12/`, fact sheet `A5.11-A5.3_A12.md`: **FEDAI 10th ed. sets no
     crystallisation day; each bank's published policy decides** (old "30th day" taught as history; the case gives the
     day); TT selling to crystallise, TT buying for later proceeds; checker `tools/check/export_bills.py`; voice page 2
-    parts). Gold Card facts for A14 already in `A5.3_A11b.md` (standby ≥ 20 %).
+    parts). **A13 c3 locked** (2026-11-22, `A/A13/`, fact sheet `A4.6-A5.10_A13.md`: import side of the 2026
+    regulations: pay within the contract period, advances on the AD's policy (old 6 months / USD 200,000 / 5 m / 100,000
+    / 3 months as trap cards), no gold/silver advance except the 11-day IIBX route (A.P. DIR 04/2022, 07/2023, 14/2024:
+    re-check at the freeze); trade credit unchanged by the 2026 ECB overhaul (ECB-TC MD 8 Sep 2026: USD 50/150 m, 3 years
+    / 1 year or operating cycle, +300/+250 bps, LoU/LoC banned); FEDAI Rule 3 (no flip); IDPMS; checker
+    `tools/check/import_bills.py`; reviews c1 ×3 + re-review c2 ADOPT; voice page 2 parts). Exam rule for old figures
+    in options: PLAYBOOK §4a (2026-11-22). Gold Card facts for A14 already in `A5.3_A11b.md` (standby ≥ 20 %).
     Open: FEDAI 6.3 "cancel and rebook" vs RBI Circular 25 (10 Oct 2026) no rebooking: re-check FEDAI at the freeze. Greetings and goodbyes used so far: `course/bfm/greetings.md`.
 - **Template locked (owner, 2026-11-20, "Video is fine"):** the Incoterms sample (A07, folder
   `course/bfm/A/A9_incoterms/`), cut r5. Every lesson is built the same way (PLAYBOOK §5e). Master
@@ -112,7 +118,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04–A06 locked (A07 locked earlier). A08–A12 locked (c3, voice pages; 2026-11-22); next A13 (import rules and finance: retiring bills, supplier's and buyer's credit, trade credit, IDPMS) onward:** fact sheet →
+    A04–A06 locked (A07 locked earlier). A08–A13 locked (c3, voice pages; 2026-11-22); next A14 (factoring, forfaiting, Gold Card and other exporter facilities; v4 plan in `plans_A.md`) onward:** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared

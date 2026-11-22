@@ -120,6 +120,11 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   9 → 15 months (Dec 2025) → 9 months (5 June 2026, before the 30 June cut-off) → new regulations from 1 Oct 2026.
   Rules issued before the cut-off but effective later (ECL, new credit-risk SA, both from 1 Apr 2027) are taught as
   "issued, coming"; the old rule remains the answer until then.
+- **Old figures in the exam options (2026-11-22, A13 examiner review).** When a rule book is replaced (the 2026
+  export/import regulations dropped the old MDs' fixed numbers), IIBF's question bank can lag. Every lesson teaches
+  today's rule first and keeps the old figures on "older books say" trap cards; once per topic it says the answering
+  rule aloud: answer by today's rule, but if the options offer only an old figure, the item was set on the old rule,
+  so pick the old figure (A13 N018a; A11 follows it through its trap cards).
 
 ## 4b. Public class videos as a depth checklist (2026-11-20)
 - **Why**: the syllabus lists topics but not how deep each goes, and the official courseware is not available to us
