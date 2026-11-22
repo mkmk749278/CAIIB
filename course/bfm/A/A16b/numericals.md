@@ -1,4 +1,4 @@
-# A16b · Numericals (c2, 2026-11-22)
+# A16b · Numericals (c3, 2026-11-22)
 
 All names, amounts, rates and dates illustrative. Checked by `python3 tools/check/lrs_capital.py` (two ways: Decimal,
 and 12-digit calculator key presses); all OK. Basic 8-function calculator only. Rules: cash for travel forex only

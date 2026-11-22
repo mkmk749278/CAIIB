@@ -1,4 +1,4 @@
-# A16b · Practice (c2, 2026-11-22)
+# A16b · Practice (c3, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A2.2-A2.7-A2.9_A16b.md`. Sums checked by
 `tools/check/lrs_capital.py`. All figures illustrative. c2: keys spread across the letters, options of like length,

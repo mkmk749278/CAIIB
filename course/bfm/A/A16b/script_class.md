@@ -1,6 +1,7 @@
-# A16b · "Owning abroad, lending home, and the travel counter" · CLASS EDITION (script c1, with cue sheet)
+# A16b · "Owning abroad, lending home, and the travel counter" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: **c2**, 2026-11-22: every Medium of the three c1 reviews fixed (expert 3, examiner 3, beginner 9) and the
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT WITH FIXES (0 H, 1 M, 8 L); the Medium and Lows applied (ack at
+  the end of `review_c2.md`); the re-review said no further review is needed after the M1 fix. c2, 2026-11-22: every Medium of the three c1 reviews fixed (expert 3, examiner 3, beginner 9) and the
   main Lows applied (`review_ack_c1.md`); for re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one
   question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A16 (v4 split: A16 = A2.1, A2.3–A2.6; **A16b = A2.2, A2.7, A2.8, A2.9 and the
@@ -14,7 +15,7 @@
   FEM (Authorised Persons) Regulations 2026 · MD Money Changing (29 Sep 2026), MD Other Remittance Facilities (1 Oct
   2026) · FEM Regulations 9(R) and 11(R) 2015 · as at 31 December 2026".
 - **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Good to see you again. Same family as last class, bigger
-  plans: money that owns things abroad."; goodbye "That's the rest of the remittance story. Put the notebook down, and I'll see
+  plans: money that owns things abroad."; goodbye "That's the rest of the remittance story. Rest your eyes now, and I'll see
   you in the next class."
 - **Story**: A16's Mrs Lakshmi (teacher, Coimbatore). Her son **Karthik**, a student in the US, calls with two plans:
   (1) she puts money into his new US software company for a 20 % stake; (2) she lends him ₹5 lakh for his US rent.
@@ -34,9 +35,9 @@
   "section ten-five" for s. 10(5), "section six-four" for s. 6(4); "eighty-four sixty" for ₹84.60.
 - **Not in this video**: LRS limit, schedules, PAN, Form A2, TCS (A16); NRI accounts and residency (A17, A18);
   compounding procedure, adjudication, ED (A21); ODI by companies (outline only, not here).
-- **Length**: ~1,870 spoken words + ~2.4 min of holds ≈ 14.9 min at 150 wpm (measure the take). Chapters: warm-up (~1.2
+- **Length**: ~1,843 spoken words + ~2.4 min of holds ≈ 14.7 min at 150 wpm, 15.6 at 140 (measure the take). Chapters: warm-up (~1.2
   min) · 1 the FEMA sections (~2.9 min) · 2 owning abroad and lending (~3.8 min) · 3 reporting and beyond LRS (~2.6
-  min) · 4 the travel counter (~3.1 min) · close (~1.5 min). If over 15:00, cut in order: N049, N036a, N053. N035 (old JV/WOS words) is a card only, on N034b.
+  min) · 4 the travel counter (~3.1 min) · close (~1.5 min). If over 15:00, cut in order: N036a, N053a. (N014 and N049 are card-only since c3.) N035 (old JV/WOS words) is a card only, on N034b.
   Protect N017–N017a (misuse vs another permitted purpose), N029 (ODI line), N039–N041 (loan: minimum, used in India),
   N047 (daily return), N064–N069a (cash per trip), N071–N073 (keep 2,000; 180 days).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: A16's **forex counter**
@@ -85,10 +86,7 @@ N011 · So the ban comes first, and L-R-S is a door through it. Which section op
 > 1 S: the door glows · H: 3 s
 
 N012 · Section six. Capital deals only as permitted: R-B-I sets the debt ones, the Government the rest, like shares.
-> 1 C: card "s. 6: capital account, as permitted · debt: RBI · non-debt, e.g. shares: Government (since 15 Oct 2019)" [F2] · 2 S: rung "6 · permits"
-
-N014 · Assets she held while a non-resident, or inherited from one? She may keep them: section six, sub-section four. Six-four, for short.
-> 1 C: card "s. 6(4): held while non-resident, or inherited from a non-resident: may keep" [F3] · 2 S: rung "6(4) · keep"
+> 1 C: card "s. 6: capital account, as permitted · debt: RBI · non-debt, e.g. shares: Government (since 15 Oct 2019)" [F2] · 2 S: rung "6 · permits" · 3 C: card "s. 6(4): held while non-resident, or inherited from a non-resident: may keep" [F3]; rung "6(4) · keep" (card only: N014 voice cut, c3, for length)
 
 N015 · Now the counter. Section ten, sub-section five. Ten-five: before any forex deal, the bank takes her declaration that it breaks no rule.
 > 1 C: card "s. 10(5): declaration before every deal · refused? bank declines in writing" [F6] · 2 N: "in practice: Form A2" · 3 S: rung "10(5) · declare"
@@ -164,7 +162,7 @@ N032a · No. Owning a flat abroad, yes. A stake in a real-estate trading busines
 N033 · A software start-up qualifies. One more start-up rule: her own money, not borrowed. And she can't lend to the company.
 > 1 N: "start-up abroad: own funds only · no loan or guarantee by an individual to his foreign company" [F18, F19] · 2 G: plan-1 card ticks
 
-N034 · Before the first remittance, her bank registers the investment and gets it a number, the U-I-N.
+N034 · Before the first remittance, her bank registers the foreign company and gets it a number, the U-I-N.
 > 1 C: card "before remitting: UIN through one designated bank · Form FC with Form A2" [F21, F34]
 
 N034a · Then proof of her shares within six months. She can sell only after a year; the money comes home within ninety days.
@@ -174,7 +172,7 @@ N034b · And a yearly performance report, by thirty-first December. Below ten pe
 > 1 C: card "Annual Performance Report: by 31 Dec · CA-certified · not needed below 10 % without control" [F23] · 2 N: "her listed-share OPI: reported by the bank under LRS, no OPI form" [F24] · 3 C: trap card "FEMA 120/2004 'JV / WOS' ✗ superseded 22 Aug 2022 · OI Rules 2022 ✓" [F26]
 
 N038 · Now Karthik's second plan. He has gone abroad to study, so for FEMA he's a non-resident. Can she lend him rupees?
-> 1 S: plan-2 card · 2 N: "student abroad: person resident outside India (A17–A18)" · H: 3 s
+> 1 S: plan-2 card · 2 N: "student abroad: person resident outside India (A17–A18)" [F65] · H: 3 s
 
 N039 · Yes, under L-R-S. Interest-free, for at least one year, paid into his N-R-O account: his rupee account in India as a non-resident.
 > 1 C: card "rupee loan to NRI / PIO relative: interest-free · minimum 1 year · into his NRO account · inside her USD 250,000" [F27] · 2 B: underline "at least one year"
@@ -215,10 +213,7 @@ N047 · Daily reporting. Every bank uploads each L-R-S remittance to R-B-I by cl
 > 1 S: a daily ledger goes up a pipe to one central book · 2 C: card "LRS daily return to RBI: each remittance · by close of the next working day · nil report on a day with none" [F35]
 
 N048 · Why daily? The limit is per person across all banks. Only one central record, by PAN, keeps the jar honest.
-> 1 C: card "why: one USD 250,000 per person, all sources in India → central PAN-wise record" [F37] · 2 B: underline "across all banks"
-
-N049 · Since January twenty twenty-six, money changers file it themselves too, and can see her total for the year.
-> 1 C: card "from 1 Jan 2026: AD Cat-II and money changers file directly; see her PAN-wise total" [F36] · 2 N: "monthly LRS return dropped from the Sep 2024 report" [F35, F38]
+> 1 C: card "why: one USD 250,000 per person, all sources in India → central PAN-wise record" [F37] · 2 B: underline "across all banks" · 3 C: card "from 1 Jan 2026: AD Cat-II and money changers file directly; see her PAN-wise total" [F36] · 4 N: "monthly LRS return dropped from the Sep 2024 report" [F35, F38] (cards only: N049 voice cut, c3)
 
 N050 · Now, money outside L-R-S. Karthik's father goes to a conference in Boston, and his employer pays. Whose jar?
 > 1 S: a conference badge "Boston · paid by employer" · H: 3 s
@@ -226,11 +221,14 @@ N050 · Now, money outside L-R-S. Karthik's father goes to a conference in Bosto
 N051 · Nobody's. Employer-paid business travel is the employer's own payment: no limit, once the bank sees it's genuine.
 > 1 C: card "employer deputes and pays: outside LRS · no limit · bank checks it's genuine" [F43]
 
-N052 · Companies, firms and trusts have no L-R-S of their own. For the same purposes, like business trips, they share its two lakh fifty thousand cap.
+N052 · Companies, firms and trusts have no L-R-S of their own. For L-R-S-type purposes, they get the same two lakh fifty thousand cap.
 > 1 C: card "non-individuals: LRS-type purposes within USD 250,000 · most other current payments: no limit" [F41]
 
-N053 · A few need R-B-I above set lines. A donation for a university chair: above one per cent of three years' forex earnings, or five million dollars.
-> 1 C: card "donation (chair, education fund, technical body): RBI above 1 % of 3 years' forex earnings or USD 5 million, whichever less" [F41] · 3 B: underline "whichever is less" (shown, not spoken) · 2 N: "also: consultancy above USD 10 m (infrastructure) / 1 m per project" [F41]
+N053 · Most of their other payments have no limit. A few need R-B-I above set lines, like a donation for a university chair.
+> 1 C: card "donation (chair, education fund, technical body): RBI above 1 % of 3 years' forex earnings or USD 5 million, whichever less" [F41]
+
+N053a · The line: one per cent of three years' forex earnings, or five million dollars, whichever is less.
+> 1 B: underline "whichever is less" · 2 N: "also: consultancy above USD 10 m (infrastructure) / 1 m per project" [F41]
 
 N054 · And remittance apps. Since May twenty twenty-six, a bank can tie up with a non-bank app without R-B-I's approval.
 > 1 C: card "13 May 2026: bank + non-bank app, for non-trade current remittances · no prior RBI approval" [F45]
@@ -338,7 +336,7 @@ N083 · Four bans, six permits, ten-five declares, ten-six catches misuse, eleve
 N084 · Account, property, O-D-I or O-P-I, a loan to a relative; one jar, no credit; O-D-I only in operating, non-financial companies. Third: reporting.
 > 1 M: node "capital uses" fills · H: 4 s
 
-N085 · Daily return by the next working day, nil if none; employer travel and company payments sit outside L-R-S. Fourth: travel forex.
+N085 · Daily return by the next working day, nil if none; employer travel and most company payments sit outside L-R-S. Fourth: travel forex.
 > 1 M: node "reporting and beyond LRS" fills · H: 4 s
 
 N086 · Three thousand dollars in notes, five for Iraq and Libya; cash below fifty thousand; keep two thousand; surrender the rest in one-eighty days.
@@ -350,5 +348,5 @@ N087 · Homework. This year: sixty thousand dollars for fees, forty thousand int
 N088 · Next class, people who live abroad, and the four accounts they can hold in India.
 > 1 S: card face down "A17"
 
-N089 · [warmly] That's the rest of the remittance story. Put the notebook down, and I'll see you in the next class.
+N089 · [warmly] That's the rest of the remittance story. Rest your eyes now, and I'll see you in the next class.
 > 1 S: the counter's light dims

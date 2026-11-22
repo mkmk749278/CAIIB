@@ -1,0 +1,150 @@
+<title>A16b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A16b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A16b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · The law behind the counter + Chapter 2 · Owning abroad, and lending to family", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N044a", "text": "[warmly] Good to see you again. Same family as last class, bigger plans: money that owns things abroad. First, homework. Six lakh for fees in May, then an eight lakh gift in August. T-C-S on the gift? Eighty thousand rupees. The total reaches fourteen lakh; four lakh is above the line, all in the gift, at twenty per cent. And from two classes back. E-X-I-M Bank takes deposits, but only for at least how long? Twelve months. Good. Now, Mrs Lakshmi's son, Karthik, calls from the U-S with two plans. One: he and a friend are starting a software company there. He wants his mother to put money in, for a twenty per cent stake. Two: he wants to borrow five lakh rupees from her, for his rent there. Some say both are fine. Others: a loan abroad? Never. Keep your answer. By the end, you'll settle both plans, and the travel rules exams ask, like notes for Iraq. Chapter one. L-R-S stands on a few sections of FEMA, the foreign exchange law. First, the starting rule. Section four: a resident may not hold foreign exchange, foreign securities or property abroad, unless the Act allows it. So the ban comes first, and L-R-S is a door through it. Which section opens the capital door? Section six. Capital deals only as permitted: R-B-I sets the debt ones, the Government the rest, like shares. Now the counter. Section ten, sub-section five. Ten-five: before any forex deal, the bank takes her declaration that it breaks no rule. Then ten-six. She buys dollars for his fees, but spends them on lottery tickets there. What has she done? Broken the law. Ten-six covers three things: not using it as declared, using it for a barred purpose, or not surrendering it in time. Surrendering means selling unused foreign exchange back to a bank or money changer. And switching to another permitted purpose? R-B-I allows that. Who disciplines the banks? Section eleven: R-B-I directs them, and can fine a bank up to ten thousand rupees, plus two thousand a day. Anyone at all? Section thirteen: up to three times the sum, or two lakh if it can't be counted. Plus five thousand a day, ongoing. Many of you think a FEMA breach means jail. Mostly not. It's a money penalty, set by an officer who hears the case. Prison comes only in two cases: assets kept abroad against section four, above a set value; or a penalty left unpaid. And section fifteen: she can apply to compound, that is, settle by paying. It's decided within one hundred and eighty days. Pause check for chapter one. One. Which section makes her sign a declaration before the deal? Ten-five. Two, the twist. She bought dollars for a trip, never went, and never sold them back. Which section? Ten-six: not surrendered. [seriously] One thing from chapter one: four bans, six permits, ten declares, thirteen fines. Chapter two. First, a recall. Shares abroad aren't debt. So who writes their rules, R-B-I or the Government? The Government. Now, what can Mrs Lakshmi own abroad under L-R-S? Guess how many routes. Four. An account with a bank abroad. Property abroad. Investments abroad. And a loan to a relative who lives abroad. All four share her one jar of two lakh fifty thousand dollars. And no bank credit for any of them. Investments come in two kinds. Portfolio: a few shares of a listed U-S company. That's Overseas Portfolio Investment, O-P-I. Direct: a real stake in a business. Overseas Direct Investment, O-D-I. The line: unlisted shares, or ten per cent or more of a listed company, or any stake with control. That's O-D-I. Karthik's start-up: twenty per cent, unlisted. Which kind? O-D-I. Can an individual do that? Yes, if the company is an operating business, not in financial services. Some of you think L-R-S can fund a property business abroad. Can it? No. Owning a flat abroad, yes. A stake in a real-estate trading business, no. And no gambling business either. A software start-up qualifies. One more start-up rule: her own money, not borrowed. And she can't lend to the company. Before the first remittance, her bank registers the foreign company and gets it a number, the U-I-N. Then proof of her shares within six months. She can sell only after a year; the money comes home within ninety days. And a yearly performance report, by thirty-first December. Below ten per cent without control, none needed. Now Karthik's second plan. He has gone abroad to study, so for FEMA he's a non-resident. Can she lend him rupees? Yes, under L-R-S. Interest-free, for at least one year, paid into his N-R-O account: his rupee account in India as a non-resident. Some say \"for at most one year\". No: one year is the minimum. Where can he spend it? Only in India: his own needs, or his business here. It can't be sent abroad. One more door. GIFT City has India's International Financial Services Centre, the I-F-S-C. L-R-S money can go there, just as abroad. Older books say idle money there must come back in fifteen days. That rule went in twenty twenty-three. Now it's one hundred and eighty. Pause check for chapter two. One. Ten per cent of a listed foreign company: O-P-I or O-D-I? O-D-I. Two, the twist. Karthik's five lakh loan, to pay his rent in the U-S. Allowed? No. The loan is used only in India. His rent can go as an ordinary remittance for his studies or upkeep instead. [seriously] One thing from chapter two: four capital uses, one jar, no bank credit."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · Reporting, and money outside L-R-S + Chapter 4 · At the travel counter + Close", "turns": [{"speaker": "Teacher", "first": "N045", "last": "N089", "text": "Chapter three. First, a recall. The rupee loan to an N-R-I relative: the minimum period? One year. Now a puzzle. She sends money through two banks. How does the second bank know what the first sent? Daily reporting. Every bank uploads each L-R-S remittance to R-B-I by close of the next working day. Nothing that day? A nil report. Why daily? The limit is per person across all banks. Only one central record, by PAN, keeps the jar honest. Now, money outside L-R-S. Karthik's father goes to a conference in Boston, and his employer pays. Whose jar? Nobody's. Employer-paid business travel is the employer's own payment: no limit, once the bank sees it's genuine. Companies, firms and trusts have no L-R-S of their own. For L-R-S-type purposes, they get the same two lakh fifty thousand cap. Most of their other payments have no limit. A few need R-B-I above set lines, like a donation for a university chair. The line: one per cent of three years' forex earnings, or five million dollars, whichever is less. And remittance apps. Since May twenty twenty-six, a bank can tie up with a non-bank app without R-B-I's approval. But the bank stays responsible. The app shows the rate and charges, and her money never passes through the app's account. Who else sells forex? Category-two dealers, with a smaller licence than a bank: most payments not linked to trade, but no gifts or donations. Pause check for chapter three. One. When does a bank report its L-R-S remittances? Next working day; nil if none. Two, the twist. Bank A sent two lakh dollars for her this year. How much can bank B send? Fifty thousand dollars: bank B sees her total. [seriously] One thing from chapter three: one jar per person, so every bank reports every day. Chapter four. First, a recall. A remittance app makes a mistake. Who answers for it, the app or the bank? The bank. Now another trip, his own: Karthik's father flies out to see him. How much can he carry in notes? Up to three thousand dollars in notes per trip. The rest on a forex card, traveller's cheques or a remittance. Two exceptions. Iraq or Libya: up to five thousand. Iran, Russia and the former Soviet states, the C-I-S: the whole amount, in notes. And Haj or Umrah pilgrims: the cash limit the Haj Committee of India sets. How can he pay? Cash only below fifty thousand rupees for the whole trip. Fifty thousand or more: cheque, transfer, draft or card. Many of you say \"up to fifty thousand in cash\". Up to, or below? Below. Fifty thousand itself can't be cash. Try it. He buys five hundred and ninety dollars at eighty-four point six zero rupees. Can he pay cash? Five-nine-zero times eighty-four point six: forty-nine thousand, nine hundred and fourteen rupees. Below fifty thousand: cash is fine. Your turn. Next day, same trip, he buys three hundred dollars more. Cash again? No. Eight hundred and ninety dollars for the trip: seventy-five thousand, two hundred and ninety-four rupees. The limit counts the whole trip, not each purchase. Splitting it to stay below is what auditors look for. He comes home with two thousand six hundred dollars in notes, and some coins. What must he do? He may keep up to two thousand dollars in notes and traveller's cheques, for his next trip. Coins, any amount. The other six hundred he must surrender, that is, sell to a bank or money changer, within one hundred and eighty days of coming home. Older books say ninety days for notes. Today that's only for firms and companies. For an individual: one hundred and eighty. Pause check for chapter four. One. Notes for a trip to Dubai: at most? Three thousand dollars. Two, the twist. A year later he still holds fifteen hundred dollars in notes. Must he surrender them? No: within the two thousand he may keep. [seriously] One thing from chapter four: three thousand out, below fifty thousand in cash, two thousand kept. Back to our opening. The start-up stake, and the loan for his rent. Both fine? The stake, yes: O-D-I in an operating software company, from her own money, inside her jar. The loan, yes, but not for rent abroad. Quick mix. One. Section thirteen penalty, when the sum is known? Up to three times the sum. Two. Idle money in her GIFT City account: back within how long? One hundred and eighty days, unless reinvested. Three. Notes for a trip to Libya? Up to five thousand dollars. Now the map, from memory. First node: FEMA sections. Four bans, six permits, ten-five declares, ten-six catches misuse, eleven fines banks, thirteen fines anyone, fifteen settles. Second: capital uses. Account, property, O-D-I or O-P-I, a loan to a relative; one jar, no credit; O-D-I only in operating, non-financial companies. Third: reporting. Daily return by the next working day, nil if none; employer travel and most company payments sit outside L-R-S. Fourth: travel forex. Three thousand dollars in notes, five for Iraq and Libya; cash below fifty thousand; keep two thousand; surrender the rest in one-eighty days. Homework. This year: sixty thousand dollars for fees, forty thousand into the start-up, and a loan worth fifty thousand dollars. What's left in her jar? Next class, people who live abroad, and the four accounts they can hold in India. [warmly] That's the rest of the remittance story. Rest your eyes now, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
