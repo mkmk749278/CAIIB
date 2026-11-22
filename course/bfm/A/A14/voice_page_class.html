@@ -1,0 +1,150 @@
+<title>A14 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A14 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A14/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Factoring + Chapter 2 · Forfaiting", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N046", "text": "[warmly] Hello, all of you. Today our exporter sells what she's owed, and we see who keeps the risk. First, homework. Bill selling eighty-six point two, fifty thousand dollars, thirty days at ten point nine five. The total? Forty-three lakh ten thousand, plus thirty-eight thousand seven hundred ninety. Forty-three lakh forty-eight thousand seven hundred ninety rupees. Now, two exporters. Our Tiruppur exporter sells shirts every month to about twenty buyers in Europe, on ninety days. And a machine maker in Coimbatore sells one machine to Nairobi: two million dollars, paid over five years. Both want their money now, and neither wants the buyer's risk. Can they sell what they're owed? Yes. Selling receivables, the money owed to you: for many small ones, factoring. For one big deferred deal, forfaiting. Remember A-twelve? The bank discounted her bill; if the buyer didn't pay, it came back to her. That's recourse. Some of you think forfaiting is with recourse, like that discount. Others, without. Keep your answer. Factoring, status holders and the Diamond Dollar Account: all asked in recent papers. Chapter one. Factoring means buying someone's receivables, the money her buyers owe her. She signs that right over to the factor. That's assignment. Three parties. The seller who's owed, the assignor. The buyer who owes, the debtor. And the factor. What does a factor do? Four things. Pays part of the invoice now. Keeps her sales ledger, the record of who owes what. Collects from the buyers. And, without recourse, protects her from bad debts. With recourse, if a buyer doesn't pay, the factor comes back to the seller. Without recourse, it can't. Banks may also offer limited recourse. And the bank books its exposure on whoever carries the risk. Who may factor? Banks, without registering under the Factoring Regulation Act. N-B-F-C factors, registered with R-B-I. An N-B-F-C factor must earn at least half its income from factoring, and keep at least half its assets in it. Quick one. Is factoring only for exporters? No. Domestic factoring is common: one Indian firm selling to another. Export factoring is one kind. For exports, two factors usually work together: the export factor here, and an import factor in the buyer's country. The invoice tells the buyer: pay the import factor. Under the twenty twenty-six rules, each bank's own policy covers export and import factoring. Now a sum. This month she assigns sixty thousand dollars of invoices. The factor advances eighty per cent at once. How much? Forty-eight thousand. Now her costs. Fee: half a per cent of the invoices. Interest: seven per cent a year on the advance, for ninety days. Note: three sixty. Dollar interest counts a year as three hundred sixty days; rupees, as in our last two classes, three sixty-five. When the buyers pay, the factor keeps its advance, fee and interest. What does she get then? Fee, three hundred. Interest, eight hundred forty: on the advance, forty-eight thousand, not on sixty. She gets ten thousand eight hundred sixty more. One Indian answer for small sellers: T-REDS, the Trade Receivables Discounting System. The seller must be an M-S-M-E. Financiers bid, the seller picks the best bid, and it's without recourse to the seller. And the idea goes back to R-B-I's study group of nineteen eighty-eight, under C. S. Kalyanasundaram. Pause check for chapter one. One. Without recourse, on whom does the bank book its exposure? The debtor, the buyer. Two, the twist. Must a bank register under the Factoring Act to factor? No; banks are exempt. [seriously] If you remember one thing from chapter one: recourse decides who carries the risk. Chapter two. First, from chapter one. On T-REDS, who must the seller be? An M-S-M-E. Now Coimbatore. Two million dollars in ten promissory notes, the buyer's written promises to pay: two hundred thousand each, every six months. Each note carries an aval: the Nairobi buyer's bank signs on the note itself, guaranteeing payment. A forfaiter buys the notes and pays now. If Nairobi never pays, can the forfaiter come back to Coimbatore? No. Remember my question at the start? Forfaiting is without recourse. The name is French, à forfait: an outright deal, no claim back. So the risks leave the exporter: the buyer, the buyer's country, the interest rate, and the currency. Usually: one big deal, about six months to five years or more, up to the full value, at a fixed rate. First note: due in one hundred eighty days. Discount six point four per cent a year, three-sixty-day year. What does Coimbatore receive? Discount, six thousand four hundred. It receives a hundred ninety-three thousand six hundred dollars, today, with no risk left. Your turn. The second note, due in three hundred sixty days, same rate. Pause me if you need. Twelve thousand eight hundred off. A hundred eighty-seven thousand two hundred dollars. Got a hundred eighty-seven thousand three hundred seventy-five? You divided by three sixty-five. Dollars use three sixty. Three charges. A commitment fee, from the promise until the notes are bought. The discount. And documentation. The deal falls through. Does Coimbatore get its commitment fee back? Usually not. The forfaiter kept money ready for it. [lightly] Keeping money ready isn't free. Who forfaits in India? EXIM Bank and authorised dealer banks. The I-C-C's forfaiting rules, U-R-F eight hundred, apply only if the contract says so. Now the full comparison. Fill it in your head first. Factoring: many invoices, short term, with or without recourse, part paid now, services included. Forfaiting: one deal, medium term, always without recourse, up to the full value, a negotiable instrument with an aval. Pause check for chapter two. One. Forfaiting: with or without recourse? Without. Two, the twist. Which one gives sales-ledger management? Factoring. [seriously] If you remember one thing from chapter two: many small, factoring; one big avalised deal, forfaiting."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · What exporters get: Gold Card, status, accounts + Close", "turns": [{"speaker": "Teacher", "first": "N047", "last": "N084", "text": "Chapter three. First, from chapter two. The fee charged from the forfaiter's promise till the purchase? The commitment fee. Now, what does a bank give its best exporters? R-B-I's Gold Card scheme. Who gets one? Creditworthy exporters with a good track record, small ones included, on the bank's own criteria. Two are kept out. First, exporters on E-C-G-C's Specific Approval List. E-C-G-C insures export credit; this list holds exporters it covers only case by case. Second, those with overdue bills above ten per cent of last year's turnover. The limits: in principle for three years, renewed automatically. Plus a standby. How much? Not less than twenty per cent of the assessed limit, for sudden orders. Speed: twenty-five days for a fresh application, fifteen for renewal, seven for an ad hoc limit. And: preference for P-C-F-C, foreign currency packing credit. Collateral, and E-C-G-C's cover for the bank, may be waived. And the rate is no higher than the bank's normal export-credit rate. Now, status holders. The government, through D-G-F-T, recognises top exporters by their export performance. Five ranks, in million dollars: three, fifteen, fifty, two hundred, eight hundred. One Star Export House to Five Star. Their privileges include clearances on self-declaration, and no bank guarantees under trade-policy schemes. They may send documents straight to the buyer, but the money still comes through a bank. And they may export goods free, to promote sales: up to one crore rupees or two per cent of average exports, whichever is lower. Micro and small firms' exports count double, but only towards the One Star rank. A paper asked: may a status holder write off ten per cent of its bills itself? Today? That was the old rule; five per cent for others. Today, the bank may allow a reduction for good reasons. And where the shipping bill is up to ten lakh rupees, the exporter's own declaration is enough, even if nothing came. Now, the Hamburg buyer pays. Must our exporter convert every dollar to rupees at once? No. She may keep it in an E-E-F-C account, the Exchange Earners' Foreign Currency account. Some of you think it earns interest, like a savings account. Does it? No. It pays no interest. And no loans against the balance. Rupees taken out can't be put back. She may also keep an account abroad for export money. Use it for imports, or bring it home by the end of next month. Three months, if that bank is in an I-F-S-C, like GIFT City. Diamond traders have their own: the Diamond Dollar Account. Three years' record, three crore turnover, up to five accounts, dollars only. Older books list more: commission to a foreign agent who found the buyer, a cap on reducing invoices, and conditions for refunds. Since October twenty twenty-six those fixed conditions are gone. The bank's own policy decides, within the new regulations. In the exam, answer by today's rule. If the options offer only the old figure, the question follows the old rule: pick it. Pause check for chapter three. One. The Gold Card standby limit? Not less than twenty per cent. Two, the twist. A jeweller: three years' record, but two and a half crore turnover. Diamond Dollar Account? No; turnover must be at least three crore. [seriously] If you remember one thing: Gold Card, bank; status, D-G-F-T; E-E-F-C holds, never lends. Quick mix. One. A machine sold on five-year avalised notes, no recourse wanted. Which product? Forfaiting. Two. Twenty buyers, ninety days, someone to chase them. Which product? Factoring. Three. An exporter on E-C-G-C's Specific Approval List. Gold Card? No. Now the map, from memory. First node: factoring. Assignor, debtor, factor; recourse decides the risk; banks and N-B-F-C factors; T-REDS for small sellers. Second: forfaiting. One big deal, avalised notes, without recourse; commitment fee and discount. Third: Gold Card. Three-year limits, standby at least twenty per cent, no S-A-L, overdues not above ten per cent. Fourth: status holders. D-G-F-T, five stars, three to eight hundred million. Fifth: accounts. E-E-F-C: no interest, no loans; D-D-A for diamonds. That's the map. Homework. A third note, due in five hundred forty days, same rate. What does Coimbatore receive? Next class: no one bought the bill, and the buyer's country shuts its doors. Who pays then? E-C-G-C. [warmly] That's the exporter's toolkit, complete. Look after yourselves, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
