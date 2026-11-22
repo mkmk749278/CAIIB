@@ -27,13 +27,17 @@ import modal
 
 APP = "caiib-render"
 NODE = "22.11.0"
-CPU = 4.0          # render_part.mjs renders with concurrency 4
+CPU = 2.0          # physical cores (= 4 vCPU, a GitHub runner); render_part.mjs renders with concurrency 4
 MEM = 8192         # MiB per render container
 # Modal's list prices (USD) as read on 2026-11-22: the log's cost line is an estimate; the Modal bill is the truth.
 USD_PER_CORE_S = 0.0000131
 USD_PER_GIB_S = 0.00000222
 
-REPO = Path(__file__).resolve().parents[2]
+# Inside a Modal container this file is /root/render.py (2026-11-22: parents[2] there crashed every container at
+# start, and a deployed app retries crashes forever); the repo files are under /repo there.
+_here = Path(__file__).resolve()
+REPO = (_here.parents[2] if len(_here.parents) > 2 and (_here.parents[2] / "video/package.json").is_file()
+        else Path("/repo"))
 
 image = (
     modal.Image.debian_slim(python_version="3.12")
@@ -62,7 +66,8 @@ image = (
 
 app = modal.App(APP, image=image)
 drive = modal.Secret.from_name("caiib-drive")
-vol = modal.Volume.from_name("caiib-render-work", create_if_missing=True)
+# version 2: v1 is advised for at most 5 writers at once, and a render has parts + 1 (Modal docs, 2026-11-22)
+vol = modal.Volume.from_name("caiib-render-v2", create_if_missing=True, version=2)
 
 
 def _run(cmd: list[str] | str, cwd: str | Path | None = None, env: dict | None = None) -> str:
@@ -86,7 +91,9 @@ def _workdir(lines: str, audio_dir: str) -> Path:
     return work
 
 
-@app.function(cpu=CPU, memory=MEM, timeout=3 * 3600, secrets=[drive], volumes={"/vol": vol}, retries=1)
+# max_containers caps every function, so a crash loop or a bad input can never fan out into a big bill
+@app.function(cpu=CPU, memory=MEM, timeout=3 * 3600, secrets=[drive], volumes={"/vol": vol}, retries=1,
+              max_containers=49)
 def render_piece(run: str, job: str, comp: str, lines: str, audio_dir: str, scale: str) -> dict:
     t0 = time.time()
     work = _workdir(lines, audio_dir)
@@ -102,7 +109,7 @@ def render_piece(run: str, job: str, comp: str, lines: str, audio_dir: str, scal
     return {"job": job, "seconds": round(time.time() - t0, 1), "cpu": CPU, "mem": MEM}
 
 
-@app.function(cpu=2.0, memory=4096, timeout=3600, secrets=[drive], volumes={"/vol": vol})
+@app.function(cpu=2.0, memory=4096, timeout=3600, secrets=[drive], volumes={"/vol": vol}, max_containers=2)
 def join(run: str, video: str, name: str) -> str:
     vol.reload()
     work = _workdir("", "")
@@ -126,7 +133,10 @@ def join(run: str, video: str, name: str) -> str:
     return f"{link.strip()}\n\n{probe.strip()}\n\nsmooth_audit:\n{audit.strip()[-3000:]}"
 
 
-@app.function(cpu=0.25, memory=512, timeout=6 * 3600, secrets=[drive], volumes={"/vol": vol})
+# nonpreemptible: Modal may restart any container by default; a restarted coordinator would render the whole
+# video again. 3x the price of a quarter core, which is next to nothing.
+@app.function(cpu=0.25, memory=512, timeout=6 * 3600, secrets=[drive], volumes={"/vol": vol}, max_containers=2,
+              nonpreemptible=True)
 def orchestrate(comp: str, video: str, lines: str, audio_dir: str, scale: str, parts: int, name: str) -> str:
     run = f"{video}_{name}_{int(time.time())}".replace("/", "_")
     t0 = time.time()
