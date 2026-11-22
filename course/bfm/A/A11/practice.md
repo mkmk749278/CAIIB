@@ -21,9 +21,9 @@ not more than ₹10 lakh (reg 3(2)(b), 2nd Amendment) [F6]. Services declare to 
 the old form for software; consultancy is not software, and under the 2026 rules every declaration is the EDF [F5].*
 
 **P3.** Which statement on receipt of export proceeds is correct?
-(a) an exporter to Bhutan must be paid in US dollars (b) **an exporter to Germany may be paid in rupees or any
-foreign currency, through an authorised bank** (c) the AD credits the exporter first and checks genuineness within
-30 days (d) an advance and the balance may come through different ADs without telling either
+(a) an exporter to Bhutan must be paid in US dollars (b) an advance and the balance may come through different ADs
+without telling either (c) the AD credits the exporter first and checks genuineness within 30 days (d) **an exporter
+to Germany may be paid in rupees or any foreign currency, through an authorised bank**
 *Reason: countries outside the ACU → INR or any foreign currency (MRP reg 3(2)(I)(a)(iii)) [F8]; Nepal and Bhutan
 → INR [F8]; the AD credits only after checking genuineness and closes EDPMS at the same time (reg 4(2)) [F9]; advance
 and proceeds through the same AD unless both are told (reg 10(1)) [F17].*
@@ -49,8 +49,8 @@ and first proviso) [F11].*
 ## EDPMS and the money that doesn't come
 
 **P7.** A shipping bill for ₹6 lakh is fully paid. The quickest way the AD may close the EDPMS entry is:
-(a) only after RBI approval (b) **on the exporter's declaration that payment has been realised, or a quarterly
-bulk declaration** (c) by XOS statement (d) it closes by itself after nine months
+(a) **on the exporter's declaration that payment has been realised, or a quarterly bulk declaration** (b) only after
+RBI approval (c) by XOS statement (d) it closes by itself after nine months
 *Reason: reg 4(2) proviso: entries up to ₹10 lakh may be closed on the exporter's declaration, or quarterly in bulk
 [F10]. XOS was replaced by EDPMS [F19].*
 
@@ -64,15 +64,15 @@ cases and self write-off went with the old MD [F14, F18].*
 
 **P9.** A Tiruppur exporter owes USD 20,000 for fabric to her buyer's German sister company; the buyer owes her USD
 60,000, still within the realisation period. Her AD:
-(a) cannot allow set-off within a group (b) **may allow set-off of the USD 20,000** (c) needs RBI approval (d) may
+(a) cannot allow set-off within a group (b) needs RBI approval (c) **may allow set-off of the USD 20,000** (d) may
 allow it only for an Asian Clearing Union country
 *Reason: reg 7: set-off with the same overseas buyer or supplier, or its group or associate companies, within the
 realisation period [F15].*
 
 **P10.** A non-EDI EDF reaches the AD. It must be entered in EDPMS within:
-(a) 21 days (b) **5 working days** (c) 30 days from the end of the month (d) the AD's own SOP timeline
+(a) 21 days (b) the AD's own SOP timeline (c) 30 days from the end of the month (d) **5 working days**
 *Reason: reg 18(1)(a) [F19]. 30 days from month-end is the services exporter's own filing time [F5].*
 
 **P11.** Under the 2026 rules, the time within which an exporter gives the shipping documents to the AD is set by:
-(a) RBI at 21 days (b) **the AD's Board-approved policy and SOP** (c) FEDAI (d) DGFT
+(a) **the AD's own internal policy and SOP** (b) RBI at 21 days (c) FEDAI (d) DGFT
 *Reason: reg 19(1)(a) [F20]; the 21 days was the old Master Direction (superseded 1 Oct 2026).*

@@ -1,6 +1,6 @@
-# A11 · "From the first form to the last dollar" · CLASS EDITION (script c1, with cue sheet)
+# A11 · "From the first form to the last dollar" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): concepts, one date calendar, no sums
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT WITH FIXES (0 H, 1 M), the Medium (cuts) and Lows applied; N005a, N055, N073 dropped. c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): concepts, one date calendar, no sums
   beyond counting months.
 - **Plan**: `course/bfm/A/plans_A.md` §A11 (split v4: A11 rules, A11b finance). Course order v4: A10 → **A11** → A11b.
 - **Syllabus**: A5.1 (exchange and trade control guidelines for exporters), A5.5 (EDPMS), and from A5.2 the
@@ -22,7 +22,7 @@
 - **Say it right**: "I-E-C"; "E-D-F"; "E-D-P-M-S"; "D-G-F-T"; "fee-ma" for FEMA; "A-D bank"; "rupees ten lakh".
 - **Not in this video** (plan v4): packing credit and post-shipment finance (A11b); DDA, agency commission, refund
   of proceeds, EEFC (A14); merchanting in full (A13); IDPMS (A13).
-- **Length target**: about 14 minutes (~1,850 spoken words + ~1.8 min of holds). Chapters: 1 two regulators and the
+- **Length target**: about 14.6 minutes (~1,841 spoken words + ~119 s of holds). Chapters: 1 two regulators and the
   declaration (~3.5 min) · 2 the money comes in (~2.5 min) · 3 the realisation clock (~3.5 min) · 4 EDPMS, and when
   the money doesn't come (~3 min) · close (~1.5 min).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Pictures: the **export trail**, a
@@ -42,19 +42,16 @@ N002 · First, from last class. The buyer says the goods are poor and asks the b
 N003 · No. Banks deal in documents; only proven fraud stops payment. Today we leave the L-C and walk the export itself.
 > 1 N: "no: documents, not goods · fraud only ✓" · 2 S: the export trail, empty road, factory gate on the left, a bank on the right
 
-N004 · Why it matters: export and import questions came in all seven cycles we studied. Realisation, I-E-C and D-G-F-T were asked by name.
+N004 · Why it matters: export rules came up in all seven exam cycles we studied, realisation most of all.
 > 1 N: "Exports and imports: 7 of 7 cycles" [importance_map A-EXIMP] · 2 N: "asked: realisation of export bills · IEC · DGFT"
 
 N005 · Our Tiruppur exporter is back. Her Hamburg buyer orders forty thousand shirts, a hundred and twenty thousand dollars. Shipment in January.
 > 1 S: a truck at the factory gate "40,000 shirts · USD 120,000 · ship Jan 2027 (illustrative)"
 
-N005a · She sells C-I-F Hamburg. From our Incoterms class: who buys the insurance?
-> 1 S: the A07 road, faint; "CIF" tag on the truck · H: 3 s
+N006 · Now her question to you: how long does she have to bring the money home? Some of you say nine months. Others, fifteen.
+> 1 S: two buttons "9 months" · "15 months" · H: 3 s
 
-N006 · She does. Now her question to you: how long does she have to bring the money home? Some of you say nine months. Others, fifteen.
-> 1 N: "CIF → seller insures ✓" (A07) · 2 S: two buttons "9 months" · "15 months" · H: 3 s
-
-N007 · Both have been right at some point. By the end, you'll know which is right now.
+N007 · By the end, you'll know which is right now.
 > 1 G: both buttons flicker; a small clock appears over the road
 
 ## Chapter 1 · Two regulators and the declaration
@@ -71,7 +68,7 @@ N009 · The goods side is the Foreign Trade Policy, run by D-G-F-T, the Director
 N010 · The money side is fee-ma, the Foreign Exchange Management Act. R-B-I writes its regulations, and her bank applies them.
 > 1 S: door 2 "RBI · FEMA: declare · receive · realise · report" [F2]
 
-N011 · Her bank is an A-D bank: an authorised dealer, allowed to deal in foreign exchange. Today it does most of the work.
+N011 · Her bank is an A-D bank: an authorised dealer, allowed to deal in foreign exchange.
 > 1 N: "AD bank = authorised dealer in foreign exchange" · 2 G: the bank on the right of the road
 
 N012 · Step one is D-G-F-T's. No export or import of goods without an I-E-C, the Importer-Exporter Code.
@@ -89,14 +86,14 @@ N014a · Even with no change. Miss it, and her code is deactivated.
 N015 · Step two, declare, is R-B-I's. Its new rule book: the Export and Import of Goods and Services Regulations, twenty twenty-six. In force from the first of October, twenty twenty-six.
 > 1 C: card "FEM (Export and Import of Goods and Services) Regulations, 2026 · in force 1 Oct 2026" [F1] · 2 S: an old book "Master Direction – Export" stamped "superseded 1 Oct 2026"
 
-N016 · Why new? Fewer fixed R-B-I limits; more decisions by her bank. Keep that in mind all class.
+N016 · Why new? Fewer fixed R-B-I limits; more decisions by her bank.
 > 1 N: "ease of business · ADs decide more" [F1, F21] · 2 N: "references to RBI: PRAVAAH portal · doubtful cases → Directorate of Enforcement" [F1]
 
 N017 · The first R-B-I duty: declare the full export value. The form is the E-D-F, the Export Declaration Form.
 > 1 S: second milestone "declare (EDF)" · 2 C: card "EDF = full export value" [F4]
 
 N018 · For goods, she declares to Customs. Shipping from a port linked to Customs' computer system? The shipping bill itself counts as her E-D-F.
-> 1 C: card "goods → Customs · Customs-linked (EDI) port: shipping bill = EDF" [F4] · 2 N: "EDI = electronic data interchange"
+> 1 C: card "goods → Customs (SEZ unit: Development Commissioner) · Customs-linked (EDI) port: shipping bill = EDF" [F4] · 2 N: "EDI = electronic data interchange"
 
 N019 · Now her cousin sells software design to a client in Berlin. A service. Does he file an E-D-F at the port?
 > 1 S: a laptop beside the truck "service export (illustrative)" · H: 3 s
@@ -139,7 +136,7 @@ N029 · For most countries, Germany included, any foreign currency, or rupees. A
 N030 · Two exceptions. Nepal and Bhutan pay in rupees.
 > 1 N: "Nepal, Bhutan → INR (FCY if Nepal's central bank allows)" [F8]
 
-N030a · And members of the Asian Clearing Union, a group of central banks in our region, like Sri Lanka's and Bangladesh's, settle through that union.
+N030a · And Asian Clearing Union members, central banks of our region like Sri Lanka's and Bangladesh's, settle through that union.
 > 1 N: "ACU = central banks of the region settle among themselves · e.g. Sri Lanka, Bangladesh → ACU mechanism, or as RBI directs" [F8]
 
 N031 · Her bank gets the dollars. Can it credit her account the same minute?
@@ -160,8 +157,8 @@ N035 · Can someone other than Hamburg pay her, say its parent company in London
 N036 · And her shipping documents? Older books say: give them to the bank within twenty-one days, the old R-B-I rule. Now her bank's own published policy sets the timeline.
 > 1 C: trap card "FEMA: documents to AD in 21 days (old MD) ✗ · AD's own policy and SOP sets timelines ✓ · (LC presentation: UCP 600's 21 days still apply)" [F20]
 
-N037 · Every A-D bank must have that policy: documents, timelines, charges, on its website. And it can't charge her a penalty when she's late on a rule.
-> 1 C: card "AD policy + SOP: documents · timelines · charges" · 2 N: "on its website · no penalty for her regulatory delay" [F20]
+N037 · Every A-D bank must have that policy: documents, timelines, charges, on its website. And it can't charge her any fee or penalty when she's late on a rule.
+> 1 C: card "AD policy + SOP: documents · timelines · charges" · 2 N: "on its website · no charge or penalty for her regulatory delay" [F20]
 
 N038 · Pause check for chapter two. One. Nepal buys from her. In what currency?
 > 1 S: card "Nepal pays in?" · H: 3 s
@@ -214,10 +211,7 @@ N053 · Now our opening question: nine or fifteen?
 > 1 S: a timeline strip, empty
 
 N054 · For years it was nine. From November twenty twenty-five to June twenty twenty-six, it was fifteen. Then back to nine.
-> 1 S: timeline "2015 rules: 9 → 13 Nov 2025: 15 → 5 Jun 2026: 9" [F13]
-
-N055 · The new rules were first printed with fifteen too. A September amendment made it nine before they started.
-> 1 S: timeline adds "2026 rules as notified: 15 / 18 → 22 Sep 2026 amended: 9 / 12 → in force 1 Oct 2026" [F13]
+> 1 S: timeline "2015 rules: 9 → 13 Nov 2025: 15 → 5 Jun 2026: 9 · 2026 rules as notified: 15 / 18 → amended 22 Sep 2026: 9 / 12 → in force 1 Oct 2026" [F13]
 
 N056 · Many of you have fifteen in your notes. Cross it out. At our cut-off, it's nine months, or twelve in rupees.
 > 1 C: trap card "15 months ✗ (general rule only Nov 2025 – Jun 2026; also the old warehouse rule and COVID 2020) · 9 months; INR 12 ✓ (as at 31 Dec 2026)" [F13] · 2 B: cross out "15"
@@ -251,7 +245,7 @@ N064 · Who opens her entry? At a Customs-linked port, the shipping-bill data fl
 N064a · At a port without that link, the E-D-F is on paper, a manual E-D-F. That one, and a services E-D-F, her bank enters within five working days.
 > 1 N: "manual or services EDF → AD enters in 5 working days" [F19] · 2 B: circle "5 working days"
 
-N065 · Her bank records the money coming in, follows her up, and marks the entry off only when the value is realised.
+N065 · Her bank records the money in, follows her up, and marks the entry off only once it's realised.
 > 1 N: "AD: records inward remittance · follows up · marks off after realisation" [F19]
 
 N066 · Before E-D-P-M-S, banks sent R-B-I statements of outstanding export bills, called X-O-S. E-D-P-M-S replaced them.
@@ -287,7 +281,7 @@ N074 · And if the money never comes? A full year past her realisation deadline,
 N075 · Only against full advance, or an irrevocable L-C. R-B-I no longer needs to list her; the rule acts by itself.
 > 1 C: card "unrealised > 1 year after the realisation due date (or extended date) → further exports only against full advance or irrevocable LC" [F18]
 
-N076 · Earlier, R-B-I kept a caution list of such exporters. Anyone on it on the thirtieth of September twenty twenty-six stays under it until removed.
+N076 · Exporters already on R-B-I's old caution list on the thirtieth of September twenty twenty-six stay on it until removed.
 > 1 N: "old caution list: names on it on 30 Sep 2026 stay till removed" [F18]
 
 N077 · Pause check for chapter four. One. A manual E-D-F reaches her bank. Days to enter it in E-D-P-M-S?
