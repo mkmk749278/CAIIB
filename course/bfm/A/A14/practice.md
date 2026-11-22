@@ -1,4 +1,4 @@
-# A14 · Practice (c1, 2026-11-22)
+# A14 · Practice (c2, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A5.2-A5.4-A5.6_A14.md`. Sums checked by
 `tools/check/export_factoring.py`. All figures illustrative. Answers at the end.
@@ -53,8 +53,9 @@ Our own questions, written from the fact sheet `research/bfm/facts/A5.2-A5.4-A5.
     (b) exemption from bank guarantees under FTP schemes (c) receiving export proceeds outside banking channels
     (d) self-declaration for authorisations
 25. "A status holder may self write-off unrealised export bills up to 10 % of the previous year's realisation." At
-    the 31 Dec 2026 cut-off this is: (a) true (b) false: superseded; the AD allows reduction on reasons, and up to
-    ₹10 lakh per shipping bill on the exporter's declaration
+    the 31 Dec 2026 cut-off this is: (a) true for status holders only (b) true for all exporters at 5 % (c) superseded:
+    the AD may allow a reduction if satisfied with the reasons; for a shipping bill up to ₹10 lakh the exporter's
+    declaration is enough (d) true only with RBI approval
 26. Which is true of an EEFC account? (a) it pays interest like a savings account (b) the bank may give an overdraft
     against it (c) it is a non-interest current account and no credit facility is allowed against its balance
     (d) only 50 % of export proceeds may be credited
@@ -67,9 +68,21 @@ Our own questions, written from the fact sheet `research/bfm/facts/A5.2-A5.4-A5.
 30. Which product suits a machine maker selling one USD 2 million machine on 5-year credit, wanting no recourse?
     (a) factoring with recourse (b) forfaiting (c) TReDS (d) packing credit
 
+31. (Old rule, still in some question banks) An AD could allow a **cash discount** to the overseas buyer for prepaying a
+    usance bill up to: (a) 25 % of invoice value (b) the proportionate interest on the unexpired usance (c) 10 % of
+    invoice value (d) the agency commission
+32. A firm dealing in cut and polished diamonds has a 3-year track record and an average annual turnover of ₹2.5 crore
+    in the preceding three licensing years. Diamond Dollar Account? (a) yes, up to 5 accounts (b) yes, one account only
+    (c) no: turnover below ₹3 crore (d) yes, with RBI approval
+33. A diamond exporter already holds five DDAs and asks for a sixth with another bank. (a) allowed (b) not allowed:
+    at most 5 DDAs (c) allowed if the turnover is above ₹10 crore (d) allowed in euro
+34. A pharma company, a status holder, supplies vaccines free of cost to a WHO health programme. Its annual limit for
+    such free-of-cost exports under FTP 2023: (a) ₹1 crore (b) 2 % of average annual export realisation (c) up to 8 %
+    of average annual export realisation (preceding three licensing years) (d) no limit
+
 ## Answers
 1 b [F1] · 2 c [F2] · 3 b [F5] · 4 c [F5] · 5 b [F3] · 6 b [F4] · 7 d [F4] · 8 c [F10] · 9 b [F11] · 10 b [F12–F14]
 · 11 a [F13] · 12 c [F14] · 13 c [F15] · 14: advance 64,000; fee 400; interest `64000 × 6 % = × 90 = ÷ 360 =` 960;
 balance `80000 − 64000 − 400 − 960 =` **USD 14,640** · 15: discount `300000 × 7.2 % = × 180 = ÷ 360 =` 10,800;
 **USD 289,200** · 16: **USD 2,500** · 17 b [F17] · 18 b [F18] · 19 c [F18] · 20 b [F18] · 21 b [F18] · 22 b [F22]
-· 23 b [F22] · 24 c [F23] · 25 b [F24] · 26 c [F30] · 27 b [F30] · 28 b [F31] · 29 b [F32] · 30 b.
+· 23 b [F22] · 24 c [F23] · 25 c [F24] · 26 c [F30] · 27 b [F30] · 28 b [F31] · 29 b [F32] · 30 b · 31 b [F27] · 32 c [F32] · 33 b [F32] · 34 c [F23, F29].

@@ -1,6 +1,6 @@
 # A14 · "Selling what you're owed" · CLASS EDITION (script c1, with cue sheet)
 
-- **Status**: c1, 2026-11-22, for the three independent reviews. Standard style (`course/spec/lesson_spec.md`): one
+- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one
   question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A14 (v4: with the three facilities moved in from A11). Course order v4: A13 →
   **A14** → A15.
@@ -11,7 +11,7 @@
 - **Rule version (opening card)**: "FEM (Export and Import of Goods and Services) Regulations 2026 (in force 1 Oct
   2026) · RBI Credit Facilities Directions 2025, ch. XV (updated 1 Oct 2026) · Factoring Regulation Act 2011 (amended
   2021) · RBI TReDS Directions 2026 · FTP 2023 · FEMA 10(R) (amended to 9 Oct 2025) · as at 31 December 2026".
-- **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Hello again, everyone. Today our exporter sells what
+- **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Welcome back, everyone. Today our exporter sells what
   she's owed, and we see who keeps the risk."; goodbye "That's the exporter's toolkit, complete. Look after yourselves,
   and I'll see you in the next class."
 - **Story**: two exporters. (1) The Tiruppur shirt exporter (A08, A11, A11b, A12): she now sells every month to about
@@ -26,15 +26,14 @@
   F26–F28]: trap cards only, with A13's exam rule (today's rule first; if the options offer only the old figure, pick
   it).
 - **Holds**: questions at least 3 s; one-step sums 8 s; multi-step 10 s; "your turn" 15 s; map 3–5 s per node.
-- **Say it right**: "for-FAY-ting" (forfaiting; never "forfeiting"); "a-VAL" (aval); "T-REDS" spoken "tee-reds";
+- **Say it right**: "for-FAY-ting" (forfaiting; never "forfeiting"); "a-VAL" (aval); "T-REDS" spoken "tee-reds"; "U-R-F";
   "N-B-F-C"; "E-E-F-C"; "D-D-A"; "E-C-G-C"; "S-A-L"; "P-C-F-C"; "I-F-S-C"; "M-S-M-E"; "C-E-R-S-A-I" spoken
   "sir-sai"; "D-G-F-T"; "F-T-P"; "Kalyanasundaram" (kal-yaa-na-SUN-da-ram).
 - **Not in this video**: ECGC policies and the SAL in depth (A15); EXIM Bank's own products (A15b); EBR / BAF (A11b);
   packing credit (A11b); realisation and EDPMS (A11).
-- **Length**: ~1,470 spoken words + ~2.5 min of holds ≈ 13–13.5 min (measure the take). Chapters: 1 factoring
-  (~3.5 min) · 2 forfaiting (~3.5 min) · 3 Gold Card and status holders (~3 min) · 4 the exporter's accounts and
-  old facilities (~2.5 min) · close (~1.5 min). If the take runs over 15:00, cut in order: N024a, N047, N058 (their
-  cards stay).
+- **Length**: ~1,750 spoken words + ~2.7 min of holds ≈ 15 min (measure the take). Chapters: 1 factoring
+  (~4 min) · 2 forfaiting (~3.5 min) · 3 Gold Card and status holders (~3 min) · 4 the exporter's accounts and
+  old facilities (~3 min) · close (~1.5 min). If the take runs over 15:00, cut in order: N047, then N041's second sentence (cards stay). Keep N024a and N058 (recalled item; practice).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: the export road (A11)
   with **two lanes** after the ship: lane 1 many small invoice cards flowing into a "factor" box; lane 2 one large
   bill with a stamp "aval" sliding to a "forfaiter" box. A **risk backpack** sits on whoever carries the buyer's risk.
@@ -43,7 +42,7 @@
 
 ## Warm-up
 
-N001 · [warmly] Hello again, everyone. Today our exporter sells what she's owed, and we see who keeps the risk.
+N001 · [warmly] Welcome back, everyone. Today our exporter sells what she's owed, and we see who keeps the risk.
 > 0 C: rule-version card · 1 S: notebook page; title "A14 · Selling what you're owed"
 
 N002 · First, homework. Bill selling eighty-six point two, fifty thousand dollars, thirty days at ten point nine five. The total?
@@ -61,18 +60,21 @@ N005 · And a machine maker in Coimbatore sells one machine to Nairobi: two mill
 N006 · Both want their money now, and neither wants the buyer's risk. Can they sell what they're owed?
 > 1 S: a backpack labelled "buyer's risk" on each exporter · H: 3 s
 
-N007 · Yes. Selling receivables: for many small ones, factoring. For one big deferred deal, forfaiting.
+N007 · Yes. Selling receivables, the money owed to you: for many small ones, factoring. For one big deferred deal, forfaiting.
 > 1 S: the road splits into two lanes: "factoring" (many cards) · "forfaiting" (one bill)
 
-N008 · Some of you think forfaiting is with recourse, like a bank discount. Others, without. Keep your answer.
+N008 · Remember A-twelve? The bank discounted her bill; if the buyer didn't pay, it came back to her. That's recourse.
+> 1 S: A12's discounted bill; an arrow back to the exporter, label "recourse"
+
+N008a · Some of you think forfaiting is with recourse, like that discount. Others, without. Keep your answer.
 > 1 S: two buttons "with recourse" · "without recourse" · H: 3 s
 
-N009 · Factoring, forfaiting, and the Gold Card: all asked in recent papers.
-> 1 N: "asked: factoring committee Dec 2023 · status holder write-off Dec 2024 · factoring vs forfaiting (classes)" [Leads]
+N009 · Factoring, status holders and the Diamond Dollar Account: all asked in recent papers.
+> 1 N: "asked: factoring committee Dec 2023 · DDA Dec 2023 · status-holder write-off Dec 2024" [Leads]
 
 ## Chapter 1 · Factoring
 
-N010 · Chapter one. In law, factoring means buying someone's receivables by assignment, to collect them or to finance against them.
+N010 · Chapter one. Factoring means buying someone's receivables, the money her buyers owe her. She signs that right over to the factor. That's assignment.
 > 1 S: chapter title "1 · Factoring" · 2 C: card "factoring business = acquiring receivables by assignment, for a consideration, to collect or to finance · Factoring Regulation Act 2011 (amended 2021)" [F1]
 
 N011 · Three parties. The seller who's owed, the assignor. The buyer who owes, the debtor. And the factor.
@@ -81,8 +83,11 @@ N011 · Three parties. The seller who's owed, the assignor. The buyer who owes, 
 N012 · What does a factor do? Four things.
 > 1 S: a box "factor" with four empty slots · H: 3 s
 
-N013 · Pays part of the invoice now. Keeps the sales ledger. Collects from the buyers. And, without recourse, takes the bad-debt risk.
-> 1 C: card "finance · sales-ledger management · collection · credit protection (without recourse)" [F9] · 2 B: circle "credit protection"
+N013 · Pays part of the invoice now. Keeps her sales ledger, the record of who owes what.
+> 1 C: card "finance · sales-ledger management · collection · credit protection (without recourse)" [F9]
+
+N013a · Collects from the buyers. And, without recourse, protects her from bad debts.
+> 1 B: circle "credit protection" on "protects"
 
 N014 · With recourse, if a buyer doesn't pay, the factor comes back to the seller. Without recourse, it can't.
 > 1 S: the risk backpack: with recourse it stays on the exporter; without recourse it moves to the factor [F5]
@@ -90,34 +95,43 @@ N014 · With recourse, if a buyer doesn't pay, the factor comes back to the sell
 N015 · Banks may also offer limited recourse. And the bank books its exposure on whoever carries the risk.
 > 1 C: card "with recourse → exposure on the assignor (seller) · without → on the debtor (buyer) · international → on the import factor · limited → per agreement · without-recourse limits: Board-approved" [F5] · 2 B: underline "whoever carries the risk"
 
-N016 · Who may factor? Banks, without registering under the Act. N-B-F-C factors, registered with R-B-I.
+N016 · Who may factor? Banks, without registering under the Factoring Regulation Act. N-B-F-C factors, registered with R-B-I.
 > 1 C: card "banks: departmentally or via a subsidiary, no FRA registration · NBFC-Factor: RBI CoR under FRA · NBFC-ICC with ₹1,000 cr+ assets may also be registered" [F3]
 
-N017 · An N-B-F-C factor must earn half its income from factoring, and keep half its assets in it.
-> 1 C: card "NBFC-Factor: factoring assets ≥ 50 % of total assets AND factoring income ≥ 50 % of gross income · NOF ₹10 crore by 31 Mar 2027" [F4]
+N017 · An N-B-F-C factor must earn at least half its income from factoring, and keep at least half its assets in it.
+> 1 C: card "NBFC-Factor: factoring assets ≥ 50 % of total assets AND factoring income ≥ 50 % of gross income · NOF: ₹5 cr (old) → ₹7 cr (from 31 Mar 2025, in force at the cut-off) → ₹10 cr by 31 Mar 2027 (issued, coming)" [F4]
 
-N018 · Factoring isn't only for exports. Most of it is domestic.
+N017a · Quick one. Is factoring only for exporters?
+> 1 S: two buttons "only exports" · "domestic too" · H: 3 s
+
+N018 · No. Domestic factoring is common: one Indian firm selling to another. Export factoring is one kind.
 > 1 C: trap card "'factoring = only exports' ✗ · domestic and export (and import) ✓" [F8, F10]
 
 N019 · For exports, two factors usually work together: the export factor here, and an import factor in the buyer's country.
 > 1 S: map: Tiruppur → Hamburg; "export factor (India)" ↔ "import factor (Germany): checks the buyer, collects" [F8]
 
 N019a · The invoice tells the buyer: pay the import factor. Under the twenty twenty-six rules, each bank's own policy covers export and import factoring.
-> 1 C: card "invoice notation: pay the import factor · AD's policy & SOP must cover export and import factoring (2026 reg 19)" [F8]
+> 1 C: card "how it works (old Export MD A.13, superseded): invoice notation 'pay the import factor'; export factor closes the bill in EDPMS · today: AD's policy & SOP must cover export and import factoring (2026 reg 19)" [F8]
 
 N020 · Now a sum. This month she assigns sixty thousand dollars of invoices. The factor advances eighty per cent at once. How much?
 > 1 S: sum card "USD 60,000 · advance 80 % · illustrative (the share is a commercial term)" · H: 8 s
 
-N021 · Forty-eight thousand. Fee: half a per cent of the invoices. Interest: seven per cent a year on the advance, ninety days, a three-sixty-day year.
-> 1 S: keys "60000 × 80 % = 48000" · 2 S: sum card "fee 0.5 % × 60,000 · interest 48,000 × 7 % × 90 ÷ 360" · H: 10 s
+N021 · Forty-eight thousand. Now her costs. Fee: half a per cent of the invoices. Interest: seven per cent a year on the advance, for ninety days.
+> 1 S: keys "60000 × 80 % = 48000" · 2 S: sum card "fee 0.5 % × 60,000 · interest 48,000 × 7 % × 90 ÷ 360"
 
-N022 · Fee, three hundred. Interest, eight hundred forty. When the buyers pay, she gets ten thousand eight hundred sixty more.
-> 1 S: keys "60000 × 0.5 % = 300 · 48000 × 7 % = × 90 = ÷ 360 = 840 · 60000 − 48000 − 300 − 840 = 10860" · 2 B: box "USD 10,860" [numericals Q1]
+N021a · Note: three sixty. Dollar interest counts a year as three hundred sixty days; rupees, as in our last two classes, three sixty-five.
+> 1 C: card "US dollar (and most foreign currencies): ÷ 360 · rupee: ÷ 365 (A12, A13)" [numericals]
+
+N021b · When the buyers pay, the factor keeps its advance, fee and interest. What does she get then?
+> 1 S: the buyers' money arrives at the factor box · H: 15 s
+
+N022 · Fee, three hundred. Interest, eight hundred forty: on the advance, forty-eight thousand, not on sixty. She gets ten thousand eight hundred sixty more.
+> 1 S: keys "60000 × 0.5 % = 300 · 48000 × 7 % = × 90 = ÷ 360 = 840 · 60000 − 48000 − 300 − 840 = 10860" · 2 B: box "USD 10,860" · trap card "60,000 × 7 % × 90 ÷ 360 = 1,050 ✗ (interest on the invoice)" [numericals Q1]
 
 N023 · One Indian answer for small sellers: T-REDS, the Trade Receivables Discounting System.
 > 1 C: card "TReDS = an electronic platform for factoring MSME sellers' receivables through many financiers · RBI TReDS Directions 2026" [F10]
 
-N024 · The seller must be an M-S-M-E. Financiers bid, the best rate wins, and it's without recourse to the seller.
+N024 · The seller must be an M-S-M-E. Financiers bid, the seller picks the best bid, and it's without recourse to the seller.
 > 1 S: one invoice, three financiers bidding · 2 C: card "seller = MSME · without recourse to the seller · buyer's payment on the due date unconditional once accepted · assignment filed with CERSAI" [F10]
 
 N024a · And the idea goes back to R-B-I's study group of nineteen eighty-eight, under C. S. Kalyanasundaram.
@@ -137,7 +151,7 @@ N026 · No; banks are exempt. [seriously] If you remember one thing from chapter
 N027 · Chapter two. First, from chapter one. On T-REDS, who must the seller be?
 > 1 S: chapter title "2 · Forfaiting" · H: 3 s
 
-N028 · An M-S-M-E. Now Coimbatore. Two million dollars, ten notes of two hundred thousand, one due every six months.
+N028 · An M-S-M-E. Now Coimbatore. Two million dollars in ten promissory notes, the buyer's written promises to pay: two hundred thousand each, every six months.
 > 1 S: ten note cards in a row, "USD 200,000 each · every 6 months · 5 years"
 
 N029 · Each note carries an aval: the Nairobi buyer's bank signs on the note itself, guaranteeing payment.
@@ -146,7 +160,7 @@ N029 · Each note carries an aval: the Nairobi buyer's bank signs on the note it
 N030 · A forfaiter buys the notes and pays now. If Nairobi never pays, can the forfaiter come back to Coimbatore?
 > 1 S: the forfaiter's box; an arrow back to the exporter, faded · H: 3 s
 
-N031 · No. That's the word: from the French, à forfait, giving up the right. Without recourse.
+N031 · No. Remember my question at the start? Forfaiting is without recourse. The name is French, à forfait: an outright deal, no claim back.
 > 1 G: the "without recourse" button from N008 lights · 2 C: card "forfaiting = buying medium-term export receivables WITHOUT recourse" [F12] · 2 B: box "without recourse"
 
 N032 · So the risks leave the exporter: the buyer, the buyer's country, the interest rate, and the currency.
@@ -167,16 +181,19 @@ N036 · Your turn. The second note, due in three hundred sixty days, same rate. 
 N037 · Twelve thousand eight hundred off. A hundred eighty-seven thousand two hundred dollars.
 > 1 S: keys "200000 × 6.4 % = 12800 · 200000 − 12800 = 187200" · 2 B: box "USD 187,200" [numericals V]
 
+N037a · Got a hundred eighty-seven thousand three hundred seventy-five? You divided by three sixty-five. Dollars use three sixty.
+> 1 C: trap card "÷ 365 → 187,375.34 ✗ · ÷ 360 → 187,200 ✓"
+
 N038 · Three charges. A commitment fee, from the promise until the notes are bought. The discount. And documentation.
 > 1 C: card "commitment fee · discount (deducted upfront) · documentation / other fees" [F15]
 
 N039 · The deal falls through. Does Coimbatore get its commitment fee back?
 > 1 S: the commitment-fee coin; a torn contract · H: 3 s
 
-N040 · Usually not. The forfaiter kept money ready for it. [lightly] A promise, kept, still costs.
+N040 · Usually not. The forfaiter kept money ready for it. [lightly] Keeping money ready isn't free.
 > 1 C: trap card "'commitment fee refunded if the deal is cancelled' ✗ · usually not refunded ✓ (market practice)" [F15]
 
-N041 · Who forfaits in India? EXIM Bank and authorised dealer banks. Internationally, parties may adopt the I-C-C rules, U-R-F eight hundred.
+N041 · Who forfaits in India? EXIM Bank and dealer banks. The I-C-C's Uniform Rules for Forfaiting, U-R-F eight hundred, apply only if the contract says so.
 > 1 C: card "EXIM Bank, AD Cat-I banks (old Export MD A.12, superseded 1 Oct 2026; business continues) · ICC URF 800 (from 1 Jan 2013): apply only if the contract says so" [F12, F16]
 
 N042 · Now the full comparison. Fill it in your head first.
@@ -186,7 +203,7 @@ N043 · Factoring: many invoices, short term, with or without recourse, part pai
 > 1 S: factoring column fills: "many small invoices · short (≈ up to 90–180 days) · with / without / limited recourse · advance part (often ~80 %), rest on collection · ledger, collection, credit protection · domestic and export" [F5, F9]
 
 N044 · Forfaiting: one deal, medium term, always without recourse, up to the full value, a negotiable instrument with an aval.
-> 1 S: forfaiting column fills: "one large deal · medium term (≈ 6 months–5+ years) · without recourse · up to 100 %, fixed rate · avalised bills / notes or LC · export finance only, no ledger service" [F12–F14]
+> 1 S: forfaiting column fills: "one large deal · medium term (≈ 6 months–5+ years) · without recourse · up to 100 %, fixed rate · avalised bills / notes or LC · export finance only, no ledger service · doesn't use the exporter's credit limits · credit sale → cash sale" [F12–F14]
 
 N045 · Pause check for chapter two. One. Forfaiting: with or without recourse?
 > 1 S: card "forfaiting recourse?" · H: 3 s
@@ -203,12 +220,15 @@ N047 · Chapter three. First, from chapter two. The fee charged from the forfait
 > 1 S: chapter title "3 · Gold Card and status holders" · H: 3 s
 
 N048 · The commitment fee. Now, what does a bank give its best exporters? R-B-I's Gold Card scheme.
-> 1 S: a gold card with the exporter's name · 2 C: card "Gold Card Scheme for Exporters (RBI, 2004) · now in Credit Facilities Directions 2025, ch. XV" [F20]
+> 1 S: a gold card with the exporter's name · 2 C: card "Gold Card Scheme for Exporters (asked for in the Exim Policy, Jan 2004; RBI scheme, 2004) · now in Credit Facilities Directions 2025, ch. XV" [F20]
 
 N049 · Who gets one? Creditworthy exporters with a good track record, small ones included, on the bank's own criteria.
 > 1 C: card "eligible: creditworthy, good track record, incl. MSME · bank's criteria" [F17]
 
-N050 · Two are kept out. Exporters on E-C-G-C's Specific Approval List. And those with overdue bills above ten per cent of last year's turnover.
+N050 · Two are kept out. First, exporters on E-C-G-C's Specific Approval List. E-C-G-C insures export credit; this list holds exporters it covers only case by case.
+> 1 N: "ECGC = Export Credit Guarantee Corporation of India (A15) · SAL = exporters ECGC covers only with its specific approval"
+
+N050a · Second, those with overdue bills above ten per cent of last year's turnover.
 > 1 C: card "NOT for: ECGC Specific Approval List (SAL) · overdue bills > 10 % of previous year's turnover" [F17] · 2 B: circle "10 %"
 
 N051 · The limits: in principle for three years, renewed automatically. Plus a standby. How much?
@@ -220,26 +240,38 @@ N052 · Not less than twenty per cent of the assessed limit, for sudden orders.
 N053 · Speed: twenty-five days for a fresh application, fifteen for renewal, seven for an ad hoc limit.
 > 1 C: card "decide in 25 days (fresh) · 15 (renewal) · 7 (ad hoc)" [F18]
 
-N054 · And: preference for P-C-F-C, foreign currency packing credit. Collateral and E-C-G-C cover may be waived. The rate, no higher than the bank's export rate.
-> 1 C: card "preference in PCFC · priority for FCNR(B)-funded loans · collateral and ECIB cover may be waived · rate ≤ bank's general export-credit rate · lower charges · FC credit cards for urgent payments" [F18]
+N054 · And: preference for P-C-F-C, foreign currency packing credit. Collateral, and E-C-G-C's cover for the bank, may be waived.
+> 1 C: card "preference in PCFC · priority for FCNR(B)-funded loans · collateral and ECGC's cover for the bank (ECIB) may be waived" [F18]
+
+N054a · And the rate is no higher than the bank's normal export-credit rate.
+> 1 C: card "rate ≤ bank's general export-credit rate · lower charges · FC credit cards for urgent payments" [F18]
 
 N055 · Now, status holders. The government, through D-G-F-T, recognises top exporters by their export performance.
 > 1 C: card "status holder: recognised by DGFT under FTP 2023 · any exporter with an IEC · current + preceding 3 years (gems & jewellery: 2)" [F21]
 
-N056 · Five ranks, in million dollars: three, fifteen, fifty, two hundred, eight hundred. One star to five star.
+N056 · Five ranks, in million dollars: three, fifteen, fifty, two hundred, eight hundred. One Star Export House to Five Star.
 > 1 S: five stars, labels "One Star 3 · Two 15 · Three 50 · Four 200 · Five 800 (USD million)" [F22]
 
-N057 · Their privileges include clearances on self-declaration, no bank guarantees under trade-policy schemes, and no compulsory negotiation of documents through banks.
-> 1 C: card "self-declaration · no BG under FTP schemes · no compulsory negotiation through banks (money still through banks) · Two Star+ export warehouses · free-of-cost exports ≤ ₹1 cr or 2 %, lower" [F23]
+N057 · Their privileges include clearances on self-declaration, and no bank guarantees under trade-policy schemes.
+> 1 C: card "self-declaration · no BG under FTP schemes · Two Star+ export warehouses · priority handling" [F23]
 
-N058 · Small manufacturers get double weightage, but only for the one-star rank.
+N057a · They may send documents straight to the buyer, but the money still comes through a bank.
+> 1 C: card "no compulsory negotiation of documents through banks · money still through banking channels" [F23] · 2 B: underline "money still through banks"
+
+N057b · And they may send free samples for promotion: up to one crore rupees or two per cent of average exports, whichever is lower.
+> 1 C: card "free-of-cost exports (not gems, jewellery, gold): ≤ ₹1 cr or 2 % of 3-year average realisation, lower · pharma 2 % · UN / WHO / Govt health programmes 8 % · FTP 1.29, in force" [F23]
+
+N058 · Small manufacturers' exports count double, but only towards the One Star rank.
 > 1 N: "double weightage → One Star only (micro & small, ISO/BIS, North-East, J&K, Ladakh…)" [F22]
 
 N059 · A paper asked: may a status holder write off ten per cent of its bills itself? Today?
 > 1 S: card "status holder self write-off 10 %?" · H: 3 s
 
-N060 · That was the old rule; five per cent for others. Today, the bank allows any reduction; up to ten lakh, on the exporter's declaration.
-> 1 C: trap card "'status holder self write-off 10 %, others 5 %' ✗ old Export MD · today: AD allows reduction on reasons; ≤ ₹10 lakh per shipping bill on the exporter's declaration ✓ (reg 6)" [F24] · 2 N: "exam: today's rule first; only the old figure offered → pick it"
+N060 · That was the old rule; five per cent for others. Today, the bank may allow a reduction for good reasons.
+> 1 C: trap card "'status holder self write-off 10 %, others 5 %' ✗ old Export MD · today: AD may allow reduction if satisfied with the reasons ✓ (reg 6)" [F24]
+
+N060a · And where the shipping bill is up to ten lakh rupees, the exporter's own declaration is enough, even if nothing came.
+> 1 N: "shipping bill / invoice ≤ ₹10 lakh → reduction (even non-realisation) on the exporter's declaration" [F24]
 
 N061 · Pause check for chapter three. One. The Gold Card standby limit?
 > 1 S: card "standby?" · H: 3 s
@@ -261,29 +293,38 @@ N064 · Three million dollars. Now, the Hamburg buyer pays. Must our exporter co
 N065 · No. She may keep it in an E-E-F-C account, the Exchange Earners' Foreign Currency account.
 > 1 C: card "EEFC: 100 % of foreign-exchange earnings (export proceeds, export advances, professional fees) · not loans or investments" [F30]
 
-N066 · It's a current account: no interest. And no loans against the balance.
-> 1 C: card "non-interest current account · NO fund- or non-fund-based credit against EEFC balances · rupee withdrawals can't be put back · a month's credits converted by the end of the next month (after approved uses, forward commitments) · may repay packing credit" [F30] · 2 B: circle "no loans against it"
+N065a · Some of you think it earns interest, like a savings account. Does it?
+> 1 S: two buttons "earns interest" · "no interest" · H: 3 s
+
+N066 · No. It pays no interest. And no loans against the balance. Rupees taken out can't be put back.
+> 1 C: card "non-interest-bearing account · NO fund- or non-fund-based credit against EEFC balances · rupee withdrawals can't be put back · a month's credits converted by the end of the next month (after approved uses, forward commitments) · may repay packing credit" [F30] · 2 B: circle "no loans against it"
 
 N067 · She may also keep an account abroad for export money. Use it for imports, or bring it home by the end of next month.
 > 1 C: card "exporter's FCA abroad: receive export value / advances · use for imports or repatriate by end of next month · 3 months if the bank is in an IFSC" [F31]
 
-N068 · Diamond traders have their own: the Diamond Dollar Account. Three years' record, three crore turnover, up to five accounts, dollars only.
-> 1 C: card "DDA: diamonds & jewellery · 3-year track record · avg turnover ₹3 cr (3 licensing years) · up to 5 DDAs · USD only · current, no interest" [F32]
+N067a · Three months, if that bank is in an I-F-S-C, like GIFT City.
+> 1 B: circle "3 months · IFSC"
 
-N069 · Older books list more: agency commission rules, a twenty-five per cent cap on reductions, refund conditions, E-D-F waiver limits.
-> 1 S: four old cards fan out: "agency commission (on EDF, after shipment) · cash discount / reduction ≤ 25 % · refund: re-import in 3 months · EDF waivers by exporter type" [F26–F29]
+N068 · Diamond traders have their own: the Diamond Dollar Account. Three years' record, three crore turnover, up to five accounts, dollars only.
+> 1 C: card "DDA: rough / cut & polished diamonds, coloured gemstones, diamond & gold jewellery · 3-year track record (older books: 2 years; changed 29 Apr 2025) · avg turnover ₹3 cr (3 licensing years) · up to 5 DDAs · USD only · current, no interest · CRR/SLR apply" [F32]
+
+N069 · Older books list more: commission to a foreign agent who found the buyer, a cap on reducing invoices, and conditions for refunds.
+> 1 S: four old cards fan out: "agency commission: by remittance or deduction from the invoice · declared on EDF/SOFTEX · after shipment · not on exports for JV/WOS equity" · "cash discount (prepaid usance bill): up to proportionate interest on the unexpired usance" · "other reductions: ≤ 25 % (no cap if > 3 years in exports and outstandings ≤ 5 %) · incentives surrendered" · "refund: by the AD that realised · goods re-imported for poor quality within 3 months · incentives surrendered · not needed if destroyed / auctioned abroad" · and "RBI's EDF-waiver paragraph (old MD C.1)" [F26–F29]
 
 N070 · Since October twenty twenty-six those fixed conditions are gone. The bank's own policy decides, within the new regulations.
-> 1 S: the four cards stamp "superseded 1 Oct 2026" · 2 C: card "today: AD's policy & SOP (reg 19): extension · under/over/non-realisation · advances · factoring · reduction: reg 6" [F25]
+> 1 S: the cards stamp "superseded 1 Oct 2026" · 2 C: card "today: AD's policy & SOP (reg 19): extension · under/over/non-realisation · advances · factoring · reduction: reg 6" [F25]
+
+N070a · In the exam, answer by today's rule. If the options offer only the old figure, the question follows the old rule: pick it.
+> 1 C: card "exam: today's rule first · only the old figure offered → pick it" · 2 B: underline "only the old figure"
 
 N071 · Pause check for chapter four. One. Does an E-E-F-C account pay interest?
 > 1 S: card "EEFC interest?" · H: 3 s
 
-N071a · No. Two, the twist. Can she get an overdraft against her E-E-F-C balance?
+N071a · No. Two, the twist. A jeweller has four crore turnover, but only two and a half years' record. Diamond Dollar Account?
 > 1 N: "no ✓" · H: 3 s
 
-N072 · No. [seriously] If you remember one thing from chapter four: E-E-F-C holds her earnings; it doesn't lend.
-> 1 N: "no credit against EEFC ✓" · 2 S: chapter-four parts dim to grey
+N072 · No; three years now. [seriously] If you remember one thing from chapter four: E-E-F-C holds her earnings; it doesn't lend, and pays no interest.
+> 1 N: "no: 3-year record needed ✓" · 2 S: chapter-four parts dim to grey
 
 ## Close
 
