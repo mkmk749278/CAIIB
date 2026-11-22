@@ -93,15 +93,16 @@ def _workdir(lines: str, audio_dir: str) -> Path:
 
 # max_containers caps every function, so a crash loop or a bad input can never fan out into a big bill
 @app.function(cpu=CPU, memory=MEM, timeout=3 * 3600, secrets=[drive], volumes={"/vol": vol}, retries=1,
-              max_containers=49)
+              max_containers=96)
 def render_piece(run: str, job: str, comp: str, lines: str, audio_dir: str, scale: str) -> dict:
     t0 = time.time()
     work = _workdir(lines, audio_dir)
     out = Path("/vol") / run
     out.mkdir(parents=True, exist_ok=True)
     tool = "../tools/video/render_part.mjs"
-    if job == "sound":
-        _run(["node", tool, comp, "sound", str(out / "sound.wav")], cwd=work / "video")
+    if job.startswith("s"):  # a slice of the sound, "s<i>/<n>"
+        i, n = job[1:].split("/")
+        _run(["node", tool, comp, "soundpart", i, n, str(out / f"sound_{int(i):02d}.wav")], cwd=work / "video")
     else:
         i, n = job.split("/")
         # Remotion counts the container's cores (2 for cpu=2.0) and refuses more; render_part.mjs caps it too
@@ -118,7 +119,12 @@ def join(run: str, video: str, name: str) -> str:
     d = Path("/vol") / run
     parts = sorted(d.glob("part_*.mp4"))
     (d / "parts.txt").write_text("".join(f"file '{p}'\n" for p in parts))
+    sounds = sorted(d.glob("sound_*.wav"))
+    (d / "sounds.txt").write_text("".join(f"file '{p}'\n" for p in sounds))
     ff = ["npx", "--prefix", str(work / "video"), "remotion"]
+    # the sound slices join losslessly (PCM, whole frames each)
+    _run(ff + ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(d / "sounds.txt"),
+               "-c", "copy", str(d / "sound.wav")], cwd=work / "video")
     final = d / name
     _run(ff + ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(d / "parts.txt"),
                "-i", str(d / "sound.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
@@ -142,14 +148,15 @@ def join(run: str, video: str, name: str) -> str:
 def orchestrate(comp: str, video: str, lines: str, audio_dir: str, scale: str, parts: int, name: str) -> str:
     run = f"{video}_{name}_{int(time.time())}".replace("/", "_")
     t0 = time.time()
-    jobs = ["sound"] + [f"{i}/{parts}" for i in range(parts)]
+    # sound slices first in the list so they start with the picture slices; both split the same frames
+    jobs = [f"s{i}/{parts}" for i in range(parts)] + [f"{i}/{parts}" for i in range(parts)]
     log = [f"render {comp} -> BFM/{video}/renders/{name}  scale {scale}  {parts} parts  (Modal app {APP})"]
     status = "FAILED"
     try:
         results = list(render_piece.map([run] * len(jobs), jobs, [comp] * len(jobs), [lines] * len(jobs),
                                         [audio_dir] * len(jobs), [scale] * len(jobs)))
         usd = sum(r["seconds"] * (r["cpu"] * USD_PER_CORE_S + r["mem"] / 1024 * USD_PER_GIB_S) for r in results)
-        log += [f"  {r['job']:>6}: {r['seconds']:.0f} s" for r in results]
+        log += [f"  {r['job']:>7}: {r['seconds']:.0f} s" for r in results]
         log.append(f"render containers ≈ ${usd:.2f} (estimate from list prices; the Modal bill is the truth)")
         log.append(join.remote(run, video, name))
         status = "OK"

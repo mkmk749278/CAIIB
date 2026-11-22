@@ -7,6 +7,7 @@
 // Usage (run from video/):
 //   node ../tools/video/render_part.mjs COMP part I N SCALE OUT.mp4   e.g. Incoterms part 0 6 2/3 out/part_0.mp4
 //   node ../tools/video/render_part.mjs COMP sound OUT.wav
+//   node ../tools/video/render_part.mjs COMP soundpart I N OUT.wav   (slice I of N of the sound)
 // Concurrency: RENDER_CONCURRENCY (default 4), never above the cores Remotion sees (a 2-core Modal container
 // refused 4; Python's os.cpu_count() there reports the host's cores, so the cap must be taken here, 2026-11-22).
 // SCALE may be a fraction ("2/3" = 720p from 1080p): a rounded decimal can give a non-integer frame size.
@@ -27,6 +28,14 @@ const t0 = Date.now();
 if (mode === 'sound') {
 	await renderMedia({serveUrl, composition, codec: 'wav', outputLocation: a[0]});
 	console.log(`${comp}: sound ${(total / composition.fps).toFixed(2)} s in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
+} else if (mode === 'soundpart') {
+	// one slice of the sound, same frame split as `part`; the WAV slices join sample-exactly (48 kHz / 30 fps = 1600
+	// samples a frame). On Modal the whole sound in one container took 524 s against 190-254 s for a picture slice.
+	const [i, n, out] = [Number(a[0]), Number(a[1]), a[2]];
+	const from = Math.floor((total * i) / n);
+	const to = Math.floor((total * (i + 1)) / n) - 1;
+	await renderMedia({serveUrl, composition, codec: 'wav', outputLocation: out, frameRange: [from, to]});
+	console.log(`${comp}: sound part ${i + 1}/${n}, frames ${from}-${to} in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
 } else if (mode === 'part') {
 	const [i, n, scaleArg, out] = [Number(a[0]), Number(a[1]), String(a[2]), a[3]];
 	const scale = scaleArg.includes('/') ? Number(scaleArg.split('/')[0]) / Number(scaleArg.split('/')[1]) : Number(scaleArg);
