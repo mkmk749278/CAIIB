@@ -1,4 +1,4 @@
-# A12 · Practice (c1, 2026-11-22)
+# A12 · Practice (c2, 2026-11-22; c1 review fixes applied)
 
 Our own items; figures illustrative. Rules as at 31 Dec 2026. Reasons cite `research/bfm/facts/A5.11-A5.3_A12.md`
 [F#], A11b's sheet [A11b F#] or `numericals.md`. Sums checked by `tools/check/export_bills.py`. Interest on a
@@ -10,7 +10,7 @@ The bank has:
 *Reason: usance bill → discounted; sight → purchased; under an LC → negotiated [F1].*
 
 **P2.** An unpaid export bill is crystallised into a rupee liability. FEDAI requires the bank to apply:
-(a) the bill buying rate of that day (b) the original bill buying rate (c) **its TT selling rate** (d) the RBI
+(a) the bill buying rate of that day (b) the original bill buying rate (c) **its TT selling rate** (d) the FBIL
 reference rate
 *Reason: FEDAI 2.1(b)(iii) [F10]. The bank must buy dollars to replace those never received, so it sells to her.*
 
@@ -56,3 +56,18 @@ are A11b F3, F4, F8.*
 (a) keeps all the interest (b) **refunds interest for the unexpired period and pays or recovers the notional swap
 cost** (c) charges overdue interest (d) crystallises the bill
 *Reason: FEDAI 2.2(c) [F8].*
+
+**P11.** (linked case, keyed in) A USD 80,000 bill at 90 days after sight, not under an LC, is discounted on Fri 9 Apr
+2027 at ₹85.60. NTP 25 days; interest 7.3 % a year; overdue interest 10.95 % a year (365-day year). The bank's policy
+is to crystallise on the 30th day after the notional due date; TT selling that day ₹86.20. The buyer pays 20 days
+after crystallisation; TT buying ₹85.75. Find: (i) interest up front and her credit (ii) the notional due date
+(iii) the crystallisation date and her rupee debt (iv) the total due on crystallisation day (v) what she still pays.
+*Answer: (i) ₹1,57,504; credit ₹66,90,496 (115 days) · (ii) Mon 2 Aug 2027 · (iii) Wed 1 Sep 2027; ₹68,96,000 at TT
+selling · (iv) overdue interest ₹61,632 on ₹68,48,000 for 30 days; total ₹69,57,632 · (v) proceeds ₹68,60,000 at TT
+buying; 36,000 short + interest on ₹68,96,000 for 20 days ₹41,376 = **₹77,376** [F3, F4, F10, F11, F13;
+numericals P11].*
+
+**P12.** A bill was only **sent for collection** (the bank advanced nothing). When the buyer pays, the bank converts
+the dollars at:
+(a) TT selling (b) bill buying (c) **TT buying, after the money is credited to its Nostro** (d) the crystallisation rate
+*Reason: FEDAI 2.5(a) [F20]; nothing was advanced, so nothing is crystallised.*

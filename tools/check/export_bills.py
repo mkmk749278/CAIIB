@@ -40,6 +40,7 @@ if __name__ == "__main__":
     paid = cry + timedelta(20)
     check_date("Q5 proceeds arrive (crystallisation + 20 days)", paid, date(2027, 7, 14))
 
+    check("Q1 bill buying rate (spot + 2m premium − 0.16%)", (D("85.5") + D("0.4375")) * D("0.9984"), c12(c12(85.5 + 0.4375) * 0.9984))
     adv = check("Q1 rupee value at bill buying 85.80", D(100000) * D("85.80"), c12(100000 * 85.8))
     i1 = check("Q2 upfront interest 7.3% x 85/365", interest_w1(adv, "7.3", 85), interest_w2(8580000, 7.3, 85))
     check("Q2 credited to exporter", adv - i1, c12(8580000 - 145860))
@@ -47,16 +48,16 @@ if __name__ == "__main__":
     check("Q4 exchange difference (her loss)", cr - adv, c12(8640000 - 8580000))
     od = check("Q4 overdue interest 10.95% x 30/365 on 85,80,000", interest_w1(adv, "10.95", 30),
                interest_w2(8580000, 10.95, 30))
-    check("Q4 total recovered on crystallisation day", cr + od, c12(8640000 + 77220))
+    check("Q4 total due on crystallisation day (interest paid; debt stays)", cr + od, c12(8640000 + 77220))
     pr = check("Q5 proceeds at TT buying 85.95", D(100000) * D("85.95"), c12(100000 * 85.95))
     i2 = check("Q5 interest 10.95% x 20/365 on 86,40,000", interest_w1(cr, "10.95", 20),
                interest_w2(8640000, 10.95, 20))
     check("Q5 she still pays", cr + i2 - pr, c12(c12(8640000 - 8595000) + 51840))
 
     # Faded variant (sight bill): USD 50,000, bill buying 85.50, NTP 25 days, 7.3%
-    a2 = check("V sight bill rupee value", D(50000) * D("85.50"), c12(50000 * 85.5))
-    i3 = check("V NTP interest 25 days", interest_w1(a2, "7.3", 25), interest_w2(4275000, 7.3, 25))
-    check("V credited", a2 - i3, c12(4275000 - 21375))
+    a2 = check("V sight bill rupee value", D(60000) * D("85.50"), c12(60000 * 85.5))
+    i3 = check("V NTP interest 25 days", interest_w1(a2, "7.3", 25), interest_w2(5130000, 7.3, 25))
+    check("V credited", a2 - i3, c12(5130000 - 25650))
 
     # Early realisation: the usance bill paid 10 days early -> refund 10 days at 7.3% (swap cost aside)
     check("Early: refund 10 days", interest_w1(adv, "7.3", 10), interest_w2(8580000, 7.3, 10))
@@ -68,4 +69,18 @@ if __name__ == "__main__":
     check("P5 dishonour: (100,000 + 200) x TT selling 86.10", D(100200) * D("86.10"), c12(100200 * 86.1))
     a6 = check("P6 sight bill USD 20,000 x 86.00", D(20000) * D("86.00"), c12(20000 * 86))
     check("P6 NTP interest 25 days at 7.3%", interest_w1(a6, "7.3", 25), interest_w2(1720000, 7.3, 25))
+    # P11 linked case
+    p0 = date(2027, 4, 9); pd = p0 + timedelta(25 + 90)
+    check_date("P11 notional due date", pd, date(2027, 8, 2))
+    check_date("P11 crystallisation day", pd + timedelta(30), date(2027, 9, 1))
+    check_date("P11 paid", pd + timedelta(50), date(2027, 9, 21))
+    b = check("P11 advance", D(80000) * D("85.60"), c12(80000 * 85.6))
+    bi = check("P11 interest 115 days", interest_w1(b, "7.3", 115), interest_w2(6848000, 7.3, 115))
+    check("P11 credit", b - bi, c12(6848000 - 157504))
+    bc = check("P11 crystallised", D(80000) * D("86.20"), c12(80000 * 86.2))
+    bo = check("P11 overdue interest 30 days", interest_w1(b, "10.95", 30), interest_w2(6848000, 10.95, 30))
+    check("P11 total due that day", bc + bo, c12(6896000 + 61632))
+    bp = check("P11 proceeds", D(80000) * D("85.75"), c12(80000 * 85.75))
+    bi2 = check("P11 interest 20 days on crystallised", interest_w1(bc, "10.95", 20), interest_w2(6896000, 10.95, 20))
+    check("P11 she still pays", bc - bp + bi2, c12(c12(6896000 - 6860000) + 41376))
     print("all OK")
