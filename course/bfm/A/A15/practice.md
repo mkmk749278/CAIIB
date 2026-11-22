@@ -1,4 +1,4 @@
-# A15 · Practice (c1, 2026-11-22)
+# A15 · Practice (c2, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A7.1-A7.5_A15.md`. Sums checked by
 `tools/check/country_risk.py`. All figures illustrative. Answers at the end.
@@ -44,8 +44,8 @@ Our own questions, written from the fact sheet `research/bfm/facts/A7.1-A7.5_A15
     four months of the due date (c) a new import ban in the buyer's country (d) a quality dispute
 21. Which is NOT covered by ECGC's standard policy? (a) war in the buyer's country (b) exchange-rate fluctuation
     (c) buyer's insolvency (d) delay in transfer of payment by the buyer's government
-22. ECGC's Shipments Comprehensive Risks (Standard) Policy normally pays: (a) 100 % of the loss (b) 90 % (c) 75 %
-    (d) 50 %
+22. ECGC's Shipments Comprehensive Risks (Standard) Policy normally pays, for commercial or political losses:
+    (a) 100 % of the loss (b) 90 % (c) 75 % (d) 50 %
 23. Loss USD 80,000 under SCR. ECGC pays: (a) USD 80,000 (b) USD 72,000 (c) USD 64,000 (d) USD 8,000
 24. The SCR policy is a "whole turnover" policy. This means: (a) only the exporter's largest buyer is covered
     (b) all the exporter's shipments must be covered (LC-backed shipments may be excluded) (c) only one shipment is
@@ -60,12 +60,32 @@ Our own questions, written from the fact sheet `research/bfm/facts/A7.1-A7.5_A15
     (c) when packing credit is drawn (d) when the bill is paid
 29. Commercial risk of "protracted default" under the standard policy means the buyer has not paid within: (a) one
     month (b) four months of the due date (c) one year (d) 180 days of shipment
-30. Older books call the two riskiest grades "restricted" and "off-credit" and use a 2 % threshold. Today's RBI text:
-    (a) the same (b) "high" and "very high", threshold 1 %, same percentages (c) abolished country provisions
-    (d) 50 % for both
+30. ECGC's grade **C1** was labelled "very high risk" in RBI's text until November 2025 (today it is "moderately
+    high"). A question from an older book asks the provision on a "very high risk" country, and the options are 5 %,
+    20 %, 25 % and 50 %. The answer: (a) 5 % (b) 20 % (c) 25 % (d) 50 %
+31. Country risk, for a bank, is treated as a part of: (a) market risk (b) operational risk (c) credit risk
+    (d) liquidity risk
+32. A bank's exposure to Country K: loans ₹1,200 crore, LCs and guarantees ₹900 crore; total assets ₹2,00,000 crore;
+    grade B1. Country-risk provision: (a) ₹105 crore (b) ₹60 crore (c) nil, since net funded exposure is only 0.6 %
+    of assets (d) ₹21 crore
+33. ECGC's standard (SCR) policy is meant for shipments on credit normally not exceeding: (a) 90 days (b) 180 days
+    (c) 360 days (d) 2 years
+34. Which is NOT covered by ECGC's standard policy? (a) a new import ban in the buyer's country (b) the buyer's
+    failure to obtain his own import permit (c) war in the buyer's country (d) the buyer's insolvency
+35. Under ECGC's FAQ, the Small Exporters Policy pays for losses from political risks: (a) 80 % (b) 90 % (c) 95 %
+    (d) 100 %
+36. An exporter's annual exports are about ₹4 crore. The ECGC whole-turnover policy meant for it is: (a) SCR (b) SEP
+    (c) ETP (d) MBEP
+37. For a few high-risk countries ECGC gives cover only case by case. This is: (a) open cover (b) restricted cover
+    (Group II: specific approval) (c) off-credit (d) grade A2
+38. In RBI's current table, the provision on a country graded **D (very high risk)** is: (a) 25 % (b) 50 % (c) 75 %
+    (d) 100 %
 
 ## Answers
 1 b (collection: exporter) · 2 b · 3 b (ECGC insures payment, not goods) · 4 a · 5 c · 6 c · 7 d (ECGC legend 2026) ·
 8 b · 9 b (CRM 45, 49; IRP 113(2)) · 10 b (CRM 51) · 11 b (CRM 49) · 12 c · 13 d · 14 b (2,000 × 20 % + 1,000 × 20 %
 × 25 % = 400 + 50) · 15 c (0.75 % < 1 %) · 16 b (IRP 113(5); host country of a foreign branch is included, 113(6)) ·
-17 b · 18 b · 19 b · 20 c · 21 b · 22 b · 23 b · 24 b · 25 b · 26 b · 27 b · 28 b · 29 b · 30 b.
+17 b · 18 b · 19 b · 20 c · 21 b · 22 b · 23 b · 24 b · 25 b · 26 b · 27 b · 28 b · 29 b · 30 c (old label: C1 = 25 %; go by the letter; only the old figure fits, so pick it, PLAYBOOK §4a) · 31 c
+(CRM ch. VI: part of the credit risk policy) · 32 c (1,200 ÷ 2,00,000 = 0.6 % < 1 %; LCs and guarantees are not
+net funded; trap (a) = 2,100 × 5 %) · 33 b · 34 b (a new import ban by the government is covered; his own permit is
+not) · 35 d (SEP only; SCR 90 %) · 36 b (≤ ₹5 crore) · 37 b · 38 d.

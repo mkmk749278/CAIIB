@@ -1,7 +1,8 @@
-# A15 · "When the money doesn't come" · CLASS EDITION (script c1, with cue sheet)
+# A15 · "When the money doesn't come" · CLASS EDITION (script c2, with cue sheet)
 
-- **Status**: c1, 2026-11-22, for the three independent reviews. Standard style (`course/spec/lesson_spec.md`): one
-  question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
+- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for
+  re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause check per
+  chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A15 (v4 split: A15 = A7.1–A7.5; A15b = bank covers, claims, EXIM Bank).
   Course order v4: A14 → **A15** → A15b.
 - **Syllabus**: A7.1 (risk; risks in international trade), A7.2 (country risk), A7.3 (export credit insurance),
@@ -10,27 +11,30 @@
   `tools/check/country_risk.py`. Practice: `practice.md`.
 - **Rule version (opening card)**: "RBI Credit Risk Management Directions 2025, ch. VI · RBI Income Recognition,
   Asset Classification and Provisioning Directions 2025, para 113 (both updated 1 Oct 2026) · ECGC country risk
-  classification (list w.e.f. 1 Jul 2026; check the latest) · ECGC policy terms as published · as at 31 December 2026".
-- **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Hi, everyone, welcome in. Today something goes
-  wrong on purpose, and we find out who pays."; goodbye "That's risk, named and shared. Take it easy tonight, and I'll
-  see you in the next class."
+  classification (latest lists w.e.f. 14 Oct 2026; re-check at the freeze) · ECGC policy terms as published · as at
+  31 December 2026".
+- **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Welcome in, everyone. Today something goes wrong on
+  purpose, and we find out who pays."; goodbye "That's risk, named and shared. Take it easy tonight, and I'll see you
+  in the next class."
 - **Story**: the Tiruppur shirt exporter (A08, A11, A11b, A12, A14) ships USD 80,000 of shirts on D/A 90 days to a
   buyer in "Country Z", a made-up country. Before the due date, Country Z stops all payments abroad. Then her bank's
-  side: the bank's exposure to Country Z. All amounts, countries Z and Y, and bank figures are illustrative.
-- **ECGC's terms vs RBI's rules**: the policy names, percentages of cover, four-month wait and monthly declarations
-  are ECGC's published product terms [F17–F22, F28–F34]: spoken as "ECGC's standard policy pays…", never as RBI
-  rules. The country-risk policy, ratings and provisions are RBI rules [F10–F13]. The rating factors are general
-  practice [F5]: "usually".
-- **Old labels**: "restricted" and "off-credit" for the top two grades, and a 2 % threshold, are older books' words;
-  today's texts say "high", "very high" and 1 % [F14]: one trap card.
+  side: the bank's exposure to Country Z. All amounts, countries Z, Y and X, and bank figures are illustrative.
+- **ECGC's terms vs RBI's rules**: the policy names, percentages of cover, four-month wait, 180-day credit period and
+  monthly declarations are ECGC's published product terms [F17–F22, F28–F34]: spoken as "ECGC's standard policy
+  pays…", never as RBI rules. The country-risk policy, ratings and provisions are RBI rules [F10–F13]. The rating
+  factors are general practice [F5]: "usually".
+- **Old labels**: until Nov 2025 RBI's words sat one rung lower (B2 "high" 20 %, C1 "very high" 25 %, C2
+  "restricted", D "off-credit"); the letters and percentages never moved [F14]. Taught as "go by the letter", with
+  A13's exam rule for old figures (PLAYBOOK §4a).
 - **Holds**: questions at least 3 s; one-step sums 8 s; multi-step 10 s; "your turn" 15 s; map 3–5 s per node.
-- **Say it right**: "E-C-G-C"; "E-R-I-C" spoken as letters; "S-C-R"; "S-S-P"; "B-W-P"; "M-B-E-P"; "N-E-I-A" as
-  letters; "I-R-D-A-I"; "D-A" (documents against acceptance); "A-one", "B-two", "C-one", "D" for the grades.
+- **Say it right**: "E-C-G-C"; "E-R-I-C" as letters; "S-C-R"; "S-S-P"; "B-W-P"; "M-B-E-P"; "S-E-P"; "M-E-P";
+  "I-R-D-A-I"; "D-A" (documents against acceptance); "A-one", "B-two", "C-one", "D" for the grades; "point two five".
 - **Not in this video**: ECGC's covers for banks (ECIB), credit limits in detail, the "to do" points and claim
-  procedure, NEIA beyond one line, EXIM Bank (all A15b); marine insurance (A07 only as a contrast).
-- **Length**: ~1,750 spoken words + ~2.6 min of holds ≈ 15 min (measure the take). Chapters: warm-up (~1.5 min) ·
-  1 risks in trade (~3 min) · 2 country risk (~4.5 min) · 3 ECGC and its policies (~4.5 min) · close (~1.5 min). If
-  the take runs over 15:00, cut in order: N010, then N047a; keep N041 (old labels: trap) and N060 (recalled item).
+  procedure, NEIA, EXIM Bank (all A15b); marine insurance (A07 only as a contrast).
+- **Length**: ~1,830 spoken words + ~2.4 min of holds ≈ 15 min (measure the take). Chapters: warm-up (~1.3 min) ·
+  1 risks in trade (~2.6 min) · 2 country risk (~4.5 min) · 3 ECGC and its policies (~5 min) · close (~1.5 min). If
+  the take runs over 15:00, cut in order: N047a, N069, N031's second sentence; keep N041–N041b (old labels: trap),
+  N059 (180 days) and N064 (shipment risk: recalled items).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: the export road (A11)
   under an **umbrella**: the umbrella has two panels, "buyer" and "country". A **risk backpack** (A14) sits on whoever
   carries a risk. In chapter 2 a **ladder of seven rungs** A1 → D; in chapter 3 a **shelf of policies**.
@@ -39,7 +43,7 @@
 
 ## Warm-up
 
-N001 · [warmly] Hi, everyone, welcome in. Today something goes wrong on purpose, and we find out who pays.
+N001 · [warmly] Welcome in, everyone. Today something goes wrong on purpose, and we find out who pays.
 > 0 C: rule-version card · 1 S: notebook page; title "A15 · When the money doesn't come"
 
 N002 · First, homework. The third note, five hundred forty days, six point four per cent, two hundred thousand dollars. What did Coimbatore receive?
@@ -55,12 +59,12 @@ N005 · The buyer accepts the bill. Sixty days later, Country Z's government sto
 > 1 S: a gate slams across the road at Country Z's border; stamp "payments abroad stopped"
 
 N006 · The buyer is honest and has the money. It still can't reach Tiruppur. Who carries this loss?
-> 1 S: the risk backpack hovers between "buyer" · "exporter" · "her bank" · "someone else?" · H: 3 s
+> 1 S: the risk backpack hovers between "the buyer" · "the exporter" · H: 3 s
 
-N007 · Some of you say the buyer. Others, the exporter. Keep your answer. By the end of class, a fourth name joins in.
+N007 · Some of you say the buyer. Others, the exporter. Keep your answer. By the end of class, a third name joins in.
 > 1 S: two buttons "the buyer" · "the exporter"; a third button, face down
 
-N008 · Country risk and E-C-G-C come up in nearly every recent paper. Country grades, the standard policy, even "shipment risk".
+N008 · Country risk and E-C-G-C came up in four of the last seven exams: country grades, the standard policy, even "shipment risk".
 > 1 N: "asked: country risk classification Jun 2023 · ECGC standard policy Dec 2023 · ECGC Jul 2024 · shipment risk Jun 2026" [Leads]
 
 ## Chapter 1 · Risks in trade
@@ -78,10 +82,13 @@ N012 · And the importer's worry? She pays first, and the goods never come, or c
 > 1 S: backpack "seller risk" lands on the importer [F2]
 
 N013 · Then risks from outside the deal. Country risk: events in the buyer's country. Exchange risk: the rate moves before conversion.
-> 1 C: card "country risk → exporter · exchange risk → whoever invoices or pays in foreign currency" [F2]
+> 1 C: card "country risk → exporter · exchange risk → whoever must convert: the exporter if invoiced in USD, the importer if invoiced in rupees" [F2]
 
-N014 · Transport risk: the goods are lost at sea. Legal risk: the contract can't be enforced there. And plain errors in documents.
-> 1 C: card "transport risk → marine / cargo insurance (A07: the Incoterm decides who) · legal risk · documentary / operational risk" [F2]
+N014 · Transport risk: the goods are lost at sea. That's for cargo insurance. Legal risk: the contract can't be enforced there.
+> 1 C: card "transport risk → marine / cargo insurance (A07: the Incoterm decides who) · legal risk · documentary / operational risk (errors in documents)" [F2]
+
+N014a · Insurers group them in two. The buyer's side is commercial risk. The country's side is political risk.
+> 1 C: card "commercial risk = the buyer's side (insolvency, non-payment) · political risk = the country's side (transfer block, war, import ban)" [F17, F18] · 2 B: box "commercial" and "political"
 
 N015 · Remember payment methods? With advance payment, who carries the risk?
 > 1 S: the A08 ladder "advance · LC · collection · open account" · H: 3 s
@@ -89,30 +96,33 @@ N015 · Remember payment methods? With advance payment, who carries the risk?
 N016 · The importer. With open account or collection, the exporter. With an L-C, the issuing bank's promise stands in between.
 > 1 S: backpack moves along the ladder: "advance → importer · LC → issuing bank's undertaking · D/P, D/A, open account → exporter" [F3]
 
-N017 · And dealing with the same buyer for years? It lowers buyer and seller risk. It doesn't touch country risk.
-> 1 B: underline "doesn't touch country risk"
+N017 · Many of you think: an old, honest buyer, so no risk. Is that right?
+> 1 S: a handshake, "10 years with this buyer" · H: 3 s
+
+N017a · Not quite. Years of trust lower buyer and seller risk. They don't touch country risk. Our Country Z buyer was honest too.
+> 1 C: trap card "'old honest buyer = no risk' ✗ · trust lowers commercial risk only; country risk stays ✓" · 2 B: underline "doesn't touch country risk"
 
 N018 · Pause check for chapter one. One. A shipment sinks. Which insurer?
 > 1 S: card "goods lost at sea → ?" · H: 3 s
 
-N018a · Marine, or cargo, insurance. Two, the twist. Our D-A buyer: whose risk is non-payment?
+N018a · Marine, or cargo, insurance. Two, the twist. Our D-A buyer: whose risk is non-payment, if nobody insured it?
 > 1 N: "marine / cargo insurer ✓" · H: 3 s
 
-N019 · The exporter's. [seriously] If you remember one thing from chapter one: each risk has an owner. Find the owner first.
-> 1 N: "exporter (collection) ✓" · 2 S: chapter-one parts dim to grey
+N019 · The exporter's. Not the buyer's: he's willing, his government stopped him. [seriously] One thing from chapter one: each risk has an owner.
+> 1 N: "exporter (collection) ✓ · the buyer button greys out" · 2 S: chapter-one parts dim to grey
 
 ## Chapter 2 · Country risk
 
-N020 · Chapter two. First, from chapter one. Advance payment: who carries the risk?
+N020 · Chapter two. First, from chapter one. A buyer goes insolvent. Commercial or political risk?
 > 1 S: chapter title "2 · Country risk" · H: 3 s
 
-N021 · The importer. Now, country risk. It's a loss caused by the buyer's country, not by the buyer.
+N021 · Commercial. Now, country risk. It's a loss caused by the buyer's country, not by the buyer.
 > 1 C: card "country risk = loss from events in the buyer's country: government action, war, unrest, moratorium, currency controls" [F4]
 
-N022 · Our case has a special name. The buyer can pay, and wants to pay. The government won't let the money out.
+N022 · Our case has a special name. The buyer can pay, and wants to pay. The government won't let the money out. Any guess?
 > 1 S: the honest buyer with a full wallet behind Country Z's gate · H: 3 s
 
-N023 · That's transfer risk. One kind of country risk. And if the borrower is the government itself and doesn't pay, sovereign risk.
+N023 · Transfer risk. One kind of country risk. And if the borrower is the government itself and doesn't pay, sovereign risk.
 > 1 C: card "transfer risk = buyer able and willing, but can't convert or send the money out · sovereign risk = the government itself defaults · both are kinds of country risk" [F4] · 2 B: box "transfer risk ⊂ country risk"
 
 N024 · So every transfer-risk loss is a country-risk loss. Not the other way round: a war is country risk, but not transfer risk.
@@ -131,55 +141,61 @@ N028 · A-one is insignificant risk, A-two low. B-one moderately low, B-two mode
 > 1 C: card "A1 insignificant · A2 low · B1 moderately low · B2 moderate" [F6]
 
 N029 · C-one moderately high, C-two high. And D, very high.
-> 1 C: card "C1 moderately high · C2 high · D very high (ECGC legend, 2026)" [F6] · 2 B: circle "D"
+> 1 C: card "C1 moderately high · C2 high · D very high (ECGC legend and RBI, 2026)" [F6] · 2 B: circle "D"
 
 N030 · There are two lists: short-term and medium-to-long-term. A country can sit on different rungs in each.
 > 1 C: card "two lists: short-term (ST) · medium- and long-term (MLT)" [F6]
 
-N031 · How often? E-C-G-C issues the lists quarter by quarter, and revises one country in between if something big happens.
-> 1 C: card "lists issued quarterly · single-country revisions in between (e.g. Bangladesh, Aug 2024) · RBI: ECGC gives banks quarterly updates on request" [F7]
+N031 · How often? E-C-G-C issues the lists quarter by quarter. Something big happens? It revises in between.
+> 1 C: card "lists issued quarterly · interim revisions (e.g. 14 Oct 2026, two weeks after 1 Oct) · RBI: ECGC gives banks quarterly updates on request, and alerts on sudden changes" [F7]
 
-N032 · On the July twenty twenty-six list, the U-S and the U-K are A-one. The U-A-E is A-two. Sri Lanka, C-two.
-> 1 S: map pins "USA, UK, Germany, Japan A1 · UAE, Saudi Arabia A2 · Bangladesh B2 · Russia, Kenya C1 · Sri Lanka, Ukraine C2 · Afghanistan, Yemen D · MLT list w.e.f. 1 Jul 2026" [F8]
-
-N033 · For most countries, E-C-G-C covers political risk freely: open cover. For a few very risky ones, only case by case: restricted cover.
-> 1 C: card "open cover: most countries, no limit on political-risk cover · restricted cover: a few high-risk countries, limits or case-by-case approval" [F9]
+N032 · On today's lists, the U-S and the U-K are A-one, the U-A-E A-two, and Afghanistan and Yemen, D.
+> 1 S: map pins "USA, UK, Germany, Japan A1 · UAE, Saudi Arabia, China A2 · Bangladesh B2 · Afghanistan, Sudan, Yemen D · ECGC lists, Oct 2026: check the latest" [F8]
 
 N034 · Now the bank's side. Her bank has loans and bills in Country Z too. What does R-B-I ask of the bank?
 > 1 S: the bank building beside the road; a thread to Country Z · H: 3 s
 
-N035 · First, a Board-approved country risk policy, with exit plans. Required where net funded exposure to a country is one per cent of total assets or more.
-> 1 C: card "Board-approved country risk management policy (within the credit risk policy) · contingency and exit plans · for countries where net funded exposure ≥ 1 % of total assets" [F10]
+N035 · R-B-I treats country risk as part of credit risk. So the bank needs a Board-approved country risk policy, with exit plans.
+> 1 C: card "country risk management: part of the credit risk policy (Credit Risk Management Directions, ch. VI) · Board-approved · contingency and exit plans · KYC not diluted by collateral or short maturities · Board / RMC reviews exposures and exits" [F10]
 
-N036 · Exposure counts both: funded, like loans and deposits; and non-funded, like L-Cs and guarantees. From Indian and foreign branches.
-> 1 C: card "funded + non-funded · domestic + foreign branches · indirect: an Indian borrower dependent on one country" [F11]
+N035a · For watching a country, count everything: funded, like loans; non-funded, like L-Cs and guarantees. From Indian and foreign branches.
+> 1 C: card "exposure for the policy: funded + non-funded · domestic + foreign branches · indirect: an Indian borrower dependent on one country" [F11]
+
+N036 · But the hard rules use net funded exposure only: loans and money, not L-Cs. They start at one per cent of the bank's total assets.
+> 1 C: card "net funded exposure ≥ 1 % of total assets → full policy, own country rating, provisions · LCs and guarantees: not in the 1 % test or the provision" [F10, F13] · 2 B: underline "net funded only"
 
 N037 · Second, the bank rates countries itself, at least yearly, never better than an international rating agency. Until then, it may use E-C-G-C's seven grades.
 > 1 C: card "own rating, reviewed at least yearly · not better than an international agency's · until then: ECGC's 7 categories · exposure monitored in real time" [F12]
 
-N038 · Third, provisions. On net funded exposure, by grade. A-one and A-two, a quarter per cent. B-one, five.
+N038 · Third, provisions, by grade. A-one and A-two, point two five per cent. B-one, five per cent.
 > 1 S: the ladder gets a second column "provision %": "A1 0.25 · A2 0.25 · B1 5" [F13]
 
 N039 · B-two, twenty. C-one, twenty-five. C-two and D, one hundred per cent.
 > 1 S: column completes "B2 20 · C1 25 · C2 100 · D 100" [F13] · 2 B: box "C2, D = 100 %"
 
-N040 · Again, only at one per cent of assets or more. Short-term exposure, under a hundred eighty days, may carry a quarter of it.
-> 1 C: card "threshold ≥ 1 % of total assets · short-term (< 180 days): say 25 % of the requirement · no provision on India · in addition to normal NPA provisions" [F13]
+N040 · Short-term exposure, under a hundred eighty days? The bank may hold just twenty-five per cent of that provision. And nothing on India itself.
+> 1 C: card "short-term (< 180 days): may, say 25 % of the requirement (bank's choice) · no provision on India (home country) · foreign branches: host-country exposure included · in addition to the asset-classification provision (standard or NPA) · doubtful / loss: total ≤ 100 % of outstanding" [F13]
 
-N041 · Older books call the top grades "restricted" and "off-credit", with a two per cent threshold. Same percentages; today's text says one per cent.
-> 1 C: trap card "older books: …very high, restricted, off-credit · 2 % ✗ · today: moderately high, high, very high · 1 % ✓ · % unchanged" [F14]
+N041 · Careful with the words. Until late twenty twenty-five, R-B-I's labels sat one rung lower. B-two was "high", C-one "very high".
+> 1 C: trap card, two rows: "old words (RBI to Nov 2025): A1 insignificant · A2 low · B1 moderate · B2 high · C1 very high · C2 restricted · D off-credit" · "today: … B1 moderately low · B2 moderate · C1 moderately high · C2 high · D very high" [F14]
+
+N041a · C-two was "restricted", D "off-credit". The letters and percentages never moved. So go by the letter, not the word.
+> 1 S: the ladder's letters and % column stay fixed while the word tags slide one rung · 2 B: box "go by the letter" · 3 N: "older still (2003): threshold 2 %; today 1 %" [F14]
+
+N041b · In the exam, answer by today's rule. If the options only fit the old words, the question follows them: pick that.
+> 1 C: card "'very high risk' → today D, 100 % · old books C1, 25 % · only the old figure offered → pick it" · 2 B: underline "only the old"
 
 N042 · A sum. Total assets two lakh crore rupees. Net funded exposure to Country Y, a B-two country, three thousand crore. Is a provision needed?
 > 1 S: sum card "total assets ₹2,00,000 cr · Country Y (B2): net funded ₹3,000 cr · illustrative" · H: 8 s
 
-N043 · Three thousand divided by two lakh: one point five per cent. Above one, so yes.
+N043 · Three thousand divided by two lakh: one point five per cent. At least one, so yes.
 > 1 S: keys "3000 ÷ 200000 × 100 = 1.5" · 2 B: tick "≥ 1 %"
 
-N044 · Of the three thousand, one thousand is short-term, under a hundred eighty days. Work out the provision.
-> 1 S: sum card "₹2,000 cr long-term × 20 % · ₹1,000 cr short-term × 20 % × 25 %" · H: 10 s
+N044 · Of the three thousand, one thousand is short-term. Work out the provision, using the short-term relief.
+> 1 S: sum card "₹2,000 cr long-term × 20 % · ₹1,000 cr short-term (< 180 days) × 20 % × 25 %" · H: 10 s
 
-N045 · Two thousand at twenty per cent: four hundred. One thousand at twenty, then a quarter of that: fifty. Four hundred fifty crore.
-> 1 S: keys "2000 × 20 % = 400 · 1000 × 20 % = 200 × 25 % = 50 · 400 + 50 = 450" · 2 B: box "₹450 cr" [numericals Q2]
+N045 · Two thousand at twenty per cent: four hundred. One thousand at twenty per cent, then twenty-five per cent of that: fifty. Four hundred fifty crore.
+> 1 S: keys "2000 × 20 % = 400 · 1000 × 20 % = 200 × 25 % = 50 · 400 + 50 = 450" · 2 B: box "₹450 cr" · 3 N: "without the relief: 600" [numericals Q2]
 
 N046 · Your turn. Same bank, Country X, a C-one country. Net funded exposure, one thousand five hundred crore, all long-term. Provision?
 > 1 S: sum card "Country X (C1) · ₹1,500 cr · total assets ₹2,00,000 cr" · H: 15 s
@@ -204,8 +220,11 @@ N049 · Both. Transfer risk is part of country risk. [seriously] If you remember
 N050 · Chapter three. First, from chapter two. Grade C-two: what provision?
 > 1 S: chapter title "3 · ECGC and its policies" · H: 3 s
 
-N051 · One hundred per cent. Now, who protects our exporter? Export credit insurance. It pays a share of the loss when an export on credit isn't paid.
-> 1 S: the umbrella opens over the road, panels "buyer" · "country" · 2 C: card "export credit insurance: pays a share of the loss when an export on credit is not paid, for commercial or political reasons" [F15]
+N051 · One hundred per cent. Now, who protects our exporter? Export credit insurance.
+> 1 S: the umbrella opens over the road, panels "buyer" · "country"
+
+N051a · It pays a share of the loss when an export sold on credit isn't paid, for commercial or political reasons.
+> 1 C: card "export credit insurance: pays a share of the loss when an export on credit is not paid, for commercial or political reasons" [F15]
 
 N052 · Many of you think E-C-G-C insures the shirts. Does it?
 > 1 S: two buttons "insures the goods" · "insures the payment" · H: 3 s
@@ -213,10 +232,10 @@ N052 · Many of you think E-C-G-C insures the shirts. Does it?
 N053 · No. It insures the payment. Shirts lost at sea are for the marine insurer.
 > 1 C: trap card "'ECGC insures the goods' ✗ · ECGC insures the payment; goods → marine / general insurers ✓" [F15, F19]
 
-N054 · India's insurer is E-C-G-C Limited. Set up in nineteen fifty-seven as the Export Risks Insurance Corporation, E-R-I-C.
-> 1 C: card "30 Jul 1957: Export Risks Insurance Corporation (ERIC), Mumbai · 1964: Export Credit & Guarantee Corporation · 1983: Export Credit Guarantee Corporation of India · Aug 2014: ECGC Ltd" [F23]
+N054 · E-C-G-C is the Export Credit Guarantee Corporation of India. It began in nineteen fifty-seven as E-R-I-C, the Export Risks Insurance Corporation.
+> 1 C: card "30 Jul 1957: Export Risks Insurance Corporation (ERIC; ECGC's page spells it 'Export Risk'), Mumbai · 1964: Export Credit & Guarantee Corporation · 1983: Export Credit Guarantee Corporation of India · Aug 2014: ECGC Ltd" [F23]
 
-N055 · Fully owned by the Government of India, under the Commerce Ministry, and registered with I-R-D-A-I as an insurer.
+N055 · It's fully owned by the Government of India, under the Commerce Ministry, and registered with I-R-D-A-I, the insurance regulator.
 > 1 C: card "wholly owned by GoI · Ministry of Commerce & Industry · IRDAI-registered insurer · Board: Govt, RBI, banks, insurers, exporters" [F24]
 
 N056 · Three jobs. Policies to exporters. Covers to banks, so exporters get finance. And insurance for Indian investment abroad.
@@ -228,44 +247,62 @@ N056a · Note the words. To an exporter, a policy. To a bank, a cover.
 N057 · What does the policy cover? Commercial risks: the buyer goes insolvent, or simply doesn't pay within four months of the due date.
 > 1 C: card "commercial: buyer insolvent · buyer doesn't pay within 4 months of due date (protracted default) · buyer doesn't accept the goods (conditions) · LC opening bank insolvent / doesn't pay" [F17]
 
-N058 · Or the buyer refuses to accept the goods. Political risks: transfer blocked, war, a new import ban, a voyage diverted.
+N057a · Or the buyer refuses to accept the goods.
+> 1 B: circle "doesn't accept the goods"
+
+N058 · Political risks: the transfer is blocked, a war, a new import ban, or a voyage diverted at extra cost.
 > 1 C: card "political: payment transfer blocked or delayed · war, civil war, revolution, unrest · new import ban or licence cancelled · voyage diverted, extra freight · other causes outside India beyond both parties' control" [F18]
 
-N058a · And not covered? A quality dispute, the exporter's own fault, exchange-rate losses, and anything a general insurer covers.
+N058a · Not covered: quality disputes, the exporter's own fault, exchange-rate losses, and damage to goods.
 > 1 C: card "NOT covered: commercial / quality disputes (unless a court decree abroad) · exporter's own default · exchange fluctuation · goods' loss or damage · agent's or collecting bank's default · buyer's failure to get import or exchange permits" [F19]
 
-N059 · Now the standard policy: the Shipments Comprehensive Risks Policy, S-C-R. For exporters above five crore rupees a year.
-> 1 S: the policy shelf; first box "SCR · the Standard Policy" · 2 C: card "SCR: export turnover > ₹5 cr · whole turnover: all shipments (LC-backed may be excluded) · 12 months · commercial + political + LC bank" [F28]
+N058b · And two sly ones. The buyer fails to get his own import permit: not covered. The collecting bank or agent defaults: not covered.
+> 1 C: trap card "new import ban by the government ✓ covered · buyer fails to get his own permit ✗ · collecting bank / agent defaults ✗" [F18, F19]
+
+N033 · How much political cover for each country? For most, open cover: no limit. For riskier ones, restricted: a yearly limit, or case by case.
+> 1 C: card "open cover: most countries, no limit on political-risk cover · restricted cover: Group I revolving limits (normally a year) · Group II specific approval, case by case · off-cover: no cover at all (e.g. Pakistan, short-term, since 12 May 2025)" [F9] · 2 N: "cover status ≠ grade · not the old word 'restricted'"
+
+N059 · Now the standard policy: the Shipments Comprehensive Risks Policy, S-C-R. For exports above five crore rupees a year, on short credit.
+> 1 S: the policy shelf; first box "SCR · the Standard Policy" · 2 C: card "SCR: export turnover > ₹5 cr · short-term credit, normally ≤ 180 days · whole turnover: all shipments (LC-backed or associates may be excluded) · 12 months · commercial + political + LC bank" [F28]
+
+N059b · Short means a credit period up to a hundred eighty days. Longer credit is for E-C-G-C's medium-term policies.
+> 1 B: circle "≤ 180 days"
 
 N059a · Whole turnover: every shipment goes under the policy. She can't insure only the risky buyers.
 > 1 B: underline "every shipment"
 
-N060 · Now my question. How much of a loss does S-C-R pay?
+N060 · Now my question. How much of a loss does the standard policy pay?
 > 1 S: a loss bar "USD 100" with a slider · H: 3 s
 
-N061 · Ninety per cent. Not a hundred. The exporter keeps ten, so she still chooses buyers carefully. That's risk-sharing.
-> 1 C: trap card "'ECGC pays 100 %' ✗ · SCR 90 % · SSP, BWP, MBEP 80 % · the exporter always keeps a share ✓" [F20] · 2 B: box "90 %"
+N061 · Ninety per cent. Not a hundred. She keeps ten, so she still chooses buyers carefully. That's risk-sharing.
+> 1 C: trap card "'SCR pays 100 %' ✗ · SCR 90 % (commercial and political) · SSP, BWP, MBEP 80 % · the exporter usually keeps a share ✓" [F20] · 2 B: box "90 %"
 
 N062 · Our Country Z loss: eighty thousand dollars. What does E-C-G-C pay, and what does she bear?
 > 1 S: sum card "loss USD 80,000 · SCR 90 % · illustrative" · H: 8 s
 
-N063 · Seventy-two thousand from E-C-G-C. Eight thousand she bears. And her duties: declare shipments by the fifteenth of the next month; report overdue bills.
-> 1 S: keys "80000 × 90 % = 72000 · 80000 − 72000 = 8000" · 2 B: box "USD 72,000" [numericals Q1] · 3 C: card "declare shipments monthly by the 15th · report bills unpaid 30 days after due date · claim within 360 days of due date or 540 days of policy expiry, earlier · no-claim bonus 5 % a year, max 50 %" [F28]
+N063 · Seventy-two thousand from E-C-G-C. Eight thousand she bears.
+> 1 S: keys "80000 × 90 % = 72000 · 80000 − 72000 = 8000" · 2 B: box "USD 72,000" [numericals Q1]
 
-N064 · And it covers her from shipment. Before shipment, say the buyer cancels? Not under the standard policy.
-> 1 C: card "SCR: from the date of shipment · pre-shipment risk: separate add-on (manufacturer exporters, under MBEP, 80 %)" [F21] · 2 B: circle "from shipment"
+N063a · Her side of the deal: declare every shipment by the fifteenth of the next month, and report bills overdue by thirty days.
+> 1 C: card "declare shipments monthly by the 15th · report bills unpaid 30 days after due date · claim within 360 days of due date or 540 days of policy expiry, earlier (A15b) · no-claim bonus 5 % a year, max 50 %" [F28]
 
-N065 · The rest of the shelf, one line each. Small exporters, up to five crore: the Small Exporters Policy, with a shorter wait.
+N064 · And the cover starts at shipment. Before shipment, say the buyer cancels? Not under the standard policy. That's the "shipment risk" line.
+> 1 C: card "shipment risk: post-shipment → SCR covers from the date of shipment · pre-shipment (contract cancelled, import ban, buyer insolvent before shipment) → separate add-on (manufacturer exporters, under MBEP, 80 %)" [F21] · 2 B: circle "from shipment"
+
+N065 · The rest of the shelf, one line each. Exports up to five crore: the Small Exporters Policy, S-E-P, with a shorter wait.
 > 1 S: shelf box "SEP: turnover ≤ ₹5 cr · overdues reported after 60 days · waiting period 2 months" [F29]
 
-N066 · Micro exporters, up to one crore: the Micro Exporters Policy. Big ones, twenty lakh premium or more: the Export Turnover Policy.
-> 1 S: shelf boxes "MEP (ex-SME policy): ≤ ₹1 cr, 90 %" · "ETP: premium ≥ ₹20 lakh a year, whole turnover, 90 %" [F30, F33]
+N065a · And richer cover: E-C-G-C's F-A-Q says ninety-five per cent for commercial losses, a hundred for political. The one policy that can pay in full.
+> 1 C: card "SEP (ECGC FAQ): 95 % commercial · 100 % political · standard policy: 90 % both" [F29] · 2 B: circle "100 % political, SEP only"
 
-N067 · Just one shipment? The Specific Shipment Policy. Just chosen buyers? The Export Specific Buyers Policy. Both pay eighty per cent.
-> 1 S: shelf boxes "SSP: pick a contract or shipment, 80 %" · "BWP (Export Specific Buyers): chosen buyers, 80 %" [F31, F32]
+N066 · Very small exporters, up to one crore: M-E-P, the micro exporters' policy. Large ones, twenty lakh premium or more: the Export Turnover Policy.
+> 1 S: shelf boxes "MEP (ECGC's menu: 'SME policy'): ≤ ₹100 lakh, 90 %" · "ETP: premium ≥ ₹20 lakh a year, whole turnover, 90 %" [F30, F33]
 
-N068 · Many shipments to one buyer: the Buyer Exposure Policy. Many buyers: the Multi-Buyer Exposure Policy, premium on a loss limit.
-> 1 S: shelf boxes "BEP: one buyer, many shipments" · "MBEP: many buyers, premium on the aggregate loss limit, 80 % (90 % with extra premium)" [F34]
+N067 · Just one shipment? The Specific Shipment Policy, S-S-P. Just chosen buyers? The Export Specific Buyers Policy, B-W-P. Both pay eighty per cent.
+> 1 S: shelf boxes "SSP: pick a contract or shipment, 80 %" · "BWP (Export Specific Buyers): chosen buyer(s), per shipment, 12 months, 80 %" [F31, F32]
+
+N068 · Many shipments to one buyer: the Buyer Exposure Policy. Many buyers: the Multi-Buyer Exposure Policy. Premium on the most E-C-G-C will pay, not per shipment.
+> 1 S: shelf boxes "BEP: one buyer, many shipments; premium on the approved loss limit; 90 % for SCR holders, 80 % others" · "MBEP: many buyers, premium on the aggregate loss limit, 80 % (90 % with extra premium)" [F34]
 
 N069 · And policies for consignment exports, services, software, and construction projects abroad.
 > 1 S: shelf boxes "Consignment Exports (Stockholding Agent) · Services · IT-enabled services · Software Project · Construction Works · Supply Contract" [F35]
@@ -276,21 +313,21 @@ N070 · Pause check for chapter three. One. E-C-G-C's original name?
 N070a · Export Risks Insurance Corporation. Two, the twist. An exporter wants to insure just one risky shipment. Can she get it under S-C-R?
 > 1 N: "ERIC ✓" · H: 3 s
 
-N071 · No. S-C-R is whole turnover. One shipment: the Specific Shipment Policy. [seriously] If you remember one thing: E-C-G-C insures payment, never all of it.
+N071 · No. S-C-R is whole turnover. One shipment: S-S-P. [seriously] One thing from chapter three: E-C-G-C insures payment, and usually not all of it.
 > 1 N: "SSP ✓" · 2 S: chapter-three parts dim to grey
 
 ## Close
 
 N072 · Back to our opening. Country Z blocks the money. Who carries the loss?
-> 1 S: the three buttons from N007; the face-down one turns · H: 3 s
+> 1 S: the buttons from N007; the face-down one turns · H: 3 s
 
-N073 · With the standard policy: E-C-G-C, ninety per cent. Our exporter, ten. That's the fourth name.
-> 1 G: the third button "ECGC 90 %" lights; "exporter 10 %" beside it
+N073 · With the standard policy: E-C-G-C, ninety per cent. Our exporter, ten. That's the third name.
+> 1 G: the third button "ECGC 90 %" lights; "exporter 10 %" beside it; "the buyer" stays grey
 
 N074 · Quick mix. One. A war breaks out in the buyer's country. Commercial or political risk?
 > 1 S: story card · H: 6 s
 
-N075 · Political. Two. A bank's net funded exposure to a D country is two per cent of its assets. Provision?
+N075 · Political. Two. A bank's net funded exposure to a D country, all long-term, is two per cent of its assets. Provision?
 > 1 N: "political ✓" · H: 6 s
 
 N076 · One hundred per cent. Three. Who decides a country's grade for E-C-G-C cover: R-B-I or E-C-G-C?
@@ -299,16 +336,16 @@ N076 · One hundred per cent. Three. Who decides a country's grade for E-C-G-C c
 N077 · E-C-G-C. Now the map, from memory. First node: risks in trade.
 > 1 N: "ECGC ✓" · 2 M: branch "Insurance and risk", nodes "trade risks · country risk · ECGC · ECGC policies" empty (amber) · H: 4 s
 
-N078 · Buyer risk to the exporter, seller risk to the importer; country, exchange, transport, legal. Second: country risk.
+N078 · Buyer risk to the exporter, seller risk to the importer; commercial and political; transport to the cargo insurer. Second: country risk.
 > 1 M: node "trade risks" fills · H: 4 s
 
-N079 · Transfer risk inside it; seven grades, A-one to D; Board policy, one per cent; provisions a quarter to a hundred. Third: E-C-G-C.
+N079 · Transfer risk inside it; seven grades, go by the letter; one per cent, net funded; point two five to a hundred. Third: E-C-G-C.
 > 1 M: node "country risk" fills · H: 4 s
 
 N080 · Nineteen fifty-seven, E-R-I-C; Government-owned; policies to exporters, covers to banks. Fourth: policies.
 > 1 M: node "ECGC" fills · H: 4 s
 
-N081 · S-C-R, whole turnover, ninety per cent; S-S-P and B-W-P, eighty; never a hundred. That's the map.
+N081 · S-C-R, whole turnover, ninety per cent; S-S-P and B-W-P, eighty; S-E-P, up to a hundred. That's the map.
 > 1 M: node "ECGC policies" fills; branch completes
 
 N082 · Homework. A loss of fifty thousand dollars under the Specific Shipment Policy. What does E-C-G-C pay?

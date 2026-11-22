@@ -1,4 +1,4 @@
-# A15 · Numericals (c1, 2026-11-22)
+# A15 · Numericals (c2, 2026-11-22)
 
 All amounts, countries (Z, Y, X) and bank figures illustrative. Checked by `python3 tools/check/country_risk.py`
 (two ways: Decimal, and 12-digit calculator key presses); all OK. Basic 8-function calculator only. Percentages of
@@ -24,11 +24,16 @@ Bank's total assets **₹2,00,000 crore**. Net funded exposure to Country Y (ECG
 - Long-term part: `2000 × 20 % =` → **₹400 crore**
 - Short-term part (bank may hold 25 % of the requirement): `1000 × 20 % = × 25 % =` → **₹50 crore**
 - Total: `400 + 50 =` → **₹450 crore**
+- The relief is optional ("may… say 25 %", IRP 113(8)): without it, `3000 × 20 % =` → ₹600 crore.
 
 ## V · Your turn (N046–N047)
 Same bank; Country X (grade **C1**, 25 %), net funded **₹1,500 crore**, all long-term.
 - `1500 ÷ 200000 × 100 =` → **0.75 %** < 1 % → **no country-risk provision** under para 113.
 - Trap: `1500 × 25 % =` → ₹375 crore ✗ (forgets the threshold).
+
+## Practice 32 · net funded only
+Loans ₹1,200 crore + LCs and guarantees ₹900 crore to Country K (B1, 5 %); total assets ₹2,00,000 crore. Net funded
+= loans only: `1200 ÷ 200000 × 100 =` → **0.6 %** < 1 % → **nil**. Trap: `2100 × 5 % =` → ₹105 crore ✗.
 
 ## Close · N075
 Net funded exposure to a **D** country of 2 % of total assets (e.g. ₹4,000 crore of ₹2,00,000 crore): provision

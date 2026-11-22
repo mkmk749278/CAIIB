@@ -55,6 +55,13 @@ if __name__ == "__main__":
     # Close N075: D country, 2 % of assets -> 100 %. Exposure Rs 4,000 cr illustrative.
     check("Close D country 4,000 (2%) x 100%", provision_w1(200000, 4000, 0, "D"), c12(4000 * 100 / 100), "4000")
 
+    # Practice 32: loans 1,200 cr + LCs/guarantees 900 cr, B1, total assets 2,00,000 cr: net funded 0.6 % -> nil.
+    check("P32 net funded share 1,200 / 2,00,000 (%)", D(1200) / D(200000) * 100, c12(c12(1200 / 200000) * 100), "0.6")
+    check("P32 provision (LCs not net funded; below 1 %)", provision_w1(200000, 1200, 0, "B1"), 0.0, "0")
+    check("P32 trap: 2,100 x 5%", D(2100) * RATE["B1"] / 100, c12(2100 * 5 / 100), "105")
+    # Q2 without the optional short-term relief: 3,000 x 20 %.
+    check("Q2 without the relief 3,000 x 20%", D(3000) * RATE["B2"] / 100, c12(3000 * 20 / 100), "600")
+
     # Homework · SSP pays 80 % of a USD 50,000 loss.
     p = check("Homework SSP 80% of 50,000", D(50000) * D("0.80"), c12(50000 * 80 / 100), "40000")
     check("Homework exporter bears", D(50000) - p, c12(50000 - 40000), "10000")
