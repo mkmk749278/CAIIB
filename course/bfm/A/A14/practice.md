@@ -1,4 +1,4 @@
-# A14 · Practice (c2, 2026-11-22)
+# A14 · Practice (c3, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A5.2-A5.4-A5.6_A14.md`. Sums checked by
 `tools/check/export_factoring.py`. All figures illustrative. Answers at the end.

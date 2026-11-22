@@ -1,6 +1,6 @@
 # A14 · "Selling what you're owed" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c3, 2026-11-22: re-review c2 ADOPT WITH FIXES (0 H, 3 M, 10 L), all fixed (ack at the end of `review_c2.md`); confirmation re-review of c3 (`review_c3.md`). c2: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one
+- **Status**: **c3 locked**, 2026-11-22: confirmation re-review c3 **ADOPT** (0 H, 0 M, 4 L; Lows applied, `review_c3.md`). c2 re-review ADOPT WITH FIXES (0 H, 3 M), all fixed (ack at the end of `review_c2.md`). Note ids N061–N063 were removed in c3 (chapters 3–4 merged); ids not renumbered. c2: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one
   question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A14 (v4: with the three facilities moved in from A11). Course order v4: A13 →
   **A14** → A15.
@@ -33,7 +33,7 @@
   packing credit (A11b); realisation and EDPMS (A11).
 - **Length**: ~1,690 spoken words + ~2.6 min of holds ≈ 14.7 min (measure the take). Chapters: 1 factoring
   (~4 min) · 2 forfaiting (~3.5 min) · 3 what exporters get: Gold Card, status holders, accounts, old facilities
-  (~5 min; ch3 and ch4 of c2 merged, re-review c2 M2) · close (~1.5 min). If the take runs over 15:00, cut in order: N009, then N041's second sentence (cards stay); keep N047 (ch3 recall opener). Keep N024a and N058 (recalled item; practice).
+  (~4.4 min; ch3 and ch4 of c2 merged, re-review c2 M2) · close (~1.5 min). If the take runs over 15:00, cut in order: N009, then N041's second sentence (cards stay); keep N047 (ch3 recall opener). Keep N024a and N058 (recalled item; practice).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: the export road (A11)
   with **two lanes** after the ship: lane 1 many small invoice cards flowing into a "factor" box; lane 2 one large
   bill with a stamp "aval" sliding to a "forfaiter" box. A **risk backpack** sits on whoever carries the buyer's risk.

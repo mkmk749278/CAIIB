@@ -1,4 +1,4 @@
-# A14 · Numericals (c2, 2026-11-22)
+# A14 · Numericals (c3, 2026-11-22)
 
 All amounts, rates, fees and shares illustrative. Checked by `python3 tools/check/export_factoring.py` (two ways:
 Decimal, and 12-digit calculator key presses); all OK. Basic 8-function calculator only. **Dollar interest and
