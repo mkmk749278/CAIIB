@@ -20,6 +20,7 @@ videos running.
 | A10 | "Here we are again, everyone. Today, no new rules; we use them." | "Well worked, everyone. Sleep on the case, and I'll see you next class." |
 | A11 | "Welcome back, everyone. Today we follow one shipment, from the first form to the last dollar." | "That's the export trail, start to end. Rest now, and I'll meet you in the next class." |
 | A11b | "Hi again, everyone. Keep a calculator near; today we lend to our exporter." | "That's export finance done for today. Well done, and I'll see you in the next class." |
+| A12 | "Hello, everyone. Calculators on; today's class is one long case." | "That's the case closed. Rest well, and see you at the next class." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.
