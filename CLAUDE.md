@@ -65,17 +65,17 @@ Never a new loose doc.
   - Scripts: `course/bfm/00_start/script.md`; **A01 class edition c3 locked** (2026-11-21, `A/A1/script_class.md`, fact
     sheet `research/bfm/facts/A1.6-A1.7_A01.md`, reviews c1 ×3 + re-review c2, voice page `A/A1/voice_page_class.html`,
     2 parts); A07 (Incoterms). **A02 class edition c3 locked** (2026-11-21, `A/A02/`, fact sheet
-    `research/bfm/facts/A3.1-A3.3_A02.md`, voice page 2 parts). **A03 drill c3 locked** (`A/A03/`, voice page 1 part); **A04 drill c3 locked** (2026-11-21, `A/A04/`, fact sheet `A1.3-A1.7_A04.md`,
+    `research/bfm/facts/A3.1-A3.3_A02.md`, voice page 2 parts); **A03 drill c3 locked** (`A/A03/`, voice page 1 part); **A04 drill c3 locked** (2026-11-21, `A/A04/`, fact sheet `A1.3-A1.7_A04.md`,
     checker `tools/check/fx_cross_rates.py`, reviews c1 ×3 + re-review c2, voice page 1 part); **A05 c3 locked**
     (`A/A05/`, fact sheet `A1.5-A1.7_A05.md`, checker `tools/check/fx_forwards.py`, voice page 1 part); **A06 c3 locked**
-    (`A/A06/`, fact sheet `A1.5-A1.7_A06.md`, checker `tools/check/fx_forward_contracts.py`, voice page 2 parts).
+    (`A/A06/`, fact sheet `A1.5-A1.7_A06.md`, checker `tools/check/fx_forward_contracts.py`, voice page 2 parts);
     **A08 c3 locked** (2026-11-21, `A/A08/`, fact sheet `A4.1-A4.8_A08.md`, reviews c1 ×3 + re-review c2 ADOPT, voice
     page 2 parts); **A09 c3 locked** (`A/A09/`, fact sheet `A4.4-A4.10_A09.md`: URR 725 read, **ISBP 821 (Jul 2023) is current;
-    the syllabus still says 745**, taught as both; voice page 2 parts). **A10 c3 locked** (case, `A/A10/`, fact sheet
+    the syllabus still says 745**, taught as both; voice page 2 parts); **A10 c3 locked** (case, `A/A10/`, fact sheet
     `A4.12_A10.md`, ISP98 rules read; voice page 1 part); **A11 c3 locked** (2026-11-22, `A/A11/`, fact sheet
     `A5.1-A5.5_A11.md`: **the FEM (Export and Import of Goods and Services) Regulations 2026 and RBI's A.P. (DIR) 20
     superseded the Export and Import Master Directions on 1 Oct 2026**; old figures (21 days, write-off 5/10 %, exempt
-    list, RBI caution list, 15 months, SOFTEX) taught as trap cards; voice page 2 parts). **A11b c3 locked** (`A/A11b/`,
+    list, RBI caution list, 15 months, SOFTEX) taught as trap cards; voice page 2 parts); **A11b c3 locked** (`A/A11b/`,
     fact sheet `A5.3_A11b.md` from Credit Facilities Directions 2025 ch. XV; "lower of FOB and domestic cost less
     margin" is bank practice, not RBI text, taught as the exam method; checker `tools/check/export_pcl.py`; voice page
     2 parts). **A12 c3 locked** (`A/A12/`, fact sheet `A5.11-A5.3_A12.md`: **FEDAI 10th ed. sets no
