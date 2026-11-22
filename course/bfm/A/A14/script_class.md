@@ -1,6 +1,6 @@
-# A14 · "Selling what you're owed" · CLASS EDITION (script c1, with cue sheet)
+# A14 · "Selling what you're owed" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one
+- **Status**: c3, 2026-11-22: re-review c2 ADOPT WITH FIXES (0 H, 3 M, 10 L), all fixed (ack at the end of `review_c2.md`); confirmation re-review of c3 (`review_c3.md`). c2: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`); for re-review. c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one
   question per idea, one pause check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A14 (v4: with the three facilities moved in from A11). Course order v4: A13 →
   **A14** → A15.
@@ -31,9 +31,9 @@
   "sir-sai"; "D-G-F-T"; "F-T-P"; "Kalyanasundaram" (kal-yaa-na-SUN-da-ram).
 - **Not in this video**: ECGC policies and the SAL in depth (A15); EXIM Bank's own products (A15b); EBR / BAF (A11b);
   packing credit (A11b); realisation and EDPMS (A11).
-- **Length**: ~1,750 spoken words + ~2.7 min of holds ≈ 15 min (measure the take). Chapters: 1 factoring
-  (~4 min) · 2 forfaiting (~3.5 min) · 3 Gold Card and status holders (~3 min) · 4 the exporter's accounts and
-  old facilities (~3 min) · close (~1.5 min). If the take runs over 15:00, cut in order: N047, then N041's second sentence (cards stay). Keep N024a and N058 (recalled item; practice).
+- **Length**: ~1,690 spoken words + ~2.6 min of holds ≈ 14.7 min (measure the take). Chapters: 1 factoring
+  (~4 min) · 2 forfaiting (~3.5 min) · 3 what exporters get: Gold Card, status holders, accounts, old facilities
+  (~5 min; ch3 and ch4 of c2 merged, re-review c2 M2) · close (~1.5 min). If the take runs over 15:00, cut in order: N009, then N041's second sentence (cards stay); keep N047 (ch3 recall opener). Keep N024a and N058 (recalled item; practice).
 - **Cue sheet**: S scene · N note · G glow · M map · C card · B board mark · H hold. Picture: the export road (A11)
   with **two lanes** after the ship: lane 1 many small invoice cards flowing into a "factor" box; lane 2 one large
   bill with a stamp "aval" sliding to a "forfaiter" box. A **risk backpack** sits on whoever carries the buyer's risk.
@@ -49,7 +49,7 @@ N002 · First, homework. Bill selling eighty-six point two, fifty thousand dolla
 > 1 S: A13's homework card · H: 8 s
 
 N003 · Forty-three lakh ten thousand, plus thirty-eight thousand seven hundred ninety. Forty-three lakh forty-eight thousand seven hundred ninety rupees.
-> 1 S: keys "50000 × 86.2 = 4310000 · × 10.95 % = × 30 = ÷ 365 = 38790 · + = 4348790" · 2 N: "homework ✓"
+> 1 S: keys "50000 × 86.2 = 4310000 · × 10.95 % = × 30 = ÷ 365 = 38790 · + 4310000 = 4348790" · 2 N: "homework ✓"
 
 N004 · Now, two exporters. Our Tiruppur exporter sells shirts every month to about twenty buyers in Europe, on ninety days.
 > 1 S: the export road; many small invoice cards, "20 buyers · 90 days · open account · illustrative"
@@ -193,7 +193,7 @@ N039 · The deal falls through. Does Coimbatore get its commitment fee back?
 N040 · Usually not. The forfaiter kept money ready for it. [lightly] Keeping money ready isn't free.
 > 1 C: trap card "'commitment fee refunded if the deal is cancelled' ✗ · usually not refunded ✓ (market practice)" [F15]
 
-N041 · Who forfaits in India? EXIM Bank and dealer banks. The I-C-C's Uniform Rules for Forfaiting, U-R-F eight hundred, apply only if the contract says so.
+N041 · Who forfaits in India? EXIM Bank and authorised dealer banks. The I-C-C's forfaiting rules, U-R-F eight hundred, apply only if the contract says so.
 > 1 C: card "EXIM Bank, AD Cat-I banks (old Export MD A.12, superseded 1 Oct 2026; business continues) · ICC URF 800 (from 1 Jan 2013): apply only if the contract says so" [F12, F16]
 
 N042 · Now the full comparison. Fill it in your head first.
@@ -214,10 +214,10 @@ N045a · Without. Two, the twist. Which one gives sales-ledger management?
 N046 · Factoring. [seriously] If you remember one thing from chapter two: many small, factoring; one big avalised deal, forfaiting.
 > 1 N: "factoring ✓" · 2 S: chapter-two parts dim to grey
 
-## Chapter 3 · The Gold Card and status holders
+## Chapter 3 · What exporters get: Gold Card, status, accounts
 
 N047 · Chapter three. First, from chapter two. The fee charged from the forfaiter's promise till the purchase?
-> 1 S: chapter title "3 · Gold Card and status holders" · H: 3 s
+> 1 S: chapter title "3 · What exporters get" · H: 3 s
 
 N048 · The commitment fee. Now, what does a bank give its best exporters? R-B-I's Gold Card scheme.
 > 1 S: a gold card with the exporter's name · 2 C: card "Gold Card Scheme for Exporters (asked for in the Exim Policy, Jan 2004; RBI scheme, 2004) · now in Credit Facilities Directions 2025, ch. XV" [F20]
@@ -258,10 +258,10 @@ N057 · Their privileges include clearances on self-declaration, and no bank gua
 N057a · They may send documents straight to the buyer, but the money still comes through a bank.
 > 1 C: card "no compulsory negotiation of documents through banks · money still through banking channels" [F23] · 2 B: underline "money still through banks"
 
-N057b · And they may send free samples for promotion: up to one crore rupees or two per cent of average exports, whichever is lower.
+N057b · And they may export goods free, to promote sales: up to one crore rupees or two per cent of average exports, whichever is lower.
 > 1 C: card "free-of-cost exports (not gems, jewellery, gold): ≤ ₹1 cr or 2 % of 3-year average realisation, lower · pharma 2 % · UN / WHO / Govt health programmes 8 % · FTP 1.29, in force" [F23]
 
-N058 · Small manufacturers' exports count double, but only towards the One Star rank.
+N058 · Micro and small firms' exports count double, but only towards the One Star rank.
 > 1 N: "double weightage → One Star only (micro & small, ISO/BIS, North-East, J&K, Ladakh…)" [F22]
 
 N059 · A paper asked: may a status holder write off ten per cent of its bills itself? Today?
@@ -273,21 +273,7 @@ N060 · That was the old rule; five per cent for others. Today, the bank may all
 N060a · And where the shipping bill is up to ten lakh rupees, the exporter's own declaration is enough, even if nothing came.
 > 1 N: "shipping bill / invoice ≤ ₹10 lakh → reduction (even non-realisation) on the exporter's declaration" [F24]
 
-N061 · Pause check for chapter three. One. The Gold Card standby limit?
-> 1 S: card "standby?" · H: 3 s
-
-N061a · Not less than twenty per cent. Two, the twist. Overdue bills at twelve per cent of last year's turnover. Gold Card?
-> 1 N: "≥ 20 % ✓" · H: 3 s
-
-N062 · No; the bar is ten. [seriously] If you remember one thing from chapter three: Gold Card, bank; status holder, D-G-F-T.
-> 1 N: "no (> 10 %) ✓" · 2 S: chapter-three parts dim to grey
-
-## Chapter 4 · The exporter's accounts, and the old facilities
-
-N063 · Chapter four. First, from chapter three. Status holder threshold for one star?
-> 1 S: chapter title "4 · Accounts and old facilities" · H: 3 s
-
-N064 · Three million dollars. Now, the Hamburg buyer pays. Must our exporter convert every dollar to rupees at once?
+N064 · Now, the Hamburg buyer pays. Must our exporter convert every dollar to rupees at once?
 > 1 S: dollars arriving at the counter · H: 3 s
 
 N065 · No. She may keep it in an E-E-F-C account, the Exchange Earners' Foreign Currency account.
@@ -306,10 +292,10 @@ N067a · Three months, if that bank is in an I-F-S-C, like GIFT City.
 > 1 B: circle "3 months · IFSC"
 
 N068 · Diamond traders have their own: the Diamond Dollar Account. Three years' record, three crore turnover, up to five accounts, dollars only.
-> 1 C: card "DDA: rough / cut & polished diamonds, coloured gemstones, diamond & gold jewellery · 3-year track record (older books: 2 years; changed 29 Apr 2025) · avg turnover ₹3 cr (3 licensing years) · up to 5 DDAs · USD only · current, no interest · CRR/SLR apply" [F32]
+> 1 C: card "DDA: rough / cut & polished diamonds, coloured gemstones, diamond & gold jewellery · track record 3 years in the FEMA text (changed 29 Apr 2025) · 2 years still printed in CF para 338 and older books: if only 2 is offered, pick it · avg turnover ₹3 cr (3 licensing years) · up to 5 DDAs · USD only · current, no interest · CRR/SLR apply" [F32]
 
 N069 · Older books list more: commission to a foreign agent who found the buyer, a cap on reducing invoices, and conditions for refunds.
-> 1 S: four old cards fan out: "agency commission: by remittance or deduction from the invoice · declared on EDF/SOFTEX · after shipment · not on exports for JV/WOS equity" · "cash discount (prepaid usance bill): up to proportionate interest on the unexpired usance" · "other reductions: ≤ 25 % (no cap if > 3 years in exports and outstandings ≤ 5 %) · incentives surrendered" · "refund: by the AD that realised · goods re-imported for poor quality within 3 months · incentives surrendered · not needed if destroyed / auctioned abroad" · and "RBI's EDF-waiver paragraph (old MD C.1)" [F26–F29]
+> 1 S: four old cards fan out: "agency commission: by remittance or deduction from the invoice · declared on EDF/SOFTEX · after shipment · not on exports for JV/WOS equity" · "cash discount (prepaid usance bill): up to proportionate interest on the unexpired usance" · "other reductions: ≤ 25 % (no cap if > 3 years in exports and outstandings ≤ 5 %) · incentives surrendered" · "refund: by the AD that realised · goods re-imported for poor quality · exporter undertakes to re-import within 3 months of the refund · incentives surrendered · not needed if destroyed / auctioned abroad" · and "RBI's EDF-waiver paragraph (old MD C.1)" [F26–F29] · H: 5 s
 
 N070 · Since October twenty twenty-six those fixed conditions are gone. The bank's own policy decides, within the new regulations.
 > 1 S: the cards stamp "superseded 1 Oct 2026" · 2 C: card "today: AD's policy & SOP (reg 19): extension · under/over/non-realisation · advances · factoring · reduction: reg 6" [F25]
@@ -317,14 +303,14 @@ N070 · Since October twenty twenty-six those fixed conditions are gone. The ban
 N070a · In the exam, answer by today's rule. If the options offer only the old figure, the question follows the old rule: pick it.
 > 1 C: card "exam: today's rule first · only the old figure offered → pick it" · 2 B: underline "only the old figure"
 
-N071 · Pause check for chapter four. One. Does an E-E-F-C account pay interest?
-> 1 S: card "EEFC interest?" · H: 3 s
+N071 · Pause check for chapter three. One. The Gold Card standby limit?
+> 1 S: card "standby?" · H: 3 s
 
-N071a · No. Two, the twist. A jeweller has four crore turnover, but only two and a half years' record. Diamond Dollar Account?
-> 1 N: "no ✓" · H: 3 s
+N071a · Not less than twenty per cent. Two, the twist. A jeweller: three years' record, but two and a half crore turnover. Diamond Dollar Account?
+> 1 N: "≥ 20 % ✓" · H: 3 s
 
-N072 · No; three years now. [seriously] If you remember one thing from chapter four: E-E-F-C holds her earnings; it doesn't lend, and pays no interest.
-> 1 N: "no: 3-year record needed ✓" · 2 S: chapter-four parts dim to grey
+N072 · No; turnover must be at least three crore. [seriously] If you remember one thing: Gold Card, bank; status, D-G-F-T; E-E-F-C holds, never lends.
+> 1 N: "no: avg turnover < ₹3 cr ✓" · 2 S: chapter-three parts dim to grey
 
 ## Close
 
@@ -346,7 +332,7 @@ N077 · Assignor, debtor, factor; recourse decides the risk; banks and N-B-F-C f
 N078 · One big deal, avalised notes, without recourse; commitment fee and discount. Third: Gold Card.
 > 1 M: node "forfaiting" fills · H: 4 s
 
-N079 · Three-year limits, standby at least twenty per cent, no S-A-L, overdues under ten. Fourth: status holders.
+N079 · Three-year limits, standby at least twenty per cent, no S-A-L, overdues not above ten per cent. Fourth: status holders.
 > 1 M: node "Gold Card" fills · H: 4 s
 
 N080 · D-G-F-T, five stars, three to eight hundred million. Fifth: accounts.
