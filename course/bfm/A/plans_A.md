@@ -455,7 +455,7 @@ course plan is not renumbered here; the owner decides the splits.
 - **Goal**: compute the rupees an exporter gets on discounting, and what happens when the bill is not paid; work a
   packing-credit case beside it.
 - **Evidence**: crystallisation Jul 2024 (case), Dec 2025; EDBP case Jun 2023; export discounting Jun 2025; FP
-  Q9–11 (export bill discounting case), Q28, Q39 (returned bill).
+  Q9–11 (export bill discounting case), Q28 (Q39 is country risk, A15, not a returned bill).
 - **Syllabus ids**: A5.11, A5.3 (post-shipment), A1.7.
 - **Opening**: the shrimp exporter's usance bill is discounted; 30 days after due date, no money has come.
 - **Misconceptions**: some think the bank just waits for the money; others think crystallisation uses the bill

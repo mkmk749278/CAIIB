@@ -1,4 +1,4 @@
-# A12 · Practice (c1, 2026-11-22)
+# A12 · Practice (c2, 2026-11-22)
 
 Our own items; figures illustrative. Case convention: interest = rupee advance × rate × days ÷ 365. Reasons cite
 `research/bfm/facts/A5.11_A12.md` [F#] or `numericals.md`.
@@ -39,3 +39,16 @@ period:
 (a) nothing until the goods are resold (b) the advance at bill buying rate (c) **the rupee equivalent of the bill
 and foreign charges at TT selling, with interest and rupee charges** (d) only the foreign charges
 *Reason: FEDAI 2.1(d) [F9].*
+
+**P9.** A sight bill of USD 20,000 (foreign currency, not under LC) is purchased at ₹85.00 with interest at 9 % p.a.
+The interest recovered upfront is: *Answer: 17,00,000 × 9 % × 25 ÷ 365 = ₹10,479.45: NTP only, no usance [F1, F2;
+numericals P9].*
+
+**P10.** In the case above (P1–P3), the question instead says overdue interest is charged on the crystallised amount.
+It is: *Answer: 25,71,000 × 10 % × 30 ÷ 365 = ₹21,131.51. FEDAI fixes the period, not the base: read it from the
+question [F6, F12].*
+
+**P11.** A usance export bill is paid 10 days after its due date, before the bank's crystallisation day. The bank:
+(a) crystallises it, then credits the proceeds (b) converts at TT buying and credits the exporter (c) **uses the
+dollars to close the dollar advance and recovers overdue interest for 10 days** (d) charges no interest
+*Reason: FEDAI 2.2(b): overdue interest; no crystallisation has happened [F3].*

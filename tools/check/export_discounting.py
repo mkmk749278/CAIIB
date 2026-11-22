@@ -42,4 +42,16 @@ if __name__ == "__main__":
     check("V1 credited", a - i, c12(2547000 - interest_w2(2547000, 8, 85)), "2499549.04")
     check("V2 crystallised 30000 × 85.70", D(30000) * D("85.70"), c12(30000 * 85.7), "2571000.00")
     check("V2 overdue 10% × 30 days", interest_w1(2547000, 10, 30), interest_w2(2547000, 10, 30), "20934.25")
+    # c2 additions
+    check("C2s sight bill interest 25 days", interest_w1(4260000, 9, 25), interest_w2(4260000, 9, 25), "26260.27")
+    check("C2s sight bill credited", D(4260000) - interest_w1(4260000, 9, 25), c12(4260000 - interest_w2(4260000, 9, 25)), "4233739.73")
+    check("C2 trap: 60 days only", interest_w1(4260000, 9, 60), interest_w2(4260000, 9, 60), "63024.66")
+    assert (date(2027, 4, 27) + timedelta(13)).isoformat() == "2027-05-10" and date(2027, 5, 10).strftime("%a") == "Mon"
+    check("C2L paid 13 days late: overdue 11%", interest_w1(4260000, 11, 13), interest_w2(4260000, 11, 13), "16689.86")
+    check("C6 dishonour 50,200 at TT selling 86.10", D(50200) * D("86.10"), c12(50200 * 86.1), "4322220.00")
+    assert (date(2027, 4, 27) - date(2027, 4, 2)).days == 25 and date(2027, 4, 2).strftime("%a") == "Fri"
+    check("C7 early refund 25 days at 9%", interest_w1(4260000, 9, 25), interest_w2(4260000, 9, 25), "26260.27")
+    check("Ravi net outcome", D("4170715.07") - D("4343515.07") + D(4280000), c12(4170715.07 - 4343515.07 + 4280000), "4107200.00")
+    check("P9 sight USD 20,000 at 85, 9%, 25 d", interest_w1(1700000, 9, 25), interest_w2(1700000, 9, 25), "10479.45")
+    check("P10 interest on crystallised amount", interest_w1(2571000, 10, 30), interest_w2(2571000, 10, 30), "21131.51")
     print("all OK")
