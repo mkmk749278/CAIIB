@@ -1,0 +1,30 @@
+# Look at (or stop) the Modal render app from the phone or a session: lists apps and containers, prints the last
+# logs of caiib-render; with stop=true it stops the app (every running render ends). Seconds of work; renders nothing.
+name: modal-status
+on:
+  workflow_dispatch:
+    inputs:
+      stop:
+        description: "true = stop the caiib-render app now"
+        default: "false"
+permissions:
+  contents: read
+jobs:
+  status:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+    steps:
+      - uses: actions/setup-python@v5.3.0
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet modal==1.6.3
+      - name: Apps and containers
+        run: modal app list; modal container list
+      - name: Last logs of caiib-render (90 s of the stream)
+        run: timeout 90 modal app logs caiib-render 2>&1 | tail -300 || true
+      - name: Stop
+        if: inputs.stop == 'true'
+        run: modal app stop caiib-render && modal app list
