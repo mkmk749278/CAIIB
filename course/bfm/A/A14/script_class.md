@@ -11,7 +11,7 @@
 - **Rule version (opening card)**: "FEM (Export and Import of Goods and Services) Regulations 2026 (in force 1 Oct
   2026) · RBI Credit Facilities Directions 2025, ch. XV (updated 1 Oct 2026) · Factoring Regulation Act 2011 (amended
   2021) · RBI TReDS Directions 2026 · FTP 2023 · FEMA 10(R) (amended to 9 Oct 2025) · as at 31 December 2026".
-- **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Welcome back, everyone. Today our exporter sells what
+- **Greeting / goodbye** (in `course/bfm/greetings.md`): greeting "Hello, all of you. Today our exporter sells what
   she's owed, and we see who keeps the risk."; goodbye "That's the exporter's toolkit, complete. Look after yourselves,
   and I'll see you in the next class."
 - **Story**: two exporters. (1) The Tiruppur shirt exporter (A08, A11, A11b, A12): she now sells every month to about
@@ -42,7 +42,7 @@
 
 ## Warm-up
 
-N001 · [warmly] Welcome back, everyone. Today our exporter sells what she's owed, and we see who keeps the risk.
+N001 · [warmly] Hello, all of you. Today our exporter sells what she's owed, and we see who keeps the risk.
 > 0 C: rule-version card · 1 S: notebook page; title "A14 · Selling what you're owed"
 
 N002 · First, homework. Bill selling eighty-six point two, fifty thousand dollars, thirty days at ten point nine five. The total?
