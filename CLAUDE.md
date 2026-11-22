@@ -65,17 +65,17 @@ Never a new loose doc.
   - Scripts: `course/bfm/00_start/script.md`; **A01 class edition c3 locked** (2026-11-21, `A/A1/script_class.md`, fact
     sheet `research/bfm/facts/A1.6-A1.7_A01.md`, reviews c1 ×3 + re-review c2, voice page `A/A1/voice_page_class.html`,
     2 parts); A07 (Incoterms). **A02 class edition c3 locked** (2026-11-21, `A/A02/`, fact sheet
-    `research/bfm/facts/A3.1-A3.3_A02.md`, voice page 2 parts, https://claude.ai/artifact/EYawTrwipzzeQTtD6GnzcV). **A03 drill c3 locked** (`A/A03/`, voice page 1 part); **A04 drill c3 locked** (2026-11-21, `A/A04/`, fact sheet `A1.3-A1.7_A04.md`,
+    `research/bfm/facts/A3.1-A3.3_A02.md`, voice page 2 parts). **A03 drill c3 locked** (`A/A03/`, voice page 1 part); **A04 drill c3 locked** (2026-11-21, `A/A04/`, fact sheet `A1.3-A1.7_A04.md`,
     checker `tools/check/fx_cross_rates.py`, reviews c1 ×3 + re-review c2, voice page 1 part); **A05 c3 locked**
     (`A/A05/`, fact sheet `A1.5-A1.7_A05.md`, checker `tools/check/fx_forwards.py`, voice page 1 part); **A06 c3 locked**
-    (`A/A06/`, fact sheet `A1.5-A1.7_A06.md`, checker `tools/check/fx_forward_contracts.py`, voice page 2 parts, https://claude.ai/artifact/EYawTrwipzzeQTtD6GnzcV).
+    (`A/A06/`, fact sheet `A1.5-A1.7_A06.md`, checker `tools/check/fx_forward_contracts.py`, voice page 2 parts).
     **A08 c3 locked** (2026-11-21, `A/A08/`, fact sheet `A4.1-A4.8_A08.md`, reviews c1 ×3 + re-review c2 ADOPT, voice
     page 2 parts); **A09 c3 locked** (`A/A09/`, fact sheet `A4.4-A4.10_A09.md`: URR 725 read, **ISBP 821 (Jul 2023) is current;
-    the syllabus still says 745**, taught as both; voice page 2 parts, https://claude.ai/artifact/EYawTrwipzzeQTtD6GnzcV). **A10 c3 locked** (case, `A/A10/`, fact sheet
+    the syllabus still says 745**, taught as both; voice page 2 parts). **A10 c3 locked** (case, `A/A10/`, fact sheet
     `A4.12_A10.md`, ISP98 rules read; voice page 1 part); **A11 c3 locked** (2026-11-22, `A/A11/`, fact sheet
     `A5.1-A5.5_A11.md`: **the FEM (Export and Import of Goods and Services) Regulations 2026 and RBI's A.P. (DIR) 20
     superseded the Export and Import Master Directions on 1 Oct 2026**; old figures (21 days, write-off 5/10 %, exempt
-    list, RBI caution list, 15 months, SOFTEX) taught as trap cards; voice page 2 parts, https://claude.ai/artifact/EYawTrwipzzeQTtD6GnzcV). **A11b c3 locked** (`A/A11b/`,
+    list, RBI caution list, 15 months, SOFTEX) taught as trap cards; voice page 2 parts). **A11b c3 locked** (`A/A11b/`,
     fact sheet `A5.3_A11b.md` from Credit Facilities Directions 2025 ch. XV; "lower of FOB and domestic cost less
     margin" is bank practice, not RBI text, taught as the exam method; checker `tools/check/export_pcl.py`; voice page
     2 parts). **A12 c3 locked** (`A/A12/`, fact sheet `A5.11-A5.3_A12.md`: **FEDAI 10th ed. sets no
@@ -86,7 +86,7 @@ Never a new loose doc.
     / 3 months as trap cards), no gold/silver advance except the 11-day IIBX route (A.P. DIR 04/2022, 07/2023, 14/2024:
     re-check at the freeze); trade credit unchanged by the 2026 ECB overhaul (ECB-TC MD 8 Sep 2026: USD 50/150 m, 3 years
     / 1 year or operating cycle, +300/+250 bps, LoU/LoC banned); FEDAI Rule 3 (no flip); IDPMS; checker
-    `tools/check/import_bills.py`; reviews c1 ×3 + re-review c2 ADOPT; voice page 2 parts, https://claude.ai/artifact/EYawTrwipzzeQTtD6GnzcV). Exam rule for old figures
+    `tools/check/import_bills.py`; reviews c1 ×3 + re-review c2 ADOPT; voice page 2 parts). Exam rule for old figures
     in options: PLAYBOOK §4a (2026-11-22). **A14 c3 locked** (2026-11-22, `A/A14/`, fact sheet `A5.2-A5.4-A5.6_A14.md`: factoring (FRA 2011 as amended 2021;
     banks exempt from registration; NBFC-Factor 50/50, NOF ₹7 cr now → ₹10 cr by Mar 2027; TReDS Directions 23 Jun 2026),
     forfaiting (old MD A.12 superseded, nothing replaced it; practice taught as "usually"; URF 800), Gold Card (CF
