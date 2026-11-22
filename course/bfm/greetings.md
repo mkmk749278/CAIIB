@@ -24,6 +24,7 @@ videos running.
 | A13 | "Hi, everyone. Today we walk round the counter and stand with the importer." | "That's the importer's side, end to end. Get some rest, and I'll see you in the next class." |
 | A14 | "Hello, all of you. Today our exporter sells what she's owed, and we see who keeps the risk." | "That's the exporter's toolkit, complete. Look after yourselves, and I'll see you in the next class." |
 | A15 | "Welcome in, everyone. Today something goes wrong on purpose, and we find out who pays." | "That's risk, named and shared. Take it easy tonight, and I'll see you in the next class." |
+| A15b | "Glad you're here, everyone. Today we sit on the bank's side of the desk, and ask who protects the lender." | "That's the lender's safety net, and the bank behind our exports. Sleep well, and I'll see you in the next class." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.
