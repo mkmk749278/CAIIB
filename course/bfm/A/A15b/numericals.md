@@ -1,4 +1,4 @@
-# A15b · Numericals (c1, 2026-11-22)
+# A15b · Numericals (c3, 2026-11-22)
 
 All amounts, dates and the bank are illustrative. Checked by `python3 tools/check/ecgc_claims.py` (two ways: Decimal,
 and 12-digit calculator key presses); all OK. Basic 8-function calculator only. Cover percentages, premium rates and
@@ -32,7 +32,7 @@ one month of recall (**10 May**), **whichever is earlier** [F34] → **10 May**.
 change the answer.)
 
 ## Practice 21 · Recovery with costs, bank side
-IN-PC; loss ₹30,00,000; ECGC paid ₹20,00,000 (⅔). Later ₹9,00,000 recovered; recovery costs ₹60,000.
+IN-PC; loss ₹30,00,000; ECGC paid ₹20,00,000 (⅔). Later ₹9,00,000 recovered; recovery costs ₹60,000 (incurred with ECGC's consent).
 - Costs first: `900000 − 60000 =` → ₹8,40,000
 - ECGC: `840000 × 2 ÷ 3 =` → **₹5,60,000**; bank: `840000 − 560000 =` → **₹2,80,000**.
 

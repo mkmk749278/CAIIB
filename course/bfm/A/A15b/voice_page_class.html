@@ -1,0 +1,150 @@
+<title>A15b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A15b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A15b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · ECGC's covers for banks + Chapter 2 · Duties and claims + Chapter 3 · EXIM Bank (N001–N072)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N072", "text": "[warmly] Glad you're here, everyone. Today we sit on the bank's side of the desk, and ask who protects the lender. First, homework. A fifty thousand dollar loss under the Specific Shipment Policy. What does E-C-G-C pay? Eighty per cent: forty thousand dollars. She bears ten thousand. One from two classes back. In factoring with recourse, who keeps the risk of a buyer not paying? The seller. The factor can come back to her. Our Tiruppur exporter again. Her bank gave her a packing credit of fifty lakh rupees to make the shirts. Last class, her E-C-G-C policy protected her if the buyer didn't pay. Now her bank asks: if she doesn't repay, who covers my loan? Some of you say: her policy does. Others: nobody, the bank carries it alone. Keep your answer. E-C-G-C came up in four of the last seven exams, and EXIM Bank had several questions in June twenty twenty-six. Chapter one. Her policy pays when the buyer abroad fails. But who is the bank's borrower? The exporter herself. So the bank needs its own insurance, against her failing. E-C-G-C calls it E-C-I-B: export credit insurance for banks. Two words for that failing. Protracted default: she just doesn't repay by the due date. Insolvency: she goes bankrupt. Many of you think the bank's cover pays when the buyer abroad fails. Does it? No. The buyer's failure is her risk, under her policy. Her failure is the bank's risk, under E-C-I-B. And the word, from last class. To an exporter, E-C-G-C sells a policy. To a bank? A cover. And the covers follow the loan. Before shipment, packing credit covers, P-C. After shipment, post-shipment covers, P-S. Then a choice. The bank covers all its export accounts in one go: whole turnover. Or it picks accounts one by one: individual. Whole turnover suits a big exporting bank, generally fifty accounts or more. Because it covers everything, cover is higher and premium lower. How much does a cover pay? Guess for the individual packing credit cover. Two-thirds. Sixty-six and two-thirds per cent. Individual post-shipment: seventy-five per cent, if she holds her own whole-turnover policy and the buyer isn't her associate. Whole-turnover covers move in a band, set by the bank's own claims record. The bands stay on the card. And for eligible small exporters' accounts, whole turnover now offers ninety per cent, so banks can lend to them cheaper. So when a question says \"E-C-I-B pays\", ask: which cover, which account? Two-thirds, seventy-five and ninety each belong to one. Premium is in paise per hundred rupees per month. Individual packing credit: twelve paise, on the highest amount outstanding that month. Quick sum. Her highest packing credit this month: fifty lakh rupees. The premium at twelve paise per hundred? Twelve paise is point one two rupees. So, fifty lakh divided by a hundred, times point one two: six thousand rupees. Got six lakh? You typed twelve, not point one two. Paise first become rupees. Three more names. Surety cover, once called export performance cover, protects the bank's guarantees for exporters: bid bonds, performance bonds. Export finance cover: advances against export incentives, like duty drawback. These two pay up to seventy-five per cent. And buyer's credit cover. Here the bank lends to a buyer abroad. Same rule: the cover is against its own borrower, now the foreign buyer. Old books say export performance guarantee, export finance guarantee. Today: surety cover, E-F cover. Answer with today's names; old ones only if nothing else fits. Pause check for chapter one. One. E-C-I-B protects the bank against whose default? The exporter-borrower's. Two, the twist. Individual post-shipment cover: why seventy-five per cent for one exporter, sixty for another? She holds her own whole-turnover policy; the other doesn't. [seriously] One thing from chapter one: her policy covers her buyer; the bank's cover covers her. Chapter two. First, from chapter one. The individual packing credit cover pays what share? Two-thirds. Now, cover isn't automatic. Both sides have duties. The exporter's first. Her premium is paid in advance, on her projected exports, into a deposit. A shipment with no premium behind it is not insured. Each buyer needs a credit limit from E-C-G-C. Commercial risk on that buyer is covered only up to that limit. Want to give a buyer more time, or switch D-P to D-A? Ask E-C-G-C first. Without prior approval, that bill isn't covered. Every month, by the fifteenth, she declares her shipments, and her bills thirty days overdue. Her bank declares its advances monthly too, with premium: by the tenth for individual covers, by the end of the next month for whole turnover. Before some steps, the bank needs E-C-G-C's approval: packing credit beyond three hundred sixty days, a compromise, restructuring, or a sale to an A-R-C. Now the bank's clock. Her packing credit falls due, and she doesn't pay. When must the bank report the default? Within four months of the due date, or within one month of recalling the advance, whichever is earlier. Then it recalls the whole loan before claiming, and claims within six months of when the default report was due. Many of you think: the bank claims first, and does the paperwork later. Is that safe? No. A late report, no recall, or a compromise without approval, and E-C-G-C can refuse the claim. Duties come before money. The exporter's claim has its own clock. When the buyer simply doesn't pay, E-C-G-C waits four months after the due date. If the buyer goes insolvent, it can be sooner: one month after the debt is admitted. For a war, four months after the event. Two \"four months\", so don't mix them. The bank must report within four months: a deadline. Her claim waits four months: a waiting period. After paying, E-C-G-C steps into the insured's shoes. When it asks, she assigns it her rights, bills and securities. That's subrogation, from JAIIB insurance. Now, money after a claim. On her eighty thousand dollar loss, E-C-G-C paid seventy-two thousand. Later, twenty thousand dollars is recovered from Country Z. Whose is it? Shared, in the same ratio as the loss: ninety-ten. E-C-G-C gets eighteen thousand. She keeps two thousand. Your turn, the bank's side. Packing credit loss, thirty lakh rupees, under the individual cover. What does E-C-G-C pay? Twenty lakh rupees. Thirty lakh, times two, divided by three. Did you get twenty-two and a half lakh? That's seventy-five per cent: the post-shipment figure. One more idea. Can she hand her policy to her bank, so the bank gets her claim money? Yes, but only with E-C-G-C's prior written approval. That's assignment. It's still her policy on her buyer, not the bank's own cover. Pause check for chapter two. One. The exporter's monthly declaration: by which date? The fifteenth. Two, the twist. Packing credit due on the first of March; the bank recalls it on the tenth of April. Report by when? By the tenth of May. One month after recall comes before four months after the due date, the first of July. [seriously] One thing from chapter two: report on time, recall, then claim. Recoveries are shared. Chapter three. First, a recall. How are recoveries after a claim shared? In the same ratio as the loss. Now, insurance is one leg. Who lends for exports where ordinary banks hesitate? EXIM Bank. The Export-Import Bank of India. Set up by its own Act of nineteen eighty-one, in force from January nineteen eighty-two, head office Mumbai. Fully owned by the Government of India. Not a company, not a commercial bank: a statutory corporation. R-B-I regulates it as an all-India financial institution, like NABARD and SIDBI. Many of you think: EXIM Bank only finances exports. Look at its name again. Export and import. The Act lets it finance imports too, and makes it the principal body co-ordinating export-import finance. What does it do? Its biggest tool: lines of credit. It lends to a foreign government or bank, so buyers there can import Indian goods. Many are Government of India lines, under a scheme called IDEAS. At least seventy-five per cent of the value must come from India. Next, buyer's credit: a loan to one overseas buyer, so he pays our exporter in cash, with no recourse to her. Careful. This isn't the import buyer's credit from A-thirteen, where an Indian importer borrows abroad. Same name, opposite direction. For big projects, EXIM Bank gives buyer's credit to foreign governments, backed by the National Export Insurance Account, N-E-I-A, run by E-C-G-C. At home, it gives exporters packing and post-shipment credit, term loans to export units, and loans to invest in joint ventures abroad. And for small firms with promise, a programme called Ubharte Sitaare: money plus handholding. The Act also lets it refinance banks, give guarantees, open L-Cs, and run research on trade. And it keeps an Export Development Fund, for loans banks wouldn't ordinarily give, each with the Government's prior approval. An exam favourite: which facility can't EXIM Bank give? Some of you say guarantees. Others, export credit insurance. Guarantees, it gives: the Act says so. Export credit insurance, it can't: that's E-C-G-C's job. And two limits in its Act. Deposits only for twelve months or more, no savings or current accounts. And no loans against its own bonds. Pause check for chapter three. One. EXIM Bank's Act is of which year? Nineteen eighty-one, in force from January eighty-two; work started that March. Two, the twist. Under a line of credit, whom does it lend to? The foreign side: a government or bank abroad. Our exporter simply gets paid. [seriously] One thing from chapter three: E-C-G-C insures, EXIM Bank lends."}]}, {"file": "part_2.mp3", "section": "Close (N073–N085)", "turns": [{"speaker": "Teacher", "first": "N073", "last": "N085", "text": "Back to the bank manager. If she doesn't repay the packing credit, who covers it? E-C-G-C, under the bank's own E-C-I-B cover, not her policy. Two-thirds, with the individual packing credit cover. Quick mix. One. A bank's guarantee for an exporter's performance bond: which E-C-I-B cover? Surety cover. Two. Under her policy, the buyer simply doesn't pay. When is her claim payable? Four months after the due date. Three. Lines of credit to foreign governments: E-C-G-C or EXIM Bank? EXIM Bank. Now the map, from memory. First node: bank covers. E-C-I-B against the exporter's default; P-C and P-S; whole turnover or individual; two-thirds, seventy-five, ninety. Second: duties. Premium in advance, credit limits, approval before extensions, monthly declarations. Third: claims. Report in four months, or a month after recall; claim in six; recoveries shared. Fourth: EXIM Bank. Act of nineteen eighty-one; Government-owned, R-B-I-regulated; lines of credit, buyer's credit, Ubharte Sitaare. That's the map. You can now name the bank's covers, the duties, both clocks, and what EXIM Bank does, and doesn't. Homework. The standard policy paid ninety per cent of a forty thousand dollar loss. Later, ten thousand is recovered. How much goes to E-C-G-C? Next class, money goes the other way. A mother in Coimbatore wants to send money to her son abroad. How much can she send? [warmly] That's the lender's safety net, and the bank behind our exports. Sleep well, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

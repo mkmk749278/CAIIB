@@ -1,6 +1,7 @@
-# A15b · "Who covers the lender?" · CLASS EDITION (script c1, with cue sheet)
+# A15b · "Who covers the lender?" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: **c2**, 2026-11-22: every High and Medium of the three c1 reviews fixed, most Lows applied
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT (0 H, 0 M, 7 L); Lows applied (ack at the end of
+  `review_c2.md`). c2: every High and Medium of the three c1 reviews fixed, most Lows applied
   (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): one question per idea, one pause
   check per chapter, at most one light line per chapter, plain words; 12–15 min.
 - **Plan**: `course/bfm/A/plans_A.md` §A15 (v4 split: A15 = A7.1–A7.5; **A15b = A7.6–A7.9, A8.1**). Course order v4:
@@ -142,7 +143,7 @@ N028 · And buyer's credit cover. Here the bank lends to a buyer abroad. Same ru
 > 1 C: card "Buyer's Credit Cover: bank lends to an overseas buyer · borrower = foreign buyer · 75 %" [F16] · 2 B: circle "its own borrower"
 
 N029 · Old books say export performance guarantee, export finance guarantee. Today: surety cover, E-F cover. Answer with today's names; old ones only if nothing else fits.
-> 1 C: trap card "old → today: Export Performance Guarantee → Surety Cover · Export Finance Guarantee → EF cover · Packing Credit Guarantee → PC covers · Overseas Lending, Transfer Guarantee: not on ECGC's 2026 list" [F4] · 2 B: underline "today's names"
+> 1 C: trap card "Export Performance Guarantee → Surety Cover · Export Finance Guarantee → EF · Packing Credit Guarantee → PC covers" · 2 N: "Overseas Lending, Transfer Guarantee: not on the 2026 list" [F4] · 3 B: underline "today's names"
 
 N030 · Pause check for chapter one. One. E-C-I-B protects the bank against whose default?
 > 1 S: card "ECIB: whose default?" · H: 3 s
@@ -289,7 +290,7 @@ N068 · And for small firms with promise, a programme called Ubharte Sitaare: mo
 N068a · The Act also lets it refinance banks, give guarantees, open L-Cs, and run research on trade.
 > 1 C: card "s. 10(2): refinance banks · guarantees · LCs · discount bills · lines of credit · JV loans · research" [F48]
 
-N068b · It also keeps an Export Development Fund, for loans banks wouldn't ordinarily give, each with the Government's prior approval.
+N068b · And it keeps an Export Development Fund, for loans banks wouldn't ordinarily give, each with the Government's prior approval.
 > 1 C: card "Export Development Fund (ss. 15–20): loans banks wouldn't ordinarily give · prior Central Government approval · old books' Export Marketing Fund (EMF): history" [F50]
 
 N069 · An exam favourite: which facility can't EXIM Bank give? Some of you say guarantees. Others, export credit insurance.
@@ -299,7 +300,7 @@ N070 · Guarantees, it gives: the Act says so. Export credit insurance, it can't
 > 1 G: "guarantees" ✓ (s. 10(2)(c)); "export credit insurance" ✗ → ECGC · 2 B: box "ECGC's job"
 
 N070a · And two limits in its Act. Deposits only for twelve months or more, no savings or current accounts. And no loans against its own bonds.
-> 1 C: card "EXIM Bank: insurer ✗ · deposits only ≥ 12 months, RBI-approved terms (s. 12(1)(d)) · no loans against its own bonds (s. 10(4)) · Ministry of Finance; ECGC: Commerce" [F49, F58, F59]
+> 1 C: card "deposits only ≥ 12 months (s. 12(1)(d)) · no loans against its own bonds (s. 10(4))" · 2 N: "EXIM: Finance Ministry · ECGC: Commerce" [F49, F58, F59]
 
 N071 · Pause check for chapter three. One. EXIM Bank's Act is of which year?
 > 1 S: card "EXIM Bank Act: year?" · H: 3 s

@@ -1,4 +1,4 @@
-# A15b · Practice (c1, 2026-11-22)
+# A15b · Practice (c3, 2026-11-22)
 
 Our own questions, written from the fact sheet `research/bfm/facts/A7.6-A8.1_A15b.md`. Sums checked by
 `tools/check/ecgc_claims.py`. All figures illustrative. ECGC terms are ECGC's published contract terms. Answers at the
@@ -83,10 +83,10 @@ end.
 1 b: ECIB covers the bank against its own borrower, the exporter [F1]. · 2 b [F3; A15-F27]. · 3 b: whole turnover
 [F6]. · 4 c [F7]. · 5 b: policyholder, non-associate → 75 % [F8]. · 6 b [F11]. · 7 b [F13]. · 8 c [F16]. · 9 b
 [F7, F19]. · 10 b [F18]. · 11 b: it caps ECGC's exposure, not shipments; political risk not limited by it [F21].
-· 12 b [F24]. · 13 c [F30]. · 14 a: 10th for individual covers; WT by month-end [F31]. · 15 b [F34]. · 16 b
+· 12 b [F24]. · 13 c [F30]. · 14 a: 10th for individual covers; WT by the end of the next month [F31]. · 15 b [F34]. · 16 b
 [F34, F35]. · 17 c: recovery action is a duty, not a fault [F34, F35]. · 18 c [F37]. · 19 b: 20,000 × 90 %
 (numericals Q2) [F41]. · 20 c: 30,00,000 × 2 ÷ 3 (a is the 75 % trap) [F7]. · 21 b: (9,00,000 − 60,000) × ⅔ [F41].
 · 22 c: 75 % [F8]. · 23 b: 50,00,000 ÷ 100 × 0.12 [F7]. · 24 b [F42]. · 25 b [F25]. · 26 c: Act 28 of 1981, in force
 1 Jan 1982 [F45]. · 27 b [F47, F51]. · 28 b [F53]. · 29 b [F53]. · 30 a [F54]. · 31 c: deposits only for 12 months
 or more (s. 12(1)(d)) [F49]. · 31a c: insurance is ECGC's; guarantees, credit and JV finance are in s. 10 [F48, F58]. · 32 b [F57]. · 33 b [F44].
-· 34 b: ss. 15–17 [F50]. · 35 b: 4 months from due date = 15 Oct; 1 month from recall = 20 Sep; earlier [F34].
+· 34 b: ss. 15–20 [F50]. · 35 b: 4 months from due date = 15 Oct; 1 month from recall = 20 Sep; earlier [F34].
