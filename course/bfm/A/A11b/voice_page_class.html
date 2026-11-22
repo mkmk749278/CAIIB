@@ -1,0 +1,150 @@
+<title>A11b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A11b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A11b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Packing credit, and how much + Chapter 2 · Time, and paying it back", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N042", "text": "[warmly] Hi again, everyone. Keep a calculator near; today we lend to our exporter. First, from last class. Goods invoiced in dollars, shipped on the tenth of March. Realise by when? The tenth of December, nine months. Last class was the rules. Today, the money that keeps her going until then. Why it matters: packing credit came in the papers we studied as a five-mark limit sum, a drawdown case, and liquidation questions. Our Tiruppur exporter has the Hamburg order: forty thousand shirts. But fabric must be bought now, and Hamburg pays months later. She asks her bank for a loan. Some of you say, lend the full order value. Others, only what the shirts cost to make. Hold your answer. We'll work it out with numbers in chapter one. Chapter one. A loan to an exporter before shipment has two names. Pre-shipment credit, or packing credit. It pays to buy, process, make or pack the goods. For a service exporter, the working costs. R-B-I started this export finance scheme in nineteen sixty-seven, to give exporters working capital at rates like the world's. What does the bank want to see first? Think. An L-C in her favour, or a confirmed, irrevocable export order. Or other proof of an order. Banks also check she has an I-E-C, and isn't on R-B-I's caution list or E-C-G-C's specific approval list. That's bank practice. For exporters with a good record, banks shall waive showing each order. Orders exist; she just sends a regular list of them. Some exporters must buy cotton in season, before any order arrives. For them there's the running account. A running account goes further: packing credit before any order exists, for a good track record, or E-O-U and S-E-Z units. Bills mark off the oldest loan first. The bank keeps a separate account for each packing credit, and releases it in one go, or in stages. If a maker supplies an export house, she can still get packing credit. The export house's bank opens an inland L-C for her. And her pre-shipment and post-shipment limits are interchangeable. Banks must allow that. Now, how much? R-B-I gives no formula. It says limits must be need-based, and not refused just for want of collateral. In practice, banks usually lend the lower of two numbers, the F-O-B value and her domestic cost, less a margin. The margin is her own share. The bank won't fund every rupee; she puts in some herself. This is the method exam sums use. F-O-B, free on board, is the goods' value at our port. No freight, no insurance. Her order is C-I-F a hundred and twenty-five thousand dollars. Freight and insurance cost five thousand. What's the F-O-B? A hundred and twenty thousand dollars. Many of you take the C-I-F value. Don't: freight and insurance aren't her export. Take a rate of eighty-five rupees, for illustration. Her domestic cost is ninety lakh, with a ten per cent margin. Work out the limit. F-O-B in rupees: one twenty thousand times eighty-five, one crore two lakh. The lower is the cost, ninety lakh. Less ten per cent: ninety lakh times ten, per cent, nine lakh. Ninety minus nine: eighty-one lakh. So our opening question. Neither the full order, nor the full cost. The lower value, less her own margin. She doesn't take it all at once. Yarn first, thirty-five lakh. Stitching, twenty-eight lakh. Each drawal in its own account. Now she asks for twenty-five lakh for packing. How much can the bank give? Think. Eighty-one minus sixty-three: eighteen lakh, not twenty-five. The margin is already taken; never take it twice. Pause check for chapter one. One. Packing credit is given before, or after, shipment? Before. Two, the twist. Domestic cost ninety-five lakh, F-O-B value eighty lakh, margin ten per cent. The limit? Seventy-two lakh: this time the lower is the F-O-B. [seriously] If you remember one thing from chapter one: lower of F-O-B and cost, less margin; never C-I-F. Chapter two. First, from chapter one. Which value do we never use for the limit? C-I-F. Now time. How long may her packing credit run? The bank sets the period case by case: time to buy, make and ship. It can extend for a genuine delay, but never past the outer line. If no export bill closes it within three hundred and sixty days from the loan, it stops being export credit from the start. Exam word: ab initio. Released on the fifteenth of January twenty twenty-seven? Day three sixty is the tenth of January twenty twenty-eight. Miss it, and it fails from the fifteenth. And if she never exports at all? The bank charges its domestic lending rate, plus any penal charge in its Board policy. You may have read four hundred and fifty days. Banks could allow that, as trade relief, only on credit disbursed up to thirtieth June twenty twenty-six. For any new packing credit, it's three sixty. How is packing credit repaid? Many of you think, from her own pocket. Normally, it isn't. When she ships, the bank buys or discounts her export bill. Those proceeds repay the packing credit. The exam word is liquidation. By agreement, she may also repay from her E-E-F-C foreign currency account, or her rupees, but only as far as she has exported. Hamburg cancels part of the order. Can a bill for a Dubai order repay this loan? Yes, for a good-record exporter, if truly unavoidable. It's called substitution of contract. But not with sister or group concerns. Pause check for chapter two. One. The outer limit for packing credit: three sixty or three sixty-five days? Three sixty. Two, the twist. Her export never happens. Which rate? Domestic lending rate, plus penal charges. [seriously] If you remember one thing from chapter two: the export bill repays the packing credit."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · After shipment + Chapter 4 · In foreign currency + Close", "turns": [{"speaker": "Teacher", "first": "N043", "last": "N079", "text": "Chapter three. First, from chapter two. What normally liquidates, that is, repays, packing credit? The export bill. Now the green band, post-shipment credit. Three main forms. Can you name one? One, the bank purchases, discounts or negotiates her export bill. Two, an advance against a bill sent for collection. Three, an advance against her duty drawback. Duty drawback is the Customs refund of duties on her inputs. The bank lends against it once Customs certifies it provisionally. Let's repay her packing credit. She sold C-I-F, so her bill is the full hundred and twenty-five thousand dollars. Bill buying rate: eighty-four rupees eighty paise, illustrative. One crore six lakh. Her packing credit, fully drawn, plus interest of, say, one lakh thirty-five thousand, is eighty-two lakh thirty-five thousand. So the bank keeps eighty-two lakh thirty-five, and credits her the rest: twenty-three lakh sixty-five thousand. Suppose she ships only half: a bill of sixty-two thousand five hundred dollars. Proceeds, fifty-three lakh. That repays part. The other twenty-eight lakh stays as packing credit for her next shipment, inside the three sixty days. How long can post-shipment credit run? For a sight bill, the normal transit period. FEDAI sets it, for example twenty-five days for a foreign currency bill not under an L-C. For a usance bill, up to three hundred and sixty-five days from shipment, transit and grace included. Three sixty for packing credit, three sixty-five after shipment. That pair is a favourite trap. Two smaller forms, quickly. First, the undrawn balance. Some trades draw bills for ninety to ninety-eight per cent of F-O-B; the rest may be financed too. Second, consignment exports, sent to be sold abroad later. They carry the same interest as cash sales. Hamburg is late. Can she pay off the overdue loan from her own rupees? Yes. But her export entry stays open in E-D-P-M-S until Hamburg pays. Pause check for chapter three. One. Name the three forms of post-shipment credit. Bills bought or discounted, advance on collection bills, advance on duty drawback. Two, the twist. A usance bill: three sixty-five days from what? From shipment, not from the bill date. [seriously] If you remember one thing from chapter three: sight bills get the transit period; usance bills, up to a year from shipment. Chapter four. First, from chapter three. A sight bill's post-shipment period is called? The normal transit period. Now, her loan could be in dollars, not rupees: P-C-F-C, pre-shipment credit in foreign currency. Why? Dollar loans often cost less than rupee loans. Her bank prices it on a dollar benchmark rate, and funds it from foreign currency deposits or lines abroad. It covers domestic and imported inputs, for cash exports only. Same three sixty days. No export by then? It's settled at the T-T selling rate. Why selling? No dollars came in. To repay a dollar loan she must buy dollars, and the bank sells them. After shipment, her export bill in dollars repays the P-C-F-C. Her bank discounts the bill, then sells it on to a bank abroad. That second discount is a rediscount. The scheme is E-B-R, Export Bills Rediscounting, mainly for usance bills up to a hundred and eighty days. [lightly] Dollars in, dollars out; the rupee waits outside. Pause check for chapter four. One. P-C-F-C: cash exports only? Yes. Two, the twist. No export in three sixty days. Which rate settles it? T-T selling. [seriously] If you remember one thing from chapter four: P-C-F-C follows the rupee rules, in dollars. Quick mix. One. No export ever happens. Rupee packing credit: which rate? And P-C-F-C? Rupee: domestic lending rate plus penal. P-C-F-C: T-T selling. Two. Packing credit not closed by an export bill in three sixty days. What happens? It stops being export credit, from the start. Three. Who sets a sight bill's transit period? FEDAI. Now the map, from memory. First node: packing credit. Before shipment, against an order; running account for good records. Second node: how much. Lower of F-O-B and cost, less margin; need-based. Third node: time and repayment. Three sixty days; the export bill repays it. Fourth node: post-shipment. Bills bought, collection, drawback; transit period, or three sixty-five days. Fifth node: P-C-F-C. Dollars, cash exports, T-T selling if no export; E-B-R after. That's the map. Homework. Make up your own order, and work out its packing credit limit. Next class, the full case. Hamburg doesn't pay on the due date. What does the bank do with her bill? [warmly] That's export finance done for today. Well done, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

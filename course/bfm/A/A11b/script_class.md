@@ -1,6 +1,6 @@
-# A11b · "The money before the money" · CLASS EDITION (script c1, with cue sheet)
+# A11b · "The money before the money" · CLASS EDITION (script c3, with cue sheet)
 
-- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): concepts plus two short sums.
+- **Status**: **c3 locked**, 2026-11-22: re-review c2 ADOPT WITH FIXES (0 H, 1 M), the Medium (practice key spread) and Lows applied. c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): concepts plus two short sums.
 - **Plan**: `course/bfm/A/plans_A.md` §A11 (split v4: A11 rules, **A11b finance**). Course order v4: A11 → **A11b** → A12.
 - **Syllabus**: A5.3 (export finance); feeds A12 (discounting, crystallisation, the full case).
 - **Facts**: `research/bfm/facts/A5.3_A11b.md`; rows cited as [F3]. NTP from `research/bfm/sources/fedai_rules_cutoff.md`
@@ -140,7 +140,7 @@ N027 · Before. Two, the twist. Domestic cost ninety-five lakh, F-O-B value eigh
 > 1 N: "before ✓" · 2 N: "cost ₹95 L · FOB ₹80 L · margin 10%" · H: 8 s
 
 N028 · Seventy-two lakh: this time the lower is the F-O-B. [seriously] If you remember one thing from chapter one: lower of F-O-B and cost, less margin; never C-I-F.
-> 1 N: "80 × 90% = ₹72 lakh ✓" [numericals twist] · 2 S: the blue band; chapter-one parts dim to grey
+> 1 N: "8000000 × 10 % = 800000 · 8000000 − 800000 = 7200000 → ₹72 lakh ✓" [numericals twist] · 2 S: the blue band; chapter-one parts dim to grey
 
 ## Chapter 2 · Time, and paying it back
 
@@ -209,8 +209,8 @@ N046 · Duty drawback is the Customs refund of duties on her inputs. The bank le
 N047 · Let's repay her packing credit. She sold C-I-F, so her bill is the full hundred and twenty-five thousand dollars. Bill buying rate: eighty-four rupees eighty paise, illustrative.
 > 1 S: sum card "bill USD 125,000 (CIF invoice) × bill buying ₹84.80 (illustrative)" · H: 8 s
 
-N048 · One crore six lakh. Her packing credit, plus interest of, say, one lakh thirty-five thousand, is eighty-two lakh thirty-five thousand.
-> 1 S: keys "125000 × 84.8 = 10600000" · 2 N: "PC ₹81,00,000 + interest ₹1,35,000 (given; working interest for days: A12) = ₹82,35,000" [numericals S2]
+N048 · One crore six lakh. Her packing credit, fully drawn, plus interest of, say, one lakh thirty-five thousand, is eighty-two lakh thirty-five thousand.
+> 1 S: keys "125000 × 84.8 = 10600000" · 2 S: keys "8100000 + 135000 = 8235000" · 3 N: "PC ₹81,00,000 + interest ₹1,35,000 (given; working interest for days: A12)" [numericals S2]
 
 N049 · So the bank keeps eighty-two lakh thirty-five, and credits her the rest: twenty-three lakh sixty-five thousand.
 > 1 S: keys "10600000 − 8235000 = 2365000" · 2 B: box "to her account ₹23,65,000" [numericals S2] · 3 N: "transit-period interest: A12"
@@ -237,7 +237,7 @@ N054 · Second, consignment exports, sent to be sold abroad later. They carry th
 > 1 N: "consignment: interest at par with cash-term sales" [F18]
 
 N055 · Hamburg is late. Can she pay off the overdue loan from her own rupees? Yes. But her export entry stays open in E-D-P-M-S until Hamburg pays.
-> 1 C: card "overdue post-shipment credit: may repay from own rupees · EDF and EDPMS entry stay open" [F15] · 2 N: "forms: 3 main + undrawn balance + consignment" · H: 3 s
+> 1 C: card "overdue post-shipment credit: may repay from own rupees · Export Declaration Form (EDF) and EDPMS entry stay open" [F15] · 2 N: "forms: 3 main + undrawn balance + consignment" · H: 3 s
 
 N056 · Pause check for chapter three. One. Name the three forms of post-shipment credit.
 > 1 S: card "three forms?" · H: 3 s
@@ -288,7 +288,7 @@ N067 · T-T selling. [seriously] If you remember one thing from chapter four: P-
 N068 · Quick mix. One. No export ever happens. Rupee packing credit: which rate? And P-C-F-C?
 > 1 S: story card · H: 6 s
 
-N069 · Rupee: domestic lending rate plus penal. P-C-F-C: T-T selling. Two. Packing credit not adjusted in three sixty days. What happens?
+N069 · Rupee: domestic lending rate plus penal. P-C-F-C: T-T selling. Two. Packing credit not closed by an export bill in three sixty days. What happens?
 > 1 N: "₹ PC → domestic + penal · PCFC → TT selling ✓" · H: 6 s
 
 N070 · It stops being export credit, from the start. Three. Who sets a sight bill's transit period?
