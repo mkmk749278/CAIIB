@@ -1,14 +1,14 @@
 # A11 · "From the first form to the last dollar" · CLASS EDITION (script c1, with cue sheet)
 
-- **Status**: c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): concepts, one date calendar, no sums
+- **Status**: c2, 2026-11-22: every High and Medium of the three c1 reviews fixed (`review_ack_c1.md`). c1, 2026-11-22. Standard style (`course/spec/lesson_spec.md`): concepts, one date calendar, no sums
   beyond counting months.
 - **Plan**: `course/bfm/A/plans_A.md` §A11 (split v4: A11 rules, A11b finance). Course order v4: A10 → **A11** → A11b.
 - **Syllabus**: A5.1 (exchange and trade control guidelines for exporters), A5.5 (EDPMS), and from A5.2 the
   write-off (now reduction) and set-off. Other A5.2 facilities (agency commission, refund, DDA, EEFC) are in A14.
 - **Facts**: `research/bfm/facts/A5.1-A5.5_A11.md`; rows cited as [F3]. Practice: `practice.md`.
 - **Rule version (opening card)**: "FEM (Export and Import of Goods and Services) Regulations, 2026 (in force 1 Oct
-  2026, amended to 2 Nov 2026) · RBI A.P. (DIR Series) Circular No. 20 of 16 Jan 2026 · Foreign Trade Policy 2023 ·
-  as at 31 December 2026".
+  2026, amended to 2 Nov 2026) · RBI A.P. (DIR Series) Circular No. 20 of 16 Jan 2026 · FEM (Manner of Receipt and
+  Payment) Regulations, 2023 · Foreign Trade Policy 2023 · as at 31 December 2026".
 - **Old rules on screen**: the 2026 rules replaced the old Master Direction on 1 Oct 2026. Older figures that books
   and question banks still carry (21 days, write-off 5 % / 10 %, the exempt list, RBI's caution list, 15 months)
   appear only on trap cards marked "old rule, superseded 1 Oct 2026" [F1, F13, F14, F18, F20].
@@ -68,20 +68,23 @@ N008a · Who decides what she may export, and who watches her dollars?
 N009 · The goods side is the Foreign Trade Policy, run by D-G-F-T, the Directorate General of Foreign Trade, under the Commerce Ministry.
 > 1 S: door 1 "DGFT · Commerce Ministry · Foreign Trade Policy 2023: what may be exported; IEC; trade documents" [F2]
 
-N010 · The money side is fee-ma, the Foreign Exchange Management Act. R-B-I writes its rules, and her bank applies them.
+N010 · The money side is fee-ma, the Foreign Exchange Management Act. R-B-I writes its regulations, and her bank applies them.
 > 1 S: door 2 "RBI · FEMA: declare · receive · realise · report" [F2]
 
 N011 · Her bank is an A-D bank: an authorised dealer, allowed to deal in foreign exchange. Today it does most of the work.
 > 1 N: "AD bank = authorised dealer in foreign exchange" · 2 G: the bank on the right of the road
 
 N012 · Step one is D-G-F-T's. No export or import of goods without an I-E-C, the Importer-Exporter Code.
-> 1 S: first milestone on the road "IEC" [F3]
+> 1 S: first milestone on the road "IEC" [F3] · 2 N: "goods: IEC mandatory · services: IEC only to claim FTP benefits" [F3]
 
 N013 · It's a ten-character code, the same as her PAN, but issued separately by D-G-F-T, online.
 > 1 C: card "IEC: 10 characters · same as PAN · issued by DGFT online" [F3] · 2 B: circle "DGFT"
 
-N014 · Many of you think an I-E-C lasts forever. It doesn't. She must update it online every year, April to June, even with no change.
-> 1 C: trap card "IEC: once for life ✗ · update every year, April–June ✓ · not updated → deactivated" [F3]
+N014 · Many of you think an I-E-C, once issued, needs nothing more. It never expires, but she must update it online every year, April to June.
+> 1 C: trap card "IEC: no renewal, no expiry ✓ · update every year, April–June, even with no change ✓ · not updated → deactivated (reactivated on updating)" [F3]
+
+N014a · Even with no change. Miss it, and her code is deactivated.
+> 1 B: underline "every year"
 
 N015 · Step two, declare, is R-B-I's. Its new rule book: the Export and Import of Goods and Services Regulations, twenty twenty-six. In force from the first of October, twenty twenty-six.
 > 1 C: card "FEM (Export and Import of Goods and Services) Regulations, 2026 · in force 1 Oct 2026" [F1] · 2 S: an old book "Master Direction – Export" stamped "superseded 1 Oct 2026"
@@ -105,7 +108,7 @@ N020a · Older books call the software form SOFTEX, certified at S-T-P-I. The ne
 > 1 C: card "SOFTEX (old rule, software) → now the EDF ✓" [F5]
 
 N021 · And a newer relief, notified in November twenty twenty-six. When he gives his bank the payment details, he's deemed to have filed the E-D-F: treated as filed.
-> 1 C: card "deemed EDF (services): payment details to the AD = EDF filed" [F6] · 2 N: "deemed = treated as filed"
+> 1 C: card "deemed EDF (services): payment details to the AD = EDF filed · notified 2 Nov 2026, effective 1 Oct 2026" [F6] · 2 N: "deemed = treated as filed"
 
 N022 · For an individual, at any amount. For a firm or company, if the remittance is up to rupees ten lakh.
 > 1 N: "resident individual: any amount · others: ≤ ₹10 lakh" [F6] · 2 B: box "₹10 lakh"
@@ -116,7 +119,7 @@ N023 · Who needn't declare? Many of you will remember a long exempt list from o
 N024 · Pause check for chapter one. One. Who issues the I-E-C?
 > 1 S: card "IEC issued by?" · H: 3 s
 
-N025 · D-G-F-T. Two, the twist. A company exports a service worth rupees eight lakh. Must it fill a separate E-D-F?
+N025 · D-G-F-T. Two, the twist. A company gets a remittance of rupees eight lakh for a service. Must it fill a separate E-D-F?
 > 1 N: "DGFT ✓" · H: 3 s
 
 N026 · No. Up to ten lakh, the payment details to the bank count as the E-D-F. [seriously] If you remember one thing from chapter one: D-G-F-T gives the code; R-B-I wants the full value declared.
@@ -137,7 +140,7 @@ N030 · Two exceptions. Nepal and Bhutan pay in rupees.
 > 1 N: "Nepal, Bhutan → INR (FCY if Nepal's central bank allows)" [F8]
 
 N030a · And members of the Asian Clearing Union, a group of central banks in our region, like Sri Lanka's and Bangladesh's, settle through that union.
-> 1 N: "ACU = central banks of the region settle among themselves · e.g. Sri Lanka, Bangladesh → ACU route" [F8]
+> 1 N: "ACU = central banks of the region settle among themselves · e.g. Sri Lanka, Bangladesh → ACU mechanism, or as RBI directs" [F8]
 
 N031 · Her bank gets the dollars. Can it credit her account the same minute?
 > 1 G: the bank · H: 3 s
@@ -148,14 +151,14 @@ N032 · Only after it is satisfied the deal is genuine. At the same moment, it c
 N033 · What if Hamburg pays in advance, before she ships? The advance, and any balance later, come through the same A-D bank.
 > 1 C: card "advance: advance + proceeds through the same AD · switch → tell both ADs · interest ≤ trade-credit all-in-cost ceiling · no export, no refund → AD may close the entry on reasons" [F17]
 
-N034 · Older books give a fixed time to ship against an advance. The new rules fix none. Her bank closes the entry when she ships.
+N034 · Older books give a fixed time to ship against an advance. The new rules fix none. Her bank matches the advance to her shipping bill when she ships.
 > 1 C: trap card "advance → ship in 1 year (old) / 3 years (Nov 2025) ✗ · 2026 rules: no fixed period ✓" [F17]
 
 N035 · Can someone other than Hamburg pay her, say its parent company in London? Yes, if her bank is satisfied the deal is genuine.
 > 1 N: "third-party receipt: AD may allow, if bona fide" [F16]
 
-N036 · And her shipping documents? Older books say: give them to the bank within twenty-one days. The new rules leave the timeline to her bank's own published policy.
-> 1 C: trap card "documents to AD in 21 days (old MD) ✗ · AD's own policy and SOP sets timelines ✓" [F20]
+N036 · And her shipping documents? Older books say: give them to the bank within twenty-one days, the old R-B-I rule. Now her bank's own published policy sets the timeline.
+> 1 C: trap card "FEMA: documents to AD in 21 days (old MD) ✗ · AD's own policy and SOP sets timelines ✓ · (LC presentation: UCP 600's 21 days still apply)" [F20]
 
 N037 · Every A-D bank must have that policy: documents, timelines, charges, on its website. And it can't charge her a penalty when she's late on a rule.
 > 1 C: card "AD policy + SOP: documents · timelines · charges" · 2 N: "on its website · no penalty for her regulatory delay" [F20]
@@ -195,10 +198,10 @@ N047 · Twelve months: the twentieth of January, twenty twenty-eight. Rupee invo
 N048 · A third case. She ships to her own warehouse in Rotterdam, and sells from there later. When does the clock start?
 > 1 S: a warehouse "Rotterdam (illustrative)" on a side road · H: 3 s
 
-N049 · From the date of sale from the warehouse, not the shipment. Nine months from that sale.
-> 1 C: card "warehouse abroad: 9 months from the date of sale" [F11]
+N049 · From the date of sale from the warehouse, not the shipment. Nine months from that sale. Older books say fifteen months from shipment. Not now.
+> 1 C: card "warehouse abroad: 9 months from the date of sale ✓ · old MD: 15 months from shipment ✗" [F11]
 
-N050 · And project exports, like building a bridge abroad, follow the contract's payment terms. Special economic zone units get the same nine months as everyone.
+N050 · And project exports, like building a bridge abroad, follow the contract's payment terms. There's no separate period for special economic zone units.
 > 1 N: "project exports: per contract · no separate SEZ / EOU period" [F11]
 
 N051 · Hamburg is late. Who can give her more time: R-B-I, or her bank?
@@ -217,7 +220,7 @@ N055 · The new rules were first printed with fifteen too. A September amendment
 > 1 S: timeline adds "2026 rules as notified: 15 / 18 → 22 Sep 2026 amended: 9 / 12 → in force 1 Oct 2026" [F13]
 
 N056 · Many of you have fifteen in your notes. Cross it out. At our cut-off, it's nine months, or twelve in rupees.
-> 1 C: trap card "15 months ✗ (Nov 2025 – Jun 2026 only) · 9 months; INR 12 ✓ (as at 31 Dec 2026)" [F13] · 2 B: cross out "15"
+> 1 C: trap card "15 months ✗ (general rule only Nov 2025 – Jun 2026; also the old warehouse rule and COVID 2020) · 9 months; INR 12 ✓ (as at 31 Dec 2026)" [F13] · 2 B: cross out "15"
 
 N057 · [lightly] So both groups were right. Just not in the same year.
 > 1 G: both opening buttons; "15" greys, "9" lights
@@ -251,8 +254,8 @@ N064a · At a port without that link, the E-D-F is on paper, a manual E-D-F. Tha
 N065 · Her bank records the money coming in, follows her up, and marks the entry off only when the value is realised.
 > 1 N: "AD: records inward remittance · follows up · marks off after realisation" [F19]
 
-N066 · Before E-D-P-M-S, banks sent R-B-I paper X-O-S statements of unpaid bills.
-> 1 N: "XOS statements → replaced by EDPMS" [F19]
+N066 · Before E-D-P-M-S, banks sent R-B-I statements of outstanding export bills, called X-O-S. E-D-P-M-S replaced them.
+> 1 N: "XOS statements of outstanding bills → replaced by EDPMS (2014; old XOS data moved in 2016)" [F19]
 
 N067 · Small exports have a short cut. A shipping bill or invoice up to rupees ten lakh? Her bank may close the entry on her own declaration.
 > 1 C: card "≤ ₹10 lakh per shipping bill / invoice: close on the exporter's declaration · or one quarterly declaration for bulk closure" [F10]
@@ -267,7 +270,7 @@ N069a · Her bill is far above rupees ten lakh, so she needs that approval. Up t
 > 1 N: "her bill ≈ ₹1 crore → AD approval · ≤ ₹10 lakh per bill → declaration" [F14]
 
 N070 · Many of you learnt: self write-off five per cent, status holders ten. That table went with the old Master Direction.
-> 1 C: trap card "self write-off 5% / status holder 10% ✗ superseded 1 Oct 2026 · AD allows reduction ✓" [F14] · 2 B: cross out "5% / 10%"
+> 1 C: trap card "self write-off 5% / status holder 10% / AD 10% (base: last calendar year's realisation) ✗ superseded 1 Oct 2026 · AD allows reduction ✓" [F14] · 2 B: cross out "5% / 10%"
 
 N070a · Notice ten lakh three times. Services: payment details count as the E-D-F. E-D-P-M-S: close on her word. Reduction: on her word.
 > 1 C: card "₹10 lakh: deemed EDF (services, non-individuals) · EDPMS closure on declaration · reduction on declaration" [F6, F10, F14]
@@ -276,13 +279,13 @@ N071 · Another way out. She also buys fabric from Hamburg's sister company. Can
 > 1 S: two arrows: "export receivable ←" and "import payable →" between her and the Hamburg group · H: 3 s
 
 N072 · Yes. Her bank may allow set-off against imports from the same buyer, or its group and associate companies. Within the realisation period.
-> 1 C: card "set-off: export receivable vs import payable · same party or its overseas group / associates · within the realisation period · 'never within a group' ✗ outdated" [F15]
+> 1 C: card "set-off: export receivable vs import payable · same party or its overseas group / associates · within the (extended) realisation period" [F15]
 
-N074 · And if the money never comes? A year passes after her last day to realise, still unpaid. What happens to her next exports?
-> 1 S: the clock runs past "last day to realise (+ extension) + 1 year" · H: 3 s
+N074 · And if the money never comes? A full year past her realisation deadline, still unpaid. What happens to her next exports?
+> 1 S: the clock runs past "realisation deadline (+ extension) + 1 year" · H: 3 s
 
 N075 · Only against full advance, or an irrevocable L-C. R-B-I no longer needs to list her; the rule acts by itself.
-> 1 C: card "unrealised > 1 year after the due date (or extended date) → further exports only against full advance or irrevocable LC" [F18]
+> 1 C: card "unrealised > 1 year after the realisation due date (or extended date) → further exports only against full advance or irrevocable LC" [F18]
 
 N076 · Earlier, R-B-I kept a caution list of such exporters. Anyone on it on the thirtieth of September twenty twenty-six stays under it until removed.
 > 1 N: "old caution list: names on it on 30 Sep 2026 stay till removed" [F18]
@@ -290,11 +293,11 @@ N076 · Earlier, R-B-I kept a caution list of such exporters. Anyone on it on th
 N077 · Pause check for chapter four. One. A manual E-D-F reaches her bank. Days to enter it in E-D-P-M-S?
 > 1 S: card "manual EDF → EDPMS in?" · H: 3 s
 
-N078 · Five working days. Two, the twist. Her overdue bill is with Hamburg's sister company. Set-off allowed?
+N078 · Five working days. Two, the twist. Her bill is still inside the nine months, and she owes Hamburg's sister company for fabric. Set-off allowed?
 > 1 N: "5 working days ✓" · H: 3 s
 
-N079 · Yes, group and associates are allowed. [seriously] If you remember one thing from chapter four: every export stays open in E-D-P-M-S until her bank closes it.
-> 1 N: "group ✓" · 2 S: the EDPMS screen; chapter-four lines dim to grey
+N079 · Yes, group and associates, within the realisation period. [seriously] If you remember one thing from chapter four: every export stays open in E-D-P-M-S until her bank closes it.
+> 1 N: "group ✓ · within the (extended) realisation period" · 2 S: the EDPMS screen; chapter-four lines dim to grey
 
 ## Close
 
@@ -304,7 +307,7 @@ N080 · Quick mix. One. Goods invoiced in rupees, shipped on the fifth of April.
 N081 · The fifth of April next year: twelve months. Two. A shipping bill of rupees six lakh is paid. Can her bank close the entry on her word alone?
 > 1 N: "5 Apr next year ✓" · H: 6 s
 
-N082 · Yes, up to ten lakh. Three. Unpaid a full year after the last day to realise. How must she export now?
+N082 · Yes, up to ten lakh. Three. Unpaid a full year past the realisation deadline. How must she export now?
 > 1 N: "declaration ✓" · H: 6 s
 
 N083 · Full advance, or an irrevocable L-C. Now the map, from memory. First node: two regulators.
@@ -322,7 +325,7 @@ N086 · Through the bank; genuine first; advance through the same bank. Fourth n
 N087 · Nine months, twelve in rupees, warehouse from sale; the bank extends. Fifth node: E-D-P-M-S.
 > 1 M: node "realise" fills · H: 4 s
 
-N088 · Open till realised; ten lakh by declaration; reduction, set-off; a year unpaid, advance or L-C only. That's the map.
+N088 · Open till realised; ten lakh by declaration; reduction, set-off; a year past the deadline, advance or L-C only. That's the map.
 > 1 M: node "EDPMS" fills; branch completes
 
 N089 · Homework: draw the export trail, one rule at each milestone.
