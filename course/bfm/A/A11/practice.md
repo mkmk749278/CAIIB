@@ -1,4 +1,4 @@
-# A11 · Practice (c1, 2026-11-22)
+# A11 · Practice (c2, 2026-11-22; c1 review fixes applied)
 
 Our own items. Names, places and dates are illustrative. Rules as at 31 Dec 2026. Each answer cites the fact sheet
 `research/bfm/facts/A5.1-A5.5_A11.md` (row in brackets).
@@ -17,7 +17,8 @@ lakh. Under the 2026 regulations:
 (a) it must file an EDF with Customs within 21 days (b) it must file SOFTEX with STPI (c) **it is deemed to have
 filed the EDF when it gives its AD the payment information** (d) services need no declaration at all
 *Reason: a person other than a resident individual is deemed to have filed the EDF where the inward remittance is
-not more than ₹10 lakh (reg 3(2)(b), 2nd Amendment) [F6]. Services declare to the AD, not Customs [F5].*
+not more than ₹10 lakh (reg 3(2)(b), 2nd Amendment) [F6]. Services declare to the AD, not Customs [F5]. SOFTEX was
+the old form for software; consultancy is not software, and under the 2026 rules every declaration is the EDF [F5].*
 
 **P3.** Which statement on receipt of export proceeds is correct?
 (a) an exporter to Bhutan must be paid in US dollars (b) **an exporter to Germany may be paid in rupees or any
@@ -53,11 +54,25 @@ bulk declaration** (c) by XOS statement (d) it closes by itself after nine month
 *Reason: reg 4(2) proviso: entries up to ₹10 lakh may be closed on the exporter's declaration, or quarterly in bulk
 [F10]. XOS was replaced by EDPMS [F19].*
 
-**P8.** An exporter's bill of USD 50,000 has been unpaid for 14 months after its due date. Its other receivable and
-payable are both with the buyer's overseas sister company. Which is correct under the 2026 regulations?
-(a) RBI will caution-list it on the AD's recommendation (b) set-off is not allowed with a group company (c) **it can
-export further only against full advance or an irrevocable LC; set-off with the group company may be allowed
-within the (extended) realisation period** (d) it may self write-off up to 10 % of last year's realisation
-*Reason: reg 13 (unrealised beyond one year from the due date) [F18]; reg 7 allows set-off with the same party or
-its group or associate companies [F15]; self write-off and the RBI caution list for new cases went with the old MD
-[F14, F18].*
+**P8.** An exporter's bill of USD 50,000 is still unpaid 14 months after the last day to realise it. Under the
+2026 regulations:
+(a) RBI will caution-list it on the AD's recommendation (b) **it may export further only against full advance or an
+irrevocable LC** (c) it may self write-off up to 10 % of last year's realisation (d) nothing changes until the AD
+reports it
+*Reason: reg 13: unrealised beyond one year from the due date (or extended date) [F18]. RBI's caution list for new
+cases and self write-off went with the old MD [F14, F18].*
+
+**P9.** A Tiruppur exporter owes USD 20,000 for fabric to her buyer's German sister company; the buyer owes her USD
+60,000, still within the realisation period. Her AD:
+(a) cannot allow set-off within a group (b) **may allow set-off of the USD 20,000** (c) needs RBI approval (d) may
+allow it only for an Asian Clearing Union country
+*Reason: reg 7: set-off with the same overseas buyer or supplier, or its group or associate companies, within the
+realisation period [F15].*
+
+**P10.** A non-EDI EDF reaches the AD. It must be entered in EDPMS within:
+(a) 21 days (b) **5 working days** (c) 30 days from the end of the month (d) the AD's own SOP timeline
+*Reason: reg 18(1)(a) [F19]. 30 days from month-end is the services exporter's own filing time [F5].*
+
+**P11.** Under the 2026 rules, the time within which an exporter gives the shipping documents to the AD is set by:
+(a) RBI at 21 days (b) **the AD's Board-approved policy and SOP** (c) FEDAI (d) DGFT
+*Reason: reg 19(1)(a) [F20]; the 21 days was the old Master Direction (superseded 1 Oct 2026).*
