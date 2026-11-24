@@ -27,6 +27,7 @@ videos running.
 | A15b | "Glad you're here, everyone. Today we sit on the bank's side of the desk, and ask who protects the lender." | "That's the lender's safety net, and the bank behind our exports. Sleep well, and I'll see you in the next class." |
 | A16 | "Hi, friends. Tonight money leaves India, and we stand at the counter that lets it go." | "That's money out of India, by the rules. Switch off, rest up, and I'll see you in the next class." |
 | A16b | "Good to see you again. Same family as last class, bigger plans: money that owns things abroad." | "That's the rest of the remittance story. Rest your eyes now, and I'll see you in the next class." |
+| A17 | "Welcome back to the desk, everyone. Today money comes home from abroad, and we sort it into four neat drawers." | "That's the four drawers and the homecoming drawer sorted. Put your notes away, rest up, and I'll meet you next class." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.
