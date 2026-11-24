@@ -4,7 +4,7 @@
 
 PASS needs: a Deep Research report with >= 8 primary-source links (rbi.org.in, rbidocs, bis.org, fedai, iccwbo,
 indiacode, egazette, incometaxindia, sebi, ifsca, ecgc, eximbank), a fact sheet >= 1,200 words, a script of
-1,300-2,100 spoken words (drills/cases >= 1,100), and no more than 12 exclamation marks in the spoken lines.
+1,100-2,200 spoken words (2026-11-24: A21, C02, C02b, C03, C04b came back at 3,100-3,500, about 25 min) (drills/cases >= 1,100), and no more than 12 exclamation marks in the spoken lines.
 2026-11-24: batch drafts A19b-B09b had 0 links and 480-1,670 spoken words (Gemini skipped Deep Research).
 """
 import re, sys, os
@@ -20,5 +20,5 @@ for i in sys.argv[1:]:
     words = sum(len(l.split()) for l in spoken)
     bangs = sum(l.count("!") for l in spoken)
     codes = sum(len(re.findall(r"\b[ABCD]\d{2}[a-z]?'s\b|\b(in|see you in) [ABCD]\d{2}", l)) for l in spoken)
-    ok = links >= 8 and len(fs.split()) >= 1200 and words >= 1100 and bangs <= 12
+    ok = links >= 8 and len(fs.split()) >= 1200 and 1100 <= words <= 2200 and bangs <= 12
     print(f"{i:5} {'PASS' if ok else 'FAIL'}  primary links {links:3}  fact sheet {len(fs.split()):5} w  spoken {words:5} w  '!' {bangs:3}  codes spoken {codes}")

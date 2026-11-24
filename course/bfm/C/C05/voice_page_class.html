@@ -1,0 +1,150 @@
+<title>C05 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C05 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C05/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening Branch Moment + Chapter 1 · The Bond Family, Varieties, SLR, and Categories + Chapter 2 · Bond Price: Present Value of Cash Flows + Chapter 3 · Yields, Accrued Interest, Clean vs Dirty Price, and Spreads (N001–N096)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N096", "text": "[warmly] Good to have you back at the desk. Keep your basic calculator ready, because today we step into the bond book. Put your phone on silent. Let us start with two quick recall questions. From last class on payment systems: which central counterparty guarantees Government Securities settlement on a net basis? CCIL acts as central counterparty, settling funds and securities net under Delivery versus Payment Three. Reach back two classes to reserves: what percentage of NDTL must commercial banks hold as SLR today? 18% of NDTL, in cash, bullion, excess CRR, SDF balances, or unencumbered approved securities. Bond pricing, yields, and curves appear repeatedly in exam cases and five-mark numericals across recent cycles. Today you will classify every treasury bond, price it on a basic calculator, and read its yield and curve. Picture Officer Ravi at Mumbai treasury of Deccan Commercial Bank, an illustrative desk, on an afternoon RBI raises policy rates. His Government bond portfolio just lost market value, even though every bond still pays the exact same coupon. Pause three seconds. Some think value stays flat since coupons are fixed. Others say higher rates cut bond prices. Hold that thought. First we map the bond family, then price those cash flows ourselves. A bond is a tradable loan where the investor is a creditor, not an owner, earning interest and principal. Sovereign Government Securities, or G-Secs, carry virtually zero default risk and are called gilt-edged securities. The Centre issues short-term T-Bills and Cash Management Bills under one year, plus dated bonds from 5 to 40 years. States issue only dated bonds, formerly State Development Loans and now officially named State Government Securities, or SGS. Holiday rule on dated G-Secs: if a coupon date is a holiday, payment shifts to the next working day. If the maturity date is a holiday, redemption proceeds are paid on the previous working day. Let us put all seven bond varieties on one card so you spot any structure instantly. First, fixed-rate bonds pay a constant coupon; second, floating-rate bonds reset to a T-Bill benchmark plus a fixed spread. Third, zero-coupon bonds pay no periodic interest; issued at a discount, redeemed at par, removing reinvestment risk. Bank rule: commercial banks cannot buy long-term corporate zero-coupon bonds unless the issuer maintains a liquid sinking fund. Fourth, STRIPS means Separate Trading of Registered Interest and Principal of Securities: coupons and principal split into zero-coupon G-Secs. Many of you think STRIPS cover only Central G-Secs. That rule expanded on 12 June 2025. All transferable SLR Central G-Secs qualify, plus fixed-coupon State Government Securities up to 14 years residual maturity with ₹1,000 crore outstanding. Fifth, callable bonds let the issuer redeem early when rates fall; putable bonds let the investor exit when rates rise. Embedded options directly change price, and for listed corporate debt SEBI bars exercising call or put before one year. Sixth, step-up bonds raise coupons on set triggers; seventh, convertible debentures turn debt into equity, lowering issuer debt. Separate SLR from non-SLR. Approved SLR securities are unencumbered Central dated G-Secs, T-Bills, CMBs, State Government Securities, and STRIPS. Corporate bonds, debentures, and Government special securities like oil, fertiliser, or recapitalisation bonds are strictly non-SLR. Banks do not hold G-Secs only for SLR compliance; desks also trade them actively for coupon and capital gains. Quick auction recall: RBI issues G-Secs on e-Kuber via yield-based new auctions or price-based re-issues, uniform or multiple price. Banks must hold all securities — G-Secs or corporate debt, listed or privately placed — strictly in dematerialised form. Now break a major trap. Outdated books still teach three equal buckets: HTM, AFS, and HFT. Under RBI's consolidated 2025 directions, the three categories are HTM, AFS, and FVTPL, with HFT inside FVTPL. Classification follows business objective and the SPPI cash-flow test, not SLR status; convertibles fail SPPI and sit in FVTPL. One 2026 update: RBI discontinued the Investment Fluctuation Reserve on 18 May 2026, so never treat IFR as current. Chapter One pause check. First: do corporate bonds ever count toward a bank's SLR? Second: can a bank hold privately placed corporate debentures in physical certificate form? Third, the twist: can a fixed-coupon State Government Security with 10 years left and ₹2,000 crore outstanding be stripped today? Answers: one, no, corporate bonds are non-SLR; two, no, banks must hold all investments in demat form only. Three: yes, since 12 June 2025, eligible fixed-coupon SGS up to 14 years and ₹1,000 crore qualify for STRIPS. One thing to remember: classify by objective and SPPI under HTM, AFS, or FVTPL, and hold every security dematerialised. Recall from Chapter One: why can a convertible bond never sit in HTM or AFS? Equity conversion fails the Solely Payments of Principal and Interest test, placing it in FVTPL. Now we solve Ravi's puzzle. A bond's fair price equals the present value of all future cash flows discounted at YTM. Quick JAIIB refresher: to discount without a power key, divide repeatedly by one plus the rate. Write this down: when yields rise, the denominator grows, every cash flow shrinks, and the bond price falls. That explains Ravi's screen: his coupon stayed fixed, while RBI's hike raised the discount rate and lowered bond prices. First full numerical: illustrative 3-year annual bond, face value ₹1,000, coupon 8%, YTM 9%. YTM 9% exceeds the 8% coupon, so you already know the price sits below ₹1,000. Year one: press 80 ÷ 1.09 = to get ₹73.3945. Year two: press 80 ÷ 1.09 ÷ 1.09 = to get ₹67.3344. Year three pays ₹1,080. Divide by 1.09 three times to get ₹833.9582. Add all three present values: 73.3945 + 67.3344 + 833.9582 = ₹974.69. Our discount-factor cross-check in your workbook matches ₹974.6871 to four decimals. Now the classic exam trap: Indian dated G-Secs pay coupons half-yearly, not annually. Illustrative 2-year G-Sec: face value ₹100, 7% annual coupon paid half-yearly, 8% annual YTM. Halve coupon to ₹3.50, halve yield to 4%, and double two years into four half-yearly periods. Divide 3.50 by 1.04 once, twice, and thrice: ₹3.3654, ₹3.2359, and ₹3.1115. Period four pays ₹103.50. Divide by 1.04 four times: ₹88.4722. Total price is ₹98.19. Forgetting to halve gives ₹98.22 — the commonest wrong answer. Your turn for 15 seconds: price a 1-year semi-annual bond, ₹100 par, 8% coupon, 10% YTM. Period one: 4 ÷ 1.05 = ₹3.8095. Period two: 104 ÷ 1.05 ÷ 1.05 = ₹94.3311. Sum and round: ₹98.14. If you matched that, your calculator rhythm is solid. Chapter Two pause check. First: if market yield equals coupon rate, does the bond trade at discount, par, or premium? Second: for a 5-year semi-annual bond yielding 9%, what periodic rate and period count do you use? Answers: one, par, since yield equals coupon; two, 4.5% across 10 half-yearly periods. One thing to remember: price and yield sit on a see-saw, and semi-annual means halve rates, double periods. Recall from Chapter Two: for a premium bond, is YTM higher or lower than its coupon? Lower, because paying above par creates a redemption loss that pulls total return below coupon. Many officers equate coupon with yield. Let us separate all three yield measures cleanly. Coupon yield is coupon over face value; current yield is coupon over market price, ignoring capital gain or loss. Yield to Maturity, or YTM, is the bond's internal rate of return if held to maturity, reinvesting coupons at YTM. On a basic calculator, use the YTM approximation: coupon plus annual capital gain, divided by average price. Illustrative 4-year bond: face value ₹1,000, coupon ₹84 (8.40%), trading at ₹960. Current yield: press 84 ÷ 960 × 100 = 8.75%. YTM approximation: annual gain is 40 ÷ 4 = ₹10; add ₹84 to get ₹94. Average price is ₹980. Press 94 ÷ 980 × 100 = 9.59%. Now step to secondary trading between coupon dates. The quoted screen price is the clean price. Since the seller held the bond after the last coupon, the buyer adds accrued, or broken-period, interest. Clean price plus accrued interest equals dirty price, which sets the actual cash consideration settled. Watch the day-count trap: Indian dated G-Secs use 30/360, treating every month as 30 days. By contrast, T-Bills use Actual/365, and listed corporate bonds under SEBI rules use Actual/Actual. Illustrative ₹5 crore trade in 7.20% GS 2033 at clean price ₹101.40, 70 days accrued under 30/360. Accrued interest per ₹100: 7.20 × 70 ÷ 360 = ₹1.4000. Add ₹1.40 to clean price ₹101.40: dirty price is ₹102.80. Multiply ₹5 crore by 102.80 ÷ 100: total consideration is ₹5,14,00,000. RBI accounting rule: charge that ₹7 lakh broken-period interest to Profit and Loss, never capitalise it into cost. Corporate bonds yield more than equivalent G-Secs; that extra gap is the credit spread for default and liquidity risk. Unquoted rated corporate bonds require at least a 50 basis-point mark-up over FBIL's G-Sec yield; we detail credit risk later. Chapter Three pause check. First: which price is quoted on NDS-OM — clean or dirty? Second: which day-count convention applies to accrued interest on an Indian dated G-Sec? Third, the twist: should a bank capitalise broken-period interest paid into the bond's purchase cost? Answers: one, clean price; two, 30/360; three, no, RBI mandates expensing broken-period interest to Profit and Loss. One thing to remember: quote clean, settle dirty on 30/360 for G-Secs, and expense broken-period interest."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Yield Curve Shapes and Bond Risks + Close (N097–N116)", "turns": [{"speaker": "Teacher", "first": "N097", "last": "N116", "text": "Recall from Chapter Three: what is the extra yield on a corporate bond over an equivalent G-Sec called? Credit spread, or quality spread, which widens as credit quality weakens. Plot yields across maturities for identical credit quality, like G-Secs from 1 to 30 years: that is the yield curve. Three shapes: a normal curve slopes upward because investors demand higher yields for longer maturities. A flat curve shows similar yields across tenors; an inverted curve slopes downward, with short yields above long yields. Desks also build a Zero Coupon Yield Curve from STRIPS and bootstrapping, avoiding YTM's constant-reinvestment assumption. Even default-free G-Secs carry three risks: interest-rate risk, reinvestment risk on coupons, and liquidity risk in thin papers. Corporate bonds add credit risk, while callable bonds add call risk when falling rates trigger early redemption. Chapter Four pause check. First: on an inverted yield curve, are 10-year yields higher or lower than 1-year yields? Second: which sovereign bond variety eliminates reinvestment risk completely? Answers: one, lower, because an inverted curve slopes downward; two, zero-coupon bonds or STRIPS, having no interim coupons. One thing to remember: sovereign bonds still carry rate, reinvestment, and liquidity risk, and the curve maps rates across time. Mixed final check: a discount G-Sec has a 7% coupon. Is YTM above or below 7%, and which day count applies? Above 7% for a discount bond, and 30/360 for G-Sec accrued interest. Look at the blank six o'clock branch of our trading-desk map. Fill all three nodes: varieties, price, and yield. Compare with the completed branch: varieties, demat, new categories; PV pricing and semi-annual halving; yields, dirty price, spreads, and curve shapes. You can now classify any treasury bond, price cash flows on a basic calculator, and compute current yield, YTM, and dirty price. Tonight's homework: draw the three curve shapes and re-run our 2-year semi-annual sum on your calculator without looking. Question for next class: two bonds share the same price, and rates rise 1%. Which hurts more, and by how much? [warmly] That is our bond desk built from coupon to curve. Rest your eyes tonight, and I will meet you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
