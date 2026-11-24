@@ -1,0 +1,150 @@
+<title>C08 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C08 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C08/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · What a derivative is, three purposes, and market-makers vs users + Chapter 2 · OTC vs exchange-traded, daily M2M, membership, and the USD 5 million rule + Chapter 3 · Forwards, futures, currency futures, and OTC G-Sec bond forwards (N001–N074)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N074", "text": "[warmly] Welcome back to the trading desk. Set your phone aside and keep your calculator ready, because today we start derivatives. Quick recall from last class: who sets a treasury dealer's stop-loss limit — the dealer, the RBI, or the bank's board? The bank's board or senior management sets it, never the dealer and never RBI approval. One more recall from earlier in this module: when market interest rates rise, which way do existing bond prices move? Bond prices fall. Keep that price-and-yield see-saw alive, because we will use it to hedge a bond book today. Good start. Derivatives appeared across four recent exam cycles and carried eight questions in the December 2025 full paper. By the close, you will separate OTC from exchange contracts, verify bank eligibility, and compute futures and bond-hedge payoffs. Picture a textile exporter expecting fifty thousand US dollars in sixty days, illustrative, worried the rupee will strengthen. Across the desk sits our bank, worried about the opposite move. Both want to lock a rate today. Two officers argue over lunch. One says a currency future is just a bank forward with an exchange label. The other says daily cash settlement and a five-million-dollar rule make them very different. Who is right? Hold that thought. We will settle their debate right after we define what a derivative actually is. A derivative is a contract settled at a future date whose value comes entirely from an underlying rate, price, or index. It has no stand-alone value of its own. Section forty-five U, clause a of the RBI Act sets this out. Underlyings go beyond interest rates and currencies. Commodities, stock indices, credit ratings, and even weather can serve as underlyings. Broadly, three kinds of players enter derivatives: hedgers who cut risk, speculators who bet, and arbitrageurs who lock price gaps. Now focus on a commercial bank treasury. Why does a bank enter derivatives? There are exactly three purposes. First, hedging its own balance sheet and ALM mismatches. Second, customer service for clients. Third, proprietary trading and market-making. Many of you are thinking derivatives can hedge any bank risk, even operational errors or legal enforceability. Pause and check. No. Derivatives manage market risks like interest-rate and currency risk. Legal risk needs standard agreements; operational risk needs internal controls. RBI rules split every participant into two camps: a market-maker or a user. What is the key difference? A market-maker quotes prices to users and other market-makers, and need not hold any underlying risk of its own. In Rupee interest rate derivatives, market-makers are Scheduled Banks, Standalone Primary Dealers, NBFC Upper Layer, and five specified AIFIs. In forex derivatives, AD Category-One banks and AD Category-Three Primary Dealers are market-makers. What about the RBI itself? Classic exam trap: RBI is the regulator, neither a market-maker nor a user. Every other participant is a user. Users split into retail and non-retail. A resident corporate is non-retail with five hundred crore net worth or thousand crore turnover. Quick chapter check. First: name the three purposes a bank treasury uses derivatives for. Second: is RBI a market-maker? Third, the twist: a resident company has four hundred crore net worth and one thousand two hundred crore turnover. Retail or non-retail? Answers: hedging, customer service, and trading. RBI is neither. And the company is non-retail because turnover exceeds one thousand crore. One thing to remember from this chapter: derivatives hedge market risk only, and RBI is never a market-maker. Next chapter, starting with recall: what net worth or turnover makes a resident corporate a non-retail user? Five hundred crore net worth or one thousand crore turnover. Now let us return to our two arguing officers. Every derivative trades in one of two venues: Over-the-Counter, called O-T-C, or on a recognised stock exchange. Note one statutory detail: an O-T-C derivative includes deals done on Electronic Trading Platforms, not just phone trades. Look at our see-saw. On the O-T-C side, two parties face each other directly, customising exact amounts and dates. That custom fit comes with bilateral counterparty credit risk and lower price transparency, though usually no daily exchange cash margin. Now look at the exchange side. A clearing corporation stands in the middle as Central Counterparty, eliminating bilateral default risk. Contracts are standardised in lot size, tick, and expiry, giving high transparency and easy exit through an opposite trade. How does the clearing house stay safe? Upfront initial margin, extreme loss margin, and daily mark-to-market cash settlement on T-plus-one. Let us work our first sum to see daily M2M in action. Remember our exporter from the opening? She sells fifty lots of US-dollar rupee futures at eighty-four fifty, illustrative. One lot equals one thousand US dollars. Day one settlement closes at eighty-four twenty. On your calculator: eighty-four point five minus eighty-four point two equals zero point three. Multiply zero point three by fifty thousand. That gives fifteen thousand rupees credited in cash on T-plus-one. Day two closes at eighty-four sixty-five. Subtract from day one's eighty-four twenty, not the entry rate: minus zero point four five. Multiply by fifty thousand: minus twenty-two thousand five hundred rupees debited on T-plus-one. Net across two days: minus seven thousand five hundred. So Officer B was right: daily cash M2M means futures create real cash-flow swings before maturity, unlike most O-T-C forwards. Can any bank become a trading and clearing member of a SEBI currency derivatives exchange? Four strict rules apply. Write this down: five hundred crore net worth, minimum capital including CCB, net NPA up to three percent, and three years profit. Watch the trap: older notes say ten percent CRAR, but RBI amended that to minimum prescribed capital including CCB. Now the biggest 2026 rule change: how much INR currency derivative can a user take without proving an underlying contract? From ten October 2026, RBI cut that limit from one hundred million to five million dollars across all exchanges combined. Even an official November 2026 magazine misprinted one hundred million. Teach yourself five million, and remember: cancelled INR hedges cannot be rebooked. Pause check two. First: do ETP trades count as O-T-C or exchange? Second: what is the current no-proof currency derivative cap? Third, the twist: a bank meets net worth, capital, and NPA norms, but had a loss last year. Can it trade currency futures at all? Answers: ETPs count as O-T-C. The cap is five million dollars. And yes, the bank can still participate, but only as a client. One thing to remember: exchanges trade flexibility for a clearing house, daily M2M, and a five-million-dollar no-proof limit. Chapter three opens with recall: if a user cancels an INR forward after October 2026, can the bank rebook it? No rebooking is permitted, though rollover on maturity is still allowed. Now let us compare forwards and futures closely. Recall from Module A: an FX forward is an O-T-C contract settling more than two business days ahead at an agreed rate. And an FX swap combines two legs: a near exchange of principal and a reverse far exchange, basically spot plus forward. A future is a standardised exchange forward. Both buyer and seller carry a binding linear obligation with unlimited gain or loss. Quick history check that exams love: in which year did exchange-traded currency futures start in India? Twenty-nine August 2008 on NSE, followed by BSE and MCX-SX in October 2008. Today exchanges offer seven currency pairs up to twelve months. For US-dollar rupee futures, one lot is one thousand dollars, tick size is zero point zero zero two five, cash-settled in rupees. Final settlement uses the FBIL Reference Rate, and at expiry futures and spot prices converge so basis drops to zero. Let us try a faded sum. An importer buys twenty lots of USD-INR futures at eighty-four forty, illustrative. At expiry, the FBIL Reference Rate is eighty-five fifteen. Press eighty-five point one five minus eighty-four point four: zero point seven five. Now multiply zero point seven five by twenty thousand dollars, not twenty. The importer receives fifteen thousand rupees in cash. One fresh 2025 development: RBI permitted O-T-C Bond Forwards in dated Government Securities from two May 2025. Only non-retail users may deal, physically settled via CCIL or cash-settled, and G-Secs covering a short bond forward still count for SLR. Pause check three. First: which benchmark settles INR currency futures? Second: can you trade a Bond Forward on a 91-day T-Bill? Third, the twist: a trader buys USD-INR futures at eighty-four and FBIL settles at eighty-three fifty. Does the buyer receive or pay? Answers: FBIL Reference Rate. No, Bond Forwards exclude Treasury Bills. And the buyer pays, because the rate fell below his buy price. One thing to remember: forwards and futures both bind both sides, and INR currency futures always cash-settle at FBIL."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Interest Rate Futures and hedging a bond book + Close (N075–N100)", "turns": [{"speaker": "Teacher", "first": "N075", "last": "N100", "text": "Final chapter, starting with recall: when did exchange-traded currency futures launch on NSE? Twenty-nine August 2008. Now switch from currencies to interest rates with Interest Rate Futures, or I-R-Fs. An I-R-F is a standardised exchange contract to buy or sell a notional bond or interest-rate instrument, including Money Market Futures. NSE first launched I-R-Fs in June 2003, but liquidity grew after cash-settled ten-year G-Sec futures launched in January 2014. Each I-R-F lot carries a notional face value of two lakh rupees, equal to two thousand units of one hundred rupees. Under the 2025 Rupee IRD Directions effective March 2026, aggregate FPI net long I-R-F positions are capped at five thousand crore. Now let us hedge a bond book. Your bank holds ten crore of ten-year G-Secs and fears RBI will hike rates. Many of you want to buy I-R-F because you expect rates to go up. Stop and check the see-saw. When yields rise, bond prices fall. Buying I-R-F would double your loss. You must sell, or short, I-R-F so futures gain as prices drop. Your turn: your bank holds ten crore G-Secs at one hundred one fifty, illustrative, and shorts five hundred IRF lots there. Yields jump and both prices drop to one hundred point two five. Compute the bond loss, the IRF gain, and the net result. Check your keys: one point two five times two thousand units times five hundred lots equals plus twelve lakh fifty thousand rupees. The short I-R-F cash gain cancels the bond-book loss cleanly. No drama, just arithmetic doing its job. Pause check four. First: what is one I-R-F lot's face value? Second: to hedge bonds against rising rates, buy or short? Answers: two lakh rupees per lot, and you short I-R-F so falling bond prices generate an offsetting futures gain. One thing to remember: rates up means bond prices down, so always short I-R-F to protect a bond portfolio. Final mixed check across today's traps. First: can a retail company trade O-T-C G-Sec Bond Forwards? Second: what is the FPI net long I-R-F cap? Third: what is the exchange no-proof currency cap, and can a bank without three years profit still join as a client? Answers: no, Bond Forwards are non-retail only; FPI cap is five thousand crore; no-proof cap is five million dollars; and yes, as a client. Now fill the blank derivatives branch of our trading-desk map from memory: five nodes we built today. Check your five nodes: Purposes, O-T-C versus Exchange, Forwards, Futures, and Interest Rate Futures. You can now classify users, compare O-T-C and exchange rules, apply the five-million cap, and compute futures payoffs. Remember our scope: options, swaps, FRAs, and the remaining 2026 OTC rules come in the upcoming classes of this module. Tonight's homework: draw the five-node branch on one page, and run one short-futures M2M calculation on your basic calculator. Next class, a bank holds fixed home loans and floating deposits as rates rise: should it pay fixed or receive fixed? Your see-saw and futures ticket are locked in. Put the pen down, rest well, and I will see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

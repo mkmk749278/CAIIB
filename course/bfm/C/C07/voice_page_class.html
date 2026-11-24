@@ -1,0 +1,150 @@
+<title>C07 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C07 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C07/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Why treasury risk is special and how it is fenced + Chapter 2 · Market risk, credit risk, and VaR on the desk + Chapter 3 · Capital for market risk (N001–N076)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N076", "text": "[warmly] Welcome back, colleagues. Today we step behind the dealing desk and build the fence that protects the bank. Phones on silent, basic calculator ready. Quick recall from last class. A ten-crore bond has modified duration four point five. Yield rises ten basis points. How much does price fall? Four point five lakh rupees. Ten crore times four point five times zero point one per cent. From our market-risk class earlier: what does Value at Risk measure? Maximum expected loss on a portfolio over a holding period at a chosen confidence level in normal markets. Now picture Deccan Bank's Mumbai desk, illustrative. By noon, dealer Arjun's open position has lost two crore rupees. Who stops Arjun, and at what number? Some think the dealer decides. Others think Reserve Bank sets it. Hold that answer. Stop-loss, disallowances, and Value at Risk appear repeatedly in recent exams. Today we cover them all. Chapter one: why treasury risk worries management, and the fence around the desk. Three reasons make treasury risk special: high leverage, huge deals by few dealers, and quick, irreversible losses. A loan loss stops at principal plus interest. A trading or derivative loss has no natural cap. Banks build three control types: organisational controls, exposure ceilings, and position plus stop-loss limits. Organisational control splits three offices: Front Office deals, Mid-Office measures risk independently, and Back Office settles, confirms, and accounts. Mid-Office reports to ALCO independently of treasury. Back Office sources market prices independently and runs dual payment control. Add three safeguards: compulsory two-week continuous annual dealer leave, voice tapes kept two months, and monthly concurrent audit. Now answer our opening question. Who sets stop-loss, overnight open-position, and gap limits? Many think Reserve Bank approves these limits, or dealers set stop-losses. Both are wrong. The Board sets policy and risk limits. Its Risk Management Committee approves market-risk limits and stop-loss triggers annually. Net Overnight Open Position Limit and Aggregate Gap Limit are Board-approved and communicated immediately to Reserve Bank. Check the key position limits. Daylight versus overnight open-position limits: which is larger? Daylight is larger than overnight. Active trading handles client flows by day; overnight carries closed-market uncertainty. Net Overnight Open Position Limit cannot exceed twenty-five per cent of total capital, Tier One plus Tier Two. Aggregate Gap Limit still survives under current rules. It caps forex maturity mismatches at six times total capital. Banks with stronger systems may substitute tenor-wise P-V-0-1 and Value at Risk limits for Aggregate Gap Limit. Twenty-twenty-six update: Reserve Bank capped onshore deliverable N-O-P I-N-R positions at one hundred million US dollars end-of-day. Exposure ceilings cover counterparties and brokers. Brokers only match parties; they never settle deals or act as principals. Each approved broker is capped at five per cent of total brokered deals per year, excluding Primary Dealers. Quick sum. Deccan Bank's total brokered bond deals this year are four thousand crore. What is one broker's cap? Two hundred crore rupees. Four thousand times five per cent. Direct non-brokered deals stay outside the denominator. Pause check for chapter one. One: who approves stop-loss triggers and Aggregate Gap Limit? The Board and Risk Management Committee—not dealers, and without prior Reserve Bank approval. Two, the twist: does the five per cent broker cap apply to Primary Dealers? No, Primary Dealers are exempt. [seriously] One thing to remember: Board sets the fence, Mid-Office watches it. Chapter two: sorting desk risks. Recall from chapter one: why is the daylight limit higher than overnight? Markets are open for active management and client flows by day; overnight carries closed-market uncertainty. Market risk is loss from market price moves: interest rates, exchange rates, security prices, and equity prices. Liquidity risk has two sides: funding liquidity when cash runs short, and market liquidity when exit prices freeze. Market risk splits into general market risk, which is systematic, and specific risk, which is unsystematic and issuer-specific. Credit risk on the desk has two faces: pre-settlement risk and settlement risk. Pre-settlement risk is counterparty default before settlement date. You replace the deal in the market, losing replacement cost. Settlement risk is deadlier. Picture two clocks: Frankfurt at three-thirty afternoon, New York still early morning. On twenty-six June nineteen seventy-four, regulators closed Bankhaus Herstatt after it received Deutsche marks, before paying US dollars. That is Herstatt risk: you pay your currency leg, the counterparty fails before paying, risking full principal. Banks tame Herstatt risk with pre-settlement netting and Payment-versus-Payment through C-L-S, settling both currency legs together. Corporate bonds carry interest-rate risk plus credit risk. Their yield equals government yield plus a credit spread. Sorting card: which risk caused each loss? First: rupee weakens, hurting Arjun's open dollar short position. Market risk, never credit risk. Second: a corporate bond issuer's credit rating drops sharply. Credit risk—specifically unsystematic specific risk—widening its spread. Third: a bank fails after we already wired euros. Settlement or Herstatt risk. Now, how does Value at Risk work on the desk? Many think Value at Risk replaces stop-loss limits. It does not. Banks use VaR alongside stop-loss and P-V-B-P limits. Internally banks use ninety-five to ninety-nine per cent confidence. Basel regulatory VaR uses ninety-nine per cent over ten days. Your turn. Arjun's one-day VaR is one point two zero crore rupees. Find his ten-day VaR. Three point seven nine crore rupees. Press ten, square-root, times one point two, equals. VaR assumes normal markets and misses extreme crashes. So banks validate it with back-testing and add stress testing. Pause check for chapter two. One: in pre-settlement risk, is loss full principal or replacement cost? Replacement cost. Two, the twist: a rupee drop causes loss on an unhedged dollar payable. Which risk? Market risk. [seriously] One thing to remember: pre-settlement risks replacement cost, Herstatt risks full principal, and VaR needs stress tests. Chapter three: market-risk capital. Recall from chapter two: how do specific risk and general market risk differ? Specific risk is issuer-specific; general market risk comes from broad market-wide rate or price moves. Under current rules at thirty-one December twenty-twenty-six, which method does India mandate for interest-rate general market risk? Standardised Duration Method—not Maturity Method—because duration measures bond price sensitivity more accurately. Multiply each bond's modified duration by an assumed yield shift between zero point six and one per cent across fifteen bands. General market risk sums four parts: net open position, vertical disallowance, horizontal disallowance, and options charge. Vertical disallowance hits matched long and short positions inside the same time band. Under duration method, it is five per cent. It captures basis risk—two bonds in the same band with different issuers do not move identically. Horizontal disallowance hits matched net positions across different time bands and zones, capturing non-parallel yield-curve shifts. Write this down: within Zone One forty, Zones Two and Three thirty, adjacent zones forty, Zones One to Three hundred. Quick sum. Inside one time band, long sensitivity is one hundred crore and short is sixty crore. Find vertical disallowance. Three crore rupees. Matched amount is sixty crore; sixty times five per cent equals three crore. Now one line on rules issued, coming one April twenty-twenty-seven: Reserve Bank's Market Risk Directions twenty-twenty-six, issued twenty-one September twenty-twenty-six. From April twenty-twenty-seven, trading book equals all Held for Trading instruments—replacing the old H-F-T plus A-F-S wording. Under those coming directions, forex risk including bullion applies to both books, with no credit for trading-to-banking transfers. Pause check for chapter three. One: what risk does the five per cent vertical disallowance capture? Basis risk inside the same band. Two, the twist: horizontal disallowance between Zone One and Zone Three? One hundred per cent. [seriously] One thing to remember: vertical is five per cent inside a band, horizontal is across bands."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Investment classification, valuation, and IFR + Close (N077–N106)", "turns": [{"speaker": "Teacher", "first": "N077", "last": "N106", "text": "Chapter four: investment classification, valuation, and I-F-R. Recall: when do the twenty-twenty-six Market Risk Directions take effect? One April twenty-twenty-seven—so at thirty-one December twenty-twenty-six they are issued, coming. Under Investment Portfolio Directions twenty-twenty-five, banks hold securities only in demat form and sort them into three buckets. Bucket one: Held to Maturity, H-T-M. Needs intent to hold to maturity plus S-P-P-I cash flows. Carried at cost. S-P-P-I means Solely Payments of Principal and Interest. Equity, convertibles, and Basel Three A-T-1 bonds fail S-P-P-I. Big trap: old books quote a twenty-five per cent cap on H-T-M. That twenty-five per cent cap is gone. Instead, H-T-M sales in a year cannot exceed five per cent of opening carrying value without prior Reserve Bank approval. Seven sales are excluded—including O-M-O, government buybacks or switches, rating-downgrade sales, and repo, which is not a sale. Quick sum: opening H-T-M carrying value is twelve thousand crore. Maximum annual sale without prior approval? Six hundred crore rupees. Twelve thousand times five per cent. Profit on H-T-M sale is appropriated to Capital Reserve. Bucket two: Available for Sale, A-F-S. S-P-P-I debt held to collect and sell, fair valued quarterly through A-F-S Reserve. Bucket three: F-V-T-P-L—the residual bucket for non-S-P-P-I items, with gains and losses straight to profit and loss. Held for Trading, H-F-T, sits as a sub-category inside F-V-T-P-L and is marked to market daily. Can banks shift bonds between buckets every April? No. Reclassification needs Board approval plus prior Reserve Bank DoS approval. Two twenty-twenty-six updates. First, from twenty-two September twenty-twenty-six, unquoted Inv-I-T and R-E-I-T units are valued at disclosed N-A-V. If N-A-V is not disclosed under SEBI rules, or units are infrequently traded, value them at one rupee. Second, the biggest twenty-twenty-six trap: from eighteen May twenty-twenty-six, Investment Fluctuation Reserve is discontinued for commercial banks and Local Area Banks. Existing I-F-R balances move below the line to Statutory Reserve, General Reserve, or Profit and Loss. Small Finance, Payments, Co-operative, and Regional Rural Banks still keep I-F-R, tested on balance-sheet dates. Pause check for chapter four. One: where do quarterly valuation changes on A-F-S debt go? Directly to A-F-S Reserve. Two, the twist: does a commercial bank create I-F-R on thirty-one December twenty-twenty-six? No—discontinued from eighteen May twenty-twenty-six. [seriously] One thing to remember: no twenty-five per cent H-T-M cap, and no commercial-bank I-F-R. Mixed check. Arjun's desk breaks its overnight limit, routes eight per cent through one non-P-D broker, and skips confirmation. All three are control failures: position limit breached, five per cent broker cap breached, and Back Office segregation breached. Look at the blank Risk Control branch. Name all six twigs from memory before they light up. Reasons, control types, limits, market versus credit risk, capital, and classification. Every twig is now locked in. You can now spot treasury control breaches, separate market from Herstatt risk, apply disallowances, and classify investments under twenty-twenty-six rules. Homework: find the maximum Board N-O-O-P-L and Aggregate Gap Limit for a bank with two thousand crore total capital. Next class: when a bank locks in a future bond or currency rate, which contracts do the job? [warmly] That's the treasury safety fence, complete. Close your notes, unwind for the night, and I'll see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

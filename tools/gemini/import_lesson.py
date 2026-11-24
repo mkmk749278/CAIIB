@@ -8,6 +8,7 @@ Writes script_class.md (cue lines as '> ', headings as '##'), numericals.md, pra
 research/bfm/facts/<fact sheet name>.md (tab tables → Markdown tables). Review and fix afterwards; nothing is locked.
 """
 import os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ID, folder, fname = sys.argv[1:4]
 src = f".cache/gemini_in/{ID}/{ID}_"
@@ -15,7 +16,7 @@ rd = lambda n: open(src + n + ".txt", encoding="utf-8-sig").read().replace("\r",
 os.makedirs(folder, exist_ok=True)
 
 out = []
-for ln in rd("script_class").split("\n"):
+for ln in __import__("unglue").unglue(rd("script_class")).split("\n"):
     if ln.startswith("________________"):
         out.append("\n---\n")
     elif re.match(r"^(Warm-up.*|Opening.*|Close.*|Chapter \d.*|Facts needed.*)$", ln.strip()) and not ln.startswith("#"):
