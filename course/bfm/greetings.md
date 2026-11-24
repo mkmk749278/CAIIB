@@ -52,3 +52,5 @@ order, so they stand; change A07's lines if it is ever re-voiced.
 |---|---|---|
 | C01 (draft) | "Hello everyone, and welcome to the trading floor. Today we begin treasury management, starting with why three desks became one." | "That is our integrated treasury desk set up. Close your notebook, rest your eyes, and I will meet you in the next class." |
 | C01b (draft) | "Good to have you back at the trading desk. Last class we saw why treasury earns; today we see how it is controlled." | "That is the dealing room mapped and guarded. Put the calculator aside, get some rest, and I will meet you next class." |
+| C04 (draft) | "Hello everyone, and welcome back to the desk. Today we measure what a bank must set aside before it lends." | "Hello everyone, and welcome back to the desk. Today we measure what a bank must set aside before it lends." |
+| C05 (draft) | "Good to have you back at the desk. Keep your basic calculator ready, because today we step into the bond book." | "Good to have you back at the desk. Keep your basic calculator ready, because today we step into the bond book." |

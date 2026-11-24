@@ -1,0 +1,150 @@
+<title>C04 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C04 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C04/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · NDTL: what is in, and what is out + Chapter 2 · CRR, SLR, the new fortnight, and the 99% daily floor + Chapter 3 · Monetary policy, MPC, M3, and the money multiplier (N001–N084)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N084", "text": "[warmly] Hello everyone, and welcome back to the desk. Today we measure what a bank must set aside before it lends. Phone on silent, basic calculator beside you. Let us begin with two recall questions. From last class: a 91-day Treasury Bill trades at ₹98.50. What is its yield? 1.50 over 98.50, times 365 over 91, times 100, gives 6.1081% — divide by price. Reach back two classes: which overnight facility forms the RBI policy corridor floor today? The Standing Deposit Facility, or SDF, is the floor — 25 basis points below repo. Reserve assets appeared in 4 of 7 recent exam cycles, often as linked cases. Stay with me to master NDTL, CRR, SLR, shortfall penalties, and monetary policy. Picture Deccan Commercial Bank, illustrative, facing a liability whiteboard on 15 October 2026. Deposits, capital, NABARD refinance, and infra bonds sit there. Some include everything; others exclude half. Picture a jar of deposits with two statutory scoops taken out. First measure the jar: Net Demand and Time Liabilities, or NDTL. Under RBI Act section 42, NDTL adds liabilities to others plus net inter-bank liabilities. Demand liabilities are payable on demand: current deposits, overdue FDs, unpaid drafts, unclaimed deposits, CC credits. Time liabilities are payable later: fixed deposits, recurring deposits, cash certificates, staff security deposits, and bullion deposits. How are savings deposits split into demand and time? Recall the two dates. On 31 March and 30 September: average monthly minimum is time; the rest is demand. We also add Other Demand and Time Liabilities, or ODTL: accrued deposit interest, bills payable, unpaid dividends, Tier 2 borrowings, and derivative cash collateral. Foreign borrowings count as liabilities to others; lending abroad cannot be netted. Many think excess inter-bank assets reduce public deposits. Wrong: net inter-bank stops at zero. Scheduled banks are also exempt from CRR on net domestic inter-bank liabilities. Answering our whiteboard: thirteen items are excluded from both CRR and SLR under paragraph 19. Group one is own funds and refinance: paid-up capital, reserves, Tier 1 borrowings, profit balance, and refinance from RBI, NABARD, SIDBI, NHB, EXIM, NaBFID. Group two is third-party claims and tax: net income-tax provision, pending DICGC, ECGC, and NCGTC claim receipts, Court Receiver funds, and ad-hoc insurance receipts. Group three is special items: Bankers Acceptance Facility, NABARD rural godown subsidy, 0% government subsidy deposits, unrealised trading derivative gains, advance fees, rediscounted bills. Next come exempted categories under paragraph 20: ACU dollar balances and OBU liabilities are exempt from CRR; IBU liabilities and G-sec repo from both. Watch one trap: corporate-bond repo is NOT exempt; only government-security repo is exempt. Are 7-year Long-Term Bonds for infrastructure and affordable housing still exempt in December 2026? Yes, confirmed in RBI's November 2025 Directions: deduct the lower of Eligible Credit or Long-Term Bonds. Also, the temporary 2026 reserve exemption for fresh NRE and FCNR(B) deposits closed 31 August 2026. Pause check for Chapter 1. First: is NABARD refinance included in NDTL? No, RBI and DFI refinance is excluded from both CRR and SLR. Second: if inter-bank assets exceed liabilities by ₹700 crore, do you subtract it? No, net inter-bank liability stops at zero and never reduces public deposits. Third, a twist: ₹2,500 crore infra bonds against ₹2,000 crore eligible loans. Deduct what? ₹2,000 crore — always the lower of Eligible Credit and Long-Term Bonds. One thing to remember from Chapter 1: strip own funds, DFI refinance, pending claims, and the lower of eligible credit or long-term bonds. Recall from Chapter 1: is corporate-bond repo exempt from CRR and SLR? No, corporate-bond repo counts inside NDTL. Now let us measure both statutory scoops. Legal basis: CRR is RBI Act section 42(1); SLR is Banking Regulation Act section 24. In June 2006, Parliament removed CRR's 3%–20% band and barred interest on CRR. In January 2007, Parliament removed SLR's 25% floor while keeping the 40% ceiling. CRR stands at 3.0% of NDTL, cut in four 25-bps steps by 29 November 2025. Many older classes still teach 4% CRR and alternate-Friday fortnights. Both rules changed in late 2025. Write this down: from 15 December 2025, under the Banking Laws Amendment Act, every fortnight is 1st to 15th, or 16th to month-end. One-fortnight lag: 1–15 November reserves rest on 15 October NDTL. Biggest 2026 change: from 16 October 2026, daily minimum CRR rose from 90% to 99%. Let us work a shortfall sum on ₹40,000 crore NDTL. Press 40,000 times 3%. Required CRR is ₹1,200 crore. Press 1,200 times 99% for the daily floor. Day 1 RBI balance is ₹1,148 crore — a ₹40 crore shortfall below ₹1,188 crore. Day 1 penal interest is Bank Rate plus 3%. With Bank Rate at 5.75%, that equals 8.75% per annum. Key ₹40 crore as 400000000, times 8.75%, divided by 365: Day 1 penal interest is ₹95,890.41. Your turn: ₹40 crore shortfall continues on Day 2. Pause 15 seconds and compute penalty. On Day 2, penal interest jumps to Bank Rate plus 5%, or 10.75%, giving ₹1,17,808.22 for that day. Common error: using old 5.50% Bank Rate, or missing the jump to plus 5%. If default continues into the next fortnight, section 42(3A) imposes fines on officers and lets RBI prohibit fresh deposits. Second scoop: Statutory Liquidity Ratio, or SLR, is 18.0% of NDTL daily. SLR sits in three asset classes: cash and deemed cash, bullion valued at or below market price, and unencumbered SLR securities. Watch two traps: branch cash and SDF count for SLR, never CRR; mandatory CRR never counts for SLR, only excess CRR does. Eligible SLR securities are GoI dated securities, Treasury Bills including Cash Management Bills, and State Government Securities. Development-bank bonds do not automatically qualify. Securities pledged for market borrowing are encumbered and excluded, but securities carved out under MSF up to 2% of NDTL still count. From 15 December 2025, banks file one single electronic Form A on CIMS within 5 days, with no provisional or final split. Monthly Form VIII for SLR goes on CIMS before the 20th of next month; SLR default carries identical penal rates and licence risk. Chapter 2 pause check. First: does branch vault cash count toward CRR? No, scheduled commercial banks hold CRR solely as balances with RBI; branch cash counts toward SLR instead. Second: when is the single electronic Form A due after a fortnight ends? Within 5 days after the last day of the fortnight on CIMS, signed digitally by two authorised officials. Third, a twist: ₹500 crore in SDF helps CRR or SLR? Its SLR only; SDF balances are eligible for SLR in Form VIII, never for CRR in Form A. One thing to remember from Chapter 2: CRR is 3% with a 99% daily floor, SLR is 18%, and shortfalls cost 8.75% then 10.75%. Recall from Chapter 2: what statutory ceiling applies to SLR under section 24? 40% of NDTL, while the statutory floor was removed in 2007. Now let us see who sets policy rates. Under RBI Act section 45ZA, India follows flexible inflation targeting: 4% CPI inflation with a plus-or-minus 2% tolerance band. On 25 March 2026, Government retained that 4% target through 31 March 2031. If average CPI stays above 6% or below 2% for three consecutive quarters, RBI must report reasons and remedies to Government. Under section 45ZB, the 6-member Monetary Policy Committee — three RBI and three external — meets at least four times yearly, quorum four. Minutes publish on day 14 under section 45ZL. On 7 October 2026, the MPC unanimously raised the repo rate to 5.50%. That moved SDF to 5.25%, MSF and Bank Rate to 5.75%, and shifted the stance to calibrated tightening. Reserve Money, M0, is the central bank's base; Broad Money, M3, is currency with public plus demand, time, and other RBI deposits. The money multiplier equals M3 divided by M0, like a waterwheel turning reserves into deposits, though public cash hoarding limits its spin. Cutting CRR by 100 basis points on ₹200 lakh crore of NDTL injects ₹2 lakh crore of primary liquidity and lifts the multiplier. Chapter 3 check. First: M0 ₹50 lakh crore, M3 ₹275 lakh crore. Multiplier? 5.50, found by dividing 275 by 50. Second: who breaks a 3–3 tie inside the Monetary Policy Committee? The RBI Governor holds a second or casting vote. One thing to remember: CRR cuts inject liquidity and expand M3 via the multiplier."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Five-part case: Deccan Commercial Bank + Close (N085–N106)", "turns": [{"speaker": "Teacher", "first": "N085", "last": "N106", "text": "Recall from Chapter 3: current Bank Rate and Day 1 penal rate? Bank Rate is 5.75%, so Day 1 penal interest is 8.75%. Now let us run our five-part exam case. Part 1: Deccan Commercial Bank holds ₹12,000 crore demand deposits, ₹28,000 crore time deposits, and ₹2,000 crore ODTL — ₹42,000 crore total. Its whiteboard also lists capital, NABARD refinance, tax provision, and DICGC claims — all excluded — plus excess inter-bank assets, so net inter-bank is zero. It has ₹2,500 crore of 7-year infrastructure bonds against ₹2,000 crore of eligible loans. Deduct the lower figure: adjusted NDTL is ₹40,000 crore. Part 2: at 3%, required CRR is ₹1,200 crore, and the 99% daily floor is ₹1,188 crore — branch cash excluded. Part 3: SLR at 18% is ₹7,200 crore. Pause 5 seconds; sum eligible SLR assets. Drop the ₹400 crore encumbered securities and ₹300 crore development-bank bonds. Eligible SLR totals ₹7,400 crore — a ₹200 crore surplus. Part 4, an exam favourite: cost of SLR non-deployment. That ₹200 crore surplus earns 6.80% instead of 9.80% in loans. Press 9.8 minus 6.8, giving 3%, times ₹200 crore: ₹6.00 crore of annual opportunity cost. Part 5: on Day 5, the bank's RBI balance slips to ₹1,158 crore — ₹30 crore below the ₹1,188 crore daily floor. Press 300000000 times 8.75% divided by 365: ₹71,917.81 in penal interest for that single day. Mixed check: two SLR-only items, and which repo counts inside NDTL? Branch cash and SDF balances count for SLR only, and corporate-bond repo counts inside NDTL while G-sec repo is exempt. Look at our blank Reserves branch. Pause 5 seconds and name all four nodes. Slot one: NDTL with thirteen exclusions and the long-term bond formula. Slot two: CRR at 3% and 99% daily. Slot three: SLR at 18% across cash, bullion, and unencumbered sovereign securities. Slot four: MPC, policy corridor, M3, and the money multiplier. You can now handle NDTL, CRR, SLR, penalties, and MPC for syllabus topic C-four-point-one. Outside today: LAF auctions were covered earlier; payment plumbing comes next class. Homework: on ₹50,000 crore NDTL, compute CRR, 99% daily floor, and SLR. Carry one question into next class: at 4:55 p.m., your treasury pays ₹300 crore for a bond. Which pipe settles it, and when? That is reserves and monetary policy clear in your head. Close the notebook, take a breath, and I will see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

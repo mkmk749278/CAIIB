@@ -26,10 +26,15 @@ When the owner says "next", take the **next ONE lesson** from this queue that ha
    not allowed. The report must list **at least 8 primary-source URLs you actually opened** (rbi.org.in, rbidocs,
    bis.org, fedai, indiacode, egazette, incometaxindia, sebi, ifsca, ecgc, …), each next to the rows it supports.
 2. **Fact sheet at least 1,200 words**, every row with its paragraph number and source id.
-3. **Script 1,600–2,000 spoken words** (drills and cases at least 1,100). Count them. A short script is a failed script.
+3. **Script 1,600–2,000 spoken words, never over 2,100** (drills and cases at least 1,100). Count them. A short script
+   fails, and so does a long one: 3,000+ words is a 25-minute video and breaks the 12–15 minute rule. Cut examples and
+   repetition, never syllabus points. If the plan truly cannot fit, say so in the report instead of writing long.
 4. **Calm voice**: at most a few exclamation marks in the whole script; never "gold", "pure", hype words.
 5. **Never speak lesson codes** (say "last class", "next class", not "B07b" or "A19").
-6. If you cannot meet 1–3 (Deep Research unavailable, sources blocked), **stop and say so**. Do not save a thin draft.
+6. **Write every source as a full URL** (https://…) in the report and the fact sheet; a source name without a URL
+   does not count.
+7. **Folder name = the lesson ID exactly** (`_inbox/gemini/C05/`, never another lesson's folder).
+8. If you cannot meet 1–3 (Deep Research unavailable, sources blocked), **stop and say so**. Do not save a thin draft.
 
 ## The task for lesson <ID>
 1. **Deep Research prompt.** Do THE SKILL Task 1 for <ID>. (For A17, `model_deep_research_prompt.md` is already the
