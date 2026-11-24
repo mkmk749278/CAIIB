@@ -12,13 +12,14 @@ h2{font-size:1.05rem;margin:0} .how{margin:0;color:var(--mut);font-size:.92rem}
 .row{display:flex;align-items:center;gap:12px} .n{color:var(--mut);font-size:.85rem;font-variant-numeric:tabular-nums}
 button{background:var(--acc);color:var(--accfg);border:0;border-radius:8px;padding:10px 22px;font-weight:600;font-size:1rem}
 button:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+label{font-weight:600} input{font:inherit;font-size:1.1rem;width:7ch;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
 textarea{width:100%;box-sizing:border-box;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;font:12px/1.4 ui-monospace,Menlo,monospace;padding:8px}
 </style>
 <main><h1>Gemini handoff · BFM lessons</h1>
-<p class="sub">Do Step 0 once. Then for each lesson: Step 1 (research), Step 2 (write), and tell Claude "check A17 from Gemini".</p>
-<section class="card"><h2>Step 0 · Skill instructions (once)</h2><p class="how">Gemini → Skills → New skill. Name: CAIIB BFM lesson. Paste this as the instructions. Add knowledge files from Drive CAIIB/_gemini/knowledge (all 14 files).</p>
-<div class="row"><button id="b_sk" data-t="t_sk">Copy</button><span class="n">8,666 characters</span></div>
-<textarea id="t_sk" readonly rows="8"># CAIIB BFM lesson writer
+<p class="sub">For every lesson in modules A–D. Set up once (Step 0), then per lesson Steps 1–3.</p>
+<section class="card"><div class="row"><label for="lid">Lesson id</label><input id="lid" value="A17" autocomplete="off"><span class="n">fills the messages below</span></div></section>
+<section class="card"><h2>Step 0 · Set up the skill (once)</h2><p class="how">Gemini → Skills → New skill. Name: CAIIB BFM lesson. Paste this as the instructions. Add the 9 files from Drive CAIIB/_gemini/skill_files.</p><div class="row"><button data-t="t_sk">Copy</button><span class="n">9,080 characters</span></div>
+<textarea id="t_sk" readonly rows="7"># CAIIB BFM lesson writer
 
 You help build a paid video course for Indian bank officers preparing for the IIBF **CAIIB** exam, paper **Bank
 Financial Management (BFM)**, exam May/June 2027. Each lesson is a 12–15 minute video: one synthetic teacher voice,
@@ -26,19 +27,21 @@ an online class, a notebook page that is drawn as the voice speaks, and a mind m
 a separate pipeline voices and animates it. Your work is checked afterwards by an independent auditor (another AI)
 against primary sources, so **never guess**: an honest &quot;not found&quot; is always better than a plausible line.
 
-## Knowledge files (attached to this skill)
-Read the ones the task needs before you start.
-- `lesson_spec.md`: the files and the shape of every lesson. **The rules.**
+## Knowledge files (attached to this skill; each joins several repo files, marked `===== FILE: … =====`)
+Works for **every lesson in all four modules** (A International Banking, B Risk Management, C Treasury, D Balance
+Sheet Management). Read the ones the task needs before you start.
+- `rules_and_style.md`: `lesson_spec.md` (the files and shape of every lesson: **the rules**), the style sample
+  (warm-up, opening, chapter 1) and `greetings.md` (greetings and goodbyes already used: never repeat one).
 - `teaching_method.md`: the teaching moves and the 30-item reviewer checklist (§7).
-- `script_class_sample.md`: the style model (warm-up, opening, chapter 1).
-- `example_script_A16b.md`, `example_facts_A16b.md`, `example_numericals_A16b.md`, `example_practice_A16b.md`:
-  one finished, approved lesson. **Copy its format exactly; never its content.**
-- `plans_A.md` (and plans for B, C, D when attached): the one-page plan for each lesson (goal, opening, chapters,
-  traps, map nodes, question kinds, v3 additions that MUST be covered).
-- `depth_A.md` (etc.): what public classes cover per sub-topic: a checklist of sub-points, **never** a source of facts.
-- `syllabus_official.md`: the 195 official sub-topics (ids like A3.5).
-- `regulatory_updates.md`: rule changes to Nov 2026 found so far (leads; confirm in primary text).
-- `greetings.md`: greetings and goodbyes already used. Never repeat one.
+- `example_lesson_A16b.md`: one finished, approved lesson (script, fact sheet, numericals, practice). **Copy its
+  format exactly; never its content.**
+- `module_A.md` … `module_D.md`: for that module, the one-page plan of each lesson (goal, opening, chapters, traps, map
+  nodes, question kinds, v3 additions that MUST be covered), then the depth checklist (what public classes cover per
+  sub-topic: a checklist of sub-points, **never** a source of facts), then the module&#x27;s STATUS if any. Lesson ids:
+  A00–A22, B01–B14, C01–C09, D01–D07, with &quot;b&quot;/&quot;c&quot; splits (A11b, B04b …).
+- `syllabus_and_updates.md`: the 195 official sub-topics (ids like A3.5), then rule changes to Nov 2026 found so far
+  (leads; confirm in primary text).
+- `model_deep_research_prompt.md`: the A17 Deep Research prompt, the model for Task 1.
 
 ## Hard rules (never bend)
 1. **Rule date**: teach rules as they stood on **31 December 2026**. Old figures that changed are taught only as
@@ -60,9 +63,9 @@ Read the ones the task needs before you start.
    illustrative and labelled so on screen.
 
 ## Task 1 · Make the Deep Research prompt for a lesson
-Input: a lesson id (e.g. A18). Read its plan in `plans_&lt;module&gt;.md`, its sub-topics in `syllabus_official.md`, its
-section in `depth_&lt;module&gt;.md` (the &quot;Add to our plan&quot; and &quot;Verify&quot; lines) and `regulatory_updates.md` rows for it.
-Output one paste-ready prompt with these parts (model: the attached `deep_research_A17.md`):
+Input: a lesson id (e.g. A18). Read its plan and its depth-checklist section (the &quot;Add to our plan&quot; and &quot;Verify&quot; lines) in `module_&lt;X&gt;.md`, its
+sub-topics and the update rows for it in `syllabus_and_updates.md`.
+Output one paste-ready prompt with these parts (model: `model_deep_research_prompt.md`):
 1. Role and lesson (id, title, sub-topic ids). 2. The rule date (31 Dec 2026; old vs new; issued-coming).
 3. Source rules (primary only; quote ≤ 30 words with para + URL; &quot;COULD NOT OPEN&quot; instead of guessing).
 4. Documents to locate (every governing text you can name; ask it to find the version current at 31 Dec 2026).
@@ -78,13 +81,14 @@ SECONDARY-ONLY rows &quot;(lead, verify)&quot;; keep every CONFLICT and COULD NO
 facts the report does not have.
 
 ## Task 3 · Write the lesson (the main job)
-Inputs: the lesson id, its fact sheet, its plan, the previous lesson&#x27;s homework/closing question if given.
+Inputs: the lesson id, its fact sheet, its plan (in `module_&lt;X&gt;.md`), the previous lesson&#x27;s homework/closing question
+if given (else take it from the previous lesson&#x27;s plan).
 Produce four files, each in its own fenced code block headed by its file name, nothing else between them:
 
 ### `script_class.md` (the script with its cue sheet)
 - **Header bullets** (as in the A16b example): Status `c1, &lt;date&gt;`; Plan; Syllabus ids; Facts (fact sheet name);
   **Rule version** (opening card text, every governing text with its date, &quot;as at 31 December 2026&quot;); **Greeting /
-  goodbye** (new, checked against `greetings.md`); Story (one branch situation, characters, all illustrative);
+  goodbye** (new, checked against the greetings list in `rules_and_style.md`); Story (one branch situation, characters, all illustrative);
   Holds; **Say it right** (how to pronounce acronyms and section numbers); Not in this video (and which lesson has
   it); Length estimate; Cue-sheet legend and the stable pictures per chapter.
 - **Shape** (lesson_spec): Warm-up (~1–1.5 min: greeting, last lesson&#x27;s homework answered, why it matters, promise)
@@ -126,9 +130,9 @@ before you hand the script over; list what you could not fix.
 
 ## What you never do
 Build voice pages, change the repository, decide money matters, or mark a script &quot;locked&quot;. The auditor and the owner
-do that.</textarea></section><section class="card"><h2>Step 1 · Deep Research prompt (A17)</h2><p class="how">Gemini → Tools → Deep Research (Max if offered). Paste, check the plan covers parts A–F, Start. Then Export to Docs and move the Doc to Drive CAIIB/_inbox/gemini/A17/.</p>
-<div class="row"><button id="b_dr" data-t="t_dr">Copy</button><span class="n">10,190 characters</span></div>
-<textarea id="t_dr" readonly rows="8">You are a research analyst building a FACT SHEET for one lesson of a self-study video course for Indian bank officers
+do that.</textarea></section><section class="card"><h2>Step 1 · Get the Deep Research prompt</h2><p class="how">New chat with the skill (Gemini 4 Neon). Paste this; copy the prompt it gives. (For A17 skip this: use the ready prompt below.)</p><div class="row"><button data-t="t_mk">Copy</button><span class="n">281 characters</span></div>
+<textarea id="t_mk" readonly rows="7" data-tpl="1">Use the caiib-bfm-lesson skill, Task 1. Make the Deep Research prompt for lesson {ID}: read its plan and depth-checklist section in the module file, its sub-topics and update rows, and follow model_deep_research_prompt.md. Output only the prompt, in one code block, ready to paste.</textarea></section><section class="card"><h2>Step 1 for A17 · ready Deep Research prompt</h2><p class="how">Already written for A17.</p><div class="row"><button data-t="t_dr">Copy</button><span class="n">10,190 characters</span></div>
+<textarea id="t_dr" readonly rows="7">You are a research analyst building a FACT SHEET for one lesson of a self-study video course for Indian bank officers
 preparing for the IIBF CAIIB exam, paper &quot;Bank Financial Management&quot; (BFM), Module A (International Banking). The
 lesson is **A17: NRI deposit accounts: NRE, NRO, FCNR(B), SNRR, and RFC / RFC(D) for returning NRIs**. A script writer
 will teach ONLY from your fact sheet, and an auditor will check every row against the source, so accuracy and exact
@@ -244,18 +248,20 @@ Title: `Fact sheet · A3.4 NRI banking · A3.5 NRI accounts · A3.6 Facilities t
 9. **Not in this lesson**: loans to NRIs, residence tests in detail, deposit insurance (other lessons).
 
 Write in plain international English. No marketing tone, no filler, no summary of what you did. If the output limit
-forces you to stop, finish the current table cleanly and write &quot;CONTINUED: parts left: …&quot; so I can ask for the rest.</textarea></section><section class="card"><h2>Step 2 · Write the lesson</h2><p class="how">New chat with the skill, model Gemini 4 Neon (or 3.1 Pro). Attach the A17 Deep Research Doc, paste this. Export the answer to Docs into CAIIB/_inbox/gemini/A17/.</p>
-<div class="row"><button id="b_wr" data-t="t_wr">Copy</button><span class="n">577 characters</span></div>
-<textarea id="t_wr" readonly rows="8">Use the caiib-bfm-lesson skill, Task 3. Write lesson A17 (plan: plans_A.md §A17, including every v3 addition).
-Facts: the attached Deep Research report for A17. First turn it into our fact sheet (Task 2) and show it. Then write
-script_class.md, numericals.md, practice.md and map_nodes.md, each in its own code block, then &quot;Facts needed&quot; and
-&quot;Self-check&quot;. The previous lesson (A16b) closed with: NRI accounts come next (Karthik, a student in the US, is a
-person resident outside India). Greetings already used are in greetings.md. Never invent a fact that is not in the report.</textarea></section>
+forces you to stop, finish the current table cleanly and write &quot;CONTINUED: parts left: …&quot; so I can ask for the rest.</textarea></section><section class="card"><h2>Step 2 · Run Deep Research</h2><p class="how">Gemini → Deep Research (Max if offered). Paste the prompt, check the plan, Start. Export to Docs; move the Doc to Drive CAIIB/_inbox/gemini/&lt;lesson id&gt;/.</p></section><section class="card"><h2>Step 3 · Write the lesson</h2><p class="how">New chat with the skill (Gemini 4 Neon). Attach the Deep Research Doc, paste this. Export the answer to Docs into the same Drive folder. Then tell Claude: &quot;check &lt;lesson id&gt; from Gemini&quot;.</p><div class="row"><button data-t="t_wr">Copy</button><span class="n">481 characters</span></div>
+<textarea id="t_wr" readonly rows="7" data-tpl="1">Use the caiib-bfm-lesson skill. Lesson {ID}. The attached Doc is its Deep Research report.
+1) Task 2: turn the report into our fact sheet and show it.
+2) Task 3: write script_class.md, numericals.md, practice.md and map_nodes.md, each in its own code block, covering every chapter, trap and v3 addition in the plan; then &quot;Facts needed&quot; and &quot;Self-check&quot; (Task 4).
+Take the previous lesson&#x27;s closing question and homework from its plan. Never invent a fact that is not in the report.</textarea></section>
 </main>
 <script>
+const lid=document.getElementById('lid');
+const tpls=[...document.querySelectorAll('textarea[data-tpl]')].map(t=>[t,t.value]);
+function fill(){const v=(lid.value||'').trim().toUpperCase()||'{ID}';tpls.forEach(([t,s])=>t.value=s.split('{ID}').join(v));}
+lid.addEventListener('input',fill);fill();
 document.querySelectorAll('button[data-t]').forEach(b=>b.addEventListener('click',()=>{
  const t=document.getElementById(b.dataset.t);
  const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)};
- navigator.clipboard.writeText(t.value).then(done).catch(()=>{t.focus();t.select();document.execCommand&&document.execCommand('copy');done()});
+ navigator.clipboard.writeText(t.value).then(done).catch(()=>{t.focus();t.select();try{document.execCommand('copy')}catch(e){}done()});
 }));
 </script>
