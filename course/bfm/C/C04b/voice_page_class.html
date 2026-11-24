@@ -1,0 +1,150 @@
+<title>C04b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C04b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C04b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · RTGS and NEFT: two pipes for rupees + Chapter 2 · The bank network: INFINET, SFMS, and SWIFT + Chapter 3 · Market plumbing: NDS-OM, CCIL, DvP, STP, and depositories (N001–N078)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N078", "text": "[warmly] Hello, everyone. Settle in with your notebook; tonight we trace the pipes that carry India's money and bonds. Put your phone on silent and keep your basic calculator nearby. First, one quick recall from last class. What is the minimum daily Cash Reserve Ratio a bank must maintain across a reporting fortnight now? Ninety-nine per cent, raised from ninety per cent in October twenty twenty-six. Good start. Now from earlier in Module A. Which global network carries cross-border payment messages between banks without moving money itself? SWIFT. Keep that rule in mind, because we will meet its Indian twin tonight. Picture South Bank's treasury desk in Chennai at four fifty-five. Dealer Meera just bought three hundred crore of government bonds. Two questions hit her desk at once. Which pipe settles her bond trade, and when is settlement truly final? Some of you think R-T-G-S handles everything large. Others think C-C-I-L settles the trade on a net basis. Hold your guess. By the end of this class, you will pick the right pipe for every treasury and branch payment. Chapter one: R-T-G-S and N-E-F-T. Both are Centralised Payment Systems owned and operated directly by the Reserve Bank of India. Start with R-T-G-S, Real Time Gross Settlement. It settles fund transfers continuously, one by one, without any netting. Because settlement happens directly in R-B-I's own books, every R-T-G-S payment is final and irrevocable the moment it posts. Remember the limits. R-T-G-S carries a minimum of two lakh rupees, and no upper ceiling set by R-B-I. It began on twenty-six March two thousand four, and runs twenty-four by seven since fourteen December two thousand twenty. Now look at N-E-F-T, National Electronic Funds Transfer. Many of you think N-E-F-T settles each transfer individually. It does not. N-E-F-T uses Deferred Net Settlement, grouping transfers into forty-eight half-hourly batches every single day. Batches run from twelve-thirty at night to midnight on all days. N-E-F-T launched in November two thousand five. What minimum and maximum amount does R-B-I prescribe for N-E-F-T? Think for three seconds. None. R-B-I sets no minimum or maximum on N-E-F-T, though a bank's board may fix its own risk cap. Watch one exception: a walk-in customer without an account can remit cash via N-E-F-T up to fifty thousand rupees per transaction. Both pipes are credit-push only, meaning only the sender pushes funds out; neither can pull money from another account. Both offer a free beneficiary name look-up before sending, and use an eleven-character I-F-S-C: four bank letters, zero, six branch characters. R-B-I waived its processing fee in July two thousand nineteen; online N-E-F-T is free for savings bank account holders. For large transfers, any non-individual R-T-G-S or N-E-F-T of fifty crore or more requires a twenty-digit L-E-I. In India, L-E-I is issued by L-E-I-L, a C-C-I-L subsidiary. Remember R-T-G-S uses a twenty-two-character U-T-R code. Under R-T-G-S, banks must credit within thirty minutes, or return uncreditable funds within one hour, or before end-of-day. If a bank delays returning an R-T-G-S payment, it must pay automatic compensation at current Repo Rate plus two per cent. Let us calculate one. A client sends fifty lakh via R-T-G-S; the account is closed, and return is two days late. Assume Repo Rate is five point five zero per cent. Add two per cent to get seven point five zero per cent. Your turn on the calculator: multiply fifty lakh by seven point five per cent, times two, divided by three hundred sixty-five. Two thousand fifty-four rupees and seventy-nine paise. Watch the trap: Bank Rate plus three is for C-R-R shortfall, not R-T-G-S. Pause check for chapter one. Question one: a customer wants to send one lakh fifty thousand rupees. R-T-G-S or N-E-F-T? N-E-F-T, because R-T-G-S starts at two lakh rupees. Question two: how many batches does N-E-F-T run daily? Forty-eight half-hourly batches. Question three, the twist: a company sends sixty crore by N-E-F-T. Is an L-E-I needed? Yes, L-E-I applies to both pipes from fifty crore upward. Remember: R-T-G-S is gross and instant; N-E-F-T is batched and net. Chapter two: the wires underneath those pipes. Recall chapter one: why is an R-T-G-S payment final and irrevocable? Because settlement occurs directly in R-B-I's books. Good. Now, how do payment messages safely reach R-B-I from your branch? Over I-N-F-I-N-E-T, the Indian Financial Network. Write this down: INFINET is a Closed User Group M-P-L-S network for Indian banks. Picture INFINET as a private highway reserved strictly for banks and financial institutions, completely separate from the public internet. It was built in nineteen ninety-nine by I-D-R-B-T in Hyderabad, and is now operated round the clock by I-F-T-A-S. I-F-T-A-S stands for Indian Financial Technology and Allied Services, a wholly owned subsidiary of the Reserve Bank of India. If INFINET is the private road, what are the locked envelopes travelling on it? S-F-M-S, Structured Financial Messaging System. Also created by I-D-R-B-T and run by I-F-T-A-S, S-F-M-S carries R-T-G-S, N-E-F-T, and government payment messages inside India. Here is the clean contrast with SWIFT: S-F-M-S is India's domestic messaging standard; SWIFT carries cross-border messages worldwide. Watch the limit of this analogy: neither S-F-M-S nor SWIFT settles money. They carry authenticated instructions; bank accounts settle later. Pause check for chapter two. Question one: which organisation operates INFINET and S-F-M-S twenty-four by seven today? I-F-T-A-S, the wholly owned R-B-I subsidiary; I-D-R-B-T built them earlier. Question two: does S-F-M-S settle funds between banks? No, messaging only; settlement happens in R-B-I's books. One thing to remember: INFINET is the road, S-F-M-S is the envelope. Chapter three: answering Meera's bond question. First, recall chapter two: what is the domestic Indian twin of SWIFT? S-F-M-S. Now follow Meera's three hundred crore G-sec trade from screen to settlement. First, where did she buy the bond? On N-D-S-O-M, Negotiated Dealing System – Order Matching. First, clear a famous date trap heard in many public classes. R-B-I launched N-D-S on fifteen February two thousand two, and launched N-D-S-O-M on one August two thousand five. Owned by R-B-I and managed by Clearcorp, N-D-S-O-M is screen-based, anonymous, and purely order-driven for secondary G-sec trading. Orders match strictly on price-time priority: best price first, and earliest order first when two orders quote the same price. Under R-B-I's twenty twenty-five Master Direction, updated April twenty twenty-six, three access routes exist for N-D-S-O-M today. Direct Access covers banks, primary dealers, N-B-F-Cs, AIFIs, mutual funds, insurers, and pension funds holding S-G-L and C-C-I-L membership. Indirect Access goes through a direct member, while Stock Broker Connect lets retail demat investors reach N-D-S-O-M via a broker. The moment Meera's order matches, Straight Through Processing, or S-T-P, sends her trade straight to C-C-I-L with zero manual re-keying. Stop and break a classic misconception. Many of you think C-C-I-L is a market regulator like R-B-I or S-E-B-I. It is not. C-C-I-L is an authorised payment system and Central Counterparty, regulated by R-B-I under the P-S-S Act. Through novation, C-C-I-L steps in the middle: it becomes buyer to every seller and seller to every buyer. It guarantees settlement using a Settlement Guarantee Fund, initial and mark-to-market margins, and committed bank credit lines. Remember Clearcorp's platforms: N-D-S-O-M for G-secs, T-R-E-P-S for triparty repo, C-R-O-M-S for repo, F-X-CLEAR for dollar-rupee, and A-S-T-R-O-I-D for O-I-S. Next, how does C-C-I-L prevent Meera from paying cash without receiving bonds? Through Delivery versus Payment, or D-v-P. D-v-P One is gross-gross. D-v-P Two is gross securities, net funds. D-v-P Three is net-net for both legs. Since two April two thousand four, C-C-I-L settles G-secs on D-v-P Three, netting both bonds and cash across the day. Test D-v-P Three on Meera's desk. She buys three hundred crore at par, and sells one eighty crore at one hundred one. Net the bonds first: three hundred minus one hundred eighty equals one hundred twenty crore of bonds received. Next, sell inflow: one eighty times one hundred one divided by one hundred equals one eighty-one point eight zero crore. Subtract from three hundred crore: Meera's bank pays one hundred eighteen point two zero crore net, not three hundred crore gross. Why is D-v-P harder in cross-border forex? Dollars settle in New York hours after rupees settle in Mumbai. That time-zone gap creates principal risk if a counterparty fails mid-day. Finally, where are securities actually stored electronically? Banks hold G-secs in R-B-I's S-G-L. Equities, corporate bonds, C-Ps, and C-Ds sit in N-S-D-L or C-D-S-L under S-E-B-I. Pause check for chapter three. Question one: on N-D-S-O-M, how are competing orders matched? Strict price-time priority. Question two: under D-v-P Three, are securities settled gross or net? Net — both legs are netted. Question three: which Clearcorp platform handles interbank dollar-rupee spot and swaps? F-X-CLEAR. Remember: N-D-S-O-M matches anonymously, S-T-P sends it straight, and C-C-I-L guarantees net D-v-P Three settlement."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · The law and the new overseer: PSS Act and PRB + Close (N079–N103)", "turns": [{"speaker": "Teacher", "first": "N079", "last": "N103", "text": "Chapter four: the law behind every pipe. Recall chapter three: is C-C-I-L a regulator or a regulated entity? Regulated, as an authorised payment system. The governing law is the Payment and Settlement Systems Act, two thousand seven. Assented in December two thousand seven, it took effect on twelve August two thousand eight. Remember four core sections. Section three makes R-B-I the designated regulator. Section four forbids operating any payment system without R-B-I authorisation. Watch section thirty-four: stock exchanges and clearing corporations set up under stock exchanges are outside this Act. If R-B-I refuses or revokes authorisation, the operator may appeal to the Central Government within thirty days under section nine. Section twenty-three gives statutory finality to both gross and net settlements, protected even if a participating bank goes insolvent. Section twenty-five makes dishonour of an electronic fund transfer for insufficient funds a criminal offence, just like a bounced cheque. Now for the biggest twenty twenty-five update. Many old books still name B-P-S-S as R-B-I's oversight board. On nine May two thousand twenty-five, the Payments Regulatory Board, or P-R-B, replaced B-P-S-S under amended section three. The P-R-B has six members: three from R-B-I, and three nominated by the Central Government. On R-B-I's side sit the Governor as Chairperson, the Deputy Governor for payments, and the Executive Director for payments. On the Government's side sit three nominees, including Finance and I-T Secretaries. R-B-I's Principal Legal Adviser is permanent invitee. Pause check for chapter four. Question one: which board oversees India's payment systems today, and since what date? The Payments Regulatory Board, from nine May two thousand twenty-five. Question two: how many days to appeal a refusal? Thirty days, under section nine. One thing to remember: P-S-S Act protects net finality, and the six-member P-R-B leads oversight. Now settle Meera's desk in one mixed check. First: how does her three hundred crore G-sec trade settle? Via S-T-P to C-C-I-L on D-v-P Three, final under section twenty-three. Second: the walk-in customer with forty thousand rupees cash? N-E-F-T, allowed up to fifty thousand rupees in cash. Third: a sixty crore corporate R-T-G-S needs what extra code? A twenty-digit L-E-I, mandatory from fifty crore upward. Now look at the blank branch on your mind map. Say all four nodes aloud before I reveal them: the rupee pipes, the G-sec screen, the central guarantor, and the law. R-T-G-S and N-E-F-T, N-D-S-O-M, C-C-I-L, and the P-S-S Act with P-R-B. You now command this entire payment-systems unit. Tonight's homework: draw that four-node map from memory, and write the launch years of N-D-S, R-T-G-S, N-D-S-O-M, and N-E-F-T. Next class, we stay on Meera's bond desk and ask: when R-B-I raises rates, why do bond prices drop immediately? [warmly] That's the plumbing of Indian banking, start to finish. Rest well tonight, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

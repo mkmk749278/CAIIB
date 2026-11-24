@@ -1,0 +1,150 @@
+<title>C02b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C02b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C02b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · The LAF corridor: floor, middle, and ceiling + Chapter 2 · The revised liquidity framework and auctions (N001–N081)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N081", "text": "[warmly] Good to have you with me today. Keep your pen and calculator handy; tonight we step inside RBI's liquidity desk. Two quick checks first. From last class: can a bank prematurely close a Certificate of Deposit? No. Certificates of Deposit allow no premature closure and no buyback by the issuer. From two classes back: what is the core idea of an integrated treasury? One combined desk managing domestic funds, forex, and investments together instead of separate silos. In December 2025, Treasury carried twenty-seven of one hundred questions, mostly plain rules and liquidity tools. Stay with me for fourteen minutes. You will pick the right liquidity window, read auction bids, and separate every global benchmark. Picture a Mumbai treasury desk at six forty-five on a Thursday evening. Dealer Raghav watches the call-money screen. Cash is tight. The call rate jumps to five point six five percent, above the five point five zero repo rate. My question: which RBI window caps how high Raghav's overnight borrowing cost can climb tonight? Some picked fixed-rate reverse repo. Others picked the Marginal Standing Facility. Hold your answer; chapter one settles it. Chapter one: the L-A-F corridor. Picture a three-lane road beside last class's tenor ladder. The car on this road is the overnight Weighted Average Call Rate, W-A-C-R. That is RBI's single operating target. In the middle lane sits the policy repo rate: five point five zero percent from seven October 2026. Two guardrails sit twenty-five basis points on either side, making a symmetric fifty-basis-point corridor. The floor is the Standing Deposit Facility, S-D-F, at five point two five percent. The ceiling is the Marginal Standing Facility, M-S-F, at five point seven five percent, equal to the Bank Rate. Remember my opening question? M-S-F caps Raghav's overnight borrowing cost at five point seven five. Stop for a classic trap. Many think S-D-F absorbs cash, so RBI must give Government securities as collateral. Fixed-rate reverse repo needed collateral. S-D-F needs zero collateral. None at all. S-D-F replaced fixed-rate reverse repo as floor in April 2022, under the 2018 amendment to Section 17 of the RBI Act. Write this down: S-D-F has a one-crore minimum, no upper cap, and counts toward S-L-R, not C-R-R. All L-A-F participants, including Standalone Primary Dealers, may place overnight deposits in S-D-F. At the ceiling, M-S-F lets eligible banks borrow overnight by dipping up to two percent of N-D-T-L into stipulated S-L-R. That N-D-T-L is from the end of the second preceding fortnight, and needs no S-L-R default waiver. Covid trap: the old three-percent dip ended in December 2021. Two percent is the current rule. M-S-F bids start at one crore rupees in one-crore multiples, and Standalone Primary Dealers cannot use M-S-F. Both S-D-F and M-S-F run daily from seven P-M to eleven fifty-nine P-M, with weekend reversals allowed. Quick sum. Raghav's bank has N-D-T-L of fifteen thousand crore rupees. What is its maximum S-L-R dip? Press one five zero zero zero, times two, percent, equals: three hundred crore rupees. Suppose he borrows two hundred crore overnight at five point seven five percent on a three-sixty-five day year. Press two zero zero zero zero, times five point seven five, divide by one hundred, divide by three six five: three point one five lakh. Your turn. Another bank has N-D-T-L of twenty-two thousand five hundred crore. Find its maximum M-S-F S-L-R dip. Pause now. Press two two five zero zero, times two, percent: four hundred fifty crore. Six seventy-five is the old three-percent trap. Pause check. One: what is RBI's operating target of monetary policy? Overnight W-A-C-R. Two: does S-D-F balance count toward C-R-R or S-L-R? S-L-R only, not C-R-R. Three, the twist: can a Standalone Primary Dealer borrow under M-S-F? No. S-P-Ds access S-D-F and repo auctions, not M-S-F. Remember one thing: S-D-F is the collateral-free floor at repo minus twenty-five; M-S-F is the two-percent S-L-R ceiling at repo plus twenty-five. Chapter two: RBI's liquidity auctions. Recall first: which corridor window needs zero collateral? S-D-F, at five point two five percent. Now suppose the call rate drifts away from repo all week. How does RBI steer it? Many still read that fourteen-day Variable Rate Repo is RBI's main liquidity operation. That was the 2020 framework. On thirty September 2025, RBI discontinued fourteen-day V-R-R and V-triple-R as the main operation. Short-term liquidity now runs primarily through seven-day V-R-R and V-triple-R, plus discretionary tenors from overnight up to fourteen days. RBI normally gives at least one day's advance notice, keeping same-day flexibility when needed. Pre-2020 trap: fixed-rate overnight repo capped at zero point two five percent of N-D-T-L ended in February 2020. V-R-R and V-triple-R auctions run on e-Kuber, with a one-crore minimum bid and multiple-price allotment. Multiple-price means each winner pays or receives its own bid rate, not a uniform cut-off rate. In a V-R-R injection, bids at or below repo are rejected. Remaining bids sort descending—highest bids win first. In a V-triple-R absorption, bids at or above repo are rejected. Remaining bids sort ascending—lowest bids win first. Try a V-R-R auction: RBI notifies fifty thousand crore; repo is five point five zero percent. Bank A bids five point five eight for twenty thousand crore. Bank B bids five point five six for eighteen thousand. Bank C bids five point five four for twenty-four thousand. Bank D bids five point five zero for ten thousand. Who is rejected outright? Bank D, because five point five zero equals repo. Press fifty thousand, minus twenty thousand, minus eighteen thousand. Twelve thousand crore goes to Bank C at five point five four—the cut-off, fifty percent pro-rata. Trap: Bank A still pays five point five eight, and Bank B five point five six, because V-R-R is multiple-price. For durable liquidity, RBI keeps Open Market Operations, long-term V-R-R or V-triple-R beyond fourteen days, and forex swap auctions. On four November 2026, RBI also constituted the Technical Consultative Committee for Financial Markets, meeting at least quarterly. Pause check. One: in a V-triple-R absorption auction, do highest or lowest bids win first? Lowest bids, because RBI pays less interest. Two: name the three durable liquidity tools. O-M-Os, long-term V-R-R or V-triple-R beyond a fortnight, and forex swap auctions. Remember one thing: seven-day auctions lead transient liquidity now, and multiple-price means highest wins V-R-R, lowest wins V-triple-R. Chapter three: domestic and global links. Recall from chapter two: how much advance notice does RBI normally give for V-R-R? At least one day. Now zoom out: three bridges connect Indian and global markets. Bridge one is interest parity and forex swaps, covered earlier in this module. Global rate shifts feed into forward premia. Bridge two is Foreign Portfolio Investor debt flows. Under RBI's 2025 Master Direction, F-P-Is use three main debt routes. General Route caps sit at six percent of Central G-secs, two percent of State securities, and fifteen percent of corporate debt. Under the Fully Accessible Route, F-A-R, non-residents buy specified Central G-secs with zero investment ceiling until maturity. Break two 2026 traps. Many heard the Voluntary Retention Route, V-R-R, was abolished on one April 2026. Not abolished. Only its standalone two-point-five lakh crore cap folded into General Route limits; the three-year retention channel still runs. Second: on five June 2026, RBI withdrew all three General Route G-sec limits—short-term, security-wise, and concentration limits. Bridge three: banks and equities. An A-D Category-One bank's overseas borrowing cap is unimpaired Tier One capital, or ten million dollars, whichever is higher. Above fifty percent of Tier One needs a Board policy, twelve percent C-R-A-R, and three-year maturity. Export-credit borrowings sit outside this cap. Quick sum: Tier One capital is four hundred twenty crore rupees at eighty-four per dollar. Press four two zero, times ten, divide by eighty-four. Fifty million dollars. That beats ten million, so fifty million is the ceiling. On equities, A-D-Rs and G-D-Rs are foreign-currency receipts backed by Indian rupee shares. Who bears the currency risk? The overseas holder. If a share rises six percent to nine zero one while the rupee falls from eighty-five to ninety-one, press nine zero one, divide by ninety-one, times one hundred: a one-thousand-dollar stake drops to nine hundred ninety dollars eleven cents. Domestically, bank treasuries hold debt and equity across H-T-M, A-F-S, and F-V-T-P-L including H-F-T. Recognised stock exchanges provide active-market price discovery, liquidity, and mandatory fifteen-minute reporting for over-the-counter corporate bond trades. Pause check. One: which F-P-I debt route has zero ceiling on specified G-secs?"}]}, {"file": "part_2.mp3", "section": "Chapter 2 · The revised liquidity framework and auctions (N082–N108)", "turns": [{"speaker": "Teacher", "first": "N082", "last": "N108", "text": "Fully Accessible Route, F-A-R. Two: does overseas borrowing for export credit count inside the Tier One ceiling? No. Export-credit borrowings sit outside that ceiling. Remember one thing: F-A-R has no cap, V-R-R's cap merged into General Route in April 2026, and A-D-R holders bear rupee risk. Chapter four: benchmarks. Recall from chapter three: when were General Route G-sec concentration limits withdrawn? Five June 2026. Now, older textbooks still mention LIBOR as if banks price loans off it today. LIBOR is permanently gone. Panel dollar LIBOR and MIFOR ceased after thirty June 2023; synthetic dollar LIBOR ended thirty September 2024. Five overnight Alternative Reference Rates replaced it. S-O-F-R anchors dollars, secured by Treasury repo, run by the New York Fed. S-O-N-I-A for pounds, euro-S-T-R for euros, T-O-N-A for yen—all unsecured—and S-A-R-O-N for Swiss francs, secured by repo. In India, F-B-I-L Modified MIFOR replaced MIFOR, combining compounded Adjusted S-O-F-R with the F-B-I-L Forward Premia curve. F-B-I-L is regulated under RBI's 2023 Financial Benchmark Administrators Directions, requiring five crore net worth for significant benchmarks. F-B-I-L administers all six Significant Benchmarks: Overnight MIBOR, Dollar-Rupee Reference Rate, T-Bill, G-Sec valuation, S-D-L valuation, and Modified MIFOR. On seven July 2025, F-B-I-L launched S-O-R-R, the Secured Overnight Rupee Rate, built from Basket Repo and TREPS trades. From four August 2025, Overnight MIBOR also shifted to a three-hour morning window, published at twelve forty-five P-M. Last myth check: some say MIBOR is usable only by interbank participants. True or false? False. Under RBI's 2025 Rupee Interest Rate Derivatives Directions, mutual funds, N-B-F-Cs, insurers, corporates, and non-residents use MIBOR-O-I-S. Pause check. One: which U-S dollar benchmark replaced LIBOR, and is it secured or unsecured? S-O-F-R, secured by Treasury repo. Two: which secured rupee benchmark did F-B-I-L launch in July 2025? S-O-R-R, the Secured Overnight Rupee Rate. Remember one thing: LIBOR and MIFOR are gone; S-O-F-R leads dollars, Modified MIFOR leads dollar-rupee swaps, and F-B-I-L runs six significant benchmarks plus S-O-R-R. Final mixed check. One: S-D-F rate when policy repo is five point five zero? Five point two five percent. Two: in a V-R-R auction, do highest or lowest bids win first? Highest bids, paying their own rate. Three: who bears exchange-rate risk on an A-D-R? The overseas A-D-R holder, because the underlying shares are in rupees. Look at the blank money-market branch now. From memory, name the four nodes we added tonight. Corridor, liquidity framework, global links, and benchmarks. You can now handle every L-A-F, F-P-I debt route, and benchmark question. Homework: compute one day's interest on one hundred crore at S-D-F versus M-S-F. Next class: turning a T-Bill price into yield. [warmly] That completes the corridor, global links, and benchmarks. Close the notebook for tonight, and I'll meet you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
