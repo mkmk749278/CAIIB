@@ -28,6 +28,7 @@ videos running.
 | A16 | "Hi, friends. Tonight money leaves India, and we stand at the counter that lets it go." | "That's money out of India, by the rules. Switch off, rest up, and I'll see you in the next class." |
 | A16b | "Good to see you again. Same family as last class, bigger plans: money that owns things abroad." | "That's the rest of the remittance story. Rest your eyes now, and I'll see you in the next class." |
 | A17 | "Welcome back to the desk, everyone. Today money comes home from abroad, and we sort it into four neat drawers." | "That's the four drawers and the homecoming drawer sorted. Put your notes away, rest up, and I'll meet you next class." |
+| A18 | "Good to see you back at the desk, everyone. Today we open two doors — FEMA and Income-tax — and settle N-R-I loans." | "That wraps up residency and N-R-I loans. Close the notebook, take a breather, and I'll see you next class." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
 order, so they stand; change A07's lines if it is ever re-voiced.

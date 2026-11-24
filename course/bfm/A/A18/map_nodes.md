@@ -1,0 +1,8 @@
+# A18 · Map Nodes (c1, 2026-11-24)
+Module A Mind Map Branch: People abroad Nodes added by Lesson A18 (in order of appearance in A18_script_class.md, matching course/bfm/A/plans_A.md §A18):
+1. residency — Two independent doors:
+2. FEMA s. 2(v): >182 days in preceding FY + intention/purpose (leaving/returning for employment, business, or uncertain period flips status on Day 1; tourist/temporary visit stays NR even >182d).
+3. Income-tax Act, 2025 (w.e.f. 1 Apr 2026): current tax year (s. 3(1)) physical days — s. 6(2) (≥182d OR ≥60d+365d/4 yrs); s. 6(3)–(4) 182d exceptions; s. 6(5) >₹15L visitor (120d+365d); Deemed Resident s. 6(7) (Indian citizen, >₹15L, stateless tax, 0 days); RNOR s. 6(13) (NR 9/10 yrs, ≤729d/7 yrs, 120–181d visitor, Deemed Resident); s. 5 income scope (ROR global, RNOR Indian + Indian-controlled foreign business, NR Indian only).
+4. NRI loans — Two facilities:
+5. Against deposits (A3.7): NRE/FCNR(B) no regulatory cap, usual margin, FB & NFB; no lien on NRE SB, no other-bank TD; barred end-uses (relending, agri/plantation, real estate business, + Reg. 3A TDR/farmhouses/chit/Nidhi); no repatriation; third-party no FX benefit + MCLR/EBLR (own deposit exempt); account-holder repayment (adjust deposit / inward / NRO); no premature withdrawal; overseas loans allowed vs NRE/FCNR(B) (not NRO).
+6. Housing loans (A3.8): ADs & HFCs at resident parity (LTV ≤90% ≤₹30L, ≤80% >₹30–75L, ≤75% >₹75L; stamp duty excluded >₹10L); no credit to NRE/FCNR(B); stage-linked disbursal; equitable mortgage; 4 repayment sources (inward, NRE/FCNR(B)/NRO, rent from that property, close relative s. 2(77)).
