@@ -22,13 +22,18 @@ for d in dirs:
         if k not in best or f["ModTime"] > best[k][0]:
             best[k] = (f["ModTime"], d["ID"], f["Name"])
 got = {}
-for (lid, kind), (mt, fid, name) in sorted(best.items()):
-    out = f".cache/gemini_in/{lid}"
-    if lid not in got:
-        shutil.rmtree(out, ignore_errors=True); os.makedirs(out); got[lid] = 0
-    with tempfile.TemporaryDirectory() as t:
-        run("copy", "--drive-root-folder-id", fid, "--drive-export-formats", "txt", "--include", name.rsplit(".", 1)[0] + "*", "gd:", t)
-        for x in os.listdir(t):
-            shutil.move(os.path.join(t, x), os.path.join(out, f"{lid}_{kind}.txt")); got[lid] += 1
+folders = sorted({fid for (_, fid, _) in best.values()})
+with tempfile.TemporaryDirectory() as t:
+    for fid in folders:  # one copy per folder (per-file copies took > 10 minutes)
+        os.makedirs(f"{t}/{fid}")
+        run("copy", "--drive-root-folder-id", fid, "--drive-export-formats", "txt", "--transfers", "8", "gd:", f"{t}/{fid}")
+    for (lid, kind), (mt, fid, name) in sorted(best.items()):
+        out = f".cache/gemini_in/{lid}"
+        if lid not in got:
+            shutil.rmtree(out, ignore_errors=True); os.makedirs(out); got[lid] = 0
+        stem = name.rsplit(".", 1)[0] if "." in name else name
+        for x in os.listdir(f"{t}/{fid}"):
+            if x.rsplit(".", 1)[0] == stem:
+                shutil.copy(f"{t}/{fid}/{x}", f"{out}/{lid}_{kind}.txt"); got[lid] += 1; break
 for lid, n in got.items():
     print(f"{lid}: {n} files")
