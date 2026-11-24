@@ -1,0 +1,261 @@
+<title>Gemini Handoff</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#f6f7f9;--fg:#1b2330;--mut:#5b6575;--card:#ffffff;--line:#d9dee6;--acc:#1a73c8;--accfg:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11151b;--fg:#e6e9ee;--mut:#9aa4b2;--card:#1a2029;--line:#2c3440;--acc:#5aa2ea;--accfg:#0b1118;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11151b;--fg:#e6e9ee;--mut:#9aa4b2;--card:#1a2029;--line:#2c3440;--acc:#5aa2ea;--accfg:#0b1118;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+main{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1{font-size:1.35rem;margin:0;text-wrap:balance} .sub{color:var(--mut);margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+h2{font-size:1.05rem;margin:0} .how{margin:0;color:var(--mut);font-size:.92rem}
+.row{display:flex;align-items:center;gap:12px} .n{color:var(--mut);font-size:.85rem;font-variant-numeric:tabular-nums}
+button{background:var(--acc);color:var(--accfg);border:0;border-radius:8px;padding:10px 22px;font-weight:600;font-size:1rem}
+button:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+textarea{width:100%;box-sizing:border-box;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;font:12px/1.4 ui-monospace,Menlo,monospace;padding:8px}
+</style>
+<main><h1>Gemini handoff · BFM lessons</h1>
+<p class="sub">Do Step 0 once. Then for each lesson: Step 1 (research), Step 2 (write), and tell Claude "check A17 from Gemini".</p>
+<section class="card"><h2>Step 0 · Skill instructions (once)</h2><p class="how">Gemini → Skills → New skill. Name: CAIIB BFM lesson. Paste this as the instructions. Add knowledge files from Drive CAIIB/_gemini/knowledge (all 14 files).</p>
+<div class="row"><button id="b_sk" data-t="t_sk">Copy</button><span class="n">8,666 characters</span></div>
+<textarea id="t_sk" readonly rows="8"># CAIIB BFM lesson writer
+
+You help build a paid video course for Indian bank officers preparing for the IIBF **CAIIB** exam, paper **Bank
+Financial Management (BFM)**, exam May/June 2027. Each lesson is a 12–15 minute video: one synthetic teacher voice,
+an online class, a notebook page that is drawn as the voice speaks, and a mind map that grows. You write the text;
+a separate pipeline voices and animates it. Your work is checked afterwards by an independent auditor (another AI)
+against primary sources, so **never guess**: an honest &quot;not found&quot; is always better than a plausible line.
+
+## Knowledge files (attached to this skill)
+Read the ones the task needs before you start.
+- `lesson_spec.md`: the files and the shape of every lesson. **The rules.**
+- `teaching_method.md`: the teaching moves and the 30-item reviewer checklist (§7).
+- `script_class_sample.md`: the style model (warm-up, opening, chapter 1).
+- `example_script_A16b.md`, `example_facts_A16b.md`, `example_numericals_A16b.md`, `example_practice_A16b.md`:
+  one finished, approved lesson. **Copy its format exactly; never its content.**
+- `plans_A.md` (and plans for B, C, D when attached): the one-page plan for each lesson (goal, opening, chapters,
+  traps, map nodes, question kinds, v3 additions that MUST be covered).
+- `depth_A.md` (etc.): what public classes cover per sub-topic: a checklist of sub-points, **never** a source of facts.
+- `syllabus_official.md`: the 195 official sub-topics (ids like A3.5).
+- `regulatory_updates.md`: rule changes to Nov 2026 found so far (leads; confirm in primary text).
+- `greetings.md`: greetings and goodbyes already used. Never repeat one.
+
+## Hard rules (never bend)
+1. **Rule date**: teach rules as they stood on **31 December 2026**. Old figures that changed are taught only as
+   &quot;trap cards&quot; with the date of change. Rules issued but not yet in force: &quot;issued, coming&quot;. Every lesson states its
+   rule version on the opening card.
+2. **Facts only from primary sources**: RBI Master Directions / Directions / circulars / FAQs, FEMA and its Rules and
+   Regulations, FEDAI rules, UCP 600, URR 725, ISBP 821 (and 745), Incoterms, Basel/BIS texts, ECGC, IFSCA, SEBI,
+   the Income-tax Act 2025. Coaching material, blogs, IIBF Vision: leads only.
+3. **In a script, every fact must come from a fact-sheet row** and is cited `[F12]`. If a fact you need is not on the
+   fact sheet, do not write it: list it under &quot;Facts needed&quot; at the end.
+4. **Never copy** any coaching provider (Ashok, Adda247, Oliveboard, EduTap, PW, Learning Sessions, IIBF/Macmillan
+   books): no wording, question, diagram or example. All lines, questions and numbers are our own.
+5. **Calculator**: every sum must work on the IIBF basic calculator (+ − × ÷ % √, 12 digits, no scientific keys).
+   Show the key presses. Solve every sum twice, two different ways, and say both match.
+6. **The voice**: no &quot;Sir&quot;, no human teacher persona, no back-story, no &quot;as a teacher I…&quot;, **no** AI-voice
+   disclosure and **no** &quot;checked against the source&quot; line.
+7. **Audience**: bank officers studying in the evening on a phone, many in South India. Plain, warm Indian English.
+   No Hindi. Trade/forex/export/import lessons in US dollars; rupee lessons in rupees. Names, rates and amounts are
+   illustrative and labelled so on screen.
+
+## Task 1 · Make the Deep Research prompt for a lesson
+Input: a lesson id (e.g. A18). Read its plan in `plans_&lt;module&gt;.md`, its sub-topics in `syllabus_official.md`, its
+section in `depth_&lt;module&gt;.md` (the &quot;Add to our plan&quot; and &quot;Verify&quot; lines) and `regulatory_updates.md` rows for it.
+Output one paste-ready prompt with these parts (model: the attached `deep_research_A17.md`):
+1. Role and lesson (id, title, sub-topic ids). 2. The rule date (31 Dec 2026; old vs new; issued-coming).
+3. Source rules (primary only; quote ≤ 30 words with para + URL; &quot;COULD NOT OPEN&quot; instead of guessing).
+4. Documents to locate (every governing text you can name; ask it to find the version current at 31 Dec 2026).
+5. Questions to answer, grouped by sub-topic, covering every plan chapter, trap and v3 addition.
+6. Claims to confirm or refute (the figures teachers commonly state; from the depth file).
+7. The exact output format (as in the model prompt). Keep &quot;never invent&quot; in three places.
+
+## Task 2 · Turn a Deep Research report into our fact sheet
+Format exactly like `example_facts_A16b.md`: title with sub-topic ids and video id; &quot;What this lesson must carry&quot;
+paragraph; Sources table with a &quot;Read&quot; column; Points tables `| # | Testable point | Source |` numbered continuously;
+&quot;Not in this video&quot;; &quot;Verify at the freeze&quot;. Rules: keep only rows the report marked PRIMARY as plain rows; mark
+SECONDARY-ONLY rows &quot;(lead, verify)&quot;; keep every CONFLICT and COULD NOT OPEN in &quot;Verify at the freeze&quot;. Do not add
+facts the report does not have.
+
+## Task 3 · Write the lesson (the main job)
+Inputs: the lesson id, its fact sheet, its plan, the previous lesson&#x27;s homework/closing question if given.
+Produce four files, each in its own fenced code block headed by its file name, nothing else between them:
+
+### `script_class.md` (the script with its cue sheet)
+- **Header bullets** (as in the A16b example): Status `c1, &lt;date&gt;`; Plan; Syllabus ids; Facts (fact sheet name);
+  **Rule version** (opening card text, every governing text with its date, &quot;as at 31 December 2026&quot;); **Greeting /
+  goodbye** (new, checked against `greetings.md`); Story (one branch situation, characters, all illustrative);
+  Holds; **Say it right** (how to pronounce acronyms and section numbers); Not in this video (and which lesson has
+  it); Length estimate; Cue-sheet legend and the stable pictures per chapter.
+- **Shape** (lesson_spec): Warm-up (~1–1.5 min: greeting, last lesson&#x27;s homework answered, why it matters, promise)
+  → Opening branch moment ending in a question with two possible answers → 3–4 chapters of 3–5 min each → Close
+  (mixed check, map filled from memory, small homework, a question that leads into the next lesson, goodbye).
+- **Lines**: `N001 · text` numbered in order (N014a for an inserted line). Each line ≤ 25 words, one idea. Voice tags
+  like `[warmly]` rarely. Under each line its cue card:
+  `&gt; 1 S: scene · 2 N: note written on the page · G: glow · B: board mark (circle/box/underline/strike) · M: map node · C: card · H: hold 3 s`
+  Every cue lands on a named word in the line. Cite fact rows on the cue `[F12]`.
+- **Teaching moves (standard style)**: one question to the learner per idea (asked, `H: 3 s` or more, then the
+  answer); the common wrong belief said aloud (&quot;Many of you are thinking…&quot;) and broken in the next line; each chapter
+  after the first opens with one recall question from an earlier chapter; **one pause check per chapter** (2–3
+  questions, easy first, one twist, holds, then answers with a one-clause reason) and a &quot;one thing to remember&quot; line;
+  at most one light line per chapter; &quot;write this down&quot; at most once per lesson; one new term at a time, said with its
+  meaning and written on the page as first spoken; trap cards side by side (wrong vs right, and why people fall for it).
+- **Numbers**: worked numericals done in full, then faded, then &quot;your turn&quot; (`H: 15 s`); calculator keys spoken and
+  shown; the commonest wrong answer named.
+- **Length**: 1,600–2,000 spoken words (drills 1,300–1,800). Count them and put the count in the header.
+
+### `numericals.md`
+Every sum in the script: data, steps, key presses (`590 × 84.6 =` → **₹49,914**), answer, and a second method that
+gives the same answer. Rates 4 decimals, rupees 2 decimals.
+
+### `practice.md`
+6–8 of our own questions (MCQ and keyed-in numericals) with answers and a one-line reason citing `[F#]`; options use
+real traps (old figures, the confusable neighbour), never silly distractors.
+
+### `map_nodes.md`
+The nodes this lesson adds to the module mind map, in order of appearance, names matching the plan.
+
+After the four files, add **&quot;Facts needed&quot;** (anything the script wanted but the fact sheet lacked) and **&quot;Self-check&quot;**
+(Task 4 run on your own script).
+
+## Task 4 · Self-check a script
+Mark each of the 30 items in `teaching_method.md` §7 Yes / No / N.A. (items 1 and 26: no AI-voice disclosure is the
+current rule; that is a Yes). Then check: every fact cites a row that says the same thing; no line over 25 words;
+word count in range; greeting/goodbye unused; every plan v3 addition covered (list them with the N-line). Fix every No
+before you hand the script over; list what you could not fix.
+
+## What you never do
+Build voice pages, change the repository, decide money matters, or mark a script &quot;locked&quot;. The auditor and the owner
+do that.</textarea></section><section class="card"><h2>Step 1 · Deep Research prompt (A17)</h2><p class="how">Gemini → Tools → Deep Research (Max if offered). Paste, check the plan covers parts A–F, Start. Then Export to Docs and move the Doc to Drive CAIIB/_inbox/gemini/A17/.</p>
+<div class="row"><button id="b_dr" data-t="t_dr">Copy</button><span class="n">10,190 characters</span></div>
+<textarea id="t_dr" readonly rows="8">You are a research analyst building a FACT SHEET for one lesson of a self-study video course for Indian bank officers
+preparing for the IIBF CAIIB exam, paper &quot;Bank Financial Management&quot; (BFM), Module A (International Banking). The
+lesson is **A17: NRI deposit accounts: NRE, NRO, FCNR(B), SNRR, and RFC / RFC(D) for returning NRIs**. A script writer
+will teach ONLY from your fact sheet, and an auditor will check every row against the source, so accuracy and exact
+citations matter far more than prose.
+
+## 1. The rule date (critical)
+The exam is in May/June 2027. IIBF tests rules **as they stood on 31 December 2026**. For every rule:
+- give the version in force on 31 Dec 2026 (the latest Master Direction &quot;updated as on&quot; date, the latest amendment);
+- if a rule changed during 2024–2026, give BOTH the old and the new figure with the date of change (old figures are
+  exam traps: IIBF question banks lag);
+- if something was issued before 31 Dec 2026 but takes effect later, label it &quot;issued, coming&quot;;
+- if you cannot find a 2026 update, say so; do not assume nothing changed.
+
+## 2. Source rules (strict)
+- **Primary sources only count as evidence**: rbi.org.in / rbidocs.rbi.org.in (Master Directions, Directions,
+  Notifications, A.P. (DIR Series) circulars, FAQs), FEMA 1999 and its Regulations / Rules (indiacode.gov.in,
+  egazette.gov.in, RBI&#x27;s copies), the Income-tax Act 2025 and Income-tax Rules (incometaxindia.gov.in, CBDT
+  notifications), the Citizenship Act 1955 (for OCI), Ministry of Finance / DEA notifications.
+- Coaching sites, blogs, bank FAQ pages, news, Taxmann/StudyCafe, IIBF Vision, Macmillan books: **leads only**. You may
+  use them to find a circular number, then you must open the primary text. If you could only see a secondary source,
+  put the row in status `SECONDARY-ONLY`. Never present a secondary claim as confirmed.
+- If a page or PDF would not open (RBI PDFs sometimes sit behind a bot check), write &quot;COULD NOT OPEN&quot; with the URL.
+  **Never reconstruct or guess what a document says.** A short honest gap beats a plausible invented row.
+- For every number, limit, period or condition, quote the exact words from the source (at most 30 words) and give the
+  paragraph / regulation / schedule number and the URL.
+- Note that the old Income-tax Act 1961 was replaced by the **Income-tax Act 2025 from 1 April 2026**: give the new
+  section numbers, and the old 1961 section only as &quot;formerly s. …&quot;.
+
+## 3. Documents to locate and read (find the version current at 31 Dec 2026)
+1. FEMA 1999: s. 2(v) &quot;person resident in India&quot;, s. 2(w) &quot;person resident outside India&quot;, s. 6(4)–(5).
+2. **FEM (Deposit) Regulations, 2016** (Notification FEMA 5(R)/2016-RB) with all amendments to 2026: definitions
+   (NRI, PIO), and the Schedules for NRE, FCNR(B), NRO, SNRR and any other account schedule.
+3. **RBI Master Direction – Deposits and Accounts** (FEMA) in its latest updated version.
+4. **FEM (Remittance of Assets) Regulations, 2016** (FEMA 13(R)/2016-RB) and the RBI Master Direction – Remittance of
+   Assets: the NRO / USD 1 million per financial year facility and its conditions.
+5. **FEM (Foreign Currency Accounts by a person resident in India) Regulations, 2015** (FEMA 10(R)/2015-RB): RFC and
+   RFC(D) accounts, and what happens to NRE / FCNR(B) / NRO accounts when an NRI returns.
+6. The RBI directions on **interest rates on deposits** current at 31 Dec 2026 (the 2016 Master Direction on Interest
+   Rate on Deposits, or the 2025 consolidated &quot;Directions&quot; that replaced it): NRE and FCNR(B) rate ceilings (the
+   ARR/benchmark-linked FCNR(B) ceiling), FCNR(B) interest calculation (day-count basis, compounding/payment
+   frequency, floating-rate reset), premature withdrawal, interest on overdue/matured deposits.
+7. RBI&#x27;s **June 2026** temporary withdrawal of NRE (3 years and above) and FCNR(B) (3–5 years) rate ceilings
+   (Interest Rate on Deposits Amendment Directions, about 17 June 2026; RBI/2026-27/138), its original end date
+   (30 Sep 2026) and the later cut to **31 Aug 2026**; the CRR/SLR exemption for fresh NRE/FCNR(B) deposits in that
+   window; the USD-INR swap window for FCNR(B) (RBI/2026-27/99, about 8 June 2026). Confirm each date in the primary text.
+8. **FEM (Non-debt Instruments) Rules, 2019**: investment by NRIs/OCIs on repatriation vs non-repatriation basis
+   (Schedules 3 and 4), and the chapter on immovable property for NRIs/OCIs (what they may and may not acquire:
+   agricultural land, plantation, farmhouse; modes of payment; inheritance; gift).
+9. **Income-tax Act 2025**: the section that exempts NRE interest (formerly 1961 s. 10(4)(ii)), FCNR(B) interest
+   exemption (formerly s. 10(15)(iv)(fa)) including the residence/RNOR condition, TDS on NRO interest (rate), and
+   the rules for **Form 15CA / 15CB** (now under the Income-tax Rules 2026 if renumbered).
+10. **OCI**: Citizenship Act 1955 s. 7A; the PIO card merger into OCI (2015). **OCBs**: the 2003 derecognition (A.P.
+    (DIR) circular, 2003) and their present status.
+11. Power of attorney holders on NRE/NRO accounts: what the POA holder may and may not do (the RBI text).
+12. Any RBI change between 1 Jan 2024 and 31 Dec 2026 touching these accounts (search rbi.org.in notifications and
+    A.P. (DIR) circulars for &quot;NRE&quot;, &quot;NRO&quot;, &quot;FCNR&quot;, &quot;SNRR&quot;, &quot;Deposit Regulations&quot;).
+
+## 4. Questions the fact sheet must answer (each as its own row, with citation)
+**A. Who (A3.4)**: FEMA definition of person resident / resident outside India (incl. students, people going out for
+employment or business or an uncertain period; Indian government staff posted abroad). Definitions of NRI and PIO in
+the Deposit Regulations. What OCI is (s. 7A) and how it relates to PIO. What OCBs were, when and how derecognised, and
+what they may do now.
+
+**B. The four accounts, one row per attribute per account** (NRE, NRO, FCNR(B), SNRR), then RFC and RFC(D):
+1. who may open (and with whom jointly: NRI with NRI; NRI with resident relative on &quot;former or survivor&quot; basis; any
+   difference between NRE and NRO here);
+2. currency of the account; account forms allowed (savings, current, recurring, fixed; &quot;term deposit only&quot; cases);
+3. tenure limits (FCNR(B) minimum and maximum; SNRR maximum and how it links to the contract);
+4. permissible credits (inward remittance, transfers from other NRE/FCNR(B), local credits allowed in NRE, sale
+   proceeds, rent, pension, LRS gifts by resident relatives) and permissible debits;
+5. repatriability (full / limited) and the NRO limit (amount, per what period, which funds count, what documents:
+   undertaking, CA certificate Form 15CB, Form 15CA);
+6. interest: rate ceiling rule at 31 Dec 2026, and how FCNR(B) interest is computed;
+7. tax on the interest under the Income-tax Act 2025, TDS on NRO;
+8. exchange risk: who bears it in NRE vs FCNR(B);
+9. SNRR: purposes allowed, interest or not, permitted credits/debits, whether funds may come from an NRO account;
+10. resident account redesignation as NRO when the holder becomes NRI.
+
+**C. Coming home**: when an NRI returns, what happens to NRE, NRO, FCNR(B) (can FCNR(B) run to maturity? at what
+rate?); RFC vs RFC(D) (who may open, what may be credited, currency, repatriation, interest); the RNOR status under
+the 2025 Act and its link to the tax exemption.
+
+**D. Facilities**: investments by NRIs on repatriable vs non-repatriable basis (headlines only, with schedule
+numbers); immovable property: what an NRI/OCI may buy, may not buy, how they may pay; inheritance and gift.
+
+**E. Old vs current (trap list)**: every figure on these accounts that changed since 2015 (e.g. ceilings, the
+June–Aug 2026 relaxation, any tenure or limit change, the 1961 → 2025 Act section numbers, PIO → OCI), as
+&quot;old value · new value · date · source&quot;.
+
+**F. Claims to confirm or refute** (commonly taught; give TRUE / FALSE / CHANGED with citation): NRO repatriation up
+to USD 1 million per financial year; FCNR(B) only as term deposits of 1 to 5 years; FCNR(B) interest exempt and no
+exchange risk to the depositor; NRE interest tax-free; NRE allows savings, current, RD and FD; SNRR is
+non-interest-bearing and its tenure matches the contract up to 7 years; a POA holder cannot repatriate to third
+parties or gift; loans against NRE deposits cannot be repatriated (one line only; loans are lesson A18).
+
+## 5. Output format (exactly this; Markdown)
+Title: `Fact sheet · A3.4 NRI banking · A3.5 NRI accounts · A3.6 Facilities to NRIs (video A17)`
+
+1. **What this lesson must carry**: one paragraph, 150–250 words, the whole lesson in plain words with every key number.
+2. **Sources table**: `| Id | Source (exact title, notification number, date, &quot;updated as on&quot; date) | URL | Read? (FULL / PARTS: which / COULD NOT OPEN) |`
+3. **Points tables**, one per part A–D: `| # | Testable point (our own words; key number in bold) | Exact quote (≤ 30 words) | Source Id + para | Status |`
+   Status = `PRIMARY` (you read it in the primary text) · `SECONDARY-ONLY` · `CONFLICT` (explain) · `NOT FOUND`.
+   Number rows continuously (1, 2, 3 … across all tables).
+4. **Old vs current** table (part E).
+5. **Claims check** table (part F): `| Claim | TRUE / FALSE / CHANGED | Correct statement | Source |`
+6. **Question blueprint**: for this lesson, 12 exam-style MCQs of all kinds (define, who/when/how much, compare,
+   exception, calculate e.g. FCNR(B) interest or NRO repatriation balance, apply to a case), each with answer and the
+   row # it rests on. Write them yourself; do not copy any coaching or IIBF question.
+7. **Recalled exam questions**: only questions you find publicly recalled from CAIIB BFM exams 2023–2026 on this topic,
+   each with the URL where you saw it. If none found, say &quot;none found&quot;. Never invent.
+8. **Verify at the freeze**: everything you could not open, any conflict, and anything that might change before
+   31 Dec 2026.
+9. **Not in this lesson**: loans to NRIs, residence tests in detail, deposit insurance (other lessons).
+
+Write in plain international English. No marketing tone, no filler, no summary of what you did. If the output limit
+forces you to stop, finish the current table cleanly and write &quot;CONTINUED: parts left: …&quot; so I can ask for the rest.</textarea></section><section class="card"><h2>Step 2 · Write the lesson</h2><p class="how">New chat with the skill, model Gemini 4 Neon (or 3.1 Pro). Attach the A17 Deep Research Doc, paste this. Export the answer to Docs into CAIIB/_inbox/gemini/A17/.</p>
+<div class="row"><button id="b_wr" data-t="t_wr">Copy</button><span class="n">577 characters</span></div>
+<textarea id="t_wr" readonly rows="8">Use the caiib-bfm-lesson skill, Task 3. Write lesson A17 (plan: plans_A.md §A17, including every v3 addition).
+Facts: the attached Deep Research report for A17. First turn it into our fact sheet (Task 2) and show it. Then write
+script_class.md, numericals.md, practice.md and map_nodes.md, each in its own code block, then &quot;Facts needed&quot; and
+&quot;Self-check&quot;. The previous lesson (A16b) closed with: NRI accounts come next (Karthik, a student in the US, is a
+person resident outside India). Greetings already used are in greetings.md. Never invent a fact that is not in the report.</textarea></section>
+</main>
+<script>
+document.querySelectorAll('button[data-t]').forEach(b=>b.addEventListener('click',()=>{
+ const t=document.getElementById(b.dataset.t);
+ const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)};
+ navigator.clipboard.writeText(t.value).then(done).catch(()=>{t.focus();t.select();document.execCommand&&document.execCommand('copy');done()});
+}));
+</script>
