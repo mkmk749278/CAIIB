@@ -64,6 +64,7 @@ case $cmd in
   pull) src=${1:?Drive folder}; dst=${2:?local folder}; mkdir -p "$dst"
         "$RCLONE" copy --retries 4 --stats-one-line --stats 30s ${GDRIVE_INCLUDE:+--include "$GDRIVE_INCLUDE"} \
           "gd:$src" "$dst"; ls -la "$dst" ;;
+  rclone) shift 0; "$RCLONE" "$@" ;;  # raw rclone with the CAIIB remote "gd:" (e.g. lsjson by folder)
   move) "$RCLONE" moveto "gd:${1:?from}" "gd:${2:?to}" && echo "moved CAIIB/$1 -> CAIIB/$2" ;;
   link) link "${1:?Drive file path}" ;;
   *)    sed -n 2,14p "$0"; exit 2 ;;

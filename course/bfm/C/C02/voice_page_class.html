@@ -1,0 +1,150 @@
+<title>C02 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C02 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C02/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Call, Notice, and Term Money + Chapter 2 · Market Repo and TREPS + Chapter 3 · Commercial Paper and Certificate of Deposit (N001–N091)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N091", "text": "[warmly] Good evening, everyone. Notebook open, calculator close; tonight we walk the money-market ladder, one rung at a time. Quick recall from last class. When a front-office dealer strikes a deal, which office confirms it independently? Back office. Never the dealer, never mid office. One more from two classes back: name the three books of integrated treasury. Domestic money, forex, and investments. Easy win. Money-market rules appear across recent B-F-M exams, from Call limits to C-Ps. Picture Deccan Bank's treasury desk at four P-M. Two problems land together. The bank is short five hundred crore rupees overnight. Meanwhile, Kaveri Textiles holds spare cash for three months. Can both use the same market, or do they stand on different rungs? Lock your answer. Keep that answer. Tonight you place every money-market product on its rung. Chapter one. The money market covers short-term funds up to one year. First, the unsecured interbank ladder. Three rungs sit here by tenor. Call Money is unsecured borrowing or lending overnight. Notice Money is unsecured funds for two to fourteen days, inclusive. Term Money is fifteen days up to one year. Back to our opening question. Who may use these three rungs? Only banks and Primary Dealers. Every eligible entity can both borrow and lend; there is no lenders-only group today. So Deccan Bank borrows its five hundred crore overnight in Call Money. Kaveri Textiles cannot enter; companies stay out. Now break a common wrong belief. Many think interbank lending is risk-free because both sides are banks. Wrong. Because there is no collateral, the lender carries direct counterparty credit risk. That is why RBI sets prudential borrowing limits, and one key limit changed on eight June twenty-twenty-three. Old notes quote one hundred per cent average and one twenty-five single day for all banks. Today, Scheduled Commercial Banks, excluding Small Finance and Payment Banks, set Board limits within inter-bank liability norms. Small Finance Banks keep one hundred per cent average and one twenty-five single day in Call and Notice. Payment Banks and Regional Rural Banks face that same cap across all three segments combined. Co-operative Banks are capped at two per cent of previous-year aggregate deposits across all three. Primary Dealers are capped at two hundred twenty-five per cent of previous-year Net Owned Fund. What about lending? RBI sets no fixed lending percentage; each Board sets limits within exposure norms. Calculator check, worked in full. A Small Finance Bank holds capital funds of eight hundred crore rupees. Fortnightly average Call and Notice limit is one hundred per cent, or eight hundred crore. What is the single-day cap? Eight hundred times one twenty-five per cent equals one thousand crore. Check: eight hundred plus one-fourth. Avoid the classic slip: one twenty-five per cent is the single-day peak, never the fortnightly average. Your turn. A Primary Dealer has Net Owned Fund of four hundred crore. Find its Call and Notice borrowing limit. Nine hundred crore. Four hundred times two twenty-five per cent, or times two point two five. Three quick rules close chapter one. N-D-S Call membership is mandatory; O-T-C deals report there within fifteen minutes. Deals rarely cancel, though Notice or Term deals can end early at a mutually agreed price. And from one July twenty-twenty-five, Call Money market hours run from nine A-M to seven P-M. Pause check. One. An unsecured interbank loan for ten days belongs to which market? Notice Money, two to fourteen days. Two. Who sets a Scheduled Commercial Bank's Call borrowing limit today? Its own Board, within inter-bank liability norms. Three, the twist. Does RBI set a fixed lending percentage cap for banks? No, each Board decides lending limits within exposure norms. [seriously] One thing to remember: Call is overnight, Notice two to fourteen, Term fifteen to a year, all unsecured. Chapter two. Recall first: if Deccan Bank borrows overnight without collateral, which rung did it use? Call Money. Now suppose Deccan Bank pledges government securities for cheaper funds. That is Market Repo. Under Section forty-five U of the RBI Act, a repo is borrowing by selling securities with an agreement to repurchase them. The buy-back price includes interest. Mirror rule: one side's repo is always the counterparty's reverse repo, which is lending. Market repos follow RBI's November twenty-twenty-five Repo Directions, excluding RBI's L-A-F and M-S-F windows. Tenor is one day to one year. First leg settles on T plus zero or T plus one, always Delivery versus Payment. Eligible collateral includes Central and State G-secs, listed corporate bonds, C-Ps, C-Ds, eligible Debt E-T-Fs, and one new entrant. Since eleven November twenty-twenty-five, Municipal Debt Securities also qualify for repo, with a minimum two per cent haircut. Watch the big repo trap. Can a bank borrow in repo by pledging listed bonds of its own subsidiary? Never. No participant may borrow against its own securities or a related entity's securities — holding, subsidiary, or associate. Participants are regulated entities excluding individuals and H-U-Fs, listed corporates, and five A-I-F-Is, including NaBFID. Calculator check. Deccan Bank pledges two hundred crore of Municipal Debt Securities at the two per cent minimum haircut. Two hundred times two per cent is four crore; two hundred minus four gives one ninety-six crore. Check: two hundred times ninety-eight per cent is one ninety-six. C-Ps and C-Ds carry one-point-five per cent. O-T-C repos report within fifteen minutes: G-secs to C-R-O-M-S, others to F-T-R-A-C. G-sec repo borrowings are C-R-R and S-L-R exempt. Now meet TREPS: the Triparty Repo Dealing System. Here a third party manages collateral between borrower and lender. Clearcorp runs the screen, while C-C-I-L acts as Central Counterparty and Tri-Party Agent. TREPS replaced the old C-B-L-O on five November twenty-eighteen, with a five-lakh minimum lot against eligible government securities. Pause check. One. Can a listed firm borrow in repo against its subsidiary's bonds? No, related-entity securities are barred. Two. What is the first-leg settlement cycle for market repo? T plus zero or T plus one, Delivery versus Payment. Three. What did TREPS replace in twenty-eighteen? C-B-L-O. One thing to remember: repo is secured borrowing up to one year, never against related-entity paper. Chapter three. Recall first: which new security became eligible for market repo in November twenty-twenty-five? Municipal Debt Securities. Now let us match Kaveri Textiles with two sibling instruments: C-P and C-D. Smash a favourite exam trap first. \"An A-three rated company can issue a C-D.\" True or false? False. Companies never issue C-Ds. Banks and A-I-F-Is issue C-Ds; companies issue Commercial Paper. Under the twenty-twenty-four Directions, a C-P is an unsecured demat promissory note issued at a discount. Tenor is seven days to one year, minimum five lakh; primary settlement within T plus four days. Issuers: companies, N-B-F-Cs, InvITs, R-E-I-Ts, A-I-F-Is, plus co-ops and L-L-Ps with hundred-crore net worth. General trusts are not listed, and every fund-based facility from banks, A-I-F-Is, and N-B-F-Cs must be Standard. Minimum rating is A-three. Watch this twenty-twenty-four trap: old notes teach dual rating above one thousand crore, taking the lower rating. That rule belonged to the superseded twenty-seventeen Directions. RBI dropped it in twenty-twenty-four; only the A-three minimum stands. Every C-P needs an Issuing and Paying Agent, or I-P-A, which must now be a Scheduled Commercial Bank. The I-P-A checks documents, routes redemptions by three P-M with no grace period, and reports on F-T-R-A-C. Second twenty-twenty-four trap: C-P buyback. Old notes say thirty days; today buyback is allowed after seven days. Buyback goes to all investors on identical terms at market price, through the I-P-A, and extinguishes immediately. Proceeds fund current assets and operating expenses, certified by C-E-O or C-F-O within three months. Call or put options, underwriting, and co-acceptance are barred. Related parties cannot buy C-Ps, and default triggers a six-month ban. Standard status, A-three rating, short tenor, I-P-A checks, and the default ban keep C-P risk low. Write this down: total primary C-P subscription by all individuals and H-U-Fs combined cannot exceed twenty-five per cent. Your turn. Kaveri Textiles issues forty crore of C-P. Maximum allocation to individuals and H-U-Fs, and how many five-lakh lots? Ten crore, or two hundred lots. Forty times twenty-five per cent; one thousand lakh divided by five. Now Certificates of Deposit. Only Scheduled Commercial Banks, Regional Rural Banks, and Small Finance Banks issue bank C-Ds. Bank C-Ds run seven days to one year; A-I-F-I C-Ds run one to three years. Minimum five lakh, not one lakh. Demat only, discount or fixed or floating, attracting C-R-R and S-L-R. Banks cannot lend against C-Ds unless RBI permits. Unilateral premature withdrawal is barred, with no grace period on repayment. Here is tonight's sharpest trap. Many teachers say issuers can never buy back C-Ds. Watch the split. Issuing banks may buy back C-Ds after seven days, offered to all investors at market price. A-I-F-Is are strictly barred from CD buyback. Pause check. One. Kaveri Textiles is A-three rated, but one N-B-F-C loan is substandard. Can it issue a C-P? No, all facilities from banks, A-I-F-Is, and N-B-F-Cs must be Standard. Two. What is the C-P buyback lock-in today? Seven days. Three, the twist. Can a Small Finance Bank buy back its C-D after ten days? Yes, issuing banks may buy back C-Ds after seven days at market price to all investors. [seriously] One thing to remember: C-P is corporate paper with a bank I-P-A; C-D is bank or A-I-F-I paper, no loans against it."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Bill Rediscounting and OMOs + Close (N092–N112)", "turns": [{"speaker": "Teacher", "first": "N092", "last": "N112", "text": "Chapter four, the rest of the shelf. Recall: what is the minimum denomination for both C-P and C-D? Five lakh rupees. Suppose Deccan Bank discounted genuine trade bills and wants cash before maturity. Under Bill Rediscounting, it issues a Derivative Usance Promissory Note backed by those bills for fifteen to ninety days. Discount charges are collected up-front, meaning front-ended interest. Eligible lenders include banks, A-I-F-Is, and mutual funds as lenders only. Under twenty-twenty-five Credit Facilities Directions, Chapter Ten, only genuine trade bills qualify; accommodation bills are barred. Services sector bills are also ineligible, and banks cannot enter repo transactions using discounted or rediscounted bills as collateral. Finally, one line on Open Market Operations: RBI buys government securities outright to inject durable liquidity, and sells to absorb it. Pause check. One. What is the tenor band for a D-U-P-N under Bill Rediscounting? Fifteen to ninety days. Two. Can a bank rediscount an accommodation bill or a services bill? No, both are barred. Three. To absorb durable liquidity via an O-M-O, does RBI buy or sell G-secs? It sells outright. Remember: Bill Rediscounting takes only genuine trade bills for fifteen to ninety days, never accommodation bills. Mixed check across the whole ladder. One. Which unsecured interbank instrument runs two to fourteen days? Notice Money. Two. Which instrument needs a Scheduled Commercial Bank I-P-A and caps individual buying at twenty-five per cent? Commercial Paper. Three. Can an A-I-F-I buy back its own C-D before maturity? No, only issuing banks may buy back C-Ds after seven days. Now fill the blank ladder from memory. Call overnight, Notice two to fourteen, Term fifteen to a year, Repo and TREPS up to a year. Above them: C-P and C-D seven days to a year, and Bill Rediscounting fifteen to ninety days. You can now separate every product in C-two-point-two. Next class adds RBI's corridor; Treasury Bill sums follow. Homework: an Urban Co-operative Bank has previous-year deposits of fifteen hundred crore. Find its combined borrowing cap. Question for next class: when the overnight call rate jumps above RBI's policy repo rate, which RBI window caps it? [warmly] That's the full money-market shelf, rung by rung. Close your notebook, breathe out, and I'll meet you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
