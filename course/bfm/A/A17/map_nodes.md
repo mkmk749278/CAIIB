@@ -1,0 +1,7 @@
+# A17 · Map Nodes (c1, 2026-11-24)
+Module A Mind Map Branch: People abroad Nodes added by Lesson A17 (in order of appearance in A17_script_class.md, matching course/bfm/A/plans_A.md §A17):
+1. NRE (Non-Resident External Rupee) — INR · SB/CA/RD/FD (min 1-yr TD) · fully repatriable · tax-free while FEMA non-resident (IT Act 2025 s. 11 Sch. IV Sl. 1) · depositor bears FX risk · resident relative joint holder (former or survivor, POA only).
+2. NRO (Non-Resident Ordinary Rupee) — INR · SB/CA/RD/FD (min 7-day TD) · Indian income & LRS gifts · taxable (30% + surcharge + 4% cess u/s 393(2) Sl. 17) · current income freely repatriable + USD 1M/FY balances (Forms 145/146, Rule 220) · resident account redesignated NRO on leaving.
+3. FCNR(B) (Foreign Currency Non-Resident (Banks)) — Freely convertible FCY · FD only, 1–5 yrs (no RD) · fully repatriable · tax-free for NR/RNOR (s. 11 Sch. IV Sl. 14) · bank bears FX risk · ARR/Swap +250/+350 bps · 360-day year, 180-day compounding + remaining actual days, 6-month floating reset.
+4. SNRR (Special Non-Resident Rupee) — INR · non-interest-bearing · freely repatriable · any PROI (incl. overseas/IFSC branches) · no 7-yr cap (deleted Jan 2025) · NRO-to-SNRR transfers allowed within USD 1M/FY (eff. 22 Jun 2026).
+5. RFC (Resident Foreign Currency) — Returning NRI/PIO · FCY · SB/CA/FD · freely repatriable · free interest rate · tax-free while RNOR (s. 6(13)); contrasted with RFC(D) (any resident, non-interest-bearing CA, monthly rupee conversion).

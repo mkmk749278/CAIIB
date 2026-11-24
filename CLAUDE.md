@@ -154,7 +154,7 @@ Never a new loose doc.
     `BFM/A00c/voice/part_N.mp3`, then enhance, `check_enhanced.py`, timeline (holds from the cue sheet), build as
     composition `A00c`, render, and the owner compares it with A00 r3.
   - **Next (from 2026-11-21, scripts first)**: (a) course plan v4 done (2026-11-21); (b) A01–A03 done (c3 locked). **Resume here (paused 2026-11-21, 3:20 PM IST, usage limit):
-    A04–A06 locked (A07 locked earlier). A08–A15 locked (c3, voice pages; 2026-11-22); A15 locked (2026-11-22); A15b, A16 and A16b locked (2026-11-22); next A17 (NRE, NRO, FCNR(B), SNRR; plan in `plans_A.md` §A17) onward:** fact sheet →
+    A04–A06 locked (A07 locked earlier). A08–A15 locked (c3, voice pages; 2026-11-22); A15 locked (2026-11-22); A15b, A16 and A16b locked (2026-11-22); **A17 c2 locked (2026-11-24) — the first Gemini-drafted lesson** (PLAYBOOK §7 trial: Gemini runs Drive `_gemini/START_HERE.md` per lesson, outputs to `_inbox/gemini/<id>/`; Claude checks every key row in the primary text, one cross-model review `review_c1.md`, fixes, voice page https://claude.ai/artifact/GCMsnR39e7EGhwaYkiZG2s, 2 parts; fact sheet `A3.4-A3.6_A17.md`; FCNR(B) normal ceiling is ARR/swap +250/+350, our old +400/+500 note was wrong); next A18 the same way onward:** fact sheet →
     script → reviews → voice page for each lesson in course order. **Paused**: (1) **A00 build (2026-11-21)**: takes `a00b1/2.mp3` in, word-checked (complete; two spots for the
     owner's ear: part 1 at 3:29 "The day starts", part 2 at 0:35 "par value"), enhanced (`BFM/A00/voice_enhanced/`),
     `mix.flac` in `BFM/A00/flow/` (`tools/video/mix_bed.py`), composition `video/src/A00.tsx` on the new shared
