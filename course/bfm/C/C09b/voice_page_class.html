@@ -1,0 +1,150 @@
+<title>C09b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C09b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C09b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening Branch Moment (~0.7 min) + Chapter 1 · Who May Deal and User Protection (~2.9 min) + Chapter 2 · Documents, Market Bodies, and Milestones (~2.6 min) + Chapter 3 · The 2025–2026 RBI Changes and FERR (~4.5 min) (N001–N084)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N084", "text": "Hello everyone, and welcome back to the trading desk. Tonight we open the rulebook behind every derivative deal. Put your phone on silent, keep your basic calculator handy, and let's settle in. First, last class's options check: a call option, strike eighty-five, spot eighty-eight, premium two rupees. What is the buyer's net profit per dollar? Take three seconds. Payoff is three rupees minus the two-rupee premium, giving one rupee profit; profit always deducts the premium. From two classes back: can a bank quote a forward rate without holding an underlying exposure? Yes — a market-maker quotes prices and needs no underlying risk exposure. Why does this class matter? In the December 2025 full paper, treasury carried twenty-seven of one hundred questions, mostly theory. October 2026 also reshaped India's derivative rules. Stay with me; we will make every rule clear and exam-ready. Picture a Chennai branch desk in November 2026. All names and numbers tonight are illustrative. An exporter, Mr. Ramesh, cancels his INR-USD forward after the rupee moves in his favour. He immediately asks your desk to book a fresh forward at the better rate. Can your bank allow him to rebook? Some of you say yes, others say no. Hold that thought. By Chapter 3, you will know the October 2026 rule and the one action still permitted. Open Tab One: who may deal in derivatives in India? Under section forty-five V of the RBI Act, an OTC derivative is valid only if at least one party is RBI-regulated. That regulated side is the market-maker, quoting prices to users and other market-makers without needing an underlying risk. In forex derivatives, market-makers are Authorised Dealer Category-I banks and Standalone Primary Dealers authorised as Category-III. In rupee interest rate derivatives, market-makers are Scheduled Banks, SPDs, Upper-Layer NBFCs, and five All-India Financial Institutions. Everyone else is a user, classified by the bank into two buckets: retail or non-retail. Non-retail users include AIFIs, NBFCs, insurers, pension funds, mutual funds, AIFs, and non-resident non-individuals. Resident entities also qualify as non-retail with at least five hundred crore net worth or one thousand crore turnover. Quick check: can an eligible non-retail company opt to be treated as a retail user? Three seconds. Yes — non-retail users may opt down freely; retail users may opt up only if the bank approves their risk capabilities. Retail users get plain-vanilla hedges only, and banks must disclose the mid-market mark before dealing. Non-retail users can access covered options and structured derivatives, but leveraged derivatives are barred for everyone. Insurers, mutual funds, pension funds, and AIFs may participate only if their own sectoral regulators allow it. Single-name credit default swaps on eligible corporate bonds are permitted too, linked to credit risk classes, but never to individuals. Now Tab Two: user protection. Every market-maker needs a Board-approved derivative policy and physical separation between front and back office. Before dealing, banks run product suitability and user appropriateness checks, and issue Product and Risk Disclosure Statements. Many of you assume suitability checks apply to every forex forward. That is a classic trap. Pre-trade due diligence is not mandatory for plain-vanilla FX forwards and European FX options up to thirteen months. If a product is unsuitable yet the user insists, the bank must document it and escalate approval on both sides. Pause check for Chapter 1. Two quick questions. First: what minimum turnover qualifies a resident company as a non-retail user? One thousand crore rupees turnover, or five hundred crore net worth, per latest audited financials. Second: a retail exporter books a six-month plain-vanilla USD-INR forward. Is suitability due diligence mandatory? No — plain-vanilla FX forwards up to thirteen months are exempt from mandatory pre-trade due diligence. One thing to remember: classify every user first, protect retail users, and remember the thirteen-month exemption. Moving to Tabs Three and Four. First, recall from Chapter 1: can an individual buy a single-name CDS? No — RBI bars market-makers from offering CDS or TRS contracts to individuals. Tab Three: legal documents. To control legal risk, RBI expects market-makers to use standard contracts like the I-S-D-A Master Agreement. The I-S-D-A chain has three layers: the printed Master Agreement, the negotiated Schedule, and each trade's Confirmation. Many classes claim the Schedule beats the Confirmation when they clash. Let's fix that. Under section one-b of I-S-D-A 2002, the Schedule beats the Master Agreement, and the Confirmation beats both for that trade. Picture a lease: standard printed form, custom schedule, and a signed memo for one room's rent. That analogy stops at one trade: a Confirmation overrides the Schedule only for that specific transaction. Now Tab Four: three market bodies — FEDAI, FIMMDA, and FBIL. FEDAI was set up in 1958 as the self-regulatory body for India's forex market and Authorised Dealers. FIMMDA, for bonds, money markets, and derivatives, was incorporated on four May 1998 — not 1958. FIMMDA sets rupee IRD and CDS conventions, accredits IRD brokers, and runs the Credit Derivatives Determinations Committee. FBIL was jointly promoted by FIMMDA, FEDAI, and IBA in December 2014 as India's independent benchmark administrator. Regulated by RBI under section forty-five W, FBIL publishes six significant benchmarks including MIBOR, MMIFOR, and the USD-INR Reference Rate. Two milestones to know: exchange-traded USD-INR currency futures launched on NSE on twenty-nine August 2008. Interest Rate Futures began in June 2003, relaunched thirty-one August 2009, and cash-settled ten-year G-Sec IRFs arrived December 2013. Pause check for Chapter 2. Two quick questions. First: if a swap Confirmation conflicts with the I-S-D-A Schedule, which document governs that swap? The Confirmation, because under section one-b it prevails for that specific transaction. Second: which body began in 1958, and which publishes the USD-INR Reference Rate? FEDAI began in 1958, and FBIL publishes the USD-INR Reference Rate. One thing to remember: Confirmation wins the trade, FEDAI is 1958, FIMMDA is 1998, and FBIL runs benchmarks. Now Tab Five: the 2025–26 RBI changes. First, quick recall: which three bodies promoted FBIL? FIMMDA, FEDAI, and IBA. Now return to Mr. Ramesh at our Chennai desk. Remember my opening question? He cancelled an INR-USD forward in November 2026 and asked to rebook at a better rate. On ten October 2026, RBI barred ADs from letting users rebook any cancelled INR forex derivative, deliverable or non-deliverable. So Mr. Ramesh gets a no; however, rolling over an existing contract on maturity is still allowed. On the same day, RBI cut the limit for hedging contracted exposure without proving the underlying. Cross out USD one hundred million in old notes: the limit is now USD five million. That USD five million cap applies across all ADs for OTC deals, and separately across all exchanges combined. Banks must also take a user undertaking against double-hedging and keep underlying records for at least two years. On non-deliverable INR derivatives: after a brief April 2026 ban was withdrawn on twenty April, RBI tightened non-resident rules in October. Since twelve October 2026, ADs may offer INR non-deliverable derivatives to non-residents only for hedging. From twenty April 2026, ADs cannot enter INR forex derivatives with related parties under Ind AS twenty-four. Two exceptions apply: cancelling or rolling over existing deals, and back-to-back trades for non-related non-resident users. For trade reporting, a twenty-character Legal Entity Identifier is mandatory today for all non-individual OTC trades. The Unique Transaction Identifier — up to fifty-two characters — was issued in March 2026 and is coming one January 2027. Two more autumn 2026 updates: on nineteen October 2026, RBI deleted the zero-point-two-five percent net worth gross PV01 cap. And on twenty-two September 2026, RBI consolidated OTC novation rules: market-maker to market-maker only, never between two users. Novation requires remaining-party consent, upfront mark-to-market exchange between transferor and transferee, a tripartite agreement, and CCIL reporting. Now write this down: the big new numerical of October 2026 — the Foreign Exchange Risk Reserve, or FERR. From ten October 2026, ADs keep twenty percent of the rupee notional in cash with RBI on qualifying user hedges. Five user tests must all hold: INR contract, user, user buys foreign currency, notional above USD two million, current-account hedge. From twelve October 2026, ADs also keep twenty percent FERR when hedging their own assets and liabilities by buying foreign currency. Crucial trap: FERR earns zero interest, sits above CRR, is not HQLA, and is reported daily on CIMS by five PM next day."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · The 2025–2026 RBI Changes and FERR (~4.5 min) + Close (N085–N113)", "turns": [{"speaker": "Teacher", "first": "N085", "last": "N113", "text": "Exporters selling dollars are exempt, and contracts of USD two million or less are also exempt. Let's work one FERR sum. Ms. Kavitha imports machinery and hedges USD three million at eighty-six rupees. Illustrative figures. All five tests pass: INR, user, buys USD, current account, and three million exceeds two million. On your calculator, press 3000000 × 86 = for twenty-five crore eighty lakh rupees notional. Press × 20 % = to get five crore sixteen lakh rupees, or ₹5.16 crore, in cash with RBI. Common mistake: taking twenty percent of only the excess above two million. No — once above two million, FERR hits the full notional. Second check: twenty percent of three million is six lakh dollars; 600000 × 86 = ₹5.16 crore. Both match. Your turn: an importer hedges USD four million at eighty-five fifty for a current-account import. Compute FERR. Fifteen seconds. Check your answer: 4000000 × 85.5 = ₹34.20 crore; × 20 % = ₹6.84 crore cash with RBI. Pause check for Chapter 3. Two quick questions. First: what is the current RBI gross PV01 cap on non-option rupee derivatives? None — RBI deleted the zero-point-two-five percent net worth limit on nineteen October 2026. Second: can two group companies novate an OTC swap directly between themselves? No — novation replaces one market-maker with another; user-to-user novation is barred. One thing to remember: no rebooking, USD five million limit, twenty percent FERR above two million, and PV01 cap deleted. Final mixed check across all three chapters. Three rapid traps. One: an exporter sells USD five million forward at eighty-six rupees. What is the FERR? Zero — FERR applies only when buying foreign currency, never when an exporter sells dollars. Two: an I-S-D-A Schedule says Mumbai business days, while the Confirmation says London. Which governs that trade? London — the Confirmation prevails over the Schedule for that specific transaction. Three: is the Unique Transaction Identifier mandatory on thirty-one December 2026? Not yet — it is issued and coming on one January 2027, while the twenty-character LEI is already live. Now look at the blank branch on our trading-desk mind map. Name the two nodes we added tonight. Four seconds. First, Derivatives: rules — user classes, thirteen-month suitability exemption, I-S-D-A precedence, and FEDAI, FIMMDA, and FBIL. Second, 2026 changes — no rebooking, USD five million cap, FERR, related-party bar, novation, UTI coming, and PV01 cap gone. You can now handle every sub-topic C6.5 question on Indian market developments and RBI derivative rules as at thirty-one December 2026. Small homework: draw both nodes from memory, and compute FERR on a USD two-point-five million import hedge at eighty-seven rupees. Next class, we open the bank's full balance sheet: do customer deposits sit on the asset shelf or the liability shelf? That closes our treasury desk and its rulebook. Rest your eyes tonight, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

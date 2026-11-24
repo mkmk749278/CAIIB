@@ -8,6 +8,7 @@ indiacode, egazette, incometaxindia, sebi, ifsca, ecgc, eximbank), a fact sheet 
 2026-11-24: batch drafts A19b-B09b had 0 links and 480-1,670 spoken words (Gemini skipped Deep Research).
 """
 import re, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 PRIMARY = r"rbi\.org\.in|rbidocs|bis\.org|fedai|iccwbo|indiacode|egazette|incometaxindia|sebi\.gov|ifsca|ecgc|eximbank|fimmda|ccilindia|fbil"
 for i in sys.argv[1:]:
     d = f".cache/gemini_in/{i}/{i}_"
@@ -16,6 +17,7 @@ for i in sys.argv[1:]:
     except FileNotFoundError as e:
         print(f"{i:5} MISSING {os.path.basename(e.filename)}"); continue
     links = len(set(re.findall(r"https?://[^\s)\]]*(?:" + PRIMARY + r")[^\s)\]]*", rep + fs)))
+    sc = __import__("unglue").unglue(sc)
     spoken = [re.sub(r"^N\d{3}[a-z]? · ", "", l) for l in sc.split("\n") if re.match(r"^N\d{3}", l)]
     words = sum(len(l.split()) for l in spoken)
     bangs = sum(l.count("!") for l in spoken)

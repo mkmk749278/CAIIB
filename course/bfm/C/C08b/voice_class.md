@@ -1,0 +1,123 @@
+# Voice parts from `course/bfm/C/C08b/script_class.md`
+
+One teacher voice. Paste each part into ElevenLabs text to speech and generate it in one go;
+same voice and settings for every part.
+
+## part_1.mp3 · Warm-up + Chapter 1 · FRAs, Interest Rate Swaps, and FBIL + Chapter 2 · The Decision Grid and Swaps in ALM + Chapter 3 · Currency Swaps, Five Swap Types, and FX Swap Funding (N001–N072) (1 turns, 8946 chars)
+
+**1. Teacher** (N001–N072)
+```
+[warmly] Welcome back to the trading desk, everyone. Keep your calculator handy; today we trade streams of interest instead of buying bonds. First, a quick check from last class. Does an exchange-traded future carry counterparty default risk? No. The clearing house sits in the middle and marks positions to market every day. Now one from a few classes back. When yields rise, what happens to a fixed-rate bond's price? The price falls. Keep that see-saw handy; we will use it soon. Picture Raghav's treasury desk in Hyderabad. His bank holds ten-year fixed home loans, funded by six-month floating deposits. The Monetary Policy Committee hints at rate hikes. Raghav opens an interest rate swap to protect his margin. Here's today's question. Should Raghav pay fixed and receive floating, or receive fixed and pay floating? Lock your answer. Hold that choice. Derivatives carried eight questions in a recent full paper, and today we master FRAs, swaps, and three sums. Chapter one. Start with the Forward Rate Agreement, or F-R-A. An F-R-A is a cash-settled over-the-counter contract locking an interest rate on a notional principal for one future period. Say a bank buys a three by six F-R-A. That locks a three-month rate starting three months from today. What if you want to hedge ten consecutive six-month periods over five years? You use an Interest Rate Swap, or I-R-S, exchanging a stream of interest payments on a notional principal across multiple periods. Many of you are thinking: in a fifty-crore swap, both banks wire fifty crore to each other on day one. No. In an interest rate swap, the notional principal is never exchanged. Only the net interest difference changes hands. Let's solve our first sum. Bank A enters a fifty-crore rupee I-R-S, paying six point four zero per cent fixed. For this hundred-and-eighty-two-day period, the floating benchmark resets at seven point one zero per cent. Who pays whom? Floating is higher, so Bank B pays Bank A the zero point seven zero per cent difference. Grab your calculator. Press fifty crore, times zero point seven zero, per cent, times one eighty-two, divided by three sixty-five, equals. Seventeen lakh, forty-five thousand, two hundred and five rupees, forty-eight paise. The commonest mistake? Forgetting the day-count fraction. Your turn. Forty crore notional, Bank A pays six point six zero fixed, floating resets at six point one zero, one eighty-two days. Fixed is higher by half a per cent, so Bank A pays nine lakh, ninety-seven thousand, two hundred sixty rupees, twenty-seven paise. Now watch the twist in an F-R-A sum. An F-R-A settles at the start of the forward period, not the end. So we discount the interest difference back to the start date. Take a twenty-crore three by six F-R-A for ninety-one days. Fixed rate is six point five zero; reference fixes at seven point three zero. Multiply twenty crore by zero point eight zero per cent, times ninety-one over three sixty-five. That gives three lakh, ninety-eight thousand, nine hundred four rupees, eleven paise. Now compute the discount factor at seven point three zero per cent. Divide three lakh ninety-eight thousand nine hundred four point eleven by one point zero one eight two. Three lakh, ninety-one thousand, seven hundred seventy-three rupees, eighty-three paise, seller to buyer. Forgetting to discount is the classic F-R-A trap. Beyond plain fixed-for-floating, a basis swap exchanges one floating rate for another floating rate in the same currency. An Overnight Indexed Swap, or O-I-S, swaps a fixed rate against a daily compounded overnight benchmark—Overnight MY-bor or S-O-R-R. Who publishes these benchmarks? F-B-I-L, Financial Benchmarks India Private Limited, authorised by R-B-I under the twenty twenty-three benchmark directions. Since August twenty twenty-five, Overnight MY-bor uses the first three hours of call trades and publishes at twelve forty-five. Since July twenty twenty-five, F-B-I-L also publishes S-O-R-R from repo and TREPS trades, with FIMMDA S-O-R-R O-I-S rules issued in December. Under R-B-I's twenty twenty-five Rupee Interest Rate Derivatives Directions, scheduled banks, primary dealers, upper-layer N-B-F-Cs, and five A-I-F-Is act as market-makers. Market-makers need no underlying risk, so banks can warehouse swaps on their own books without waiting for a matching client. One myth to break. Some classes say only banks can use MY-bor swaps, not corporates. True or false? False. Any resident—including corporates—can enter MY-bor or S-O-R-R swaps. Retail users hedge only. Non-retail users—five hundred crore net worth or thousand crore turnover—have no purpose limit, except Modified M-I-F-O-R swaps, which are hedging-only for everyone. Pause check, chapter one. First: in a rupee I-R-S, is the notional principal exchanged at maturity? No, only net interest is settled. Second: why do we discount an F-R-A payoff? Because an F-R-A settles upfront at the start of the forward period. Third, the twist: can a mid-sized manufacturer use MY-bor O-I-S to hedge? Yes, any resident retail user can hedge with MY-bor O-I-S. One thing to remember from chapter one: F-R-A is one discounted period; I-R-S is many net periods, never exchanging principal. Chapter two. First, recall from chapter one: who publishes the floating benchmarks required for Indian rupee swaps? F-B-I-L. Now let's answer Raghav's opening dilemma at Southern Commercial Bank. Raghav has fixed home loans and floating deposits. In a short bucket, rate-sensitive liabilities exceed rate-sensitive assets—a negative repricing gap. When R-B-I raises rates, deposit costs jump while home-loan income stays flat. Net interest income gets squeezed. Many of you thought earlier: rates are rising, so receive fixed to play safe. Let's test that. If Raghav receives fixed and pays floating, he pays even more floating on top of his floating deposits. That doubles his pain. Instead, Raghav must pay fixed and receive floating. The floating stream he receives pays off his rising deposit cost, locking his spread. Write this down—our one notebook rule today. Position times rate view gives your swap side every time. Rising rates? Pay fixed, receive floating—for a floating liability, a negative gap, or a fixed-rate bond book. Why a bond book too? Rising yields drop bond prices. Paying fixed in an I-R-S—or shorting an Interest Rate Future—offsets that loss. Falling rates? Flip it. Receive fixed, pay floating—to lock yields on a floating asset, a positive gap, or a fixed liability. Under R-B-I's twenty twenty-five Commercial Banks A-L-M Directions, banks slot rate-sensitive assets, liabilities, and off-balance-sheet swaps together into gap reports. Match the derivative to the A-L-M gap. Use I-R-S for a multi-period repricing gap, and F-R-A or I-R-F for a single future gap. For a foreign-currency mismatch, use a currency swap—under a Top Management policy, never exceeding the underlying value or maturity. Pause check, chapter two. One: a bank has floating corporate loans funded by fixed deposits, expecting rate cuts. Which side of an I-R-S? Receive fixed, pay floating, locking the asset yield. Two: to hedge a bond book against rising yields using futures, buy or sell I-R-F? Sell, or short, the I-R-F, which gains as bond prices fall. One thing to remember from chapter two: fear rising rates, pay fixed; fear falling rates, receive fixed. Chapter three. Quick recall from chapter two: which derivative closes a multi-period rupee repricing gap? An interest rate swap. Now Raghav's client, Deccan Motors, has a five-year dollar loan and earns only rupees. They need a currency swap—an over-the-counter contract exchanging interest and or principal in two currencies at a pre-agreed exchange rate. Spot the contrast with an I-R-S. An I-R-S never exchanges principal; a full currency swap usually exchanges principal at start and maturity. Notice R-B-I's words: interest and or principal. That creates three currency-swap types, each removing a different risk. One: Principal-Only Swap, or P-O-S. Only final principal is swapped—removing principal currency risk, leaving coupon risk open. Two: Coupon-Only Swap, or C-O-S. Only periodic interest is swapped—removing interest and coupon currency risk, leaving principal risk open. Three: Principal plus Interest, the full cross-currency swap, removing both currency and interest-rate risk. Two guardrails. Resident retail firms can swap a rupee loan into foreign currency only if they hold a natural hedge. Banks cannot swap fixed rupee Tier One or Tier Two bonds into floating foreign-currency liabilities. And major-currency swap arbitrage rarely exists today. Here are the five swap types on one card: Interest Rate, Currency, Basis, Zero-Coupon—one fixed lump sum at maturity—and Equity swaps. Now our third worked sum: raising short-term rupees with a foreign-exchange swap. An F-X swap exchanges principal only—near leg spot, far leg forward.
+```
+
+## part_2.mp3 · Chapter 3 · Currency Swaps, Five Swap Types, and FX Swap Funding + Chapter 4 · Mixed Case Check + Close (N073–N096) (1 turns, 3028 chars)
+
+**1. Teacher** (N073–N096)
+```
+Raghav holds one million surplus dollars costing four point five zero per cent, and needs rupees for ninety days. He sells dollars spot at eighty-five to raise eight crore fifty lakh rupees, and buys dollars back ninety days later at eighty-five forty-five. After ninety days, he repays dollars plus interest: one million times four point five zero per cent, times ninety over three sixty-five. Multiply one million eleven thousand ninety-five point eight nine by eighty-five point four five to get the rupee outflow. Subtract eight crore fifty lakh raised: net rupee cost is thirteen lakh ninety-eight thousand one hundred forty-three rupees, eighty-four paise. Annualise it: divide by eight crore fifty lakh, multiply by three sixty-five, divide by ninety, times one hundred. Six point six seven zero nine per cent per year. Quick check: four point five zero dollar cost plus two point one five annualised premium equals roughly six point six five. Pause check, chapter three. One: which currency swap hedges only the final principal repayment of an external borrowing? A Principal-Only Swap. Two: does a ninety-day dollar-rupee F-X swap exchange interim interest coupons? No—an F-X swap exchanges principal only on its near and far legs. One thing to remember from chapter three: match P-O-S, C-O-S, or full swap to the exact cash flows at risk. Chapter four. Three rapid calls from Raghav's desk, mixing all three chapters. Call one. A bank has a positive ninety-day repricing gap and expects rates to fall. Pay fixed or receive fixed? Receive fixed, pay floating, locking in higher interest income. Call two. A corporate with a six-hundred-crore net worth wants a MY-bor O-I-S for trading. Allowed under R-B-I's twenty twenty-five directions? Yes. Net worth above five hundred crore makes it non-retail with no purpose restriction on MY-bor swaps. Call three, the twist. The same company asks for a Modified M-I-F-O-R swap for trading. Allowed? No. Under R-B-I's directions, Modified M-I-F-O-R swaps are strictly for hedging for every user. Pull our four map nodes back from memory on a blank screen. Name them before they appear. One: F-R-A, one discounted period. Two: I-R-S, many net periods, no principal exchange, with basis swaps, O-I-S, and F-B-I-L benchmarks. Three: Swaps in A-L-M, the pay-fixed or receive-fixed grid. Four: Currency swaps—P-O-S, C-O-S, full swap—plus F-X swap funding. You can now price an I-R-S, an F-R-A, and F-X swap funding, pick the right swap side, and classify every swap. Tonight's homework. A bank buys a ten-crore six by nine F-R-A for ninety-two days at six point two zero per cent. The reference fixes at five point eight zero per cent. Who pays whom, and how much? And for next class: in every forward, future, and swap, both sides are locked in. What if you want protection when rates move against you, but freedom to walk away if they move in your favour? [warmly] That's the swap desk wrapped up for tonight. Put the calculator down, rest well, and I'll see you in the next class.
+```
+
+## Line order (for the edit)
+- N001: [warmly] Welcome back to the trading desk, everyone. Keep your calcula
+- N002: First, a quick check from last class. Does an exchange-traded future c
+- N003: No. The clearing house sits in the middle and marks positions to marke
+- N004: Now one from a few classes back. When yields rise, what happens to a f
+- N005: The price falls. Keep that see-saw handy; we will use it soon.
+- N006: Picture Raghav's treasury desk in Hyderabad. His bank holds ten-year f
+- N007: The Monetary Policy Committee hints at rate hikes. Raghav opens an int
+- N008: Here's today's question. Should Raghav pay fixed and receive floating,
+- N009: Hold that choice. Derivatives carried eight questions in a recent full
+- N010: Chapter one. Start with the Forward Rate Agreement, or F-R-A.
+- N011: An F-R-A is a cash-settled over-the-counter contract locking an intere
+- N012: Say a bank buys a three by six F-R-A. That locks a three-month rate st
+- N013: What if you want to hedge ten consecutive six-month periods over five 
+- N014: You use an Interest Rate Swap, or I-R-S, exchanging a stream of intere
+- N015: Many of you are thinking: in a fifty-crore swap, both banks wire fifty
+- N016: No. In an interest rate swap, the notional principal is never exchange
+- N017: Let's solve our first sum. Bank A enters a fifty-crore rupee I-R-S, pa
+- N018: For this hundred-and-eighty-two-day period, the floating benchmark res
+- N019: Floating is higher, so Bank B pays Bank A the zero point seven zero pe
+- N020: Press fifty crore, times zero point seven zero, per cent, times one ei
+- N021: Seventeen lakh, forty-five thousand, two hundred and five rupees, fort
+- N022: Your turn. Forty crore notional, Bank A pays six point six zero fixed,
+- N023: Fixed is higher by half a per cent, so Bank A pays nine lakh, ninety-s
+- N024: Now watch the twist in an F-R-A sum. An F-R-A settles at the start of 
+- N025: So we discount the interest difference back to the start date. Take a 
+- N026: Fixed rate is six point five zero; reference fixes at seven point thre
+- N026a: Multiply twenty crore by zero point eight zero per cent, times ninety-
+- N027: That gives three lakh, ninety-eight thousand, nine hundred four rupees
+- N028: Divide three lakh ninety-eight thousand nine hundred four point eleven
+- N029: Three lakh, ninety-one thousand, seven hundred seventy-three rupees, e
+- N030: Beyond plain fixed-for-floating, a basis swap exchanges one floating r
+- N031: An Overnight Indexed Swap, or O-I-S, swaps a fixed rate against a dail
+- N032: Who publishes these benchmarks? F-B-I-L, Financial Benchmarks India Pr
+- N033: Since August twenty twenty-five, Overnight MY-bor uses the first three
+- N034: Since July twenty twenty-five, F-B-I-L also publishes S-O-R-R from rep
+- N035: Under R-B-I's twenty twenty-five Rupee Interest Rate Derivatives Direc
+- N036: Market-makers need no underlying risk, so banks can warehouse swaps on
+- N037: One myth to break. Some classes say only banks can use MY-bor swaps, n
+- N038: False. Any resident—including corporates—can enter MY-bor or S-O-R-R s
+- N038a: Non-retail users—five hundred crore net worth or thousand crore turnov
+- N040: Pause check, chapter one. First: in a rupee I-R-S, is the notional pri
+- N041: No, only net interest is settled. Second: why do we discount an F-R-A 
+- N042: Because an F-R-A settles upfront at the start of the forward period. T
+- N043: Yes, any resident retail user can hedge with MY-bor O-I-S.
+- N043a: One thing to remember from chapter one: F-R-A is one discounted period
+- N044: Chapter two. First, recall from chapter one: who publishes the floatin
+- N045: F-B-I-L. Now let's answer Raghav's opening dilemma at Southern Commerc
+- N046: Raghav has fixed home loans and floating deposits. In a short bucket, 
+- N047: When R-B-I raises rates, deposit costs jump while home-loan income sta
+- N048: Many of you thought earlier: rates are rising, so receive fixed to pla
+- N049: If Raghav receives fixed and pays floating, he pays even more floating
+- N050: Instead, Raghav must pay fixed and receive floating. The floating stre
+- N051: Write this down—our one notebook rule today. Position times rate view 
+- N052: Rising rates? Pay fixed, receive floating—for a floating liability, a 
+- N053: Why a bond book too? Rising yields drop bond prices. Paying fixed in a
+- N054: Falling rates? Flip it. Receive fixed, pay floating—to lock yields on 
+- N055: Under R-B-I's twenty twenty-five Commercial Banks A-L-M Directions, ba
+- N056: Match the derivative to the A-L-M gap. Use I-R-S for a multi-period re
+- N057: For a foreign-currency mismatch, use a currency swap—under a Top Manag
+- N058: Pause check, chapter two. One: a bank has floating corporate loans fun
+- N059: Receive fixed, pay floating, locking the asset yield. Two: to hedge a 
+- N060: Sell, or short, the I-R-F, which gains as bond prices fall.
+- N060a: One thing to remember from chapter two: fear rising rates, pay fixed; 
+- N061: Chapter three. Quick recall from chapter two: which derivative closes 
+- N062: An interest rate swap. Now Raghav's client, Deccan Motors, has a five-
+- N063: They need a currency swap—an over-the-counter contract exchanging inte
+- N064: Spot the contrast with an I-R-S. An I-R-S never exchanges principal; a
+- N065: Notice R-B-I's words: interest and or principal. That creates three cu
+- N066: One: Principal-Only Swap, or P-O-S. Only final principal is swapped—re
+- N067: Two: Coupon-Only Swap, or C-O-S. Only periodic interest is swapped—rem
+- N068: Three: Principal plus Interest, the full cross-currency swap, removing
+- N069: Two guardrails. Resident retail firms can swap a rupee loan into forei
+- N070: Banks cannot swap fixed rupee Tier One or Tier Two bonds into floating
+- N071: Here are the five swap types on one card: Interest Rate, Currency, Bas
+- N072: Now our third worked sum: raising short-term rupees with a foreign-exc
+- N073: Raghav holds one million surplus dollars costing four point five zero 
+- N074: He sells dollars spot at eighty-five to raise eight crore fifty lakh r
+- N075: After ninety days, he repays dollars plus interest: one million times 
+- N076: Multiply one million eleven thousand ninety-five point eight nine by e
+- N077: Subtract eight crore fifty lakh raised: net rupee cost is thirteen lak
+- N078: Annualise it: divide by eight crore fifty lakh, multiply by three sixt
+- N079: Six point six seven zero nine per cent per year.
+- N079a: Quick check: four point five zero dollar cost plus two point one five 
+- N080: Pause check, chapter three. One: which currency swap hedges only the f
+- N081: A Principal-Only Swap. Two: does a ninety-day dollar-rupee F-X swap ex
+- N082: No—an F-X swap exchanges principal only on its near and far legs.
+- N082a: One thing to remember from chapter three: match P-O-S, C-O-S, or full 
+- N083: Chapter four. Three rapid calls from Raghav's desk, mixing all three c
+- N084: Call one. A bank has a positive ninety-day repricing gap and expects r
+- N085: Receive fixed, pay floating, locking in higher interest income.
+- N086: Call two. A corporate with a six-hundred-crore net worth wants a MY-bo
+- N087: Yes. Net worth above five hundred crore makes it non-retail with no pu
+- N088: Call three, the twist. The same company asks for a Modified M-I-F-O-R 
+- N089: No. Under R-B-I's directions, Modified M-I-F-O-R swaps are strictly fo
+- N090: Pull our four map nodes back from memory on a blank screen. Name them 
+- N091: One: F-R-A, one discounted period. Two: I-R-S, many net periods, no pr
+- N092: Three: Swaps in A-L-M, the pay-fixed or receive-fixed grid. Four: Curr
+- N093: You can now price an I-R-S, an F-R-A, and F-X swap funding, pick the r
+- N094: Tonight's homework. A bank buys a ten-crore six by nine F-R-A for nine
+- N094a: The reference fixes at five point eight zero per cent. Who pays whom, 
+- N095: And for next class: in every forward, future, and swap, both sides are
+- N095a: What if you want protection when rates move against you, but freedom t
+- N096: [warmly] That's the swap desk wrapped up for tonight. Put the calculat
