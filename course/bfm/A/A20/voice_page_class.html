@@ -1,0 +1,150 @@
+<title>A20 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A20 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A20/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · What an IFSC Is, Why GIFT City, and Tax Reliefs + Chapter 2 · IFSCA and the Regulatory Framework + Chapter 3 · Setting Up IBUs, Prudential Ratios, and What They Can and Cannot Do (N001–N081)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N081", "text": "[warmly] Welcome to class, everyone. Today we step into a special financial zone right on Indian soil. Calculator ready. Last class's homework: eight crore allotment, Form F-C-G-P-R nine months late. What is the late fee? Variable fee is fifteen thousand, plus seven thousand five hundred fixed: twenty-two thousand five hundred rupees. Quick recall from three classes back: under twenty twenty-six E-C-B rules, what is the standard minimum average maturity? Three years, with one to three years allowed for manufacturing borrowers under conditions. Today's topic appeared in five of seven exam cycles with fifteen recalls, including capital and regulator traps. Today we cover I-F-S-C scope, GIFT City, I-F-S-C-A, I-B-U rules, and F-P-I relaxations. Meet Deccan Commercial Bank in Mumbai, illustrative. It wants to lend forty million dollars to an overseas Indian subsidiary. Instead of opening a branch in Singapore or Dubai, it wants to lend dollars from Gujarat. Two questions hit the boardroom: which regulator licenses this unit, and is it resident or non-resident under FEMA? An International Financial Services Centre, or I-F-S-C, is a special financial zone carved inside a Special Economic Zone. Under Section eighteen of the S-E-Z Act, two thousand five, Government approves only one I-F-S-C per S-E-Z. Under Regulation three of FEMA three-thirty-nine, every permitted IFSC financial institution is treated as a person resident outside India. Many of you think an I-F-S-C sits outside India for every Indian law. Not true. It is non-resident only for FEMA; domestic Indian laws still apply unless specifically exempted. India's first operational I-F-S-C sits at GIFT City in Gandhinagar, Gujarat, spanning eight hundred eighty-six acres. Two hundred sixty-one acres form the S-E-Z zone, and six hundred twenty-five acres form the Domestic Tariff Area. Date trap: some classes say GIFT City started in twenty nineteen. When did it actually begin? Twenty fifteen. FEMA notified IFSC rules in March twenty fifteen, and S-E-B-I and R-B-I operationalised it in April. Why build it? To onshore international business routed through Singapore, Dubai, London, and Hong Kong. It also acts as a testing ground for reforms, letting banks test global products before domestic rollout. Picture six shops inside the fence: banking, capital markets, fund management, insurance, leasing and bullion, and fintech hubs. Tax reliefs are given by the Finance Acts and the Income-tax Act, twenty twenty-five, effective April twenty twenty-six. Under Section one-forty-seven, formerly eighty-L-A, an IFSC unit gets a hundred percent tax holiday for ten years out of fifteen. Under Section seventy-one-r, formerly forty-seven seven-a-b, non-resident foreign-currency transfers of specified securities on IFSC exchanges pay zero capital gains tax. Schedule Six, formerly Section ten-four-D to four-F, exempts specified funds, N-D-F gains, and aircraft or ship leasing until March twenty thirty. Eligible foreign-currency trades carry zero S-T-T, C-T-T, G-S-T, and stamp duty, with nine percent concessional M-A-T. Pause check for Chapter one. Question one: how many I-F-S-Cs may Government approve inside one S-E-Z? Only one, under Section eighteen of the S-E-Z Act, two thousand five. Question two: does non-resident status under FEMA exempt an IFSC unit from all other Indian laws? No, domestic laws still apply unless specifically exempted. One thing to remember: an IFSC is a non-resident dollar island for FEMA inside an Indian S-E-Z. Quick recall from Chapter one: in what year was GIFT City IFSC notified and operationalised? Twenty fifteen, not twenty nineteen. Now let us answer Deccan Bank's regulator question. Many of you think R-B-I still licenses and regulates an Indian bank's GIFT City unit. That ended in twenty twenty. Today one unified regulator governs IFSCs: the International Financial Services Centres Authority, or I-F-S-C-A. Established under Section four of the I-F-S-C-A Act, twenty nineteen, I-F-S-C-A is headquartered at GIFT City, Gandhinagar. Watch four badges merge into one: under Sections twelve and thirteen, I-F-S-C-A replaced R-B-I, S-E-B-I, I-R-D-A-I, and P-F-R-D-A from October twenty twenty. In November twenty twenty, I-F-S-C-A's Banking Regulations superseded R-B-I's twenty fifteen I-B-U circular. So I-F-S-C-A—not R-B-I—licenses I-B-Us and approves I-B-U derivatives. One desk, one rulebook, no regulatory ping-pong. Under Regulation four, an I-B-U follows I-F-S-C-A's Banking Handbook plus its parent's home-regulator norms, unless I-F-S-C-A specifies otherwise. Under Regulation fourteen, every Banking Unit strictly follows I-F-S-C-A's twenty twenty-two A-M-L, C-F-T, and K-Y-C Guidelines under P-M-L-A. Catch two safety-net traps. First, under Regulation nine, Lender of Last Resort support from R-B-I is not available. Second, are I-B-U deposits insured by D-I-C-G-C up to five lakh rupees like domestic branch deposits? No. I-B-Us operate as offshore branches outside D-I-C-G-C cover, with no separate IFSC deposit insurance scheme. Also, R-B-I's Banking Ombudsman does not cover I-B-Us, and I-B-U loans are excluded from Priority Sector Lending. Pause check for Chapter two. Question one: which four domestic regulators did I-F-S-C-A replace inside the IFSC? R-B-I, S-E-B-I, I-R-D-A-I, and P-F-R-D-A, from October twenty twenty. Question two: if an I-B-U faces a dollar liquidity crunch, can it borrow emergency liquidity from R-B-I? No, Regulation nine bars Lender of Last Resort support; the parent bank supports it. One thing to remember: inside GIFT City, I-F-S-C-A is sole regulator, A-M-L applies, and neither R-B-I liquidity nor D-I-C-G-C applies. Recall from Chapter two: does an I-B-U follow only I-F-S-C-A rules, or also its home regulator? Both: I-F-S-C-A norms plus its home regulator's directions unless I-F-S-C-A specifies otherwise. Now let us set up Deccan Bank's I-B-U. Indian banks, excluding co-operative banks, and foreign banks apply via S-W-I-T. Since July twenty twenty-three, a bank may open an I-B-U branch or an I-B-C subsidiary company. Write this down: minimum regulatory capital is twenty million dollars for an I-B-U at parent level, and fifty million for an I-B-C. Note that the old one-I-B-U-per-bank limit was omitted in July twenty twenty-three. The parent bank must submit a home-regulator No Objection Letter and a Letter of Comfort promising liquidity support. Under Regulation eight, an I-B-U's non-individual liabilities are exempt from C-R-R and S-L-R. By contrast, an I-B-C subsidiary must maintain statutory reserves under the Banking Regulation Act and R-B-I Act. For individual deposits, an I-B-U maintains a daily Retail Deposit Reserve Ratio, or R-D-R-R, at three percent of previous-day balances. L-C-R and N-S-F-R apply, and with I-F-S-C-A's prior approval, both may be maintained at parent level. Exposure ceilings are five percent of parent Tier one capital for a single borrower, and ten percent for a borrower group. Worked sum: Deccan Bank's I-B-U holds twelve million corporate deposits and four point five million individual deposits like Meera's. Corporate deposits are exempt from R-D-R-R. Key four point five million times three percent equals one hundred thirty-five thousand dollars. Faded check: parent Tier one capital is nine hundred million. Can the I-B-U lend forty million to Narmada Infra? Nine hundred times five percent equals forty-five million single limit; ten percent equals ninety million group limit. Forty million fits. Your turn, fifteen seconds. Tier one capital is six hundred forty million; individual deposits eight million; corporate twenty million. Find R-D-R-R and single limit. R-D-R-R is eight million times three percent: two hundred forty thousand. Single limit is six hundred forty times five percent: thirty-two million. Now the I-B-U can and cannot table. I-B-Us operate in fifteen specified foreign currencies—expanded from eleven in July twenty twenty-four. Cash transactions are strictly barred. Corporates get current and term deposits only, with no cheques—only bank transfers. Update trap: old R-B-I rules barred all savings accounts. Under I-F-S-C-A Regulation twelve, individuals may hold current, savings, or term deposits. An I-B-U keeps a separate Nostro account and one Special Non-Resident Rupee account funded from foreign currency for administrative expenses. It cannot enter Indian domestic call, notice, term money, domestic forex, or Indian payment systems. Permitted business includes E-C-Bs, trade finance, factoring, forfaiting, aircraft leasing, A-D-R escrow, derivatives, and underwriting overseas rupee bonds. A single term deposit of five hundred thousand dollars or more is a bulk deposit; resident deals need FEMA permission. Pause check for Chapter three. Question one: minimum capital for an I-B-U versus an I-B-C? Twenty million dollars at parent level for an I-B-U, and fifty million for an I-B-C. Question two: can Deccan Bank's I-B-U take cash from Meera or lend in Mumbai's domestic call money market? Neither: cash is banned under Regulation twelve, and I-B-Us are ring-fenced from domestic money markets. One thing to remember: twenty million parent capital, three percent R-D-R-R, and cashless ring-fencing define an I-B-U."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · FPI Relaxations at GIFT City and 2024–2026 Updates + Close (N082–N105)", "turns": [{"speaker": "Teacher", "first": "N082", "last": "N105", "text": "Recall from Chapter three: how many specified foreign currencies may an I-B-U transact in since July twenty twenty-four? Fifteen, after adding Swedish, Norwegian, Danish krones, and the New Zealand dollar. Now the F-P-I relaxations card. IFSC exchanges trade up to twenty-three hours thirty minutes daily with twice-daily settlement. F-P-Is trade non-agri commodity derivatives, equity and currency derivatives, and Masala Bonds with zero S-T-T, C-T-T, and capital gains tax. Onboarding is lighter: foreign investors use Segregated Nominee Account Structure, and non-F-P-I foreign investors rely on I-B-U due diligence. Big twenty twenty-four S-E-B-I relaxation: regular F-P-Is cap aggregate N-R-I, O-C-I, and resident corpus below fifty percent. For GIFT City F-P-Is regulated by I-F-S-C-A, S-E-B-I allows up to one hundred percent N-R-I, O-C-I, and resident corpus. Now lock in three fresh R-B-I updates up to December twenty twenty-six. July twenty twenty-four: R-B-I allowed all permissible L-R-S remittances into IFSC foreign-currency accounts, while keeping domestic resident settlements barred. October twenty twenty-five: exporters holding an IFSC foreign-currency account get three months to repatriate unutilised balances, versus one month elsewhere. October twenty twenty-six: A-D Category-One banks with an I-B-U may offer rupee non-deliverable derivatives to non-residents only for hedging. Pause check for Chapter four. Question one: maximum aggregate N-R-I and O-C-I corpus in a GIFT City F-P-I? Up to one hundred percent under Option A or Option B, versus below fifty percent outside. Question two: how long may an Indian exporter keep unutilised export proceeds in an IFSC bank account? Up to three months from receipt under the October twenty twenty-five FEMA amendment. Deccan Bank's case is settled: I-F-S-C-A licenses its I-B-U with twenty million capital, and FEMA treats it as non-resident. Mixed check: can an A-D Category-One bank with an I-B-U offer a speculative rupee N-D-D-C to a non-resident now? No, Circular twenty-seven of October twenty twenty-six restricts rupee N-D-D-Cs to non-residents strictly to hedging. Look at our blank mind map for five seconds and name today's four nodes from memory. Special zone I-F-S-C, I-F-S-C-A replacing four regulators, I-B-U with twenty million capital, and F-P-Is at GIFT City. You can now handle every sub-topic on IFSC scope, GIFT City, I-F-S-C-A, I-B-Us, and F-P-Is as at December twenty twenty-six. Homework: parent Tier one capital is twelve hundred million; individual I-B-U deposits six point two million. Find R-D-R-R and group limit. Next class, back onshore: an airport money-changer, a bank branch, and a travel agent sell dollars—who allowed each one? [warmly] That is our tour of the special zone complete. Put your notes away, get some rest, and I will meet you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

@@ -1,0 +1,150 @@
+<title>C01b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C01b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C01b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · Two ways to organise the treasury + Chapter 2 · Front, mid, and back office + Chapter 3 · The dealing room's positions, limits, and controls (N001–N077)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N077", "text": "[warmly] Good to have you back at the trading desk. Last class we saw why treasury earns; today we see how it is controlled. Calculator ready. Last class's homework: borrow one million dollars at five percent, invest rupees at seven percent, six months. Eight crore sixty-nine lakh forty thousand rupees divided by eighty-four eighty gives a two hundred thirty-six dollar arbitrage gain. Recall from earlier classes: is F-E-D-A-I a statutory regulator or a self-regulatory association? A self-regulatory association of authorised dealer banks, set up in nineteen fifty-eight. Treasury organisation, functional segregation, and twenty twenty-six rupee limit rules were tested across recent exam cycles. Today you will spot segregation failures, compute net currency positions, and master every dealing-room limit and risk. Picture Kaveri Commercial Bank, illustrative. At three p.m., dealer Arjun books a large dollar forward deal. To save time, Arjun's own dealing-room manager signs and sends the counterparty confirmation. Pause and think: what happens here? Some think speed helps; others see a red flag. Chapter two explains why R-B-I forbids it. Under Accounting Standard seventeen, treasury is one of four primary reportable business segments. It holds the entire investment portfolio plus money-market and forex operations, headed by a senior executive. Banks organise treasury as a Head Office department or a specialised treasury branch. How do they differ? A Head Office department lacks a branch ledger; a specialised branch runs its own General Ledger and profit-and-loss account. A specialised branch holds Authorised Dealer Category One status and settles directly with counterparties, clearing corporations, and R-B-I. Large banks prefer a specialised branch for clean profit tracking; smaller banks often use a department. Either way, the Board approves the Investment Policy and risk policy, while support units back up the dealing desk daily. Support units cover the investment cell, accounts, I-T systems, and S-W-I-F-T, R-T-G-S, N-E-F-T, and C-C-I-L connectivity. Pause check one. Question one: under A-S seventeen, which portfolio must always sit inside the Treasury business segment? The bank's entire investment portfolio. Question two: which treasury form keeps its own General Ledger and settles directly? The specialised treasury branch, because it operates as an independent accounting and Authorised Dealer unit. One thing to remember: department or specialised branch, the Board sets policy and support units power connectivity. Quick recall from chapter one: who approves a commercial bank's comprehensive Investment Policy? The Board of Directors. Now step inside the desk, where one cardinal rule protects the bank: strict functional segregation. R-B-I's twenty twenty-five Investment Directions mandate four-way separation: trading, settlement, monitoring and control, and accounting. In forex dealing, R-B-I's Internal Control Guidelines split the department into three offices: Front Office, Mid Office, and Back Office. Many of you think Back Office only files paperwork and Mid Office places trades. Both beliefs are wrong. Front Office is the dealing room: dealers execute trades and primary-auction bids strictly within delegated limits. Deals go on serially numbered deal slips or automated systems straight to Back Office; dealers never touch accounting or settlement. Mid Office tracks limits, stop-loss triggers, mark-to-market valuation, accounting policies, and M-I-S for management and A-L-C-O. Favourite exam trap: should the Mid Office report to the Head of Treasury? Pause and decide. Never. Mid Office must report outside the Head of Treasury, because risk monitoring must stay independent of trading. Under twenty twenty-five Governance Directions, the Chief Risk Officer reports to the M-D and C-E-O or Board Risk Committee, without business targets. Mid Office, Back Office, and audit pay stays independent of trading profits and weighted toward fixed pay. Back Office handles independent counterparty confirmation, value-date settlement, accounting, Position and Funds Registers, Nostro and P-D-O reconciliation, and flagging breaches. Remember this trap card: Back Office confirms deals independently, and Mid or Back Office values positions — never the dealer. Remember Arjun at Kaveri Commercial Bank? His dealing-room manager signed confirmations, placing Front and Back Office under one boss. R-B-I rules say in no case may dealers sign confirmations; Back Office must verify confirmations and fix discrepancies the same day. If Mid Office breach reports are also ignored, that structural control failure invites off-market rates, unauthorised positions, and hidden losses. Good dealers need calm decisions under stress, limit discipline, owning mistakes fast, verified integrity, and written F-E-D-A-I and F-I-M-M-D-A Code undertakings. Pause check two. Question one: which office independently confirms forex trades with the counterparty bank? Back Office, because dealers may never sign confirmations. Question two: to whom must Mid Office and the Chief Risk Officer never report? The Head of Treasury or any business vertical. Question three: which office monitors stop-loss limits and mark-to-market valuation? Mid Office monitors risk, stop-loss, and valuation, while Back Office also flags operational or rate breaches. One thing to remember: Front deals, Mid watches risk independently, Back confirms and settles — never mix their bosses. Quick recall from chapter two: why is control-function staff pay weighted toward fixed compensation? So short-term trading profits cannot compromise their independence. Now let us examine the dealing room's daily numbers, limits, and controls. Separate two terms Back Office updates continuously: Funds Position and Currency Position. They measure different risks. Funds Position tracks Nostro cash liquidity for value-date settlements; Currency Position tracks net exchange-rate exposure across spot, forwards, and options. Purchases above sales mean Overbought or Long; sales above purchases mean Oversold or Short; equal means Square. Let us work one net currency position in full. Kaveri Commercial Bank, illustrative, opens Overbought four point five zero million dollars. Deals: buy three point two exporter, sell five point eight importer, buy two point six spot, sell one point five forward. Keys: four point five plus three point two minus five point eight plus two point six minus one point five equals plus three. Check by totals: ten point three zero minus seven point three zero equals plus three million. Trap: never drop the opening balance or forwards. Faded euro check: opens Oversold two million, buys four point five, sells six point two five, buys one point two five. Closing? Buys five point seven five minus sells and opening short eight point two five equals minus two point five million euros. Now your turn on the shorthand method and regulatory cap. A bank has Total Capital of two thousand crore rupees, illustrative. End-of-day positions in crore rupees: dollar plus one eighty, euro plus seventy, pound minus one forty, yen minus one sixty. Pause fifteen seconds: compute Overall Net Open Position by shorthand method, and the maximum Board Net Overnight Open Position Limit. Sum of longs is two fifty crore; sum of shorts is three hundred crore. Shorthand never nets longs against shorts. Take the higher side: three hundred crore. Maximum Board limit is twenty-five percent of two thousand, five hundred crore — comfortably within cap. Write this down: the Board — not R-B-I case by case — sets dealer limits, N-O-O-P-L, and A-G-L, then notifies R-B-I via C-I-M-S. Dealers work under deal-size, currency-wise, stop-loss, Daylight, and Overnight limits. Pause: which time limit is larger, Daylight or Overnight? Daylight limit is larger, because dealers actively square intraday trades, whereas overnight positions face unmonitored offshore moves. Two twenty twenty-six updates. First, from ten April twenty twenty-six, onshore deliverable N-O-P-I-N-R is capped at one hundred million dollars. Second, from six April twenty twenty-six, F-B-I-L publishes the daily dollar-rupee N-O-O-P spot rate; F-E-D-A-I keeps month-end revaluation rates. Issued, coming: R-B-I's June twenty twenty-six amendment revamping N-O-P and the nine percent forex charge begins one April twenty twenty-seven. Board-approved Aggregate Gap Limit cannot exceed six times total capital, though banks with strong models may substitute Board-approved P-V-zero-one and V-a-R limits. Head Office reports daily turnover in Form F-T-D and positions in Form G-P-B through C-I-M-S by the next working day. Securities trades per approved broker are capped at five percent of annual brokered turnover; Primary Dealers are exempt, and brokers never settle deals. Core controls: non-dealer E-D-P access, auto-stamped trades, two-month voice tapes, and compulsory two-week continuous annual dealer leave. Add thrice-daily rate scans for off-market deals, no broker bank-name substitution, monthly F-E-D-A-I revaluation, monthly concurrent audit, and annual system audit. Real-time Nostro reconciliation: debits over two years need full provision; credits over three years move to Blocked Account. Pause check three. Question one: what is the twenty twenty-six end-of-day cap on onshore deliverable N-O-P-I-N-R? One hundred million US dollars, from ten April twenty twenty-six. Question two: who fixes N-O-O-P-L, and what is its statutory ceiling? The Board fixes it, capped at twenty-five percent of total capital. Question three: after how many years do unreconciled Nostro debits need full provision? Over two years, while credits over three years move to Blocked Account. Remember: Board sets limits within R-B-I caps, and daily controls catch breaches."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Risks in forex dealing and the RBI Alert List + Close (N078–N103)", "turns": [{"speaker": "Teacher", "first": "N078", "last": "N103", "text": "Quick recall from chapter three: who publishes the daily dollar-rupee N-O-O-P spot rate since six April twenty twenty-six? F-B-I-L, while F-E-D-A-I keeps month-end revaluation rates. Now let us map the risks behind every dealing screen on one card. First, Exchange risk from adverse currency moves on open positions, and Gap risk from maturity mismatches in forwards, swaps, and deposits. Second, Credit risk has two halves: Pre-settlement risk is replacement cost before maturity, while Settlement risk loses full principal across time zones. That settlement principal risk is called Herstatt Risk. How do banks eliminate it under Basel guidance? Through Payment-versus-Payment settlement, like C-L-S Bank or C-C-I-L, where one currency transfers only if the other transfers simultaneously. Liquidity risk covers funding and market shortages; Operational risk covers system breakdowns, fat-finger errors, and misconduct, cut by straight-through processing. Fourth, Legal risk — unenforceable contracts or netting — mitigated by master agreements like I-S-D-A, I-F-E-M-A, and I-C-O-M, plus Board resolutions. Finish the card with Country risk on E-C-G-C's seven-category scale, Sovereign risk of government default, and Systemic risk of market contagion. One counter warning before we close: under R-B-I's twenty twenty-five Electronic Trading Platforms Directions, no platform may operate without prior R-B-I authorisation. Residents may trade forex only with Authorised Persons on authorised platforms or exchanges; L-R-S margin remittances overseas are banned. R-B-I publishes an Alert List of unauthorised forex platforms. Many think if an app is not on the list, it is authorised. Wrong. The Alert List is non-exhaustive; absence never implies authorisation — always verify on R-B-I's official authorised lists. Pause check four. Question one: which settlement mechanism eliminates Herstatt principal risk? Payment-versus-Payment settlement, because both legs settle simultaneously. Question two: which master agreements mitigate legal risk in forex and derivatives? I-S-D-A, I-F-E-M-A, and I-C-O-M. Question three: can a resident remit margin under L-R-S to an overseas forex platform? No, it is prohibited under F-E-M-A. Remember: map every risk, and verify platform authorisation directly on R-B-I's lists. Return to Arjun at Kaveri Commercial Bank. His manager signing confirmations broke functional separation; only independent Back Office staff may confirm deals. Final mixed check. One: brokered securities turnover is one thousand crore and direct deals are five hundred crore. Single-broker five percent cap? Fifty crore — five percent of brokered turnover only, excluding direct deals. Two: a dealer skips annual leave for two years. Which rule broke? The mandatory two-week continuous annual leave rule under R-B-I's Internal Control Guidelines, meant to uncover concealed positions. Look at the blank mind map for the trading desk. Name today's four branches from memory. Organisation, Three Offices, Dealer Limits, Forex Risks. You can now handle treasury organisation and dealer controls; full VaR comes later. Homework: dollar plus twelve, buys eighteen, sells twenty-two at eighty-five; euro minus four at ninety-two; pound minus three at one-oh-eight. Find Overall N-O-P. Before next class, think: when a bank's treasury needs overnight rupee cash at four p.m., which money-market instruments can it tap within minutes? That is the dealing room mapped and guarded. Put the calculator aside, get some rest, and I will meet you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

@@ -492,6 +492,10 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-24: **Gemini drafts: lock only after a full review.** Batch runs in one chat skipped Deep Research (12 drafts
+  rejected); one lesson per chat with `tools/gemini/gate.py` fixed that (13–24 primary links per lesson). A17–A19b got a
+  full cross-model review and were locked. For A19c, A20, A22, C01, C01b only 2–4 facts each were spot-checked, so the
+  owner chose to save them as drafts and review later; they carry `review_pending.md` and are not voiced until reviewed.
 - 2026-11-24: **Gemini trial for research and first drafts (to save Claude usage).** Owner asked to hand deep research
   and script writing to Gemini. What Gemini offers now (checked 2026-11-24): Deep Research and Deep Research Max (Apr
   2026, on Gemini 3.1 Pro: web, file uploads, an editable research plan, cited reports); Gemini 4 Neon (18 Nov 2026,

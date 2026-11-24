@@ -1,0 +1,150 @@
+<title>A19c Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A19c voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A19c/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up & Opening + Chapter 1 · Pledge of shares: who, to whom, why, and invocation + Chapter 2 · Reporting on FIRMS and FLAIR, plus Late Submission Fee (N001–N071)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N071", "text": "[warmly] Hello again, class. The foreign money has landed; today we clear the paperwork at the bank desk. Keep your calculator ready. First, last class's homework: fifty lakh shares plus ten lakh convertible debentures, F-P-I holds five point five lakh. Diluted total is sixty lakh. Five point five over sixty is nine point one seven per cent—below ten, so F-P-I. Quick recall from two classes back: which monthly return reports external commercial borrowing flows to R-B-I? Form E-C-B Two. Now back to our Pune A-D bank desk with Meridian Ventures and Sahyadri Sensors. Meridian's five crore equity money and thirty lakh note money have landed. Sahyadri has not allotted shares yet. Meridian also wants to pledge its shares to an Indian bank for Sahyadri's working capital loan. Some officers say every non-resident share pledge needs R-B-I approval. Others say the A-D bank clears it. Your view? Hold that answer. Today we clear three trays at the A-D desk: pledges, reporting with late fees, and documents for inflows and refunds. Chapter one: pledge of shares. Many think a non-resident pledging Indian shares always needs prior R-B-I approval. Wrong. Under Rule nine-eight of the N-D-I Rules, four pledge routes run without R-B-I approval, verified by the A-D bank. Route one: a promoter of an Indian E-C-B borrower may pledge shares of the borrower or associate resident companies. Three rules: co-terminus with E-C-B maturity, Statutory Auditor end-use certificate, and prior A-D bank N-O-C. Now three routes for a non-resident holding Indian equity instruments or investment-vehicle units. Route two: pledge to an Indian bank for bona-fide credit facilities to that Indian investee company. It needs a Statutory Auditor utilisation certificate, SEBI disclosures, and Banking Regulation Act section nineteen compliance. Section nineteen-two caps a bank's holding—even as pledgee—at thirty per cent of company paid-up capital or bank capital and reserves, whichever is less. Remember our opening question on Meridian pledging Sahyadri shares to an Indian bank? Route two clears it at the A-D desk. Route three: pledge to an overseas bank for credit to the investor, its non-resident promoter, or an overseas group company. Strict fence: loan only from an overseas bank, genuine overseas business only, no Indian investment, no capital inflow, plus a C-A or C-P-A annual certificate. Route four: pledge to an R-B-I-registered N-B-F-C for bona-fide credit to the Indian investee company. Twin checks for N-B-F-Cs: an ex-ante Board resolution before the loan, an ex-post Statutory Auditor certificate after utilisation, and SEBI disclosures. If invocation makes an N-B-F-C breach credit concentration norms, how many days does it get to sell and cure the breach? Thirty days from invocation. Across all four routes, shares must be unencumbered, with existing lenders' N-O-C and A-D verification. Big invocation trap. If a pledge is invoked two years later, which date's sectoral cap and pricing apply? The rules in force at creation of the pledge—not the invocation date. Entry routes, caps, and pricing lock at creation. Any other pledge needs prior R-B-I approval with five documents: both Board resolutions, C-S-certified agreement, facility details, and acquisition reporting. Pause check for Chapter one. First: can a non-resident pledge Indian shares to an overseas bank to fund an Indian subsidiary? No—overseas-bank pledge loans cannot fund any Indian investment. Second: days for an N-B-F-C to cure a concentration breach? Thirty days from invocation. Third: on invocation, do sectoral caps apply as at creation or invocation? As at creation of the pledge. Remember: four routes clear at the A-D desk, and invocation follows creation-date rules. Chapter two: reporting and late fees. Recall from Chapter one: what is a bank's section nineteen-two share-pledge cap? Thirty per cent of company paid-up capital or bank paid-up capital and reserves, whichever is less. Transactional foreign investment returns sit inside the Single Master Form—S-M-F—on R-B-I's F-I-R-M-S portal, covering nine forms. First, register the Entity Master—one Entity User per entity, excluding convertible notes from diluted capital. Next, a Business User registers; the A-D bank verifies the Business User's e-K-Y-C within three working days. Since four January twenty twenty-three, S-M-F forms are auto-acknowledged on submission, and the A-D bank verifies within five working days. Now split the reporting table into two buckets: thirty-day forms and sixty-day forms. Thirty days: Form F-C-G-P-R by the Indian company from issue of F-D-I equity instruments—merging the old Advance Reporting Form. Also thirty days: Form E-S-O-P by the company on grant; Form D-R-R by the domestic custodian from close of a D-R issue. Also thirty days: Form L-L-P One from receipt of consideration; Form In-V-I by an investment vehicle from unit issue. Also thirty days: Form C-N by a startup on issue, and by the resident party on a convertible-note transfer. And Form D-I for downstream investment: notify D-P-I-I-T in thirty days of investment, and file Form D-I in thirty days of allotment. Sixty days: Form F-C-T-R-S for transfers between a repatriable non-resident and a resident, or a non-repatriable non-resident. File F-C-T-R-S within sixty days of transfer or payment, whichever is earlier—onus sits on the resident party. Two F-C-T-R-S traps: a sale between a non-repatriable non-resident and a resident is exempt; deferred deals file on every tranche. Second sixty-day form: Form L-L-P Two, filed by the resident transferor or transferee within sixty days of receiving funds. On stock exchanges, A-D banks file L-E-C F-I-I for F-P-Is, and—from thirteen June twenty twenty-six—Form L-E-C I-F-I for individual foreign investors. Annually, companies, L-L-Ps, and A-I-Fs with FDI or ODI file the F-L-A Return on F-L-A-I-R by fifteen July. Unaudited accounts? File provisional figures by fifteen July and revise after audit with R-B-I approval. No balance sheet is attached. Entities holding only share application money or only non-repatriable shares skip F-L-A; I-F-S-C entities file with I-F-S-C-A. Now Late Submission Fee—L-S-F. Many recall an old slab where the percentage doubled every year of delay. Gone. Since thirty September twenty twenty-two, R-B-I applies one uniform L-S-F matrix. Write this down once. Non-flow returns like F-L-A pay a flat seven thousand five hundred rupees per return. Flow returns pay seven thousand five hundred plus zero point zero two five per cent times A times n. A is the rupee amount; n is years of delay rounded upwards to the nearest month, to two decimals. L-S-F caps at one hundred per cent of A, rounds upwards to the nearest hundred, and must be paid within thirty days. L-S-F works up to three years from the due date. Beyond three years, delays go to FEMA compounding. Worked sum: Sahyadri files F-C-G-P-R for five crore rupees six months late, so n is zero point five zero. Press five crore times zero point zero two five per cent: twelve thousand five hundred. Times zero point five zero: six thousand two hundred fifty. Add seven thousand five hundred: thirteen thousand seven hundred fifty. Common mistake: stopping there! Round upwards to the nearest hundred: thirteen thousand eight hundred rupees. Faded sum: an L-L-P files L-L-P One for two crore rupees three months and ten days late. What is n? Round up to four months: four over twelve is zero point three three. Two crore times zero point zero two five per cent? Five thousand. Times zero point three three gives sixteen fifty; add seven thousand five hundred for nine thousand one fifty—rounded up, nine thousand two hundred. Your turn. A startup files Form C-N for forty lakh rupees one year and six months late. Compute L-S-F. Forty lakh times zero point zero two five per cent is one thousand; times one point five zero is one thousand five hundred. Add seven thousand five hundred: nine thousand rupees exact. And a tiny five thousand rupee filing caps at five thousand—one hundred per cent of A. Pause check for Chapter two. First: filing window for F-C-G-P-R versus F-C-T-R-S? Thirty days for F-C-G-P-R; sixty days for F-C-T-R-S. Second: flat L-S-F for a delayed F-L-A Return? Seven thousand five hundred rupees. Third: what happens if a form is filed four years late? Compounding—L-S-F stops at three years. Remember: thirty-day issue forms, sixty-day transfer forms, fifteen July F-L-A, and uniform L-S-F."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · Documents for receiving investment and for refunds + Close (N072–N101)", "turns": [{"speaker": "Teacher", "first": "N072", "last": "N101", "text": "Chapter three: documents at the A-D counter. Recall from Chapter two: how many working days does the A-D bank get to verify S-M-F? Five working days. First, check R-B-I's fifteen January twenty twenty-five update on how investment money may arrive. Earlier, only inward remittance or N-R-E, F-C-N-R-B, or Escrow accounts worked. Now any repatriable foreign currency or Rupee account works, plus Special Rupee Vostro Accounts. Now open the document checklist for obtaining foreign investment and filing F-C-G-P-R. One, portal onboarding: an Authority Letter on company letterhead—signed by a different person—plus the user's personal P-A-N. Two, payment proof: F-I-R-C and investor K-Y-C from the overseas remitting bank—or a debit statement for repatriable accounts. Three, Valuation Certificate from a C-A, SEBI Merchant Banker, or practicing Cost Accountant—at most ninety days old on the investment date. Four, signed Declaration and Company Secretary certificate confirming Companies Act and FEMA compliance, plus Government approval where required. Special cases: pre-incorporation shares by a wholly owned subsidiary—capped at five per cent of authorised capital or five lakh dollars—need a Statutory Auditor certificate. F-C-T-R-S adds transfer-agreement extracts and buyer-seller consent letters; excess inflow needs a note stating prior use, future use, or refund. Now refunds when shares are not allotted in time. Under FEMA three ninety-five, equity must be allotted within sixty days of receipt. For partly paid shares, sixty days runs from each call payment. If not allotted in sixty days, refund within fifteen days after—by Day seventy-five. Before releasing a refund, the A-D bank checks three things: applicant bonafides, receipt via permitted mode using F-I-R-C and K-Y-C, and Companies Act interest. Final trap. Many think paying delayed-refund interest under the Companies Act cures a late refund under FEMA. False. Missing sixty-day allotment or fifteen-day refund remains a FEMA contravention even if Companies Act interest is paid. On exit later, the A-D bank remits sale proceeds net of taxes if held repatriably and sold within pricing rules. Pause check for Chapter three. First: days to allot equity and days to refund? Sixty days to allot, fifteen days after to refund. Second: is a Special Rupee Vostro Account an allowed payment channel? Yes, since fifteen January twenty twenty-five. Third: if Sahyadri refunds on Day ninety with Companies Act interest, is FEMA compliance clean? No—still a FEMA contravention. Remember: F-I-R-C, K-Y-C, ninety-day valuation, C-S certificate, and sixty plus fifteen days. Let's close Sahyadri and Meridian's file at our Pune desk. Sahyadri allots the five crore shares within sixty days—or refunds in fifteen—then files F-C-G-P-R and Form C-N within thirty days each. Meridian's pledge to an Indian bank clears at the A-D desk with a Statutory Auditor certificate, SEBI norms, and the thirty per cent cap. Mixed check. A company refunds on Day eighty with interest, and files F-C-T-R-S four years late. Name both consequences. Day eighty is a FEMA contravention despite interest, and a four-year reporting delay exceeds three years, so it needs compounding. Look at the blank mind map. Pause and recall the three trays: pledge routes, reporting with L-S-F, and inflow-refund documents. Here is the full map: four A-D pledge routes with creation-date invocation; thirty- and sixty-day forms, fifteen July F-L-A, uniform L-S-F; and receipt-refund docs. Homework: a company allots eight crore rupees of equity shares and files F-C-G-P-R nine months late. Calculate L-S-F on your calculator. Next class, we leave capital flows behind and step into foreign trade risk—how E-C-G-C protects exporters and their banks. [warmly] That's the paper trail cleared, form by form. Put the pen down, take a breather, and I'll meet you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

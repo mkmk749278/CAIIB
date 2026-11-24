@@ -29,7 +29,7 @@ if "\n---\n" not in txt:  # voice_blocks.py needs the header / body split
     i = txt.find("\n## ")
     txt = txt[:i] + "\n\n---\n" + txt[i:]
 txt = re.sub(r"(\n> [^\n]*)\n(?=N\d{3})", r"\1\n\n", txt)  # blank line after each cue block
-open(f"{folder}/script_class.md", "w").write("# " + txt)
+open(f"{folder}/script_class.md", "w").write(txt if txt.lstrip().startswith("#") else "# " + txt)
 
 f, o, i = rd("fact_sheet").split("\n"), [], 0
 while i < len(f):
@@ -49,7 +49,8 @@ while i < len(f):
     else:
         o.append(l)
     i += 1
-open(f"research/bfm/facts/{fname}.md", "w").write("# " + "\n".join(o))
+fs = "\n".join(o)
+open(f"research/bfm/facts/{fname}.md", "w").write(fs if fs.lstrip().startswith("#") else "# " + fs)
 for a, b in [("numericals", "numericals.md"), ("practice", "practice.md"), ("map_nodes", "map_nodes.md")]:
     open(f"{folder}/{b}", "w").write("# " + rd(a))
 print("imported", ID, "→", folder, "and", fname)
