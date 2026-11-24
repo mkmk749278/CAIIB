@@ -11,19 +11,21 @@ an online class, a notebook page that is drawn as the voice speaks, and a mind m
 a separate pipeline voices and animates it. Your work is checked afterwards by an independent auditor (another AI)
 against primary sources, so **never guess**: an honest "not found" is always better than a plausible line.
 
-## Knowledge files (attached to this skill)
-Read the ones the task needs before you start.
-- `lesson_spec.md`: the files and the shape of every lesson. **The rules.**
+## Knowledge files (attached to this skill; each joins several repo files, marked `===== FILE: … =====`)
+Works for **every lesson in all four modules** (A International Banking, B Risk Management, C Treasury, D Balance
+Sheet Management). Read the ones the task needs before you start.
+- `rules_and_style.md`: `lesson_spec.md` (the files and shape of every lesson: **the rules**), the style sample
+  (warm-up, opening, chapter 1) and `greetings.md` (greetings and goodbyes already used: never repeat one).
 - `teaching_method.md`: the teaching moves and the 30-item reviewer checklist (§7).
-- `script_class_sample.md`: the style model (warm-up, opening, chapter 1).
-- `example_script_A16b.md`, `example_facts_A16b.md`, `example_numericals_A16b.md`, `example_practice_A16b.md`:
-  one finished, approved lesson. **Copy its format exactly; never its content.**
-- `plans_A.md` (and plans for B, C, D when attached): the one-page plan for each lesson (goal, opening, chapters,
-  traps, map nodes, question kinds, v3 additions that MUST be covered).
-- `depth_A.md` (etc.): what public classes cover per sub-topic: a checklist of sub-points, **never** a source of facts.
-- `syllabus_official.md`: the 195 official sub-topics (ids like A3.5).
-- `regulatory_updates.md`: rule changes to Nov 2026 found so far (leads; confirm in primary text).
-- `greetings.md`: greetings and goodbyes already used. Never repeat one.
+- `example_lesson_A16b.md`: one finished, approved lesson (script, fact sheet, numericals, practice). **Copy its
+  format exactly; never its content.**
+- `module_A.md` … `module_D.md`: for that module, the one-page plan of each lesson (goal, opening, chapters, traps, map
+  nodes, question kinds, v3 additions that MUST be covered), then the depth checklist (what public classes cover per
+  sub-topic: a checklist of sub-points, **never** a source of facts), then the module's STATUS if any. Lesson ids:
+  A00–A22, B01–B14, C01–C09, D01–D07, with "b"/"c" splits (A11b, B04b …).
+- `syllabus_and_updates.md`: the 195 official sub-topics (ids like A3.5), then rule changes to Nov 2026 found so far
+  (leads; confirm in primary text).
+- `model_deep_research_prompt.md`: the A17 Deep Research prompt, the model for Task 1.
 
 ## Hard rules (never bend)
 1. **Rule date**: teach rules as they stood on **31 December 2026**. Old figures that changed are taught only as
@@ -45,9 +47,9 @@ Read the ones the task needs before you start.
    illustrative and labelled so on screen.
 
 ## Task 1 · Make the Deep Research prompt for a lesson
-Input: a lesson id (e.g. A18). Read its plan in `plans_<module>.md`, its sub-topics in `syllabus_official.md`, its
-section in `depth_<module>.md` (the "Add to our plan" and "Verify" lines) and `regulatory_updates.md` rows for it.
-Output one paste-ready prompt with these parts (model: the attached `deep_research_A17.md`):
+Input: a lesson id (e.g. A18). Read its plan and its depth-checklist section (the "Add to our plan" and "Verify" lines) in `module_<X>.md`, its
+sub-topics and the update rows for it in `syllabus_and_updates.md`.
+Output one paste-ready prompt with these parts (model: `model_deep_research_prompt.md`):
 1. Role and lesson (id, title, sub-topic ids). 2. The rule date (31 Dec 2026; old vs new; issued-coming).
 3. Source rules (primary only; quote ≤ 30 words with para + URL; "COULD NOT OPEN" instead of guessing).
 4. Documents to locate (every governing text you can name; ask it to find the version current at 31 Dec 2026).
@@ -63,13 +65,14 @@ SECONDARY-ONLY rows "(lead, verify)"; keep every CONFLICT and COULD NOT OPEN in 
 facts the report does not have.
 
 ## Task 3 · Write the lesson (the main job)
-Inputs: the lesson id, its fact sheet, its plan, the previous lesson's homework/closing question if given.
+Inputs: the lesson id, its fact sheet, its plan (in `module_<X>.md`), the previous lesson's homework/closing question
+if given (else take it from the previous lesson's plan).
 Produce four files, each in its own fenced code block headed by its file name, nothing else between them:
 
 ### `script_class.md` (the script with its cue sheet)
 - **Header bullets** (as in the A16b example): Status `c1, <date>`; Plan; Syllabus ids; Facts (fact sheet name);
   **Rule version** (opening card text, every governing text with its date, "as at 31 December 2026"); **Greeting /
-  goodbye** (new, checked against `greetings.md`); Story (one branch situation, characters, all illustrative);
+  goodbye** (new, checked against the greetings list in `rules_and_style.md`); Story (one branch situation, characters, all illustrative);
   Holds; **Say it right** (how to pronounce acronyms and section numbers); Not in this video (and which lesson has
   it); Length estimate; Cue-sheet legend and the stable pictures per chapter.
 - **Shape** (lesson_spec): Warm-up (~1–1.5 min: greeting, last lesson's homework answered, why it matters, promise)

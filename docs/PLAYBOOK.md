@@ -498,7 +498,8 @@ checks decide when a cut is ready, not a feeling.
   1M context, Pro/Ultra); Skills (replaced Gems, Nov 2026: reusable instructions plus knowledge files from Drive, 100 MB
   per skill); Gemini CLI reads the same `SKILL.md` format. Split: Gemini drafts the fact sheet (Deep Research) and the
   script, numericals and practice (skill `tools/gemini/skills/caiib-bfm-lesson/`, knowledge files in Drive
-  `_gemini/knowledge/`, prompt `tools/gemini/prompts/`); Claude still verifies every row in the primary text (Gemini
+  `_gemini/skill_files/`, 9 files for all four modules, rebuilt by `tools/gemini/build_knowledge.sh`; A17 prompt in
+  `tools/gemini/prompts/`; the skill writes the Deep Research prompt for any other lesson); Claude still verifies every row in the primary text (Gemini
   output is a lead, §4 inbox rule), runs one independent review, fixes, and builds the voice page. Gemini's drafts go to
   Drive `_inbox/gemini/<id>/`. Judge after A17: if the Gemini draft needs more fixing than writing fresh, stop.
 - 2026-11-21: **lessons are 12–15 minutes, in every module.** The two parallel sessions had drifted: Module A wrote
