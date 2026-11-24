@@ -1,0 +1,7 @@
+# A19c · Map nodes (c1, 2026-11-24)
+Nodes added by A19c to the Module A mind map (Borrowing from abroad → Equity lane → Paper trail), in order of appearance:
+1. Paper trail (AD bank desk) (parent node extending Equity lane)
+   * Pledge of shares (Rule 9(8)) (N010): 4 AD-cleared routes (ECB promoter · Indian bank with BR Act s. 19(2) 30% cap · Overseas bank for overseas business only · RBI-registered NBFC with ex-ante BR, ex-post auditor cert, 30d breach cure); invocation follows creation-date rules; other pledges need prior RBI approval (5 docs).
+   * FIRMS / SMF & FLAIR reporting (N033): Entity Master → BU eKYC (3 working days) → Auto-acknowledged SMF (AD verifies 5 working days); 30-day forms (FC-GPR, ESOP, DRR, LLP-I, InVI, DI + DPIIT 30d, CN); 60-day forms (FC-TRS transfer/payment earlier, non-repat PROI ↔ resident exempt; LLP-II); LEC(FII), LEC(IFI) (Jun 2026); FLA Return on FLAIR by 15 July.
+   * Late Submission Fee (LSF) (N052): Uniform Sep 2022 matrix — ₹7,500 flat (FLA/non-flow); ₹7,500 + (0.025% × A × n) (flow), cap 100% of A, round up to ₹100, pay in 30d; ≤3 yrs LSF, >3 yrs compounding.
+   * Documents: inward & refund (N073): Payment mode (Jan 2025: any repatriable FX/INR account + SRVAs); Inward docs (Authority Letter + PAN, FIRC + KYC or debit statement, 90d Valuation Cert, Declaration + CS Cert, Govt approval); Refund clock (60d allot + 15d refund; AD checks bonafides, payment mode, Companies Act interest; late = FEMA contravention even with interest).

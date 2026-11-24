@@ -1,0 +1,150 @@
+<title>A22 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>A22 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/A/A22/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · From telex to ISO 20022 and e-documents + Chapter 2 · Platforms, fintech and delivery channels + Chapter 3 · A trade deal on blockchain, step by step (N001–N069)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N069", "text": "[warmly] Hello everyone, glad to have you with me. Today, the paper trail goes digital, and we see what actually changes. First, a quick check from last class. Does F-E-D-A-I license authorised dealers, or is it a self-regulatory association? Self-regulatory association. RBI licenses authorised dealers under FEMA, while F-E-D-A-I sets market rules. Now one from earlier in this module. When a bank sends a SWIFT message, does SWIFT move the money itself? No. SWIFT carries messages, while settlement happens through correspondent accounts or payment systems. Keep that rule close today. Why does this unit matter? Blockchain technology was tested in July twenty twenty-four and twice in June twenty twenty-six. No sums today, no heavy jargon. Stay with me, and you will trace a full digital trade deal cleanly. Meet Meena again, our Tiruppur garment exporter. Last year, her export documents went by courier and took days to check. This year, her bank offers her the same letter of credit on a shared digital ledger. Here is my question. Does a shared ledger speed up trade and replace SWIFT, or is it just a buzzword? Hold your answer. By chapter three, you will see what the ledger speeds up and what still needs banking rails. Chapter one: how international banking moved from telex messages to structured data and electronic trade documents. For decades, cross-border banks sent legacy M-T messages over SWIFT, a Belgian member-owned cooperative connecting over eleven thousand institutions. The National Bank of Belgium is SWIFT's lead overseer, and RBI sits on the SWIFT Oversight Forum. Legacy M-T messages had cramped text fields. So banking adopted I-S-O two-zero-zero-two-two, an open standard from I-S-O committee T-C sixty-eight. India's Next Generation R-T-G-S adopted I-S-O two-zero-zero-two-two in December twenty thirteen, the first large-value system worldwide to do so. On SWIFT, coexistence between M-T and I-S-O two-zero-zero-two-two began in March twenty twenty-three and ended on twenty-second November twenty twenty-five. Structured fields for town and country also support anti-money laundering screening and F-A-T-F Recommendation sixteen under the twenty twenty-six release. Next is SWIFT g-p-i, Global Payments Innovation, which brought courier-style tracking to international wires. Nearly sixty per cent of g-p-i payments credit beneficiaries within thirty minutes, and almost one hundred per cent within twenty-four hours. That tracking uses a thirty-six character U-E-T-R, Unique End-to-End Transaction Reference, placed in field one-two-one. Intermediary banks must pass the U-E-T-R onward unaltered, and since November twenty twenty, banks must confirm credit to the Tracker. Banks also connect corporate treasuries via A-P-Is, Application Programming Interfaces, letting software talk directly to bank systems. Now turn to Meena's trade documents. For electronic L-C presentations, the I-C-C issued e-U-C-P version two point one. Many of you think e-U-C-P replaces U-C-P six hundred when an L-C goes digital. Is that right? No. e-U-C-P strictly supplements U-C-P six hundred. Likewise, e-U-R-C one point one supplements U-R-C five-two-two for documentary collections. Another myth is that electronic bills of lading lack legal standing everywhere. Actually, legal recognition varies by country. For example, Section three of the U-K Electronic Trade Documents Act twenty twenty-three gives electronic trade documents the same legal effect as paper. Pause check, chapter one. One: when did SWIFT's M-T and I-S-O two-zero-zero-two-two coexistence period end? Twenty-second November twenty twenty-five. Two: how many characters are in a U-E-T-R, and can intermediaries change it? Thirty-six characters, passed unaltered. Three, the twist: does e-U-C-P two point one replace U-C-P six hundred? No, it supplements U-C-P six hundred. One thing from chapter one: I-S-O two-zero-zero-two-two structures data, g-p-i tracks it, e-U-C-P supplements paper rules. Chapter two: digital platforms, fintech rules, and delivery channels. First, quick recall from chapter one. Which SWIFT g-p-i feature lets a bank halt a fraudulent or erroneous payment in flight? Stop and Recall. Good. Now let us map India's banking platforms on our hub picture. First, S-F-M-S, Structured Financial Messaging System, India's domestic messaging standard over INFINET in a four-tier architecture carrying R-T-G-S and N-E-F-T. Many officers think I-D-R-B-T still runs S-F-M-S. Is that still true? No. I-D-R-B-T, set up by RBI in nineteen ninety-six, built S-F-M-S. Today, RBI's wholly owned subsidiary I-F-T-A-S operates it round the clock. Write this down: I-D-R-B-T initiated Indian banking blockchain work with its January twenty seventeen White Paper and domestic sight-L-C proof of concept. RBI also records early bank pilots: Axis Bank's Ripple payments in twenty seventeen and H-S-B-C India's trade deal with Reliance in twenty eighteen. Next platform: T-ReDS, Trade Receivables Discounting System, an RBI-authorised electronic network under the Payment and Settlement Systems Act for M-S-M-E invoices. RBI's June twenty twenty-six T-ReDS Master Direction requires twenty-five crore minimum net worth and includes sellers, buyers, financiers, insurers, and credit guarantee trusts. Crucial rule: Factoring Units discounted on T-ReDS are strictly without recourse to M-S-M-E sellers, with assignments filed on CERSAI. For cross-border receivables at GIFT City, I-F-S-C-A regulates I-T-F-S platforms under revised guidelines issued in December twenty twenty-four. In interbank forex, C-C-I-L acts as Qualified Central Counterparty, settling U-S-D-I-N-R via Payment-versus-Payment and cross-currency trades through C-L-S Bank. Now fintech. RBI groups FinTech into five areas: payments, lending, market provisioning, investment management, and data analytics, built on India Stack. RBI launched its Regulatory Sandbox in August twenty nineteen, updated February twenty twenty-four, overseen by its FinTech Department with a nine-month cohort. The Second Cohort focused on Cross-Border Payments in December twenty twenty and opened for On Tap applications in September twenty twenty-two. Many assume Sandbox entry grants legal waivers. Does RBI allow that? Never. RBI grants no legal waivers. Crypto services are excluded, while K-Y-C, A-M-L, local data storage, and D-P-D-P Act twenty twenty-three stay mandatory. Under RBI's September twenty twenty-five Master Direction, Payment Aggregators Cross-Border need fifteen crore rising to twenty-five crore net worth, capped at twenty-five lakh per transaction. Key delivery channels include mobile and internet banking, A-P-I-linked third-party apps on U-P-I, interoperable Q-R codes, and B-B-P-S cross-border bill payments. Globally, N-P-C-I International linked U-P-I with Singapore's PayNow in February twenty twenty-three, reaching ten countries by October twenty twenty-six, with Uzbekistan eleventh. Multilaterally, RBI joined B-I-S Project Nexus in June twenty twenty-four to interlink U-P-I with four ASEAN fast payment systems. Also note: the Payments Regulatory Board replaced B-P-S-S in May twenty twenty-five, and faster inward payment guidelines arrived in April twenty twenty-six. Pause check, chapter two. One: which RBI subsidiary operates S-F-M-S round the clock today? I-F-T-A-S. Two: is T-ReDS discounting with recourse or without recourse to the M-S-M-E seller? Strictly without recourse. Three: what is the per-transaction cap for Payment Aggregators Cross-Border under the twenty twenty-five Master Direction? Twenty-five lakh rupees. One thing from chapter two: India pairs public rails like S-F-M-S and U-P-I with regulated fintechs under RBI oversight. Chapter three: Meena's letter of credit on a blockchain, step by step. First, quick recall from chapter two. Which Indian institution published the January twenty seventeen Blockchain White Paper and tested a sight-L-C proof of concept? I-D-R-B-T. Now let us define two terms cleanly before running Meena's trade deal. Distributed Ledger Technology is a shared database updated by consensus. Blockchain is a linear chain of hashed blocks: every blockchain is D-L-T, not vice versa. Each block stores the previous block's hash. Change one character and the hash breaks, while private keys sign entries and public keys verify them. Many think blockchain means Bitcoin, making Meena's invoice price visible to everyone online. True or false? False on both counts. Bitcoin is permissionless. Banks use permissioned D-L-T like Hyperledger Fabric, Corda, or Quorum, where access is approved and private. Picture permissioned D-L-T like a locked conference room, not a public board: only trade parties enter, though legal rules and payment rails still apply. Next term: a smart contract is self-executing code on D-L-T that checks agreed conditions and triggers actions automatically. Now trace Meena's export L-C across six clean steps mirroring the paper relay."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · A trade deal on blockchain, step by step + Chapter 4 · Benefits, limits and challenges on one balance scale + Close (N070–N106)", "turns": [{"speaker": "Teacher", "first": "N070", "last": "N106", "text": "Step one: buyer and Meena agree sales terms and encode L-C conditions into a smart contract on the permissioned ledger. Step two: the issuing bank approves and records the digital L-C on the ledger, visible instantly to Meena and her advising bank. Step three: Meena ships the garments and uploads hashed electronic trade documents — invoice, packing list, transport token — onto the ledger. Step four: the smart contract automatically checks document data against L-C terms, flagging discrepancies immediately instead of days later. Step five: once all conditions match, the smart contract automatically triggers the payment instruction to the issuing bank. Step six — our opening question — does the blockchain move central bank money by itself? No. Money still settles over banking rails like SWIFT and R-T-G-S, unless tokenised deposits or central bank digital currency are integrated. So back to Meena's opening question: the shared ledger cuts document delays, but it does not replace banks or payment rails. Pause check, chapter three. One: are all D-L-Ts blockchains, or are all blockchains D-L-Ts? All blockchains are D-L-Ts. Two: why do banks choose permissioned D-L-T over permissionless networks? For transaction privacy and controlled access. Three: what happens right after Meena uploads hashed documents onto the ledger? The smart contract checks data against L-C terms. One thing from chapter three: blockchain shares documents and triggers checks, while payment rails settle money. Chapter four: weighing benefits against limits and challenges on one balance scale. First, quick recall from chapter three. What do we call self-executing code on a distributed ledger that automatically checks L-C conditions? A smart contract. Now load the left pan: the benefits. Traditional correspondent banking faces three frictions: chains of intermediaries, multi-country compliance checks, and foreign exchange plus time-zone delays. Digital platforms and D-L-T cut turnaround from days to minutes, lower costs, improve transparency, create tamper-evident trails, and reduce discrepancies. Globally, the G-twenty Roadmap, revised in twenty twenty-three to fifteen action items across three themes, pushes interoperability, I-S-O two-zero-zero-two-two, and aligned regulation. Now load the right pan: the real limits and challenges bankers must manage. Challenge one: cyber security and quantum risk. Banks rely on SWIFT's Customer Security Programme, ReBIT, annual audits, and post-quantum testing under B-I-S Project Leap. Challenge two: legal gaps and interoperability. Electronic trade documents lack universal legal recognition, and separate blockchain networks risk becoming disconnected digital islands. Challenge three: legacy IT cost, data privacy, and A-M-L. RBI's April twenty eighteen circular mandates storing Indian payment data strictly inside India. Challenge four: private stablecoins versus central bank digital currency. RBI notes stablecoins fail three tests: singleness of money, elasticity, and integrity. Pause check, chapter four. One: name any two frictions in traditional correspondent cross-border payments. Multiple intermediaries, cross-border compliance checks, or FX and time-zone delays. Two: where must Indian payment operators store domestic payment data? Only in India, under RBI's April twenty eighteen circular. Three: which three monetary tests do private stablecoins fail? Singleness of money, elasticity, and integrity. One thing from chapter four: technology brings speed and visibility, while cyber, legal, privacy, and interoperability need governance. Mixed final check across all chapters. One: who developed S-F-M-S, and who operates it today? I-D-R-B-T built it; I-F-T-A-S runs it. Two: does e-U-C-P two point one replace or supplement U-C-P six hundred? Supplement. Three: are cryptocurrency services allowed inside RBI's Regulatory Sandbox? No, crypto is on the negative list, while permissioned blockchain and smart contracts are eligible. Blank mind map check. Under Pipes and Plumbing, our Technology branch has six nodes. Name them before I show them. I-S-O two-zero-zero-two-two, g-p-i, platforms, fintech and channels, blockchain trade, and benefits versus challenges. You can now trace payment digitisation, compare key platforms, walk a six-step blockchain L-C, and weigh fintech risks against RBI rules. Homework tonight: draw the six-step blockchain flow beside a traditional L-C relay, and mark where banking payment rails still sit. Next class is our module revision. Before we meet, note which three recent regulatory changes surprised you most across international banking. [warmly] That wraps up our final topic in this module. Step away from the screen, rest well, and I'll see you in the revision class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

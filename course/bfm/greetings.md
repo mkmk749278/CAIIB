@@ -30,6 +30,9 @@ videos running.
 | A17 | "Welcome back to the desk, everyone. Today money comes home from abroad, and we sort it into four neat drawers." | "That's the four drawers and the homecoming drawer sorted. Put your notes away, rest up, and I'll meet you next class." |
 | A18 | "Good to see you back at the desk, everyone. Today we open two doors — FEMA and Income-tax — and settle N-R-I loans." | "That wraps up residency and N-R-I loans. Close the notebook, take a breather, and I'll see you next class." |
 | A19 | "Hello everyone, good to have your company again. Tonight we build the bridge for Indian companies borrowing from abroad." | "That finishes our bridge for overseas borrowing and receipts. Put the notebook away, rest well, and I'll meet you in the next class." |
+| A19c (draft) | "Hello again, class. The foreign money has landed; today we clear the paperwork at the bank desk." | "That's the paper trail cleared, form by form. Put the pen down, take a breather, and I'll meet you next class." |
+| A20 (draft) | "Welcome to class, everyone. Today we step into a special financial zone right on Indian soil." | "That is our tour of the special zone complete. Put your notes away, get some rest, and I will meet you in the next class." |
+| A22 (draft) | "Hello everyone, glad to have you with me. Today, the paper trail goes digital, and we see what actually changes." | "That wraps up our final topic in this module. Step away from the screen, rest well, and I'll see you in the revision class." |
 | A19b | "Good day, everyone. Last class we crossed the borrowing bridge; today we take the equity lane." | "That's the equity lane mapped out. Rest well tonight, and I'll meet you in the next class." |
 
 Note: 00 and A07 are close to each other (both "good evening … good night"). They are not neighbours in the course
@@ -42,3 +45,10 @@ order, so they stand; change A07's lines if it is ever re-voiced.
 | B01 | "Hello and welcome, everyone. Today we open a new module." | "That's Module B begun. Rest well, and I'll see you in the next class." |
 | B02 | "Good to have you back. Let's pick up from the house we drew last time." | "That's the framework done. Close the notebook, stretch, and I'll see you in the next class." |
 | B03 | "Hi everyone. Pen, notebook and calculator, please. This one is a working class." | "That's the numbers class done. Two more sums on your own tonight, and we meet again next class." |
+
+## Module C
+
+| Video | Greeting (first words) | Goodbye (last words) |
+|---|---|---|
+| C01 (draft) | "Hello everyone, and welcome to the trading floor. Today we begin treasury management, starting with why three desks became one." | "That is our integrated treasury desk set up. Close your notebook, rest your eyes, and I will meet you in the next class." |
+| C01b (draft) | "Good to have you back at the trading desk. Last class we saw why treasury earns; today we see how it is controlled." | "That is the dealing room mapped and guarded. Put the calculator aside, get some rest, and I will meet you next class." |

@@ -1,0 +1,150 @@
+<title>C01 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>C01 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/C/C01/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · From separate desks to one integrated treasury + Chapter 2 · Treasury as a profit centre and covered interest arbitrage + Chapter 3 · Globalisation and the treasury (N001–N073)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N073", "text": "[warmly] Hello everyone, and welcome to the trading floor. Today we begin treasury management, starting with why three desks became one. Put your phone on silent and keep your basic calculator nearby. Let us start with two quick recall questions. From liquidity risk in our previous module: which function inside a bank controls the stock of H-Q-L-A? The Treasurer, or liquidity-management function, controls H-Q-L-A so liquid assets can be monetised immediately in stress. Now reach further back to international banking: what determines the forward premium or discount between two currencies? The interest-rate differential between the two currencies drives the forward premium or discount, not market volatility. Treasury products appeared in six of seven exam cycles, and this module carried twenty-seven of one hundred questions recently. Stay with me for one clear picture, one worked arbitrage sum, and zero heavy jargon. It is nine a.m. at Kaveri Commercial Bank's Mumbai treasury, illustrative. Money-market, forex, and bond dealers sit at one desk. Earlier, Indian banks kept those three desks in separate rooms. Why did banks merge them under one roof? Some of you think it saves office rent; others think one market's shock spills directly into the others. Let us check. First, what is an integrated treasury? It unites domestic money-market, foreign-exchange, and securities desks into one coordinated unit. Think of it as a bridge connecting the bank's core book of deposits and loans to the financial markets. The real reason for integration is spillover: a shift in rupee liquidity immediately moves forex swaps and bond yields. Seven drivers pushed banks to integrate: cross-currency cash management, interest arbitrage, global capital inflows, corporate hedging demand, risk management, technology, and reserves. Many of you are thinking treasury only parks spare cash left over by branches. Let us break that belief. Under current R-B-I rules, integrated treasury runs five active functions across the whole balance sheet. Function one is statutory reserves: maintaining C-R-R at three percent of N-D-T-L, earning zero interest from R-B-I. Note the October twenty twenty-six update: daily minimum C-R-R rose from ninety percent to ninety-nine percent of required C-R-R. Alongside C-R-R, treasury maintains S-L-R at eighteen percent of N-D-T-L in cash, bullion, or unencumbered approved government securities. Function two is global liquidity, A-L-M, and transfer pricing: the treasury head sits on A-L-C-O and prices internal funds. Function three is merchant and advisory service: quoting customer hedges and clearing foreign-currency loans before branches sanction them. Why must treasury clear a foreign-currency loan first? Because treasury verifies both availability and cost of foreign-currency funds. Function four is investment and trading across H-T-M, A-F-S, and F-V-T-P-L, including the daily-valued H-F-T trading book. Function five is risk management: hedging the bank's own balance-sheet interest-rate and currency risks with permitted derivatives. Exams love mixing up the three roles and the three books, so keep them in separate columns. The three roles are liquidity management, proprietary trading, and risk management. The three books are the A-L-M book for reserves and H-Q-L-A, the merchant book for clients, and the trading book. Quick pause check for Chapter one. Question one: which book holds a corporate exporter's forward hedge? The merchant book, because it serves an external customer rather than balance-sheet reserves or proprietary bets. Question two, a twist: what is the daily minimum C-R-R requirement effective sixteen October twenty twenty-six? Ninety-nine percent of required C-R-R, up from the old ninety percent rule. One thing to remember: integrated treasury bridges branches and markets across three roles and three books. Quick recall from Chapter one: before a branch sanctions a foreign-currency loan, what two things must treasury confirm? Availability and cost of foreign-currency funds. Good. Now let us see why treasury became a profit centre. Before the nineteen-nineties reforms, treasury was a cost centre focused mainly on statutory reserves and idle cash. Market-determined exchange rates and interest-rate liberalisation turned treasury into a major profit engine for four clear reasons. First, low credit risk, because counterparties are sovereigns, regulated banks, and central clearing houses. Second, high leverage via money markets and swaps; third, low operating cost with few dealers and no branches. Fourth, huge volume over thin margins, earning strong returns while consuming relatively little capital per rupee traded. Treasury income comes from four bars: merchant spread, money-market deployment, investment coupons and dividends, and trading or arbitrage gains. Watch two classic traps here. First, are strategic stakes in a bank's subsidiaries held for short-term trading profit? No. Under R-B-I's twenty twenty-five directions, subsidiary, associate, and joint-venture stakes sit separately at cost and cannot enter H-F-T. Second trap: many officers think a bank's equity desk can short-sell listed shares when markets fall. Can it? No. R-B-I prohibits short positions except in permitted derivatives and Central Government dated securities; equity short-selling is barred. Note one more update: R-B-I discontinued the Investment Fluctuation Reserve from eighteen May twenty twenty-six. Now pick up your calculator for covered interest arbitrage, our one worked sum in this class. Kaveri Bank borrows one million U-S dollars for six months at four percent per annum; spot is eighty-four rupees. It invests the rupees for six months at seven percent per annum, and buys six-month forward dollars at eighty-four eighty. Step one, dollar repayment: halve four percent to two percent. Key one million times one point zero two equals. Step two, rupee maturity: eight crore forty lakh times one point zero three five equals eight crore sixty-nine lakh forty thousand. Step three, convert back at eighty-four eighty: divide that rupee maturity by eighty-four point eight. Subtract one million twenty thousand owed: net arbitrage profit is five thousand two hundred thirty-five dollars, or four lakh forty-four thousand rupees. The commonest mistake is forgetting to halve the annual rates for six months; always match rate to tenor first. Now fade one step: what if the six-month forward stood at exact interest-rate parity, eighty-five point two three five three? Dividing rupee maturity by eighty-five point two three five three leaves zero profit. That is why arbitrage vanishes between freely convertible currencies. Your turn. Borrow five lakh dollars for six months at five percent; spot eighty-five; rupee deposit eight percent; forward eighty-six. Find rupee profit. Repayment costs four crore forty lakh seventy-five thousand; rupee maturity is four crore forty-two lakh. Your net profit is one lakh twenty-five thousand rupees. Write this down: arbitrage locks matched legs with near-zero market risk; speculation takes an unhedged open position carrying full market risk. Merchant business earns a client spread, trading takes short-term managed positions, and R-B-I caps overnight open forex positions at twenty-five percent of total capital. Pause check for Chapter two. Question one: a dealer buys dollars overnight hoping the rupee falls tomorrow. Arbitrage or speculation? Speculation, because it is an unhedged directional bet carrying full market risk. Question two: can a commercial bank short-sell a Central Government dated bond, or a listed company's equity share? Only the Central Government dated security within R-B-I limits; short-selling equities is prohibited. One thing to remember: treasury profits come from volume, spread, and matched arbitrage, never from equity short sales or subsidiary stakes. Quick recall from Chapter two: why does covered interest arbitrage disappear between two freely convertible currencies? Because swap points quickly adjust to match the exact interest-rate differential, bringing profit to zero. Now let us step outside India. Globalisation connects our domestic economy and markets to the world through freer cross-border flows. Many of you are thinking globalisation means R-B-I stepped back and deregulated everything. That is a favourite exam trap. Globalisation is not deregulation. R-B-I, S-E-B-I, I-R-D-A-I, and FAY-ma rules actively regulate every market and cross-border flow. Thirty-second J-A-I-I-B refresher: under FAY-ma, capital-account transactions alter cross-border assets or liabilities; current-account transactions cover trade, services, interest, and travel. India has current-account convertibility, but only partial capital-account convertibility: capital flows are barred unless expressly permitted under FAY-ma schedules. Sort these routes carefully: F-D-I, F-P-I, E-C-B, A-D-R, G-D-R, F-C-C-B, and cross-border mergers are all capital-account routes."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · Globalisation and the treasury + Chapter 4 · The forex market the treasury trades in + Close (N074–N108)", "turns": [{"speaker": "Teacher", "first": "N074", "last": "N108", "text": "Now the trap: our Bengaluru client remits four hundred thousand dollars for royalty and technical fees. Capital account or current account? Current account. Royalties, technical collaboration fees, and consultancy sit in the Current Account Transactions Rules, not the capital account. Globalisation reshaped Indian treasuries in three concrete ways. First, domestic yields and the rupee move with global rates and volatile portfolio flows. Second, new infrastructure and regulators arrived: C-C-I-L for guaranteed central clearing, depositories for demat securities, S-E-B-I, and I-R-D-A-I. In November twenty twenty-six, R-B-I also formed the Technical Consultative Committee for Financial Markets to engage banks and C-C-I-L quarterly. Third, the product basket widened: rupee interest-rate derivatives, interest-rate futures, credit default swaps, and total return swaps on corporate bonds. One key global limit: a bank's overseas foreign-currency borrowing cannot exceed one hundred percent of unimpaired Tier One capital, or ten million dollars. Above fifty percent of Tier One, banks need a Board policy, twelve percent C-R-A-R, and three-year maturity; export-credit loans sit outside. Pause check for Chapter three. Question one: are overseas technical collaboration fees a capital-account or current-account flow? Current-account flow under the Current Account Transactions Rules. Question two: does overseas borrowing raised specifically for export credit count inside the one hundred percent Tier One ceiling? No, export-credit financing, Tier Two subordinated debt, and foreign-currency capital instruments stay outside that ceiling. One thing to remember: globalisation links our desk to global flows under partial convertibility and active regulation, never deregulation. Quick recall from Chapter three: what minimum C-R-A-R must a bank hold to borrow overseas beyond fifty percent of Tier One capital? Twelve percent C-R-A-R, alongside a Board policy and three-year minimum maturity. Six features define the forex market: global, virtual with no physical floor, screen-based, twenty-four-hour, two-way quotes, and narrow spreads. A narrow bid-ask spread signals deep liquidity. In April twenty twenty-five, global O-T-C forex turnover hit nine point six trillion dollars daily. Normal onshore rupee market hours run nine a.m. to five p.m. I-S-T, though banks may deal beyond onshore hours within position limits. Major currencies like the U-S dollar are freely convertible; the rupee is partly convertible, yet still deeply liquid in spot and swaps. Many of you think foreign dollars sitting in a bank's New York Nostro account automatically earn interest overnight. Do they? No. A Nostro account is a current account earning zero interest unless the bank arranges an overnight sweep or placement. Where may treasury place foreign-currency surplus? Overnight placements, or overseas money-market and sovereign debt under one year rated A-A-minus or A-a-three. Un-deployed F-C-N-R-B funds can go into longer overseas fixed income matching deposit maturity, and Nostro surpluses can fund permitted foreign-currency loans. Pause check for Chapter four. Question one: what is the minimum international rating for overseas money-market instruments under R-B-I's active Master Direction? At least A-A-minus by S-and-P or Fitch, or A-a-three by Moody's, with residual maturity under one year. Question two: why does a bank sweep its Nostro surplus overnight? Because idle Nostro current-account balances earn zero interest unless swept or placed. One thing to remember: the forex market is virtual, round-the-clock, and liquid, and idle Nostro dollars earn nothing until deployed. Quick mixed check across today's traps: a bank remits royalty abroad and short-sells a listed stock. Which one breaks R-B-I rules? Short-selling the stock breaks R-B-I rules; royalty is a current-account remittance, while short sales are allowed only in Central Government securities and permitted derivatives. Now look at the blank mind map for the desk. Name all five branches we built today from memory. Integration, functions, profit centre, globalisation, and forex market. You can now explain integrated treasury, solve arbitrage, sort flows, and state overseas limits. Homework: borrow two lakh dollars at four percent for six months, spot eighty-four, rupee rate seven percent, forward eighty-five; find profit and sketch the map. Three desks sit together because markets spill over. Next class: a dealer books a large trade and his own manager confirms it. What goes wrong? That is our integrated treasury desk set up. Close your notebook, rest your eyes, and I will meet you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
