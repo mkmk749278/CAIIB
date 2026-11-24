@@ -18,13 +18,18 @@ out = []
 for ln in rd("script_class").split("\n"):
     if ln.startswith("________________"):
         out.append("\n---\n")
-    elif re.match(r"^(Warm-up|Opening|Close|Chapter \d.*|Facts needed)$", ln.strip()):
-        out += ["", "## " + ln.strip(), ""]
+    elif re.match(r"^(Warm-up.*|Opening.*|Close.*|Chapter \d.*|Facts needed.*)$", ln.strip()) and not ln.startswith("#"):
+        out += ["", "## " + ln.strip().split(" · ")[0].split(" (~")[0] if ln.strip().startswith(("Close", "Warm")) else "## " + ln.strip(), ""]
     elif re.match(r"^\d+ [SNGBMCH]:", ln) or re.match(r"^[SNGBMCH]: ", ln):
         out.append("> " + ln + "\n")
     else:
         out.append(ln)
-open(f"{folder}/script_class.md", "w").write("# " + "\n".join(out))
+txt = "\n".join(out)
+if "\n---\n" not in txt:  # voice_blocks.py needs the header / body split
+    i = txt.find("\n## ")
+    txt = txt[:i] + "\n\n---\n" + txt[i:]
+txt = re.sub(r"(\n> [^\n]*)\n(?=N\d{3})", r"\1\n\n", txt)  # blank line after each cue block
+open(f"{folder}/script_class.md", "w").write("# " + txt)
 
 f, o, i = rd("fact_sheet").split("\n"), [], 0
 while i < len(f):
