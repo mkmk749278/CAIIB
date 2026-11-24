@@ -492,6 +492,15 @@ checks decide when a cut is ready, not a feeling.
   (which cut-off date it follows); a QR code to the lesson on every page; a one-page night-before sheet per module.
 
 ## 7. Decisions log
+- 2026-11-24: **Gemini trial for research and first drafts (to save Claude usage).** Owner asked to hand deep research
+  and script writing to Gemini. What Gemini offers now (checked 2026-11-24): Deep Research and Deep Research Max (Apr
+  2026, on Gemini 3.1 Pro: web, file uploads, an editable research plan, cited reports); Gemini 4 Neon (18 Nov 2026,
+  1M context, Pro/Ultra); Skills (replaced Gems, Nov 2026: reusable instructions plus knowledge files from Drive, 100 MB
+  per skill); Gemini CLI reads the same `SKILL.md` format. Split: Gemini drafts the fact sheet (Deep Research) and the
+  script, numericals and practice (skill `tools/gemini/skills/caiib-bfm-lesson/`, knowledge files in Drive
+  `_gemini/knowledge/`, prompt `tools/gemini/prompts/`); Claude still verifies every row in the primary text (Gemini
+  output is a lead, §4 inbox rule), runs one independent review, fixes, and builds the voice page. Gemini's drafts go to
+  Drive `_inbox/gemini/<id>/`. Judge after A17: if the Gemini draft needs more fixing than writing fresh, stop.
 - 2026-11-21: **lessons are 12–15 minutes, in every module.** The two parallel sessions had drifted: Module A wrote
   tight lessons (10–15 min), Module B followed the A00 class edition (B01 about 35 min, B02 about 28). Asked, the owner
   chose "Tight 12–15 min" for every remaining lesson; B01 stays long as a comparison sample for the video stage.
