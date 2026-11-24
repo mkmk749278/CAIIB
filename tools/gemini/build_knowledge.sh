@@ -18,3 +18,5 @@ done
 ls -la "$K"
 tools/drive/drive.sh sync _gemini/skill_files "$K"
 tools/drive/drive.sh link _gemini/skill_files
+python3 tools/gemini/make_start_here.py
+tools/drive/drive.sh push _gemini .cache/gemini_knowledge/START_HERE.md
