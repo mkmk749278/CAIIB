@@ -10,20 +10,31 @@ model_deep_research_prompt.md · module_A.md · module_B.md · module_C.md · mo
 Read the ones each step needs. The instructions at the end of this file ("THE SKILL") are your rules for the whole task.
 
 ## The lesson queue (course plan v4, 79 videos; owner, 2026-11-24: "do all lessons of all modules")
-When the owner says "next batch" (or "do all"), take the **next 2–3 lessons** from this queue that have no folder in
-Drive `CAIIB/_inbox/gemini/` yet, do the whole task for each, then report and stop. Splits ("b"/"c" ids) are
+When the owner says "next", take the **next ONE lesson** from this queue that has no folder in Drive
+`CAIIB/_inbox/gemini/` yet, do the whole task for it, then report and stop. **One lesson per turn, never a batch**
+(2026-11-24: a batch run skipped Deep Research and wrote 4-minute scripts; all 12 drafts were rejected). Splits ("b"/"c" ids) are
 **separate lessons**, each with its own plan in the module file.
-- **Done, skip**: 00, A00–A18 (locked), B01–B03 (another session writes them).
+- **Done, skip**: 00, A00–A18 (locked), B01–B03 (another session writes them). Ignore `_inbox/gemini/_rejected_*`.
 - **Queue, in order**: A19, A19b, A19c, A20, A21, A22 · B04, B04b, B05, B06, B07, B07b, B08, B09, B09b, B10, B11, B11b,
   B12, B13, B13b, B14, B14b · C01, C01b, C02, C02b, C03, C04, C04b, C05, C06, C07, C08, C08b, C09, C09b · D01, D01b,
   D02, D03, D04, D05, D06, D06b, D07, D07b.
 - **Not now**: module revisions (AR–DR), U01, X01: they are built after all lessons.
 - If a lesson's folder already exists in `_inbox/gemini/`, skip it; never write two folders with the same id.
 
+## Quality gate (Claude checks every lesson with `tools/gemini/gate.py`; a lesson that fails is thrown away)
+1. **Deep Research must really run** for step 2, every lesson, every time. Writing the "report" from your own memory is
+   not allowed. The report must list **at least 8 primary-source URLs you actually opened** (rbi.org.in, rbidocs,
+   bis.org, fedai, indiacode, egazette, incometaxindia, sebi, ifsca, ecgc, …), each next to the rows it supports.
+2. **Fact sheet at least 1,200 words**, every row with its paragraph number and source id.
+3. **Script 1,600–2,000 spoken words** (drills and cases at least 1,100). Count them. A short script is a failed script.
+4. **Calm voice**: at most a few exclamation marks in the whole script; never "gold", "pure", hype words.
+5. **Never speak lesson codes** (say "last class", "next class", not "B07b" or "A19").
+6. If you cannot meet 1–3 (Deep Research unavailable, sources blocked), **stop and say so**. Do not save a thin draft.
+
 ## The task for lesson <ID>
 1. **Deep Research prompt.** Do THE SKILL Task 1 for <ID>. (For A17, `model_deep_research_prompt.md` is already the
    prompt; use it as it is.)
-2. **Research.** Run that prompt with Deep Research (Deep Research Max if you have it). If you cannot start Deep
+2. **Research.** Run that prompt with Deep Research (Deep Research Max if you have it). **Mandatory** (quality gate 1). If you cannot start Deep
    Research yourself from this task, stop here, show the prompt in one code block, and tell the owner:
    "Paste this into Deep Research, then send me the report with: continue <ID>".
 3. **Fact sheet.** THE SKILL Task 2, from the report.
