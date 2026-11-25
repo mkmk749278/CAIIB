@@ -1,0 +1,150 @@
+<title>D06b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D06b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D06b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Strategies: on and off the balance sheet + Chapter 2 · Controls, governance and sound practices + Chapter 3 · IRRBB: what RBI asks today, and what is coming (N001–N079)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N079", "text": "[warmly] Good to have you with me today. Last class we measured the duration gap; now we decide what to do about it. Calculator nearby, phone silent. First, quick recall from last class: why multiply liability duration by liabilities over assets? Because liabilities are usually smaller than assets, so liability duration must be weighted to the asset base. From two classes back: if rate-sensitive liabilities exceed rate-sensitive assets, is the gap positive or negative? Negative. The bank is liability-sensitive, so rising rates squeeze its net interest income. I-R-R-B-B appears across exam cycles, and one key derivative cap changed in October twenty twenty-six. Picture illustrative Apex Bank. Its treasury head expects rates to rise next quarter, while the bank is liability-sensitive. She asks the room: should we restructure the balance sheet, or hedge it with derivatives? Hold your view. By the end, you'll know both levers, the governance rules, and what R-B-I requires today. Chapter one. Strategies for controlling interest rate risk. First, let's break a common myth. Many of you think a safe bank should push its interest rate gap down to exact zero. That is impossible. Locking funds long stabilises earnings yet exposes economic value; staying overnight does the reverse. So banks never chase zero risk. They choose a deliberate trade-off inside Board-approved limits. To steer the gap, banks use two toolkits: on the balance sheet, and off it. On the balance sheet, A-L-C-O shifts the maturity and repricing mix of loans, deposits, and investments. Wait. Can treasury actively trade banking-book bonds every month to adjust duration? No. Held-to-maturity securities are carried at cost to collect cash flows, not marked to market. Under R-B-I's twenty twenty-five investment directions, annual H-T-M sales cannot exceed five per cent of opening carrying value without R-B-I approval. Securities held for flexible A-L-M selling belong in Available for Sale; reclassifying categories needs Board plus R-B-I approval. Because balance-sheet shifts move slowly, banks also hedge off the balance sheet with Rupee interest rate derivatives. Under R-B-I's Rupee Interest Rate Derivatives Directions, effective March twenty twenty-six, hedging covers the balance sheet, portfolio, or individual items. Banks use interest rate swaps, forward rate agreements, exchange-traded interest rate futures, caps, floors, collars, and swaptions. Hedging an H-T-M bond with an interest rate swap does not taint its H-T-M classification. Now, write this down — a major trap. Older books teach a P-V-zero-one cap of zero point two five per cent of net worth. That cap is gone. On nineteen October twenty twenty-six, R-B-I deleted paragraph thirty-seven of the Miscellaneous Directions immediately. Next: defensive versus aggressive management. A defensive bank keeps its gap near zero so earnings stay steady either way. An aggressive bank takes a view: expecting rates up, it widens a positive gap; expecting rates down, a negative gap. Back to Apex Bank: negative gap, rates expected up. Doing nothing cuts net interest income. So Apex Bank uses both levers: lengthen fixed deposits, float loans, or enter a pay-fixed, receive-floating swap. Pause check. One: a bank has a positive gap and expects rates to fall. Which swap hedges it? Receive-fixed, pay-floating, to lock in interest receipts as rates drop. Two: what is the annual non-exempt sales cap on H-T-M securities without prior R-B-I approval? Five per cent of opening carrying value. Three, the twist. Does the zero point two five per cent net-worth P-V-zero-one cap still apply to non-option rupee derivatives? No. R-B-I deleted it on nineteen October twenty twenty-six. [seriously] One thing to remember from chapter one: manage the trade-off inside limits, and remember the P-V-zero-one cap is gone. Chapter two. Controls and sound practices. Recall first: can a bank actively trade H-T-M bonds to manage duration? No, non-exempt sales are capped at five per cent. Now let's climb the governance ladder. R-B-I's twenty twenty-five A-L-M Directions set four tiers: the Board, Risk Management Committee, A-L-C-O, and the A-L-M Support Group. The Board owns ultimate oversight. It approves overall strategy, policies, risk appetite, and internal prudential limits. Specifically, the Board or Risk Management Committee sets limits on Earnings at Risk and Market Value of Equity volatility. A-L-C-O, headed by the C-E-O, C-M-D, or Executive Director, executes strategy and ensures limit compliance. A-L-C-O also gives prior approval for duration gap yields, assumptions, bucketing, and behavioural studies. Now a key question. Should the treasury desk taking interest rate positions also measure and report its own risk? Never. Many assume dealers know their book best, so they should score it. That creates a direct conflict of interest. Sound practice separates trading, settlement, monitoring, and accounting. The independent risk unit reports directly to senior management and the Board. Three more controls complete the sound-practices card. First: pre-approval. New products need a pre-acquisition review and test phase. Major hedging initiatives also need prior approval, with dedicated risk limits for derivatives. Second: escalation. Positions exceeding, or likely to exceed, Board limits must be escalated promptly with clear corrective rules. Third: reporting and review. Board reports must carry both aggregate summaries and supporting detail — limits, assumptions, stress tests, and audits. Policies and material assumptions are reviewed at least annually, and models undergo independent audit by auditors vetted by the Audit Committee of the Board. Think of it like marking your own exam paper: comforting, perhaps, but no supervisor will accept the score. Pause check. One: who approves the bank's overall interest rate risk strategy and internal limits on E-a-R and M-V-E? The Board of Directors, or its Risk Management Committee for limits. Two: which committee pre-approves duration gap yields, bucketing, and behavioural studies? A-L-C-O, the Asset Liability Management Committee. Three, the twist. Who vets the suitability of the independent auditor reviewing the bank's I-R-R models? The Audit Committee of the Board, A-C-B. [seriously] One thing to remember from chapter two: the Board sets strategy and limits, A-L-C-O executes, and an independent function measures and audits. Chapter three. R-B-I guidelines on Interest Rate Risk in the Banking Book. Recall: how often must material I-R-R assumptions be reviewed? At least annually. Now let's define I-R-R-B-B clearly. I-R-R-B-B is the current or prospective risk to capital and earnings from adverse rate moves affecting the banking book. Earnings perspective tracks short-term Net Interest Income or E-a-R; economic value tracks long-term present value of equity. Now let's clear up a big confusion. Some classes claim Basel's six-shock I-R-R-B-B framework is already mandatory in India. Not yet. Here is the exact position as at thirty-one December twenty twenty-six. In force today is Chapter Seven of R-B-I's twenty twenty-five Asset Liability Management Directions. Banks must run both Traditional Gap Analysis and Duration Gap Analysis globally, and separately for currencies at five per cent or more. Positions go into eleven time buckets. Behavioural studies for non-maturity deposits use at least three years of data, reviewed in quarter one. Today's standardised shock is two hundred basis points parallel. Under Pillar Two, a bank is an outlier if banking-book M-V-E falls over twenty per cent. That drop in M-V-E is an economic impact, not an accounting loss, because the banking book is not marked to market. Let's test this on our calculator at Apex Bank. Equity is one thousand crore; R-S-A ten thousand crore, duration two point five zero. R-S-L is nine thousand crore, duration one point five zero. Shock is plus two hundred basis points, or zero point zero two. Step one: weight liabilities. Nine thousand divided by ten thousand is zero point nine zero; times one point five zero equals one point three five. Step two: modified duration gap. Two point five zero minus one point three five equals plus one point one five years. Step three: change in equity. One point one five times ten thousand times zero point zero two equals minus two hundred thirty crore. Step four: two hundred thirty divided by one thousand times one hundred equals twenty-three per cent. Above twenty per cent — outlier. Common trap: skipping the zero point nine zero weight gives duration gap one, a twenty per cent drop, missing the outlier trigger. Your turn. Apex Bank hedges with a pay-fixed swap, cutting modified duration gap to zero point seven five. Find the new percentage fall in M-V-E. Zero point seven five times ten thousand times zero point zero two is one hundred fifty crore. Divided by one thousand: fifteen per cent. Safe."}]}, {"file": "part_2.mp3", "section": "Chapter 3 · IRRBB: what RBI asks today, and what is coming + Close (N080–N106)", "turns": [{"speaker": "Teacher", "first": "N080", "last": "N106", "text": "Now look at the right column: issued, coming. R-B-I's Basel-aligned I-R-R-B-B rules sit in Chapter Five of the Forthcoming Instructions Directions, twenty twenty-five. Their effective date is still pending, and T-G-A and D-G-A phase out only after implementation. Meanwhile, commercial banks submit quarterly interim delta-E-V-E and delta-N-I-I returns to R-B-I's Department of Regulation. Once effective, banks use nineteen buckets and six shock scenarios for delta-E-V-E: parallel up, parallel down, steepener, flattener, short up, and short down. For rupees, R-B-I prescribes two hundred fifty basis points parallel, three hundred short, and two hundred long; Basel's international reference recalibrated higher. Balance-sheet split: delta-E-V-E uses a run-off balance sheet excluding own equity; delta-N-I-I uses a constant balance sheet over a rolling twelve months. Non-maturity deposits use ten years of data, non-core overnight, with core caps: ninety per cent and five years for retail transactional. Retail non-transactional caps at seventy per cent and four point five years; wholesale caps at fifty per cent and four years. Under Pillar Two, the outlier trigger tightens to delta-E-V-E decline over fifteen per cent of Tier One capital under any of the six shocks. Under S-R-E-P, R-B-I can direct an outlier to raise capital, hedge, cap parameters, or improve controls; Pillar Three requires annual disclosures. Pause check. One: under R-B-I rules in force on thirty-one December twenty twenty-six, what is the outlier threshold? More than twenty per cent of M-V-E under a two hundred basis point shock. Two: under the forthcoming framework, does delta-E-V-E assume a run-off or a constant balance sheet? Run-off balance sheet, excluding own equity. Constant balance sheet is for delta-N-I-I. Three, the twist. What are the core proportion and average maturity caps for wholesale non-maturity deposits? Fifty per cent core, and four years average maturity. [seriously] One thing to remember: today is twenty per cent M-V-E under two hundred bps; six shocks and fifteen per cent Tier One are coming. Mixed check. One: a liability-sensitive bank expects rates to rise — pay-fixed or receive-fixed swap? Pay-fixed, receive-floating. Two: under today's A-L-M Directions, how many years of data back an N-M-D study? At least three years, reviewed in quarter one. Now picture our blank mind map: Strategies, Controls, and I-R-R-B-B. Strategies: on-balance-sheet levers, five per cent H-T-M cap, off-balance-sheet derivatives with no P-V-zero-one cap, and the two-by-two matrix. Controls: Board sets strategy and limits, A-L-C-O executes, risk measurement is independent, and A-C-B vets the auditor. I-R-R-B-B: today's two hundred bps and twenty per cent M-V-E, versus coming six shocks and fifteen per cent Tier One, Pillars Two and Three. You can now answer questions on controlling interest rate risk, governance sound practices, and R-B-I's current and forthcoming I-R-R-B-B rules. Homework: an H-T-M book opens at twenty-four thousand crore, and the bank sells one thousand four hundred crore. Is R-B-I approval needed? Next class teaser: two branches report equal profit, one from treasury gains in a falling-rate year. Which profit would you plan on? [warmly] That wraps up interest rate risk management. Close your notebook, take a breather, and we'll look at profit planning next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

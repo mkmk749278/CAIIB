@@ -1,0 +1,150 @@
+<title>D07 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D07 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D07/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · Profit planning and the six levers + Chapter 2 · The Indian banking landscape + Chapter 3 · Expected loss, unexpected loss, and economic capital (N001–N067)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N067", "text": "[warmly] Hello everyone, good to have you with me. Keep your notebook and basic calculator handy, because today we connect profit with risk. Quick recall from last class: when a bank is liability-sensitive and market interest rates rise, does Net Interest Income rise or fall? It falls, because liabilities reprice faster at higher rates than assets do. One more recall from earlier in this module: when an advance turns non-performing, does the bank keep accruing interest income on it? No. Under Accounting Standard nine and R-B-I norms, interest recognition stops on non-performing advances. Good start. Profit planning, economic capital, and risk-adjusted return appeared across three recent exam cycles from June 2023 to June 2025. By the close, you will read the six profit levers, compare bank models, separate expected from unexpected loss, and aggregate economic capital. Picture two regional heads at annual review, each reporting an illustrative profit of forty crore rupees. Region A earned steady interest and fee income from diversified retail and small business loans. Region B made half its profit from one-time bond sales when market yields fell sharply. Some of you would plan next year on forty crore from both; others would trust only Region A. Which profit is repeatable? Hold that choice. Let us open the Profit and Loss Account and see how a bank actually plans profit. Under section twenty-nine of the Banking Regulation Act, every commercial bank prepares its Profit and Loss Account in Form B. Look at the P-and-L shelf: six operating levers sit on it, three for income and three for expenses. On the income side sit interest earned under Schedule thirteen, fee and commission income under Schedule fourteen, and treasury trading gains. On the expense side sit interest expended under Schedule fifteen, staff costs under Schedule sixteen, and other operating expenses. Many of you are thinking profit planning simply means pushing income to the maximum and cutting every cost to the bone. That fails in banking, because the six levers pull against one another and risk grows when you chase yield blindly. Profit planning means earning sustainable profit at an acceptable level of risk aligned with the Board's risk tolerance. Remember my opening question about Region B? Treasury gains under Schedule fourteen are volatile and reverse into deductions when yields rise. So Region A's recurring spread and fee income belongs in the core plan, not Region B's lucky bond gain. What if a bank avoids lending completely and parks heavy funds in Government securities beyond its statutory liquidity requirement? Central and State Government securities carry zero per cent credit risk weight, so they are safe and liquid, but yield less than loans. Now look at the opposite trap: lending recklessly creates non-performing assets, which deliver a double hit to the bank. First, interest income stops on the account. Second, provisions hit the P-and-L above the line, cutting net profit and Tier one capital. Worse still, the net unsecured portion of an N-P-A still attracts up to one hundred fifty per cent risk weight. And remember one capital-building rule: R-B-I directs commercial banks to transfer at least twenty-five per cent of net profit to Statutory Reserve. Pause check for Chapter one. Question one: where does a net loss on sale of investments appear in Form B? As a deduction under Schedule fourteen, Other Income. Question two: do provisions sit above the line or below the line? Above the line, before arriving at net profit. One thing to remember: accounting profit is not value created when risk is ignored. Quick recall from Chapter one: why does holding excess Government securities hurt a bank's profit plan? Because zero-risk-weight sovereign bonds earn lower yields than commercial advances. Now let us see who competes for that profit in India. Modern bank profit planning began after the nineteen ninety-one and nineteen ninety-eight Narasimham Committee reforms. Those reforms cut S-L-R from thirty-eight point five per cent and C-R-R from fifteen per cent, deregulated rates, and brought prudential norms. Today, universal banks also compete alongside differentiated banks: Small Finance Banks and Payments Banks. Small Finance Banks serve small businesses, small farmers, and micro units, and must keep a minimum capital ratio of fifteen per cent. Watch two fresh rule updates on Small Finance Banks as at thirty-one December twenty twenty-six. First, minimum paid-up voting equity is now three hundred crore rupees, up from two hundred crore, with U-C-B transition at one hundred fifty crore. Second, from financial year twenty twenty-five twenty-six, S-F-B priority sector lending fell from seventy-five per cent to sixty per cent. Also, at least fifty per cent of an S-F-B's loan book must be loans up to twenty-five lakh rupees per borrower. Payments Banks need one hundred crore rupees equity, fifteen per cent capital ratio, and at least three per cent leverage ratio. They take only demand deposits up to two lakh rupees per customer, cannot lend, and cannot issue credit cards. After C-R-R, Payments Banks must put at least seventy-five per cent of demand deposits in short-term S-L-R Government securities. For long-term infrastructure, Parliament created Nab-fid under the twenty twenty-one Act with one lakh crore rupees authorised capital. Many of you think Nab-fid takes retail fixed deposits like a bank. Does it? No. Under section seventeen, Nab-fid raises wholesale bonds and institutional borrowings, never retail public deposits, and is one of five A-I-F-Is. Finally, Public Sector Bank mergers on one April twenty twenty merged ten banks into four, leaving twelve Public Sector Banks for scale. Pause check for Chapter two. Question one: what is the current priority sector target for Small Finance Banks? Sixty per cent of A-N-B-C or C-E-O-B-E, reduced from seventy-five per cent. Question two: can a Payments Bank lend? No, Payments Banks cannot lend. One thing to remember: each bank model earns profit inside its own regulatory boundary. Quick recall from Chapter two: how many Public Sector Banks operate in India after the twenty twenty mergers? Twelve Public Sector Banks. Now let us move from the P-and-L shelf to the loss curve on the right side of our board. Every lending portfolio suffers some average loss every year. We call that average loss Expected Loss, or E-L. Expected Loss equals probability of default times exposure at default times loss given default. Many of you are thinking bank capital is held to absorb Expected Loss. Is that right? No. Write this down: Expected Loss is a cost of doing business, covered by loan pricing and provisions, never by capital. What happens in a bad year when losses spike far above the average? That tail loss above E-L is Unexpected Loss, or U-L. Bank capital exists specifically to absorb Unexpected Loss up to a chosen confidence level, such as ninety-nine point nine per cent in Basel. Risk is measured by the variability of losses around E-L. Two portfolios with the exact same E-L can have very different U-L. Large cyclical corporate loans move together in a downturn, creating wide variability and high U-L, whereas granular retail loans show lower correlation. Now compare two capital numbers that candidates often mix up: regulatory capital and economic capital. Regulatory capital is R-B-I's mandatory Pillar one floor: nine per cent C-R-A-R plus two point five per cent buffer, totalling eleven point five per cent. Economic capital is the bank's internal estimate of capital needed to absorb unexpected losses across all material risks. They are not the same number. Traditional Return on Assets and Return on Equity also ignore this risk-capital link. Pause check for Chapter three. Question one: what covers Expected Loss, and what covers Unexpected Loss? Pricing and provisions cover Expected Loss; capital absorbs Unexpected Loss. Question two: if two portfolios share the same E-L, must they hold identical capital? No, higher correlation widens loss variability and requires more capital. One thing to remember: capital is for unexpected loss, never expected loss."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Risk aggregation, concentration, and capital allocation + Close (N068–N100)", "turns": [{"speaker": "Teacher", "first": "N068", "last": "N100", "text": "Quick recall from Chapter three: which capital number is set internally by the bank across all material risks — regulatory or economic? Economic capital. Now suppose a bank measures economic capital separately for Corporate Lending and Retail Lending. Can it simply add them? Only if both desks always hit peak losses together, meaning correlation rho equals plus one. To aggregate economic capital properly, a bank harmonises the time horizon and confidence level, then uses correlation across business lines. Let us work a full sum on the basic calculator. Corporate needs sixty crore rupees economic capital, and Retail needs eighty crore, both illustrative. First, with no diversification, correlation plus one: press sixty plus eighty equals one hundred forty crore rupees. Second, suppose the two desks are uncorrelated, so rho equals zero. The cross term vanishes, leaving sixty squared plus eighty squared under the root. Press sixty times sixty equals three thousand six hundred. Press eighty times eighty equals six thousand four hundred. Add them to get ten thousand, then press the square root key: exactly one hundred crore rupees. One hundred forty minus one hundred equals forty crore rupees. That forty crore saving is the diversification benefit. Watch the common mistake: never forget the square root key, and never average sixty and eighty to get seventy. Now a faded twist: suppose sector overlap raises correlation to plus zero point five while profit stays unchanged. Add four thousand eight hundred to ten thousand to get fourteen thousand eight hundred. Press square root: one hundred twenty-one point six six crore. Profit stayed unchanged, yet concentration pushed required capital from one hundred to one hundred twenty-one point six six crore. That is why banks conservatively drop diversification in stress tests, assuming additive losses when correlations spike in a crisis. Your turn on the basic calculator: Agriculture needs thirty crore economic capital and M-S-M-E needs forty crore. Find aggregated capital at rho equal to zero. Nine hundred plus one thousand six hundred equals two thousand five hundred; its square root is fifty crore, saving twenty crore. How does this connect to Pillar two? Under R-B-I's capital adequacy directions, every bank runs a Board-approved eye-cap reviewed at least annually. Eye-cap captures risks beyond Pillar one, including concentration and banking-book interest rate risk, and allocates capital by risk contribution rather than asset size. Pause check for Chapter four. Question one: if correlation rises toward plus one, does the diversification benefit grow or shrink? It shrinks toward zero, because losses occur together. Question two: who approves a bank's eye-cap, and how often is it reviewed? The Board approves it and reviews it yearly. One thing to remember: concentration raises capital even when profit stays unchanged. Let us do a quick mixed check across today's whole class. Question one: does Nab-fid accept retail public deposits? No, Nab-fid funds itself through wholesale bonds and institutional borrowings. Question two: which loss is covered by bank capital — expected or unexpected? Unexpected loss. Question three: if two uncorrelated desks need thirty crore and forty crore capital, why is total capital fifty crore instead of seventy? Because imperfect correlation creates a twenty crore diversification benefit. Now look at the blank ten o'clock branch of our balance-sheet mind map. Name its four nodes from memory before they appear. Profit planning and the six levers; the Indian banking landscape; E-L, U-L, and economic capital; and risk aggregation, concentration, and eye-cap allocation. You can now map the six profit levers, spot updated S-F-B, Payments Bank, and Nab-fid rules, separate E-L from U-L, and aggregate economic capital. Remember our scope: we kept all R-A-R-O-C, two-desk performance, and economic value added formulas for the next class. Your small homework tonight: draw the E-L and U-L loss curve from memory, and rework the thirty-and-forty crore sum at correlation zero point five. One question to carry forward: once you allocate economic capital to a business line, how do you test whether its profit beats the hurdle rate? That is profit planning and economic capital mapped out. Close the notebook, get some rest, and I will see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

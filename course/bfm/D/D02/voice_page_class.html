@@ -1,0 +1,150 @@
+<title>D02 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D02 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D02/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · The 90-day idea, income recognition, and SNFA + Chapter 2 · SMA, the day-end rule, and CRILC + Chapter 3 · Special cases: crops, OD/CC, working capital, credit cards, and upgrades (N001–N094)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N094", "text": "Hello everyone, welcome to the asset quality class. Keep a pen and a calendar in mind today. Put your phone on silent, keep your basic calculator near, and let us do two quick checks. From last class, who approves the bank's ALM policy, and who executes it? The Board approves, ALCO decides, and the treasury executes. Earlier still, on which shelf of the balance sheet do loans sit? The asset shelf, which is why loan quality is called asset quality. This topic appeared in six of seven recent exam cycles, with twenty-nine recalled questions. Today you will classify any loan, from crop loans to credit cards, and book NPA income right. Easy win first: a term loan EMI is sixty days overdue. Is it NPA today? No; a term loan turns NPA only when overdue for more than ninety days. Meet Raghav at a Guntur branch checking three unpaid accounts on thirty-one March. All figures are illustrative. First, Subba Rao's sugarcane loan, unpaid seven months. Second, Meena Hardware's cash credit, above drawing power for one hundred one days. Third, Arjun's credit card, minimum due unpaid one hundred six days past the statement due date. Some think all three are NPAs; others think only two are. Hold that thought. India's IRACP norms began on the Narasimham Committee recommendations, replacing the old subjective Health Code system. A non-performing asset, or NPA, is an asset, including a leased asset, that has ceased generating income. An amount is overdue if unpaid on the due date fixed by the bank. Term loans and discounted bills turn NPA when principal or interest stays overdue beyond ninety days. Many think strong collateral or a rich guarantor prevents NPA. That is wrong. Classification rests strictly on the record of recovery, never on security or borrower net worth. Classification is borrower-wise, not facility-wise. One failed loan turns every facility and security of that borrower NPA. Narrow exceptions: bills discounted under LC, PACS on-lending, Central Government guarantees, and select deposit-backed loans. Watch two traps. Loans against pledged ornaments or government securities are not exempt, even with full margin. Central Government guaranteed loans turn NPA only on repudiation; State Government guaranteed loans follow ninety days. In a consortium, each bank classifies by its own recovery; if the lead bank withholds your share, it is NPA. Now income recognition: accrual basis applies only to Standard assets; NPAs follow actual cash receipt. Even an overdue Central Government guaranteed loan cannot accrue interest; the exemption never covers income recognition. On turning NPA, reverse all unrealised past interest through P&L, and record future interest in a Memorandum account. Never book interest paid out of a fresh loan to the same borrower; that is evergreening. Effective one October twenty-twenty-six, Specified Non-Financial Assets, or SNFAs, mean immovable property acquired to settle borrower dues. Banks cannot book prior unrealised interest upon acquiring an SNFA; legacy amounts must reverse by thirty September twenty-twenty-seven. Actual income received from an SNFA is booked under other income only in the year realised. Pause check, Chapter One. Question one: a borrower's housing loan is Standard, his car loan is NPA. Status of both? Both are NPA, because classification is borrower-wise, not facility-wise. Question two: a loan against pledged ornaments is ninety-five days overdue with ample margin. Exempt from NPA? No; only term deposits, NSCs, KVPs, and LIC policies with adequate margin qualify. One thing to remember: record of recovery decides NPA, borrower-wise, and NPA interest is cash-only. Chapter Two: early warning before day ninety. Recall first: where do banks record uncollected interest on an NPA? In a Memorandum account, excluded from Gross Advances. Immediately on default, banks flag stress as Special Mention Accounts, or SMA. For non-revolving loans: SMA-0 is up to thirty days; SMA-1, thirty-one to sixty; SMA-2, sixty-one to ninety. Classic twist for revolving cash credit and overdraft: does CC have an SMA-0 bucket? No. Revolving facilities skip SMA-0 and start at SMA-1 when continuous excess over limit or DP crosses thirty days. SMA covers every loan, including retail loans, except agricultural advances governed by crop seasons. Flagging runs during the automated day-end process, and the classification date is that exact calendar date. Let us work RBI's exact date sum. An EMI due thirty-one March stays unpaid at day-end. Write this down once: count thirty exact continuous days, never calendar months. April has thirty days. On thirty April day-end, thirty days finish: SMA-1. Press thirty plus thirty equals sixty. May has thirty-one days, so thirty May day-end is SMA-2. Press sixty plus thirty equals ninety. One day left in May plus twenty-nine in June gives twenty-nine June: NPA. Many answer thirty June by adding three months; that is ninety-one days, one day late. Your turn. EMI due thirty June stays unpaid. Which date is SMA-1? July has thirty-one days. Thirty July, because thirty exact days from thirty June lands on thirty July day-end. For borrowers with aggregate exposure of five crore rupees and above, banks report SMA monthly to CRILC. Banks also send CRILC a weekly default report every Friday for system-wide early warning. Pause check, Chapter Two. Question one: a three-crore loan is SMA-2. Must the bank report it to CRILC? No, because CRILC starts at five crore rupees and above. Question two: a cash credit stays above DP for twenty days. What is its SMA tag? None; revolving facilities have no SMA-0, so SMA-1 starts only after thirty continuous days. One thing to remember: SMA tags at day-end by exact days, CC skips SMA-0, and CRILC tracks five crore plus. Chapter Three: special cases. Recall from Chapter Two: which weekday is the weekly CRILC default report due? Every Friday by close of business, or the prior working day on a holiday. Back to Raghav's three folders. First, Subba Rao's sugarcane loan, unpaid seven months. Many counted ninety days and marked it NPA. That is the classic agriculture trap. Eligible farm credit follows crop seasons fixed by the State Level Bankers' Committee, not ninety days. Short-duration crops, up to one year like paddy, turn NPA after two overdue crop seasons. Long-duration crops, over one year like sugarcane, turn NPA after one overdue crop season. Sugarcane's season is eighteen months; at seven months unpaid, Subba Rao's loan is still Standard on thirty-one March. Boundary: crop seasons cover individual farmers, SHGs, JLGs, and corporate farmers or FPOs up to four crore rupees. All other agricultural loans follow the normal ninety-day norm. Next, Meena Hardware's cash credit. Refresher: sanctioned limit is the ceiling; drawing power comes from stock minus margin. An OD or CC turns NPA when out of order, meaning any one of three tests fails. Test one: balance stays continuously above limit or drawing power for ninety days. Meena Hardware stayed at nineteen lakh above eighteen lakh DP for one hundred one days, so it is NPA. Many think staying under the limit keeps an OD Standard. Tests two and three break that belief. Test two: balance is within limit, but zero credits arrive continuously for ninety days. Test three: credits over the previous ninety days, including the run date, cannot cover interest debited then. Out-of-order rules apply to every overdraft, including personal and interest-only overdrafts. Now working-capital irregularity rules. First, stock statements used for drawing power must not be older than three months. Drawings on an older stock statement for ninety continuous days turn the account NPA, even if profitable. Second, temporary deficiencies, like a brief excess or late statement, do not alone make an account NPA. Third, regular and ad hoc limits need review within three months; unreviewed for one hundred eighty days means NPA. Now Arjun's credit card: NPA if minimum amount due stays unpaid ninety days from the statement payment due date. Credit bureau reporting and late fees start after three days overdue, but days count from the due date. So Raghav's opening answer is clear: only two accounts, Meena Hardware and Arjun, are NPAs on thirty-one March. Upgrading an NPA to Standard requires paying entire arrears of interest and principal across all facilities. Restructured accounts are different; paying arrears alone does not upgrade them, as we see in a later class. Pause check, Chapter Three. Question one: CC balance is under limit, but ninety-day credits cover only half the interest. Status? Out of order and NPA under test three, even below the limit. Question two: an ad hoc limit sanctioned one October is still unreviewed on ten April. Status? NPA, because it crossed one hundred eighty days without review or renewal. Question three: an NPA borrower pays all overdue interest but leaves one principal EMI unpaid. Upgrade allowed? No; entire arrears of interest and principal must be cleared across all facilities. One thing to remember: crops use seasons, CC has three tests, unreviewed limits hit one-eighty days, upgrades need full arrears."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · NPA classes, security erosion, and ECL coming + Close (N095–N126)", "turns": [{"speaker": "Teacher", "first": "N095", "last": "N126", "text": "Chapter Four: NPA ageing. Quick recall: how old can a stock statement be before drawing power turns irregular? Three months; older than three months makes drawing power irregular. An NPA ages through three categories: sub-standard, doubtful, and loss. Sub-standard means NPA for twelve months or less. After twelve months in sub-standard, it turns doubtful: D1 up to one year, D2 one to three, D3 over three. Loss means loss identified by bank, auditors, or RBI inspection, not yet wholly written off. Normally NPAs step down one rung at a time. Security erosion is the trapdoor that skips rungs. Realisable security below fifty percent of the last assessed value moves the NPA straightaway to Doubtful. Realisable security below ten percent of loan outstanding ignores security and moves it straightaway to Loss. Quick sum: loan outstanding is one hundred lakh; last assessed security was eighty lakh; fresh value is thirty-five lakh. Press thirty-five divided by eighty equals zero point four three seven five, or forty-three point seven five percent: straightaway Doubtful. Against outstanding, thirty-five divided by one hundred is thirty-five percent, above ten percent, so not Loss. Common mistake: dividing by outstanding for the fifty-percent test. Fifty percent uses last assessed security value. Your turn: loan fifty lakh, last security forty lakh, fresh value four lakh. Doubtful or Loss? Press four divided by fifty equals zero point zero eight, or eight percent of outstanding: straightaway Loss. One issued-coming update: RBI issued Expected Credit Loss, or ECL, Directions on twenty-seven April twenty-twenty-six, effective one April twenty-twenty-seven. ECL uses three stages — Stage one twelve-month loss, Stage two lifetime loss past thirty days, Stage three NPA — keeping current NPA rules. On thirty-one December twenty-twenty-six, current IRACP rules still govern; treat ECL strictly as issued, coming. Pause check, Chapter Four. Question one: an NPA is fourteen months old with intact security. Category? Doubtful D1, having crossed twelve months in sub-standard. Question two: are RBI's ECL Directions in force on thirty-one December twenty-twenty-six? No; they take effect on one April twenty-twenty-seven. One thing to remember: sub-standard lasts twelve months, erosion under fifty or ten percent skips steps, ECL starts April twenty-twenty-seven. Final mixed check: paddy loan one season overdue, credit card ninety-five days unpaid, and security at seven percent of loan. Answers: paddy is Standard, needing two seasons; card is NPA; seven percent security is straightaway Loss. Picture the blank Asset Quality branch on our Balance Sheet mind map. Name its three nodes from memory. Income recognition with SNFA, SMA with CRILC, and NPA classes with special cases and erosion. You can now classify any loan under asset classification, compute day-end SMA dates, and apply NPA income rules. Provisioning rates come next class, and restructured-account upgrades follow in the case-study class. Homework tonight: draw the three nodes from memory, and find the SMA-2 date for an EMI due thirty June. Question for next class: once Meena Hardware turns sub-standard, how much profit must the bank set aside on day one? That's how banks draw the line between standard and bad loans. Rest well, and I'll see you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
