@@ -1,0 +1,150 @@
+<title>D03 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D03 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D03/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening · The branch moment + Chapter 1 · Standard asset provisions and UFCE + Chapter 2 · Sub-standard, doubtful, loss, and fraud + Chapter 3 · Wilful defaulters, accelerated provisioning, and ECL (N001–N080)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N080", "text": "Welcome back, everyone, and settle in. Keep your calculator handy; today we put a rupee price on credit risk. Put your phone on silent, and keep one sheet of paper open beside your calculator. Provisioning is tested across five recent exam cycles, including four questions in one paper. Quick check from last class: a cash credit account stays above drawing power for ninety-two continuous days. What is its status? Non-performing asset, because staying continuously above drawing power for ninety days makes it out of order. And from two classes back: where do standard asset provisions sit on a bank's balance sheet? Schedule five, under Other Liabilities and Provisions, never deducted from gross advances. One quick refresher from your accounting paper: a provision is a charge to profit and loss, reducing profit before reserves. Today, you will compute provisions across every loan class, handle fraud and wilful defaulters, and calculate PCR. Picture a credit officer at Vijayawada Main Branch reviewing Kaveri Granites Private Limited, an illustrative account. The term loan is one hundred twenty lakh rupees, backed by factory land worth one hundred eighty lakh. Every instalment arrived on time, so the loan is fully standard. Then a routine check shows one company director appears twice on the List of Wilful Defaulters. Some of you think: it is secured and standard, so zero point four zero per cent is enough. Others suspect the wilful defaulter tag jumps it to five per cent. Hold your answer; we will settle it soon. First, clear a common wrong belief: many think standard loans need zero provision because nothing is overdue. Under the twenty-twenty-five IRACP directions, banks keep a general provision on standard funded advances worldwide. Think of it like a small rain fund on sunny days, though it covers general risk only, not specific defaults. Let us build the exact standard-asset table from the current directions, sector by sector. Farm credit to agriculture, individual housing loans, and Small and Micro Enterprises attract zero point two five per cent. Watch the trap: what rate applies to Medium Enterprises? Zero point two five, or zero point four zero? Zero point four zero per cent. Only Small and Micro get zero point two five; Medium sits with all others. Commercial Real Estate, CRE, carries one per cent, while CRE Residential Housing, CRE-RH, carries zero point seven five per cent. Teaser-rate housing loans still carry two per cent, reverting to zero point four zero one year after higher reset if standard. For post-October twenty-twenty-five project finance, construction phase takes one point two five for CRE and one per cent for others. Once repayment starts in the operational phase, project rates revert to one per cent, zero point seven five, and zero point four zero. From July twenty-twenty-six, calamity-restructured accounts carry an additional five per cent specific provision under the updated directions. Standard provisions never reduce Net NPAs; they count in Tier two capital up to one point two five per cent of credit RWAs. Now meet a second layer on standard loans: Unhedged Foreign Currency Exposure, or UFCE, incremental provisioning. UFCE is foreign currency balance-sheet exposure minus effective financial hedges and same-year natural hedges. Quarterly, banks multiply UFCE by FEDAI's largest ten-year dollar-rupee volatility to find potential loss, then divide by EBID. EBID equals profit after tax, plus depreciation, plus interest on debt, plus lease rentals. Up to fifteen per cent adds zero basis points; each higher band steps up by twenty: twenty, forty, sixty, and eighty. Above seventy-five per cent, add eighty basis points and raise the borrower's risk weight by twenty-five percentage points. Smaller entities with banking exposure up to fifty crore may instead take a flat ten basis points when data is missing. Do not mix UFCE with accelerated provisioning: UFCE sits on standard loans, and sovereigns, banks, individuals, and NPAs are exempt. Pause now for three checks. First: what standard rate applies to a Medium Enterprise term loan? Second: what rate applies to CRE-RH? Third: if UFCE potential loss is eighty per cent of EBID, what two charges apply? Answers: Medium Enterprises take zero point four zero; CRE-RH takes zero point seven five. Above seventy-five per cent, UFCE adds eighty basis points plus twenty-five percentage points of risk weight. One thing to remember: standard assets carry sector rates in Schedule five, plus quarterly UFCE bands when currency risk is unhedged. Quick recall from last chapter: what standard provision rate applies to individual housing loans? Zero point two five per cent, unless it is a teaser-rate loan, which starts at two per cent. Once a loan turns NPA, two definitions decide every rate: tangible security and unsecured exposure. Security means tangible security properly charged; guarantees, including State government guarantees, and comfort letters do not count. An unsecured exposure means realisable security at the start, ab initio, is not more than ten per cent of outstanding. For a secured sub-standard asset, provide fifteen per cent on total outstanding, ignoring ECGC cover and available security. If the sub-standard exposure was unsecured ab initio, add ten per cent, making twenty-five per cent total. The infrastructure exception: unsecured sub-standard infrastructure loans take twenty per cent when cash flows are escrowed with a legal first claim. Now move to doubtful assets. Many officers mistakenly apply the doubtful percentage to the entire loan balance. Never do that. Split every doubtful loan into two parts: the unsecured shortfall takes one hundred per cent immediately. On the secured portion only, the rate climbs by age: twenty-five per cent up to one year, forty from one to three. Beyond three years in doubtful, even the secured portion takes one hundred per cent. Let us work one in full. Deccan Paper Mills has an eighty lakh loan, doubtful two years, with fifty lakh security. Step one: unsecured part. Key in eighty minus fifty equals thirty lakh; at one hundred per cent, that is thirty lakh. Step two: two years means D2, forty per cent on secured fifty lakh. Key in fifty times forty per cent equals twenty lakh. Add them: thirty plus twenty equals fifty lakh. The common wrong answer is thirty-two lakh, from taking forty per cent of eighty. Now a faded one on loss assets. Write off loss assets; if kept on books, provide one hundred per cent. Narmada Tools is a loss asset of twenty-four lakh with two lakh salvage value. What provision is needed? Twenty-four lakh — one hundred per cent, ignoring salvage. Also, deduct interest suspense from the loan first; it is not a provision. Finally, fraud. Upon detecting fraud, a bank normally provides one hundred per cent immediately, adjusting eligible financial collateral. Today, banks may spread fraud provisioning over up to four quarters; across March thirty-one, debit other reserves and reverse next year. Pause now for three checks. First: what rate hits an unsecured infrastructure sub-standard loan with a legal first-claim escrow? Second: a D1 loan of sixty lakh has forty lakh security — how much provision? Third: can statutory reserve cover fraud spreading? Answers: twenty per cent for escrow infrastructure; thirty lakh for D1, twenty unsecured plus ten secured; and no, only other reserves. One thing to remember: sub-standard ignores security, doubtful splits secured from unsecured, and loss or fraud takes one hundred per cent. Quick recall from last chapter: what makes an exposure unsecured ab initio? Realisable tangible security not more than ten per cent of outstanding at the start. Remember Kaveri Granites from our opening? Its director appears twice on the List of Wilful Defaulters, where the threshold is twenty-five lakh. Under IRACP twenty-twenty-five, an existing standard loan to a company with a director listed more than once attracts five per cent provision. Government or FI distress nominees are exempt; wilful defaulters face a one-year credit bar, and five years for new ventures, after removal. If that wilful-defaulter account turns NPA, accelerated provisioning kicks in, pushing rates sharply higher. Write this down: in Doubtful two, accelerated provisioning jumps to one hundred per cent on both secured and unsecured portions. Your turn. Kaveri Granites slips to Doubtful one, balance one hundred lakh, security sixty lakh. Compute its accelerated provision. Unsecured is one hundred minus sixty equals forty lakh at one hundred per cent; secured sixty times forty per cent equals twenty-four lakh. Total accelerated provision is sixty-four lakh — nine lakh higher than the fifty-five lakh regular D1 charge. Banks must declare wilful defaulters within six months of NPA; an April twenty-twenty-six amendment aligns this rule to ECL from April twenty-twenty-seven. Also, for large exposures of fifteen hundred crore and above, delaying a resolution plan past one eighty days adds twenty per cent. Past three hundred sixty-five days, add another fifteen per cent — thirty-five per cent total, capped at one hundred per cent. Keep the cut-off clear: RBI's Expected Credit Loss directions were issued in April twenty-twenty-six, effective only from one April twenty-twenty-seven — issued, coming. ECL brings three stages, removes the four-quarter fraud spread, and phases CET1 impact over four years — never use LGD in today's sums. Pause check: first, what rate hits a standard loan when a director appears twice in the wilful defaulters list? Second: when do the Expected Credit Loss directions take effect? Answers: five per cent on the standard loan, and one April twenty-twenty-seven for ECL, so IRACP twenty-twenty-five governs your exam. One thing to remember: repeat wilful defaulters jump standard loans to five per cent and push D2 NPAs to one hundred per cent."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · PCR, floating provisions, and mixed check + Close (N081–N098)", "turns": [{"speaker": "Teacher", "first": "N081", "last": "N098", "text": "Quick recall: for a delayed resolution plan past one eighty days on an eighteen hundred crore loan, what additional provision applies? Twenty per cent additional specific provision, rising by another fifteen per cent at three hundred sixty-five days. Now zoom out to the whole bank: Provisioning Coverage Ratio, PCR, equals total NPA provisions divided by Gross NPAs, times one hundred. Many candidates still quote seventy per cent as an ongoing RBI floor. That is a classic exam trap. RBI prescribes no ongoing minimum PCR today; seventy per cent was a one-time September twenty-ten norm creating the countercyclical buffer. Floating provisions are extra cushions usable only in extraordinary downturns with Board and prior RBI approval, never reversed to P&L. Until used, either net floating provisions from Gross NPAs or count them in Tier two within the one point two five per cent cap. Let us compute PCR: Gross NPAs four hundred crore, specific provisions two sixty crore, non-Tier-two floating provisions twenty crore. Add two sixty plus twenty equals two eighty; divide by four hundred, times one hundred equals seventy per cent. Never add standard asset provisions to the PCR numerator; that is the commonest mistake in exam sums. Final mixed check — pause and answer three quick ones. First: what standard rate applies to a CRE loan? Second: what rate hits a sub-standard secured loan? Third: can floating provisions be reversed to profit and loss? Answers: one per cent for CRE, fifteen per cent for sub-standard secured, and no — floating provisions can never be reversed to P&L. One thing to remember: PCR divides NPA provisions by Gross NPAs, excludes standard provisions, and has no ongoing RBI minimum. Look at the blank Asset Quality branch on screen and name the four nodes we added today before they appear. Provisions, PCR, wilful defaulters, and UFCE — all sitting under Asset Quality on your balance-sheet map. You can now compute standard, UFCE, sub-standard, doubtful, loss, fraud, wilful-defaulter, and PCR numbers under rules as at thirty-one December twenty-twenty-six. Homework tonight: take a fifty crore standard CRE loan whose borrower has UFCE potential loss at forty per cent of EBID. Compute total provision. Next class, we work a five-question NPA case — and ask: with ECGC or CGTMSE cover, do you deduct security first or the guarantee first? That is provisioning, from standard loans to PCR. Close your notes, take a breather, and we will work a full case next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

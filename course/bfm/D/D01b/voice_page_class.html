@@ -1,0 +1,150 @@
+<title>D01b Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D01b voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D01b/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening + Chapter 1 · What ALM is, and why it matters now + Chapter 2 · ALCO, treasury and derivatives in ALM + Chapter 3 · The policy environment and market codes (N001–N069)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N069", "text": "[warmly] Welcome back to class, everyone. Last time we mapped the balance sheet shelves; today we see who steers them. Put your phone on silent and keep your calculator nearby. First, a quick check from last class. Where does an overdue term deposit sit on a bank's balance sheet: under deposits, or under other liabilities? Still under deposits. Good. And from our earlier liquidity classes: what is the minimum Liquidity Coverage Ratio banks must hold? One hundred per cent. Well done. This topic matters: ALCO and ALM questions appeared in three recent exam cycles. By the end of this class, you will map ALM governance, five core policies, and split any bank margin three ways. Picture Divya, a branch manager at Kaveri Bank in Bengaluru. Market interest rates drop by one full percentage point. Her fixed-rate borrowers start prepaying their loans to refinance cheaply elsewhere. Her fixed depositors stay locked in at old, higher rates. Divya's branch margin shrinks fast. Here is my question. Whose job was it to see this squeeze coming? Hold your answer. Let us open chapter one and find out how a bank runs its balance sheet as one engine. Chapter one. First, a quick refresher: banks borrow short and lend long, earning a spread called Net Interest Income. Many of you are thinking: A-L-M is just a fancy name for keeping enough cash for short-term liquidity. That sounds tempting, but it is wrong. A-L-M covers liquidity, interest rate, foreign exchange, and market risks together. Write this down. A-L-M is coordinated balance-sheet management tying asset, liability, income, and expense decisions to business strategy. Its three pillars are clear: an Information System, an Organisation led by top management, and a structured Risk Process. Why does A-L-M matter so much now? Five forces changed banking: deregulated rates, fierce competition, rate volatility, new products, and tighter regulation. Add embedded options to that list: borrowers prepay when rates fall, and depositors break fixed deposits when rates rise. Now look at A-L-M's three objectives in one picture: stable earnings, growing net worth, and risk kept inside limits. To hit those goals, A-L-M runs two linked strands: price matching and liquidity matching. Price matching protects your spread. Liquidity matching groups inflows and outflows by maturity so you meet cash obligations at reasonable cost. Notice how liquidity risk turns into interest-rate risk. A maturity mismatch forces you to refinance maturing deposits at new market rates. And remember one shock-absorber ratio: Economic Equity Ratio equals owners' funds divided by total assets. A lower Economic Equity Ratio means higher leverage and a thinner cushion against balance-sheet shocks. Next, check your gap sign. In any bucket, Gap equals Rate Sensitive Assets minus Rate Sensitive Liabilities. Where does a fixed-rate loan sit in the Interest Rate Sensitivity statement? Think before I answer. In its residual maturity bucket. Rate-sensitive items sit by residual maturity or next repricing date, whichever is earlier. Pause check. Three quick questions. One: does A-L-M manage only liabilities, or both sides of the balance sheet? Both sides, plus income, expenses, and off-balance-sheet items. Two: if R-S-A exceeds R-S-L in a bucket, is the gap positive or negative? Positive gap, because assets exceed liabilities. Three, the twist: a five-year fixed-rate bond has three years left. Which bucket? Over one to three years—its residual maturity bucket, since fixed-rate items have no earlier repricing date. [seriously] One thing to remember from chapter one: A-L-M coordinates both shelves to protect earnings and equity, not just cash. Chapter two. First, recall from chapter one: what happens to liquidity risk when a short-term deposit matures and must be replaced? It turns into interest-rate risk, because you refinance at prevailing market rates. Now let us answer Divya's opening question. Who governs A-L-M in a commercial bank? R-B-I's twenty twenty-five Directions set four clear tiers. At the top sits the Board of Directors, holding overall responsibility, approving policies, setting risk tolerance, and reviewing them annually. Below the Board sits the Risk Management Committee, evaluating liquidity risk and how it interacts with credit, market, and operational risks. Third is ALCO, the Asset Liability Management Committee, headed by the C-E-O, C-M-D, or Executive Director. ALCO members include heads of Investment, Credit, Treasury, International Banking, Risk Management, and Economic Research, supported by the ALM Support Group. Many of you mix up Board and ALCO. Remember the split: the Board approves policies and limits; ALCO implements strategy and decides mix and pricing. ALCO decides the desired maturity profile, funding mix, deposit and loan pricing, stress-test reviews, and transfer pricing policy. One current rule on deposit pricing, effective one October twenty twenty-six: banks must publish deposit rate cards in advance on their website. Bulk deposit rates—three crore rupees and above—go up by ten a-m, grace till ten-ten, uniform across branches with no negotiation. Banks may also differentiate bulk deposit rates based on their L-C-R run-off rates. That links deposit pricing directly to liquidity risk. Now meet Arjun, the Treasury Head. ALCO decides the strategy; Treasury operates the bank's central pool of funds and executes those decisions. Treasury controls the H-Q-L-A pool, supplies market pricing inputs, and hedges only the residual mismatch left after natural balance-sheet offsets. Should Arjun eliminate every single maturity mismatch? Think for three seconds. No. Perfect matching is neither possible nor desirable. Maturity transformation earns the term premium, and removing equity risk raises earnings volatility. To hedge residual mismatches beyond limits, Treasury uses three derivative shields—you will study their full mechanics in our derivatives classes. An Interest Rate Swap closes a repricing gap. Forward Rate Agreements and Interest Rate Futures hedge future rate gaps. Currency swaps hedge foreign-currency mismatches. Pause check. One: who heads ALCO under R-B-I Directions? The C-E-O, C-M-D, or Executive Director. Two: by what time must bulk deposit rates be published each business day? Ten a-m, with a ten-minute grace up to ten-ten a-m. Three, the twist: can a branch manager negotiate a higher bulk rate? No—rates must be uniform across all branches for similar deposits on the same day, with no negotiation. [seriously] One thing to remember from chapter two: the Board sets the walls, ALCO steers the ship, and Treasury executes and hedges residual risk. Chapter three. First, recall from chapter two: which derivative does Treasury use to hedge a foreign-currency balance-sheet mismatch? A currency swap. Every treasury and A-L-M action sits inside a written policy framework—never ad hoc deals. Five core policies govern this desk: A-L-M, Liquidity, Investment, Derivatives, and Funds Transfer Pricing. One line on each. The A-L-M Policy sets ALCO's role, risk measures, pricing rules, and earnings-at-risk and equity limits. The Liquidity Policy defines risk tolerance, funding diversification, short-term mismatch caps, stress tests, and the Contingency Funding Plan. The Investment Policy covers objectives, permitted securities, dealing authority, issuer and duration limits, valuation, and half-yearly Board portfolio review. The Derivative Policy sets risk appetite, permitted products, new-product sign-off by C-C-O and C-R-O, suitability checks, and front-back office separation. The Transfer Pricing Policy—decided by ALCO under Board risk tolerance—sets how internal funds are priced across units. Who approves the main risk policies, and how often must the Board review them? The Board or its committee approves them, and reviews liquidity and A-L-M policies at least annually. Alongside internal policies and R-B-I rules, dealers follow two self-regulatory codes: FIMMDA for debt and Rupee derivatives, and FEDAI for foreign exchange. Pause check. One: how often must the Board review the Liquidity Policy and Contingency Funding Plan? At least annually. Two: which code governs bank conduct in Government securities on N-D-S-O-M and Rupee interest rate derivatives? FIMMDA. FEDAI covers foreign exchange through the F-X Global Code. [seriously] One thing to remember from chapter three: five written policies, Board-approved and reviewed annually, backed by FIMMDA and FEDAI codes."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · Transfer pricing and mixed-risk case + Close (N070–N098)", "turns": [{"speaker": "Teacher", "first": "N070", "last": "N098", "text": "Chapter four. Recall from chapter three: who approves a new O-T-C derivative product after C-C-O and C-R-O sign-off? The Board of Directors. Now let us solve how Kaveri Bank measures Divya's branch fairly when rates move. This tool is Funds Transfer Pricing, or F-T-P. Treasury notionally buys deposits from branches and sells funds to lending units at internal transfer rates. What builds that transfer rate? Three ingredients: the matched-tenor market rate, hedging and liquidity costs, and the cost of C-R-R and S-L-R reserves. Look at the big trap. After F-T-P, which risk stays with the lending branch, and which risks move to Treasury? Credit risk stays with the lending branch. Interest-rate risk and liquidity mismatch risk move centrally to Treasury. Let us work one three-way F-T-P split on Kaveri Bank's illustrative ten-crore-rupee book. Grab your calculator. Divya's deposit unit raises a three-year deposit at six point eight zero per cent. Treasury's three-year transfer rate is seven point six zero. Press seven point six zero minus six point eight zero equals. Zero point eight zero per cent—eight lakh rupees on ten crore. The lending unit gives a five-year loan at ten point one zero per cent. Treasury's five-year transfer rate is eight point two zero. Press ten point one zero minus eight point two zero equals. One point nine zero per cent—nineteen lakh rupees. What stays with Treasury? Five-year transfer rate minus three-year transfer rate. Press eight point two zero minus seven point six zero equals. Zero point six zero per cent, or six lakh rupees. Check both ways. Add the three slices: zero point eight, plus one point nine, plus zero point six. That equals three point three zero per cent, or thirty-three lakh rupees. Direct check: loan rate ten point one zero minus deposit rate six point eight zero equals three point three zero per cent. Both match. Now your turn. Five-year F-T-P rises to eight point four zero, and the loan is ten point two zero. Deposit stays six point eight zero, and three-year F-T-P stays seven point six zero. Find all three slices. Check your slices. Deposit unit: zero point eight zero. Lending unit: one point eight zero. Treasury: zero point eight zero. Total spread: three point four zero per cent. Watch the common error: subtracting the three-year transfer rate from the five-year loan gives two point six zero and hides Treasury's mismatch spread. Finally, return to Divya's opening mini case. Rates fell, borrowers prepaid five-year loans early, and three-year depositors stayed locked in. Which risks hit together? Three risks hit together. Maturity mismatch brings liquidity and refinancing risk, and prepayment triggers embedded-option reinvestment risk. Together, the spread drop is interest-rate risk squeezing the bank's Net Interest Margin. [seriously] One thing to remember from chapter four: F-T-P slices margin three ways so branches own credit risk and Treasury owns rate and liquidity risk. Mixed check before we finish. One: who approves the Liquidity Policy, and who decides the Transfer Pricing Policy? The Board approves the Liquidity Policy; ALCO decides the Transfer Pricing Policy within Board risk tolerance. Two: a fixed-rate deposit has four months left. Does it sit in the three-to-six-month bucket, or non-sensitive? Over three to six months—its residual maturity bucket. Now fill the blank mind map from memory: five nodes around today's hub. Check your five nodes: A-L-M objectives and why now, ALCO, Treasury, the five Policies, and F-T-P. You can now explain A-L-M's hub role, map Board versus ALCO and Treasury, list five policies and two codes, and compute a three-way F-T-P split. Small homework tonight. Split a six per cent deposit and nine point eight per cent loan three ways. Use seven per cent for three-year F-T-P and seven point five per cent for five-year F-T-P. Next class, we cross to asset quality. When does a missed instalment move a borrower from Standard to S-M-A and N-P-A? [warmly] That wraps up the ALM engine. Sketch the hub and three-way split once tonight, and I'll see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

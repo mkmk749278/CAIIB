@@ -1,0 +1,150 @@
+<title>D05 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D05 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D05/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Opening Branch Moment + Chapter 1 · Why IRR Matters and Its Six Sources + Chapter 2 · RSA, RSL, Repricing Gap and Its Sign + Chapter 3 · Change in NII, Net Interest Margin and the NPA Twist (N001–N097)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N097", "text": "[warmly] Good to have you here, everyone. Keep your basic calculator nearby, because today we track what happens when interest rates move. Silence your phone. Let us open with two quick recalls. From last class: does interest suspense count as a provision? No. Deduct it from the loan first; never count it as provision. Earlier in this module: are customer deposits an asset or a liability? A liability — funds owed to customers on the left shelf. IRR, repricing gaps, NII, and NIM appeared in 4 of 7 recent cycles. Today: six IRR sources, repricing gap, ΔNII, NIM, and gap limits. Picture Meera at illustrative Kaveri Commercial Bank's ALM desk when RBI hikes rates 1%. Illustrative Godavari Bank has the exact same ₹10,000 crore balance sheet. Yet Kaveri's NII rises, while Godavari's NII falls sharply. Some of you think rate hikes always help banks. Others think hikes hurt every bank. Both miss the real driver: the repricing gap. Stay with me to see why. Before the 1990s, RBI administered rates, shielding banks from rate swings. Deregulation began in the early 1990s, largely finished by 1997, and ended on savings deposits on 25 October 2011. Interest rate risk is the risk that market rate changes adversely affect a bank's financial condition. Trading book faces price risk; banking book tracks earnings and economic value. Meet six IRR sources, each with one branch situation. First is gap or mismatch risk: assets and liabilities mature or reprice on different dates. Example: 5-year fixed loans funded by 1-year FDs squeeze margins when FDs renew higher. Second is basis risk: similar-tenor assets and liabilities priced on different benchmarks move by unequal amounts. Example: T-Bill loans funded by repo deposits lose spread when indices diverge. Third is embedded option risk: borrowers prepay loans when rates fall, or depositors break FDs early when rates rise. Many think customer options work both ways. In practice, customers exercise them only against the bank. Basel standards split option risk into automatic options like caps and floors, and behavioural options like prepayments. Fourth is yield curve risk: non-parallel curve twists, steepening, or flattening hurt books priced across different maturities. Example: 3-month funding into 5-year loans hurts when short rates jump and long rates stay flat. Fifth is price risk: selling a fixed-rate bond before maturity after yields rise locks in a capital loss. Sixth is reinvestment risk: uncertainty over the lower rate earned when maturing loans or bond coupons are reinvested. RBI adds net interest position risk: when earning assets exceed paying liabilities, falling rates cut NII. Chapter One check. Name the risk in three cases. First: borrowers prepay fixed loans after a 1% rate cut. Which risk? Embedded option risk — specifically behavioural option risk, exercised against the bank. Second: 3-month repo deposits fund 3-month T-Bill loans, moving unequally. Which risk? Basis risk, because similar-tenor instruments priced on different indices shift by different magnitudes. Third: a high-coupon bond matures in a rate cut, reinvested lower. Which risk? Reinvestment risk, because future cash flows face a lower reinvestment rate. Remember: same tenor, different benchmarks is basis risk; different tenors on a twisting curve is yield curve risk. Chapter One recall: which risk hits bonds sold early after a hike? Price risk, because bond prices move opposite to market yields. Now measure mismatch risk via Traditional Gap Analysis, RBI's operative earnings tool. An item is rate sensitive if it matures, pays principal, resets contractually, or can be withdrawn within the bucket. RBI's bucketing rule: slot every item by residual maturity or next repricing date, whichever is earlier. Under RBI's ALM Directions, banks use 11 IRS buckets: 1–28 days up to over 15 years, plus Non-sensitive. Cash, fixed assets, current deposits, capital, and reserves do not reprice, so they sit in Non-sensitive. Savings, current deposits, and mortgages need behavioural studies on ≥ 3 years data, reviewed yearly. Write this down: Repricing Gap equals Rate Sensitive Assets minus Rate Sensitive Liabilities, or RSA minus RSL. Let us solve Sum One for Kaveri Bank's 1-year bucket (illustrative). Assets: 3-month floating loans ₹4,200 crore, 6-month T-Bills ₹1,100 crore, call money ₹500 crore. Cash ₹300 crore and fixed assets ₹400 crore are non-sensitive, so we skip both. On your calculator: 4200 + 1100 + 500 = gives RSA of ₹5,800 crore. Liabilities: 1-year term deposits ₹3,600 crore, 6-month floating borrowings ₹900 crore, rate-sensitive savings ₹700 crore. Current deposits ₹600 crore and capital ₹800 crore are non-sensitive, so we exclude them. Punch 3600 + 900 + 700 = to get RSL of ₹5,200 crore. Subtract: 5800 − 5200 = +₹600 crore — a positive, asset-sensitive gap. Common mistake: adding ₹600 crore current deposits to RSL wipes the gap to zero. Now break a classic myth: many of you think a positive gap always helps a bank. False. A positive gap helps only when rates rise; when rates fall, more assets reprice down, cutting NII. Our opening puzzle solved: Kaveri's positive gap gained; Godavari's negative gap lost. Chapter Two check. Three quick questions. First: a 5-year floating loan resets every 6 months. Which bucket — 6 months or 5 years? Over 3 to 6 months, because we slot by residual maturity or next repricing date, whichever is earlier. Second: if RSL exceeds RSA, is the bank asset-sensitive or liability-sensitive? Liability-sensitive — a negative gap whose NII falls when rates rise and rises when rates fall. Third: at what global share must a bank compute gap separately per currency? 5% or more of global assets or global liabilities; smaller currencies are aggregated as residual. One thing to remember: Gap is RSA minus RSL excluding non-sensitive items, and a positive gap gains only when rates rise. Chapter Two recall: negative gap plus falling rates — does NII rise or fall? NII rises, because more liabilities reprice down to cheaper rates than assets do. Turn the gap into rupees with our ruler: change in NII equals Gap times change in rate. Faded sum: Kaveri's gap is +₹600 crore; rates rise 75 bps (+0.75%). Punch 600 × 0.75 % = on your calculator. What do you get? +₹4.50 crore. Both Gap and rate change are positive, so NII rises by ₹4.50 crore. Your turn, Godavari Bank: RSA ₹4,100 crore, RSL ₹4,900 crore, rates rise 50 bps. Pause and find Gap and ΔNII. Fifteen seconds. Gap is −₹800 crore; −800 × 0.50% gives −₹4.00 crore, meaning NII drops ₹4 crore. Watch two classic slips: dropping the minus sign, or multiplying by 50 instead of 0.50%. Next is Net Interest Margin, or NIM, expressing NII as a percentage of the bank's asset base. RBI's Statistical Tables and IIBF's standard formula define NIM as NII divided by Average Total Assets, times 100. Denominator trap: international texts divide by Average Earning Assets, excluding cash and premises, giving a higher %. Use Average Total Assets unless the question specifies or gives only earning assets. Now add the favourite exam twist: reversing unrealised interest on an account turning NPA. Under IRACP Directions, accrual applies only to Standard loans; on NPA, reverse unrealised accrued interest. From 1 October 2026, accrued unrealised interest on acquired SNFAs also cannot be booked as income. Sum Three for Kaveri Bank: advances ₹6,000 crore yield 9.50%; investments ₹2,500 crore yield 7.20%. Non-earning assets are ₹1,500 crore, giving Average Total Assets ₹10,000 crore and Earning Assets ₹8,500 crore. A corporate loan turns NPA, reversing ₹30 crore of unrealised interest; Net Interest Earned drops to ₹720 crore. Deposits ₹7,500 crore at 5.40% cost ₹405 crore; borrowings ₹1,000 crore at 6.50% cost ₹65 crore; total ₹470 crore. Subtract interest expended: 720 − 470 = ₹250 crore Net Interest Income. Divide by Average Total Assets: 250 ÷ 10000 × 100 = 2.50% NIM. Both traps: skipping ₹30 crore reversal gives 2.80%; using earning assets gives 2.94%. Pause check for Chapter Three. Two quick questions. First: a bank has a +₹1,000 crore gap and rates fall 25 bps. What is ΔNII? −₹2.50 crore — 1,000 × −0.25%, because a rate cut hurts a positive gap. Second: when a Government-guaranteed loan turns NPA, may the bank continue booking accrued interest? No. NPA income recognition is strictly on cash basis even for Government-guaranteed accounts, and unrealised interest must be reversed. One thing to remember: reverse unrealised NPA interest before computing NII, and confirm whether NIM uses Average Total Assets."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · What Gap Misses, EaR, and the Techniques Ladder + Close (N098–N126)", "turns": [{"speaker": "Teacher", "first": "N098", "last": "N126", "text": "Chapter Three recall: which denominator makes NIM higher — Total or Earning Assets? Average Earning Assets, because excluding non-earning assets shrinks the denominator and lifts the ratio. Traditional Gap Analysis is fast, yet it has six major blind spots that exams regularly test. First, it assumes every item inside a bucket reprices on the exact same day, ignoring intra-bucket timing. Second and third, it ignores basis risk and embedded options like loan prepayments or early deposit withdrawals. Fourth, it assumes a parallel shift across the yield curve, missing steepening or flattening twists. Fifth and sixth, it ignores time value of money on long-term equity value, and ignores non-interest income and expense shifts. That leads to the two complementary views of IRR required under RBI's ALM Directions. The earnings perspective tracks short-term profit — NII and NIM over one year — via Traditional Gap Analysis and Earnings at Risk. Earnings at Risk, or EaR, is the potential 1-year NII drop under adverse rate scenarios, capped by Board-approved limits. The economic value perspective tracks long-term Market Value of Equity across all cash flows via Duration Gap Analysis. Operative ALM Directions require TGA and DGA; a 200 bps shock cutting banking-book MVE over 20% flags an outlier. RBI's six-shock IRRBB (15% Tier 1 outlier) sits in Forthcoming Instructions — issued, coming. Three-rung ladder: Gap for short-term earnings, Duration for economic value, Simulation at the top. Static simulation tests today's existing balance sheet; dynamic simulation adds future rate paths, curve twists, and projected new business. Pause check for Chapter Four. Two quick questions. First: does Traditional Gap Analysis capture embedded loan prepayment risk and non-parallel yield curve shifts? No. Gap analysis ignores options, basis risk, intra-bucket timing, and non-parallel shifts; simulation models capture them. Second: which view focuses on long-term Market Value of Equity — earnings perspective or economic value perspective? The economic value perspective, measured under RBI's operative framework by Duration Gap Analysis. One thing to remember: Gap handles short-term NII and EaR, Duration handles long-term MVE, and Simulation handles twists and options. Mixed check: a bank runs a negative gap, and short deposit rates jump more than loan benchmarks. Which two risks hit? Gap risk from the negative gap cuts NII, and basis risk squeezes the spread even further. Look at the blank mind map for Interest Rate Risk. Name all five nodes we added today from memory. Sources, Gap, NII, NIM, and EaR — sitting cleanly on branch eight of our balance sheet map. You can now spot six IRR sources, compute gap, ΔNII, NIM with NPA reversals, and gap limits. Homework tonight: RSA is ₹3,200 crore, RSL is ₹4,000 crore, and rates fall 100 bps. Find Gap and ΔNII. Next class, we climb rung two: Duration Gap, change in equity value, and why EBLR resets faster than MCLR. [warmly] That is interest rate risk mapped from sources to margin. Rest well tonight, and I will meet you in the next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>

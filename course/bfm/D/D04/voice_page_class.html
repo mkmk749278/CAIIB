@@ -1,0 +1,150 @@
+<title>D04 Voice Parts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column of copy cards, one card per audio file, in recording order. */
+:root {
+  --bg: #F3F5F7; --card: #FFFFFF; --fg: #17202A; --dim: #5B6773; --line: #D9DFE5;
+  --accent: #0E6E5C; --accent-fg: #FFFFFF; --teacher: #0E6E5C; --meera: #A2456E; --ravi: #8A5A12;
+  --done: #E7F3EF; --tag: #6B4FA0;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1418; --card: #182027; --fg: #E6ECF1; --dim: #95A3AF; --line: #2A353F;
+  --accent: #39B89C; --accent-fg: #062019; --teacher: #39B89C; --meera: #E487AE; --ravi: #E0B05A;
+  --done: #15302A; --tag: #B9A2E8; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 14px; }
+h1 { font-family: var(--display); font-size: 26px; margin: 0; text-wrap: balance; }
+.sub { color: var(--dim); margin: 2px 0 0; }
+details.tips { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+details.tips summary { font-weight: 600; cursor: pointer; }
+details.tips ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.opt { display: flex; gap: 10px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; }
+.opt input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.opt small { display: block; color: var(--dim); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.card.is-done { background: var(--done); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.file { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.who { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.who.Teacher { color: var(--teacher); } .who.Meera { color: var(--meera); } .who.Ravi { color: var(--ravi); }
+.meta { color: var(--dim); font-size: 13px; width: 100%; font-variant-numeric: tabular-nums; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button.copy { font: 600 16px var(--body); background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px;
+  padding: 12px 18px; min-width: 150px; cursor: pointer; }
+button.copy:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--tag); outline-offset: 2px; }
+label.mark { display: flex; gap: 8px; align-items: center; color: var(--dim); font-size: 14px; }
+label.mark input { width: 18px; height: 18px; accent-color: var(--accent); }
+details.text summary { color: var(--dim); font-size: 14px; cursor: pointer; }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--body); font-size: 14px; margin: 8px 0 0;
+  max-height: 340px; overflow: auto; border-top: 1px solid var(--line); padding-top: 8px; user-select: all; }
+pre .t { color: var(--tag); font-weight: 600; }
+.foot { color: var(--dim); font-size: 13px; }
+.part { display: grid; gap: 10px; }
+.part h2 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; }
+.part .pm { color: var(--dim); font-size: 13px; margin: 0; }
+.turn { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; }
+.turn.is-done { background: var(--done); }
+.turn.Teacher { --c: var(--teacher); } .turn.Meera { --c: var(--meera); } .turn.Ravi { --c: var(--ravi); }
+.turn .row { justify-content: space-between; }
+.turn .txt { font-size: 14px; margin: 0; color: var(--fg); max-height: 4.6em; overflow: hidden; white-space: pre-wrap; word-break: break-word; }
+.turn.open .txt { max-height: none; }
+.more { background: none; border: 0; color: var(--dim); font: 13px var(--body); padding: 0; cursor: pointer; text-align: left; }
+button.copy { padding: 10px 16px; min-width: 120px; font-size: 15px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>D04 voice · one teacher</h1>
+    <p class="sub">One voice, in order. Each part is one generation in ElevenLabs text to speech.</p>
+  </header>
+
+  <details class="tips" open>
+    <summary>How to use it</summary>
+    <ul>
+      <li>Pick one voice for the teacher (e.g. Prithvi) and keep it, with the same settings, for every part.</li>
+      <li>For each part: tap <b>Copy</b>, paste into text to speech, tap <b>Generate</b>, download it as the file name shown.</li>
+      <li>If the app says the text is too long, tell Claude and the parts will be made smaller.</li>
+      <li>Listen to the first minute of part 1 before doing the rest. Each generation uses credits.</li>
+      <li>"Into" means times.</li>
+    </ul>
+  </details>
+
+  <label class="opt" for="tags">
+    <input type="checkbox" id="tags" checked>
+    <span><b>Keep expression tags</b> like [chuckles] and [laughs]
+      <small>Works on Eleven v3. If a voice reads the words out loud, turn this off and copy again.</small></span>
+  </label>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+  <p class="foot">From course/bfm/D/D04/script_class.md. Line ids are kept, so the video can be cut automatically from each part.</p>
+</div>
+
+<script>
+const PARTS = [{"file": "part_1.mp3", "section": "Warm-up + Chapter 1 · Read the branch case + Chapter 2 · Five questions: three borrowers, one total + Chapter 3 · Haircut, legal costs, guarantee cover, and interest suspense + Chapter 4 · After NPA: restructuring, IBC, and NARCL (N001–N074)", "turns": [{"speaker": "Teacher", "first": "N001", "last": "N074", "text": "[warmly] Welcome back, everyone. Calculator beside you? Today we put classification and provisioning to work on live branch files. Put your phone on silent and keep your basic eight-function calculator ready. Let us warm up with two quick recalls. First, from last class. What is the sub-standard provisioning rate for an unsecured infrastructure loan with escrow safeguards? Twenty per cent, instead of twenty-five, because the escrow gives the bank a clear legal first claim on cash flows. Second, from two classes back. When does security erosion push an N-P-A straight into the loss category? When realisable security falls below ten per cent of the outstanding balance. Security is then ignored completely. Good start. Provisioning cases appear in nearly every exam cycle, and one five-question case can carry five full marks. Today, you will solve a five-question multi-borrower case, a guarantee-cover case with interest suspense, and trace where bad loans go next. Chapter one. Picture a branch desk in Vijayawada on thirty-first March, twenty twenty-six. Three overdue files need provisioning today. Look at the second file, Bala Logistics. Balance is one hundred twenty lakh. Book security is ninety lakh. Its realisable value is only fifty lakh, and it has been non-performing for two and a half years. Quick gut check before we calculate. Many of you are thinking: take forty per cent of one hundred twenty lakh. Others say: split the balance into secured and unsecured parts first. Hold your pick; we will settle it in two minutes. Before touching any calculator key, remember one rule: always read three things first—age, realisable security, and any deductions. And remember our rule date: thirty-first December, twenty twenty-six. Today's rulebook is the twenty twenty-five I-R-A-C-P Directions. The Expected Credit Loss Directions were issued in April twenty twenty-six, but start only on first April, twenty twenty-seven. Pause check, one quick question. On thirty-first March, twenty twenty-six, which value of collateral enters an I-R-A-C-P sum: book value or realisable value? Realisable value, estimated on a realistic basis, because book value overstates what the bank can actually recover. Chapter two. First, recall from chapter one: why do we ignore the ninety lakh book security on Bala Logistics? Because I-R-A-C-P uses realistic realisable value, not historical book value. Now let us line up all three borrowers. Borrower A, Aruna Textiles: balance eighty lakh, N-P-A for six months, tangible realisable security sixty lakh. Borrower B, Bala Logistics: balance one hundred twenty lakh, N-P-A for two and a half years, realisable security fifty lakh. Borrower C, Chitra Agro Traders: balance forty lakh, stock missing, external auditor marked it uncollectible, still kept in books. Question one of five: classify all three borrowers. Take three seconds and name A, B, and C. A is sub-standard secured: under twelve months as N-P-A, with security above ten per cent. B spent one year in sub-standard, then eighteen months in doubtful, so it sits in Doubtful-two, one to three years. C is a loss asset: identified by external auditors as uncollectible and not yet written off. Question two: provision for Borrower A. A secured sub-standard advance attracts a flat fifteen per cent on total outstanding. Press eighty, times, fifteen, per cent, equals. That gives twelve lakh rupees. Question three: provision for Borrower B. Remember our opening guess of forty-eight lakh? That is the classic exam trap. Never apply the doubtful percentage to the whole balance. Split it first: unsecured shortfall takes one hundred per cent. Balance one hundred twenty minus realisable security fifty equals seventy lakh unsecured. At one hundred per cent, that is seventy lakh. On the fifty lakh secured portion, Doubtful-two takes forty per cent. Press fifty, times, forty, per cent, equals twenty lakh. Add seventy plus twenty. Borrower B needs ninety lakh rupees—nearly double the forty-eight lakh trap answer. Question four: provision for Borrower C, the forty lakh loss asset kept in books. What rate applies? One hundred per cent. Loss assets should be written off; if retained in books, provide one hundred per cent—forty lakh. Question five: total branch provision. Press twelve, plus, ninety, plus, forty, equals one hundred forty-two lakh rupees. Quick bonus check: Gross N-P-A is two hundred forty lakh, so Net N-P-A is ninety-eight lakh, and P-C-R is fifty-nine point one seven per cent. Pause check for chapter two. Two quick questions, no options. One: if Borrower B had been in Doubtful for four years instead of eighteen months, what rate applies to its fifty lakh security? One hundred per cent, because Doubtful-three covers everything beyond three years. Two: does R-B-I mandate a minimum seventy per cent P-C-R today? No. R-B-I prescribes no regulatory minimum P-C-R; it is left to the bank's discretion. Chapter three. First, quick recall: if an export account is sub-standard with fifty per cent E-C-G-C cover, do you deduct the cover? No. Sub-standard fifteen per cent applies without any allowance for E-C-G-C cover or security. Cover enters once the account is doubtful or loss. Now meet our tougher case: Deccan Precision Works, an M-S-M-E loan in Doubtful-two with seventy-five per cent C-G-T-M-S-E cover. Gross balance is sixty lakh; Interest Suspense is four lakh. Book collateral is twenty lakh, with twenty-five per cent haircut and one lakh legal cost. Many of you are thinking: count the four lakh Interest Suspense as part of our provision. Stop right there. Write this down: Interest Suspense is never a provision. Deduct it from the advance balance first, then compute provisions on the rest. Step two: net realisable security. Take twenty lakh, cut twenty-five per cent haircut to fifteen lakh, minus one lakh legal cost equals fourteen lakh. Step three: deduct realisable security BEFORE guarantee cover. Fifty-six minus fourteen leaves forty-two lakh unsecured shortfall. Notice that trap: never apply C-G-T-M-S-E or E-C-G-C cover to the gross sixty lakh. Apply it only to the unsecured shortfall. Step four: seventy-five per cent C-G-T-M-S-E cover on forty-two lakh equals thirty-one point five lakh. No provision is needed on the guaranteed portion. That leaves ten point five lakh uncovered unsecured balance, provided at one hundred per cent. Add Doubtful-two forty per cent on the fourteen lakh secured portion: fourteen times forty per cent equals five point six lakh. Total provision: ten point five plus five point six equals sixteen point one zero lakh rupees. Now watch the loss-asset twist. Suppose the collateral after haircut and legal costs drops to just four lakh rupees. Ten per cent of the fifty-six lakh net balance is five point six lakh. Four lakh is below ten per cent. Under I-R-A-C-P, ignore the security completely and classify the account straightaway as a Loss asset. With valid seventy-five per cent C-G-T-M-S-E cover on fifty-six lakh—forty-two lakh covered—you provide one hundred per cent on the remaining fourteen lakh. One vital warning: never use Loss Given Default, or L-G-D, in an I-R-A-C-P provisioning sum. L-G-D belongs to the coming E-C-L framework from first April, twenty twenty-seven—not today's I-R-A-C-P exam sums. Now your turn. Eastern Spices: gross fifty lakh, Interest Suspense two lakh, Doubtful-one, realisable security eighteen lakh, E-C-G-C cover fifty per cent. Let us check. Net balance is forty-eight lakh. Minus eighteen lakh security leaves thirty lakh unsecured. Fifty per cent E-C-G-C leaves fifteen lakh uncovered. Secured portion eighteen lakh at twenty-five per cent for Doubtful-one equals four point five lakh. Total provision: nineteen point five zero lakh. If you got twenty point five lakh, you forgot to deduct Interest Suspense first. One thing to remember: suspense first, security second, cover third. Chapter four. First, recall: once a normal, non-restructured N-P-A pays part of its overdue interest, can you upgrade it to standard? Never. A normal N-P-A upgrades only when the borrower clears the entire arrears of interest and principal across all facilities. Now suppose the borrower cannot pay everything, so the bank restructures the loan under the twenty twenty-five Resolution of Stressed Assets Directions. First rule: a standard account is immediately downgraded to sub-standard upon restructuring; an N-P-A stays in its existing category and keeps ageing. When can a restructured account upgrade to standard? Not on day one of payment. It must pass the monitoring period with zero default. Monitoring period runs until at least ten per cent of outstanding principal plus capitalised interest is repaid, with a strict one-year floor. For large exposures of one hundred crore or more, the facilities also need an investment-grade rating—triple-B-minus or better—at upgrade. One rating from one hundred crore, two ratings from five hundred crore. And M-S-M-E accounts below twenty-five crore follow a one-year specified period."}]}, {"file": "part_2.mp3", "section": "Chapter 4 · After NPA: restructuring, IBC, and NARCL + Close (N075–N099)", "turns": [{"speaker": "Teacher", "first": "N075", "last": "N099", "text": "Specified period for others is twenty per cent repaid. Default before twenty per cent triggers a fresh plan and fifteen per cent extra provision. What if restructuring fails? Road two is the Insolvency and Bankruptcy Code, twenty sixteen—the I-B-C. Three parties may trigger C-I-R-P before the N-C-L-T: a financial creditor under section seven, operational creditor under section nine, or corporate debtor under section ten. On admission—targeted within fourteen days—section fourteen imposes a moratorium, halting recovery suits, asset sales, and SARFAESI enforcement. Control shifts from promoters to an Insolvency Professional and the Committee of Creditors, made of financial creditors—a true creditor-in-control model. Under section twelve, C-I-R-P runs for one hundred eighty days, with a mandatory three hundred thirty-day upper cap including extensions and litigation, else liquidation. Note the twenty twenty-six I-B-C Amendment Act: it restricts withdrawals, extends C-o-C oversight into liquidation, and adds a creditor-initiated resolution route. Road three: selling legacy N-P-As above five hundred crore to N-A-R-C-L, India's bad bank, targeting about two lakh crore of stressed loans. Public sector banks hold fifty-one per cent in N-A-R-C-L, which acquires the loans; I-D-R-C-L, majority private-lender owned, manages turnaround and recovery. How does N-A-R-C-L pay banks? Fifteen per cent in cash, and eighty-five per cent in tradable Security Receipts. What separates N-A-R-C-L from a regular A-R-C? A sovereign Government of India guarantee up to thirty thousand six hundred crore rupees, valid five years. Regular A-R-Cs under twenty twenty-five Directions need three hundred crore net owned fund, five to eight years to realise, and no government guarantee. Pause check for chapter four. Two quick questions. One: which I-B-C section lets a bank, as financial creditor, file for C-I-R-P, and what is the mandatory outer day cap? Section seven for a financial creditor, and three hundred thirty days including extensions and legal proceedings under section twelve. Two: in the N-A-R-C-L structure, who holds majority ownership in N-A-R-C-L versus I-D-R-C-L? Public sector banks hold fifty-one per cent in N-A-R-C-L, while private-sector lenders hold the majority in I-D-R-C-L. Mixed check before we close. A Doubtful-two loan has Interest Suspense and E-C-G-C cover. Which is deducted first, and can it upgrade after one instalment? Deduct Interest Suspense first, then realisable security, then E-C-G-C cover. And it never upgrades on one instalment—entire arrears must be cleared. Now look at the blank balance-sheet map. Fill in today's two asset-quality nodes from memory: the case waterfall and the three roads after N-P-A. Check your memory: case drill—sub-standard, doubtful split, loss, suspense-security-cover waterfall; and after N-P-A—restructuring upgrade, I-B-C C-I-R-P, and N-A-R-C-L. You can now solve multi-borrower provisioning cases, handle haircuts, guarantee cover, and interest suspense, and answer post-N-P-A questions on restructuring, I-B-C, and N-A-R-C-L. Small homework tonight: N-A-R-C-L buys a stressed loan pool for six hundred crore. Compute the cash received and the Security Receipts issued. And a question for next class: interest rates rise one per cent tomorrow. Why does one bank's profit jump while an identical-sized bank's profit falls? [warmly] That wraps up bad loans, from first provision to final resolution. Close your notebook, rest well, and see you next class."}]}];
+const list = document.getElementById('list');
+const tags = document.getElementById('tags');
+const TAG = /\[[a-z ]+\]\s*/gi;
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+};
+const clean = s => tags.checked ? s : s.replace(TAG, '');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+function render() {
+  list.innerHTML = '';
+  PARTS.forEach((p, pi) => {
+    const sec = document.createElement('section');
+    sec.className = 'part';
+    const chars = p.turns.reduce((a, t) => a + clean(t.text).length, 0);
+    sec.innerHTML = '<h2>Part ' + (pi + 1) + ' · ' + p.file + '</h2><p class="pm">' + esc(p.section) + ' · ' + (p.turns.length > 1 ? p.turns.length + ' turns · ' : '') + chars + ' characters</p>';
+    p.turns.forEach((t, ti) => {
+      const key = 'd-' + p.file + '-' + ti;
+      const text = clean(t.text);
+      const done = store.get(key) === '1';
+      const el = document.createElement('div');
+      el.className = 'turn ' + t.speaker + (done ? ' is-done' : '');
+      const uid = pi + '-' + ti;
+      el.innerHTML =
+        '<div class="row"><span><span class="file">' + (ti + 1) + '.</span> <span class="who ' + t.speaker + '">' + t.speaker + '</span></span>' +
+        '<button class="copy" id="copy-' + uid + '" type="button">Copy</button></div>' +
+        '<p class="txt" id="txt-' + uid + '">' + esc(text).replace(/\[[a-z ]+\]/gi, m => '<span class="t" style="color:var(--tag);font-weight:600">' + m + '</span>') + '</p>' +
+        '<div class="row"><button class="more" type="button">Show all</button>' +
+        '<label class="mark"><input type="checkbox" id="done-' + uid + '"' + (done ? ' checked' : '') + '> Pasted</label></div>';
+      sec.appendChild(el);
+      const btn = el.querySelector('.copy');
+      const mark = el.querySelector('input');
+      const setDone = v => { mark.checked = v; el.classList.toggle('is-done', v); store.set(key, v ? '1' : '0'); };
+      btn.addEventListener('click', () => {
+        const ok = () => { btn.textContent = 'Copied ✓'; setDone(true); setTimeout(() => btn.textContent = 'Copy', 1600); };
+        const fallback = () => {
+          el.classList.add('open');
+          const r = document.createRange(); r.selectNodeContents(el.querySelector('.txt'));
+          const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Long-press, Copy';
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clean(t.text)).then(ok, fallback);
+        else fallback();
+      });
+      el.querySelector('.more').addEventListener('click', e => {
+        const o = el.classList.toggle('open'); e.target.textContent = o ? 'Show less' : 'Show all';
+      });
+      mark.addEventListener('change', e => setDone(e.target.checked));
+    });
+    list.appendChild(sec);
+  });
+}
+const saved = store.get('tags'); if (saved !== null) tags.checked = saved === '1';
+tags.addEventListener('change', () => { store.set('tags', tags.checked ? '1' : '0'); render(); });
+render();
+</script>
