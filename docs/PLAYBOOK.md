@@ -93,8 +93,9 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   official syllabus split into its 195 sub-topics (`research/bfm/syllabus_official.md`) is now the scope, mapped
   row by row to videos in `research/bfm/coverage.csv`; the course plan became v3 (A00, A19b, A22, B13b added). The
   Importance Map keeps its use: style of questions, order and amount of practice, and a check. Tiers no longer decide
-  whether a topic is taught, only how much practice it gets. The IIBF/Macmillan courseware is not available to us
-  (the owner has no copy; the only full contents pages online sit in pirated PDFs, which we do not use), so depth is
+  whether a topic is taught, only how much practice it gets. The IIBF/Macmillan courseware was not available to us
+  then (the owner had no copy; the only full contents pages online sit in pirated PDFs, which we do not use; from
+  2026-11-26 the owner's bought copy is used as a depth checklist, §4b), so depth is
   set by the syllabus wording, the primary sources and the exam's question forms, and checked by the module exam
   test (target 75+).
 
@@ -139,6 +140,16 @@ Source: https://www.iibf.org.in/documents/RulesSyllabus/2026/FlagshipCourses/60%
   `nT9q_w5BHng` (JAIIB CAIIB Prep, 4h17m); C `3JrJW-V0eB0` (Oliveboard, 4h52m), `GOTBkyj8alM` (JAIIB CAIIB Prep,
   3h30m); D `dKHPEkNXcjo` (Oliveboard, 3h39m), `z9sh93uXimE` (JAIIB CAIIB Prep, 3h32m). Each as `.en.vtt` and
   `.en-orig.vtt` (identical for these English videos).
+
+- **The official book (2026-11-26)**: the owner bought IIBF/Macmillan *Bank Financial Management* (1st ed. 2023)
+  and shared a scan (asked where it came from: "I bought the book"). It is the courseware IIBF's question writers know
+  best, so it now sits at the top of layer 4. Its 31 units follow the syllabus order and its section headings match
+  our 195 sub-topics one for one, so it adds depth, not scope. Same rules as the classes and stricter: a checklist of
+  sub-points, kinds of worked sums and kinds of questions; **no wording, examples, numbers, tables or questions
+  copied; no fact taken from it** (it is written to rules of about 2022, before FEM-EIGS 2026, the 2025 RBI Directions,
+  the 2026 ECB framework, ISBP 821). Its out-of-date figures are likely wrong options, so they become trap cards. PDF
+  and text in Drive `BFM/_downloads/iibf_book/`, never in git; `tools/research/book_unit.py <unit>`; how a review uses
+  it: `research/bfm/depth/iibf_book.md`.
 
 ## 4c. The content method in layers (2026-11-20)
 - **Why layers**: the owner cannot judge the subject, there is no human beta group, and the official courseware is not
