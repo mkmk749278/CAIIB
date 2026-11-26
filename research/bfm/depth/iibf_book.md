@@ -87,3 +87,39 @@ Every independent review (layer 7), and every re-review of a locked lesson, adds
 
 **Locked lessons (A00–A19b)** get this check as a sweep, one module unit at a time, before voicing. Its findings are
 fixes (c4) to the scripts, so that the written course is complete before the owner judges the first built video.
+
+## Sweep status (2026-11-26: all 31 units checked)
+Unit files: `book_check_A1.md` … `book_check_A8.md`, `book_check_A9-A10.md`, `book_check_B-C-D.md`.
+
+**Overall:** no scope gap anywhere. Our lessons are deeper and more current than the 2023 book almost everywhere. The
+book's value is (1) a short list of missed sub-points, (2) **trap cards** for its now-old figures, (3) a few kinds of sum.
+
+**c4 queue for locked Module A lessons** (each item is in its unit file; check the primary source first):
+| Lesson | Fixes |
+|---|---|
+| A02 | correspondent services split account / non-account; FATF R.13 / no shell banks; Vostro and Exchange House rules; trap "CHAPS net ✗" |
+| A04 | Vostro-funding sum (the bank buys dollars at its buying rate) |
+| A06 | exposure kinds (transaction / translation / economic); trap "past-performance hedging, USD 100,000 for individuals ✗" |
+| A07 | trap "DAT in Incoterms 2020 ✗" (at the freeze re-stamp) |
+| A08 | commercial standby LCs for imports (only if the 2026 texts still say anything) |
+| A09 | URR 725: no expiry date, no compliance certificate, early claims, charges; UCP Art. 37 |
+| A11 | check the trap list has the gems and jewellery EDF waiver (₹1 cr / 2 %) |
+| A11b | trap "LIBOR ✗" for PCFC / EBR |
+| A12 | trap "bill selling ✗" for crystallisation; effective date of realisation (Nostro value date), with a sum and MCQ; decide the commission line |
+| A13 | trap "LoU / LoC for trade credit ✗" (if missing) |
+| A15 | Exchange Fluctuation Risk Cover (only if ECGC still offers it) |
+| A15b | trap "ECIB-WTPS 90–95 % ✗" |
+| A16 | no LRS guarantees for studies or emigration (if the MD still says so); source-of-funds check; consultancy remittance limits (optional) |
+| A16b | traps "60 days ✗ · 90 days ✓" and "up to ₹50,000 ✗ · below ₹50,000 ✓" |
+| A17 / A18 | **largest:** NRI property (purchase, inheritance, repatriation of sale proceeds, listed-country citizens), other NRI investment routes, NRI prohibitions (PPF / small savings, TDR); trap "PIS 5 % / 10 % ✗" |
+| A19 | one "old ECB figures ✗" card (USD 750 m, +500 bps, 7:1) if missing |
+
+**For the draft reviews:** A20 (IFSCA licensing, exposure limit, retail deposits); A21 (FEDAI Rules 4.3 / 7 / 8, the
+FX Global Code and FEDAI code of conduct, RBI returns, old AD categories); A22 (digital platforms incl. FX-Retail,
+IBBIC / IDRBT, if sourced); C01 / C01b (FEDAI Rule 8, trap "50 % Tier I ✗"); C02 / C04 / C05 / C08 / C08b (book_check_B-C-D
+C-S1–C-S4; POS / COS / CCS hedging of an ECB); C07 (exposure kinds in full); D05 (a basis-risk NII sum); D02–D04
+(IRACP Directions 2025 / ECL); D05 / D06b (settle IRRBB first).
+
+**Sources to add:** FEDAI Rules 4.3, 7, 8 and the export "effective date of realisation" rule into
+`research/bfm/sources/fedai_rules_cutoff.md`; fix its note that the 7 Sep 2026 amendment is "after the cut-off" (it
+is inside the 31 Dec 2026 cut-off).
