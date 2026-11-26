@@ -14,10 +14,10 @@ When the owner says "next", take the **next ONE lesson** from this queue that ha
 `CAIIB/_inbox/gemini/` yet, do the whole task for it, then report and stop. **One lesson per turn, never a batch**
 (2026-11-24: a batch run skipped Deep Research and wrote 4-minute scripts; all 12 drafts were rejected). Splits ("b"/"c" ids) are
 **separate lessons**, each with its own plan in the module file.
-- **Done, skip**: 00, A00–A18 (locked), B01–B03 (another session writes them). Ignore `_inbox/gemini/_rejected_*`.
-- **Queue, in order**: A19, A19b, A19c, A20, A21, A22 · B04, B04b, B05, B06, B07, B07b, B08, B09, B09b, B10, B11, B11b,
-  B12, B13, B13b, B14, B14b · C01, C01b, C02, C02b, C03, C04, C04b, C05, C06, C07, C08, C08b, C09, C09b · D01, D01b,
-  D02, D03, D04, D05, D06, D06b, D07, D07b.
+- **Done, skip** (updated 2026-11-26): 00, A00–A22, C01–C09b, D01–D07b (all locked or saved as drafts; C05's draft
+  sits in a folder named "C02", it is done), B01–B03 (the Module B session writes them). Ignore `_inbox/gemini/_rejected_*`.
+- **Queue, in order (what remains)**: B04, B04b, B05, B06, B07, B07b, B08, B09, B09b, B10, B11, B11b, B12, B13, B13b,
+  B14, B14b. Their plans are in `module_B.md` (from `course/bfm/B/plans_B.md`).
 - **Not now**: module revisions (AR–DR), U01, X01: they are built after all lessons.
 - If a lesson's folder already exists in `_inbox/gemini/`, skip it; never write two folders with the same id.
 
